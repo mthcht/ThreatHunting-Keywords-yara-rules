@@ -1,0 +1,35 @@
+rule netsh
+{
+    meta:
+        description = "Detection patterns for the tool 'netsh' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "netsh"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Disable Windows Firewall
+        // Reference: N/A
+        $string1 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        // Description: adding a executable in user appdata folder to the allowed programs
+        // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
+        $string2 = /netsh\sfirewall\sadd\sallowedprogram\s\"C:\\Users\\.*\\AppData\\.*\.exe\"\s\".*\.exe\"\sENABLE/ nocase ascii wide
+        // Description: Disable Windows Firewall
+        // Reference: N/A
+        $string3 = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
+        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
+        // Reference: https://github.com/ice-wzl/wmiexec2
+        $string4 = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.*\sconnectport\=.*\sconnectaddress\=/ nocase ascii wide
+        // Description: The actor has used the following commands to enable port forwarding [T1090] on the host
+        // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
+        $string5 = /netsh\sinterface\sportproxy\sadd\sv4tov4.*listenaddress\=.*\slistenport\=.*connectaddress\=.*connectport/ nocase ascii wide
+        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
+        // Reference: https://github.com/ice-wzl/wmiexec2
+        $string6 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
+        // Reference: https://github.com/ice-wzl/wmiexec2
+        $string7 = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+
+    condition:
+        any of them
+}

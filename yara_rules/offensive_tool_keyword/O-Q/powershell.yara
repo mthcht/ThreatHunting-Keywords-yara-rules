@@ -1,0 +1,71 @@
+rule powershell
+{
+    meta:
+        description = "Detection patterns for the tool 'powershell' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "powershell"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+        // Description: powershell obfuscations techniques observed by malwares - reversed whoami
+        // Reference: N/A
+        $string1 = /\simaohw/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed net user
+        // Reference: N/A
+        $string2 = /\sresu\sten/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed http://
+        // Reference: N/A
+        $string3 = /\/\/:ptth/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed https://
+        // Reference: N/A
+        $string4 = /\/\/:sptth/ nocase ascii wide
+        // Description: impair the defenses of the targeted system by disabling ETW logging for PowerShell. This can make it difficult for security teams to monitor and analyze PowerShell activities on the system potentially allowing adversaries to perform malicious actions without being detected
+        // Reference: N/A
+        $string5 = /\[Reflection\.Assembly\]::LoadWithPartialName\(\'System\.Core\'\)\.GetType\(\'System\.Diagnostics\.Eventing\.EventProvider\'\)\.GetField\(\'m_enabled\'.*\'NonPublic.*Instance\'\)\.SetValue\(\[Ref\]\.Assembly\.GetType\(\'System\.Management\.Automation\.Tracing\.PSEtwLogProvider\'\)\.GetField\(\'etwProvider\'.*\'NonPublic.*Static\'\)\.GetValue\(\$null\).*0\)/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed HKLM:\
+        // Reference: N/A
+        $string6 = /\\:MLKH/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed c:\\
+        // Reference: N/A
+        $string7 = /\\\\:C/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed whoami
+        // Reference: N/A
+        $string8 = /\=imaohw/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed net user
+        // Reference: N/A
+        $string9 = /\=resu\sten/ nocase ascii wide
+        // Description: Windows Defender evasion add an exclusion directory for your shady stuff
+        // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
+        $string10 = /Add\-MpPreference\s\-ExclusionPath\s/ nocase ascii wide
+        // Description: method of dumping the MSOL service account (which allows a DCSync) used by Azure AD Connect Sync
+        // Reference: https://gist.github.com/analyticsearch/7453d22d737e46657eb57c44d5cf4cbb
+        $string11 = /azuread_decrypt_msol_.*\.ps1/ nocase ascii wide
+        // Description: Command to get the list of accounts with PrincipalsAllowedToDelegateToAccount (used to exploit Bronze Bit Attack)
+        // Reference: N/A
+        $string12 = /Get\-ADComputer\s.*\s\-Properties\sPrincipalsAllowedToDelegateToAccount/ nocase ascii wide
+        // Description: redteam technique - import the ActiveDirectory module without the need to install it on the current computer - the dll has been extracted from a Windows 10 x64 with RSAT installed
+        // Reference: https://github.com/mthcht/Purpleteam/blob/main/Simulation/Windows/ActiveDirectory/Bruteforce.ps1
+        $string13 = /http:\/\/.*Microsoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
+        // Description: redteam technique - import the ActiveDirectory module without the need to install it on the current computer - the dll has been extracted from a Windows 10 x64 with RSAT installed
+        // Reference: https://github.com/mthcht/Purpleteam/blob/main/Simulation/Windows/ActiveDirectory/Bruteforce.ps1
+        $string14 = /https:\/\/.*Microsoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
+        // Description: redteam technique - import the ActiveDirectory module without the need to install it on the current computer - the dll has been extracted from a Windows 10 x64 with RSAT installed
+        // Reference: https://github.com/mthcht/Purpleteam/blob/main/Simulation/Windows/ActiveDirectory/Bruteforce.ps1
+        $string15 = /Import\-Module\s.*Microsoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
+        // Description: propagation of ACL changes on the 'AdminSDHolder' container. which can be used to maintain unauthorized access or escalate privileges in the targeted environment. The 'AdminSDHolder' container plays a crucial role in managing the security of protected groups in Active Directory. and forcing ACL changes to propagate may lead to unintended security consequences.
+        // Reference: https://github.com/theyoge/AD-Pentesting-Tools/blob/main/Invoke-SDPropagator.ps1
+        $string16 = /Invoke\-SDPropagator/ nocase ascii wide
+        // Description: powershell obfuscations techniques observed by malwares - reversed powershell
+        // Reference: N/A
+        $string17 = /llehsrewop/ nocase ascii wide
+        // Description: Delete powershell history
+        // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
+        $string18 = /Remove\-Item\s\(Get\-PSreadlineOption\)\.HistorySavePath/ nocase ascii wide
+        // Description: deployment of a payload through a PowerShell stager using bits to download
+        // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
+        $string19 = /powershell\.exe\s\-nop\s\-c\s\"start\-job\s.*Import\-Module\sBitsTransfer.*\$env:temp.*GetRandomFileName\(\).*Start\-BitsTransfer\s\-Source\s\'http.*Remove\-Item.*Receive\-Job/ nocase ascii wide
+
+    condition:
+        any of them
+}

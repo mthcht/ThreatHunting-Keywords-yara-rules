@@ -1,0 +1,50 @@
+rule cuddlephish
+{
+    meta:
+        description = "Detection patterns for the tool 'cuddlephish' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "cuddlephish"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string1 = /\/cuddlephish\.git/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string2 = /\/cuddlephish\.html/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string3 = /\/user_data\/.*\/keylog\.txt/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string4 = /AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP39/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string5 = /browser\.keylog_file\.write/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string6 = /cuddlephish.*stealer\.js/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string7 = /cuddlephish\-main/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string8 = /fkasler\/cuddlephish/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string9 = /http:\/\/localhost:58082\/broadcast\?id\=/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string10 = /listen\(58082.*\s\'0\.0\.0\.0\'/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string11 = /node\sstealer\.js\s/ nocase ascii wide
+        // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
+        // Reference: https://github.com/fkasler/cuddlephish
+        $string12 = /ws:\/\/localhost:58082/ nocase ascii wide
+
+    condition:
+        any of them
+}

@@ -1,0 +1,26 @@
+rule vssadmin
+{
+    meta:
+        description = "Detection patterns for the tool 'vssadmin' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "vssadmin"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: the command is used to create a new Volume Shadow Copy for a specific volume which can be utilized by an attacker to collect data from the local system
+        // Reference: N/A
+        $string1 = /vssadmin\screate\sshadow\s\/for\=C:/ nocase ascii wide
+        // Description: the actor creating a Shadow Copy and then extracting a copy of the ntds.dit file from it.
+        // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
+        $string2 = /vssadmin\screate\sshadow\s\/for\=C:.*\s\\Temp\\.*\.tmp/ nocase ascii wide
+        // Description: List shadow copies using vssadmin
+        // Reference: N/A
+        $string3 = /vssadmin\slist\sshadows/ nocase ascii wide
+        // Description: Deletes all Volume Shadow Copies from the system quietly (without prompts).
+        // Reference: N/A
+        $string4 = /vssadmin.*\sDelete\sShadows\s\/All\s\/Quiet/ nocase ascii wide
+
+    condition:
+        any of them
+}

@@ -1,0 +1,35 @@
+rule RDPassSpray
+{
+    meta:
+        description = "Detection patterns for the tool 'RDPassSpray' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "RDPassSpray"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string1 = /\/RDPassSpray\.git/ nocase ascii wide
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string2 = /RDPassSpray\..*\.log/ nocase ascii wide
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string3 = /RDPassSpray\.csv/ nocase ascii wide
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string4 = /RDPassSpray\.py/ nocase ascii wide
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string5 = /RDPassSpray\-master/ nocase ascii wide
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string6 = /xFreed0m\/RDPassSpray/ nocase ascii wide
+        // Description: Python3 tool to perform password spraying using RDP
+        // Reference: https://github.com/xFreed0m/RDPassSpray
+        $string7 = /xfreerdp\s\/v.*SOCtest.*AllLegitHere/ nocase ascii wide
+
+    condition:
+        any of them
+}

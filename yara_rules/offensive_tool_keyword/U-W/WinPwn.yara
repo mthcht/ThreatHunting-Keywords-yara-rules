@@ -1,0 +1,428 @@
+rule WinPwn
+{
+    meta:
+        description = "Detection patterns for the tool 'WinPwn' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "WinPwn"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string1 = /\s\-command\s.*\.exe.*\s\-technique\sccmstp/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string2 = /\s\-consoleoutput\s\-browsercredentials/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string3 = /\s\-consoleoutput\s\-DomainRecon/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string4 = /\s\-consoleoutput\s\-Localrecon/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string5 = /\/LocalPrivEsc\// nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string6 = /\/WinPwn/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string7 = /\/WinPwn\.git/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string8 = /\/WinPwn_Repo/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string9 = /\\DomainRecon\\.*\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string10 = /\\LocalPrivEsc\\/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string11 = /\\Passwordfiles\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string12 = /\\Seatbelt\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string13 = /\\SQLInfoDumps/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string14 = /\\temp\\dump\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string15 = /\\temp\\pwned\.trx/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string16 = /\\Users_Nochangedpassword\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string17 = /\\WritebleRegistryKeys\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string18 = /ADCS_Maybe_ESC8_HTTPS_Vulnerable\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string19 = /AllowDelegationUsers\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string20 = /AllowDelegationUsers_samaccountnames_only\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string21 = /asreproast\s\// nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string22 = /ASreproasting\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string23 = /breviaries\s\-Properties\sDnsHostName.*ms\-Mcs\-AdmPwd/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string24 = /\-command\s.*\.exe.*\s\-technique\sccmstp/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string25 = /\-consoleoutput\s\-DomainRecon/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string26 = /\-consoleoutput\s\-Localrecon/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string27 = /decryptteamviewer/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string28 = /Domainpassspray/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string29 = /DomainRecon\\ADCSServer\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string30 = /DomainRecon\\DC\-IPs\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string31 = /DomainRecon\\ExploitableSystems\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string32 = /DomainRecon\\OxidBindings\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string33 = /DomainRecon\\Windows_Servers\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string34 = /dumplsass/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string35 = /Enabled_Users1\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string36 = /Generalrecon\s\-noninteractive/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string37 = /Get_WinPwn_Repo\.sh/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string38 = /GPO\-RemoteAccess\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string39 = /GPP_Passwords\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string40 = /Invoke\-ADCSTemplateRecon/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string41 = /Invoke\-BlockETW/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string42 = /Invoke\-Certify/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string43 = /Invoke\-DomainPasswordSpray/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string44 = /Invoke\-Get\-RBCD\-Threaded/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string45 = /Invoke\-Grouper2/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string46 = /Invoke\-Grouper3/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string47 = /Invoke\-HandleKatz/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string48 = /Invoke\-Handlekatz/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string49 = /Invoke\-Internalmonologue/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string50 = /Invoke\-Inveigh/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string51 = /Invoke\-InveighRelay/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string52 = /Invoke\-JuicyPotato/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string53 = /Invoke\-LdapSignCheck/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string54 = /Invoke\-MalSCCM/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string55 = /Invoke\-MS16/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string56 = /Invoke\-NanoDump/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string57 = /Invoke\-Nightmare/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string58 = /Invoke\-Oxidresolver/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string59 = /Invoke\-OxidResolver/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string60 = /Invoke\-PowerDump/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string61 = /Invoke\-Privesc/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string62 = /Invoke\-RBDC/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string63 = /Invoke\-RBDC\-over\-DAVRPC/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string64 = /Invoke\-Reg1c1de/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string65 = /Invoke\-Rubeus/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string66 = /Invoke\-S3ssionGoph3r/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string67 = /Invoke\-Seatbelt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string68 = /Invoke\-SharpCloud/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string69 = /Invoke\-Sharpcradle/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string70 = /Invoke\-SharpGPO/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string71 = /Invoke\-Sharphound/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string72 = /Invoke\-Sharphound4/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string73 = /Invoke\-SharpImpersonation/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string74 = /Invoke\-SharpLdapRelayScan/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string75 = /Invoke\-SharpPrinter/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string76 = /Invoke\-SharpSCCM/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string77 = /Invoke\-SharpUp/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string78 = /Invoke\-Sharpweb/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string79 = /Invoke\-SMBClient/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string80 = /Invoke\-SMBEnum/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string81 = /Invoke\-SMBExec/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string82 = /Invoke\-SMBNegotiate\s\-ComputerName\slocalhost/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string83 = /Invoke\-SMBNegotiate/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string84 = /Invoke\-Snaffler/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string85 = /Invoke\-SpoolSample/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string86 = /Invoke\-SprayEmptyPassword/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string87 = /Invoke\-SQLAudit/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string88 = /Invoke\-SQLDumpInfo/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string89 = /Invoke\-SQLUncPathInjection/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string90 = /Invoke\-TheKatz/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string91 = /Invoke\-Vulmap/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string92 = /Invoke\-VulnerableADCSTemplates/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string93 = /Invoke\-watson/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string94 = /Invoke\-WCMDump/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string95 = /Invoke\-winPEAS/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string96 = /Invoke\-Zerologon/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string97 = /itm4nprivesc/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string98 = /kerberoast\s\// nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string99 = /Kittielocal\s\-/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string100 = /LapsAllowedAdminGroups\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string101 = /LapsPasswords\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string102 = /Lazagne.*Passwords\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string103 = /localreconmodules/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string104 = /lsassdumps/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string105 = /MS\-RPNVulnerableDC\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string106 = /NanoDumpChoose/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string107 = /nc\.exe\s127\.0\.0\.1\s4444/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string108 = /obfuskittiedump/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string109 = /Offline_WinPwn\.ps1/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string110 = /passhunt\.exe/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string111 = /password\|passwort\|passwd\|/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string112 = /Passwords_in_description\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string113 = /pwned_x64\/notepad\.exe/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string114 = /Pwned\-creds_Domainpasswordspray\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string115 = /RBCD_Petitpotam_VulnerableServers\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string116 = /RottenPotatoVulnerable\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string117 = /SCCM_DLLSiteloading\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string118 = /Sensitivelocalfiles\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string119 = /shareenumeration/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string120 = /SharpLdapRelayScan/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string121 = /Sherlock_Vulns\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string122 = /SQLServer_Accessible_PotentialSensitiveData\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string123 = /SQLServer_DefaultLogin\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string124 = /System32fileWritePermissions\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string125 = /temp\\stager\.exe/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string126 = /UACBypass\s\-/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string127 = /uacm4gic/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string128 = /Unconstrained_Delegation_Systems\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string129 = /UsernameAsPasswordCreds\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string130 = /WCMCredentials\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string131 = /whoami\s\/priv\s\|\sfindstr\s\/i\s\/C:.*SeImpersonatePrivilege/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string132 = /WinCreds\.exe/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string133 = /winPEAS\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string134 = /WinPwn\s\-/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string135 = /WinPwn\.exe/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string136 = /WinPwn\.ps1/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string137 = /WriteDLLPermission\.txt/ nocase ascii wide
+        // Description: Automation for internal Windows Penetrationtest AD-Security
+        // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
+        $string138 = /\-\-ZipFileName\s\$TrustedDomain\.zip/ nocase ascii wide
+
+    condition:
+        any of them
+}

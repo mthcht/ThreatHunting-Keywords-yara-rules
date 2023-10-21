@@ -1,0 +1,26 @@
+rule JohnTheRipper
+{
+    meta:
+        description = "Detection patterns for the tool 'JohnTheRipper' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "JohnTheRipper"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+        // Description: John the Ripper is a fast password cracker.
+        // Reference: https://github.com/magnumripper/JohnTheRipper
+        $string1 = /\s\-\-format\=NT\s\-w\=.*_password\.txt/ nocase ascii wide
+        // Description: John the Ripper is a fast password cracker.
+        // Reference: https://github.com/magnumripper/JohnTheRipper
+        $string2 = /john\s.*\s\-\-wordlist\=/ nocase ascii wide
+        // Description: John the Ripper is a fast password cracker.
+        // Reference: https://github.com/magnumripper/JohnTheRipper
+        $string3 = /john\sNTDS\.dit/ nocase ascii wide
+        // Description: John the Ripper is a fast password cracker.
+        // Reference: https://github.com/magnumripper/JohnTheRipper
+        $string4 = /John.*the.*Ripper/ nocase ascii wide
+
+    condition:
+        any of them
+}

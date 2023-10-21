@@ -70,7 +70,6 @@ def get_yara_files(yara_path):
 def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
     results = []
     try:
-        if file_path.stat().st_size <= MAX_FILE_SIZE:
         if file_path.is_file() and file_path.stat().st_size <= MAX_FILE_SIZE:
             with open(file_path, 'rb') as f:
                 print(f"Scanning {file_path} with {yara_rule_file} ...")

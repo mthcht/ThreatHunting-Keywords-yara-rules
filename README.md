@@ -8,15 +8,20 @@ All the detection patterns from the [threathunting-keywords](https://github.com/
 Organized in alphabetical order to bypass the GitHub limitation of 1000 files per directory.
 ![2023-10-21 11_57_00-178 128 108 72 (root)](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/d7a696fd-297c-4023-ae33-3e93dd51060a)
 
-## Scanning with the yara rules
-The python script [scan.py](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/blob/main/_utils/scan.py) python script enables cross-platform scanning of files and directories using the extracted YARA rules
+``
+# Scanning with the yara rules
+The python script [scan.py](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/blob/main/_utils/scan.py) enables cross-platform scanning of files and directories using the extracted YARA rules
+ - `-y` or `--yara`: Path to the YARA rule file(s) or directory containing them
+- `-t` or `--target`:Path to the target file or directory to scan
+- `-o` or `--output`: Path to the output file to save scan results in json format
 
-### Scanning a directory or a file with a yara rule:
+## Scanning a directory or a file with a yara rule:
 ![2023-10-20 20_23_59-(1) mthcht on X_ _The #ThreatHunting Keywords project is slowly progressing, alm](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda16d4c-e56d-49a2-8095-c9b920ebae0a)
 
+Example of the json output file using `-o` or `--output`: 
 ![2023-10-20 20_29_27-(1) mthcht on X_ _The #ThreatHunting Keywords project is slowly progressing, alm](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/0acea256-369b-4e2a-8e82-f51b69a1c1ee)
 
-### Scanning multiple directories or files with multiple yara rules:
+## Scanning multiple directories or files with multiple yara rules:
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/64cf98a8-dd5c-45de-946d-a9243d570b92)
 
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/37dc6e05-52c7-4778-bd22-62b960569fd0)

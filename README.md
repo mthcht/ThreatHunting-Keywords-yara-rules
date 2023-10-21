@@ -7,8 +7,7 @@ All the detection patterns from the [threathunting-keywords](https://github.com/
 - 🛠️ **signature keyword**: These keywords may not directly associate with tools but may include security product signature names, specific strings, or words significant in threat detection.
 
 Organized in alphabetical order to bypass the GitHub limitation of 1000 files per directory.
-
-![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/aa92027f-354a-4706-a019-a9d318eb0ffd)
+![2023-10-21 11_57_00-178 128 108 72 (root)](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/d7a696fd-297c-4023-ae33-3e93dd51060a)
 
 ## Scanning with the yara rules
 

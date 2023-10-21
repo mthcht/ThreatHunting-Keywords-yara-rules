@@ -1,5 +1,4 @@
 # ThreatHunting-Keywords-yaml-rules
-yaml detection rules for hunting with the [threathunting-keywords](https://github.com/mthcht/ThreatHunting-Keywords) project
 
 All the detection patterns from the [threathunting-keywords](https://github.com/mthcht/ThreatHunting-Keywords) project are automatically organized in yara rules for each tool and keyword type.
 - 🛠️ **offensive tool keyword**: These keywords relate to offensive tools or exhibit high confidence of malicious intent. It's crucial that these terms are relevant and reliable in detecting potential threats (low false positive rate).

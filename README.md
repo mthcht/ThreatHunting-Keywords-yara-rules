@@ -9,6 +9,7 @@ Organized in alphabetical order to bypass the GitHub limitation of 1000 files pe
 ![2023-10-21 11_57_00-178 128 108 72 (root)](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/d7a696fd-297c-4023-ae33-3e93dd51060a)
 
 ## Scanning with the yara rules
+The python script [scan.py](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/blob/main/_utils/scan.py) python script enables cross-platform scanning of files and directories using the extracted YARA rules
 
 ### Scanning a directory or a file with a yara rule:
 ![2023-10-20 20_23_59-(1) mthcht on X_ _The #ThreatHunting Keywords project is slowly progressing, alm](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda16d4c-e56d-49a2-8095-c9b920ebae0a)

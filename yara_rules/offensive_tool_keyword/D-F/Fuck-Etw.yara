@@ -22,7 +22,7 @@ rule Fuck_Etw
         $string4 = /\[\#\]\sReady\sFor\sETW\sPatch\./ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string5 = /\[\+\]\sETW\sPatched,\sNo\sLogs\sNo\sCrime\s\!/ nocase ascii wide
+        $string5 = /\[\+\]\sETW\sPatched.*\sNo\sLogs\sNo\sCrime\s\!/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
         $string6 = /\[i\]\sHooked\sNtdll\sBase\sAddress\s:\s/ nocase ascii wide

@@ -40,7 +40,7 @@ rule REC2_
         $string10 = /c2server_windows/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
-        $string11 = /crate::modules::{rec2mastodon,rec2virustotal}/ nocase ascii wide
+        $string11 = /crate::modules::{rec2mastodon.*rec2virustotal}/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
         $string12 = /d09ccee4\-pass\-word\-0000\-98677e2356fd/ nocase ascii wide

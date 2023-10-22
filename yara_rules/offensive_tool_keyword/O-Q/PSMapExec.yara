@@ -220,115 +220,118 @@ rule PSMapExec
         $string70 = /https:\/\/github\.com\/The\-Viper\-One/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string71 = /IAS\s\-Process\s.*aad3b435b51404eeaad3b435b51404ee/ nocase ascii wide
+        $string71 = /https:\/\/viperone\.gitbook\.io\/pentest\-everything/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string72 = /IAS\s\-Process\s{GNLPH}.*\$excludedUsernames\=\@\(\"Guest.*DefaultAccount.*WDAGUtilityAccount/ nocase ascii wide
+        $string72 = /IAS\s\-Process\s.*aad3b435b51404eeaad3b435b51404ee/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string73 = /InjectTicket.*ptt\s\/ticket:/ nocase ascii wide
+        $string73 = /IAS\s\-Process\s{GNLPH}.*\$excludedUsernames\=\@\(\"Guest.*DefaultAccount.*WDAGUtilityAccount/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string74 = /Invoke\-Mongoose/ nocase ascii wide
+        $string74 = /InjectTicket.*ptt\s\/ticket:/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string75 = /Invoke\-Pandemonium\s\-Command/ nocase ascii wide
+        $string75 = /Invoke\-Mongoose/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string76 = /Invoke\-Pandemonium\.ps1/ nocase ascii wide
+        $string76 = /Invoke\-Pandemonium\s\-Command/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string77 = /Invoke\-Rubeus\s/ nocase ascii wide
+        $string77 = /Invoke\-Pandemonium\.ps1/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string78 = /Invoke\-Rubeus/ nocase ascii wide
+        $string78 = /Invoke\-Rubeus\s/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string79 = /Invoke\-SharpRDP/ nocase ascii wide
+        $string79 = /Invoke\-Rubeus/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string80 = /KerbDump\\.*\-Tickets\-KerbDump\.txt/ nocase ascii wide
+        $string80 = /Invoke\-SharpRDP/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string81 = /LogonPasswords\\.*\-LogonPasswords\.txt/ nocase ascii wide
+        $string81 = /KerbDump\\.*\-Tickets\-KerbDump\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string82 = /LogonPasswords\\\.AllUniqueNTLM\.txt/ nocase ascii wide
+        $string82 = /LogonPasswords\\.*\-LogonPasswords\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string83 = /MimiTickets\\.*\-Tickets\.txt/ nocase ascii wide
+        $string83 = /LogonPasswords\\\.AllUniqueNTLM\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string84 = /New\-Object\sSystem\.Management\.ManagementClass\(\"\\\\\\\$env:computername\\root\\cimv2.*\[\"__CLASS\"\]\s\=\s\"PMEClass\"/ nocase ascii wide
+        $string84 = /MimiTickets\\.*\-Tickets\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string85 = /PME\\LSA\\.*\-LSA\.txt/ nocase ascii wide
+        $string85 = /New\-Object\sSystem\.Management\.ManagementClass\(\"\\\\\\\$env:computername\\root\\cimv2.*\[\"__CLASS\"\]\s\=\s\"PMEClass\"/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string86 = /PME\\UserFiles\\.*\-UserFiles\.txt/ nocase ascii wide
+        $string86 = /PME\\LSA\\.*\-LSA\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string87 = /PsMapExec\s\-/ nocase ascii wide
+        $string87 = /PME\\UserFiles\\.*\-UserFiles\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string88 = /PsMapExec\swill\scontinue\sin\sthe\scurrent\susers\scontext/ nocase ascii wide
+        $string88 = /PsMapExec\s\-/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string89 = /PsMapExec\.ps1/ nocase ascii wide
+        $string89 = /PsMapExec\swill\scontinue\sin\sthe\scurrent\susers\scontext/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string90 = /PsMapExec\-main/ nocase ascii wide
+        $string90 = /PsMapExec\.ps1/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string91 = /SAM\\.*\-SAMHashes\.txt/ nocase ascii wide
+        $string91 = /PsMapExec\-main/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
         $string92 = /SAM\\.*\-SAMHashes\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string93 = /SAM\\\.Sam\-Full\.txt/ nocase ascii wide
+        $string93 = /SAM\\.*\-SAMHashes\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string94 = /SMB\\SigningNotRequired\-.*\.txt/ nocase ascii wide
+        $string94 = /SAM\\\.Sam\-Full\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string95 = /Specified\suser\sis\sa\sDomain\sAdmin\.\sUse\sthe\s\-Force\sswitch\sto\soverride/ nocase ascii wide
+        $string95 = /SMB\\SigningNotRequired\-.*\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string96 = /Specified\suser\sis\sa\sEnterprise\sAdmin\.\sUse\sthe\s\-Force\sswitch\sto\soverride/ nocase ascii wide
+        $string96 = /Specified\suser\sis\sa\sDomain\sAdmin\.\sUse\sthe\s\-Force\sswitch\sto\soverride/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string97 = /Spraying\sempty\spasswords/ nocase ascii wide
+        $string97 = /Specified\suser\sis\sa\sEnterprise\sAdmin\.\sUse\sthe\s\-Force\sswitch\sto\soverride/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string98 = /Spraying\susernames\sas\spasswords/ nocase ascii wide
+        $string98 = /Spraying\sempty\spasswords/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string99 = /Spraying\\.*\-AccountAsPassword\-Users\.txt/ nocase ascii wide
+        $string99 = /Spraying\susernames\sas\spasswords/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string100 = /Spraying\\.*\-Password\-Users\.txt/ nocase ascii wide
+        $string100 = /Spraying\\.*\-AccountAsPassword\-Users\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string101 = /Supply\seither\sa\s32\-character\sRC4\/NT\shash\sor\sa\s64\-character\sAES256\shash/ nocase ascii wide
+        $string101 = /Spraying\\.*\-Password\-Users\.txt/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string102 = /tgtdeleg\s\/nowrap/ nocase ascii wide
+        $string102 = /Supply\seither\sa\s32\-character\sRC4\/NT\shash\sor\sa\s64\-character\sAES256\shash/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string103 = /The\-Viper\-One\/PME\-Scripts/ nocase ascii wide
+        $string103 = /tgtdeleg\s\/nowrap/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string104 = /The\-Viper\-One\/PsMapExec/ nocase ascii wide
+        $string104 = /The\-Viper\-One\/PME\-Scripts/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string105 = /to\s\$LogonPasswords/ nocase ascii wide
+        $string105 = /The\-Viper\-One\/PsMapExec/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string106 = /Unhandled\sRubeus\sexception:/ nocase ascii wide
+        $string106 = /to\s\$LogonPasswords/ nocase ascii wide
         // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
         // Reference: https://github.com/The-Viper-One/PsMapExec
-        $string107 = /VNC\-NoAuth\s\-ComputerName\s.*\s\-Port\s/ nocase ascii wide
+        $string107 = /Unhandled\sRubeus\sexception:/ nocase ascii wide
+        // Description: A PowerShell tool heavily inspired by the popular tool CrackMapExec. Far too often I find myself on engagements without access to Linux in order to make use of CrackMapExec.
+        // Reference: https://github.com/The-Viper-One/PsMapExec
+        $string108 = /VNC\-NoAuth\s\-ComputerName\s.*\s\-Port\s/ nocase ascii wide
 
     condition:
         any of them

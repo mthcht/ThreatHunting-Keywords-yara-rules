@@ -28,19 +28,19 @@ rule NtRemoteLoad
         $string6 = /\\HWSyscalls\-Example\./ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string7 = /\\NtRemoteLoad\.sln/ nocase ascii wide
+        $string7 = /\\NtRemoteLoad\.exe/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string8 = /40B05F26\-6A2F\-40BC\-88DE\-F40D4BC77FB0/ nocase ascii wide
+        $string8 = /\\NtRemoteLoad\.sln/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string9 = /florylsk\/NtRemoteLoad/ nocase ascii wide
+        $string9 = /40B05F26\-6A2F\-40BC\-88DE\-F40D4BC77FB0/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string10 = /NtRemoteLoad\-main/ nocase ascii wide
+        $string10 = /florylsk\/NtRemoteLoad/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string11 = /\\NtRemoteLoad\.exe/ nocase ascii wide
+        $string11 = /NtRemoteLoad\-main/ nocase ascii wide
 
     condition:
         any of them

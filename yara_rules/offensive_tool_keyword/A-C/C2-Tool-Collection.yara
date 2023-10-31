@@ -52,16 +52,16 @@ rule C2_Tool_Collection
         $string14 = /ReflectiveLoader\./ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string15 = /TicketToHashcat\.py/ nocase ascii wide
+        $string15 = /SprayAD\.exe\s/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string16 = /Lapsdump\s/ nocase ascii wide
+        $string16 = /TicketToHashcat\.py/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string17 = /SprayAD\s.*\s.*\s/ nocase ascii wide
+        $string17 = /Lapsdump\s/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string18 = /SprayAD\.exe\s/ nocase ascii wide
+        $string18 = /SprayAD\s.*\s.*\s/ nocase ascii wide
 
     condition:
         any of them

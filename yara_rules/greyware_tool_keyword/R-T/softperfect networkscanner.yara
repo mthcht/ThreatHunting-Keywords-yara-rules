@@ -40,13 +40,16 @@ rule softperfect_networkscanner
         $string10 = /\\netscan_portable\.zip/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string11 = /\\netscan_portable\\/ nocase ascii wide
+        $string11 = /SoftPerfect_.*Patch_Keygen_v2.*\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string12 = /\\netscan_setup\.exe/ nocase ascii wide
+        $string12 = /\\netscan_portable\\/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string13 = /netscan\.exe\s\// nocase ascii wide
+        $string13 = /\\netscan_setup\.exe/ nocase ascii wide
+        // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
+        // Reference: https://www.softperfect.com/products/networkscanner/
+        $string14 = /netscan\.exe\s\// nocase ascii wide
 
     condition:
         any of them

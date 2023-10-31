@@ -29,33 +29,54 @@ rule wmic
         // Description: gather information about Windows OS version and licensing on the hosts
         // Reference: https://thedfirreport.com/2023/05/22/icedid-macro-ends-in-nokoyawa-ransomware/
         $string7 = /cmd\.exe\s\/C\swmic\s\/node:.*\s\/user:.*\s\/password:.*\sos\sget\scaption/ nocase ascii wide
+        // Description: Enable WinRM remotely with wmic
+        // Reference: N/A
+        $string8 = /process\scall\screate\s\"powershell\senable\-psremoting\s\-force\"/ nocase ascii wide
         // Description: WMIC suspicious transfer 
         // Reference: N/A
-        $string8 = /start\swmic\s\/node:\@C:\\.*\.txt\s\/user:.*\/password:.*\sprocess\scall\screate\s.*cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.*\.exe\s/ nocase ascii wide
+        $string9 = /start\swmic\s\/node:\@C:\\.*\.txt\s\/user:.*\/password:.*\sprocess\scall\screate\s.*cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.*\.exe\s/ nocase ascii wide
         // Description: Lateral Movement with wmic
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string9 = /wmic\s\/.*\s\/user:administrator\sprocess\scall\screate\s.*cmd\.exe\s\/c\s/ nocase ascii wide
+        $string10 = /wmic\s\/.*\s\/user:administrator\sprocess\scall\screate\s.*cmd\.exe\s\/c\s/ nocase ascii wide
+        // Description: Execute file hosted over SMB on remote system with specified credential
+        // Reference: N/A
+        $string11 = /wmic\s\/node:.*\s\/user:.*\s\/password:.*\sprocess\scall\screate\s\"\\\\.*\\.*\.exe/ nocase ascii wide
+        // Description: Remotely start RDP with wmic
+        // Reference: N/A
+        $string12 = /wmic\s\/node:.*\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
+        // Description: get the currently logged user with wmic
+        // Reference: N/A
+        $string13 = /wmic\s\/node:.*\..*\..*\..*computersystem\sget\susername/ nocase ascii wide
+        // Description: get the currently logged user with wmic
+        // Reference: N/A
+        $string14 = /wmic\s\/node:.*localhost.*computersystem\sget\susername/ nocase ascii wide
+        // Description: get domain name with wmic
+        // Reference: N/A
+        $string15 = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
         // Description: The actor has executed WMIC commands [T1047] to create a copy of the ntds.dit file and SYSTEM registry hive using ntdsutil.exe
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string10 = /wmic\sprocess\scall\screate.*ntdsutil\s.*ac\si\sntds.*\sifm.*create\sfull/ nocase ascii wide
+        $string16 = /wmic\sprocess\scall\screate.*ntdsutil\s.*ac\si\sntds.*\sifm.*create\sfull/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string11 = /wmic\sservice\sbrief/ nocase ascii wide
+        $string17 = /wmic\sservice\sbrief/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string12 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string18 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string13 = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
+        $string19 = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string14 = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        $string20 = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string15 = /wmic.*\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string21 = /wmic.*\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string16 = /wmic\.exe\sprocess\scall\screate\s.*\.txt:.*\.exe/ nocase ascii wide
+        $string22 = /wmic\.exe\sprocess\scall\screate\s.*\.txt:.*\.exe/ nocase ascii wide
+        // Description: call cmd.exe with wmic
+        // Reference: N/A
+        $string23 = /wmic\.exe\sprocess\scall\screate\s.*cmd\s\/c\s/ nocase ascii wide
 
     condition:
         any of them

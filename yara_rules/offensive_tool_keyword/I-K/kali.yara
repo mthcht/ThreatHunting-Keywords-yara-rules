@@ -34,88 +34,88 @@ rule kali
         $string8 = /\/raw\/kali\/master\// nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string9 = /archive\-.*\.kali\.org\// nocase ascii wide
+        $string9 = /\\kali\-linux\-2023/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string10 = /cdimage\.kali\.org\// nocase ascii wide
+        $string10 = /archive\-.*\.kali\.org\// nocase ascii wide
+        // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
+        // Reference: https://www.kali.org/
+        $string11 = /cdimage\.kali\.org\// nocase ascii wide
         // Description: Kali Linux usage with wsl - example: \system32\wsl.exe -d kali-linux /usr/sbin/adduser???
         // Reference: https://www.kali.org/
-        $string11 = /\-d\skali\-linux\s/ nocase ascii wide
+        $string12 = /\-d\skali\-linux\s/ nocase ascii wide
         // Description: Kali Linux usage with wsl - example: \system32\wsl.exe -d kali-linux /usr/sbin/adduser???
         // Reference: https://www.kali.org/
-        $string12 = /home\/kali\/Downloads/ nocase ascii wide
+        $string13 = /home\/kali\/Downloads/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string13 = /https:\/\/gitlab\.com\/kalilinux\// nocase ascii wide
+        $string14 = /https:\/\/gitlab\.com\/kalilinux\// nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string14 = /https:\/\/kali\.download\// nocase ascii wide
+        $string15 = /https:\/\/kali\.download\// nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string15 = /hub\.docker\.com\/u\/kalilinux\// nocase ascii wide
+        $string16 = /hub\.docker\.com\/u\/kalilinux\// nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string16 = /\-\-install\s\-d\skali\-linux/ nocase ascii wide
+        $string17 = /\-\-install\s\-d\skali\-linux/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string17 = /kali\-.*\.deb/ nocase ascii wide
+        $string18 = /kali\-.*\.deb/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string18 = /kali\-linux.*\.7z/ nocase ascii wide
+        $string19 = /kali\-linux.*\.7z/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string19 = /kali\-linux.*\.img/ nocase ascii wide
+        $string20 = /kali\-linux.*\.img/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string20 = /kali\-linux.*\.iso/ nocase ascii wide
+        $string21 = /kali\-linux.*\.iso/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string21 = /kali\-linux\-.*\.torrent/ nocase ascii wide
+        $string22 = /kali\-linux\-.*\.torrent/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string22 = /kali\-linux\-.*\.vmdk/ nocase ascii wide
+        $string23 = /kali\-linux\-.*\.vmdk/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string23 = /kali\-linux\-.*\.vmwarevm/ nocase ascii wide
+        $string24 = /kali\-linux\-.*\.vmwarevm/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string24 = /kali\-linux\-.*\.vmx/ nocase ascii wide
+        $string25 = /kali\-linux\-.*\.vmx/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string25 = /kali\-linux\-.*\-installer\-amd64\.iso/ nocase ascii wide
+        $string26 = /kali\-linux\-.*\-installer\-amd64\.iso/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string26 = /kali\-linux\-.*\-installer\-everything\-amd64\.iso\.torrent/ nocase ascii wide
+        $string27 = /kali\-linux\-.*\-installer\-everything\-amd64\.iso\.torrent/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string27 = /kali\-linux\-.*\-live\-everything\-amd64\.iso\.torrent/ nocase ascii wide
+        $string28 = /kali\-linux\-.*\-live\-everything\-amd64\.iso\.torrent/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string28 = /kali\-linux\-.*\-raspberry\-pi\-armhf\.img\.xz/ nocase ascii wide
+        $string29 = /kali\-linux\-.*\-raspberry\-pi\-armhf\.img\.xz/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string29 = /kali\-linux\-.*\-virtualbox\-amd64\.ova/ nocase ascii wide
+        $string30 = /kali\-linux\-.*\-virtualbox\-amd64\.ova/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string30 = /kali\-linux\-.*\-vmware\-amd64\.7z/ nocase ascii wide
+        $string31 = /kali\-linux\-.*\-vmware\-amd64\.7z/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string31 = /nethunter\-.*\.torrent/ nocase ascii wide
+        $string32 = /nethunter\-.*\.torrent/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string32 = /nethunter\-.*\.zip/ nocase ascii wide
+        $string33 = /nethunter\-.*\.zip/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string33 = /nethunter\-.*\-oos\-ten\-kalifs\-full\.zip/ nocase ascii wide
+        $string34 = /nethunter\-.*\-oos\-ten\-kalifs\-full\.zip/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string34 = /wsl\skali\-linux/ nocase ascii wide
+        $string35 = /wsl\skali\-linux/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string35 = /www\.kali\.org\/get\-kali\// nocase ascii wide
-        // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
-        // Reference: https://www.kali.org/
-        $string36 = /\\kali\-linux\-2023/ nocase ascii wide
+        $string36 = /www\.kali\.org\/get\-kali\// nocase ascii wide
 
     condition:
         any of them

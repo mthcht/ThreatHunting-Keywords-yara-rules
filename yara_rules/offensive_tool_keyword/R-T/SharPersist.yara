@@ -13,25 +13,25 @@ rule SharPersist
         $string1 = /\s\-t\sschtaskbackdoor\s/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string2 = /\.exe\s\-t\sstartupfolder\s\-c\s.*\s\-a\s.*\s\-f/ nocase ascii wide
+        $string2 = /\.exe\s\-t\skeepass\s\-f\s/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string3 = /\.exe\s\-t\stortoisesvn\s\-c\s.*\s\-a\s.*\s\-m/ nocase ascii wide
+        $string3 = /\.exe\s\-t\sstartupfolder\s\-c\s.*\s\-a\s.*\s\-f/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string4 = /9D1B853E\-58F1\-4BA5\-AEFC\-5C221CA30E48/ nocase ascii wide
+        $string4 = /\.exe\s\-t\stortoisesvn\s\-c\s.*\s\-a\s.*\s\-m/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string5 = /KeePassBackdoor\./ nocase ascii wide
+        $string5 = /9D1B853E\-58F1\-4BA5\-AEFC\-5C221CA30E48/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string6 = /SchTaskBackdoor\./ nocase ascii wide
+        $string6 = /KeePassBackdoor\./ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string7 = /SharPersist/ nocase ascii wide
+        $string7 = /SchTaskBackdoor\./ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string8 = /\.exe\s\-t\skeepass\s\-f\s/ nocase ascii wide
+        $string8 = /SharPersist/ nocase ascii wide
 
     condition:
         any of them

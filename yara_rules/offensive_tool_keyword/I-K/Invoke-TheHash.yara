@@ -32,6 +32,12 @@ rule Invoke_TheHash
         // Description: Invoke-TheHash contains PowerShell functions for performing pass the hash WMI and SMB tasks. WMI and SMB connections are accessed through the .NET TCPClient. Authentication is performed by passing an NTLM hash into the NTLMv2 authentication protocol. Local administrator privilege is not required client-side.
         // Reference: https://github.com/Kevin-Robertson/Invoke-TheHash
         $string8 = /Invoke\-TheHash\.psm1/ nocase ascii wide
+        // Description: Invoke-TheHash contains PowerShell functions for performing pass the hash WMI and SMB tasks. WMI and SMB connections are accessed through the .NET TCPClient. Authentication is performed by passing an NTLM hash into the NTLMv2 authentication protocol. Local administrator privilege is not required client-side.
+        // Reference: https://github.com/Kevin-Robertson/Invoke-TheHash
+        $string9 = /Invoke\-WMIExec\s/ nocase ascii wide
+        // Description: Invoke-TheHash contains PowerShell functions for performing pass the hash WMI and SMB tasks. WMI and SMB connections are accessed through the .NET TCPClient. Authentication is performed by passing an NTLM hash into the NTLMv2 authentication protocol. Local administrator privilege is not required client-side.
+        // Reference: https://github.com/Kevin-Robertson/Invoke-TheHash
+        $string10 = /Invoke\-WMIExec\.ps1/ nocase ascii wide
 
     condition:
         any of them

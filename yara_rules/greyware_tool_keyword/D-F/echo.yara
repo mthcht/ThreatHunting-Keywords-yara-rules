@@ -17,9 +17,12 @@ rule echo
         // Description: Adversaries may attempt to test echo command after exploitation
         // Reference: N/A
         $string3 = /cmd\.exe\s\s\/S\s\/D\s\/c.*\secho\s123/ nocase ascii wide
+        // Description: alternative to whoami
+        // Reference: N/A
+        $string4 = /cmd\.exe\s\/c\secho\s\%username\%/ nocase ascii wide
         // Description: Named pipe impersonation
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string4 = /cmd\.exe\s\/c\secho\s.*\s\>\s\\\\\.\\pipe\\/ nocase ascii wide
+        $string5 = /cmd\.exe\s\/c\secho\s.*\s\>\s\\\\\.\\pipe\\/ nocase ascii wide
 
     condition:
         any of them

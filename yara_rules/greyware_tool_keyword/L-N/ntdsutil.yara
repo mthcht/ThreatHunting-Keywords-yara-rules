@@ -13,13 +13,13 @@ rule ntdsutil
         $string1 = /\\system32\.zip/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string2 = /ntdsutil\.exe\s.*ac\si\sntds.*\s.*ifm.*\s.*create\sfull\s.*c:\\ProgramData/ nocase ascii wide
+        $string2 = /ntdsutil\s.*ac\si\sntds.*\s.*create\sfull.*\\temp/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string3 = /ntdsutil\.exe\s.*ac\si\sntds.*\s.*ifm.*\s.*create\sfull\s.*users\\public/ nocase ascii wide
+        $string3 = /ntdsutil\.exe\s.*ac\si\sntds.*\s.*ifm.*\s.*create\sfull\s.*c:\\ProgramData/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string4 = /ntdsutil\s.*ac\si\sntds.*\s.*create\sfull.*\\temp/ nocase ascii wide
+        $string4 = /ntdsutil\.exe\s.*ac\si\sntds.*\s.*ifm.*\s.*create\sfull\s.*users\\public/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
         $string5 = /ntdsutil\.exe\s.*ac\si\sntds.*ifm.*create\sfull\s.*temp/ nocase ascii wide

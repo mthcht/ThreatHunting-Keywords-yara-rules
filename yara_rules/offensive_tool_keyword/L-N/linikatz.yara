@@ -16,64 +16,64 @@ rule linikatz
         $string2 = /\/vas\/fuzzers\/fuzz\// nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string3 = /C34208EA\-8C33\-473D\-A9B4\-53FB40347EA0/ nocase ascii wide
+        $string3 = /12e9256bbb969343cc20fa9e259c0af1bf12d6c7bd0263bd7b2a60575b73cf62/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string4 = /CiscoCXSecurity\/linikatz/ nocase ascii wide
+        $string4 = /4681186a8bcaff98f0d2513d30add67345491b95f7f743883e6ca2506ba7aaaf/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string5 = /config_steal\s\/etc\/krb5\.conf\s\/etc\/krb5\.keytab/ nocase ascii wide
+        $string5 = /612789c90ec1040d821a985265ea3b2f57e2c8df90b3880752dcb869e45256bc/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string6 = /ERPScan\-tockenchpoken\.zip/ nocase ascii wide
+        $string6 = /66c368f799227a9b571f841057e2d5f12c862360d5f7f564da9936acd67c66a0/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string7 = /fuzzers\/rippackets\.pl/ nocase ascii wide
+        $string7 = /691f577714a4ae22bc22ec49edec5a15bf546a9827e8e1cf4e9e688b2ba9f72e/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string8 = /linikatz\.sh/ nocase ascii wide
+        $string8 = /8672d46e879f704b4b41a401c1a0aae5e6365f18a798a1fbaa4b1a8e711db34b/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string9 = /linikatz\.zip/ nocase ascii wide
+        $string9 = /9a3a44c544cd596ebf94583614035575e746f57315e20ec56a819c7152ba3fe9/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string10 = /P0rtcu11i5\!/ nocase ascii wide
+        $string10 = /a0101bdeeb3f99c0640c203716381ef9f6bad8e89973eaa608c801ed3f6ccace/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string11 = /unix_cached_ad_hashes\.rb/ nocase ascii wide
+        $string11 = /a1b3d36a9cc4bc118c646ae5430a6e0fc811f2ec3614a3de9682b5c07eaade2d/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string12 = /unix_kerberos_tickets\.rb/ nocase ascii wide
+        $string12 = /adf6d464ce449914110607706da329993186f52f99074af1b7b1734a46dd4fcf/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string13 = /12e9256bbb969343cc20fa9e259c0af1bf12d6c7bd0263bd7b2a60575b73cf62/ nocase ascii wide
+        $string13 = /C34208EA\-8C33\-473D\-A9B4\-53FB40347EA0/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string14 = /4681186a8bcaff98f0d2513d30add67345491b95f7f743883e6ca2506ba7aaaf/ nocase ascii wide
+        $string14 = /CiscoCXSecurity\/linikatz/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string15 = /612789c90ec1040d821a985265ea3b2f57e2c8df90b3880752dcb869e45256bc/ nocase ascii wide
+        $string15 = /config_steal\s\/etc\/krb5\.conf\s\/etc\/krb5\.keytab/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string16 = /66c368f799227a9b571f841057e2d5f12c862360d5f7f564da9936acd67c66a0/ nocase ascii wide
+        $string16 = /ERPScan\-tockenchpoken\.zip/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string17 = /691f577714a4ae22bc22ec49edec5a15bf546a9827e8e1cf4e9e688b2ba9f72e/ nocase ascii wide
+        $string17 = /fuzzers\/rippackets\.pl/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string18 = /8672d46e879f704b4b41a401c1a0aae5e6365f18a798a1fbaa4b1a8e711db34b/ nocase ascii wide
+        $string18 = /linikatz\.sh/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string19 = /9a3a44c544cd596ebf94583614035575e746f57315e20ec56a819c7152ba3fe9/ nocase ascii wide
+        $string19 = /linikatz\.zip/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string20 = /a0101bdeeb3f99c0640c203716381ef9f6bad8e89973eaa608c801ed3f6ccace/ nocase ascii wide
+        $string20 = /P0rtcu11i5\!/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string21 = /a1b3d36a9cc4bc118c646ae5430a6e0fc811f2ec3614a3de9682b5c07eaade2d/ nocase ascii wide
+        $string21 = /unix_cached_ad_hashes\.rb/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
-        $string22 = /adf6d464ce449914110607706da329993186f52f99074af1b7b1734a46dd4fcf/ nocase ascii wide
+        $string22 = /unix_kerberos_tickets\.rb/ nocase ascii wide
         // Description: linikatz is a tool to attack AD on UNIX
         // Reference: https://github.com/CiscoCXSecurity/linikatz
         $string23 = /b2363d2b238f9336bb270fe96db258243668a916d7ddf94bf3a3126ed7cae508/ nocase ascii wide

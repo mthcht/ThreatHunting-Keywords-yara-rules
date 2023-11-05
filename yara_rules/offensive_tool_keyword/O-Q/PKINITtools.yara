@@ -22,16 +22,25 @@ rule PKINITtools
         $string4 = /\=Administrator\.ccache/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string5 = /export\sKRB5CCNAME\=.*\.ccache/ nocase ascii wide
+        $string5 = /dirkjanm\/PKINITtools/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string6 = /getnthash\.py/ nocase ascii wide
+        $string6 = /export\sKRB5CCNAME\=.*\.ccache/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string7 = /gets4uticket\.py/ nocase ascii wide
+        $string7 = /getnthash\.py/ nocase ascii wide
         // Description: Tools for Kerberos PKINIT and relaying to AD CS
         // Reference: https://github.com/dirkjanm/PKINITtools
-        $string8 = /gettgtpkinit\.py/ nocase ascii wide
+        $string8 = /gets4uticket\.py/ nocase ascii wide
+        // Description: Tools for Kerberos PKINIT and relaying to AD CS
+        // Reference: https://github.com/dirkjanm/PKINITtools
+        $string9 = /gettgtpkinit\.py/ nocase ascii wide
+        // Description: Tools for Kerberos PKINIT and relaying to AD CS
+        // Reference: https://github.com/dirkjanm/PKINITtools
+        $string10 = /impacket\sminikerberos/ nocase ascii wide
+        // Description: Tools for Kerberos PKINIT and relaying to AD CS
+        // Reference: https://github.com/dirkjanm/PKINITtools
+        $string11 = /PKINITtools\.git/ nocase ascii wide
 
     condition:
         any of them

@@ -37,19 +37,19 @@ rule powershell
         $string9 = /\=resu\sten/ nocase ascii wide
         // Description: Windows defender disable protection
         // Reference: https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
-        $string10 = /Add\-MpPreference\s\-DisDisableRealtimeMonitoring\sTrue/ nocase ascii wide
+        $string10 = /Add\-MpPreference\s\-DisableBehaviorMonitoring\sTrue/ nocase ascii wide
         // Description: Windows defender disable protection
         // Reference: https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
-        $string11 = /Add\-MpPreference\s\-DisableBehaviorMonitoring\sTrue/ nocase ascii wide
+        $string11 = /Add\-MpPreference\s\-DisableBehaviourMonitoring\sTrue/ nocase ascii wide
         // Description: Windows defender disable protection
         // Reference: https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
-        $string12 = /Add\-MpPreference\s\-DisableBehaviourMonitoring\sTrue/ nocase ascii wide
+        $string12 = /Add\-MpPreference\s\-DisDisableRealtimeMonitoring\sTrue/ nocase ascii wide
         // Description: Windows Defender evasion add an exclusion directory for your shady stuff
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string13 = /Add\-MpPreference\s\-ExclustionPath\sc:\\users\\public/ nocase ascii wide
+        $string13 = /Add\-MpPreference\s\-ExclusionPath\s/ nocase ascii wide
         // Description: Windows Defender evasion add an exclusion directory for your shady stuff
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string14 = /Add\-MpPreference\s\-ExclusionPath\s/ nocase ascii wide
+        $string14 = /Add\-MpPreference\s\-ExclustionPath\sc:\\users\\public/ nocase ascii wide
         // Description: method of dumping the MSOL service account (which allows a DCSync) used by Azure AD Connect Sync
         // Reference: https://gist.github.com/analyticsearch/7453d22d737e46657eb57c44d5cf4cbb
         $string15 = /azuread_decrypt_msol_.*\.ps1/ nocase ascii wide

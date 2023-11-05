@@ -1646,2088 +1646,2091 @@ rule nmap
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
         $string546 = /\ssocks\-open\-proxy\.nse/ nocase ascii wide
+        // Description: Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing (stealphy mode)
+        // Reference: https://nmap.org/book/nse-usage.html
+        $string547 = /\s\-sS\s\-p\-\s\-\-min\-rate\=.*\s\-Pn/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string547 = /\sssh2\-enum\-algos\.nse/ nocase ascii wide
+        $string548 = /\sssh2\-enum\-algos\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string548 = /\sssh\-auth\-methods\.nse/ nocase ascii wide
+        $string549 = /\sssh\-auth\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string549 = /\sssh\-brute\.nse/ nocase ascii wide
+        $string550 = /\sssh\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string550 = /\sssh\-hostkey\.nse/ nocase ascii wide
+        $string551 = /\sssh\-hostkey\.nse/ nocase ascii wide
         // Description: Nmap NSE scripts to check against log4shell or LogJam vulnerabilities (CVE-2021-44228). NSE scripts check most popular exposed services on the Internet. It is basic script where you can customize payload. Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/Diverto/nse-log4shell
-        $string551 = /\sssh\-log4shell\.nse/ nocase ascii wide
+        $string552 = /\sssh\-log4shell\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string552 = /\sssh\-publickey\-acceptance\.nse/ nocase ascii wide
+        $string553 = /\sssh\-publickey\-acceptance\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string553 = /\sssh\-run\.nse/ nocase ascii wide
+        $string554 = /\sssh\-run\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string554 = /\ssshv1\.nse/ nocase ascii wide
+        $string555 = /\ssshv1\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string555 = /\sssl\-ccs\-injection\.nse/ nocase ascii wide
+        $string556 = /\sssl\-ccs\-injection\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string556 = /\sssl\-cert\.nse/ nocase ascii wide
+        $string557 = /\sssl\-cert\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string557 = /\sssl\-cert\-intaddr\.nse/ nocase ascii wide
+        $string558 = /\sssl\-cert\-intaddr\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string558 = /\sssl\-date\.nse/ nocase ascii wide
+        $string559 = /\sssl\-date\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string559 = /\sssl\-dh\-params\.nse/ nocase ascii wide
+        $string560 = /\sssl\-dh\-params\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string560 = /\sssl\-enum\-ciphers\.nse/ nocase ascii wide
+        $string561 = /\sssl\-enum\-ciphers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string561 = /\sssl\-heartbleed\.nse/ nocase ascii wide
+        $string562 = /\sssl\-heartbleed\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string562 = /\sssl\-known\-key\.nse/ nocase ascii wide
+        $string563 = /\sssl\-known\-key\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string563 = /\sssl\-poodle\.nse/ nocase ascii wide
+        $string564 = /\sssl\-poodle\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string564 = /\ssslv2\.nse/ nocase ascii wide
+        $string565 = /\ssslv2\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string565 = /\ssslv2\-drown\.nse/ nocase ascii wide
+        $string566 = /\ssslv2\-drown\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string566 = /\ssstp\-discover\.nse/ nocase ascii wide
+        $string567 = /\ssstp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string567 = /\sstun\-info\.nse/ nocase ascii wide
+        $string568 = /\sstun\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string568 = /\sstun\-version\.nse/ nocase ascii wide
+        $string569 = /\sstun\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string569 = /\sstuxnet\-detect\.nse/ nocase ascii wide
+        $string570 = /\sstuxnet\-detect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string570 = /\ssupermicro\-ipmi\-conf\.nse/ nocase ascii wide
+        $string571 = /\ssupermicro\-ipmi\-conf\.nse/ nocase ascii wide
         // Description: Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing
         // Reference: https://nmap.org/book/nse-usage.html
-        $string571 = /\s\-sV\s\-\-script\svulners\s/ nocase ascii wide
+        $string572 = /\s\-sV\s\-\-script\svulners\s/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string572 = /\ssvn\-brute\.nse/ nocase ascii wide
+        $string573 = /\ssvn\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string573 = /\stargets\-asn\.nse/ nocase ascii wide
+        $string574 = /\stargets\-asn\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string574 = /\stargets\-ipv6\-map4to6\.nse/ nocase ascii wide
+        $string575 = /\stargets\-ipv6\-map4to6\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string575 = /\stargets\-ipv6\-multicast\-echo\.nse/ nocase ascii wide
+        $string576 = /\stargets\-ipv6\-multicast\-echo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string576 = /\stargets\-ipv6\-multicast\-invalid\-dst\.nse/ nocase ascii wide
+        $string577 = /\stargets\-ipv6\-multicast\-invalid\-dst\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string577 = /\stargets\-ipv6\-multicast\-mld\.nse/ nocase ascii wide
+        $string578 = /\stargets\-ipv6\-multicast\-mld\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string578 = /\stargets\-ipv6\-multicast\-slaac\.nse/ nocase ascii wide
+        $string579 = /\stargets\-ipv6\-multicast\-slaac\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string579 = /\stargets\-ipv6\-wordlist\.nse/ nocase ascii wide
+        $string580 = /\stargets\-ipv6\-wordlist\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string580 = /\stargets\-sniffer\.nse/ nocase ascii wide
+        $string581 = /\stargets\-sniffer\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string581 = /\stargets\-traceroute\.nse/ nocase ascii wide
+        $string582 = /\stargets\-traceroute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string582 = /\stargets\-xml\.nse/ nocase ascii wide
+        $string583 = /\stargets\-xml\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string583 = /\steamspeak2\-version\.nse/ nocase ascii wide
+        $string584 = /\steamspeak2\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string584 = /\stelnet\-brute\.nse/ nocase ascii wide
+        $string585 = /\stelnet\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string585 = /\stelnet\-encryption\.nse/ nocase ascii wide
+        $string586 = /\stelnet\-encryption\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string586 = /\stelnet\-ntlm\-info\.nse/ nocase ascii wide
+        $string587 = /\stelnet\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string587 = /\stftp\-enum\.nse/ nocase ascii wide
+        $string588 = /\stftp\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string588 = /\stls\-alpn\.nse/ nocase ascii wide
+        $string589 = /\stls\-alpn\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string589 = /\stls\-nextprotoneg\.nse/ nocase ascii wide
+        $string590 = /\stls\-nextprotoneg\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string590 = /\stls\-ticketbleed\.nse/ nocase ascii wide
+        $string591 = /\stls\-ticketbleed\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string591 = /\stn3270\-screen\.nse/ nocase ascii wide
+        $string592 = /\stn3270\-screen\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string592 = /\stor\-consensus\-checker\.nse/ nocase ascii wide
+        $string593 = /\stor\-consensus\-checker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string593 = /\straceroute\-geolocation\.nse/ nocase ascii wide
+        $string594 = /\straceroute\-geolocation\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string594 = /\stso\-brute\.nse/ nocase ascii wide
+        $string595 = /\stso\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string595 = /\stso\-enum\.nse/ nocase ascii wide
+        $string596 = /\stso\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string596 = /\subiquiti\-discovery\.nse/ nocase ascii wide
+        $string597 = /\subiquiti\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string597 = /\sunittest\.nse/ nocase ascii wide
+        $string598 = /\sunittest\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string598 = /\sunusual\-port\.nse/ nocase ascii wide
+        $string599 = /\sunusual\-port\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string599 = /\supnp\-info\.nse/ nocase ascii wide
+        $string600 = /\supnp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string600 = /\suptime\-agent\-info\.nse/ nocase ascii wide
+        $string601 = /\suptime\-agent\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string601 = /\surl\-snarf\.nse/ nocase ascii wide
+        $string602 = /\surl\-snarf\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string602 = /\sventrilo\-info\.nse/ nocase ascii wide
+        $string603 = /\sventrilo\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string603 = /\sversant\-info\.nse/ nocase ascii wide
+        $string604 = /\sversant\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string604 = /\svmauthd\-brute\.nse/ nocase ascii wide
+        $string605 = /\svmauthd\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string605 = /\svmware\-version\.nse/ nocase ascii wide
+        $string606 = /\svmware\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string606 = /\svnc\-brute\.nse/ nocase ascii wide
+        $string607 = /\svnc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string607 = /\svnc\-info\.nse/ nocase ascii wide
+        $string608 = /\svnc\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string608 = /\svnc\-title\.nse/ nocase ascii wide
+        $string609 = /\svnc\-title\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string609 = /\svoldemort\-info\.nse/ nocase ascii wide
+        $string610 = /\svoldemort\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string610 = /\svtam\-enum\.nse/ nocase ascii wide
+        $string611 = /\svtam\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string611 = /\svulners\.nse/ nocase ascii wide
+        $string612 = /\svulners\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string612 = /\svulscan\.nse/ nocase ascii wide
+        $string613 = /\svulscan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string613 = /\svuze\-dht\-info\.nse/ nocase ascii wide
+        $string614 = /\svuze\-dht\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string614 = /\swdb\-version\.nse/ nocase ascii wide
+        $string615 = /\swdb\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string615 = /\sweblogic\-t3\-info\.nse/ nocase ascii wide
+        $string616 = /\sweblogic\-t3\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string616 = /\swhois\-domain\.nse/ nocase ascii wide
+        $string617 = /\swhois\-domain\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string617 = /\swhois\-ip\.nse/ nocase ascii wide
+        $string618 = /\swhois\-ip\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string618 = /\swsdd\-discover\.nse/ nocase ascii wide
+        $string619 = /\swsdd\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string619 = /\sx11\-access\.nse/ nocase ascii wide
+        $string620 = /\sx11\-access\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string620 = /\sxdmcp\-discover\.nse/ nocase ascii wide
+        $string621 = /\sxdmcp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string621 = /\sxmlrpc\-methods\.nse/ nocase ascii wide
+        $string622 = /\sxmlrpc\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string622 = /\sxmpp\-brute\.nse/ nocase ascii wide
+        $string623 = /\sxmpp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string623 = /\sxmpp\-info\.nse/ nocase ascii wide
+        $string624 = /\sxmpp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string624 = /\/acarsd\-info\.nse/ nocase ascii wide
+        $string625 = /\/acarsd\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string625 = /\/address\-info\.nse/ nocase ascii wide
+        $string626 = /\/address\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string626 = /\/afp\-brute\.nse/ nocase ascii wide
+        $string627 = /\/afp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string627 = /\/afp\-ls\.nse/ nocase ascii wide
+        $string628 = /\/afp\-ls\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string628 = /\/afp\-path\-vuln\.nse/ nocase ascii wide
+        $string629 = /\/afp\-path\-vuln\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string629 = /\/afp\-serverinfo\.nse/ nocase ascii wide
+        $string630 = /\/afp\-serverinfo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string630 = /\/afp\-showmount\.nse/ nocase ascii wide
+        $string631 = /\/afp\-showmount\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string631 = /\/ajp\-auth\.nse/ nocase ascii wide
+        $string632 = /\/ajp\-auth\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string632 = /\/ajp\-brute\.nse/ nocase ascii wide
+        $string633 = /\/ajp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string633 = /\/ajp\-headers\.nse/ nocase ascii wide
+        $string634 = /\/ajp\-headers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string634 = /\/ajp\-methods\.nse/ nocase ascii wide
+        $string635 = /\/ajp\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string635 = /\/ajp\-request\.nse/ nocase ascii wide
+        $string636 = /\/ajp\-request\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string636 = /\/allseeingeye\-info\.nse/ nocase ascii wide
+        $string637 = /\/allseeingeye\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string637 = /\/amqp\-info\.nse/ nocase ascii wide
+        $string638 = /\/amqp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string638 = /\/asn\-query\.nse/ nocase ascii wide
+        $string639 = /\/asn\-query\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string639 = /\/auth\-owners\.nse/ nocase ascii wide
+        $string640 = /\/auth\-owners\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string640 = /\/auth\-spoof\.nse/ nocase ascii wide
+        $string641 = /\/auth\-spoof\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string641 = /\/backorifice\-brute\.nse/ nocase ascii wide
+        $string642 = /\/backorifice\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string642 = /\/backorifice\-info\.nse/ nocase ascii wide
+        $string643 = /\/backorifice\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string643 = /\/bacnet\-info\.nse/ nocase ascii wide
+        $string644 = /\/bacnet\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string644 = /\/banner\.nse/ nocase ascii wide
+        $string645 = /\/banner\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string645 = /\/bitcoin\-getaddr\.nse/ nocase ascii wide
+        $string646 = /\/bitcoin\-getaddr\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string646 = /\/bitcoin\-info\.nse/ nocase ascii wide
+        $string647 = /\/bitcoin\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string647 = /\/bitcoinrpc\-info\.nse/ nocase ascii wide
+        $string648 = /\/bitcoinrpc\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string648 = /\/bittorrent\-discovery\.nse/ nocase ascii wide
+        $string649 = /\/bittorrent\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string649 = /\/bjnp\-discover\.nse/ nocase ascii wide
+        $string650 = /\/bjnp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string650 = /\/broadcast\-ataoe\-discover\.nse/ nocase ascii wide
+        $string651 = /\/broadcast\-ataoe\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string651 = /\/broadcast\-avahi\-dos\.nse/ nocase ascii wide
+        $string652 = /\/broadcast\-avahi\-dos\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string652 = /\/broadcast\-bjnp\-discover\.nse/ nocase ascii wide
+        $string653 = /\/broadcast\-bjnp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string653 = /\/broadcast\-db2\-discover\.nse/ nocase ascii wide
+        $string654 = /\/broadcast\-db2\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string654 = /\/broadcast\-dhcp6\-discover\.nse/ nocase ascii wide
+        $string655 = /\/broadcast\-dhcp6\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string655 = /\/broadcast\-dhcp\-discover\.nse/ nocase ascii wide
+        $string656 = /\/broadcast\-dhcp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string656 = /\/broadcast\-dns\-service\-discovery\.nse/ nocase ascii wide
+        $string657 = /\/broadcast\-dns\-service\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string657 = /\/broadcast\-dropbox\-listener\.nse/ nocase ascii wide
+        $string658 = /\/broadcast\-dropbox\-listener\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string658 = /\/broadcast\-eigrp\-discovery\.nse/ nocase ascii wide
+        $string659 = /\/broadcast\-eigrp\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string659 = /\/broadcast\-hid\-discoveryd\.nse/ nocase ascii wide
+        $string660 = /\/broadcast\-hid\-discoveryd\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string660 = /\/broadcast\-igmp\-discovery\.nse/ nocase ascii wide
+        $string661 = /\/broadcast\-igmp\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string661 = /\/broadcast\-jenkins\-discover\.nse/ nocase ascii wide
+        $string662 = /\/broadcast\-jenkins\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string662 = /\/broadcast\-listener\.nse/ nocase ascii wide
+        $string663 = /\/broadcast\-listener\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string663 = /\/broadcast\-ms\-sql\-discover\.nse/ nocase ascii wide
+        $string664 = /\/broadcast\-ms\-sql\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string664 = /\/broadcast\-netbios\-master\-browser\.nse/ nocase ascii wide
+        $string665 = /\/broadcast\-netbios\-master\-browser\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string665 = /\/broadcast\-networker\-discover\.nse/ nocase ascii wide
+        $string666 = /\/broadcast\-networker\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string666 = /\/broadcast\-novell\-locate\.nse/ nocase ascii wide
+        $string667 = /\/broadcast\-novell\-locate\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string667 = /\/broadcast\-ospf2\-discover\.nse/ nocase ascii wide
+        $string668 = /\/broadcast\-ospf2\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string668 = /\/broadcast\-pc\-anywhere\.nse/ nocase ascii wide
+        $string669 = /\/broadcast\-pc\-anywhere\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string669 = /\/broadcast\-pc\-duo\.nse/ nocase ascii wide
+        $string670 = /\/broadcast\-pc\-duo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string670 = /\/broadcast\-pim\-discovery\.nse/ nocase ascii wide
+        $string671 = /\/broadcast\-pim\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string671 = /\/broadcast\-ping\.nse/ nocase ascii wide
+        $string672 = /\/broadcast\-ping\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string672 = /\/broadcast\-pppoe\-discover\.nse/ nocase ascii wide
+        $string673 = /\/broadcast\-pppoe\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string673 = /\/broadcast\-rip\-discover\.nse/ nocase ascii wide
+        $string674 = /\/broadcast\-rip\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string674 = /\/broadcast\-ripng\-discover\.nse/ nocase ascii wide
+        $string675 = /\/broadcast\-ripng\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string675 = /\/broadcast\-sonicwall\-discover\.nse/ nocase ascii wide
+        $string676 = /\/broadcast\-sonicwall\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string676 = /\/broadcast\-sybase\-asa\-discover\.nse/ nocase ascii wide
+        $string677 = /\/broadcast\-sybase\-asa\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string677 = /\/broadcast\-tellstick\-discover\.nse/ nocase ascii wide
+        $string678 = /\/broadcast\-tellstick\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string678 = /\/broadcast\-upnp\-info\.nse/ nocase ascii wide
+        $string679 = /\/broadcast\-upnp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string679 = /\/broadcast\-versant\-locate\.nse/ nocase ascii wide
+        $string680 = /\/broadcast\-versant\-locate\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string680 = /\/broadcast\-wake\-on\-lan\.nse/ nocase ascii wide
+        $string681 = /\/broadcast\-wake\-on\-lan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string681 = /\/broadcast\-wpad\-discover\.nse/ nocase ascii wide
+        $string682 = /\/broadcast\-wpad\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string682 = /\/broadcast\-wsdd\-discover\.nse/ nocase ascii wide
+        $string683 = /\/broadcast\-wsdd\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string683 = /\/broadcast\-xdmcp\-discover\.nse/ nocase ascii wide
+        $string684 = /\/broadcast\-xdmcp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string684 = /\/cassandra\-brute\.nse/ nocase ascii wide
+        $string685 = /\/cassandra\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string685 = /\/cassandra\-info\.nse/ nocase ascii wide
+        $string686 = /\/cassandra\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string686 = /\/cccam\-version\.nse/ nocase ascii wide
+        $string687 = /\/cccam\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string687 = /\/cics\-enum\.nse/ nocase ascii wide
+        $string688 = /\/cics\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string688 = /\/cics\-info\.nse/ nocase ascii wide
+        $string689 = /\/cics\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string689 = /\/cics\-user\-brute\.nse/ nocase ascii wide
+        $string690 = /\/cics\-user\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string690 = /\/cics\-user\-enum\.nse/ nocase ascii wide
+        $string691 = /\/cics\-user\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string691 = /\/citrix\-brute\-xml\.nse/ nocase ascii wide
+        $string692 = /\/citrix\-brute\-xml\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string692 = /\/citrix\-enum\-apps\.nse/ nocase ascii wide
+        $string693 = /\/citrix\-enum\-apps\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string693 = /\/citrix\-enum\-apps\-xml\.nse/ nocase ascii wide
+        $string694 = /\/citrix\-enum\-apps\-xml\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string694 = /\/citrix\-enum\-servers\.nse/ nocase ascii wide
+        $string695 = /\/citrix\-enum\-servers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string695 = /\/citrix\-enum\-servers\-xml\.nse/ nocase ascii wide
+        $string696 = /\/citrix\-enum\-servers\-xml\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string696 = /\/clamav\-exec\.nse/ nocase ascii wide
+        $string697 = /\/clamav\-exec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string697 = /\/clock\-skew\.nse/ nocase ascii wide
+        $string698 = /\/clock\-skew\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string698 = /\/coap\-resources\.nse/ nocase ascii wide
+        $string699 = /\/coap\-resources\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string699 = /\/couchdb\-databases\.nse/ nocase ascii wide
+        $string700 = /\/couchdb\-databases\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string700 = /\/couchdb\-stats\.nse/ nocase ascii wide
+        $string701 = /\/couchdb\-stats\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string701 = /\/creds\-summary\.nse/ nocase ascii wide
+        $string702 = /\/creds\-summary\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string702 = /\/cups\-info\.nse/ nocase ascii wide
+        $string703 = /\/cups\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string703 = /\/cups\-queue\-info\.nse/ nocase ascii wide
+        $string704 = /\/cups\-queue\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string704 = /\/cvs\-brute\.nse/ nocase ascii wide
+        $string705 = /\/cvs\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string705 = /\/cvs\-brute\-repository\.nse/ nocase ascii wide
+        $string706 = /\/cvs\-brute\-repository\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string706 = /\/daap\-get\-library\.nse/ nocase ascii wide
+        $string707 = /\/daap\-get\-library\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string707 = /\/daytime\.nse/ nocase ascii wide
+        $string708 = /\/daytime\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string708 = /\/db2\-das\-info\.nse/ nocase ascii wide
+        $string709 = /\/db2\-das\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string709 = /\/deluge\-rpc\-brute\.nse/ nocase ascii wide
+        $string710 = /\/deluge\-rpc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string710 = /\/dhcp\-discover\.nse/ nocase ascii wide
+        $string711 = /\/dhcp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string711 = /\/dicom\-brute\.nse/ nocase ascii wide
+        $string712 = /\/dicom\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string712 = /\/dicom\-ping\.nse/ nocase ascii wide
+        $string713 = /\/dicom\-ping\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string713 = /\/dict\-info\.nse/ nocase ascii wide
+        $string714 = /\/dict\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string714 = /\/distcc\-cve2004\-2687\.nse/ nocase ascii wide
+        $string715 = /\/distcc\-cve2004\-2687\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string715 = /\/dns\-blacklist\.nse/ nocase ascii wide
+        $string716 = /\/dns\-blacklist\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string716 = /\/dns\-brute\.nse/ nocase ascii wide
+        $string717 = /\/dns\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string717 = /\/dns\-cache\-snoop\.nse/ nocase ascii wide
+        $string718 = /\/dns\-cache\-snoop\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string718 = /\/dns\-check\-zone\.nse/ nocase ascii wide
+        $string719 = /\/dns\-check\-zone\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string719 = /\/dns\-client\-subnet\-scan\.nse/ nocase ascii wide
+        $string720 = /\/dns\-client\-subnet\-scan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string720 = /\/dns\-fuzz\.nse/ nocase ascii wide
+        $string721 = /\/dns\-fuzz\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string721 = /\/dns\-ip6\-arpa\-scan\.nse/ nocase ascii wide
+        $string722 = /\/dns\-ip6\-arpa\-scan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string722 = /\/dns\-nsec3\-enum\.nse/ nocase ascii wide
+        $string723 = /\/dns\-nsec3\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string723 = /\/dns\-nsec\-enum\.nse/ nocase ascii wide
+        $string724 = /\/dns\-nsec\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string724 = /\/dns\-nsid\.nse/ nocase ascii wide
+        $string725 = /\/dns\-nsid\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string725 = /\/dns\-random\-srcport\.nse/ nocase ascii wide
+        $string726 = /\/dns\-random\-srcport\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string726 = /\/dns\-random\-txid\.nse/ nocase ascii wide
+        $string727 = /\/dns\-random\-txid\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string727 = /\/dns\-recursion\.nse/ nocase ascii wide
+        $string728 = /\/dns\-recursion\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string728 = /\/dns\-service\-discovery\.nse/ nocase ascii wide
+        $string729 = /\/dns\-service\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string729 = /\/dns\-srv\-enum\.nse/ nocase ascii wide
+        $string730 = /\/dns\-srv\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string730 = /\/dns\-update\.nse/ nocase ascii wide
+        $string731 = /\/dns\-update\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string731 = /\/dns\-zeustracker\.nse/ nocase ascii wide
+        $string732 = /\/dns\-zeustracker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string732 = /\/dns\-zone\-transfer\.nse/ nocase ascii wide
+        $string733 = /\/dns\-zone\-transfer\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string733 = /\/docker\-version\.nse/ nocase ascii wide
+        $string734 = /\/docker\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string734 = /\/domcon\-brute\.nse/ nocase ascii wide
+        $string735 = /\/domcon\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string735 = /\/domcon\-cmd\.nse/ nocase ascii wide
+        $string736 = /\/domcon\-cmd\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string736 = /\/domino\-enum\-users\.nse/ nocase ascii wide
+        $string737 = /\/domino\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string737 = /\/dpap\-brute\.nse/ nocase ascii wide
+        $string738 = /\/dpap\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string738 = /\/drda\-brute\.nse/ nocase ascii wide
+        $string739 = /\/drda\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string739 = /\/drda\-info\.nse/ nocase ascii wide
+        $string740 = /\/drda\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string740 = /\/duplicates\.nse/ nocase ascii wide
+        $string741 = /\/duplicates\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string741 = /\/eap\-info\.nse/ nocase ascii wide
+        $string742 = /\/eap\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string742 = /\/enip\-info\.nse/ nocase ascii wide
+        $string743 = /\/enip\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string743 = /\/epmd\-info\.nse/ nocase ascii wide
+        $string744 = /\/epmd\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string744 = /\/eppc\-enum\-processes\.nse/ nocase ascii wide
+        $string745 = /\/eppc\-enum\-processes\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string745 = /\/fcrdns\.nse/ nocase ascii wide
+        $string746 = /\/fcrdns\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string746 = /\/finger\.nse/ nocase ascii wide
+        $string747 = /\/finger\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string747 = /\/fingerprint\-strings\.nse/ nocase ascii wide
+        $string748 = /\/fingerprint\-strings\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string748 = /\/firewalk\.nse/ nocase ascii wide
+        $string749 = /\/firewalk\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string749 = /\/firewall\-bypass\.nse/ nocase ascii wide
+        $string750 = /\/firewall\-bypass\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string750 = /\/flume\-master\-info\.nse/ nocase ascii wide
+        $string751 = /\/flume\-master\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string751 = /\/fox\-info\.nse/ nocase ascii wide
+        $string752 = /\/fox\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string752 = /\/freelancer\-info\.nse/ nocase ascii wide
+        $string753 = /\/freelancer\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string753 = /\/ftp\-anon\.nse/ nocase ascii wide
+        $string754 = /\/ftp\-anon\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string754 = /\/ftp\-bounce\.nse/ nocase ascii wide
+        $string755 = /\/ftp\-bounce\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string755 = /\/ftp\-brute\.nse/ nocase ascii wide
+        $string756 = /\/ftp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string756 = /\/ftp\-libopie\.nse/ nocase ascii wide
+        $string757 = /\/ftp\-libopie\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string757 = /\/ftp\-proftpd\-backdoor\.nse/ nocase ascii wide
+        $string758 = /\/ftp\-proftpd\-backdoor\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string758 = /\/ftp\-syst\.nse/ nocase ascii wide
+        $string759 = /\/ftp\-syst\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string759 = /\/ftp\-vsftpd\-backdoor\.nse/ nocase ascii wide
+        $string760 = /\/ftp\-vsftpd\-backdoor\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string760 = /\/ftp\-vuln\-cve2010\-4221\.nse/ nocase ascii wide
+        $string761 = /\/ftp\-vuln\-cve2010\-4221\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string761 = /\/ganglia\-info\.nse/ nocase ascii wide
+        $string762 = /\/ganglia\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string762 = /\/giop\-info\.nse/ nocase ascii wide
+        $string763 = /\/giop\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string763 = /\/gkrellm\-info\.nse/ nocase ascii wide
+        $string764 = /\/gkrellm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string764 = /\/gopher\-ls\.nse/ nocase ascii wide
+        $string765 = /\/gopher\-ls\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string765 = /\/gpsd\-info\.nse/ nocase ascii wide
+        $string766 = /\/gpsd\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string766 = /\/hadoop\-datanode\-info\.nse/ nocase ascii wide
+        $string767 = /\/hadoop\-datanode\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string767 = /\/hadoop\-jobtracker\-info\.nse/ nocase ascii wide
+        $string768 = /\/hadoop\-jobtracker\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string768 = /\/hadoop\-namenode\-info\.nse/ nocase ascii wide
+        $string769 = /\/hadoop\-namenode\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string769 = /\/hadoop\-secondary\-namenode\-info\.nse/ nocase ascii wide
+        $string770 = /\/hadoop\-secondary\-namenode\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string770 = /\/hadoop\-tasktracker\-info\.nse/ nocase ascii wide
+        $string771 = /\/hadoop\-tasktracker\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string771 = /\/hbase\-master\-info\.nse/ nocase ascii wide
+        $string772 = /\/hbase\-master\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string772 = /\/hbase\-region\-info\.nse/ nocase ascii wide
+        $string773 = /\/hbase\-region\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string773 = /\/hddtemp\-info\.nse/ nocase ascii wide
+        $string774 = /\/hddtemp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string774 = /\/hnap\-info\.nse/ nocase ascii wide
+        $string775 = /\/hnap\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string775 = /\/hostmap\-bfk\.nse/ nocase ascii wide
+        $string776 = /\/hostmap\-bfk\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string776 = /\/hostmap\-crtsh\.nse/ nocase ascii wide
+        $string777 = /\/hostmap\-crtsh\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string777 = /\/hostmap\-robtex\.nse/ nocase ascii wide
+        $string778 = /\/hostmap\-robtex\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string778 = /\/http\-adobe\-coldfusion\-apsa1301\.nse/ nocase ascii wide
+        $string779 = /\/http\-adobe\-coldfusion\-apsa1301\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string779 = /\/http\-affiliate\-id\.nse/ nocase ascii wide
+        $string780 = /\/http\-affiliate\-id\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string780 = /\/http\-apache\-negotiation\.nse/ nocase ascii wide
+        $string781 = /\/http\-apache\-negotiation\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string781 = /\/http\-apache\-server\-status\.nse/ nocase ascii wide
+        $string782 = /\/http\-apache\-server\-status\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string782 = /\/http\-aspnet\-debug\.nse/ nocase ascii wide
+        $string783 = /\/http\-aspnet\-debug\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string783 = /\/http\-auth\.nse/ nocase ascii wide
+        $string784 = /\/http\-auth\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string784 = /\/http\-auth\-finder\.nse/ nocase ascii wide
+        $string785 = /\/http\-auth\-finder\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string785 = /\/http\-avaya\-ipoffice\-users\.nse/ nocase ascii wide
+        $string786 = /\/http\-avaya\-ipoffice\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string786 = /\/http\-awstatstotals\-exec\.nse/ nocase ascii wide
+        $string787 = /\/http\-awstatstotals\-exec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string787 = /\/http\-axis2\-dir\-traversal\.nse/ nocase ascii wide
+        $string788 = /\/http\-axis2\-dir\-traversal\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string788 = /\/http\-backup\-finder\.nse/ nocase ascii wide
+        $string789 = /\/http\-backup\-finder\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string789 = /\/http\-barracuda\-dir\-traversal\.nse/ nocase ascii wide
+        $string790 = /\/http\-barracuda\-dir\-traversal\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string790 = /\/http\-bigip\-cookie\.nse/ nocase ascii wide
+        $string791 = /\/http\-bigip\-cookie\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string791 = /\/http\-brute\.nse/ nocase ascii wide
+        $string792 = /\/http\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string792 = /\/http\-cakephp\-version\.nse/ nocase ascii wide
+        $string793 = /\/http\-cakephp\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string793 = /\/http\-chrono\.nse/ nocase ascii wide
+        $string794 = /\/http\-chrono\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string794 = /\/http\-cisco\-anyconnect\.nse/ nocase ascii wide
+        $string795 = /\/http\-cisco\-anyconnect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string795 = /\/http\-coldfusion\-subzero\.nse/ nocase ascii wide
+        $string796 = /\/http\-coldfusion\-subzero\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string796 = /\/http\-comments\-displayer\.nse/ nocase ascii wide
+        $string797 = /\/http\-comments\-displayer\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string797 = /\/http\-config\-backup\.nse/ nocase ascii wide
+        $string798 = /\/http\-config\-backup\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string798 = /\/http\-cookie\-flags\.nse/ nocase ascii wide
+        $string799 = /\/http\-cookie\-flags\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string799 = /\/http\-cors\.nse/ nocase ascii wide
+        $string800 = /\/http\-cors\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string800 = /\/http\-cross\-domain\-policy\.nse/ nocase ascii wide
+        $string801 = /\/http\-cross\-domain\-policy\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string801 = /\/http\-csrf\.nse/ nocase ascii wide
+        $string802 = /\/http\-csrf\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string802 = /\/http\-date\.nse/ nocase ascii wide
+        $string803 = /\/http\-date\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string803 = /\/http\-default\-accounts\.nse/ nocase ascii wide
+        $string804 = /\/http\-default\-accounts\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string804 = /\/http\-devframework\.nse/ nocase ascii wide
+        $string805 = /\/http\-devframework\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string805 = /\/http\-dlink\-backdoor\.nse/ nocase ascii wide
+        $string806 = /\/http\-dlink\-backdoor\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string806 = /\/http\-dombased\-xss\.nse/ nocase ascii wide
+        $string807 = /\/http\-dombased\-xss\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string807 = /\/http\-domino\-enum\-passwords\.nse/ nocase ascii wide
+        $string808 = /\/http\-domino\-enum\-passwords\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string808 = /\/http\-drupal\-enum\.nse/ nocase ascii wide
+        $string809 = /\/http\-drupal\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string809 = /\/http\-drupal\-enum\-users\.nse/ nocase ascii wide
+        $string810 = /\/http\-drupal\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string810 = /\/http\-enum\.nse/ nocase ascii wide
+        $string811 = /\/http\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string811 = /\/http\-errors\.nse/ nocase ascii wide
+        $string812 = /\/http\-errors\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string812 = /\/http\-exif\-spider\.nse/ nocase ascii wide
+        $string813 = /\/http\-exif\-spider\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string813 = /\/http\-favicon\.nse/ nocase ascii wide
+        $string814 = /\/http\-favicon\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string814 = /\/http\-feed\.nse/ nocase ascii wide
+        $string815 = /\/http\-feed\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string815 = /\/http\-fetch\.nse/ nocase ascii wide
+        $string816 = /\/http\-fetch\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string816 = /\/http\-fileupload\-exploiter\.nse/ nocase ascii wide
+        $string817 = /\/http\-fileupload\-exploiter\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string817 = /\/http\-form\-brute\.nse/ nocase ascii wide
+        $string818 = /\/http\-form\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string818 = /\/http\-form\-fuzzer\.nse/ nocase ascii wide
+        $string819 = /\/http\-form\-fuzzer\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string819 = /\/http\-frontpage\-login\.nse/ nocase ascii wide
+        $string820 = /\/http\-frontpage\-login\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string820 = /\/http\-generator\.nse/ nocase ascii wide
+        $string821 = /\/http\-generator\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string821 = /\/http\-git\.nse/ nocase ascii wide
+        $string822 = /\/http\-git\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string822 = /\/http\-gitweb\-projects\-enum\.nse/ nocase ascii wide
+        $string823 = /\/http\-gitweb\-projects\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string823 = /\/http\-google\-malware\.nse/ nocase ascii wide
+        $string824 = /\/http\-google\-malware\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string824 = /\/http\-grep\.nse/ nocase ascii wide
+        $string825 = /\/http\-grep\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string825 = /\/http\-headers\.nse/ nocase ascii wide
+        $string826 = /\/http\-headers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string826 = /\/http\-hp\-ilo\-info\.nse/ nocase ascii wide
+        $string827 = /\/http\-hp\-ilo\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string827 = /\/http\-huawei\-hg5xx\-vuln\.nse/ nocase ascii wide
+        $string828 = /\/http\-huawei\-hg5xx\-vuln\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string828 = /\/http\-icloud\-findmyiphone\.nse/ nocase ascii wide
+        $string829 = /\/http\-icloud\-findmyiphone\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string829 = /\/http\-icloud\-sendmsg\.nse/ nocase ascii wide
+        $string830 = /\/http\-icloud\-sendmsg\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string830 = /\/http\-iis\-short\-name\-brute\.nse/ nocase ascii wide
+        $string831 = /\/http\-iis\-short\-name\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string831 = /\/http\-iis\-webdav\-vuln\.nse/ nocase ascii wide
+        $string832 = /\/http\-iis\-webdav\-vuln\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string832 = /\/http\-internal\-ip\-disclosure\.nse/ nocase ascii wide
+        $string833 = /\/http\-internal\-ip\-disclosure\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string833 = /\/http\-joomla\-brute\.nse/ nocase ascii wide
+        $string834 = /\/http\-joomla\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string834 = /\/http\-jsonp\-detection\.nse/ nocase ascii wide
+        $string835 = /\/http\-jsonp\-detection\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/nccgroup/nmap-nse-vulnerability-scripts
-        $string835 = /\/http\-lexmark\-version\.nse/ nocase ascii wide
+        $string836 = /\/http\-lexmark\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string836 = /\/http\-lfi\.nse/ nocase ascii wide
+        $string837 = /\/http\-lfi\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string837 = /\/http\-litespeed\-sourcecode\-download\.nse/ nocase ascii wide
+        $string838 = /\/http\-litespeed\-sourcecode\-download\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string838 = /\/http\-ls\.nse/ nocase ascii wide
+        $string839 = /\/http\-ls\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string839 = /\/http\-majordomo2\-dir\-traversal\.nse/ nocase ascii wide
+        $string840 = /\/http\-majordomo2\-dir\-traversal\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string840 = /\/http\-malware\-host\.nse/ nocase ascii wide
+        $string841 = /\/http\-malware\-host\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string841 = /\/http\-mcmp\.nse/ nocase ascii wide
+        $string842 = /\/http\-mcmp\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string842 = /\/http\-methods\.nse/ nocase ascii wide
+        $string843 = /\/http\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string843 = /\/http\-method\-tamper\.nse/ nocase ascii wide
+        $string844 = /\/http\-method\-tamper\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string844 = /\/http\-mobileversion\-checker\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string845 = /\/http\-nikto\-scan\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string846 = /\/http\-ntlm\-info\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string847 = /\/http\-open\-proxy\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string848 = /\/http\-open\-redirect\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string849 = /\/http\-passwd\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string850 = /\/http\-phpmyadmin\-dir\-traversal\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string851 = /\/http\-phpself\-xss\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string852 = /\/http\-php\-version\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string853 = /\/http\-proxy\-brute\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string854 = /\/http\-put\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string855 = /\/http\-qnap\-nas\-info\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string856 = /\/http\-referer\-checker\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string857 = /\/http\-rfi\-spider\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string858 = /\/http\-robots\.txt\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string859 = /\/http\-robtex\-reverse\-ip\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string860 = /\/http\-robtex\-shared\-ns\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string861 = /\/http\-sap\-netweaver\-leak\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string862 = /\/http\-security\-headers\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string863 = /\/http\-server\-header\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string864 = /\/http\-shellshock\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string865 = /\/http\-sitemap\-generator\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string866 = /\/http\-slowloris\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string867 = /\/http\-slowloris\-check\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string868 = /\/http\-sql\-injection\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string869 = /\/https\-redirect\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string870 = /\/http\-stored\-xss\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string871 = /\/http\-svn\-enum\.nse/ nocase ascii wide
-        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
-        // Reference: https://svn.nmap.org/nmap/scripts/
-        $string872 = /\/http\-svn\-info\.nse/ nocase ascii wide
+        $string845 = /\/http\-mobileversion\-checker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string873 = /\/http\-tenda\-enum\.nse/ nocase ascii wide
+        $string846 = /\/http\-nikto\-scan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string874 = /\/http\-title\.nse/ nocase ascii wide
+        $string847 = /\/http\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string875 = /\/http\-tplink\-dir\-traversal\.nse/ nocase ascii wide
+        $string848 = /\/http\-open\-proxy\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string876 = /\/http\-trace\.nse/ nocase ascii wide
+        $string849 = /\/http\-open\-redirect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string877 = /\/http\-traceroute\.nse/ nocase ascii wide
+        $string850 = /\/http\-passwd\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string878 = /\/http\-trane\-info\.nse/ nocase ascii wide
+        $string851 = /\/http\-phpmyadmin\-dir\-traversal\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string879 = /\/http\-unsafe\-output\-escaping\.nse/ nocase ascii wide
+        $string852 = /\/http\-phpself\-xss\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string880 = /\/http\-useragent\-tester\.nse/ nocase ascii wide
+        $string853 = /\/http\-php\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string881 = /\/http\-userdir\-enum\.nse/ nocase ascii wide
+        $string854 = /\/http\-proxy\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string882 = /\/http\-vhosts\.nse/ nocase ascii wide
+        $string855 = /\/http\-put\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string883 = /\/http\-virustotal\.nse/ nocase ascii wide
+        $string856 = /\/http\-qnap\-nas\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string884 = /\/http\-vlcstreamer\-ls\.nse/ nocase ascii wide
+        $string857 = /\/http\-referer\-checker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string885 = /\/http\-vmware\-path\-vuln\.nse/ nocase ascii wide
+        $string858 = /\/http\-rfi\-spider\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string886 = /\/http\-vuln\-cve2006\-3392\.nse/ nocase ascii wide
+        $string859 = /\/http\-robots\.txt\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string887 = /\/http\-vuln\-cve2009\-3960\.nse/ nocase ascii wide
+        $string860 = /\/http\-robtex\-reverse\-ip\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string888 = /\/http\-vuln\-cve2010\-0738\.nse/ nocase ascii wide
+        $string861 = /\/http\-robtex\-shared\-ns\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string889 = /\/http\-vuln\-cve2010\-2861\.nse/ nocase ascii wide
+        $string862 = /\/http\-sap\-netweaver\-leak\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string890 = /\/http\-vuln\-cve2011\-3192\.nse/ nocase ascii wide
+        $string863 = /\/http\-security\-headers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string891 = /\/http\-vuln\-cve2011\-3368\.nse/ nocase ascii wide
+        $string864 = /\/http\-server\-header\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string892 = /\/http\-vuln\-cve2012\-1823\.nse/ nocase ascii wide
+        $string865 = /\/http\-shellshock\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string893 = /\/http\-vuln\-cve2013\-0156\.nse/ nocase ascii wide
+        $string866 = /\/http\-sitemap\-generator\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string894 = /\/http\-vuln\-cve2013\-6786\.nse/ nocase ascii wide
+        $string867 = /\/http\-slowloris\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string895 = /\/http\-vuln\-cve2013\-7091\.nse/ nocase ascii wide
+        $string868 = /\/http\-slowloris\-check\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string896 = /\/http\-vuln\-cve2014\-2126\.nse/ nocase ascii wide
+        $string869 = /\/http\-sql\-injection\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string897 = /\/http\-vuln\-cve2014\-2127\.nse/ nocase ascii wide
+        $string870 = /\/https\-redirect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string898 = /\/http\-vuln\-cve2014\-2128\.nse/ nocase ascii wide
+        $string871 = /\/http\-stored\-xss\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string899 = /\/http\-vuln\-cve2014\-2129\.nse/ nocase ascii wide
+        $string872 = /\/http\-svn\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string900 = /\/http\-vuln\-cve2014\-3704\.nse/ nocase ascii wide
+        $string873 = /\/http\-svn\-info\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
+        $string874 = /\/http\-tenda\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string901 = /\/http\-vuln\-cve2014\-8877\.nse/ nocase ascii wide
+        $string875 = /\/http\-title\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string902 = /\/http\-vuln\-cve2015\-1427\.nse/ nocase ascii wide
+        $string876 = /\/http\-tplink\-dir\-traversal\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string903 = /\/http\-vuln\-cve2015\-1635\.nse/ nocase ascii wide
+        $string877 = /\/http\-trace\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string904 = /\/http\-vuln\-cve2017\-1001000\.nse/ nocase ascii wide
+        $string878 = /\/http\-traceroute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string905 = /\/http\-vuln\-cve2017\-5638\.nse/ nocase ascii wide
+        $string879 = /\/http\-trane\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string906 = /\/http\-vuln\-cve2017\-5689\.nse/ nocase ascii wide
+        $string880 = /\/http\-unsafe\-output\-escaping\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string907 = /\/http\-vuln\-cve2017\-8917\.nse/ nocase ascii wide
+        $string881 = /\/http\-useragent\-tester\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string882 = /\/http\-userdir\-enum\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string883 = /\/http\-vhosts\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string884 = /\/http\-virustotal\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string885 = /\/http\-vlcstreamer\-ls\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string886 = /\/http\-vmware\-path\-vuln\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string887 = /\/http\-vuln\-cve2006\-3392\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string888 = /\/http\-vuln\-cve2009\-3960\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string889 = /\/http\-vuln\-cve2010\-0738\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string890 = /\/http\-vuln\-cve2010\-2861\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string891 = /\/http\-vuln\-cve2011\-3192\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string892 = /\/http\-vuln\-cve2011\-3368\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string893 = /\/http\-vuln\-cve2012\-1823\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string894 = /\/http\-vuln\-cve2013\-0156\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string895 = /\/http\-vuln\-cve2013\-6786\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string896 = /\/http\-vuln\-cve2013\-7091\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string897 = /\/http\-vuln\-cve2014\-2126\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string898 = /\/http\-vuln\-cve2014\-2127\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string899 = /\/http\-vuln\-cve2014\-2128\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string900 = /\/http\-vuln\-cve2014\-2129\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string901 = /\/http\-vuln\-cve2014\-3704\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string902 = /\/http\-vuln\-cve2014\-8877\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string903 = /\/http\-vuln\-cve2015\-1427\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string904 = /\/http\-vuln\-cve2015\-1635\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string905 = /\/http\-vuln\-cve2017\-1001000\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string906 = /\/http\-vuln\-cve2017\-5638\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string907 = /\/http\-vuln\-cve2017\-5689\.nse/ nocase ascii wide
+        // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
+        // Reference: https://svn.nmap.org/nmap/scripts/
+        $string908 = /\/http\-vuln\-cve2017\-8917\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/vulnersCom/nmap-vulners
-        $string908 = /\/http\-vulners\-regex\.nse/ nocase ascii wide
+        $string909 = /\/http\-vulners\-regex\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string909 = /\/http\-vuln\-misfortune\-cookie\.nse/ nocase ascii wide
+        $string910 = /\/http\-vuln\-misfortune\-cookie\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string910 = /\/http\-vuln\-wnr1000\-creds\.nse/ nocase ascii wide
+        $string911 = /\/http\-vuln\-wnr1000\-creds\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string911 = /\/http\-waf\-detect\.nse/ nocase ascii wide
+        $string912 = /\/http\-waf\-detect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string912 = /\/http\-waf\-fingerprint\.nse/ nocase ascii wide
+        $string913 = /\/http\-waf\-fingerprint\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string913 = /\/http\-webdav\-scan\.nse/ nocase ascii wide
+        $string914 = /\/http\-webdav\-scan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string914 = /\/http\-wordpress\-brute\.nse/ nocase ascii wide
+        $string915 = /\/http\-wordpress\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string915 = /\/http\-wordpress\-enum\.nse/ nocase ascii wide
+        $string916 = /\/http\-wordpress\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string916 = /\/http\-wordpress\-users\.nse/ nocase ascii wide
+        $string917 = /\/http\-wordpress\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string917 = /\/http\-xssed\.nse/ nocase ascii wide
+        $string918 = /\/http\-xssed\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string918 = /\/iax2\-brute\.nse/ nocase ascii wide
+        $string919 = /\/iax2\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string919 = /\/iax2\-version\.nse/ nocase ascii wide
+        $string920 = /\/iax2\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string920 = /\/icap\-info\.nse/ nocase ascii wide
+        $string921 = /\/icap\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string921 = /\/iec\-identify\.nse/ nocase ascii wide
+        $string922 = /\/iec\-identify\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string922 = /\/ike\-version\.nse/ nocase ascii wide
+        $string923 = /\/ike\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string923 = /\/imap\-brute\.nse/ nocase ascii wide
+        $string924 = /\/imap\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string924 = /\/imap\-capabilities\.nse/ nocase ascii wide
+        $string925 = /\/imap\-capabilities\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string925 = /\/imap\-ntlm\-info\.nse/ nocase ascii wide
+        $string926 = /\/imap\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string926 = /\/impress\-remote\-discover\.nse/ nocase ascii wide
+        $string927 = /\/impress\-remote\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string927 = /\/informix\-brute\.nse/ nocase ascii wide
+        $string928 = /\/informix\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string928 = /\/informix\-query\.nse/ nocase ascii wide
+        $string929 = /\/informix\-query\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string929 = /\/informix\-tables\.nse/ nocase ascii wide
+        $string930 = /\/informix\-tables\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string930 = /\/ip\-forwarding\.nse/ nocase ascii wide
+        $string931 = /\/ip\-forwarding\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string931 = /\/ip\-geolocation\-geoplugin\.nse/ nocase ascii wide
+        $string932 = /\/ip\-geolocation\-geoplugin\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string932 = /\/ip\-geolocation\-ipinfodb\.nse/ nocase ascii wide
+        $string933 = /\/ip\-geolocation\-ipinfodb\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string933 = /\/ip\-geolocation\-map\-bing\.nse/ nocase ascii wide
+        $string934 = /\/ip\-geolocation\-map\-bing\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string934 = /\/ip\-geolocation\-map\-google\.nse/ nocase ascii wide
+        $string935 = /\/ip\-geolocation\-map\-google\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string935 = /\/ip\-geolocation\-map\-kml\.nse/ nocase ascii wide
+        $string936 = /\/ip\-geolocation\-map\-kml\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string936 = /\/ip\-geolocation\-maxmind\.nse/ nocase ascii wide
+        $string937 = /\/ip\-geolocation\-maxmind\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string937 = /\/ip\-https\-discover\.nse/ nocase ascii wide
+        $string938 = /\/ip\-https\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string938 = /\/ipidseq\.nse/ nocase ascii wide
+        $string939 = /\/ipidseq\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string939 = /\/ipmi\-brute\.nse/ nocase ascii wide
+        $string940 = /\/ipmi\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string940 = /\/ipmi\-cipher\-zero\.nse/ nocase ascii wide
+        $string941 = /\/ipmi\-cipher\-zero\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string941 = /\/ipmi\-version\.nse/ nocase ascii wide
+        $string942 = /\/ipmi\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string942 = /\/ipv6\-multicast\-mld\-list\.nse/ nocase ascii wide
+        $string943 = /\/ipv6\-multicast\-mld\-list\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string943 = /\/ipv6\-node\-info\.nse/ nocase ascii wide
+        $string944 = /\/ipv6\-node\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string944 = /\/ipv6\-ra\-flood\.nse/ nocase ascii wide
+        $string945 = /\/ipv6\-ra\-flood\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string945 = /\/irc\-botnet\-channels\.nse/ nocase ascii wide
+        $string946 = /\/irc\-botnet\-channels\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string946 = /\/irc\-brute\.nse/ nocase ascii wide
+        $string947 = /\/irc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string947 = /\/irc\-info\.nse/ nocase ascii wide
+        $string948 = /\/irc\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string948 = /\/irc\-sasl\-brute\.nse/ nocase ascii wide
+        $string949 = /\/irc\-sasl\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string949 = /\/irc\-unrealircd\-backdoor\.nse/ nocase ascii wide
+        $string950 = /\/irc\-unrealircd\-backdoor\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string950 = /\/iscsi\-brute\.nse/ nocase ascii wide
+        $string951 = /\/iscsi\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string951 = /\/iscsi\-info\.nse/ nocase ascii wide
+        $string952 = /\/iscsi\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string952 = /\/isns\-info\.nse/ nocase ascii wide
+        $string953 = /\/isns\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string953 = /\/jdwp\-exec\.nse/ nocase ascii wide
+        $string954 = /\/jdwp\-exec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string954 = /\/jdwp\-info\.nse/ nocase ascii wide
+        $string955 = /\/jdwp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string955 = /\/jdwp\-inject\.nse/ nocase ascii wide
+        $string956 = /\/jdwp\-inject\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string956 = /\/jdwp\-version\.nse/ nocase ascii wide
+        $string957 = /\/jdwp\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string957 = /\/knx\-gateway\-discover\.nse/ nocase ascii wide
+        $string958 = /\/knx\-gateway\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string958 = /\/knx\-gateway\-info\.nse/ nocase ascii wide
+        $string959 = /\/knx\-gateway\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string959 = /\/krb5\-enum\-users\.nse/ nocase ascii wide
+        $string960 = /\/krb5\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string960 = /\/ldap\-brute\.nse/ nocase ascii wide
+        $string961 = /\/ldap\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string961 = /\/ldap\-novell\-getpass\.nse/ nocase ascii wide
+        $string962 = /\/ldap\-novell\-getpass\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string962 = /\/ldap\-rootdse\.nse/ nocase ascii wide
+        $string963 = /\/ldap\-rootdse\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string963 = /\/ldap\-search\.nse/ nocase ascii wide
+        $string964 = /\/ldap\-search\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string964 = /\/lexmark\-config\.nse/ nocase ascii wide
+        $string965 = /\/lexmark\-config\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string965 = /\/llmnr\-resolve\.nse/ nocase ascii wide
+        $string966 = /\/llmnr\-resolve\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string966 = /\/lltd\-discovery\.nse/ nocase ascii wide
+        $string967 = /\/lltd\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string967 = /\/lu\-enum\.nse/ nocase ascii wide
+        $string968 = /\/lu\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string968 = /\/maxdb\-info\.nse/ nocase ascii wide
+        $string969 = /\/maxdb\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string969 = /\/mcafee\-epo\-agent\.nse/ nocase ascii wide
+        $string970 = /\/mcafee\-epo\-agent\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string970 = /\/membase\-brute\.nse/ nocase ascii wide
+        $string971 = /\/membase\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string971 = /\/membase\-http\-info\.nse/ nocase ascii wide
+        $string972 = /\/membase\-http\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string972 = /\/memcached\-info\.nse/ nocase ascii wide
+        $string973 = /\/memcached\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string973 = /\/metasploit\-info\.nse/ nocase ascii wide
+        $string974 = /\/metasploit\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string974 = /\/metasploit\-msgrpc\-brute\.nse/ nocase ascii wide
+        $string975 = /\/metasploit\-msgrpc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string975 = /\/metasploit\-xmlrpc\-brute\.nse/ nocase ascii wide
+        $string976 = /\/metasploit\-xmlrpc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string976 = /\/mikrotik\-routeros\-brute\.nse/ nocase ascii wide
+        $string977 = /\/mikrotik\-routeros\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string977 = /\/mmouse\-brute\.nse/ nocase ascii wide
+        $string978 = /\/mmouse\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string978 = /\/mmouse\-exec\.nse/ nocase ascii wide
+        $string979 = /\/mmouse\-exec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string979 = /\/modbus\-discover\.nse/ nocase ascii wide
+        $string980 = /\/modbus\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string980 = /\/mongodb\-brute\.nse/ nocase ascii wide
+        $string981 = /\/mongodb\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string981 = /\/mongodb\-databases\.nse/ nocase ascii wide
+        $string982 = /\/mongodb\-databases\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string982 = /\/mongodb\-info\.nse/ nocase ascii wide
+        $string983 = /\/mongodb\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string983 = /\/mqtt\-subscribe\.nse/ nocase ascii wide
+        $string984 = /\/mqtt\-subscribe\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string984 = /\/mrinfo\.nse/ nocase ascii wide
+        $string985 = /\/mrinfo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string985 = /\/MS15\-034\.nse/ nocase ascii wide
+        $string986 = /\/MS15\-034\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string986 = /\/msrpc\-enum\.nse/ nocase ascii wide
+        $string987 = /\/msrpc\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string987 = /\/ms\-sql\-brute\.nse/ nocase ascii wide
+        $string988 = /\/ms\-sql\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string988 = /\/ms\-sql\-config\.nse/ nocase ascii wide
+        $string989 = /\/ms\-sql\-config\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string989 = /\/ms\-sql\-dac\.nse/ nocase ascii wide
+        $string990 = /\/ms\-sql\-dac\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string990 = /\/ms\-sql\-dump\-hashes\.nse/ nocase ascii wide
+        $string991 = /\/ms\-sql\-dump\-hashes\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string991 = /\/ms\-sql\-empty\-password\.nse/ nocase ascii wide
+        $string992 = /\/ms\-sql\-empty\-password\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string992 = /\/ms\-sql\-hasdbaccess\.nse/ nocase ascii wide
+        $string993 = /\/ms\-sql\-hasdbaccess\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string993 = /\/ms\-sql\-info\.nse/ nocase ascii wide
+        $string994 = /\/ms\-sql\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string994 = /\/ms\-sql\-ntlm\-info\.nse/ nocase ascii wide
+        $string995 = /\/ms\-sql\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string995 = /\/ms\-sql\-query\.nse/ nocase ascii wide
+        $string996 = /\/ms\-sql\-query\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string996 = /\/ms\-sql\-tables\.nse/ nocase ascii wide
+        $string997 = /\/ms\-sql\-tables\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string997 = /\/ms\-sql\-xp\-cmdshell\.nse/ nocase ascii wide
+        $string998 = /\/ms\-sql\-xp\-cmdshell\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string998 = /\/mtrace\.nse/ nocase ascii wide
+        $string999 = /\/mtrace\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string999 = /\/murmur\-version\.nse/ nocase ascii wide
+        $string1000 = /\/murmur\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1000 = /\/mysql\-audit\.nse/ nocase ascii wide
+        $string1001 = /\/mysql\-audit\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1001 = /\/mysql\-brute\.nse/ nocase ascii wide
+        $string1002 = /\/mysql\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1002 = /\/mysql\-databases\.nse/ nocase ascii wide
+        $string1003 = /\/mysql\-databases\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1003 = /\/mysql\-dump\-hashes\.nse/ nocase ascii wide
+        $string1004 = /\/mysql\-dump\-hashes\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1004 = /\/mysql\-empty\-password\.nse/ nocase ascii wide
+        $string1005 = /\/mysql\-empty\-password\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1005 = /\/mysql\-enum\.nse/ nocase ascii wide
+        $string1006 = /\/mysql\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1006 = /\/mysql\-info\.nse/ nocase ascii wide
+        $string1007 = /\/mysql\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1007 = /\/mysql\-query\.nse/ nocase ascii wide
+        $string1008 = /\/mysql\-query\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1008 = /\/mysql\-users\.nse/ nocase ascii wide
+        $string1009 = /\/mysql\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1009 = /\/mysql\-variables\.nse/ nocase ascii wide
+        $string1010 = /\/mysql\-variables\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1010 = /\/mysql\-vuln\-cve2012\-2122\.nse/ nocase ascii wide
+        $string1011 = /\/mysql\-vuln\-cve2012\-2122\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1011 = /\/nat\-pmp\-info\.nse/ nocase ascii wide
+        $string1012 = /\/nat\-pmp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1012 = /\/nat\-pmp\-mapport\.nse/ nocase ascii wide
+        $string1013 = /\/nat\-pmp\-mapport\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1013 = /\/nbd\-info\.nse/ nocase ascii wide
+        $string1014 = /\/nbd\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1014 = /\/nbns\-interfaces\.nse/ nocase ascii wide
+        $string1015 = /\/nbns\-interfaces\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1015 = /\/nbstat\.nse/ nocase ascii wide
+        $string1016 = /\/nbstat\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1016 = /\/ncp\-enum\-users\.nse/ nocase ascii wide
+        $string1017 = /\/ncp\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1017 = /\/ncp\-serverinfo\.nse/ nocase ascii wide
+        $string1018 = /\/ncp\-serverinfo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1018 = /\/ndmp\-fs\-info\.nse/ nocase ascii wide
+        $string1019 = /\/ndmp\-fs\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1019 = /\/ndmp\-version\.nse/ nocase ascii wide
+        $string1020 = /\/ndmp\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1020 = /\/nessus\-brute\.nse/ nocase ascii wide
+        $string1021 = /\/nessus\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1021 = /\/nessus\-xmlrpc\-brute\.nse/ nocase ascii wide
+        $string1022 = /\/nessus\-xmlrpc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1022 = /\/netbus\-auth\-bypass\.nse/ nocase ascii wide
+        $string1023 = /\/netbus\-auth\-bypass\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1023 = /\/netbus\-brute\.nse/ nocase ascii wide
+        $string1024 = /\/netbus\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1024 = /\/netbus\-info\.nse/ nocase ascii wide
+        $string1025 = /\/netbus\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1025 = /\/netbus\-version\.nse/ nocase ascii wide
+        $string1026 = /\/netbus\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1026 = /\/nexpose\-brute\.nse/ nocase ascii wide
+        $string1027 = /\/nexpose\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1027 = /\/nfs\-ls\.nse/ nocase ascii wide
+        $string1028 = /\/nfs\-ls\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1028 = /\/nfs\-showmount\.nse/ nocase ascii wide
+        $string1029 = /\/nfs\-showmount\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1029 = /\/nfs\-statfs\.nse/ nocase ascii wide
+        $string1030 = /\/nfs\-statfs\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1030 = /\/nje\-node\-brute\.nse/ nocase ascii wide
+        $string1031 = /\/nje\-node\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1031 = /\/nje\-pass\-brute\.nse/ nocase ascii wide
+        $string1032 = /\/nje\-pass\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1032 = /\/nntp\-ntlm\-info\.nse/ nocase ascii wide
+        $string1033 = /\/nntp\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1033 = /\/nping\-brute\.nse/ nocase ascii wide
+        $string1034 = /\/nping\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1034 = /\/nrpe\-enum\.nse/ nocase ascii wide
+        $string1035 = /\/nrpe\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1035 = /\/ntp\-info\.nse/ nocase ascii wide
+        $string1036 = /\/ntp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1036 = /\/ntp\-monlist\.nse/ nocase ascii wide
+        $string1037 = /\/ntp\-monlist\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1037 = /\/omp2\-brute\.nse/ nocase ascii wide
+        $string1038 = /\/omp2\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1038 = /\/omp2\-enum\-targets\.nse/ nocase ascii wide
+        $string1039 = /\/omp2\-enum\-targets\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1039 = /\/omron\-info\.nse/ nocase ascii wide
+        $string1040 = /\/omron\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1040 = /\/openflow\-info\.nse/ nocase ascii wide
+        $string1041 = /\/openflow\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1041 = /\/openlookup\-info\.nse/ nocase ascii wide
+        $string1042 = /\/openlookup\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1042 = /\/openvas\-otp\-brute\.nse/ nocase ascii wide
+        $string1043 = /\/openvas\-otp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1043 = /\/openwebnet\-discovery\.nse/ nocase ascii wide
+        $string1044 = /\/openwebnet\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1044 = /\/oracle\-brute\.nse/ nocase ascii wide
+        $string1045 = /\/oracle\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1045 = /\/oracle\-brute\-stealth\.nse/ nocase ascii wide
+        $string1046 = /\/oracle\-brute\-stealth\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1046 = /\/oracle\-enum\-users\.nse/ nocase ascii wide
+        $string1047 = /\/oracle\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1047 = /\/oracle\-sid\-brute\.nse/ nocase ascii wide
+        $string1048 = /\/oracle\-sid\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1048 = /\/oracle\-tns\-version\.nse/ nocase ascii wide
+        $string1049 = /\/oracle\-tns\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1049 = /\/ovs\-agent\-version\.nse/ nocase ascii wide
+        $string1050 = /\/ovs\-agent\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1050 = /\/p2p\-conficker\.nse/ nocase ascii wide
+        $string1051 = /\/p2p\-conficker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1051 = /\/path\-mtu\.nse/ nocase ascii wide
+        $string1052 = /\/path\-mtu\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1052 = /\/pcanywhere\-brute\.nse/ nocase ascii wide
+        $string1053 = /\/pcanywhere\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1053 = /\/pcworx\-info\.nse/ nocase ascii wide
+        $string1054 = /\/pcworx\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1054 = /\/pgsql\-brute\.nse/ nocase ascii wide
+        $string1055 = /\/pgsql\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/nccgroup/nmap-nse-vulnerability-scripts
-        $string1055 = /\/pjl\-info\-config\.nse/ nocase ascii wide
+        $string1056 = /\/pjl\-info\-config\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1056 = /\/pjl\-ready\-message\.nse/ nocase ascii wide
+        $string1057 = /\/pjl\-ready\-message\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1057 = /\/pop3\-brute\.nse/ nocase ascii wide
+        $string1058 = /\/pop3\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1058 = /\/pop3\-capabilities\.nse/ nocase ascii wide
+        $string1059 = /\/pop3\-capabilities\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1059 = /\/pop3\-ntlm\-info\.nse/ nocase ascii wide
+        $string1060 = /\/pop3\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1060 = /\/port\-states\.nse/ nocase ascii wide
+        $string1061 = /\/port\-states\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1061 = /\/pptp\-version\.nse/ nocase ascii wide
+        $string1062 = /\/pptp\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1062 = /\/puppet\-naivesigning\.nse/ nocase ascii wide
+        $string1063 = /\/puppet\-naivesigning\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1063 = /\/qconn\-exec\.nse/ nocase ascii wide
+        $string1064 = /\/qconn\-exec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1064 = /\/qscan\.nse/ nocase ascii wide
+        $string1065 = /\/qscan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1065 = /\/quake1\-info\.nse/ nocase ascii wide
+        $string1066 = /\/quake1\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1066 = /\/quake3\-info\.nse/ nocase ascii wide
+        $string1067 = /\/quake3\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1067 = /\/quake3\-master\-getservers\.nse/ nocase ascii wide
+        $string1068 = /\/quake3\-master\-getservers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1068 = /\/rdp\-enum\-encryption\.nse/ nocase ascii wide
+        $string1069 = /\/rdp\-enum\-encryption\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1069 = /\/rdp\-ntlm\-info\.nse/ nocase ascii wide
+        $string1070 = /\/rdp\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1070 = /\/rdp\-vuln\-ms12\-020\.nse/ nocase ascii wide
+        $string1071 = /\/rdp\-vuln\-ms12\-020\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1071 = /\/realvnc\-auth\-bypass\.nse/ nocase ascii wide
+        $string1072 = /\/realvnc\-auth\-bypass\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1072 = /\/redis\-brute\.nse/ nocase ascii wide
+        $string1073 = /\/redis\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1073 = /\/redis\-info\.nse/ nocase ascii wide
+        $string1074 = /\/redis\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1074 = /\/resolveall\.nse/ nocase ascii wide
+        $string1075 = /\/resolveall\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1075 = /\/reverse\-index\.nse/ nocase ascii wide
+        $string1076 = /\/reverse\-index\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1076 = /\/rexec\-brute\.nse/ nocase ascii wide
+        $string1077 = /\/rexec\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1077 = /\/rfc868\-time\.nse/ nocase ascii wide
+        $string1078 = /\/rfc868\-time\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1078 = /\/riak\-http\-info\.nse/ nocase ascii wide
+        $string1079 = /\/riak\-http\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1079 = /\/rlogin\-brute\.nse/ nocase ascii wide
+        $string1080 = /\/rlogin\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1080 = /\/rmi\-dumpregistry\.nse/ nocase ascii wide
+        $string1081 = /\/rmi\-dumpregistry\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1081 = /\/rmi\-vuln\-classloader\.nse/ nocase ascii wide
+        $string1082 = /\/rmi\-vuln\-classloader\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1082 = /\/rpcap\-brute\.nse/ nocase ascii wide
+        $string1083 = /\/rpcap\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1083 = /\/rpcap\-info\.nse/ nocase ascii wide
+        $string1084 = /\/rpcap\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1084 = /\/rpc\-grind\.nse/ nocase ascii wide
+        $string1085 = /\/rpc\-grind\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1085 = /\/rpcinfo\.nse/ nocase ascii wide
+        $string1086 = /\/rpcinfo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1086 = /\/rsa\-vuln\-roca\.nse/ nocase ascii wide
+        $string1087 = /\/rsa\-vuln\-roca\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1087 = /\/rsync\-brute\.nse/ nocase ascii wide
+        $string1088 = /\/rsync\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1088 = /\/rsync\-list\-modules\.nse/ nocase ascii wide
+        $string1089 = /\/rsync\-list\-modules\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1089 = /\/rtsp\-methods\.nse/ nocase ascii wide
+        $string1090 = /\/rtsp\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1090 = /\/rtsp\-url\-brute\.nse/ nocase ascii wide
+        $string1091 = /\/rtsp\-url\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1091 = /\/rusers\.nse/ nocase ascii wide
+        $string1092 = /\/rusers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1092 = /\/s7\-info\.nse/ nocase ascii wide
+        $string1093 = /\/s7\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1093 = /\/samba\-vuln\-cve\-2012\-1182\.nse/ nocase ascii wide
+        $string1094 = /\/samba\-vuln\-cve\-2012\-1182\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1094 = /\/servicetags\.nse/ nocase ascii wide
+        $string1095 = /\/servicetags\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1095 = /\/shodan\-api\.nse/ nocase ascii wide
+        $string1096 = /\/shodan\-api\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1096 = /\/sip\-brute\.nse/ nocase ascii wide
+        $string1097 = /\/sip\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1097 = /\/sip\-call\-spoof\.nse/ nocase ascii wide
+        $string1098 = /\/sip\-call\-spoof\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1098 = /\/sip\-enum\-users\.nse/ nocase ascii wide
+        $string1099 = /\/sip\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1099 = /\/sip\-methods\.nse/ nocase ascii wide
+        $string1100 = /\/sip\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1100 = /\/skypev2\-version\.nse/ nocase ascii wide
+        $string1101 = /\/skypev2\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1101 = /\/smb2\-capabilities\.nse/ nocase ascii wide
+        $string1102 = /\/smb2\-capabilities\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1102 = /\/smb2\-security\-mode\.nse/ nocase ascii wide
+        $string1103 = /\/smb2\-security\-mode\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1103 = /\/smb2\-time\.nse/ nocase ascii wide
+        $string1104 = /\/smb2\-time\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1104 = /\/smb2\-vuln\-uptime\.nse/ nocase ascii wide
+        $string1105 = /\/smb2\-vuln\-uptime\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1105 = /\/smb\-brute\.nse/ nocase ascii wide
+        $string1106 = /\/smb\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1106 = /\/smb\-double\-pulsar\-backdoor\.nse/ nocase ascii wide
+        $string1107 = /\/smb\-double\-pulsar\-backdoor\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1107 = /\/smb\-enum\-domains\.nse/ nocase ascii wide
+        $string1108 = /\/smb\-enum\-domains\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1108 = /\/smb\-enum\-groups\.nse/ nocase ascii wide
+        $string1109 = /\/smb\-enum\-groups\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1109 = /\/smb\-enum\-processes\.nse/ nocase ascii wide
+        $string1110 = /\/smb\-enum\-processes\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1110 = /\/smb\-enum\-services\.nse/ nocase ascii wide
+        $string1111 = /\/smb\-enum\-services\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1111 = /\/smb\-enum\-sessions\.nse/ nocase ascii wide
+        $string1112 = /\/smb\-enum\-sessions\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1112 = /\/smb\-enum\-shares\.nse/ nocase ascii wide
+        $string1113 = /\/smb\-enum\-shares\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1113 = /\/smb\-enum\-users\.nse/ nocase ascii wide
+        $string1114 = /\/smb\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1114 = /\/smb\-flood\.nse/ nocase ascii wide
+        $string1115 = /\/smb\-flood\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1115 = /\/smb\-ls\.nse/ nocase ascii wide
+        $string1116 = /\/smb\-ls\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1116 = /\/smb\-mbenum\.nse/ nocase ascii wide
+        $string1117 = /\/smb\-mbenum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1117 = /\/smb\-os\-discovery\.nse/ nocase ascii wide
+        $string1118 = /\/smb\-os\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1118 = /\/smb\-print\-text\.nse/ nocase ascii wide
+        $string1119 = /\/smb\-print\-text\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1119 = /\/smb\-protocols\.nse/ nocase ascii wide
+        $string1120 = /\/smb\-protocols\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1120 = /\/smb\-psexec\.nse/ nocase ascii wide
+        $string1121 = /\/smb\-psexec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1121 = /\/smb\-security\-mode\.nse/ nocase ascii wide
+        $string1122 = /\/smb\-security\-mode\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1122 = /\/smb\-server\-stats\.nse/ nocase ascii wide
+        $string1123 = /\/smb\-server\-stats\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1123 = /\/smb\-system\-info\.nse/ nocase ascii wide
+        $string1124 = /\/smb\-system\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1124 = /\/smb\-vuln\-conficker\.nse/ nocase ascii wide
+        $string1125 = /\/smb\-vuln\-conficker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1125 = /\/smb\-vuln\-cve2009\-3103\.nse/ nocase ascii wide
+        $string1126 = /\/smb\-vuln\-cve2009\-3103\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1126 = /\/smb\-vuln\-cve\-2017\-7494\.nse/ nocase ascii wide
+        $string1127 = /\/smb\-vuln\-cve\-2017\-7494\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string1127 = /\/smb\-vuln\-cve\-2020\-0796\.nse/ nocase ascii wide
+        $string1128 = /\/smb\-vuln\-cve\-2020\-0796\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1128 = /\/smb\-vuln\-ms06\-025\.nse/ nocase ascii wide
+        $string1129 = /\/smb\-vuln\-ms06\-025\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1129 = /\/smb\-vuln\-ms07\-029\.nse/ nocase ascii wide
+        $string1130 = /\/smb\-vuln\-ms07\-029\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1130 = /\/smb\-vuln\-ms08\-067\.nse/ nocase ascii wide
+        $string1131 = /\/smb\-vuln\-ms08\-067\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1131 = /\/smb\-vuln\-ms10\-054\.nse/ nocase ascii wide
+        $string1132 = /\/smb\-vuln\-ms10\-054\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1132 = /\/smb\-vuln\-ms10\-061\.nse/ nocase ascii wide
+        $string1133 = /\/smb\-vuln\-ms10\-061\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1133 = /\/smb\-vuln\-ms17\-010\.nse/ nocase ascii wide
+        $string1134 = /\/smb\-vuln\-ms17\-010\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1134 = /\/smb\-vuln\-regsvc\-dos\.nse/ nocase ascii wide
+        $string1135 = /\/smb\-vuln\-regsvc\-dos\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1135 = /\/smb\-vuln\-webexec\.nse/ nocase ascii wide
+        $string1136 = /\/smb\-vuln\-webexec\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1136 = /\/smb\-webexec\-exploit\.nse/ nocase ascii wide
+        $string1137 = /\/smb\-webexec\-exploit\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1137 = /\/smtp\-brute\.nse/ nocase ascii wide
+        $string1138 = /\/smtp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1138 = /\/smtp\-commands\.nse/ nocase ascii wide
+        $string1139 = /\/smtp\-commands\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1139 = /\/smtp\-enum\-users\.nse/ nocase ascii wide
+        $string1140 = /\/smtp\-enum\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1140 = /\/smtp\-ntlm\-info\.nse/ nocase ascii wide
+        $string1141 = /\/smtp\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1141 = /\/smtp\-open\-relay\.nse/ nocase ascii wide
+        $string1142 = /\/smtp\-open\-relay\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1142 = /\/smtp\-strangeport\.nse/ nocase ascii wide
+        $string1143 = /\/smtp\-strangeport\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1143 = /\/smtp\-vuln\-cve2010\-4344\.nse/ nocase ascii wide
+        $string1144 = /\/smtp\-vuln\-cve2010\-4344\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1144 = /\/smtp\-vuln\-cve2011\-1720\.nse/ nocase ascii wide
+        $string1145 = /\/smtp\-vuln\-cve2011\-1720\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1145 = /\/smtp\-vuln\-cve2011\-1764\.nse/ nocase ascii wide
+        $string1146 = /\/smtp\-vuln\-cve2011\-1764\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/nccgroup/nmap-nse-vulnerability-scripts
-        $string1146 = /\/smtp\-vuln\-cve2020\-28017\-through\-28026\-21nails\.nse/ nocase ascii wide
+        $string1147 = /\/smtp\-vuln\-cve2020\-28017\-through\-28026\-21nails\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1147 = /\/sniffer\-detect\.nse/ nocase ascii wide
+        $string1148 = /\/sniffer\-detect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1148 = /\/snmp\-brute\.nse/ nocase ascii wide
+        $string1149 = /\/snmp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1149 = /\/snmp\-hh3c\-logins\.nse/ nocase ascii wide
+        $string1150 = /\/snmp\-hh3c\-logins\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1150 = /\/snmp\-info\.nse/ nocase ascii wide
+        $string1151 = /\/snmp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1151 = /\/snmp\-interfaces\.nse/ nocase ascii wide
+        $string1152 = /\/snmp\-interfaces\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1152 = /\/snmp\-ios\-config\.nse/ nocase ascii wide
+        $string1153 = /\/snmp\-ios\-config\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1153 = /\/snmp\-netstat\.nse/ nocase ascii wide
+        $string1154 = /\/snmp\-netstat\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1154 = /\/snmp\-processes\.nse/ nocase ascii wide
+        $string1155 = /\/snmp\-processes\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1155 = /\/snmp\-sysdescr\.nse/ nocase ascii wide
+        $string1156 = /\/snmp\-sysdescr\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1156 = /\/snmp\-win32\-services\.nse/ nocase ascii wide
+        $string1157 = /\/snmp\-win32\-services\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1157 = /\/snmp\-win32\-shares\.nse/ nocase ascii wide
+        $string1158 = /\/snmp\-win32\-shares\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1158 = /\/snmp\-win32\-software\.nse/ nocase ascii wide
+        $string1159 = /\/snmp\-win32\-software\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1159 = /\/snmp\-win32\-users\.nse/ nocase ascii wide
+        $string1160 = /\/snmp\-win32\-users\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1160 = /\/socks\-auth\-info\.nse/ nocase ascii wide
+        $string1161 = /\/socks\-auth\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1161 = /\/socks\-brute\.nse/ nocase ascii wide
+        $string1162 = /\/socks\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1162 = /\/socks\-open\-proxy\.nse/ nocase ascii wide
+        $string1163 = /\/socks\-open\-proxy\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1163 = /\/ssh2\-enum\-algos\.nse/ nocase ascii wide
+        $string1164 = /\/ssh2\-enum\-algos\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1164 = /\/ssh\-auth\-methods\.nse/ nocase ascii wide
+        $string1165 = /\/ssh\-auth\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1165 = /\/ssh\-brute\.nse/ nocase ascii wide
+        $string1166 = /\/ssh\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1166 = /\/ssh\-hostkey\.nse/ nocase ascii wide
+        $string1167 = /\/ssh\-hostkey\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1167 = /\/ssh\-publickey\-acceptance\.nse/ nocase ascii wide
+        $string1168 = /\/ssh\-publickey\-acceptance\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1168 = /\/ssh\-run\.nse/ nocase ascii wide
+        $string1169 = /\/ssh\-run\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1169 = /\/sshv1\.nse/ nocase ascii wide
+        $string1170 = /\/sshv1\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1170 = /\/ssl\-ccs\-injection\.nse/ nocase ascii wide
+        $string1171 = /\/ssl\-ccs\-injection\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1171 = /\/ssl\-cert\.nse/ nocase ascii wide
+        $string1172 = /\/ssl\-cert\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1172 = /\/ssl\-cert\-intaddr\.nse/ nocase ascii wide
+        $string1173 = /\/ssl\-cert\-intaddr\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1173 = /\/ssl\-date\.nse/ nocase ascii wide
+        $string1174 = /\/ssl\-date\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1174 = /\/ssl\-dh\-params\.nse/ nocase ascii wide
+        $string1175 = /\/ssl\-dh\-params\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1175 = /\/ssl\-enum\-ciphers\.nse/ nocase ascii wide
+        $string1176 = /\/ssl\-enum\-ciphers\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1176 = /\/ssl\-heartbleed\.nse/ nocase ascii wide
+        $string1177 = /\/ssl\-heartbleed\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1177 = /\/ssl\-known\-key\.nse/ nocase ascii wide
+        $string1178 = /\/ssl\-known\-key\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1178 = /\/ssl\-poodle\.nse/ nocase ascii wide
+        $string1179 = /\/ssl\-poodle\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1179 = /\/sslv2\.nse/ nocase ascii wide
+        $string1180 = /\/sslv2\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1180 = /\/sslv2\-drown\.nse/ nocase ascii wide
+        $string1181 = /\/sslv2\-drown\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1181 = /\/sstp\-discover\.nse/ nocase ascii wide
+        $string1182 = /\/sstp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1182 = /\/stun\-info\.nse/ nocase ascii wide
+        $string1183 = /\/stun\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1183 = /\/stun\-version\.nse/ nocase ascii wide
+        $string1184 = /\/stun\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1184 = /\/stuxnet\-detect\.nse/ nocase ascii wide
+        $string1185 = /\/stuxnet\-detect\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1185 = /\/supermicro\-ipmi\-conf\.nse/ nocase ascii wide
+        $string1186 = /\/supermicro\-ipmi\-conf\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1186 = /\/svn\-brute\.nse/ nocase ascii wide
+        $string1187 = /\/svn\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1187 = /\/targets\-asn\.nse/ nocase ascii wide
+        $string1188 = /\/targets\-asn\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1188 = /\/targets\-ipv6\-map4to6\.nse/ nocase ascii wide
+        $string1189 = /\/targets\-ipv6\-map4to6\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1189 = /\/targets\-ipv6\-multicast\-echo\.nse/ nocase ascii wide
+        $string1190 = /\/targets\-ipv6\-multicast\-echo\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1190 = /\/targets\-ipv6\-multicast\-invalid\-dst\.nse/ nocase ascii wide
+        $string1191 = /\/targets\-ipv6\-multicast\-invalid\-dst\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1191 = /\/targets\-ipv6\-multicast\-mld\.nse/ nocase ascii wide
+        $string1192 = /\/targets\-ipv6\-multicast\-mld\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1192 = /\/targets\-ipv6\-multicast\-slaac\.nse/ nocase ascii wide
+        $string1193 = /\/targets\-ipv6\-multicast\-slaac\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1193 = /\/targets\-ipv6\-wordlist\.nse/ nocase ascii wide
+        $string1194 = /\/targets\-ipv6\-wordlist\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1194 = /\/targets\-sniffer\.nse/ nocase ascii wide
+        $string1195 = /\/targets\-sniffer\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1195 = /\/targets\-traceroute\.nse/ nocase ascii wide
+        $string1196 = /\/targets\-traceroute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1196 = /\/targets\-xml\.nse/ nocase ascii wide
+        $string1197 = /\/targets\-xml\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1197 = /\/teamspeak2\-version\.nse/ nocase ascii wide
+        $string1198 = /\/teamspeak2\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1198 = /\/telnet\-brute\.nse/ nocase ascii wide
+        $string1199 = /\/telnet\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1199 = /\/telnet\-encryption\.nse/ nocase ascii wide
+        $string1200 = /\/telnet\-encryption\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1200 = /\/telnet\-ntlm\-info\.nse/ nocase ascii wide
+        $string1201 = /\/telnet\-ntlm\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1201 = /\/tftp\-enum\.nse/ nocase ascii wide
+        $string1202 = /\/tftp\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1202 = /\/tls\-alpn\.nse/ nocase ascii wide
+        $string1203 = /\/tls\-alpn\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1203 = /\/tls\-nextprotoneg\.nse/ nocase ascii wide
+        $string1204 = /\/tls\-nextprotoneg\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1204 = /\/tls\-ticketbleed\.nse/ nocase ascii wide
+        $string1205 = /\/tls\-ticketbleed\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1205 = /\/tn3270\-screen\.nse/ nocase ascii wide
+        $string1206 = /\/tn3270\-screen\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1206 = /\/tor\-consensus\-checker\.nse/ nocase ascii wide
+        $string1207 = /\/tor\-consensus\-checker\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1207 = /\/traceroute\-geolocation\.nse/ nocase ascii wide
+        $string1208 = /\/traceroute\-geolocation\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1208 = /\/tso\-brute\.nse/ nocase ascii wide
+        $string1209 = /\/tso\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1209 = /\/tso\-enum\.nse/ nocase ascii wide
+        $string1210 = /\/tso\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1210 = /\/ubiquiti\-discovery\.nse/ nocase ascii wide
+        $string1211 = /\/ubiquiti\-discovery\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1211 = /\/unittest\.nse/ nocase ascii wide
+        $string1212 = /\/unittest\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1212 = /\/unusual\-port\.nse/ nocase ascii wide
+        $string1213 = /\/unusual\-port\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1213 = /\/upnp\-info\.nse/ nocase ascii wide
+        $string1214 = /\/upnp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1214 = /\/uptime\-agent\-info\.nse/ nocase ascii wide
+        $string1215 = /\/uptime\-agent\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1215 = /\/url\-snarf\.nse/ nocase ascii wide
+        $string1216 = /\/url\-snarf\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1216 = /\/ventrilo\-info\.nse/ nocase ascii wide
+        $string1217 = /\/ventrilo\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1217 = /\/versant\-info\.nse/ nocase ascii wide
+        $string1218 = /\/versant\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1218 = /\/vmauthd\-brute\.nse/ nocase ascii wide
+        $string1219 = /\/vmauthd\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1219 = /\/vmware\-version\.nse/ nocase ascii wide
+        $string1220 = /\/vmware\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1220 = /\/vnc\-brute\.nse/ nocase ascii wide
+        $string1221 = /\/vnc\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1221 = /\/vnc\-info\.nse/ nocase ascii wide
+        $string1222 = /\/vnc\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1222 = /\/vnc\-title\.nse/ nocase ascii wide
+        $string1223 = /\/vnc\-title\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1223 = /\/voldemort\-info\.nse/ nocase ascii wide
+        $string1224 = /\/voldemort\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1224 = /\/vtam\-enum\.nse/ nocase ascii wide
+        $string1225 = /\/vtam\-enum\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1225 = /\/vulners\.nse/ nocase ascii wide
+        $string1226 = /\/vulners\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://github.com/cldrn/nmap-nse-scripts/tree/master/scripts
-        $string1226 = /\/vulscan\.nse/ nocase ascii wide
+        $string1227 = /\/vulscan\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1227 = /\/vuze\-dht\-info\.nse/ nocase ascii wide
+        $string1228 = /\/vuze\-dht\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1228 = /\/wdb\-version\.nse/ nocase ascii wide
+        $string1229 = /\/wdb\-version\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1229 = /\/weblogic\-t3\-info\.nse/ nocase ascii wide
+        $string1230 = /\/weblogic\-t3\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1230 = /\/whois\-domain\.nse/ nocase ascii wide
+        $string1231 = /\/whois\-domain\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1231 = /\/whois\-ip\.nse/ nocase ascii wide
+        $string1232 = /\/whois\-ip\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1232 = /\/wsdd\-discover\.nse/ nocase ascii wide
+        $string1233 = /\/wsdd\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1233 = /\/x11\-access\.nse/ nocase ascii wide
+        $string1234 = /\/x11\-access\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1234 = /\/xdmcp\-discover\.nse/ nocase ascii wide
+        $string1235 = /\/xdmcp\-discover\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1235 = /\/xmlrpc\-methods\.nse/ nocase ascii wide
+        $string1236 = /\/xmlrpc\-methods\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1236 = /\/xmpp\-brute\.nse/ nocase ascii wide
+        $string1237 = /\/xmpp\-brute\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1237 = /\/xmpp\-info\.nse/ nocase ascii wide
+        $string1238 = /\/xmpp\-info\.nse/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1238 = /krb5\-enum\-users\s/ nocase ascii wide
+        $string1239 = /krb5\-enum\-users\s/ nocase ascii wide
         // Description: Nmap NSE Scripts. Nmap Network Mapper is a free and open source utility for network discovery and security auditing
         // Reference: https://svn.nmap.org/nmap/scripts/
-        $string1239 = /krb5\-enum\-users\./ nocase ascii wide
+        $string1240 = /krb5\-enum\-users\./ nocase ascii wide
         // Description: Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing
         // Reference: https://nmap.org/book/nse-usage.html
-        $string1240 = /namp\s.*\-\-script\s/ nocase ascii wide
+        $string1241 = /namp\s.*\-\-script\s/ nocase ascii wide
 
     condition:
         any of them

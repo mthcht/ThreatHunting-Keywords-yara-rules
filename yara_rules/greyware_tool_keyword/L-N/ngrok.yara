@@ -10,13 +10,19 @@ rule ngrok
     strings:
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /LHOST\=0\.tcp\.ngrok\.io/ nocase ascii wide
+        $string1 = /\/ngrok\.exe/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2 = /ngrok\stcp\s/ nocase ascii wide
+        $string2 = /\\ngrok\.exe/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string3 = /tcp:\/\/0\.tcp\.ngrok\.io:/ nocase ascii wide
+        $string3 = /LHOST\=0\.tcp\.ngrok\.io/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string4 = /ngrok\stcp\s/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string5 = /tcp:\/\/0\.tcp\.ngrok\.io:/ nocase ascii wide
 
     condition:
         any of them

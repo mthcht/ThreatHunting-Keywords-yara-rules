@@ -43,10 +43,13 @@ rule RustHound
         $string11 = /rusthound.*\s\-\-adcs\s\-\-dc\-only/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string12 = /RustHound\-main/ nocase ascii wide
+        $string12 = /rusthound\.exe\s/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string13 = /usr\/src\/rusthound\srusthound\s/ nocase ascii wide
+        $string13 = /RustHound\-main/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string14 = /usr\/src\/rusthound\srusthound\s/ nocase ascii wide
 
     condition:
         any of them

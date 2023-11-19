@@ -3730,7 +3730,7 @@ rule nmap
         $string1240 = /krb5\-enum\-users\./ nocase ascii wide
         // Description: Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing
         // Reference: https://nmap.org/book/nse-usage.html
-        $string1241 = /namp\s.*\-\-script\s/ nocase ascii wide
+        $string1241 = /nmap\s.*\-\-script\s/ nocase ascii wide
 
     condition:
         any of them

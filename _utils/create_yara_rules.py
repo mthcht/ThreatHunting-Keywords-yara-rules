@@ -96,6 +96,9 @@ def generate_yara_rules(output_directory):
             outfile.write("\n    strings:\n")
             
             for idx, (keyword, description, reference) in enumerate(keywords):
+                # remove leading and trailing * because YARA match is substring anyway
+                keyword = re.sub(r'^\*','', keyword)
+                keyword = re.sub(r'\*$','', keyword)
                 escaped_keyword = keyword.replace("\\", "\\\\").replace("\"", "\\\"")\
                 .replace(".", "\\.").replace("*", ".{0,1000}").replace(" ", "\\s")\
                 .replace("|", "\\|").replace("/", "\\/").replace("(", "\\(").replace(")", "\\)")\

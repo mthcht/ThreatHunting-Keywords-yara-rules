@@ -83,7 +83,8 @@ def generate_yara_rules(output_directory):
         
         sanitized_tool = safe_tool_name(tool)
         
-        with open(f"{final_directory}/{tool}.yara", 'w') as outfile:
+        # os.path.join to make it work on any OS
+        with open(os.path.join(final_directory, f"{tool}.yara"), 'w') as outfile:
             outfile.write(f"rule {sanitized_tool}\n")
             outfile.write("{\n")
             outfile.write("    meta:\n")
@@ -96,7 +97,7 @@ def generate_yara_rules(output_directory):
             
             for idx, (keyword, description, reference) in enumerate(keywords):
                 escaped_keyword = keyword.replace("\\", "\\\\").replace("\"", "\\\"")\
-                .replace(".", "\\.").replace("*", ".*").replace(" ", "\\s")\
+                .replace(".", "\\.").replace("*", ".{0,1000}").replace(" ", "\\s")\
                 .replace("|", "\\|").replace("/", "\\/").replace("(", "\\(").replace(")", "\\)")\
                 .replace('+','\+').replace("&","\\&").replace('?','\?').replace('[','\[')\
                 .replace(']','\]').replace("'","\\'").replace('-','\-').replace('!','\!').replace('#','\#')\
@@ -110,8 +111,8 @@ def generate_yara_rules(output_directory):
                 
             outfile.write("\n    condition:\n")
             outfile.write("        any of them\n")
-            outfile.write("}")
+            outfile.write("}\n")
 
 if __name__ == "__main__":
-    output_directory = '..\yara_rules'
+    output_directory = os.path.join('..', 'yara_rules')
     generate_yara_rules(output_directory)

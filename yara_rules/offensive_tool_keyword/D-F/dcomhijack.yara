@@ -10,22 +10,22 @@ rule dcomhijack
     strings:
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string1 = /\/dcomhijack\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/dcomhijack\.git.{0,1000}/ nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string2 = /dcomhijack\.cna/ nocase ascii wide
+        $string2 = /.{0,1000}dcomhijack\.cna.{0,1000}/ nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string3 = /dcomhijack\.py/ nocase ascii wide
+        $string3 = /.{0,1000}dcomhijack\.py.{0,1000}/ nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string4 = /dcomhijack\-main/ nocase ascii wide
+        $string4 = /.{0,1000}dcomhijack\-main.{0,1000}/ nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string5 = /upload\-dll\s.*\s.*\.dll/ nocase ascii wide
+        $string5 = /.{0,1000}upload\-dll\s.{0,1000}\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
         // Description: Lateral Movement Using DCOM and DLL Hijacking
         // Reference: https://github.com/WKL-Sec/dcomhijack
-        $string6 = /WKL\-Sec\/dcomhijack/ nocase ascii wide
+        $string6 = /.{0,1000}WKL\-Sec\/dcomhijack.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

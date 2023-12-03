@@ -10,265 +10,265 @@ rule sharpcollection
     strings:
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1 = /\/EDD\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\/EDD\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string2 = /\/Group3r\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/Group3r\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string3 = /\/Grouper2\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}\/Grouper2\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string4 = /\/SharpCollection\// nocase ascii wide
+        $string4 = /.{0,1000}\/SharpCollection\/.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string5 = /\/Watson\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}\/Watson\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string6 = /\\EDD\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}\\EDD\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string7 = /\\Group3r\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}\\Group3r\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string8 = /\\Grouper2\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\\Grouper2\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string9 = /ADCollector\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}ADCollector\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string10 = /ADCSPwn\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}ADCSPwn\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string11 = /ADFSDump\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}ADFSDump\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string12 = /ADSearch\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}ADSearch\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string13 = /BetterSafetyKatz\./ nocase ascii wide
+        $string13 = /.{0,1000}BetterSafetyKatz\..{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string14 = /Certify\.exe/ nocase ascii wide
+        $string14 = /.{0,1000}Certify\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string15 = /DeployPrinterNightmare\.exe/ nocase ascii wide
+        $string15 = /.{0,1000}DeployPrinterNightmare\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string16 = /ForgeCert\.exe/ nocase ascii wide
+        $string16 = /.{0,1000}ForgeCert\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string17 = /Inveigh\.exe/ nocase ascii wide
+        $string17 = /.{0,1000}Inveigh\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string18 = /KrbRelay\.exe/ nocase ascii wide
+        $string18 = /.{0,1000}KrbRelay\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string19 = /KrbRelayUp\.exe/ nocase ascii wide
+        $string19 = /.{0,1000}KrbRelayUp\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string20 = /LockLess\.exe/ nocase ascii wide
+        $string20 = /.{0,1000}LockLess\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string21 = /PassTheCert\.exe/ nocase ascii wide
+        $string21 = /.{0,1000}PassTheCert\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string22 = /PurpleSharp\.exe/ nocase ascii wide
+        $string22 = /.{0,1000}PurpleSharp\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string23 = /Rubeus\.exe/ nocase ascii wide
+        $string23 = /.{0,1000}Rubeus\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string24 = /SafetyKatz\.exe/ nocase ascii wide
+        $string24 = /.{0,1000}SafetyKatz\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string25 = /SauronEye\.exe/ nocase ascii wide
+        $string25 = /.{0,1000}SauronEye\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string26 = /SearchOutlook\.exe/ nocase ascii wide
+        $string26 = /.{0,1000}SearchOutlook\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string27 = /Seatbelt\.exe/ nocase ascii wide
+        $string27 = /.{0,1000}Seatbelt\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string28 = /SharpAllowedToAct\.exe/ nocase ascii wide
+        $string28 = /.{0,1000}SharpAllowedToAct\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string29 = /SharpAppLocker\.exe/ nocase ascii wide
+        $string29 = /.{0,1000}SharpAppLocker\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string30 = /SharpBypassUAC\.exe/ nocase ascii wide
+        $string30 = /.{0,1000}SharpBypassUAC\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string31 = /SharpChisel\.exe/ nocase ascii wide
+        $string31 = /.{0,1000}SharpChisel\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string32 = /SharpChrome\sbackupkey/ nocase ascii wide
+        $string32 = /.{0,1000}SharpChrome\sbackupkey.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string33 = /SharpChrome\.cs/ nocase ascii wide
+        $string33 = /.{0,1000}SharpChrome\.cs.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string34 = /SharpChrome\.exe/ nocase ascii wide
+        $string34 = /.{0,1000}SharpChrome\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string35 = /SharpChromium\.exe/ nocase ascii wide
+        $string35 = /.{0,1000}SharpChromium\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string36 = /SharpCloud\.exe/ nocase ascii wide
+        $string36 = /.{0,1000}SharpCloud\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string37 = /SharpCOM\.exe/ nocase ascii wide
+        $string37 = /.{0,1000}SharpCOM\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string38 = /SharpCookieMonster\.exe/ nocase ascii wide
+        $string38 = /.{0,1000}SharpCookieMonster\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string39 = /SharpCrashEventLog\.exe/ nocase ascii wide
+        $string39 = /.{0,1000}SharpCrashEventLog\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string40 = /SharpDir\.exe/ nocase ascii wide
+        $string40 = /.{0,1000}SharpDir\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string41 = /SharpDPAPI\.exe/ nocase ascii wide
+        $string41 = /.{0,1000}SharpDPAPI\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string42 = /SharpDump\.exe/ nocase ascii wide
+        $string42 = /.{0,1000}SharpDump\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string43 = /SharpEDRChecker\.exe/ nocase ascii wide
+        $string43 = /.{0,1000}SharpEDRChecker\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string44 = /SharPersist\.exe/ nocase ascii wide
+        $string44 = /.{0,1000}SharPersist\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string45 = /SharpExec\.exe/ nocase ascii wide
+        $string45 = /.{0,1000}SharpExec\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string46 = /SharpGPOAbuse\.exe/ nocase ascii wide
+        $string46 = /.{0,1000}SharpGPOAbuse\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string47 = /SharpHandler\.exe/ nocase ascii wide
+        $string47 = /.{0,1000}SharpHandler\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string48 = /SharpHose\.exe/ nocase ascii wide
+        $string48 = /.{0,1000}SharpHose\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string49 = /SharpHound\.exe/ nocase ascii wide
+        $string49 = /.{0,1000}SharpHound\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string50 = /SharpKatz\.exe/ nocase ascii wide
+        $string50 = /.{0,1000}SharpKatz\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string51 = /SharpLAPS\.exe/ nocase ascii wide
+        $string51 = /.{0,1000}SharpLAPS\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string52 = /SharpMapExec\.exe/ nocase ascii wide
+        $string52 = /.{0,1000}SharpMapExec\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string53 = /SharpMiniDump\.exe/ nocase ascii wide
+        $string53 = /.{0,1000}SharpMiniDump\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string54 = /SharpMove\.exe/ nocase ascii wide
+        $string54 = /.{0,1000}SharpMove\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string55 = /SharpNamedPipePTH\.exe/ nocase ascii wide
+        $string55 = /.{0,1000}SharpNamedPipePTH\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string56 = /SharpNoPSExec\.exe/ nocase ascii wide
+        $string56 = /.{0,1000}SharpNoPSExec\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string57 = /SharpPrinter\.exe/ nocase ascii wide
+        $string57 = /.{0,1000}SharpPrinter\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string58 = /SharpRDP\.exe/ nocase ascii wide
+        $string58 = /.{0,1000}SharpRDP\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string59 = /SharpReg\.exe/ nocase ascii wide
+        $string59 = /.{0,1000}SharpReg\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string60 = /SharpSCCM\.exe/ nocase ascii wide
+        $string60 = /.{0,1000}SharpSCCM\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string61 = /SharpSearch\.exe/ nocase ascii wide
+        $string61 = /.{0,1000}SharpSearch\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string62 = /SharpSecDump\.exe/ nocase ascii wide
+        $string62 = /.{0,1000}SharpSecDump\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string63 = /SharpShares\.exe/ nocase ascii wide
+        $string63 = /.{0,1000}SharpShares\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string64 = /Sharp\-SMBExec\.exe/ nocase ascii wide
+        $string64 = /.{0,1000}Sharp\-SMBExec\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string65 = /SharpSniper\.exe/ nocase ascii wide
+        $string65 = /.{0,1000}SharpSniper\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string66 = /SharpSphere\.exe/ nocase ascii wide
+        $string66 = /.{0,1000}SharpSphere\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string67 = /SharpSpray\.exe/ nocase ascii wide
+        $string67 = /.{0,1000}SharpSpray\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string68 = /SharpSQLPwn\.exe/ nocase ascii wide
+        $string68 = /.{0,1000}SharpSQLPwn\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string69 = /SharpStay\.exe/ nocase ascii wide
+        $string69 = /.{0,1000}SharpStay\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string70 = /SharpSvc\.exe/ nocase ascii wide
+        $string70 = /.{0,1000}SharpSvc\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string71 = /SharpTask\.exe/ nocase ascii wide
+        $string71 = /.{0,1000}SharpTask\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string72 = /SharpUp\.exe/ nocase ascii wide
+        $string72 = /.{0,1000}SharpUp\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string73 = /SharpView\.exe/ nocase ascii wide
+        $string73 = /.{0,1000}SharpView\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string74 = /SharpWebServer\.exe/ nocase ascii wide
+        $string74 = /.{0,1000}SharpWebServer\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string75 = /SharpWifiGrabber\.exe/ nocase ascii wide
+        $string75 = /.{0,1000}SharpWifiGrabber\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string76 = /SharpWMI\.exe/ nocase ascii wide
+        $string76 = /.{0,1000}SharpWMI\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string77 = /SharpZeroLogon\.exe/ nocase ascii wide
+        $string77 = /.{0,1000}SharpZeroLogon\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string78 = /Shhmon\.exe/ nocase ascii wide
+        $string78 = /.{0,1000}Shhmon\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string79 = /Snaffler\.exe/ nocase ascii wide
+        $string79 = /.{0,1000}Snaffler\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string80 = /StickyNotesExtract\.exe/ nocase ascii wide
+        $string80 = /.{0,1000}StickyNotesExtract\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string81 = /SweetPotato\.exe/ nocase ascii wide
+        $string81 = /.{0,1000}SweetPotato\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string82 = /ThunderFox\.exe/ nocase ascii wide
+        $string82 = /.{0,1000}ThunderFox\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string83 = /TokenStomp\.exe/ nocase ascii wide
+        $string83 = /.{0,1000}TokenStomp\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string84 = /TruffleSnout\.exe/ nocase ascii wide
+        $string84 = /.{0,1000}TruffleSnout\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string85 = /Whisker\.exe/ nocase ascii wide
+        $string85 = /.{0,1000}Whisker\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string86 = /winPEAS\.exe/ nocase ascii wide
+        $string86 = /.{0,1000}winPEAS\.exe.{0,1000}/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string87 = /WMIReg\.exe/ nocase ascii wide
+        $string87 = /.{0,1000}WMIReg\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

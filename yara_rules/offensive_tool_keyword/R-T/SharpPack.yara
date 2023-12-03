@@ -10,7 +10,7 @@ rule SharpPack
     strings:
         // Description: SharpPack is a toolkit for insider threat assessments that lets you defeat application whitelisting to execute arbitrary DotNet and PowerShell tools.
         // Reference: https://github.com/mdsecactivebreach/SharpPack
-        $string1 = /SharpPack/ nocase ascii wide
+        $string1 = /.{0,1000}SharpPack.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

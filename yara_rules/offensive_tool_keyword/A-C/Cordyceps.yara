@@ -10,19 +10,19 @@ rule Cordyceps
     strings:
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string1 = /\/Cordyceps\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Cordyceps\.git.{0,1000}/ nocase ascii wide
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string2 = /cordyceps\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}cordyceps\.exe.{0,1000}/ nocase ascii wide
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string3 = /Cordyceps\-main\.zip/ nocase ascii wide
+        $string3 = /.{0,1000}Cordyceps\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string4 = /nasm\s\-f\swin64\s\.\/syscalls\.asm\s\-o\s\.\/syscalls\.obj/ nocase ascii wide
+        $string4 = /.{0,1000}nasm\s\-f\swin64\s\.\/syscalls\.asm\s\-o\s\.\/syscalls\.obj.{0,1000}/ nocase ascii wide
         // Description: C++ self-Injecting dropper based on various EDR evasion techniques
         // Reference: https://github.com/pard0p/Cordyceps
-        $string5 = /pard0p\/Cordyceps/ nocase ascii wide
+        $string5 = /.{0,1000}pard0p\/Cordyceps.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

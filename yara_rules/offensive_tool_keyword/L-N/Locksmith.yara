@@ -10,16 +10,16 @@ rule Locksmith
     strings:
         // Description: A tiny tool to identify and remediate common misconfigurations in Active Directory Certificate Services
         // Reference: https://github.com/TrimarcJake/Locksmith
-        $string1 = /\s\-InputPath\s\.\\TrustedForests\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-InputPath\s\.\\TrustedForests\.txt.{0,1000}/ nocase ascii wide
         // Description: A tiny tool to identify and remediate common misconfigurations in Active Directory Certificate Services
         // Reference: https://github.com/TrimarcJake/Locksmith
-        $string2 = /\/Locksmith\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/Locksmith\.git.{0,1000}/ nocase ascii wide
         // Description: A tiny tool to identify and remediate common misconfigurations in Active Directory Certificate Services
         // Reference: https://github.com/TrimarcJake/Locksmith
-        $string3 = /Invoke\-Locksmith\.ps1/ nocase ascii wide
+        $string3 = /.{0,1000}Invoke\-Locksmith\.ps1.{0,1000}/ nocase ascii wide
         // Description: A tiny tool to identify and remediate common misconfigurations in Active Directory Certificate Services
         // Reference: https://github.com/TrimarcJake/Locksmith
-        $string4 = /Locksmith\-main\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}Locksmith\-main\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

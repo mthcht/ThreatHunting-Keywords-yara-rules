@@ -10,10 +10,10 @@ rule Imperva_gzip_WAF_Bypass
     strings:
         // Description: Imperva Cloud WAF was vulnerable to a bypass that allows attackers to evade WAF rules when sending malicious HTTP POST payloads. such as log4j exploits. SQL injection. command execution. directory traversal. XXE. etc.
         // Reference: https://github.com/BishopFox/Imperva_gzip_WAF_Bypass
-        $string1 = /\/Imperva_gzip_WAF_Bypass/ nocase ascii wide
+        $string1 = /.{0,1000}\/Imperva_gzip_WAF_Bypass.{0,1000}/ nocase ascii wide
         // Description: Imperva Cloud WAF was vulnerable to a bypass that allows attackers to evade WAF rules when sending malicious HTTP POST payloads. such as log4j exploits. SQL injection. command execution. directory traversal. XXE. etc.
         // Reference: https://github.com/BishopFox/Imperva_gzip_WAF_Bypass
-        $string2 = /imperva_gzip\.py/ nocase ascii wide
+        $string2 = /.{0,1000}imperva_gzip\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,25 +10,25 @@ rule GadgetToJScript
     strings:
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string1 = /\/GadgetToJScript\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/GadgetToJScript\.git.{0,1000}/ nocase ascii wide
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string2 = /\\shellcode_loader\.dll/ nocase ascii wide
+        $string2 = /.{0,1000}\\shellcode_loader\.dll.{0,1000}/ nocase ascii wide
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string3 = /AF9C62A1\-F8D2\-4BE0\-B019\-0A7873E81EA9/ nocase ascii wide
+        $string3 = /.{0,1000}AF9C62A1\-F8D2\-4BE0\-B019\-0A7873E81EA9.{0,1000}/ nocase ascii wide
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string4 = /GadgetToJScript\.csproj/ nocase ascii wide
+        $string4 = /.{0,1000}GadgetToJScript\.csproj.{0,1000}/ nocase ascii wide
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string5 = /GadgetToJScript\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}GadgetToJScript\.sln.{0,1000}/ nocase ascii wide
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string6 = /GadgetToJScript\-master/ nocase ascii wide
+        $string6 = /.{0,1000}GadgetToJScript\-master.{0,1000}/ nocase ascii wide
         // Description: A tool for generating .NET serialized gadgets that can trigger .NET assembly load/execution when deserialized using BinaryFormatter from JS/VBS/VBA based scripts.
         // Reference: https://github.com/med0x2e/GadgetToJScript
-        $string7 = /med0x2e\/GadgetToJScript/ nocase ascii wide
+        $string7 = /.{0,1000}med0x2e\/GadgetToJScript.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

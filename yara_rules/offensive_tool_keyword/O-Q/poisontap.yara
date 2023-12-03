@@ -10,7 +10,7 @@ rule poisontap
     strings:
         // Description: PoisonTap - siphons cookies. exposes internal router & installs web backdoor on locked computers
         // Reference: https://github.com/samyk/poisontap
-        $string1 = /poisontap/ nocase ascii wide
+        $string1 = /.{0,1000}poisontap.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

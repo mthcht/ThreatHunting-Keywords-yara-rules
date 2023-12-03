@@ -10,7 +10,7 @@ rule reapoc
     strings:
         // Description: OpenSource Poc && Vulnerable-Target Storage Box.
         // Reference: https://github.com/cckuailong/reapoc
-        $string1 = /cckuailong\/reapoc/ nocase ascii wide
+        $string1 = /.{0,1000}cckuailong\/reapoc.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

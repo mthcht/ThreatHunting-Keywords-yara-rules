@@ -10,34 +10,34 @@ rule nysm
     strings:
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string1 = /\.\/nysm\/src\// nocase ascii wide
+        $string1 = /.{0,1000}\.\/nysm\/src\// nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string2 = /\/nysm\sbash/ nocase ascii wide
+        $string2 = /.{0,1000}\/nysm\sbash.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string3 = /\/nysm\s\-dr\ssocat\sTCP4\-LISTEN/ nocase ascii wide
+        $string3 = /.{0,1000}\/nysm\s\-dr\ssocat\sTCP4\-LISTEN.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string4 = /\/nysm\s\-r\sssh\s.*\@/ nocase ascii wide
+        $string4 = /.{0,1000}\/nysm\s\-r\sssh\s.{0,1000}\@.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string5 = /\/nysm\.bpf\.c/ nocase ascii wide
+        $string5 = /.{0,1000}\/nysm\.bpf\.c.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string6 = /\/nysm\.git/ nocase ascii wide
+        $string6 = /.{0,1000}\/nysm\.git.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string7 = /\/src\/nysm\.c/ nocase ascii wide
+        $string7 = /.{0,1000}\/src\/nysm\.c.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string8 = /eeriedusk\/nysm/ nocase ascii wide
+        $string8 = /.{0,1000}eeriedusk\/nysm.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string9 = /nysm\.skel\.h/ nocase ascii wide
+        $string9 = /.{0,1000}nysm\.skel\.h.{0,1000}/ nocase ascii wide
         // Description: nysm is a stealth post-exploitation container
         // Reference: https://github.com/eeriedusk/nysm
-        $string10 = /nysm\-master\.zip/ nocase ascii wide
+        $string10 = /.{0,1000}nysm\-master\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

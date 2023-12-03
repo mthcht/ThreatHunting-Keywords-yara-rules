@@ -10,10 +10,10 @@ rule dirty_pipe
     strings:
         // Description: POC exploitation for dirty pipe vulnerability
         // Reference: https://github.com/0xIronGoat/dirty-pipe
-        $string1 = /\.\/exploit\s\/etc\/passwd\s1\s.*cat\s\/etc\/passwd/ nocase ascii wide
+        $string1 = /.{0,1000}\.\/exploit\s\/etc\/passwd\s1\s.{0,1000}cat\s\/etc\/passwd.{0,1000}/ nocase ascii wide
         // Description: POC exploitation for dirty pipe vulnerability
         // Reference: https://github.com/0xIronGoat/dirty-pipe
-        $string2 = /\/0xIronGoat\/dirty\-pipe/ nocase ascii wide
+        $string2 = /.{0,1000}\/0xIronGoat\/dirty\-pipe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

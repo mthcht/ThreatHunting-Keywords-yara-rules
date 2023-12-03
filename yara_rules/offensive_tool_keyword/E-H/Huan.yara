@@ -10,25 +10,25 @@ rule Huan
     strings:
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string1 = /\/huan\.exe\s/ nocase ascii wide
+        $string1 = /.{0,1000}\/huan\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string2 = /\/HuanLoader\// nocase ascii wide
+        $string2 = /.{0,1000}\/HuanLoader\/.{0,1000}/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string3 = /\\huan\.exe\s/ nocase ascii wide
+        $string3 = /.{0,1000}\\huan\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string4 = /huan\.exe\s.*\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}huan\.exe\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string5 = /Huan\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}Huan\.sln.{0,1000}/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string6 = /Huan\.vcxproj/ nocase ascii wide
+        $string6 = /.{0,1000}Huan\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Huan is an encrypted PE Loader Generator that I developed for learning PE file structure and PE loading processes. It encrypts the PE file to be run with different keys each time and embeds it in a new section of the loader binary. Currently. it works on 64 bit PE files.
         // Reference: https://github.com/frkngksl/Huan
-        $string7 = /HuanLoader\.vcxproj/ nocase ascii wide
+        $string7 = /.{0,1000}HuanLoader\.vcxproj.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

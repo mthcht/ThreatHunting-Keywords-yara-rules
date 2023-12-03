@@ -10,7 +10,7 @@ rule SharpPrintNightmare
     strings:
         // Description: C# and Impacket implementation of PrintNightmare CVE-2021-1675/CVE-2021-34527
         // Reference: https://github.com/cube0x0/CVE-2021-1675
-        $string1 = /SharpPrintNightmare/ nocase ascii wide
+        $string1 = /.{0,1000}SharpPrintNightmare.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

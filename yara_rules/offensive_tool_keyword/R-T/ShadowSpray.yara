@@ -10,49 +10,49 @@ rule ShadowSpray
     strings:
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string1 = /\s\-\sShadowSpray/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\sShadowSpray.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string2 = /\/ShadowSpray\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/ShadowSpray\.git.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string3 = /\/ShadowSpray\/.*\.cs/ nocase ascii wide
+        $string3 = /.{0,1000}\/ShadowSpray\/.{0,1000}\.cs.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string4 = /\[\+\]\sAttack\saborted\.\sExiting/ nocase ascii wide
+        $string4 = /.{0,1000}\[\+\]\sAttack\saborted\.\sExiting.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string5 = /\\ShadowSpray\\.*\.cs/ nocase ascii wide
+        $string5 = /.{0,1000}\\ShadowSpray\\.{0,1000}\.cs.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string6 = /7E47D586\-DDC6\-4382\-848C\-5CF0798084E1/ nocase ascii wide
+        $string6 = /.{0,1000}7E47D586\-DDC6\-4382\-848C\-5CF0798084E1.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string7 = /CN\=ShadowSpray/ nocase ascii wide
+        $string7 = /.{0,1000}CN\=ShadowSpray.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string8 = /Performing\srecursive\sShadowSpray\sattack/ nocase ascii wide
+        $string8 = /.{0,1000}Performing\srecursive\sShadowSpray\sattack.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string9 = /ShadowSpray\srecovered/ nocase ascii wide
+        $string9 = /.{0,1000}ShadowSpray\srecovered.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string10 = /ShadowSpray\.Asn1/ nocase ascii wide
+        $string10 = /.{0,1000}ShadowSpray\.Asn1.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string11 = /ShadowSpray\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}ShadowSpray\.exe.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string12 = /ShadowSpray\.Kerb/ nocase ascii wide
+        $string12 = /.{0,1000}ShadowSpray\.Kerb.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string13 = /ShadowSpray\.sln/ nocase ascii wide
+        $string13 = /.{0,1000}ShadowSpray\.sln.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string14 = /ShadowSpray\-master/ nocase ascii wide
+        $string14 = /.{0,1000}ShadowSpray\-master.{0,1000}/ nocase ascii wide
         // Description: A tool to spray Shadow Credentials across an entire domain in hopes of abusing long forgotten GenericWrite/GenericAll DACLs over other objects in the domain.
         // Reference: https://github.com/ShorSec/ShadowSpray
-        $string15 = /ShorSec\/ShadowSpray/ nocase ascii wide
+        $string15 = /.{0,1000}ShorSec\/ShadowSpray.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

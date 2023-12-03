@@ -10,40 +10,40 @@ rule TakeMyRDP
     strings:
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string1 = /\/TakeMyRDP/ nocase ascii wide
+        $string1 = /.{0,1000}\/TakeMyRDP.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string2 = /\\TakeMyRDP/ nocase ascii wide
+        $string2 = /.{0,1000}\\TakeMyRDP.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string3 = /3C601672\-7389\-42B2\-B5C9\-059846E1DA88/ nocase ascii wide
+        $string3 = /.{0,1000}3C601672\-7389\-42B2\-B5C9\-059846E1DA88.{0,1000}/ nocase ascii wide
         // Description: An updated version of keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/nocerainfosec/TakeMyRDP2.0
-        $string4 = /TakeMyRDP.*logfile\.txt/ nocase ascii wide
+        $string4 = /.{0,1000}TakeMyRDP.{0,1000}logfile\.txt.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string5 = /TakeMyRDP\.cpp/ nocase ascii wide
+        $string5 = /.{0,1000}TakeMyRDP\.cpp.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string6 = /TakeMyRDP\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}TakeMyRDP\.exe.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string7 = /TakeMyRDP\.git/ nocase ascii wide
+        $string7 = /.{0,1000}TakeMyRDP\.git.{0,1000}/ nocase ascii wide
         // Description: An updated version of keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/nocerainfosec/TakeMyRDP2.0
-        $string8 = /TakeMyRDP\.h/ nocase ascii wide
+        $string8 = /.{0,1000}TakeMyRDP\.h.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string9 = /TakeMyRDP\.sln/ nocase ascii wide
+        $string9 = /.{0,1000}TakeMyRDP\.sln.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string10 = /TakeMyRDP\.vcxproj/ nocase ascii wide
+        $string10 = /.{0,1000}TakeMyRDP\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: An updated version of keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/nocerainfosec/TakeMyRDP2.0
-        $string11 = /TakeMyRDP2\.0/ nocase ascii wide
+        $string11 = /.{0,1000}TakeMyRDP2\.0.{0,1000}/ nocase ascii wide
         // Description: A keystroke logger targeting the Remote Desktop Protocol (RDP) related processes
         // Reference: https://github.com/TheD1rkMtr/TakeMyRDP
-        $string12 = /TakeMyRDP\-main/ nocase ascii wide
+        $string12 = /.{0,1000}TakeMyRDP\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

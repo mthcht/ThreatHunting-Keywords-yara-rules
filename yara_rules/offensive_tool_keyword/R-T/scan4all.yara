@@ -10,118 +10,118 @@ rule scan4all
     strings:
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string1 = /\s\-l\snmapRssuilt\.xml\s\-v/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-l\snmapRssuilt\.xml\s\-v.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string2 = /\.\/scan4all\s/ nocase ascii wide
+        $string2 = /.{0,1000}\.\/scan4all\s.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string3 = /\.\/scan4all/ nocase ascii wide
+        $string3 = /.{0,1000}\.\/scan4all.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string4 = /\/config\/doNmapScanWin\.bat\s/ nocase ascii wide
+        $string4 = /.{0,1000}\/config\/doNmapScanWin\.bat\s.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string5 = /\/CVE\-.*\-.*_POC\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/CVE\-.{0,1000}\-.{0,1000}_POC\.py.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string6 = /\/CVE\-2022\-.*\.go/ nocase ascii wide
+        $string6 = /.{0,1000}\/CVE\-2022\-.{0,1000}\.go.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string7 = /\/dicts\/ftp_default\.txt/ nocase ascii wide
+        $string7 = /.{0,1000}\/dicts\/ftp_default\.txt.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string8 = /\/scan4all\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\/scan4all\.exe.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string9 = /\/scan4all\.git/ nocase ascii wide
+        $string9 = /.{0,1000}\/scan4all\.git.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string10 = /\/scan4all\.git/ nocase ascii wide
+        $string10 = /.{0,1000}\/scan4all\.git.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string11 = /\/scan4all\.rb/ nocase ascii wide
+        $string11 = /.{0,1000}\/scan4all\.rb.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string12 = /\/scan4all\/lib\/api/ nocase ascii wide
+        $string12 = /.{0,1000}\/scan4all\/lib\/api.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string13 = /\/scan4all\/lib\/util/ nocase ascii wide
+        $string13 = /.{0,1000}\/scan4all\/lib\/util.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string14 = /\\scan4all\.exe/ nocase ascii wide
+        $string14 = /.{0,1000}\\scan4all\.exe.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string15 = /\\scan4all\-main/ nocase ascii wide
+        $string15 = /.{0,1000}\\scan4all\-main.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string16 = /async_webshell\-all\.py/ nocase ascii wide
+        $string16 = /.{0,1000}async_webshell\-all\.py.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string17 = /config\/51pwn\/CVE\-/ nocase ascii wide
+        $string17 = /.{0,1000}config\/51pwn\/CVE\-.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string18 = /dicts\/ftp_pswd\.txt/ nocase ascii wide
+        $string18 = /.{0,1000}dicts\/ftp_pswd\.txt.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string19 = /dicts\/ssh_default\.txt/ nocase ascii wide
+        $string19 = /.{0,1000}dicts\/ssh_default\.txt.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string20 = /dicts\/ssh_pswd\.txt/ nocase ascii wide
+        $string20 = /.{0,1000}dicts\/ssh_pswd\.txt.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string21 = /hktalent\/scan4all/ nocase ascii wide
+        $string21 = /.{0,1000}hktalent\/scan4all.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string22 = /hktalent\/scan4all/ nocase ascii wide
+        $string22 = /.{0,1000}hktalent\/scan4all.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string23 = /pocs_go\/.*\/CVE\-.*\.go/ nocase ascii wide
+        $string23 = /.{0,1000}pocs_go\/.{0,1000}\/CVE\-.{0,1000}\.go.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string24 = /scan4all\s\-/ nocase ascii wide
+        $string24 = /.{0,1000}scan4all\s\-.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string25 = /scan4all\s\-.*\.xml/ nocase ascii wide
+        $string25 = /.{0,1000}scan4all\s\-.{0,1000}\.xml.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string26 = /scan4all\s\-h/ nocase ascii wide
+        $string26 = /.{0,1000}scan4all\s\-h.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string27 = /scan4all\s\-tp\s/ nocase ascii wide
+        $string27 = /.{0,1000}scan4all\s\-tp\s.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string28 = /scan4all\.51pwn\.com/ nocase ascii wide
+        $string28 = /.{0,1000}scan4all\.51pwn\.com.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string29 = /scan4all\.51pwn\.com\// nocase ascii wide
+        $string29 = /.{0,1000}scan4all\.51pwn\.com\/.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string30 = /scan4all_.*\..*_linux_amd64\.zip/ nocase ascii wide
+        $string30 = /.{0,1000}scan4all_.{0,1000}\..{0,1000}_linux_amd64\.zip.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string31 = /scan4all_.*\..*_macOS_amd64\.zip/ nocase ascii wide
+        $string31 = /.{0,1000}scan4all_.{0,1000}\..{0,1000}_macOS_amd64\.zip.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string32 = /scan4all_.*\..*_macOS_arm64\.zip/ nocase ascii wide
+        $string32 = /.{0,1000}scan4all_.{0,1000}\..{0,1000}_macOS_arm64\.zip.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string33 = /scan4all_.*\..*_windows_amd64\.zip/ nocase ascii wide
+        $string33 = /.{0,1000}scan4all_.{0,1000}\..{0,1000}_windows_amd64\.zip.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string34 = /scan4all_.*_linux_amd64\.zip/ nocase ascii wide
+        $string34 = /.{0,1000}scan4all_.{0,1000}_linux_amd64\.zip.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoC
         // Reference: https://github.com/hktalent/scan4all
-        $string35 = /scan4all_.*_windows_amd64\.zip/ nocase ascii wide
+        $string35 = /.{0,1000}scan4all_.{0,1000}_windows_amd64\.zip.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string36 = /scan4all_windows_386\.exe/ nocase ascii wide
+        $string36 = /.{0,1000}scan4all_windows_386\.exe.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string37 = /scan4all_windows_amd64\.exe/ nocase ascii wide
+        $string37 = /.{0,1000}scan4all_windows_amd64\.exe.{0,1000}/ nocase ascii wide
         // Description: Official repository vuls Scan: 15000+PoCs - 23 kinds of application password crack - 7000+Web fingerprints - 146 protocols and 90000+ rules Port scanning - Fuzz - HW - awesome BugBounty
         // Reference: https://github.com/hktalent/scan4all
-        $string38 = /scan4all\-main/ nocase ascii wide
+        $string38 = /.{0,1000}scan4all\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

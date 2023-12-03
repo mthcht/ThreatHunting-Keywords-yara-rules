@@ -10,13 +10,13 @@ rule goPassGen
     strings:
         // Description: Easily-guessable Password Generator for Password Spray Attack
         // Reference: https://github.com/bigb0sss/goPassGen
-        $string1 = /\/goPassGen\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/goPassGen\.git.{0,1000}/ nocase ascii wide
         // Description: Easily-guessable Password Generator for Password Spray Attack
         // Reference: https://github.com/bigb0sss/goPassGen
-        $string2 = /bigb0sss\/goPassGen/ nocase ascii wide
+        $string2 = /.{0,1000}bigb0sss\/goPassGen.{0,1000}/ nocase ascii wide
         // Description: Easily-guessable Password Generator for Password Spray Attack
         // Reference: https://github.com/bigb0sss/goPassGen
-        $string3 = /goPassGen\-master/ nocase ascii wide
+        $string3 = /.{0,1000}goPassGen\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

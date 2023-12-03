@@ -10,16 +10,16 @@ rule UACME
     strings:
         // Description: Defeating Windows User Account Control by abusing built-in Windows AutoElevate backdoor.
         // Reference: https://github.com/hfiref0x/UACME
-        $string1 = /\/UACME\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/UACME\.git.{0,1000}/ nocase ascii wide
         // Description: Defeating Windows User Account Control by abusing built-in Windows AutoElevate backdoor.
         // Reference: https://github.com/hfiref0x/UACME
-        $string2 = /\\UACME\-.*\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}\\UACME\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: Defeating Windows User Account Control by abusing built-in Windows AutoElevate backdoor.
         // Reference: https://github.com/hfiref0x/UACME
-        $string3 = /hfiref0x\/UACME/ nocase ascii wide
+        $string3 = /.{0,1000}hfiref0x\/UACME.{0,1000}/ nocase ascii wide
         // Description: Defeating Windows User Account Control by abusing built-in Windows AutoElevate backdoor.
         // Reference: https://github.com/hfiref0x/UACME
-        $string4 = /UACME\-master/ nocase ascii wide
+        $string4 = /.{0,1000}UACME\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

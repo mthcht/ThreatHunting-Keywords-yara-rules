@@ -10,25 +10,25 @@ rule Bashfuscator
     strings:
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string1 = /\s\-c\s.*\s\-\-choose\-mutators\s.*\s\-s\s1/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-c\s.{0,1000}\s\-\-choose\-mutators\s.{0,1000}\s\-s\s1.{0,1000}/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string2 = /\/Bashfuscator/ nocase ascii wide
+        $string2 = /.{0,1000}\/Bashfuscator.{0,1000}/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string3 = /bashfuscator\s\-/ nocase ascii wide
+        $string3 = /.{0,1000}bashfuscator\s\-.{0,1000}/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string4 = /Bashfuscator\sTeam/ nocase ascii wide
+        $string4 = /.{0,1000}Bashfuscator\sTeam.{0,1000}/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string5 = /bashfuscator\.py/ nocase ascii wide
+        $string5 = /.{0,1000}bashfuscator\.py.{0,1000}/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string6 = /Bashfuscator\-master/ nocase ascii wide
+        $string6 = /.{0,1000}Bashfuscator\-master.{0,1000}/ nocase ascii wide
         // Description: A fully configurable and extendable Bash obfuscation framework
         // Reference: https://github.com/Bashfuscator/Bashfuscator
-        $string7 = /command_obfuscator\.py/ nocase ascii wide
+        $string7 = /.{0,1000}command_obfuscator\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

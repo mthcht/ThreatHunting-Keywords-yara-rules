@@ -10,46 +10,46 @@ rule softperfect_networkscanner
     strings:
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string1 = /\snetscan\.exe\s/ nocase ascii wide
+        $string1 = /.{0,1000}\snetscan\.exe\s.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string2 = /\.exe\s.*\s\/hide\s.*\s\/range:.*\s\/auto:.*\./ nocase ascii wide
+        $string2 = /.{0,1000}\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range:.{0,1000}\s\/auto:.{0,1000}\..{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string3 = /\.exe\s\/wakeall/ nocase ascii wide
+        $string3 = /.{0,1000}\.exe\s\/wakeall.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string4 = /\/netscan\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}\/netscan\.exe.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string5 = /\/netscan_linux\.tar\.gz/ nocase ascii wide
+        $string5 = /.{0,1000}\/netscan_linux\.tar\.gz.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string6 = /\/netscan_portable\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}\/netscan_portable\.zip.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string7 = /\/netscan_setup\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}\/netscan_setup\.exe.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string8 = /\\netscan\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\\netscan\.exe.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string9 = /\\netscan_linux\.tar\.gz/ nocase ascii wide
+        $string9 = /.{0,1000}\\netscan_linux\.tar\.gz.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string10 = /\\netscan_portable\.zip/ nocase ascii wide
+        $string10 = /.{0,1000}\\netscan_portable\.zip.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string11 = /\\netscan_portable\\/ nocase ascii wide
+        $string11 = /.{0,1000}\\netscan_portable\\.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string12 = /\\netscan_setup\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}\\netscan_setup\.exe.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string13 = /netscan\.exe\s\// nocase ascii wide
+        $string13 = /.{0,1000}netscan\.exe\s\/.{0,1000}/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string14 = /SoftPerfect_.*Patch_Keygen_v2.*\.exe/ nocase ascii wide
+        $string14 = /.{0,1000}SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

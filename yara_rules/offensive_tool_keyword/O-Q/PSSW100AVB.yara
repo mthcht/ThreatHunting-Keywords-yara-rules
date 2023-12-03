@@ -10,16 +10,16 @@ rule PSSW100AVB
     strings:
         // Description: This is the PSSW100AVB (Powershell Scripts With 100% AV Bypass) Framework.A list of useful Powershell scripts with 100% AV bypass ratio
         // Reference: https://github.com/tihanyin/PSSW100AVB
-        $string1 = /\/PSSW100AVB/ nocase ascii wide
+        $string1 = /.{0,1000}\/PSSW100AVB.{0,1000}/ nocase ascii wide
         // Description: This is the PSSW100AVB (Powershell Scripts With 100% AV Bypass) Framework.A list of useful Powershell scripts with 100% AV bypass ratio
         // Reference: https://github.com/tihanyin/PSSW100AVB
-        $string2 = /AMSI_bypass_20.*\.ps1/ nocase ascii wide
+        $string2 = /.{0,1000}AMSI_bypass_20.{0,1000}\.ps1/ nocase ascii wide
         // Description: This is the PSSW100AVB (Powershell Scripts With 100% AV Bypass) Framework.A list of useful Powershell scripts with 100% AV bypass ratio
         // Reference: https://github.com/tihanyin/PSSW100AVB
-        $string3 = /LsassDump_20.*\.ps1/ nocase ascii wide
+        $string3 = /.{0,1000}LsassDump_20.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
         // Description: This is the PSSW100AVB (Powershell Scripts With 100% AV Bypass) Framework.A list of useful Powershell scripts with 100% AV bypass ratio
         // Reference: https://github.com/tihanyin/PSSW100AVB
-        $string4 = /ReverseShell_20.*\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}ReverseShell_20.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

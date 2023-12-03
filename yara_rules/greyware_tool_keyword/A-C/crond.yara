@@ -10,7 +10,7 @@ rule crond
     strings:
         // Description: Masquerading as Linux Crond Process.Masquerading occurs when the name or location of an executable* legitimate or malicious. is manipulated or abused for the sake of evading defenses and observation. Several different variations of this technique have been observed.
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/lnx_auditd_masquerading_crond.yml
-        $string1 = /cp\s\-i\s\/bin\/sh\s.*\/crond/ nocase ascii wide
+        $string1 = /.{0,1000}cp\s\-i\s\/bin\/sh\s.{0,1000}\/crond.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

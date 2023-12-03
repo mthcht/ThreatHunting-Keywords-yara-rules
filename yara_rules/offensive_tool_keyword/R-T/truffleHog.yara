@@ -10,7 +10,7 @@ rule truffleHog
     strings:
         // Description: Searches through git repositories for secrets. digging deep into commit history and branches. This is effective at finding secrets accidentally committed.
         // Reference: https://github.com/dxa4481/truffleHog
-        $string1 = /truffleHog/ nocase ascii wide
+        $string1 = /.{0,1000}truffleHog.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

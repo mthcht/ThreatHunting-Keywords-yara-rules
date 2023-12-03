@@ -10,22 +10,22 @@ rule mssqlproxy
     strings:
         // Description: mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
         // Reference: https://github.com/blackarrowsec/mssqlproxy
-        $string1 = /\/mssqlproxy\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/mssqlproxy\.git.{0,1000}/ nocase ascii wide
         // Description: mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
         // Reference: https://github.com/blackarrowsec/mssqlproxy
-        $string2 = /blackarrowsec\/mssqlproxy/ nocase ascii wide
+        $string2 = /.{0,1000}blackarrowsec\/mssqlproxy.{0,1000}/ nocase ascii wide
         // Description: mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
         // Reference: https://github.com/blackarrowsec/mssqlproxy
-        $string3 = /mssqlproxy\-master/ nocase ascii wide
+        $string3 = /.{0,1000}mssqlproxy\-master.{0,1000}/ nocase ascii wide
         // Description: mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
         // Reference: https://github.com/blackarrowsec/mssqlproxy
-        $string4 = /reciclador\.cpp/ nocase ascii wide
+        $string4 = /.{0,1000}reciclador\.cpp.{0,1000}/ nocase ascii wide
         // Description: mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
         // Reference: https://github.com/blackarrowsec/mssqlproxy
-        $string5 = /reciclador\.dll/ nocase ascii wide
+        $string5 = /.{0,1000}reciclador\.dll.{0,1000}/ nocase ascii wide
         // Description: mssqlproxy is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
         // Reference: https://github.com/blackarrowsec/mssqlproxy
-        $string6 = /reciclador\.vcxproj/ nocase ascii wide
+        $string6 = /.{0,1000}reciclador\.vcxproj.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

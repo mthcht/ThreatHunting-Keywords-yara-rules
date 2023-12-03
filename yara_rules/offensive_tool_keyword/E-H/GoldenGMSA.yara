@@ -10,25 +10,25 @@ rule GoldenGMSA
     strings:
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string1 = /\.exe\scompute\s\-\-sid\s.*\s\-\-kdskey\s/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\scompute\s\-\-sid\s.{0,1000}\s\-\-kdskey\s.{0,1000}/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string2 = /\.exe\sgmsainfo\s\-\-sid\s/ nocase ascii wide
+        $string2 = /.{0,1000}\.exe\sgmsainfo\s\-\-sid\s.{0,1000}/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string3 = /\.exe\skdsinfo\s\-\-guid\s/ nocase ascii wide
+        $string3 = /.{0,1000}\.exe\skdsinfo\s\-\-guid\s.{0,1000}/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string4 = /\/GoldenGMSA\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/GoldenGMSA\.git.{0,1000}/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string5 = /GoldenGMSA\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}GoldenGMSA\.exe.{0,1000}/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string6 = /GoldenGMSA\-main/ nocase ascii wide
+        $string6 = /.{0,1000}GoldenGMSA\-main.{0,1000}/ nocase ascii wide
         // Description: GolenGMSA tool for working with GMSA passwords
         // Reference: https://github.com/Semperis/GoldenGMSA
-        $string7 = /Semperis\/GoldenGMSA/ nocase ascii wide
+        $string7 = /.{0,1000}Semperis\/GoldenGMSA.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

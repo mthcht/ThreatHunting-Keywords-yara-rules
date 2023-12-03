@@ -10,16 +10,16 @@ rule Gorsair
     strings:
         // Description: Gorsair hacks its way into remote docker containers that expose their APIs
         // Reference: https://github.com/Ullaakut/Gorsair
-        $string1 = /\/bin\/gorsair\s/ nocase ascii wide
+        $string1 = /.{0,1000}\/bin\/gorsair\s.{0,1000}/ nocase ascii wide
         // Description: Gorsair hacks its way into remote docker containers that expose their APIs
         // Reference: https://github.com/Ullaakut/Gorsair
-        $string2 = /\/gorsair\.go/ nocase ascii wide
+        $string2 = /.{0,1000}\/gorsair\.go.{0,1000}/ nocase ascii wide
         // Description: Gorsair hacks its way into remote docker containers that expose their APIs
         // Reference: https://github.com/Ullaakut/Gorsair
-        $string3 = /gorsair\s\-t\s/ nocase ascii wide
+        $string3 = /.{0,1000}gorsair\s\-t\s.{0,1000}/ nocase ascii wide
         // Description: Gorsair hacks its way into remote docker containers that expose their APIs
         // Reference: https://github.com/Ullaakut/Gorsair
-        $string4 = /Ullaakut\/Gorsair/ nocase ascii wide
+        $string4 = /.{0,1000}Ullaakut\/Gorsair.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

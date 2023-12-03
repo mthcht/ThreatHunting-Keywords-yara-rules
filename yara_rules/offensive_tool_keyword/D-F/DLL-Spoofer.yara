@@ -10,19 +10,19 @@ rule DLL_Spoofer
     strings:
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string1 = /\/DLL\-Spoofer\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/DLL\-Spoofer\.git.{0,1000}/ nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string2 = /\\spoof\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\\spoof\.py.{0,1000}/ nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string3 = /DLL\-Spoofer\-main/ nocase ascii wide
+        $string3 = /.{0,1000}DLL\-Spoofer\-main.{0,1000}/ nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string4 = /MitchHS\/DLL\-Spoofer/ nocase ascii wide
+        $string4 = /.{0,1000}MitchHS\/DLL\-Spoofer.{0,1000}/ nocase ascii wide
         // Description: POC for a DLL spoofer to determine DLL Hijacking
         // Reference: https://github.com/MitchHS/DLL-Spoofer
-        $string5 = /spoof\.py\s.*\.dll/ nocase ascii wide
+        $string5 = /.{0,1000}spoof\.py\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

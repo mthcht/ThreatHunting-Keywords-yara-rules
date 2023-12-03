@@ -10,10 +10,10 @@ rule csploit
     strings:
         // Description: The most complete and advanced IT security professional toolkit on Android.
         // Reference: https://github.com/cSploit/android
-        $string1 = /cSploit\-.*\.apk/ nocase ascii wide
+        $string1 = /.{0,1000}cSploit\-.{0,1000}\.apk.{0,1000}/ nocase ascii wide
         // Description: The most complete and advanced IT security professional toolkit on Android.
         // Reference: https://github.com/cSploit/android
-        $string2 = /cSploit\/android/ nocase ascii wide
+        $string2 = /.{0,1000}cSploit\/android.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule GhostPack
     strings:
         // Description: A collection of security related toolsets.with known hacktools
         // Reference: https://github.com/GhostPack
-        $string1 = /GhostPack/ nocase ascii wide
+        $string1 = /.{0,1000}GhostPack.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

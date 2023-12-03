@@ -10,91 +10,91 @@ rule MAAD_AF
     strings:
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string1 = /\/MAAD\-AF\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/MAAD\-AF\.git.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string2 = /\\Tor\\tor\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\\Tor\\tor\.exe.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string3 = /\\Tor\\torrc/ nocase ascii wide
+        $string3 = /.{0,1000}\\Tor\\torrc.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string4 = /\\TorBrowser/ nocase ascii wide
+        $string4 = /.{0,1000}\\TorBrowser.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string5 = /AzureADRecon\.ps1/ nocase ascii wide
+        $string5 = /.{0,1000}AzureADRecon\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string6 = /Brute\-force\sUnsuccessful\!/ nocase ascii wide
+        $string6 = /.{0,1000}Brute\-force\sUnsuccessful\!.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string7 = /BruteForce\.ps1/ nocase ascii wide
+        $string7 = /.{0,1000}BruteForce\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string8 = /CrossTenantSynchronizationBackdoor\.ps1/ nocase ascii wide
+        $string8 = /.{0,1000}CrossTenantSynchronizationBackdoor\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string9 = /\-\-defaults\-torrc/ nocase ascii wide
+        $string9 = /.{0,1000}\-\-defaults\-torrc.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string10 = /DisableAntiPhishing/ nocase ascii wide
+        $string10 = /.{0,1000}DisableAntiPhishing.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string11 = /DisableAntiPhishing\.ps1/ nocase ascii wide
+        $string11 = /.{0,1000}DisableAntiPhishing\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string12 = /DisableMailboxAuditing\.ps1/ nocase ascii wide
+        $string12 = /.{0,1000}DisableMailboxAuditing\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string13 = /DisableMFA\.ps1/ nocase ascii wide
+        $string13 = /.{0,1000}DisableMFA\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string14 = /ExternalRecon\.ps1/ nocase ascii wide
+        $string14 = /.{0,1000}ExternalRecon\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string15 = /GrantMailboxAccess\.ps1/ nocase ascii wide
+        $string15 = /.{0,1000}GrantMailboxAccess\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string16 = /Initial_Access\.ps1/ nocase ascii wide
+        $string16 = /.{0,1000}Initial_Access\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string17 = /LaunchExploitMode\.ps1/ nocase ascii wide
+        $string17 = /.{0,1000}LaunchExploitMode\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string18 = /LaunchPreCompromise\.ps1/ nocase ascii wide
+        $string18 = /.{0,1000}LaunchPreCompromise\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string19 = /MAAD_Attack\.ps1/ nocase ascii wide
+        $string19 = /.{0,1000}MAAD_Attack\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string20 = /MAAD_Config\.ps1/ nocase ascii wide
+        $string20 = /.{0,1000}MAAD_Config\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string21 = /MAAD_Mitre_Map\.ps1/ nocase ascii wide
+        $string21 = /.{0,1000}MAAD_Mitre_Map\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string22 = /MAADInitialization\.ps1/ nocase ascii wide
+        $string22 = /.{0,1000}MAADInitialization\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string23 = /NewAdminAccountCreation\.ps1/ nocase ascii wide
+        $string23 = /.{0,1000}NewAdminAccountCreation\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string24 = /ReconUserGroupRoles\.ps1/ nocase ascii wide
+        $string24 = /.{0,1000}ReconUserGroupRoles\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string25 = /SharepointExploiter\.ps1/ nocase ascii wide
+        $string25 = /.{0,1000}SharepointExploiter\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string26 = /SharepointSiteExploiter\.ps1/ nocase ascii wide
+        $string26 = /.{0,1000}SharepointSiteExploiter\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string27 = /Successfully\scracked\saccount\spassword/ nocase ascii wide
+        $string27 = /.{0,1000}Successfully\scracked\saccount\spassword.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string28 = /TORAnonymizer\.ps1/ nocase ascii wide
+        $string28 = /.{0,1000}TORAnonymizer\.ps1.{0,1000}/ nocase ascii wide
         // Description: MAAD Attack Framework - An attack tool for simple fast & effective security testing of M365 & Azure AD. 
         // Reference: https://github.com/vectra-ai-research/MAAD-AF
-        $string29 = /vectra\-ai\-research\/MAAD\-AF/ nocase ascii wide
+        $string29 = /.{0,1000}vectra\-ai\-research\/MAAD\-AF.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

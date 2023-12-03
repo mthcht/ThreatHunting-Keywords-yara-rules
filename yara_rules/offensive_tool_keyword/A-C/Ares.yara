@@ -10,34 +10,34 @@ rule Ares
     strings:
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string1 = /\s0\.0\.0\.0:8080\s\-\-threads/ nocase ascii wide
+        $string1 = /.{0,1000}\s0\.0\.0\.0:8080\s\-\-threads.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string2 = /\shttp:\/\/localhost:8080\s\-o\sagent/ nocase ascii wide
+        $string2 = /.{0,1000}\shttp:\/\/localhost:8080\s\-o\sagent.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string3 = /\/Ares\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/Ares\.git/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string4 = /\/ares\.py\s/ nocase ascii wide
+        $string4 = /.{0,1000}\/ares\.py\s.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string5 = /ares\.py\srunserver/ nocase ascii wide
+        $string5 = /.{0,1000}ares\.py\srunserver.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string6 = /ares\-master\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}ares\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string7 = /autostart\/ares\.desktop/ nocase ascii wide
+        $string7 = /.{0,1000}autostart\/ares\.desktop.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string8 = /gunicorn\sares:app/ nocase ascii wide
+        $string8 = /.{0,1000}gunicorn\sares:app.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string9 = /sqlite:\/\/\/ares\.db/ nocase ascii wide
+        $string9 = /.{0,1000}sqlite:\/\/\/ares\.db.{0,1000}/ nocase ascii wide
         // Description: Python C2 botnet and backdoor 
         // Reference: https://github.com/sweetsoftware/Ares
-        $string10 = /sweetsoftware\/Ares/ nocase ascii wide
+        $string10 = /.{0,1000}sweetsoftware\/Ares.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

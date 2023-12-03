@@ -10,13 +10,13 @@ rule pe_to_shellcode
     strings:
         // Description: Converts PE into a shellcode
         // Reference: https://github.com/hasherezade/pe_to_shellcode
-        $string1 = /\/pe_to_shellcode/ nocase ascii wide
+        $string1 = /.{0,1000}\/pe_to_shellcode.{0,1000}/ nocase ascii wide
         // Description: Converts PE into a shellcode
         // Reference: https://github.com/hasherezade/pe_to_shellcode
-        $string2 = /\/pe2shc\// nocase ascii wide
+        $string2 = /.{0,1000}\/pe2shc\/.{0,1000}/ nocase ascii wide
         // Description: Converts PE into a shellcode
         // Reference: https://github.com/hasherezade/pe_to_shellcode
-        $string3 = /pe2shc\.exe\s/ nocase ascii wide
+        $string3 = /.{0,1000}pe2shc\.exe\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule phishery
     strings:
         // Description: Phishery is a Simple SSL Enabled HTTP server with the primary purpose of phishing credentials via Basic Authentication. Phishery also provides the ability easily to inject the URL into a .docx Word document.
         // Reference: https://github.com/ryhanson/phishery
-        $string1 = /phishery/ nocase ascii wide
+        $string1 = /.{0,1000}phishery.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

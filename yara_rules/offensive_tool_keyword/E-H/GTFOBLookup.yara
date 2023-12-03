@@ -10,7 +10,7 @@ rule GTFOBLookup
     strings:
         // Description: Offline command line lookup utility for GTFOBins and LOLBAS.
         // Reference: https://github.com/nccgroup/GTFOBLookup
-        $string1 = /GTFOBLookup/ nocase ascii wide
+        $string1 = /.{0,1000}GTFOBLookup.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

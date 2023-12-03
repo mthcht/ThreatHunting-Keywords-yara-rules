@@ -10,22 +10,22 @@ rule AndrewSpecial
     strings:
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string1 = /\/AndrewSpecial\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/AndrewSpecial\.git.{0,1000}/ nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string2 = /\\Andrew\.dmp/ nocase ascii wide
+        $string2 = /.{0,1000}\\Andrew\.dmp.{0,1000}/ nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string3 = /AndrewSpecial\.cpp/ nocase ascii wide
+        $string3 = /.{0,1000}AndrewSpecial\.cpp.{0,1000}/ nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string4 = /AndrewSpecial\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}AndrewSpecial\.exe.{0,1000}/ nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string5 = /AndrewSpecial\-master/ nocase ascii wide
+        $string5 = /.{0,1000}AndrewSpecial\-master.{0,1000}/ nocase ascii wide
         // Description: AndrewSpecial - dumping lsass memory stealthily
         // Reference: https://github.com/hoangprod/AndrewSpecial
-        $string6 = /hoangprod\/AndrewSpecial/ nocase ascii wide
+        $string6 = /.{0,1000}hoangprod\/AndrewSpecial.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

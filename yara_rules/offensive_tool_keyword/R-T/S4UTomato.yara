@@ -10,40 +10,40 @@ rule S4UTomato
     strings:
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string1 = /\.exe\skrbscm\s\-c\s.*cmd\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\skrbscm\s\-c\s.{0,1000}cmd\.exe.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string2 = /\.exe\srbcd\s\-m\s.*\s\-p\s.*\s\-c\s.*cmd\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\.exe\srbcd\s\-m\s.{0,1000}\s\-p\s.{0,1000}\s\-c\s.{0,1000}cmd\.exe.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string3 = /\.exe\sshadowcred\s\-c\s.*\s\-f/ nocase ascii wide
+        $string3 = /.{0,1000}\.exe\sshadowcred\s\-c\s.{0,1000}\s\-f.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string4 = /\/S4UTomato\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/S4UTomato\.git.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string5 = /881D4D67\-46DD\-4F40\-A813\-C9D3C8BE0965/ nocase ascii wide
+        $string5 = /.{0,1000}881D4D67\-46DD\-4F40\-A813\-C9D3C8BE0965.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string6 = /Run\sthe\skrbscm\smethod\sfor\sSYSTEM\sshell/ nocase ascii wide
+        $string6 = /.{0,1000}Run\sthe\skrbscm\smethod\sfor\sSYSTEM\sshell.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string7 = /S4UTomato\s1\.0\.0\-beta/ nocase ascii wide
+        $string7 = /.{0,1000}S4UTomato\s1\.0\.0\-beta.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string8 = /S4UTomato\.csproj/ nocase ascii wide
+        $string8 = /.{0,1000}S4UTomato\.csproj.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string9 = /S4UTomato\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}S4UTomato\.exe.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string10 = /S4UTomato\.sln/ nocase ascii wide
+        $string10 = /.{0,1000}S4UTomato\.sln.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string11 = /S4UTomato\-master/ nocase ascii wide
+        $string11 = /.{0,1000}S4UTomato\-master.{0,1000}/ nocase ascii wide
         // Description: Escalate Service Account To LocalSystem via Kerberos
         // Reference: https://github.com/wh0amitz/S4UTomato
-        $string12 = /wh0amitz\/S4UTomato/ nocase ascii wide
+        $string12 = /.{0,1000}wh0amitz\/S4UTomato.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

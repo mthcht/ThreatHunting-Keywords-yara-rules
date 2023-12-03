@@ -10,136 +10,136 @@ rule bettercap
     strings:
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string1 = /\sbettercap/ nocase ascii wide
+        $string1 = /.{0,1000}\sbettercap.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string2 = /\s\-caplet\s.*\.cap/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-caplet\s.{0,1000}\.cap/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string3 = /\s\-eval\s.*caplets\.update.*\sui\.update/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-eval\s.{0,1000}caplets\.update.{0,1000}\sui\.update.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string4 = /\/arp_spoof\// nocase ascii wide
+        $string4 = /.{0,1000}\/arp_spoof\/.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string5 = /\/bettercap/ nocase ascii wide
+        $string5 = /.{0,1000}\/bettercap.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string6 = /\/c2\/c2\.go/ nocase ascii wide
+        $string6 = /.{0,1000}\/c2\/c2\.go.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string7 = /\/dns_grabber\./ nocase ascii wide
+        $string7 = /.{0,1000}\/dns_grabber\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string8 = /\/dns_spoof/ nocase ascii wide
+        $string8 = /.{0,1000}\/dns_spoof.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string9 = /\/hid_inject\./ nocase ascii wide
+        $string9 = /.{0,1000}\/hid_inject\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string10 = /\/hid_sniff\./ nocase ascii wide
+        $string10 = /.{0,1000}\/hid_sniff\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string11 = /\/ndp_spoof/ nocase ascii wide
+        $string11 = /.{0,1000}\/ndp_spoof.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string12 = /\/net_recon\// nocase ascii wide
+        $string12 = /.{0,1000}\/net_recon\/.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string13 = /\/net_sniff\./ nocase ascii wide
+        $string13 = /.{0,1000}\/net_sniff\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string14 = /\/net_sniff_.*\./ nocase ascii wide
+        $string14 = /.{0,1000}\/net_sniff_.{0,1000}\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string15 = /\/wifi_hopping\./ nocase ascii wide
+        $string15 = /.{0,1000}\/wifi_hopping\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string16 = /arp\.spoof\son/ nocase ascii wide
+        $string16 = /.{0,1000}arp\.spoof\son.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string17 = /arp\.spoof\./ nocase ascii wide
+        $string17 = /.{0,1000}arp\.spoof\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string18 = /arp\.spoof\.targets/ nocase ascii wide
+        $string18 = /.{0,1000}arp\.spoof\.targets.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string19 = /arp_spoof\./ nocase ascii wide
+        $string19 = /.{0,1000}arp_spoof\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string20 = /ArpSpoofer/ nocase ascii wide
+        $string20 = /.{0,1000}ArpSpoofer.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string21 = /bettercap\s/ nocase ascii wide
+        $string21 = /.{0,1000}bettercap\s.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string22 = /bettercap\./ nocase ascii wide
+        $string22 = /.{0,1000}bettercap\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string23 = /bettercap_\.deb/ nocase ascii wide
+        $string23 = /.{0,1000}bettercap_\.deb.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string24 = /bettercap\-master\.zip/ nocase ascii wide
+        $string24 = /.{0,1000}bettercap\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string25 = /ble_recon\.go/ nocase ascii wide
+        $string25 = /.{0,1000}ble_recon\.go.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string26 = /dhcp6\.spoof\./ nocase ascii wide
+        $string26 = /.{0,1000}dhcp6\.spoof\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string27 = /dns\.spoof\son/ nocase ascii wide
+        $string27 = /.{0,1000}dns\.spoof\son.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string28 = /dns\.spoof\.address/ nocase ascii wide
+        $string28 = /.{0,1000}dns\.spoof\.address.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string29 = /dns\.spoof\.all/ nocase ascii wide
+        $string29 = /.{0,1000}dns\.spoof\.all.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string30 = /dns\.spoof\.domains/ nocase ascii wide
+        $string30 = /.{0,1000}dns\.spoof\.domains.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string31 = /dns\.spoof\.hosts/ nocase ascii wide
+        $string31 = /.{0,1000}dns\.spoof\.hosts.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string32 = /dns_spoof\./ nocase ascii wide
+        $string32 = /.{0,1000}dns_spoof\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string33 = /mac\.changer\son/ nocase ascii wide
+        $string33 = /.{0,1000}mac\.changer\son.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string34 = /ndp_spoof\./ nocase ascii wide
+        $string34 = /.{0,1000}ndp_spoof\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string35 = /net\.fuzz\s/ nocase ascii wide
+        $string35 = /.{0,1000}net\.fuzz\s.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string36 = /net\.fuzz\./ nocase ascii wide
+        $string36 = /.{0,1000}net\.fuzz\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string37 = /net\.probe\son/ nocase ascii wide
+        $string37 = /.{0,1000}net\.probe\son/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string38 = /net\.probe\son/ nocase ascii wide
+        $string38 = /.{0,1000}net\.probe\son.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string39 = /net\.sniff\s/ nocase ascii wide
+        $string39 = /.{0,1000}net\.sniff\s.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string40 = /net\.sniff\./ nocase ascii wide
+        $string40 = /.{0,1000}net\.sniff\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string41 = /net_recon\./ nocase ascii wide
+        $string41 = /.{0,1000}net_recon\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string42 = /wifi_fake_auth\./ nocase ascii wide
+        $string42 = /.{0,1000}wifi_fake_auth\..{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string43 = /wifi_recon_handshakes/ nocase ascii wide
+        $string43 = /.{0,1000}wifi_recon_handshakes.{0,1000}/ nocase ascii wide
         // Description: The Swiss Army knife for 802.11 -  BLE - IPv4 and IPv6 networks reconnaissance and MITM attacks.
         // Reference: https://github.com/bettercap/bettercap
-        $string44 = /net\.recon\s/ nocase ascii wide
+        $string44 = /net\.recon\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

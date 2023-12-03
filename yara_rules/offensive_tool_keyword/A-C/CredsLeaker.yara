@@ -10,7 +10,7 @@ rule CredsLeaker
     strings:
         // Description: This script used to display a powershell credentials box asked the user for credentials. However. That was highly noticeable. Now its time to utilize Windows Security popup!
         // Reference: https://github.com/Dviros/CredsLeaker
-        $string1 = /CredsLeaker/ nocase ascii wide
+        $string1 = /.{0,1000}CredsLeaker.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

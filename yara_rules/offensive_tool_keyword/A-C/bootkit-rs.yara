@@ -10,25 +10,25 @@ rule bootkit_rs
     strings:
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string1 = /\/bootkit\-rs/ nocase ascii wide
+        $string1 = /.{0,1000}\/bootkit\-rs.{0,1000}/ nocase ascii wide
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string2 = /\\bootkit\-rs/ nocase ascii wide
+        $string2 = /.{0,1000}\\bootkit\-rs.{0,1000}/ nocase ascii wide
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string3 = /bootkit\-rs\.git/ nocase ascii wide
+        $string3 = /.{0,1000}bootkit\-rs\.git.{0,1000}/ nocase ascii wide
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string4 = /bootkit\-rs\-master/ nocase ascii wide
+        $string4 = /.{0,1000}bootkit\-rs\-master.{0,1000}/ nocase ascii wide
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string5 = /master\/bootkit\/src/ nocase ascii wide
+        $string5 = /.{0,1000}master\/bootkit\/src.{0,1000}/ nocase ascii wide
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string6 = /redlotus\.efi/ nocase ascii wide
+        $string6 = /.{0,1000}redlotus\.efi.{0,1000}/ nocase ascii wide
         // Description: Rusty Bootkit - Windows UEFI Bootkit in Rust (Codename: RedLotus)
         // Reference: https://github.com/memN0ps/bootkit-rs
-        $string7 = /x86_64\-unknown\-uefi/ nocase ascii wide
+        $string7 = /.{0,1000}x86_64\-unknown\-uefi.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule ticket_converter
     strings:
         // Description: A little tool to convert ccache tickets into kirbi (KRB-CRED) and vice versa based on impacket.
         // Reference: https://github.com/zer1t0/ticket_converter
-        $string1 = /\sticket_converter\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\sticket_converter\.py.{0,1000}/ nocase ascii wide
         // Description: A little tool to convert ccache tickets into kirbi (KRB-CRED) and vice versa based on impacket.
         // Reference: https://github.com/zer1t0/ticket_converter
-        $string2 = /\.py.*\.ccache\s.*\.kirbi\s/ nocase ascii wide
+        $string2 = /.{0,1000}\.py.{0,1000}\.ccache\s.{0,1000}\.kirbi\s.{0,1000}/ nocase ascii wide
         // Description: A little tool to convert ccache tickets into kirbi (KRB-CRED) and vice versa based on impacket.
         // Reference: https://github.com/zer1t0/ticket_converter
-        $string3 = /\.py.*\.kirbi\s.*\.ccache/ nocase ascii wide
+        $string3 = /.{0,1000}\.py.{0,1000}\.kirbi\s.{0,1000}\.ccache.{0,1000}/ nocase ascii wide
         // Description: A little tool to convert ccache tickets into kirbi (KRB-CRED) and vice versa based on impacket.
         // Reference: https://github.com/zer1t0/ticket_converter
-        $string4 = /\/ticket_converter\.py/ nocase ascii wide
+        $string4 = /.{0,1000}\/ticket_converter\.py.{0,1000}/ nocase ascii wide
         // Description: A little tool to convert ccache tickets into kirbi (KRB-CRED) and vice versa based on impacket.
         // Reference: https://github.com/zer1t0/ticket_converter
-        $string5 = /\\ticket_converter\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\\ticket_converter\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

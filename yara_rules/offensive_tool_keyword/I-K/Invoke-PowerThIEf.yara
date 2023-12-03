@@ -10,7 +10,7 @@ rule Invoke_PowerThIEf
     strings:
         // Description: An IE Post Exploitation Library released at Steelcon in Sheffield 7th July 2018.
         // Reference: https://github.com/nettitude/Invoke-PowerThIEf
-        $string1 = /Invoke\-PowerThIEf/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-PowerThIEf.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule mitmproxy
     strings:
         // Description: An interactive. SSL-capable man-in-the-middle proxy for HTTP with a console interface
         // Reference: https://github.com/mitmproxy/mitmproxy
-        $string1 = /mitmproxy/ nocase ascii wide
+        $string1 = /.{0,1000}mitmproxy.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

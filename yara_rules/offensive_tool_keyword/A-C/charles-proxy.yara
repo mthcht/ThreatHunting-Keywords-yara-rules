@@ -10,7 +10,7 @@ rule charles_proxy
     strings:
         // Description: A cross-platform GUI web debugging proxy to view intercepted HTTP and HTTPS/SSL live traffic
         // Reference: https://charlesproxy.com/
-        $string1 = /charles\-proxy/ nocase ascii wide
+        $string1 = /.{0,1000}charles\-proxy.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

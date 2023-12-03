@@ -10,43 +10,43 @@ rule SMBeagle
     strings:
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string1 = /\s\-\-dont\-enumerate\-acls\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-dont\-enumerate\-acls\s.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string2 = /\s\-\-dont\-enumerate\-acls\s.*\s\-e\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-dont\-enumerate\-acls\s.{0,1000}\s\-e\s.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string3 = /\s\-\-scan\-local\-shares\s.*\s\-e\s/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-scan\-local\-shares\s.{0,1000}\s\-e\s.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string4 = /\/SharpShares\/Enums/ nocase ascii wide
+        $string4 = /.{0,1000}\/SharpShares\/Enums.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string5 = /\/SMBeagle/ nocase ascii wide
+        $string5 = /.{0,1000}\/SMBeagle.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string6 = /\\WindowsShareFinder\.cs/ nocase ascii wide
+        $string6 = /.{0,1000}\\WindowsShareFinder\.cs.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string7 = /SMBeagle\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}SMBeagle\.exe.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string8 = /SMBeagle\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}SMBeagle\.sln.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string9 = /smbeagle_.*_linux_amd64\.zip/ nocase ascii wide
+        $string9 = /.{0,1000}smbeagle_.{0,1000}_linux_amd64\.zip.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string10 = /smbeagle_.*_linux_arm64\.zip/ nocase ascii wide
+        $string10 = /.{0,1000}smbeagle_.{0,1000}_linux_arm64\.zip.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string11 = /smbeagle_.*_win_x64\.zip/ nocase ascii wide
+        $string11 = /.{0,1000}smbeagle_.{0,1000}_win_x64\.zip.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string12 = /using\sSMBeagle/ nocase ascii wide
+        $string12 = /.{0,1000}using\sSMBeagle.{0,1000}/ nocase ascii wide
         // Description: SMBeagle is an (SMB) fileshare auditing tool that hunts out all files it can see in the network and reports if the file can be read and/or written. All these findings are streamed out to either a CSV file or an elasticsearch host.
         // Reference: https://github.com/punk-security/SMBeagle
-        $string13 = /WindowsShareFinder\.cs/ nocase ascii wide
+        $string13 = /.{0,1000}WindowsShareFinder\.cs.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

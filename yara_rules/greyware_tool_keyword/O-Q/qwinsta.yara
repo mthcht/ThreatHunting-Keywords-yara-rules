@@ -10,7 +10,7 @@ rule qwinsta
     strings:
         // Description: enumerate rdp session on a remote server
         // Reference: N/A
-        $string1 = /qwinsta\s\/server:/ nocase ascii wide
+        $string1 = /.{0,1000}qwinsta\s\/server:.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

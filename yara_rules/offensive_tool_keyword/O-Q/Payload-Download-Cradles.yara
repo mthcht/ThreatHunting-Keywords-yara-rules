@@ -10,16 +10,16 @@ rule Payload_Download_Cradles
     strings:
         // Description: This are different types of download cradles which should be an inspiration to play and create new download cradles to bypass AV/EPP/EDR in context of download cradle detections.
         // Reference: https://github.com/VirtualAlllocEx/Payload-Download-Cradles
-        $string1 = /Download:Cradle\.js/ nocase ascii wide
+        $string1 = /.{0,1000}Download:Cradle\.js.{0,1000}/ nocase ascii wide
         // Description: This are different types of download cradles which should be an inspiration to play and create new download cradles to bypass AV/EPP/EDR in context of download cradle detections.
         // Reference: https://github.com/VirtualAlllocEx/Payload-Download-Cradles
-        $string2 = /Download_Cradles\./ nocase ascii wide
+        $string2 = /.{0,1000}Download_Cradles\..{0,1000}/ nocase ascii wide
         // Description: This are different types of download cradles which should be an inspiration to play and create new download cradles to bypass AV/EPP/EDR in context of download cradle detections.
         // Reference: https://github.com/VirtualAlllocEx/Payload-Download-Cradles
-        $string3 = /Download\-Cradles\.cmd/ nocase ascii wide
+        $string3 = /.{0,1000}Download\-Cradles\.cmd.{0,1000}/ nocase ascii wide
         // Description: This are different types of download cradles which should be an inspiration to play and create new download cradles to bypass AV/EPP/EDR in context of download cradle detections.
         // Reference: https://github.com/VirtualAlllocEx/Payload-Download-Cradles
-        $string4 = /Payload\-Download\-Cradles/ nocase ascii wide
+        $string4 = /.{0,1000}Payload\-Download\-Cradles.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

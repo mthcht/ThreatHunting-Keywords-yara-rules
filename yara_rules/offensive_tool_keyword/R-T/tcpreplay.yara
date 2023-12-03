@@ -10,7 +10,7 @@ rule tcpreplay
     strings:
         // Description: Tcpreplay is a suite of free Open Source utilities for editing and replaying previously captured network traffic. Originally designed to replay malicious traffic patterns to Intrusion Detection/Prevention Systems. it has seen many evolutions including capabilities to replay to web servers.
         // Reference: https://tcpreplay.appneta.com/
-        $string1 = /tcpreplay/ nocase ascii wide
+        $string1 = /.{0,1000}tcpreplay.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

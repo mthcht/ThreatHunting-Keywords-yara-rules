@@ -10,10 +10,10 @@ rule sudoers
     strings:
         // Description: use SUDO without password
         // Reference: N/A
-        $string1 = /echo\s.*\sALL\=\(ALL\)\sNOPASSWD:\sALL.*\s\>\>\/etc\/sudoers/ nocase ascii wide
+        $string1 = /.{0,1000}echo\s.{0,1000}\sALL\=\(ALL\)\sNOPASSWD:\sALL.{0,1000}\s\>\>\/etc\/sudoers.{0,1000}/ nocase ascii wide
         // Description: use SUDO without password
         // Reference: N/A
-        $string2 = /echo\s.*\sALL\=NOPASSWD:\s\/bin\/bash.*\s\>\>\/etc\/sudoers/ nocase ascii wide
+        $string2 = /.{0,1000}echo\s.{0,1000}\sALL\=NOPASSWD:\s\/bin\/bash.{0,1000}\s\>\>\/etc\/sudoers.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

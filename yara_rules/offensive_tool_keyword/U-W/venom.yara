@@ -10,301 +10,301 @@ rule venom
     strings:
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string1 = /\skimi\.py\s/ nocase ascii wide
+        $string1 = /.{0,1000}\skimi\.py\s.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string2 = /\s\-NoPRo\s\-wIN\s1\s\-nONi\s\-eN\sSh33L/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-NoPRo\s\-wIN\s1\s\-nONi\s\-eN\sSh33L.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string3 = /\/\/Lh0St\/InJ3C/ nocase ascii wide
+        $string3 = /.{0,1000}\/\/Lh0St\/InJ3C.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string4 = /\/\/RRh0St\/InJ3C/ nocase ascii wide
+        $string4 = /.{0,1000}\/\/RRh0St\/InJ3C.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string5 = /\/avet_fabric\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/avet_fabric\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string6 = /\/evil_pdf\// nocase ascii wide
+        $string6 = /.{0,1000}\/evil_pdf\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string7 = /\/exec_bin\.c/ nocase ascii wide
+        $string7 = /.{0,1000}\/exec_bin\.c.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string8 = /\/exec_dll\.c/ nocase ascii wide
+        $string8 = /.{0,1000}\/exec_dll\.c.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string9 = /\/exec_psh\.c/ nocase ascii wide
+        $string9 = /.{0,1000}\/exec_psh\.c.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string10 = /\/exec0\.py/ nocase ascii wide
+        $string10 = /.{0,1000}\/exec0\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string11 = /\/GetBrowsers\.ps1/ nocase ascii wide
+        $string11 = /.{0,1000}\/GetBrowsers\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string12 = /\/hta_attack\// nocase ascii wide
+        $string12 = /.{0,1000}\/hta_attack\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string13 = /\/kimi\.py/ nocase ascii wide
+        $string13 = /.{0,1000}\/kimi\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string14 = /\/NewPhish\.ps1/ nocase ascii wide
+        $string14 = /.{0,1000}\/NewPhish\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string15 = /\/persistence2\.rc/ nocase ascii wide
+        $string15 = /.{0,1000}\/persistence2\.rc.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string16 = /\/phishing\/.*\.html/ nocase ascii wide
+        $string16 = /.{0,1000}\/phishing\/.{0,1000}\.html.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string17 = /\/powerglot\// nocase ascii wide
+        $string17 = /.{0,1000}\/powerglot\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string18 = /\/ps2exe\.ps1/ nocase ascii wide
+        $string18 = /.{0,1000}\/ps2exe\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string19 = /\/r00t\-3xp10it/ nocase ascii wide
+        $string19 = /.{0,1000}\/r00t\-3xp10it.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string20 = /\/Rat_Generator/ nocase ascii wide
+        $string20 = /.{0,1000}\/Rat_Generator.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string21 = /\/shellcode_samples\// nocase ascii wide
+        $string21 = /.{0,1000}\/shellcode_samples\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string22 = /\/venom\.git/ nocase ascii wide
+        $string22 = /.{0,1000}\/venom\.git.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string23 = /\/venom\.sh\s/ nocase ascii wide
+        $string23 = /.{0,1000}\/venom\.sh\s.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string24 = /\/venom\// nocase ascii wide
+        $string24 = /.{0,1000}\/venom\// nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string25 = /\\bin\\shepard\\/ nocase ascii wide
+        $string25 = /.{0,1000}\\bin\\shepard\\.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string26 = /\\BrowserEnum\.log/ nocase ascii wide
+        $string26 = /.{0,1000}\\BrowserEnum\.log.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string27 = /\\CredsPhish\.log/ nocase ascii wide
+        $string27 = /.{0,1000}\\CredsPhish\.log.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string28 = /\\evil_pdf\\/ nocase ascii wide
+        $string28 = /.{0,1000}\\evil_pdf\\.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string29 = /\\GetBrowsers\.ps1/ nocase ascii wide
+        $string29 = /.{0,1000}\\GetBrowsers\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string30 = /\\NewPhish\.ps1/ nocase ascii wide
+        $string30 = /.{0,1000}\\NewPhish\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string31 = /\\powerglot\\/ nocase ascii wide
+        $string31 = /.{0,1000}\\powerglot\\.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string32 = /\\ps2exe\.ps1/ nocase ascii wide
+        $string32 = /.{0,1000}\\ps2exe\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string33 = /\\PS2EXE\\.*\.ps1/ nocase ascii wide
+        $string33 = /.{0,1000}\\PS2EXE\\.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string34 = /\\shellcode_samples\\/ nocase ascii wide
+        $string34 = /.{0,1000}\\shellcode_samples\\.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string35 = /\\SillyRAT\\.*\.py/ nocase ascii wide
+        $string35 = /.{0,1000}\\SillyRAT\\.{0,1000}\.py/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string36 = /0evilpwfilter/ nocase ascii wide
+        $string36 = /.{0,1000}0evilpwfilter.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string37 = /0evilpwfilter\.dll/ nocase ascii wide
+        $string37 = /.{0,1000}0evilpwfilter\.dll.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string38 = /aux\/dump_credentials/ nocase ascii wide
+        $string38 = /.{0,1000}aux\/dump_credentials.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string39 = /aux\/enum_system\.rc/ nocase ascii wide
+        $string39 = /.{0,1000}aux\/enum_system\.rc.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string40 = /aux\/msf\// nocase ascii wide
+        $string40 = /.{0,1000}aux\/msf\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string41 = /aux\/persistence\.rc/ nocase ascii wide
+        $string41 = /.{0,1000}aux\/persistence\.rc/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string42 = /aux\/privilege_escalation\./ nocase ascii wide
+        $string42 = /.{0,1000}aux\/privilege_escalation\..{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string43 = /aux\/Start\-Webserver\.ps1/ nocase ascii wide
+        $string43 = /.{0,1000}aux\/Start\-Webserver\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string44 = /bin\/.*\/PS2EXE\// nocase ascii wide
+        $string44 = /.{0,1000}bin\/.{0,1000}\/PS2EXE\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string45 = /bin\/icmpsh\// nocase ascii wide
+        $string45 = /.{0,1000}bin\/icmpsh\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string46 = /bin\/SillyRAT\// nocase ascii wide
+        $string46 = /.{0,1000}bin\/SillyRAT\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string47 = /bin\/void\.zip/ nocase ascii wide
+        $string47 = /.{0,1000}bin\/void\.zip.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string48 = /bin\\SillyRAT/ nocase ascii wide
+        $string48 = /.{0,1000}bin\\SillyRAT.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string49 = /bin\\void\.zip/ nocase ascii wide
+        $string49 = /.{0,1000}bin\\void\.zip.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string50 = /CarbonCopy\.py/ nocase ascii wide
+        $string50 = /.{0,1000}CarbonCopy\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string51 = /ChaitanyaHaritash\/kimi/ nocase ascii wide
+        $string51 = /.{0,1000}ChaitanyaHaritash\/kimi.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string52 = /CommandCam\.exe/ nocase ascii wide
+        $string52 = /.{0,1000}CommandCam\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string53 = /CredsPhish\.ps1/ nocase ascii wide
+        $string53 = /.{0,1000}CredsPhish\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string54 = /DarkRCovery\.exe/ nocase ascii wide
+        $string54 = /.{0,1000}DarkRCovery\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string55 = /dll_hijack_detect_x64/ nocase ascii wide
+        $string55 = /.{0,1000}dll_hijack_detect_x64.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string56 = /dll_hijack_detect_x86/ nocase ascii wide
+        $string56 = /.{0,1000}dll_hijack_detect_x86.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string57 = /encodeScriptPolyglot/ nocase ascii wide
+        $string57 = /.{0,1000}encodeScriptPolyglot.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string58 = /enigma_fileless_uac_bypass/ nocase ascii wide
+        $string58 = /.{0,1000}enigma_fileless_uac_bypass.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string59 = /exploit_suggester\./ nocase ascii wide
+        $string59 = /.{0,1000}exploit_suggester\..{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string60 = /firefox\/FakeUpdate_files\// nocase ascii wide
+        $string60 = /.{0,1000}firefox\/FakeUpdate_files\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string61 = /hta\-to\-javascript\-crypter/ nocase ascii wide
+        $string61 = /.{0,1000}hta\-to\-javascript\-crypter.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string62 = /http:\/\/LhOsT\/FiLNaMe\./ nocase ascii wide
+        $string62 = /.{0,1000}http:\/\/LhOsT\/FiLNaMe\..{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string63 = /import\sImpactDecoder/ nocase ascii wide
+        $string63 = /.{0,1000}import\sImpactDecoder.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string64 = /import\sImpactPacket/ nocase ascii wide
+        $string64 = /.{0,1000}import\sImpactPacket.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string65 = /install_winrar_wine32\.exe/ nocase ascii wide
+        $string65 = /.{0,1000}install_winrar_wine32\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string66 = /install_winrar_wine64\./ nocase ascii wide
+        $string66 = /.{0,1000}install_winrar_wine64\..{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string67 = /InvokeMeter\.bat/ nocase ascii wide
+        $string67 = /.{0,1000}InvokeMeter\.bat.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string68 = /Invoke\-Phant0m/ nocase ascii wide
+        $string68 = /.{0,1000}Invoke\-Phant0m.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string69 = /InvokePS1\.bat/ nocase ascii wide
+        $string69 = /.{0,1000}InvokePS1\.bat.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string70 = /Invoke\-Shellcode/ nocase ascii wide
+        $string70 = /.{0,1000}Invoke\-Shellcode.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string71 = /keylooger\.ps1/ nocase ascii wide
+        $string71 = /.{0,1000}keylooger\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string72 = /kimi_MDPC\/kimi\.py/ nocase ascii wide
+        $string72 = /.{0,1000}kimi_MDPC\/kimi\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string73 = /linux_hostrecon/ nocase ascii wide
+        $string73 = /.{0,1000}linux_hostrecon.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string74 = /linux_hostrecon\./ nocase ascii wide
+        $string74 = /.{0,1000}linux_hostrecon\..{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string75 = /make_avet\s\-l\s.*\.exe\s/ nocase ascii wide
+        $string75 = /.{0,1000}make_avet\s\-l\s.{0,1000}\.exe\s.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string76 = /make_avetsvc\s/ nocase ascii wide
+        $string76 = /.{0,1000}make_avetsvc\s.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string77 = /Meterpreter\.ps1/ nocase ascii wide
+        $string77 = /.{0,1000}Meterpreter\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string78 = /meterpreter_loader/ nocase ascii wide
+        $string78 = /.{0,1000}meterpreter_loader.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string79 = /METERPRETER_STAGER/ nocase ascii wide
+        $string79 = /.{0,1000}METERPRETER_STAGER.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string80 = /mimiRatz/ nocase ascii wide
+        $string80 = /.{0,1000}mimiRatz.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string81 = /mozlz4\-win32\.exe/ nocase ascii wide
+        $string81 = /.{0,1000}mozlz4\-win32\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string82 = /msf\-auxiliarys/ nocase ascii wide
+        $string82 = /.{0,1000}msf\-auxiliarys.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string83 = /obfuscate\/shellter/ nocase ascii wide
+        $string83 = /.{0,1000}obfuscate\/shellter.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string84 = /perl\-reverse\-shell\./ nocase ascii wide
+        $string84 = /.{0,1000}perl\-reverse\-shell\..{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string85 = /PEScrambler\.exe/ nocase ascii wide
+        $string85 = /.{0,1000}PEScrambler\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string86 = /POST_EXPLOIT_DIR/ nocase ascii wide
+        $string86 = /.{0,1000}POST_EXPLOIT_DIR.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string87 = /powerglot\.py/ nocase ascii wide
+        $string87 = /.{0,1000}powerglot\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string88 = /pyherion\.py/ nocase ascii wide
+        $string88 = /.{0,1000}pyherion\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string89 = /rapid7\.github\.io\/metasploit\-framework\/api\// nocase ascii wide
+        $string89 = /.{0,1000}rapid7\.github\.io\/metasploit\-framework\/api\/.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string90 = /reshacker_setup\.exe/ nocase ascii wide
+        $string90 = /.{0,1000}reshacker_setup\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string91 = /SHELLCODE\sGENERATOR/ nocase ascii wide
+        $string91 = /.{0,1000}SHELLCODE\sGENERATOR.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string92 = /shellter\.exe/ nocase ascii wide
+        $string92 = /.{0,1000}shellter\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string93 = /shepardsbind_recv\.py/ nocase ascii wide
+        $string93 = /.{0,1000}shepardsbind_recv\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string94 = /shepbind_serv\.exe/ nocase ascii wide
+        $string94 = /.{0,1000}shepbind_serv\.exe.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string95 = /sherlock\.ps1/ nocase ascii wide
+        $string95 = /.{0,1000}sherlock\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string96 = /SluiEOP\.ps1/ nocase ascii wide
+        $string96 = /.{0,1000}SluiEOP\.ps1.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string97 = /turn_keylogger/ nocase ascii wide
+        $string97 = /.{0,1000}turn_keylogger.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string98 = /vbs\-obfuscator\.py/ nocase ascii wide
+        $string98 = /.{0,1000}vbs\-obfuscator\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string99 = /wifi_dump_linux/ nocase ascii wide
+        $string99 = /.{0,1000}wifi_dump_linux.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

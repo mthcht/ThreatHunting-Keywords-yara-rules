@@ -10,16 +10,16 @@ rule wifigrabber
     strings:
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string1 = /\s\>\sWi\-Fi\-PASS/ nocase ascii wide
+        $string1 = /.{0,1000}\s\>\sWi\-Fi\-PASS.{0,1000}/ nocase ascii wide
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string2 = /\s\-InFile\sWi\-Fi\-PASS/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-InFile\sWi\-Fi\-PASS.{0,1000}/ nocase ascii wide
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string3 = /\/credentials\/wifigrabber/ nocase ascii wide
+        $string3 = /.{0,1000}\/credentials\/wifigrabber.{0,1000}/ nocase ascii wide
         // Description: grab wifi password and exfiltrate to a given site
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/wifigrabber
-        $string4 = /String\snetsh\swlan\sexport\sprofile\skey\=clear/ nocase ascii wide
+        $string4 = /.{0,1000}String\snetsh\swlan\sexport\sprofile\skey\=clear.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

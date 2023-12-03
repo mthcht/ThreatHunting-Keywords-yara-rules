@@ -10,7 +10,7 @@ rule routerpasswords_com
     strings:
         // Description: find default routers passwords
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /routerpasswords\.com\// nocase ascii wide
+        $string1 = /.{0,1000}routerpasswords\.com\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

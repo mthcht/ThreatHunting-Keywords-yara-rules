@@ -10,16 +10,16 @@ rule sqlipy
     strings:
         // Description: SQLiPy is a Python plugin for Burp Suite that integrates SQLMap using the SQLMap API.
         // Reference: https://github.com/codewatchorg/sqlipy
-        $string1 = /\/sqlmap\.zip/ nocase ascii wide
+        $string1 = /.{0,1000}\/sqlmap\.zip.{0,1000}/ nocase ascii wide
         // Description: SQLiPy is a Python plugin for Burp Suite that integrates SQLMap using the SQLMap API.
         // Reference: https://github.com/codewatchorg/sqlipy
-        $string2 = /codewatchorg\/sqlipy/ nocase ascii wide
+        $string2 = /.{0,1000}codewatchorg\/sqlipy.{0,1000}/ nocase ascii wide
         // Description: SQLiPy is a Python plugin for Burp Suite that integrates SQLMap using the SQLMap API.
         // Reference: https://github.com/codewatchorg/sqlipy
-        $string3 = /SQLiPy\.py/ nocase ascii wide
+        $string3 = /.{0,1000}SQLiPy\.py.{0,1000}/ nocase ascii wide
         // Description: SQLiPy is a Python plugin for Burp Suite that integrates SQLMap using the SQLMap API.
         // Reference: https://github.com/codewatchorg/sqlipy
-        $string4 = /sqlmapapi\.py/ nocase ascii wide
+        $string4 = /.{0,1000}sqlmapapi\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

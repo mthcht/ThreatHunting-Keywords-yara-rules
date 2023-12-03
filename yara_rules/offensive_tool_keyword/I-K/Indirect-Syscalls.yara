@@ -10,19 +10,19 @@ rule Indirect_Syscalls
     strings:
         // Description: Indirect syscalls serve as an evolution of direct syscalls and enable enhanced EDR evasion by legitimizing syscall command execution and return statement within the ntdll.dll memory. This stealthy operation partially implements the syscall stub in the Indirect Syscall assembly itself.
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string1 = /CT_Indirect_Syscalls\.c/ nocase ascii wide
+        $string1 = /.{0,1000}CT_Indirect_Syscalls\.c.{0,1000}/ nocase ascii wide
         // Description: Indirect syscalls serve as an evolution of direct syscalls and enable enhanced EDR evasion by legitimizing syscall command execution and return statement within the ntdll.dll memory. This stealthy operation partially implements the syscall stub in the Indirect Syscall assembly itself.
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string2 = /CT_Indirect_Syscalls\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}CT_Indirect_Syscalls\.exe.{0,1000}/ nocase ascii wide
         // Description: Indirect syscalls serve as an evolution of direct syscalls and enable enhanced EDR evasion by legitimizing syscall command execution and return statement within the ntdll.dll memory. This stealthy operation partially implements the syscall stub in the Indirect Syscall assembly itself.
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string3 = /CT_Indirect_Syscalls\.sln/ nocase ascii wide
+        $string3 = /.{0,1000}CT_Indirect_Syscalls\.sln.{0,1000}/ nocase ascii wide
         // Description: Indirect syscalls serve as an evolution of direct syscalls and enable enhanced EDR evasion by legitimizing syscall command execution and return statement within the ntdll.dll memory. This stealthy operation partially implements the syscall stub in the Indirect Syscall assembly itself.
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string4 = /CT_Indirect_Syscalls\.vcxproj/ nocase ascii wide
+        $string4 = /.{0,1000}CT_Indirect_Syscalls\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Indirect syscalls serve as an evolution of direct syscalls and enable enhanced EDR evasion by legitimizing syscall command execution and return statement within the ntdll.dll memory. This stealthy operation partially implements the syscall stub in the Indirect Syscall assembly itself.
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string5 = /Direct\-Syscalls\-vs\-Indirect\-Syscalls\.git/ nocase ascii wide
+        $string5 = /.{0,1000}Direct\-Syscalls\-vs\-Indirect\-Syscalls\.git.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

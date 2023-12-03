@@ -10,16 +10,16 @@ rule GONET_Scanner
     strings:
         // Description: port scanner and arp discover in go
         // Reference: https://github.com/luijait/GONET-Scanner
-        $string1 = /\/GONET\-Scanner\// nocase ascii wide
+        $string1 = /.{0,1000}\/GONET\-Scanner\/.{0,1000}/ nocase ascii wide
         // Description: port scanner and arp discover in go
         // Reference: https://github.com/luijait/GONET-Scanner
-        $string2 = /\/scannerPort\.go/ nocase ascii wide
+        $string2 = /.{0,1000}\/scannerPort\.go.{0,1000}/ nocase ascii wide
         // Description: port scanner and arp discover in go
         // Reference: https://github.com/luijait/GONET-Scanner
-        $string3 = /go\srun\sscannerPort\.go/ nocase ascii wide
+        $string3 = /.{0,1000}go\srun\sscannerPort\.go.{0,1000}/ nocase ascii wide
         // Description: port scanner and arp discover in go
         // Reference: https://github.com/luijait/GONET-Scanner
-        $string4 = /scannerport\.go\s\-/ nocase ascii wide
+        $string4 = /.{0,1000}scannerport\.go\s\-.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

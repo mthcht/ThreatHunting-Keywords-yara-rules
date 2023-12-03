@@ -10,10 +10,10 @@ rule AlanFramework
     strings:
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string1 = /http.*:\/\/127\.0\.0\.1:8081/ nocase ascii wide
+        $string1 = /.{0,1000}http.{0,1000}:\/\/127\.0\.0\.1:8081.{0,1000}/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string2 = /http.*:\/\/localhost:8081/ nocase ascii wide
+        $string2 = /.{0,1000}http.{0,1000}:\/\/localhost:8081.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

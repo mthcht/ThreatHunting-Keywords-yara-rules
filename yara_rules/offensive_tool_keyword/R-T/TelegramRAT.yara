@@ -10,19 +10,19 @@ rule TelegramRAT
     strings:
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string1 = /\/TelegramRAT\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/TelegramRAT\.git.{0,1000}/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string2 = /https:\/\/t\.me\/BotFather/ nocase ascii wide
+        $string2 = /.{0,1000}https:\/\/t\.me\/BotFather.{0,1000}/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string3 = /https:\/\/t\.me\/machine1337/ nocase ascii wide
+        $string3 = /.{0,1000}https:\/\/t\.me\/machine1337.{0,1000}/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string4 = /machine1337\/TelegramRAT/ nocase ascii wide
+        $string4 = /.{0,1000}machine1337\/TelegramRAT.{0,1000}/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string5 = /TelegramRAT\-main/ nocase ascii wide
+        $string5 = /.{0,1000}TelegramRAT\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

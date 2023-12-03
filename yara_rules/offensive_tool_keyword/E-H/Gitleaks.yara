@@ -10,7 +10,7 @@ rule Gitleaks
     strings:
         // Description: Gitleaks is a SAST tool for detecting hardcoded secrets like passwords. api keys. and tokens in git repos. Gitleaks aims to be the easy-to-use. all-in-one solution for finding secrets. past or present. in your code.
         // Reference: https://github.com/zricethezav/gitleaks
-        $string1 = /gitleaks/ nocase ascii wide
+        $string1 = /.{0,1000}gitleaks.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

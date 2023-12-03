@@ -10,31 +10,31 @@ rule AtlasC2
     strings:
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string1 = /AtlasC2.*APIModels/ nocase ascii wide
+        $string1 = /.{0,1000}AtlasC2.{0,1000}APIModels.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string2 = /AtlasC2.*Client/ nocase ascii wide
+        $string2 = /.{0,1000}AtlasC2.{0,1000}Client.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string3 = /AtlasC2.*implant/ nocase ascii wide
+        $string3 = /.{0,1000}AtlasC2.{0,1000}implant.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string4 = /AtlasC2.*TeamServer/ nocase ascii wide
+        $string4 = /.{0,1000}AtlasC2.{0,1000}TeamServer.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string5 = /AtlasC2\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}AtlasC2\.exe.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string6 = /AtlasC2b\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}AtlasC2b\.exe.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string7 = /AtlasC2b\.sln/ nocase ascii wide
+        $string7 = /.{0,1000}AtlasC2b\.sln.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string8 = /AtlasImplant\.yar/ nocase ascii wide
+        $string8 = /.{0,1000}AtlasImplant\.yar.{0,1000}/ nocase ascii wide
         // Description: C# C2 Framework centered around Stage 1 operations
         // Reference: https://github.com/Gr1mmie/AtlasC2
-        $string9 = /Gr1mmie\/AtlasC2/ nocase ascii wide
+        $string9 = /.{0,1000}Gr1mmie\/AtlasC2.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

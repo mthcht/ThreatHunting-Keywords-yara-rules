@@ -10,79 +10,79 @@ rule Inveigh
     strings:
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string1 = /\s\-IP\s.*\s\-SpooferIP\s.*\s\-HTTP\sN/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-IP\s.{0,1000}\s\-SpooferIP\s.{0,1000}\s\-HTTP\sN.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string2 = /\s\-llmnrtypes\sAAAA/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-llmnrtypes\sAAAA.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string3 = /\s\-mdns\sy\s\-mdnsunicast\sn/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-mdns\sy\s\-mdnsunicast\sn.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string4 = /\s\-NBNSBruteForce/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-NBNSBruteForce.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string5 = /\s\-p:AssemblyName\=inveigh/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-p:AssemblyName\=inveigh.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string6 = /\.exe\s\-sniffer\sn/ nocase ascii wide
+        $string6 = /.{0,1000}\.exe\s\-sniffer\sn.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string7 = /\/Inveigh\.git/ nocase ascii wide
+        $string7 = /.{0,1000}\/Inveigh\.git.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string8 = /\\Inveigh\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\\Inveigh\.exe.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string9 = /\\Inveigh\\bin\\/ nocase ascii wide
+        $string9 = /.{0,1000}\\Inveigh\\bin\\.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string10 = /dotnet\sInveigh\.dll/ nocase ascii wide
+        $string10 = /.{0,1000}dotnet\sInveigh\.dll.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string11 = /Inveigh\.ps1/ nocase ascii wide
+        $string11 = /.{0,1000}Inveigh\.ps1.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string12 = /Inveigh\.psd1/ nocase ascii wide
+        $string12 = /.{0,1000}Inveigh\.psd1.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string13 = /Inveigh\.psm1/ nocase ascii wide
+        $string13 = /.{0,1000}Inveigh\.psm1.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string14 = /Inveigh\.sln/ nocase ascii wide
+        $string14 = /.{0,1000}Inveigh\.sln.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string15 = /Inveigh\-Cleartext\.txt/ nocase ascii wide
+        $string15 = /.{0,1000}Inveigh\-Cleartext\.txt.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string16 = /Inveigh\-FormInput\.txt/ nocase ascii wide
+        $string16 = /.{0,1000}Inveigh\-FormInput\.txt.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string17 = /Inveigh\-Log\.txt/ nocase ascii wide
+        $string17 = /.{0,1000}Inveigh\-Log\.txt.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string18 = /Inveigh\-master/ nocase ascii wide
+        $string18 = /.{0,1000}Inveigh\-master.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string19 = /Inveigh\-net.*\.zip/ nocase ascii wide
+        $string19 = /.{0,1000}Inveigh\-net.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string20 = /Inveigh\-NTLMv1\.txt/ nocase ascii wide
+        $string20 = /.{0,1000}Inveigh\-NTLMv1\.txt.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string21 = /Inveigh\-NTLMv2\.txt/ nocase ascii wide
+        $string21 = /.{0,1000}Inveigh\-NTLMv2\.txt.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string22 = /Inveigh\-Relay\.ps1/ nocase ascii wide
+        $string22 = /.{0,1000}Inveigh\-Relay\.ps1.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string23 = /inveighzero\.exe/ nocase ascii wide
+        $string23 = /.{0,1000}inveighzero\.exe.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string24 = /Invoke\-Inveigh/ nocase ascii wide
+        $string24 = /.{0,1000}Invoke\-Inveigh.{0,1000}/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string25 = /Kevin\-Robertson\/Inveigh/ nocase ascii wide
+        $string25 = /.{0,1000}Kevin\-Robertson\/Inveigh.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

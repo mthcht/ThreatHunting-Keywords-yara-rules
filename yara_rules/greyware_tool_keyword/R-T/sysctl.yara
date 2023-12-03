@@ -10,7 +10,7 @@ rule sysctl
     strings:
         // Description: Disable echo reply for icmpsh C2
         // Reference: https://github.com/bdamele/icmpsh
-        $string1 = /sysctl\s\-w\snet\.ipv4\.icmp_echo_ignore_all\=1/ nocase ascii wide
+        $string1 = /.{0,1000}sysctl\s\-w\snet\.ipv4\.icmp_echo_ignore_all\=1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

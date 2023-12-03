@@ -10,109 +10,109 @@ rule dev_tunnels
     strings:
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string1 = /\shost\s\-p\s.*\s\-\-allow\-anonymous\s\-\-protocol\shttps/ nocase ascii wide
+        $string1 = /.{0,1000}\shost\s\-p\s.{0,1000}\s\-\-allow\-anonymous\s\-\-protocol\shttps.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string2 = /\.asse\.devtunnels\.ms/ nocase ascii wide
+        $string2 = /.{0,1000}\.asse\.devtunnels\.ms.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string3 = /\.exe\shost\s\-p\s.*\s\-\sallow\-anonymous/ nocase ascii wide
+        $string3 = /.{0,1000}\.exe\shost\s\-p\s.{0,1000}\s\-\sallow\-anonymous.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string4 = /\.exe\sport\screate\s\-p\s/ nocase ascii wide
+        $string4 = /.{0,1000}\.exe\sport\screate\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string5 = /\-443\.devtunnels\.ms/ nocase ascii wide
+        $string5 = /.{0,1000}\-443\.devtunnels\.ms.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string6 = /asse\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string6 = /.{0,1000}asse\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string7 = /auc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string7 = /.{0,1000}auc1\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string8 = /aue\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string8 = /.{0,1000}aue\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string9 = /brs\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string9 = /.{0,1000}brs\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string10 = /devtunnel\screate\s/ nocase ascii wide
+        $string10 = /.{0,1000}devtunnel\screate\s.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string11 = /devtunnel\shost\s\-p\s/ nocase ascii wide
+        $string11 = /.{0,1000}devtunnel\shost\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string12 = /devtunnel.*\suser\slogin\s\-/ nocase ascii wide
+        $string12 = /.{0,1000}devtunnel.{0,1000}\suser\slogin\s\-.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string13 = /devtunnel\.exe\s/ nocase ascii wide
+        $string13 = /.{0,1000}devtunnel\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string14 = /eun1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string14 = /.{0,1000}eun1\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string15 = /euw\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string15 = /.{0,1000}euw\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string16 = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string16 = /.{0,1000}global\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string17 = /https:\/\/.*\..*\.devtunnels\.ms/ nocase ascii wide
+        $string17 = /.{0,1000}https:\/\/.{0,1000}\..{0,1000}\.devtunnels\.ms.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string18 = /https:\/\/.*\.brs\.devtunnels\.ms\// nocase ascii wide
+        $string18 = /.{0,1000}https:\/\/.{0,1000}\.brs\.devtunnels\.ms\/.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string19 = /https:\/\/.*\.euw\.devtunnels\.ms/ nocase ascii wide
+        $string19 = /.{0,1000}https:\/\/.{0,1000}\.euw\.devtunnels\.ms.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string20 = /https:\/\/.*\.use\.devtunnels\.ms/ nocase ascii wide
+        $string20 = /.{0,1000}https:\/\/.{0,1000}\.use\.devtunnels\.ms.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string21 = /https:\/\/aka\.ms\/DevTunnelCliInstall/ nocase ascii wide
+        $string21 = /.{0,1000}https:\/\/aka\.ms\/DevTunnelCliInstall.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string22 = /inc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string22 = /.{0,1000}inc1\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string23 = /Microsoft\.DevTunnels\.Connections\.dll/ nocase ascii wide
+        $string23 = /.{0,1000}Microsoft\.DevTunnels\.Connections\.dll.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string24 = /Microsoft\.DevTunnels\.Contracts\.dll/ nocase ascii wide
+        $string24 = /.{0,1000}Microsoft\.DevTunnels\.Contracts\.dll.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string25 = /Microsoft\.DevTunnels\.Management\.dll/ nocase ascii wide
+        $string25 = /.{0,1000}Microsoft\.DevTunnels\.Management\.dll.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string26 = /Microsoft\.DevTunnels\.Ssh\.dll/ nocase ascii wide
+        $string26 = /.{0,1000}Microsoft\.DevTunnels\.Ssh\.dll.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string27 = /Microsoft\.DevTunnels\.Ssh\.Tcp\.dll/ nocase ascii wide
+        $string27 = /.{0,1000}Microsoft\.DevTunnels\.Ssh\.Tcp\.dll.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string28 = /ssh\s\@ssh\..*\.devtunnels\.ms/ nocase ascii wide
+        $string28 = /.{0,1000}ssh\s\@ssh\..{0,1000}\.devtunnels\.ms.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string29 = /tunnels\-prod\-rel\-tm\.trafficmanager\.net/ nocase ascii wide
+        $string29 = /.{0,1000}tunnels\-prod\-rel\-tm\.trafficmanager\.net.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string30 = /uks1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string30 = /.{0,1000}uks1\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string31 = /use\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string31 = /.{0,1000}use\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string32 = /use2\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string32 = /.{0,1000}use2\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string33 = /usw2\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string33 = /.{0,1000}usw2\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string34 = /usw3\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string34 = /.{0,1000}usw3\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string35 = /wss:\/\/.*\.tunnels\.api\.visualstudio\.com\/api\/v1\/Connect\// nocase ascii wide
+        $string35 = /.{0,1000}wss:\/\/.{0,1000}\.tunnels\.api\.visualstudio\.com\/api\/v1\/Connect\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

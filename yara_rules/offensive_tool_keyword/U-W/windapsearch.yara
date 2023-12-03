@@ -10,25 +10,25 @@ rule windapsearch
     strings:
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string1 = /\s\-d\s.*\s\-u\s.*\\.*\s\-p\s.*\s\-\-da/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-d\s.{0,1000}\s\-u\s.{0,1000}\\.{0,1000}\s\-p\s.{0,1000}\s\-\-da.{0,1000}/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string2 = /\s\-\-unconstrained\-users/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-unconstrained\-users.{0,1000}/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string3 = /\s\-\-user\-spns/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-user\-spns.{0,1000}/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string4 = /\/windapsearch\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/windapsearch\.git.{0,1000}/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string5 = /windapsearch\.py/ nocase ascii wide
+        $string5 = /.{0,1000}windapsearch\.py.{0,1000}/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string6 = /windapsearch_py2\.py/ nocase ascii wide
+        $string6 = /.{0,1000}windapsearch_py2\.py.{0,1000}/ nocase ascii wide
         // Description: Python script to enumerate users - groups and computers from a Windows domain through LDAP queries
         // Reference: https://github.com/ropnop/windapsearch
-        $string7 = /windapsearch\-master/ nocase ascii wide
+        $string7 = /.{0,1000}windapsearch\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

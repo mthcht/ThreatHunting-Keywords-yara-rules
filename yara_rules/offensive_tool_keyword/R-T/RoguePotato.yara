@@ -10,37 +10,37 @@ rule RoguePotato
     strings:
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string1 = /\/RoguePotato\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/RoguePotato\.git.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string2 = /105C2C6D\-1C0A\-4535\-A231\-80E355EFB112/ nocase ascii wide
+        $string2 = /.{0,1000}105C2C6D\-1C0A\-4535\-A231\-80E355EFB112.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string3 = /61CE6716\-E619\-483C\-B535\-8694F7617548/ nocase ascii wide
+        $string3 = /.{0,1000}61CE6716\-E619\-483C\-B535\-8694F7617548.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string4 = /antonioCoco\/RoguePotato/ nocase ascii wide
+        $string4 = /.{0,1000}antonioCoco\/RoguePotato.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string5 = /RogueOxidResolver\.cpp/ nocase ascii wide
+        $string5 = /.{0,1000}RogueOxidResolver\.cpp.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string6 = /RoguePotato\.cpp/ nocase ascii wide
+        $string6 = /.{0,1000}RoguePotato\.cpp.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string7 = /RoguePotato\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}RoguePotato\.exe.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string8 = /RoguePotato\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}RoguePotato\.sln.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string9 = /RoguePotato\.zip/ nocase ascii wide
+        $string9 = /.{0,1000}RoguePotato\.zip.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string10 = /RoguePotato\-master/ nocase ascii wide
+        $string10 = /.{0,1000}RoguePotato\-master.{0,1000}/ nocase ascii wide
         // Description: Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/RoguePotato
-        $string11 = /TokenKidnapping\.cpp/ nocase ascii wide
+        $string11 = /.{0,1000}TokenKidnapping\.cpp.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

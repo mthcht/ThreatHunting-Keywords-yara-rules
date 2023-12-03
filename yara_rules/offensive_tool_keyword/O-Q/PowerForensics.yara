@@ -10,7 +10,7 @@ rule PowerForensics
     strings:
         // Description: The purpose of PowerForensics is to provide an all inclusive framework for hard drive forensic analysis. PowerForensics currently supports NTFS and FAT file systems. and work has begun on Extended File System and HFS+ support.
         // Reference: https://github.com/Invoke-IR/PowerForensics
-        $string1 = /PowerForensics/ nocase ascii wide
+        $string1 = /.{0,1000}PowerForensics.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

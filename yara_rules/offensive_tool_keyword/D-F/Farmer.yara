@@ -10,40 +10,40 @@ rule Farmer
     strings:
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string1 = /\/Farmer\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Farmer\.git.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string2 = /\\Fertliser\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\\Fertliser\.exe.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string3 = /\\Fertliser\.pdb/ nocase ascii wide
+        $string3 = /.{0,1000}\\Fertliser\.pdb.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string4 = /c:\\windows\\temp\\test\.tmp\sfarmer/ nocase ascii wide
+        $string4 = /.{0,1000}c:\\windows\\temp\\test\.tmp\sfarmer.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string5 = /crop\.exe\s\\\\.*\\.*\.lnk\s\\\\.*\\harvest\s\\\\.*\\harvest/ nocase ascii wide
+        $string5 = /.{0,1000}crop\.exe\s\\\\.{0,1000}\\.{0,1000}\.lnk\s\\\\.{0,1000}\\harvest\s\\\\.{0,1000}\\harvest.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string6 = /farmer\.exe\s.*\\windows\\temp/ nocase ascii wide
+        $string6 = /.{0,1000}farmer\.exe\s.{0,1000}\\windows\\temp.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string7 = /farmer\.exe\s8888\s60/ nocase ascii wide
+        $string7 = /.{0,1000}farmer\.exe\s8888\s60.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string8 = /Farmer\\Farmer\.csproj/ nocase ascii wide
+        $string8 = /.{0,1000}Farmer\\Farmer\.csproj.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string9 = /Farmer\-main\.zip/ nocase ascii wide
+        $string9 = /.{0,1000}Farmer\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string10 = /Fertiliser\.exe\s\\\\/ nocase ascii wide
+        $string10 = /.{0,1000}Fertiliser\.exe\s\\\\.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string11 = /harvestcrop\.exe\s.*\s/ nocase ascii wide
+        $string11 = /.{0,1000}harvestcrop\.exe\s.{0,1000}\s.{0,1000}/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string12 = /mdsecactivebreach\/Farmer/ nocase ascii wide
+        $string12 = /.{0,1000}mdsecactivebreach\/Farmer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

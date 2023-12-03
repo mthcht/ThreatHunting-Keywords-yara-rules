@@ -10,13 +10,13 @@ rule web_hacking_toolkit
     strings:
         // Description: A web hacking toolkit Docker image with GUI applications support.
         // Reference: https://github.com/signedsecurity/web-hacking-toolkit
-        $string1 = /\sweb\-hacking\-toolkit\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sweb\-hacking\-toolkit\s.{0,1000}/ nocase ascii wide
         // Description: A web hacking toolkit Docker image with GUI applications support.
         // Reference: https://github.com/signedsecurity/web-hacking-toolkit
-        $string2 = /\/web\-hacking\-toolkit/ nocase ascii wide
+        $string2 = /.{0,1000}\/web\-hacking\-toolkit.{0,1000}/ nocase ascii wide
         // Description: A web hacking toolkit Docker image with GUI applications support.
         // Reference: https://github.com/signedsecurity/web-hacking-toolkit
-        $string3 = /web\-hacking\-toolkit\.git/ nocase ascii wide
+        $string3 = /.{0,1000}web\-hacking\-toolkit\.git.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

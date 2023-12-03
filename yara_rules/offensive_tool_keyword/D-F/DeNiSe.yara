@@ -10,19 +10,19 @@ rule DeNiSe
     strings:
         // Description: DeNiSe is a proof of concept for tunneling TCP over DNS in Python
         // Reference: https://github.com/mdornseif/DeNiSe
-        $string1 = /\/DeNiSe\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/DeNiSe\.git.{0,1000}/ nocase ascii wide
         // Description: DeNiSe is a proof of concept for tunneling TCP over DNS in Python
         // Reference: https://github.com/mdornseif/DeNiSe
-        $string2 = /DeNiSe\-master\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}DeNiSe\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: DeNiSe is a proof of concept for tunneling TCP over DNS in Python
         // Reference: https://github.com/mdornseif/DeNiSe
-        $string3 = /DeNiSePkg\.py/ nocase ascii wide
+        $string3 = /.{0,1000}DeNiSePkg\.py.{0,1000}/ nocase ascii wide
         // Description: DeNiSe is a proof of concept for tunneling TCP over DNS in Python
         // Reference: https://github.com/mdornseif/DeNiSe
-        $string4 = /dnslog\-\-airvent\.txt/ nocase ascii wide
+        $string4 = /.{0,1000}dnslog\-\-airvent\.txt.{0,1000}/ nocase ascii wide
         // Description: DeNiSe is a proof of concept for tunneling TCP over DNS in Python
         // Reference: https://github.com/mdornseif/DeNiSe
-        $string5 = /mdornseif\/DeNiSe/ nocase ascii wide
+        $string5 = /.{0,1000}mdornseif\/DeNiSe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule whoami
     strings:
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string1 = /whoami/ nocase ascii wide
+        $string1 = /.{0,1000}whoami.{0,1000}/ nocase ascii wide
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string2 = /whoami\.exe.*\s\/groups/ nocase ascii wide
+        $string2 = /.{0,1000}whoami\.exe.{0,1000}\s\/groups.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

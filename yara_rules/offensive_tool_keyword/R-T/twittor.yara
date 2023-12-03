@@ -10,16 +10,16 @@ rule twittor
     strings:
         // Description: A fully featured backdoor that uses Twitter as a C&C server 
         // Reference: https://github.com/PaulSec/twittor
-        $string1 = /\/twittor\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/twittor\.git.{0,1000}/ nocase ascii wide
         // Description: A fully featured backdoor that uses Twitter as a C&C server 
         // Reference: https://github.com/PaulSec/twittor
-        $string2 = /PaulSec\/twittor/ nocase ascii wide
+        $string2 = /.{0,1000}PaulSec\/twittor.{0,1000}/ nocase ascii wide
         // Description: A fully featured backdoor that uses Twitter as a C&C server 
         // Reference: https://github.com/PaulSec/twittor
-        $string3 = /twittor\.py/ nocase ascii wide
+        $string3 = /.{0,1000}twittor\.py.{0,1000}/ nocase ascii wide
         // Description: A fully featured backdoor that uses Twitter as a C&C server 
         // Reference: https://github.com/PaulSec/twittor
-        $string4 = /twittor\-master\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}twittor\-master\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

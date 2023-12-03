@@ -10,67 +10,67 @@ rule nanorobeus
     strings:
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string1 = /\skerberoast\s\/spn:/ nocase ascii wide
+        $string1 = /.{0,1000}\skerberoast\s\/spn:.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string2 = /\stgtdeleg\s\/spn:cifs/ nocase ascii wide
+        $string2 = /.{0,1000}\stgtdeleg\s\/spn:cifs.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string3 = /\/kerberoast\.c/ nocase ascii wide
+        $string3 = /.{0,1000}\/kerberoast\.c.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string4 = /\/nanorobeus\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/nanorobeus\.git.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string5 = /\?sample_sliver\.json/ nocase ascii wide
+        $string5 = /.{0,1000}\?sample_sliver\.json.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string6 = /\\kerberoast\.c/ nocase ascii wide
+        $string6 = /.{0,1000}\\kerberoast\.c.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string7 = /dist.*_brc4\.x64\.o/ nocase ascii wide
+        $string7 = /.{0,1000}dist.{0,1000}_brc4\.x64\.o.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string8 = /dist.*_brc4\.x86\.o/ nocase ascii wide
+        $string8 = /.{0,1000}dist.{0,1000}_brc4\.x86\.o.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string9 = /dist\/nanorobeus_cs\./ nocase ascii wide
+        $string9 = /.{0,1000}dist\/nanorobeus_cs\..{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string10 = /nanorobeus.*_cs\.x64\./ nocase ascii wide
+        $string10 = /.{0,1000}nanorobeus.{0,1000}_cs\.x64\..{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string11 = /nanorobeus.*_cs\.x86\./ nocase ascii wide
+        $string11 = /.{0,1000}nanorobeus.{0,1000}_cs\.x86\..{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string12 = /nanorobeus.*dump/ nocase ascii wide
+        $string12 = /.{0,1000}nanorobeus.{0,1000}dump.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string13 = /nanorobeus\.cna/ nocase ascii wide
+        $string13 = /.{0,1000}nanorobeus\.cna.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string14 = /nanorobeus\.x64/ nocase ascii wide
+        $string14 = /.{0,1000}nanorobeus\.x64.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string15 = /nanorobeus\.x86/ nocase ascii wide
+        $string15 = /.{0,1000}nanorobeus\.x86.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string16 = /nanorobeus_brc4/ nocase ascii wide
+        $string16 = /.{0,1000}nanorobeus_brc4.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string17 = /nanorobeus64/ nocase ascii wide
+        $string17 = /.{0,1000}nanorobeus64.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string18 = /nanorobeus86/ nocase ascii wide
+        $string18 = /.{0,1000}nanorobeus86.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string19 = /nanorobeus\-main/ nocase ascii wide
+        $string19 = /.{0,1000}nanorobeus\-main.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string20 = /sample_brc4\.json/ nocase ascii wide
+        $string20 = /.{0,1000}sample_brc4\.json.{0,1000}/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string21 = /wavvs\/nanorobeus/ nocase ascii wide
+        $string21 = /.{0,1000}wavvs\/nanorobeus.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

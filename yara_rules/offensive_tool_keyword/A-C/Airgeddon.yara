@@ -10,7 +10,7 @@ rule Airgeddon
     strings:
         // Description: This is a multi-use bash script for Linux systems to audit wireless networks.
         // Reference: https://github.com/v1s1t0r1sh3r3/airgeddon
-        $string1 = /Airgeddon/ nocase ascii wide
+        $string1 = /.{0,1000}Airgeddon.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

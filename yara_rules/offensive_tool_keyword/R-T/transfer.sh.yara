@@ -10,7 +10,7 @@ rule transfer_sh
     strings:
         // Description: Downloading python scripts from transfer.sh
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string1 = /https:\/\/transfer\.sh\/get\/.*\/.*\.py/ nocase ascii wide
+        $string1 = /https:\/\/transfer\.sh\/get\/.{0,1000}\/.{0,1000}\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule RDPInception
     strings:
         // Description: A proof of concept for the RDP Inception Attack
         // Reference: https://github.com/mdsecactivebreach/RDPInception
-        $string1 = /RDPInception/ nocase ascii wide
+        $string1 = /.{0,1000}RDPInception.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

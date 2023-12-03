@@ -10,10 +10,10 @@ rule sudoSnatch
     strings:
         // Description: sudoSnatch payload grabs sudo password in plain text and imediately after target uses sudo command and sends it back to attacker remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SudoSnatch
-        $string1 = /\/credentials\/SudoSnatch/ nocase ascii wide
+        $string1 = /.{0,1000}\/credentials\/SudoSnatch.{0,1000}/ nocase ascii wide
         // Description: sudoSnatch payload grabs sudo password in plain text and imediately after target uses sudo command and sends it back to attacker remotely/locally.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SudoSnatch
-        $string2 = /nIFS\=.*\sread\s\-s\spass\\necho\s\-e\s.*User\=.*\$\(whoami\).*Password\=.*\$pass.*\>\s\/var\/tmp/ nocase ascii wide
+        $string2 = /.{0,1000}nIFS\=.{0,1000}\sread\s\-s\spass\\necho\s\-e\s.{0,1000}User\=.{0,1000}\$\(whoami\).{0,1000}Password\=.{0,1000}\$pass.{0,1000}\>\s\/var\/tmp.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

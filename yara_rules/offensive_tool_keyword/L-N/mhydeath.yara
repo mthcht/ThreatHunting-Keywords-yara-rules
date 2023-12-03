@@ -10,37 +10,37 @@ rule mhydeath
     strings:
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string1 = /\/mhydeath\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/mhydeath\.git.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string2 = /\/mhydeath\.sln/ nocase ascii wide
+        $string2 = /.{0,1000}\/mhydeath\.sln.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string3 = /\/mhydeath\/main\.cpp/ nocase ascii wide
+        $string3 = /.{0,1000}\/mhydeath\/main\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string4 = /\/process_killer\.cpp/ nocase ascii wide
+        $string4 = /.{0,1000}\/process_killer\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string5 = /\\mhydeath64/ nocase ascii wide
+        $string5 = /.{0,1000}\\mhydeath64.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string6 = /\\process_killer\.cpp/ nocase ascii wide
+        $string6 = /.{0,1000}\\process_killer\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string7 = /0D17A4B4\-A7C4\-49C0\-99E3\-B856F9F3B271/ nocase ascii wide
+        $string7 = /.{0,1000}0D17A4B4\-A7C4\-49C0\-99E3\-B856F9F3B271.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string8 = /mhydeath\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}mhydeath\.exe.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string9 = /mhydeath\-master/ nocase ascii wide
+        $string9 = /.{0,1000}mhydeath\-master.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string10 = /process_killer\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}process_killer\.exe.{0,1000}/ nocase ascii wide
         // Description: Abusing mhyprotect to kill AVs / EDRs / XDRs / Protected Processes.
         // Reference: https://github.com/zer0condition/mhydeath
-        $string11 = /zer0condition\/mhydeath/ nocase ascii wide
+        $string11 = /.{0,1000}zer0condition\/mhydeath.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule Invoke_BuildAnonymousSMBServer
     strings:
         // Description: Use to build an anonymous SMB file server
         // Reference: https://github.com/3gstudent/Invoke-BuildAnonymousSMBServer
-        $string1 = /Invoke\-BuildAnonymousSMBServer\s\-/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-BuildAnonymousSMBServer\s\-.{0,1000}/ nocase ascii wide
         // Description: Use to build an anonymous SMB file server
         // Reference: https://github.com/3gstudent/Invoke-BuildAnonymousSMBServer
-        $string2 = /Invoke\-BuildAnonymousSMBServer\.ps1/ nocase ascii wide
+        $string2 = /.{0,1000}Invoke\-BuildAnonymousSMBServer\.ps1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

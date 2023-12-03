@@ -10,22 +10,22 @@ rule CheckPlease
     strings:
         // Description: c project from checkplease checking stuffs. This repository is for defenders to harden their sandboxes and AV tools. malware researchers to discover new techniques. and red teamers to get serious about their payloads. 
         // Reference: https://github.com/Arvanaghi/CheckPlease
-        $string1 = /check_all.*\.c/ nocase ascii wide
+        $string1 = /.{0,1000}check_all.{0,1000}\.c.{0,1000}/ nocase ascii wide
         // Description: go script from checkplease checking stuffs. This repository is for defenders to harden their sandboxes and AV tools. malware researchers to discover new techniques. and red teamers to get serious about their payloads. 
         // Reference: https://github.com/Arvanaghi/CheckPlease
-        $string2 = /check_all.*\.go/ nocase ascii wide
+        $string2 = /.{0,1000}check_all.{0,1000}\.go.{0,1000}/ nocase ascii wide
         // Description: perl script from checkplease checking stuffs. This repository is for defenders to harden their sandboxes and AV tools. malware researchers to discover new techniques. and red teamers to get serious about their payloads. 
         // Reference: https://github.com/Arvanaghi/CheckPlease
-        $string3 = /check_all.*\.pl/ nocase ascii wide
+        $string3 = /.{0,1000}check_all.{0,1000}\.pl.{0,1000}/ nocase ascii wide
         // Description: ps1 script  from checkplease checking stuffs. This repository is for defenders to harden their sandboxes and AV tools. malware researchers to discover new techniques. and red teamers to get serious about their payloads. 
         // Reference: https://github.com/Arvanaghi/CheckPlease
-        $string4 = /check_all.*\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}check_all.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
         // Description: python script from checkplease checking stuffs. This repository is for defenders to harden their sandboxes and AV tools. malware researchers to discover new techniques. and red teamers to get serious about their payloads. 
         // Reference: https://github.com/Arvanaghi/CheckPlease
-        $string5 = /check_all.*\.py/ nocase ascii wide
+        $string5 = /.{0,1000}check_all.{0,1000}\.py.{0,1000}/ nocase ascii wide
         // Description: This repository is for defenders to harden their sandboxes and AV tools. malware researchers to discover new techniques. and red teamers to get serious about their payloads.
         // Reference: https://github.com/Arvanaghi/CheckPlease
-        $string6 = /CheckPlease/ nocase ascii wide
+        $string6 = /.{0,1000}CheckPlease.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

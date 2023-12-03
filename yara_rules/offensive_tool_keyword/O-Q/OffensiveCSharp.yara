@@ -10,16 +10,16 @@ rule OffensiveCSharp
     strings:
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string1 = /\/OffensiveCSharp\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/OffensiveCSharp\.git.{0,1000}/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string2 = /\/OffensiveCSharp\// nocase ascii wide
+        $string2 = /.{0,1000}\/OffensiveCSharp\/.{0,1000}/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string3 = /\\OffensiveCSharp\\/ nocase ascii wide
+        $string3 = /.{0,1000}\\OffensiveCSharp\\.{0,1000}/ nocase ascii wide
         // Description: Collection of Offensive C# Tooling
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master
-        $string4 = /OffensiveCSharp\-master/ nocase ascii wide
+        $string4 = /.{0,1000}OffensiveCSharp\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

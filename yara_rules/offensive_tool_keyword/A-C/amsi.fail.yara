@@ -10,7 +10,7 @@ rule amsi_fail
     strings:
         // Description: AMSI.fail generates obfuscated PowerShell snippets that break or disable AMSI for the current process. The snippets are randomly selected from a small pool of techniques/variations before being obfuscated. Every snippet is obfuscated at runtime/request so that no generated output share the same signatures.
         // Reference: https://amsi.fail/
-        $string1 = /https:\/\/amsi\.fail\// nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/amsi\.fail\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

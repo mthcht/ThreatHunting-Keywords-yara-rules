@@ -10,10 +10,10 @@ rule mitm6
     strings:
         // Description: performs MiTM for IPv6
         // Reference: https://github.com/fox-it/mitm6
-        $string1 = /mitm6\s\-d\s/ nocase ascii wide
+        $string1 = /.{0,1000}mitm6\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: performs MiTM for IPv6
         // Reference: https://github.com/fox-it/mitm6
-        $string2 = /mitm6\.py/ nocase ascii wide
+        $string2 = /.{0,1000}mitm6\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

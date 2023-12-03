@@ -10,49 +10,49 @@ rule D1rkInject
     strings:
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string1 = /\/D1rkInject\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/D1rkInject\.git.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string2 = /\/MalStuff\.cpp/ nocase ascii wide
+        $string2 = /.{0,1000}\/MalStuff\.cpp.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string3 = /\\D1rkInject\\/ nocase ascii wide
+        $string3 = /.{0,1000}\\D1rkInject\\.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string4 = /\\MalStuff\.cpp/ nocase ascii wide
+        $string4 = /.{0,1000}\\MalStuff\.cpp.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string5 = /APT\sstands\sfor\sAdvanced\sPersistence\sTomato/ nocase ascii wide
+        $string5 = /.{0,1000}APT\sstands\sfor\sAdvanced\sPersistence\sTomato.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string6 = /BD602C80\-47ED\-4294\-B981\-0119D2200DB8/ nocase ascii wide
+        $string6 = /.{0,1000}BD602C80\-47ED\-4294\-B981\-0119D2200DB8.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string7 = /D1rkInject\.cpp/ nocase ascii wide
+        $string7 = /.{0,1000}D1rkInject\.cpp.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string8 = /D1rkInject\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}D1rkInject\.exe.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string9 = /D1rkInject\.iobj/ nocase ascii wide
+        $string9 = /.{0,1000}D1rkInject\.iobj.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string10 = /D1rkInject\.log/ nocase ascii wide
+        $string10 = /.{0,1000}D1rkInject\.log.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string11 = /D1rkInject\.sln/ nocase ascii wide
+        $string11 = /.{0,1000}D1rkInject\.sln.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string12 = /D1rkInject\.vcxproj/ nocase ascii wide
+        $string12 = /.{0,1000}D1rkInject\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string13 = /D1rkInject\-main/ nocase ascii wide
+        $string13 = /.{0,1000}D1rkInject\-main.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string14 = /EEC35BCF\-E990\-4260\-828D\-2B4F9AC97269/ nocase ascii wide
+        $string14 = /.{0,1000}EEC35BCF\-E990\-4260\-828D\-2B4F9AC97269.{0,1000}/ nocase ascii wide
         // Description: Threadless injection that loads a module into the target process and stomps it and reverting back memory protections and original memory state
         // Reference: https://github.com/TheD1rkMtr/D1rkInject
-        $string15 = /TheD1rkMtr\/D1rkInject/ nocase ascii wide
+        $string15 = /.{0,1000}TheD1rkMtr\/D1rkInject.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

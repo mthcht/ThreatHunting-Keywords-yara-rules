@@ -10,31 +10,31 @@ rule badazure
     strings:
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string1 = /\s\-Build\s\-NoAttackPaths/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-Build\s\-NoAttackPaths.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string2 = /\/BadZure\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/BadZure\.git.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string3 = /\/BadZure\// nocase ascii wide
+        $string3 = /.{0,1000}\/BadZure\/.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string4 = /\\BadZure/ nocase ascii wide
+        $string4 = /.{0,1000}\\BadZure.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string5 = /BadZure\-main/ nocase ascii wide
+        $string5 = /.{0,1000}BadZure\-main.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string6 = /\-Build\s\$RandomAttackPath/ nocase ascii wide
+        $string6 = /.{0,1000}\-Build\s\$RandomAttackPath.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string7 = /Invoke\-BadZure/ nocase ascii wide
+        $string7 = /.{0,1000}Invoke\-BadZure.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string8 = /mvelazc0\/BadZure/ nocase ascii wide
+        $string8 = /.{0,1000}mvelazc0\/BadZure.{0,1000}/ nocase ascii wide
         // Description: BadZure orchestrates the setup of Azure Active Directory tenants populating them with diverse entities while also introducing common security misconfigurations to create vulnerable tenants with multiple attack paths
         // Reference: https://github.com/mvelazc0/BadZure/
-        $string9 = /\-RandomAttackPath\s\-Token/ nocase ascii wide
+        $string9 = /.{0,1000}\-RandomAttackPath\s\-Token.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

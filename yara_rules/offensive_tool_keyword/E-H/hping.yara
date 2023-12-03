@@ -10,22 +10,22 @@ rule hping
     strings:
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
-        $string1 = /\shping3\s/ nocase ascii wide
+        $string1 = /.{0,1000}\shping3\s.{0,1000}/ nocase ascii wide
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
-        $string2 = /\.\/hping\s/ nocase ascii wide
+        $string2 = /.{0,1000}\.\/hping\s.{0,1000}/ nocase ascii wide
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
-        $string3 = /antirez\/hping/ nocase ascii wide
+        $string3 = /.{0,1000}antirez\/hping.{0,1000}/ nocase ascii wide
         // Description: hping3 is a network tool able to send custom TCP/IP packets and to display target replies like ping do with ICMP replies. hping3 can handle fragmentation
         // Reference: https://github.com/antirez/hping
-        $string4 = /hping2\.h/ nocase ascii wide
+        $string4 = /.{0,1000}hping2\.h.{0,1000}/ nocase ascii wide
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
-        $string5 = /hping3\s\-/ nocase ascii wide
+        $string5 = /.{0,1000}hping3\s\-.{0,1000}/ nocase ascii wide
         // Description: hping3 is a network tool able to send custom TCP/IP
         // Reference: https://github.com/antirez/hping
-        $string6 = /install\shping3/ nocase ascii wide
+        $string6 = /.{0,1000}install\shping3.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

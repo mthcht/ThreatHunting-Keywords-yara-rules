@@ -10,7 +10,7 @@ rule zarp
     strings:
         // Description: A network attack framework.
         // Reference: https://github.com/hatRiot/zarp
-        $string1 = /zarp\.py/ nocase ascii wide
+        $string1 = /.{0,1000}zarp\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

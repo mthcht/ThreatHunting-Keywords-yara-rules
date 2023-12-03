@@ -10,16 +10,16 @@ rule tmpwatch
     strings:
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
-        $string1 = /chmod\s4777\s\/tmp\/\.scsi\/dev\/bin\/gsh/ nocase ascii wide
+        $string1 = /.{0,1000}chmod\s4777\s\/tmp\/\.scsi\/dev\/bin\/gsh.{0,1000}/ nocase ascii wide
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
-        $string2 = /chown\sroot:root\s\/tmp\/\.scsi\/dev\/bin\// nocase ascii wide
+        $string2 = /.{0,1000}chown\sroot:root\s\/tmp\/\.scsi\/dev\/bin\/.{0,1000}/ nocase ascii wide
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
-        $string3 = /echo\s.*bailing\.\stry\sa\sdifferent\sname\\/ nocase ascii wide
+        $string3 = /.{0,1000}echo\s.{0,1000}bailing\.\stry\sa\sdifferent\sname\\.{0,1000}/ nocase ascii wide
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
-        $string4 = /if\s\[\s\-f\s\/tmp\/tmpwatch\s\]\s.*\sthen/ nocase ascii wide
+        $string4 = /.{0,1000}if\s\[\s\-f\s\/tmp\/tmpwatch\s\]\s.{0,1000}\sthen.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule touch
     strings:
         // Description: Timestomping is an anti-forensics technique which is used to modify the timestamps of a file* often to mimic files that are in the same folder.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_timestomp_touch.toml
-        $string1 = /touch\s\-a/ nocase ascii wide
+        $string1 = /.{0,1000}touch\s\-a.{0,1000}/ nocase ascii wide
         // Description: Timestomping is an anti-forensics technique which is used to modify the timestamps of a file* often to mimic files that are in the same folder.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_timestomp_touch.toml
-        $string2 = /touch\s\-m/ nocase ascii wide
+        $string2 = /.{0,1000}touch\s\-m.{0,1000}/ nocase ascii wide
         // Description: Timestomping is an anti-forensics technique which is used to modify the timestamps of a file* often to mimic files that are in the same folder.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_timestomp_touch.toml
-        $string3 = /touch\s\-r\s/ nocase ascii wide
+        $string3 = /.{0,1000}touch\s\-r\s.{0,1000}/ nocase ascii wide
         // Description: Timestomping is an anti-forensics technique which is used to modify the timestamps of a file* often to mimic files that are in the same folder.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_timestomp_touch.toml
-        $string4 = /touch\s\-t\s/ nocase ascii wide
+        $string4 = /.{0,1000}touch\s\-t\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

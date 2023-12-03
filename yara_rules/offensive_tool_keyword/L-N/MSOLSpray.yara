@@ -10,19 +10,19 @@ rule MSOLSpray
     strings:
         // Description: This module will perform password spraying against Microsoft Online accounts (Azure/O365)
         // Reference: https://github.com/dafthack/MSOLSpray
-        $string1 = /\/MSOLSpray/ nocase ascii wide
+        $string1 = /.{0,1000}\/MSOLSpray.{0,1000}/ nocase ascii wide
         // Description: This module will perform password spraying against Microsoft Online accounts (Azure/O365)
         // Reference: https://github.com/dafthack/MSOLSpray
-        $string2 = /MSOLSpray\s/ nocase ascii wide
+        $string2 = /.{0,1000}MSOLSpray\s.{0,1000}/ nocase ascii wide
         // Description: This module will perform password spraying against Microsoft Online accounts (Azure/O365)
         // Reference: https://github.com/dafthack/MSOLSpray
-        $string3 = /MSOLSpray\.git/ nocase ascii wide
+        $string3 = /.{0,1000}MSOLSpray\.git.{0,1000}/ nocase ascii wide
         // Description: This module will perform password spraying against Microsoft Online accounts (Azure/O365)
         // Reference: https://github.com/dafthack/MSOLSpray
-        $string4 = /MSOLSpray\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}MSOLSpray\.ps1.{0,1000}/ nocase ascii wide
         // Description: This module will perform password spraying against Microsoft Online accounts (Azure/O365)
         // Reference: https://github.com/dafthack/MSOLSpray
-        $string5 = /MSOLSpray\-master/ nocase ascii wide
+        $string5 = /.{0,1000}MSOLSpray\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

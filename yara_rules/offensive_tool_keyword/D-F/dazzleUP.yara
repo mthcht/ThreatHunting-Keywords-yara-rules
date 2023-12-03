@@ -10,40 +10,40 @@ rule dazzleUP
     strings:
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string1 = /\/dazzleUP\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/dazzleUP\.git.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string2 = /dazzleUP\.cna/ nocase ascii wide
+        $string2 = /.{0,1000}dazzleUP\.cna.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string3 = /dazzleUP\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}dazzleUP\.exe.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string4 = /dazzleUP\.sln/ nocase ascii wide
+        $string4 = /.{0,1000}dazzleUP\.sln.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string5 = /dazzleUP\.vcxproj/ nocase ascii wide
+        $string5 = /.{0,1000}dazzleUP\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string6 = /dazzleUP\.x32\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}dazzleUP\.x32\.exe.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string7 = /dazzleUP\.x64\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}dazzleUP\.x64\.exe.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string8 = /dazzleUP_Reflective_DLL/ nocase ascii wide
+        $string8 = /.{0,1000}dazzleUP_Reflective_DLL.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string9 = /dazzleUP\-master/ nocase ascii wide
+        $string9 = /.{0,1000}dazzleUP\-master.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string10 = /FE8F0D23\-BDD1\-416D\-8285\-F947BA86D155/ nocase ascii wide
+        $string10 = /.{0,1000}FE8F0D23\-BDD1\-416D\-8285\-F947BA86D155.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string11 = /hlldz\/dazzleUP/ nocase ascii wide
+        $string11 = /.{0,1000}hlldz\/dazzleUP.{0,1000}/ nocase ascii wide
         // Description: A tool that detects the privilege escalation vulnerabilities caused by misconfigurations and missing updates in the Windows operating systems.
         // Reference: https://github.com/hlldz/dazzleUP
-        $string12 = /path_dll_hijack\.h/ nocase ascii wide
+        $string12 = /.{0,1000}path_dll_hijack\.h.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

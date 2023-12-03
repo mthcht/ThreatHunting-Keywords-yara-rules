@@ -10,28 +10,28 @@ rule assoc
     strings:
         // Description: will return the file association for file extensions that include the string =cm - hidden objectif is to find .cdxml association
         // Reference: N/A
-        $string1 = /assoc\s.*findstr\s.*\=cm/ nocase ascii wide
+        $string1 = /.{0,1000}assoc\s.{0,1000}findstr\s.{0,1000}\=cm.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string lCmd - hidden objectif is to find .cdxml association
         // Reference: N/A
-        $string2 = /assoc\s.*findstr\s.*lCmd/ nocase ascii wide
+        $string2 = /.{0,1000}assoc\s.{0,1000}findstr\s.{0,1000}lCmd.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string mdf - hidden objectif is to find cmdfile association
         // Reference: N/A
-        $string3 = /assoc\s.*findstr\s.*mdf/ nocase ascii wide
+        $string3 = /.{0,1000}assoc\s.{0,1000}findstr\s.{0,1000}mdf.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string s1x - hidden objectif is to find .ps1xml association
         // Reference: N/A
-        $string4 = /assoc\s.*findstr\s.*s1x/ nocase ascii wide
+        $string4 = /.{0,1000}assoc\s.{0,1000}findstr\s.{0,1000}s1x.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string =cm - hidden objectif is to find .cdxml association
         // Reference: N/A
-        $string5 = /assoc\s.*findstr\s\=cm/ nocase ascii wide
+        $string5 = /.{0,1000}assoc\s.{0,1000}findstr\s\=cm.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string lCmd - hidden objectif is to find .cdxml association
         // Reference: N/A
-        $string6 = /assoc\s.*findstr\slCmd/ nocase ascii wide
+        $string6 = /.{0,1000}assoc\s.{0,1000}findstr\slCmd.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string mdf - hidden objectif is to find cmdfile association
         // Reference: N/A
-        $string7 = /assoc\s.*findstr\smdf/ nocase ascii wide
+        $string7 = /.{0,1000}assoc\s.{0,1000}findstr\smdf.{0,1000}/ nocase ascii wide
         // Description: will return the file association for file extensions that include the string s1x - hidden objectif is to find .ps1xml association
         // Reference: N/A
-        $string8 = /assoc\s.*findstr\ss1x/ nocase ascii wide
+        $string8 = /.{0,1000}assoc\s.{0,1000}findstr\ss1x.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

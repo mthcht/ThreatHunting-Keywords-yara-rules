@@ -10,40 +10,40 @@ rule BucketLoot
     strings:
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string1 = /\/BucketLoot\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/BucketLoot\.git.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string2 = /bucketloot\s\-/ nocase ascii wide
+        $string2 = /.{0,1000}bucketloot\s\-.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string3 = /bucketloot\shttps:\/\// nocase ascii wide
+        $string3 = /.{0,1000}bucketloot\shttps:\/\/.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string4 = /bucketloot\.exe\s\-/ nocase ascii wide
+        $string4 = /.{0,1000}bucketloot\.exe\s\-.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string5 = /bucketloot\.exe\shttps:\/\// nocase ascii wide
+        $string5 = /.{0,1000}bucketloot\.exe\shttps:\/\/.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string6 = /bucketloot\-darwin64/ nocase ascii wide
+        $string6 = /.{0,1000}bucketloot\-darwin64.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string7 = /bucketloot\-freebsd64/ nocase ascii wide
+        $string7 = /.{0,1000}bucketloot\-freebsd64.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string8 = /BucketLoot\-master/ nocase ascii wide
+        $string8 = /.{0,1000}BucketLoot\-master.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string9 = /bucketloot\-openbsd64/ nocase ascii wide
+        $string9 = /.{0,1000}bucketloot\-openbsd64.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string10 = /bucketloot\-windows32\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}bucketloot\-windows32\.exe.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string11 = /bucketloot\-windows64\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}bucketloot\-windows64\.exe.{0,1000}/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string12 = /redhuntlabs\/BucketLoot/ nocase ascii wide
+        $string12 = /.{0,1000}redhuntlabs\/BucketLoot.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

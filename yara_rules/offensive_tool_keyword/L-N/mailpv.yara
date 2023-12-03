@@ -10,10 +10,10 @@ rule mailpv
     strings:
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details  in email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string1 = /mailpv\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}mailpv\.exe.{0,1000}/ nocase ascii wide
         // Description: Mail PassView is a small password-recovery tool that reveals the passwords and other account details  in email clients
         // Reference: https://www.nirsoft.net/utils/mailpv.html
-        $string2 = /mailpv\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}mailpv\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

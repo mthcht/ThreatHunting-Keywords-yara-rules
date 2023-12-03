@@ -10,16 +10,16 @@ rule AtlasReaper
     strings:
         // Description: A command-line tool for reconnaissance and targeted write operations on Confluence and Jira instances.
         // Reference: https://github.com/werdhaihai/AtlasReaper
-        $string1 = /\/AtlasReaper\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/AtlasReaper\.git.{0,1000}/ nocase ascii wide
         // Description: A command-line tool for reconnaissance and targeted write operations on Confluence and Jira instances.
         // Reference: https://github.com/werdhaihai/AtlasReaper
-        $string2 = /AtlasReaper\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}AtlasReaper\.exe.{0,1000}/ nocase ascii wide
         // Description: A command-line tool for reconnaissance and targeted write operations on Confluence and Jira instances.
         // Reference: https://github.com/werdhaihai/AtlasReaper
-        $string3 = /AtlasReaper\-main/ nocase ascii wide
+        $string3 = /.{0,1000}AtlasReaper\-main.{0,1000}/ nocase ascii wide
         // Description: A command-line tool for reconnaissance and targeted write operations on Confluence and Jira instances.
         // Reference: https://github.com/werdhaihai/AtlasReaper
-        $string4 = /werdhaihai\/AtlasReaper/ nocase ascii wide
+        $string4 = /.{0,1000}werdhaihai\/AtlasReaper.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

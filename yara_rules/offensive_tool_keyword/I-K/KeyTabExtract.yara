@@ -10,7 +10,7 @@ rule KeyTabExtract
     strings:
         // Description: KeyTabExtract is a little utility to help extract valuable information from 502 type .keytab files. which may be used to authenticate Linux boxes to Kerberos. The script will extract information such as the realm. Service Principal. Encryption Type and NTLM Hash
         // Reference: https://github.com/sosdave/KeyTabExtract
-        $string1 = /KeyTabExtract/ nocase ascii wide
+        $string1 = /.{0,1000}KeyTabExtract.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

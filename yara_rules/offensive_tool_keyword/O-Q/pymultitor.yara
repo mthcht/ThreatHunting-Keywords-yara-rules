@@ -10,7 +10,7 @@ rule pymultitor
     strings:
         // Description: Python Multi Threaded Tor Proxy. Did you ever want to be at two different places at the same time?   When I asked myself this question. I actually started developing this solution in my mind. While performing penetration tests there are often problems caused by security devices that block the attacking IP
         // Reference: https://github.com/realgam3/pymultitor
-        $string1 = /pymultitor/ nocase ascii wide
+        $string1 = /.{0,1000}pymultitor.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

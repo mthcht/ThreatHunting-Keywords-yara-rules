@@ -10,10 +10,10 @@ rule procmon
     strings:
         // Description: Procmon used in user temp folder
         // Reference: N/A
-        $string1 = /\\AppData\\Local\\Temp\\Procmon\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\\AppData\\Local\\Temp\\Procmon\.exe.{0,1000}/ nocase ascii wide
         // Description: Procmon used in user temp folder
         // Reference: N/A
-        $string2 = /\\AppData\\Local\\Temp\\Procmon64\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\\AppData\\Local\\Temp\\Procmon64\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

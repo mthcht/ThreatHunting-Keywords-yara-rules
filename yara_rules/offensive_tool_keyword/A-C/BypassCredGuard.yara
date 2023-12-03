@@ -10,19 +10,19 @@ rule BypassCredGuard
     strings:
         // Description: Credential Guard Bypass Via Patching Wdigest Memory
         // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string1 = /\/BypassCredGuard\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/BypassCredGuard\.git.{0,1000}/ nocase ascii wide
         // Description: Credential Guard Bypass Via Patching Wdigest Memory
         // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string2 = /BypassCredGuard\./ nocase ascii wide
+        $string2 = /.{0,1000}BypassCredGuard\..{0,1000}/ nocase ascii wide
         // Description: Credential Guard Bypass Via Patching Wdigest Memory
         // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string3 = /BypassCredGuard\-master/ nocase ascii wide
+        $string3 = /.{0,1000}BypassCredGuard\-master.{0,1000}/ nocase ascii wide
         // Description: Credential Guard Bypass Via Patching Wdigest Memory
         // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string4 = /F1527C49\-CA1F\-4994\-BB9D\-E20DD2C607FD/ nocase ascii wide
+        $string4 = /.{0,1000}F1527C49\-CA1F\-4994\-BB9D\-E20DD2C607FD.{0,1000}/ nocase ascii wide
         // Description: Credential Guard Bypass Via Patching Wdigest Memory
         // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string5 = /wh0amitz\/BypassCredGuard/ nocase ascii wide
+        $string5 = /.{0,1000}wh0amitz\/BypassCredGuard.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

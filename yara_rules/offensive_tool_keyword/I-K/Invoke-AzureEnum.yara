@@ -10,7 +10,7 @@ rule Invoke_AzureEnum
     strings:
         // Description: This cmdlet is used to perform users enumeration against Azure
         // Reference: https://github.com/tobor88/PowerShell-Red-Team/blob/master/Invoke-AzureEnum.ps1
-        $string1 = /Invoke\-AzureEnum\.ps1/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-AzureEnum\.ps1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule bloodyAD
     strings:
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string1 = /\/bloodyAD\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/bloodyAD\.git.{0,1000}/ nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string2 = /bloodyAD\s\-/ nocase ascii wide
+        $string2 = /.{0,1000}bloodyAD\s\-.{0,1000}/ nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string3 = /bloodyAD\.py/ nocase ascii wide
+        $string3 = /.{0,1000}bloodyAD\.py.{0,1000}/ nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string4 = /bloodyAD\-main/ nocase ascii wide
+        $string4 = /.{0,1000}bloodyAD\-main.{0,1000}/ nocase ascii wide
         // Description: BloodyAD is an Active Directory Privilege Escalation Framework
         // Reference: https://github.com/CravateRouge/bloodyAD
-        $string5 = /CravateRouge\/bloodyAD/ nocase ascii wide
+        $string5 = /.{0,1000}CravateRouge\/bloodyAD.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

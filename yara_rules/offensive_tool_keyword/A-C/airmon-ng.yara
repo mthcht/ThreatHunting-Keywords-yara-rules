@@ -10,7 +10,7 @@ rule airmon_ng
     strings:
         // Description: This script can be used to enable monitor mode on wireless interfaces. It may also be used to kill network managers or go back from monitor mode to managed mode
         // Reference: https://www.aircrack-ng.org/doku.php?id=airmon-ng
-        $string1 = /airmon\-ng/ nocase ascii wide
+        $string1 = /.{0,1000}airmon\-ng.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule BYOVD_kill_av_edr
     strings:
         // Description: BYOD to kill AV/EDR
         // Reference: https://github.com/infosecn1nja/red-team-scripts/blob/main/BYOVD_kill_av_edr.c
-        $string1 = /\\\\\\\\\.\\\\aswSP_Avar/ nocase ascii wide
+        $string1 = /.{0,1000}\\\\\\\\\.\\\\aswSP_Avar.{0,1000}/ nocase ascii wide
         // Description: BYOD to kill AV/EDR
         // Reference: https://github.com/infosecn1nja/red-team-scripts/blob/main/BYOVD_kill_av_edr.c
-        $string2 = /BYOVD_kill_av_edr\./ nocase ascii wide
+        $string2 = /.{0,1000}BYOVD_kill_av_edr\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

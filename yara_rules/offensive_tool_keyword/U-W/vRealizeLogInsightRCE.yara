@@ -10,25 +10,25 @@ rule vRealizeLogInsightRCE
     strings:
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string1 = /\s\-\-payload_file\s.*\s\-\-payload_path/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-payload_file\s.{0,1000}\s\-\-payload_path.{0,1000}/ nocase ascii wide
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string2 = /\/horizon3ai\// nocase ascii wide
+        $string2 = /.{0,1000}\/horizon3ai\/.{0,1000}/ nocase ascii wide
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string3 = /Downloading\s.*\/.*\.tar\sto\s\/tmp\/.*\.pak/ nocase ascii wide
+        $string3 = /.{0,1000}Downloading\s.{0,1000}\/.{0,1000}\.tar\sto\s\/tmp\/.{0,1000}\.pak.{0,1000}/ nocase ascii wide
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string4 = /loginsight\.thrift/ nocase ascii wide
+        $string4 = /.{0,1000}loginsight\.thrift.{0,1000}/ nocase ascii wide
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string5 = /VMSA\-2023\-0001\.py/ nocase ascii wide
+        $string5 = /.{0,1000}VMSA\-2023\-0001\.py.{0,1000}/ nocase ascii wide
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string6 = /VMware\-vRealize\-Log\-Insight\.cert/ nocase ascii wide
+        $string6 = /.{0,1000}VMware\-vRealize\-Log\-Insight\.cert.{0,1000}/ nocase ascii wide
         // Description: POC for VMSA-2023-0001 affecting VMware vRealize Log Insight which includes the following CVEs: VMware vRealize Log Insight Directory Traversal Vulnerability (CVE-2022-31706) VMware vRealize Log Insight broken access control Vulnerability (CVE-2022-31704) VMware vRealize Log Insight contains an Information Disclosure Vulnerability (CVE-2022-31711)
         // Reference: https://github.com/horizon3ai/vRealizeLogInsightRCE
-        $string7 = /vRealizeLogInsightRCE/ nocase ascii wide
+        $string7 = /.{0,1000}vRealizeLogInsightRCE.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

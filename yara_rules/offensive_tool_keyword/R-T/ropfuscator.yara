@@ -10,25 +10,25 @@ rule ropfuscator
     strings:
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string1 = /\sropfuscator/ nocase ascii wide
+        $string1 = /.{0,1000}\sropfuscator.{0,1000}/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string2 = /\/ropfuscator/ nocase ascii wide
+        $string2 = /.{0,1000}\/ropfuscator.{0,1000}/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string3 = /ROPEngine\.cpp/ nocase ascii wide
+        $string3 = /.{0,1000}ROPEngine\.cpp.{0,1000}/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string4 = /ropfuscator\s/ nocase ascii wide
+        $string4 = /.{0,1000}ropfuscator\s.{0,1000}/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string5 = /ROPfuscator/ nocase ascii wide
+        $string5 = /.{0,1000}ROPfuscator.{0,1000}/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string6 = /ropfuscator\-/ nocase ascii wide
+        $string6 = /.{0,1000}ropfuscator\-.{0,1000}/ nocase ascii wide
         // Description: ROPfuscator is a fine-grained code obfuscation framework for C/C++ programs using ROP (return-oriented programming).
         // Reference: https://github.com/ropfuscator/ropfuscator
-        $string7 = /ropfuscator\./ nocase ascii wide
+        $string7 = /.{0,1000}ropfuscator\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule nimcrypt
     strings:
         // Description: Nimcrypt is a .NET PE Crypter written in Nim based entirely on the work of @byt3bl33d3r's OffensiveNim project
         // Reference: https://github.com/icyguider/nimcrypt
-        $string1 = /\snimcrypt/ nocase ascii wide
+        $string1 = /.{0,1000}\snimcrypt.{0,1000}/ nocase ascii wide
         // Description: Nimcrypt is a .NET PE Crypter written in Nim based entirely on the work of @byt3bl33d3r's OffensiveNim project
         // Reference: https://github.com/icyguider/nimcrypt
-        $string2 = /\/nimcrypt\.nim/ nocase ascii wide
+        $string2 = /.{0,1000}\/nimcrypt\.nim.{0,1000}/ nocase ascii wide
         // Description: Nimcrypt is a .NET PE Crypter written in Nim based entirely on the work of @byt3bl33d3r's OffensiveNim project
         // Reference: https://github.com/icyguider/nimcrypt
-        $string3 = /\/nimcrypt\// nocase ascii wide
+        $string3 = /.{0,1000}\/nimcrypt\/.{0,1000}/ nocase ascii wide
         // Description: Nimcrypt is a .NET PE Crypter written in Nim based entirely on the work of @byt3bl33d3r's OffensiveNim project
         // Reference: https://github.com/icyguider/nimcrypt
-        $string4 = /nimcrypt\s\-\-file\s/ nocase ascii wide
+        $string4 = /.{0,1000}nimcrypt\s\-\-file\s.{0,1000}/ nocase ascii wide
         // Description: Nimcrypt is a .NET PE Crypter written in Nim based entirely on the work of @byt3bl33d3r's OffensiveNim project
         // Reference: https://github.com/icyguider/nimcrypt
-        $string5 = /\-\-out\=nimcrypt/ nocase ascii wide
+        $string5 = /.{0,1000}\-\-out\=nimcrypt.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

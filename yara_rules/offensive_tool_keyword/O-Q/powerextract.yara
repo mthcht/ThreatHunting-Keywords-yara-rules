@@ -10,28 +10,28 @@ rule powerextract
     strings:
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string1 = /\s\-PathToDMP\s.*\.dmp/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-PathToDMP\s.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string2 = /\/PowerExtract\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/PowerExtract\.git.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string3 = /\/PowerExtract\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/PowerExtract\.git.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string4 = /Get\-KIWI_KERBEROS_LOGON_SESSION/ nocase ascii wide
+        $string4 = /.{0,1000}Get\-KIWI_KERBEROS_LOGON_SESSION.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string5 = /Invoke\-PowerExtract/ nocase ascii wide
+        $string5 = /.{0,1000}Invoke\-PowerExtract.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string6 = /PowerExtract\-main\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}PowerExtract\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string7 = /powerseb\/PowerExtract/ nocase ascii wide
+        $string7 = /.{0,1000}powerseb\/PowerExtract.{0,1000}/ nocase ascii wide
         // Description: This tool is able to parse memory dumps of the LSASS process without any additional tools (e.g. Debuggers) or additional sideloading of mimikatz. It is a pure PowerShell implementation for parsing and extracting secrets (LSA / MSV and Kerberos) of the LSASS process
         // Reference: https://github.com/powerseb/PowerExtract
-        $string8 = /powerseb\/PowerExtract/ nocase ascii wide
+        $string8 = /.{0,1000}powerseb\/PowerExtract.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

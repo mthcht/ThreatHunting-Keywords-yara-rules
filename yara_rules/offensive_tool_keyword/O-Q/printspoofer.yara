@@ -10,37 +10,37 @@ rule PrintSpoofer
     strings:
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string1 = /\.exe\s\-d\s3\s\-c\s.*powershell\s\-ep\sbypass/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\s\-d\s3\s\-c\s.{0,1000}powershell\s\-ep\sbypass.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string2 = /\/PrintSpoofer\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/PrintSpoofer\.git.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string3 = /B67143DE\-321D\-4034\-AC1D\-C6BB2D98563F/ nocase ascii wide
+        $string3 = /.{0,1000}B67143DE\-321D\-4034\-AC1D\-C6BB2D98563F.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string4 = /itm4n\/PrintSpoofer/ nocase ascii wide
+        $string4 = /.{0,1000}itm4n\/PrintSpoofer.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string5 = /nc\.exe\s\-l\s\-p\s1337/ nocase ascii wide
+        $string5 = /.{0,1000}nc\.exe\s\-l\s\-p\s1337.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string6 = /PrintSpoofer\.cpp/ nocase ascii wide
+        $string6 = /.{0,1000}PrintSpoofer\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string7 = /PrintSpoofer\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}PrintSpoofer\.exe.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string8 = /PrintSpoofer\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}PrintSpoofer\.sln.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string9 = /PrintSpoofer32\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}PrintSpoofer32\.exe.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string10 = /PrintSpoofer64\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}PrintSpoofer64\.exe.{0,1000}/ nocase ascii wide
         // Description: Abusing Impersonation Privileges on Windows 10 and Server 2019
         // Reference: https://github.com/itm4n/PrintSpoofer
-        $string11 = /PrintSpoofer\-master/ nocase ascii wide
+        $string11 = /.{0,1000}PrintSpoofer\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

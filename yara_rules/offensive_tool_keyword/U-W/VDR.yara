@@ -10,43 +10,43 @@ rule VDR
     strings:
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string1 = /\srwf\.py\s/ nocase ascii wide
+        $string1 = /.{0,1000}\srwf\.py\s.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string2 = /\.\/rwf\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\.\/rwf\.py.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string3 = /\/VDR\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/VDR\.git.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string4 = /\/VDR\-main\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}\/VDR\-main\.zip/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string5 = /\\VDR\-main\.zip/ nocase ascii wide
+        $string5 = /.{0,1000}\\VDR\-main\.zip/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string6 = /EoP\sPoC\sexploiting\sthe\sAMD\sdriver\s/ nocase ascii wide
+        $string6 = /.{0,1000}EoP\sPoC\sexploiting\sthe\sAMD\sdriver\s.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string7 = /EoP\sPoC\sexploiting\sthe\sIntel\sdriver\s/ nocase ascii wide
+        $string7 = /.{0,1000}EoP\sPoC\sexploiting\sthe\sIntel\sdriver\s.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string8 = /eop_pdfwkrnl\.py/ nocase ascii wide
+        $string8 = /.{0,1000}eop_pdfwkrnl\.py.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string9 = /eop_pdfwkrnl_loop\.py/ nocase ascii wide
+        $string9 = /.{0,1000}eop_pdfwkrnl_loop\.py.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string10 = /eop_rtport\.py/ nocase ascii wide
+        $string10 = /.{0,1000}eop_rtport\.py.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string11 = /eop_stdcdrvws64\.py/ nocase ascii wide
+        $string11 = /.{0,1000}eop_stdcdrvws64\.py.{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string12 = /System\stoken\sis\scopied\sto\sthe\scurrent\sprocess\.\sExecuting\scmd\.exe\.\./ nocase ascii wide
+        $string12 = /.{0,1000}System\stoken\sis\scopied\sto\sthe\scurrent\sprocess\.\sExecuting\scmd\.exe\.\..{0,1000}/ nocase ascii wide
         // Description: Vulnerable driver research tool - result and exploit PoCs
         // Reference: https://github.com/TakahiroHaruyama/VDR
-        $string13 = /TakahiroHaruyama\/VDR/ nocase ascii wide
+        $string13 = /.{0,1000}TakahiroHaruyama\/VDR.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

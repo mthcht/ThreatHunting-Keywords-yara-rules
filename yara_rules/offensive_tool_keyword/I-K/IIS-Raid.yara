@@ -10,31 +10,31 @@ rule IIS_Raid
     strings:
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string1 = /\siis_controller\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\siis_controller\.py.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string2 = /\s\-\-url\s\-\-password\sSIMPLEPASS/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-url\s\-\-password\sSIMPLEPASS.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string3 = /\/iis_controller\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\/iis_controller\.py.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string4 = /\/IIS\-Raid\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/IIS\-Raid\.git.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string5 = /\\iis_controller\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\\iis_controller\.py.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string6 = /\\Windows\\Temp\\creds\.db/ nocase ascii wide
+        $string6 = /.{0,1000}\\Windows\\Temp\\creds\.db.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string7 = /0x09AL\/IIS\-Raid/ nocase ascii wide
+        $string7 = /.{0,1000}0x09AL\/IIS\-Raid.{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string8 = /IIS\-Backdoor\./ nocase ascii wide
+        $string8 = /.{0,1000}IIS\-Backdoor\..{0,1000}/ nocase ascii wide
         // Description: A native backdoor module for Microsoft IIS
         // Reference: https://github.com/0x09AL/IIS-Raid
-        $string9 = /IIS\-Raid\-master/ nocase ascii wide
+        $string9 = /.{0,1000}IIS\-Raid\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

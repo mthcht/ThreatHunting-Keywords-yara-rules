@@ -10,22 +10,22 @@ rule JustEvadeBro
     strings:
         // Description: JustEvadeBro a cheat sheet which will aid you through AMSI/AV evasion & bypasses.
         // Reference: https://github.com/sinfulz/JustEvadeBro
-        $string1 = /\spapacat\.ps1/ nocase ascii wide
+        $string1 = /.{0,1000}\spapacat\.ps1.{0,1000}/ nocase ascii wide
         // Description: JustEvadeBro a cheat sheet which will aid you through AMSI/AV evasion & bypasses.
         // Reference: https://github.com/sinfulz/JustEvadeBro
-        $string2 = /\/papacat\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}\/papacat\.zip.{0,1000}/ nocase ascii wide
         // Description: JustEvadeBro a cheat sheet which will aid you through AMSI/AV evasion & bypasses.
         // Reference: https://github.com/sinfulz/JustEvadeBro
-        $string3 = /\\papacat\.ps1/ nocase ascii wide
+        $string3 = /.{0,1000}\\papacat\.ps1.{0,1000}/ nocase ascii wide
         // Description: JustEvadeBro a cheat sheet which will aid you through AMSI/AV evasion & bypasses.
         // Reference: https://github.com/sinfulz/JustEvadeBro
-        $string4 = /\\papacat\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}\\papacat\.zip.{0,1000}/ nocase ascii wide
         // Description: JustEvadeBro a cheat sheet which will aid you through AMSI/AV evasion & bypasses.
         // Reference: https://github.com/sinfulz/JustEvadeBro
-        $string5 = /aQBlAHgAIAAoAE4AZwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4AMQA0AC4AMgAvAHIAZQB2AC4AcABzADEAJwApAA/ nocase ascii wide
+        $string5 = /.{0,1000}aQBlAHgAIAAoAE4AZwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4AMQA0AC4AMgAvAHIAZQB2AC4AcABzADEAJwApAA.{0,1000}/ nocase ascii wide
         // Description: JustEvadeBro a cheat sheet which will aid you through AMSI/AV evasion & bypasses.
         // Reference: https://github.com/sinfulz/JustEvadeBro
-        $string6 = /papacat\s\-l\s\-p\s/ nocase ascii wide
+        $string6 = /.{0,1000}papacat\s\-l\s\-p\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

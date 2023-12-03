@@ -10,16 +10,16 @@ rule sudo
     strings:
         // Description: Sudo Persistence via sudoers file
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /echo\s.*\%sudo\s\sALL\=\(ALL\)\sNOPASSWD:\sALL.*\s\>\>\s\/etc\/sudoers/ nocase ascii wide
+        $string1 = /.{0,1000}echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers.{0,1000}/ nocase ascii wide
         // Description: access sensitive files by abusing sudo permissions
         // Reference: N/A
-        $string2 = /sudo\sapache2\s\-f\s\/etc\/shadow/ nocase ascii wide
+        $string2 = /.{0,1000}sudo\sapache2\s\-f\s\/etc\/shadow.{0,1000}/ nocase ascii wide
         // Description: abusing LD_LIBRARY_PATH sudo option  to escalade privilege
         // Reference: N/A
-        $string3 = /sudo\sLD_LIBRARY_PATH\=\.\sapache2/ nocase ascii wide
+        $string3 = /.{0,1000}sudo\sLD_LIBRARY_PATH\=\.\sapache2.{0,1000}/ nocase ascii wide
         // Description: abusinf LD_PREDLOAD option to escalade privilege
         // Reference: N/A
-        $string4 = /sudo\sLD_PRELOAD\=\/tmp\/preload\.so\sfind/ nocase ascii wide
+        $string4 = /.{0,1000}sudo\sLD_PRELOAD\=\/tmp\/preload\.so\sfind.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

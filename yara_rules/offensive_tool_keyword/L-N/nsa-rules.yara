@@ -10,19 +10,19 @@ rule nsa_rules
     strings:
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string1 = /\spwcrack\.sh/ nocase ascii wide
+        $string1 = /.{0,1000}\spwcrack\.sh.{0,1000}/ nocase ascii wide
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string2 = /\/nsa\-rules\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/nsa\-rules\.git.{0,1000}/ nocase ascii wide
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string3 = /\/pwcrack\.sh/ nocase ascii wide
+        $string3 = /.{0,1000}\/pwcrack\.sh.{0,1000}/ nocase ascii wide
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string4 = /NSAKEY\/nsa\-rules/ nocase ascii wide
+        $string4 = /.{0,1000}NSAKEY\/nsa\-rules.{0,1000}/ nocase ascii wide
         // Description: Password cracking rules and masks for hashcat that I generated from cracked passwords.
         // Reference: https://github.com/NSAKEY/nsa-rules
-        $string5 = /nsa\-rules\-master/ nocase ascii wide
+        $string5 = /.{0,1000}nsa\-rules\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

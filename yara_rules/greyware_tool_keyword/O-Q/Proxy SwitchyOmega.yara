@@ -10,7 +10,7 @@ rule Proxy_SwitchyOmega
     strings:
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1 = /padekgcemlokbadohgkifijomclgjgif/ nocase ascii wide
+        $string1 = /.{0,1000}padekgcemlokbadohgkifijomclgjgif.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

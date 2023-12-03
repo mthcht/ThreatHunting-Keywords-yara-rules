@@ -10,61 +10,61 @@ rule ScriptSentry
     strings:
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string1 = /\/ScriptSentry\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/ScriptSentry\.git.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string2 = /\/ScriptSentry\.ps1/ nocase ascii wide
+        $string2 = /.{0,1000}\/ScriptSentry\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string3 = /\/ScriptSentry\.psd1/ nocase ascii wide
+        $string3 = /.{0,1000}\/ScriptSentry\.psd1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string4 = /\/ScriptSentry\.psm1/ nocase ascii wide
+        $string4 = /.{0,1000}\/ScriptSentry\.psm1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string5 = /\\ScriptSentry\.ps1/ nocase ascii wide
+        $string5 = /.{0,1000}\\ScriptSentry\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string6 = /\\ScriptSentry\.psd1/ nocase ascii wide
+        $string6 = /.{0,1000}\\ScriptSentry\.psd1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string7 = /\\ScriptSentry\.psm1/ nocase ascii wide
+        $string7 = /.{0,1000}\\ScriptSentry\.psm1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string8 = /\\ScriptSentry\.txt/ nocase ascii wide
+        $string8 = /.{0,1000}\\ScriptSentry\.txt.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string9 = /e1cd2b55\-3b4f\-41bd\-a168\-40db41e34349/ nocase ascii wide
+        $string9 = /.{0,1000}e1cd2b55\-3b4f\-41bd\-a168\-40db41e34349.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string10 = /Find\-AdminLogonScripts\.ps1/ nocase ascii wide
+        $string10 = /.{0,1000}Find\-AdminLogonScripts\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string11 = /Find\-LogonScriptCredentials\s\-LogonScripts/ nocase ascii wide
+        $string11 = /.{0,1000}Find\-LogonScriptCredentials\s\-LogonScripts.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string12 = /Find\-LogonScriptCredentials\.ps1/ nocase ascii wide
+        $string12 = /.{0,1000}Find\-LogonScriptCredentials\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string13 = /Find\-UnsafeLogonScriptPermissions\.ps1/ nocase ascii wide
+        $string13 = /.{0,1000}Find\-UnsafeLogonScriptPermissions\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string14 = /Find\-UnsafeUNCPermissions\s\-UNCScripts/ nocase ascii wide
+        $string14 = /.{0,1000}Find\-UnsafeUNCPermissions\s\-UNCScripts.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string15 = /Find\-UnsafeUNCPermissions\.ps1/ nocase ascii wide
+        $string15 = /.{0,1000}Find\-UnsafeUNCPermissions\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string16 = /Get\-DomainAdmins\.ps1/ nocase ascii wide
+        $string16 = /.{0,1000}Get\-DomainAdmins\.ps1.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string17 = /Invoke\-ScriptSentry/ nocase ascii wide
+        $string17 = /.{0,1000}Invoke\-ScriptSentry.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string18 = /ScriptSentry\-main\.zip/ nocase ascii wide
+        $string18 = /.{0,1000}ScriptSentry\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: ScriptSentry finds misconfigured and dangerous logon scripts.
         // Reference: https://github.com/techspence/ScriptSentry
-        $string19 = /techspence\/ScriptSentry/ nocase ascii wide
+        $string19 = /.{0,1000}techspence\/ScriptSentry.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

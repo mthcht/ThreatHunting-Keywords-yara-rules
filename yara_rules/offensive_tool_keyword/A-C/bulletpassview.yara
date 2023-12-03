@@ -10,16 +10,16 @@ rule bulletpassview
     strings:
         // Description: BulletsPassView is a password recovery tool that reveals the passwords stored behind the bullets in the standard password text-box of Windows operating system and Internet Explorer Web browser. After revealing the passwords. you can easily copy them to the clipboard or save them into text/html/csv/xml file.
         // Reference: https://www.nirsoft.net/utils/bullets_password_view.html
-        $string1 = /BulletsPassView\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}BulletsPassView\.exe.{0,1000}/ nocase ascii wide
         // Description: BulletsPassView is a password recovery tool that reveals the passwords stored behind the bullets in the standard password text-box of Windows operating system and Internet Explorer Web browser. After revealing the passwords. you can easily copy them to the clipboard or save them into text/html/csv/xml file.
         // Reference: https://www.nirsoft.net/utils/bullets_password_view.html
-        $string2 = /BulletsPassView\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}BulletsPassView\.zip.{0,1000}/ nocase ascii wide
         // Description: BulletsPassView is a password recovery tool that reveals the passwords stored behind the bullets in the standard password text-box of Windows operating system and Internet Explorer Web browser. After revealing the passwords. you can easily copy them to the clipboard or save them into text/html/csv/xml file.
         // Reference: https://www.nirsoft.net/utils/bullets_password_view.html
-        $string3 = /BulletsPassView_setup\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}BulletsPassView_setup\.exe.{0,1000}/ nocase ascii wide
         // Description: BulletsPassView is a password recovery tool that reveals the passwords stored behind the bullets in the standard password text-box of Windows operating system and Internet Explorer Web browser. After revealing the passwords. you can easily copy them to the clipboard or save them into text/html/csv/xml file.
         // Reference: https://www.nirsoft.net/utils/bullets_password_view.html
-        $string4 = /BulletsPassView_x64\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}BulletsPassView_x64\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

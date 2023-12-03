@@ -10,7 +10,7 @@ rule Invisi_Shell
     strings:
         // Description: Hide your powershell script in plain sight! Invisi-Shell bypasses all of Powershell security features (ScriptBlock logging. Module logging. Transcription. AMSI) by hooking .Net assemblies. The hook is performed via CLR Profiler API.
         // Reference: https://github.com/OmerYa/Invisi-Shell
-        $string1 = /Invisi\-Shell/ nocase ascii wide
+        $string1 = /.{0,1000}Invisi\-Shell.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

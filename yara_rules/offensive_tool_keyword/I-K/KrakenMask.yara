@@ -10,22 +10,22 @@ rule KrakenMask
     strings:
         // Description: A sleep obfuscation tool is used to encrypt the content of the .text section with RC4 (using SystemFunction032). To achieve this encryption a ROP chain is employed with QueueUserAPC and NtContinue.
         // Reference: https://github.com/RtlDallas/KrakenMask
-        $string1 = /\/KrakenMask\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/KrakenMask\.git.{0,1000}/ nocase ascii wide
         // Description: A sleep obfuscation tool is used to encrypt the content of the .text section with RC4 (using SystemFunction032). To achieve this encryption a ROP chain is employed with QueueUserAPC and NtContinue.
         // Reference: https://github.com/RtlDallas/KrakenMask
-        $string2 = /C7E4B529\-6372\-449A\-9184\-74E74E432FE8/ nocase ascii wide
+        $string2 = /.{0,1000}C7E4B529\-6372\-449A\-9184\-74E74E432FE8.{0,1000}/ nocase ascii wide
         // Description: A sleep obfuscation tool is used to encrypt the content of the .text section with RC4 (using SystemFunction032). To achieve this encryption a ROP chain is employed with QueueUserAPC and NtContinue.
         // Reference: https://github.com/RtlDallas/KrakenMask
-        $string3 = /Kraken\sMask\sby\s\@DallasFR/ nocase ascii wide
+        $string3 = /.{0,1000}Kraken\sMask\sby\s\@DallasFR.{0,1000}/ nocase ascii wide
         // Description: A sleep obfuscation tool is used to encrypt the content of the .text section with RC4 (using SystemFunction032). To achieve this encryption a ROP chain is employed with QueueUserAPC and NtContinue.
         // Reference: https://github.com/RtlDallas/KrakenMask
-        $string4 = /KrakenMask\-main/ nocase ascii wide
+        $string4 = /.{0,1000}KrakenMask\-main.{0,1000}/ nocase ascii wide
         // Description: A sleep obfuscation tool is used to encrypt the content of the .text section with RC4 (using SystemFunction032). To achieve this encryption a ROP chain is employed with QueueUserAPC and NtContinue.
         // Reference: https://github.com/RtlDallas/KrakenMask
-        $string5 = /RtlDallas\/KrakenMask/ nocase ascii wide
+        $string5 = /.{0,1000}RtlDallas\/KrakenMask.{0,1000}/ nocase ascii wide
         // Description: A sleep obfuscation tool is used to encrypt the content of the .text section with RC4 (using SystemFunction032). To achieve this encryption a ROP chain is employed with QueueUserAPC and NtContinue.
         // Reference: https://github.com/RtlDallas/KrakenMask
-        $string6 = /Zzzz\sZzzzz\sZzzz\.\.\.\./ nocase ascii wide
+        $string6 = /.{0,1000}Zzzz\sZzzzz\sZzzz\.\.\.\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

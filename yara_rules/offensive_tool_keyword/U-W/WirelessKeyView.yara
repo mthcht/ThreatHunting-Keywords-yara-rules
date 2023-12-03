@@ -10,19 +10,19 @@ rule WirelessKeyView
     strings:
         // Description: WirelessKeyView recovers all wireless network security keys/passwords (WEP/WPA) stored in your computer 
         // Reference: https://www.nirsoft.net/utils/wireless_key.html
-        $string1 = /wirelesskeyview\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}wirelesskeyview\.exe.{0,1000}/ nocase ascii wide
         // Description: WirelessKeyView recovers all wireless network security keys/passwords (WEP/WPA) stored in your computer 
         // Reference: https://www.nirsoft.net/utils/wireless_key.html
-        $string2 = /wirelesskeyview\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}wirelesskeyview\.zip.{0,1000}/ nocase ascii wide
         // Description: WirelessKeyView recovers all wireless network security keys/passwords (WEP/WPA) stored in your computer 
         // Reference: https://www.nirsoft.net/utils/wireless_key.html
-        $string3 = /WirelessKeyView_x64\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}WirelessKeyView_x64\.exe.{0,1000}/ nocase ascii wide
         // Description: WirelessKeyView recovers all wireless network security keys/passwords (WEP/WPA) stored in your computer 
         // Reference: https://www.nirsoft.net/utils/wireless_key.html
-        $string4 = /wirelesskeyview\-no\-command\-line\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}wirelesskeyview\-no\-command\-line\.zip.{0,1000}/ nocase ascii wide
         // Description: WirelessKeyView recovers all wireless network security keys/passwords (WEP/WPA) stored in your computer 
         // Reference: https://www.nirsoft.net/utils/wireless_key.html
-        $string5 = /wirelesskeyview\-x64\.zip/ nocase ascii wide
+        $string5 = /.{0,1000}wirelesskeyview\-x64\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

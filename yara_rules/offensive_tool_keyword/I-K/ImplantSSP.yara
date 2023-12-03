@@ -10,28 +10,28 @@ rule ImplantSSP
     strings:
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string1 = /\sImplantSSP\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\sImplantSSP\.exe.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string2 = /\/ImplantSSP\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/ImplantSSP\.exe.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string3 = /\[\+\]\sAdding\syour\sDLL\sto\sthe\sLSA\sSecurity\sPackages\sregistry\skey/ nocase ascii wide
+        $string3 = /.{0,1000}\[\+\]\sAdding\syour\sDLL\sto\sthe\sLSA\sSecurity\sPackages\sregistry\skey.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string4 = /\[\+\]\sRegistry\skey\sset\.\sDLL\swill\sbe\sloaded\son\sreboot/ nocase ascii wide
+        $string4 = /.{0,1000}\[\+\]\sRegistry\skey\sset\.\sDLL\swill\sbe\sloaded\son\sreboot.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string5 = /\[\+\]\sSafety\schecks\spassed\.\sImplanting\syour\sDLL/ nocase ascii wide
+        $string5 = /.{0,1000}\[\+\]\sSafety\schecks\spassed\.\sImplanting\syour\sDLL.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string6 = /\\ImplantSSP\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}\\ImplantSSP\.exe.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string7 = /ImplantSSP\.csproj/ nocase ascii wide
+        $string7 = /.{0,1000}ImplantSSP\.csproj.{0,1000}/ nocase ascii wide
         // Description: Installs a user-supplied Security Support Provider (SSP) DLL on the system which will be loaded by LSA on system start
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ImplantSSP
-        $string8 = /master\/ImplantSSP\// nocase ascii wide
+        $string8 = /.{0,1000}master\/ImplantSSP\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

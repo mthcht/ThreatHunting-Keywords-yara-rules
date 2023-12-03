@@ -10,22 +10,22 @@ rule CandyPotato
     strings:
         // Description: CandyPotato - Pure C++ weaponized fully automated implementation of RottenPotatoNG. This tool has been made on top of the original JuicyPotato with the main focus on improving and adding some functionalities which was lacking
         // Reference: https://github.com/klezVirus/CandyPotato
-        $string1 = /\/CandyPotato\.cpp/ nocase ascii wide
+        $string1 = /.{0,1000}\/CandyPotato\.cpp.{0,1000}/ nocase ascii wide
         // Description: CandyPotato - Pure C++ weaponized fully automated implementation of RottenPotatoNG. This tool has been made on top of the original JuicyPotato with the main focus on improving and adding some functionalities which was lacking
         // Reference: https://github.com/klezVirus/CandyPotato
-        $string2 = /\/CandyPotato\.sdf/ nocase ascii wide
+        $string2 = /.{0,1000}\/CandyPotato\.sdf.{0,1000}/ nocase ascii wide
         // Description: CandyPotato - Pure C++ weaponized fully automated implementation of RottenPotatoNG. This tool has been made on top of the original JuicyPotato with the main focus on improving and adding some functionalities which was lacking
         // Reference: https://github.com/klezVirus/CandyPotato
-        $string3 = /\/CandyPotato\.sln/ nocase ascii wide
+        $string3 = /.{0,1000}\/CandyPotato\.sln.{0,1000}/ nocase ascii wide
         // Description: CandyPotato - Pure C++ weaponized fully automated implementation of RottenPotatoNG. This tool has been made on top of the original JuicyPotato with the main focus on improving and adding some functionalities which was lacking
         // Reference: https://github.com/klezVirus/CandyPotato
-        $string4 = /\/CandyPotato\.vcxproj/ nocase ascii wide
+        $string4 = /.{0,1000}\/CandyPotato\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: CandyPotato - Pure C++ weaponized fully automated implementation of RottenPotatoNG. This tool has been made on top of the original JuicyPotato with the main focus on improving and adding some functionalities which was lacking
         // Reference: https://github.com/klezVirus/CandyPotato
-        $string5 = /\/klezVirus\/CandyPotato/ nocase ascii wide
+        $string5 = /.{0,1000}\/klezVirus\/CandyPotato.{0,1000}/ nocase ascii wide
         // Description: CandyPotato - Pure C++ weaponized fully automated implementation of RottenPotatoNG. This tool has been made on top of the original JuicyPotato with the main focus on improving and adding some functionalities which was lacking
         // Reference: https://github.com/klezVirus/CandyPotato
-        $string6 = /CandyPotato\.exe\s/ nocase ascii wide
+        $string6 = /.{0,1000}CandyPotato\.exe\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

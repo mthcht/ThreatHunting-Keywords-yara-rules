@@ -10,16 +10,16 @@ rule SharpUnhooker
     strings:
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
-        $string1 = /\/SharpUnhooker\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/SharpUnhooker\.git.{0,1000}/ nocase ascii wide
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
-        $string2 = /GetRektBoy724\/SharpUnhooker/ nocase ascii wide
+        $string2 = /.{0,1000}GetRektBoy724\/SharpUnhooker.{0,1000}/ nocase ascii wide
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
-        $string3 = /SharpUnhooker\./ nocase ascii wide
+        $string3 = /.{0,1000}SharpUnhooker\..{0,1000}/ nocase ascii wide
         // Description: C# Based Universal API Unhooker
         // Reference: https://github.com/GetRektBoy724/SharpUnhooker
-        $string4 = /SharpUnhooker\-main/ nocase ascii wide
+        $string4 = /.{0,1000}SharpUnhooker\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

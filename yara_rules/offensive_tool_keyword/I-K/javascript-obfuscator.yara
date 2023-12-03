@@ -10,7 +10,7 @@ rule javascript_obfuscator
     strings:
         // Description: JavaScript Obfuscator is a powerful free obfuscator for JavaScript. containing a variety of features which provide protection for your source code.
         // Reference: https://github.com/javascript-obfuscator/javascript-obfuscator
-        $string1 = /javascript\-obfuscator/ nocase ascii wide
+        $string1 = /.{0,1000}javascript\-obfuscator.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

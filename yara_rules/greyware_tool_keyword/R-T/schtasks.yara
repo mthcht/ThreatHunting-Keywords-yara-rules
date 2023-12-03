@@ -10,7 +10,7 @@ rule schtasks
     strings:
         // Description: view detailed information about all the scheduled tasks.
         // Reference: N/A
-        $string1 = /schtasks\s\/query\s\/v\s\/fo\sLIST/ nocase ascii wide
+        $string1 = /.{0,1000}schtasks\s\/query\s\/v\s\/fo\sLIST.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

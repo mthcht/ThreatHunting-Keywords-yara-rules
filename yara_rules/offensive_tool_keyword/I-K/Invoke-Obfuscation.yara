@@ -10,7 +10,7 @@ rule Invoke_Obfuscation
     strings:
         // Description: Invoke-Obfuscation is a PowerShell v2.0+ compatible PowerShell command and script obfuscator.
         // Reference: https://github.com/danielbohannon/Invoke-Obfuscation
-        $string1 = /Invoke\-Obfuscation/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-Obfuscation.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

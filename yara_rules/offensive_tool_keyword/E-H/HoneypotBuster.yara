@@ -10,34 +10,34 @@ rule HoneypotBuster
     strings:
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string1 = /\\InactiveDomainAdmins\.csv/ nocase ascii wide
+        $string1 = /.{0,1000}\\InactiveDomainAdmins\.csv.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string2 = /7H0LmBxFtXBPd0\/3vHe7Z3dmdrPZmTzp3ZldQrJ5LOGxeZ/ nocase ascii wide
+        $string2 = /.{0,1000}7H0LmBxFtXBPd0\/3vHe7Z3dmdrPZmTzp3ZldQrJ5LOGxeZ.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string3 = /7L0LgBxFtTDc093TPe\/dntnM7G6Sncm/ nocase ascii wide
+        $string3 = /.{0,1000}7L0LgBxFtTDc093TPe\/dntnM7G6Sncm.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string4 = /Fake\sComputer\sObjects\sHoney\sPots/ nocase ascii wide
+        $string4 = /.{0,1000}Fake\sComputer\sObjects\sHoney\sPots.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string5 = /Fake\sService\sAccounts\sHoney\sTokens/ nocase ascii wide
+        $string5 = /.{0,1000}Fake\sService\sAccounts\sHoney\sTokens.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string6 = /Get\-FakeServiceUsers/ nocase ascii wide
+        $string6 = /.{0,1000}Get\-FakeServiceUsers.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string7 = /Get\-InactiveDomainAdmins/ nocase ascii wide
+        $string7 = /.{0,1000}Get\-InactiveDomainAdmins.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string8 = /Inactive\sDomain\sAdmins\sHoney\sTokens/ nocase ascii wide
+        $string8 = /.{0,1000}Inactive\sDomain\sAdmins\sHoney\sTokens.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string9 = /InjectedCredentials\.csv/ nocase ascii wide
+        $string9 = /.{0,1000}InjectedCredentials\.csv.{0,1000}/ nocase ascii wide
         // Description: Microsoft PowerShell module designed for red teams that can be used to find honeypots and honeytokens in the network or at the host
         // Reference: https://github.com/JavelinNetworks/HoneypotBuster
-        $string10 = /Invoke\-HoneypotBuster/ nocase ascii wide
+        $string10 = /.{0,1000}Invoke\-HoneypotBuster.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

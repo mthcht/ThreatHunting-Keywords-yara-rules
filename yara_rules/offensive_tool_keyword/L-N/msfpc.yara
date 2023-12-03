@@ -10,10 +10,10 @@ rule msfpc
     strings:
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/g0tmi1k/msfpc
-        $string1 = /\/msfpc\.sh/ nocase ascii wide
+        $string1 = /.{0,1000}\/msfpc\.sh.{0,1000}/ nocase ascii wide
         // Description: A quick way to generate various basic Meterpreter payloads via msfvenom (part of the Metasploit framework)
         // Reference: https://github.com/g0tmi1k/msfpc
-        $string2 = /msfpc\.sh/ nocase ascii wide
+        $string2 = /.{0,1000}msfpc\.sh.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

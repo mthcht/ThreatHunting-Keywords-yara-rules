@@ -10,13 +10,13 @@ rule o365creeper
     strings:
         // Description: Python script that performs email address validation against Office 365 without submitting login attempts
         // Reference: https://github.com/LMGsec/o365creeper
-        $string1 = /o365creeper\.git/ nocase ascii wide
+        $string1 = /.{0,1000}o365creeper\.git.{0,1000}/ nocase ascii wide
         // Description: Python script that performs email address validation against Office 365 without submitting login attempts
         // Reference: https://github.com/LMGsec/o365creeper
-        $string2 = /o365creeper\.py/ nocase ascii wide
+        $string2 = /.{0,1000}o365creeper\.py.{0,1000}/ nocase ascii wide
         // Description: Python script that performs email address validation against Office 365 without submitting login attempts
         // Reference: https://github.com/LMGsec/o365creeper
-        $string3 = /o365creeper\-master/ nocase ascii wide
+        $string3 = /.{0,1000}o365creeper\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule fcrackzip
     strings:
         // Description: a Free/Fast Zip Password Cracker
         // Reference: https://manpages.ubuntu.com/manpages/trusty/man1/fcrackzip.1.html
-        $string1 = /\/usr\/share\/wordlists\/.*\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}\/usr\/share\/wordlists\/.{0,1000}\.txt.{0,1000}/ nocase ascii wide
         // Description: a Free/Fast Zip Password Cracker
         // Reference: https://manpages.ubuntu.com/manpages/trusty/man1/fcrackzip.1.html
-        $string2 = /fcrackzip\s/ nocase ascii wide
+        $string2 = /.{0,1000}fcrackzip\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

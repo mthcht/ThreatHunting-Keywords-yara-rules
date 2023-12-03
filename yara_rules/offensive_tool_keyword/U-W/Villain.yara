@@ -10,106 +10,106 @@ rule Villain
     strings:
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string1 = /\s\-\-file\-smuggler\-port\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-file\-smuggler\-port\s.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string2 = /\s\-\-hoax\-port\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-hoax\-port\s.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string3 = /\s\-\-netcat\-port\s/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-netcat\-port\s.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string4 = /\.villain_core/ nocase ascii wide
+        $string4 = /.{0,1000}\.villain_core.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string5 = /\/hoaxshell\/.*\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/hoaxshell\/.{0,1000}\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string6 = /\/t3l3machus\/Villain/ nocase ascii wide
+        $string6 = /.{0,1000}\/t3l3machus\/Villain.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string7 = /\\hoaxshell\\.*\.py/ nocase ascii wide
+        $string7 = /.{0,1000}\\hoaxshell\\.{0,1000}\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string8 = /awk_reverse_tcp\.py/ nocase ascii wide
+        $string8 = /.{0,1000}awk_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string9 = /bash_read_line_reverse_tcp\.py/ nocase ascii wide
+        $string9 = /.{0,1000}bash_read_line_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string10 = /cmdinspector\sOFF/ nocase ascii wide
+        $string10 = /.{0,1000}cmdinspector\sOFF.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string11 = /cmdinspector\sON/ nocase ascii wide
+        $string11 = /.{0,1000}cmdinspector\sON.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string12 = /conptyshell\s/ nocase ascii wide
+        $string12 = /.{0,1000}conptyshell\s.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string13 = /eRv6yTYhShell/ nocase ascii wide
+        $string13 = /.{0,1000}eRv6yTYhShell.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string14 = /File_Smuggler_Http_Handler/ nocase ascii wide
+        $string14 = /.{0,1000}File_Smuggler_Http_Handler.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string15 = /generate\spayload\=/ nocase ascii wide
+        $string15 = /.{0,1000}generate\spayload\=.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string16 = /Invoke\-ConPtyShell/ nocase ascii wide
+        $string16 = /.{0,1000}Invoke\-ConPtyShell.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string17 = /list_backdoors/ nocase ascii wide
+        $string17 = /.{0,1000}list_backdoors.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string18 = /obfuscate_cmdlet/ nocase ascii wide
+        $string18 = /.{0,1000}obfuscate_cmdlet.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string19 = /perl_no_sh_reverse_tcp\.py/ nocase ascii wide
+        $string19 = /.{0,1000}perl_no_sh_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string20 = /php_passthru_reverse_tcp\.py/ nocase ascii wide
+        $string20 = /.{0,1000}php_passthru_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string21 = /php_popen_reverse_tcp\.py/ nocase ascii wide
+        $string21 = /.{0,1000}php_popen_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string22 = /php_proc_open_reverse_tcp\.py/ nocase ascii wide
+        $string22 = /.{0,1000}php_proc_open_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string23 = /powershell_reverse_tcp\.py/ nocase ascii wide
+        $string23 = /.{0,1000}powershell_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string24 = /powershell_reverse_tcp_v2\.py/ nocase ascii wide
+        $string24 = /.{0,1000}powershell_reverse_tcp_v2\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string25 = /proxy_cmd_for_exec_by_sibling/ nocase ascii wide
+        $string25 = /.{0,1000}proxy_cmd_for_exec_by_sibling.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string26 = /python3_reverse_tcp\.py/ nocase ascii wide
+        $string26 = /.{0,1000}python3_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string27 = /python3_reverse_tcp_v2\.py/ nocase ascii wide
+        $string27 = /.{0,1000}python3_reverse_tcp_v2\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string28 = /ruby_no_sh_reverse_tcp\.py/ nocase ascii wide
+        $string28 = /.{0,1000}ruby_no_sh_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string29 = /ruby_reverse_tcp\.py/ nocase ascii wide
+        $string29 = /.{0,1000}ruby_reverse_tcp\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string30 = /SpawneRv6yTYhShell/ nocase ascii wide
+        $string30 = /.{0,1000}SpawneRv6yTYhShell.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string31 = /Villain\.git/ nocase ascii wide
+        $string31 = /.{0,1000}Villain\.git.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string32 = /villain\.py/ nocase ascii wide
+        $string32 = /.{0,1000}villain\.py.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string33 = /Villain\/Core/ nocase ascii wide
+        $string33 = /.{0,1000}Villain\/Core.{0,1000}/ nocase ascii wide
         // Description: Villain is a C2 framework that can handle multiple TCP socket & HoaxShell-based reverse shells. enhance their functionality with additional features (commands. utilities etc) and share them among connected sibling servers (Villain instances running on different machines).
         // Reference: https://github.com/t3l3machus/Villain
-        $string34 = /villain_core\.py/ nocase ascii wide
+        $string34 = /.{0,1000}villain_core\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

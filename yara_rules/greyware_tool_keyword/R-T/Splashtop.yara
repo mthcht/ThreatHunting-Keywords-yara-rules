@@ -10,7 +10,7 @@ rule Splashtop
     strings:
         // Description: control remote machines- abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string1 = /SplashtopStreamer3500\.exe.*\sprevercheck\s/ nocase ascii wide
+        $string1 = /.{0,1000}SplashtopStreamer3500\.exe.{0,1000}\sprevercheck\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

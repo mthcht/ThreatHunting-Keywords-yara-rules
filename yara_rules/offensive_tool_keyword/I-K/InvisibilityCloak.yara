@@ -10,16 +10,16 @@ rule InvisibilityCloak
     strings:
         // Description: Proof-of-concept obfuscation toolkit for C# post-exploitation tools
         // Reference: https://github.com/h4wkst3r/InvisibilityCloak
-        $string1 = /\s\-d\s.*\s\-n\s.*\s\-m\sreverse.*\=/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-d\s.{0,1000}\s\-n\s.{0,1000}\s\-m\sreverse.{0,1000}\=/ nocase ascii wide
         // Description: Proof-of-concept obfuscation toolkit for C# post-exploitation tools
         // Reference: https://github.com/h4wkst3r/InvisibilityCloak
-        $string2 = /\s\-d\s.*\s\-n\s.*\s\-m\srot13/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-d\s.{0,1000}\s\-n\s.{0,1000}\s\-m\srot13.{0,1000}/ nocase ascii wide
         // Description: Proof-of-concept obfuscation toolkit for C# post-exploitation tools
         // Reference: https://github.com/h4wkst3r/InvisibilityCloak
-        $string3 = /\s\-n\s.*TotallyLegitTool/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-n\s.{0,1000}TotallyLegitTool.{0,1000}/ nocase ascii wide
         // Description: Proof-of-concept obfuscation toolkit for C# post-exploitation tools
         // Reference: https://github.com/h4wkst3r/InvisibilityCloak
-        $string4 = /InvisibilityCloak\.py/ nocase ascii wide
+        $string4 = /.{0,1000}InvisibilityCloak\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

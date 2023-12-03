@@ -10,37 +10,37 @@ rule godpotato
     strings:
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string1 = /\\Godpotato\\/ nocase ascii wide
+        $string1 = /.{0,1000}\\Godpotato\\.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string2 = /BeichenDream\/GodPotato/ nocase ascii wide
+        $string2 = /.{0,1000}BeichenDream\/GodPotato.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string3 = /GodPotato\s\-/ nocase ascii wide
+        $string3 = /.{0,1000}GodPotato\s\-.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string4 = /GodPotato\.cs/ nocase ascii wide
+        $string4 = /.{0,1000}GodPotato\.cs.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string5 = /godpotato\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}godpotato\.exe.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string6 = /GodPotato\.git/ nocase ascii wide
+        $string6 = /.{0,1000}GodPotato\.git.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string7 = /GodPotatoContext\.cs/ nocase ascii wide
+        $string7 = /.{0,1000}GodPotatoContext\.cs.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string8 = /GodPotato\-master\.zip/ nocase ascii wide
+        $string8 = /.{0,1000}GodPotato\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string9 = /GodPotato\-NET.*\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}GodPotato\-NET.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string10 = /GodPotatoUnmarshalTrigger\.cs/ nocase ascii wide
+        $string10 = /.{0,1000}GodPotatoUnmarshalTrigger\.cs.{0,1000}/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato
-        $string11 = /SharpToken\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}SharpToken\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

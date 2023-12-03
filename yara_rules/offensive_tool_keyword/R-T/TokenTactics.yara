@@ -10,52 +10,52 @@ rule TokenTactics
     strings:
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string1 = /\/CapBypass\.ps1/ nocase ascii wide
+        $string1 = /.{0,1000}\/CapBypass\.ps1.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string2 = /\/rvrsh3ll\// nocase ascii wide
+        $string2 = /.{0,1000}\/rvrsh3ll\/.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string3 = /\/TokenTactics\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/TokenTactics\.git.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string4 = /capturetokenphish\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}capturetokenphish\.ps1.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string5 = /capturetokenphish\.py/ nocase ascii wide
+        $string5 = /.{0,1000}capturetokenphish\.py.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string6 = /Connect\-AzureAD\s\-AadAccessToken\s\-AccountId\s/ nocase ascii wide
+        $string6 = /.{0,1000}Connect\-AzureAD\s\-AadAccessToken\s\-AccountId\s.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string7 = /deploycaptureserver\.ps1/ nocase ascii wide
+        $string7 = /.{0,1000}deploycaptureserver\.ps1.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string8 = /Invoke\-DumpOWAMailboxViaMSGraphApi/ nocase ascii wide
+        $string8 = /.{0,1000}Invoke\-DumpOWAMailboxViaMSGraphApi.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string9 = /Invoke\-ForgeUserAgent/ nocase ascii wide
+        $string9 = /.{0,1000}Invoke\-ForgeUserAgent.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string10 = /Invoke\-OpenOWAMailboxInBrowser/ nocase ascii wide
+        $string10 = /.{0,1000}Invoke\-OpenOWAMailboxInBrowser.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string11 = /Invoke\-RefreshToMSGraphToken\s\-domain\s\-ClientId\s/ nocase ascii wide
+        $string11 = /.{0,1000}Invoke\-RefreshToMSGraphToken\s\-domain\s\-ClientId\s.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string12 = /OutlookEmailAbuse\.ps1/ nocase ascii wide
+        $string12 = /.{0,1000}OutlookEmailAbuse\.ps1.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string13 = /rvrsh3ll\/TokenTactics/ nocase ascii wide
+        $string13 = /.{0,1000}rvrsh3ll\/TokenTactics.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string14 = /TokenTactics\.psd1/ nocase ascii wide
+        $string14 = /.{0,1000}TokenTactics\.psd1.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string15 = /TokenTactics\.psm1/ nocase ascii wide
+        $string15 = /.{0,1000}TokenTactics\.psm1.{0,1000}/ nocase ascii wide
         // Description: Azure JWT Token Manipulation Toolset
         // Reference: https://github.com/rvrsh3ll/TokenTactics
-        $string16 = /TokenTactics\-main\.zip/ nocase ascii wide
+        $string16 = /.{0,1000}TokenTactics\-main\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

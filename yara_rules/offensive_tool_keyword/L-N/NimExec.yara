@@ -10,22 +10,22 @@ rule NimExec
     strings:
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string1 = /\/NimExec\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/NimExec\.git.{0,1000}/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string2 = /123abcbde966780cef8d9ec24523acac/ nocase ascii wide
+        $string2 = /.{0,1000}123abcbde966780cef8d9ec24523acac.{0,1000}/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string3 = /cmd\.exe\s\/c\s.*echo\stest\s\>\sC:\\Users\\Public\\test\.txt/ nocase ascii wide
+        $string3 = /.{0,1000}cmd\.exe\s\/c\s.{0,1000}echo\stest\s\>\sC:\\Users\\Public\\test\.txt.{0,1000}/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string4 = /frkngksl\/NimExec/ nocase ascii wide
+        $string4 = /.{0,1000}frkngksl\/NimExec.{0,1000}/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string5 = /NimExec\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}NimExec\.exe.{0,1000}/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string6 = /NimExec\-master/ nocase ascii wide
+        $string6 = /.{0,1000}NimExec\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

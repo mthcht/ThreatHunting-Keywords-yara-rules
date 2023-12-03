@@ -10,31 +10,31 @@ rule EfsPotato
     strings:
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string1 = /\/EfsPotato\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/EfsPotato\.git.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string2 = /csc\.exe\sEfsPotato\.cs\s/ nocase ascii wide
+        $string2 = /.{0,1000}csc\.exe\sEfsPotato\.cs\s.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string3 = /EfsPotato.*efsrpc/ nocase ascii wide
+        $string3 = /.{0,1000}EfsPotato.{0,1000}efsrpc.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string4 = /EfsPotato.*lsarpc/ nocase ascii wide
+        $string4 = /.{0,1000}EfsPotato.{0,1000}lsarpc.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string5 = /EfsPotato.*lsarpc/ nocase ascii wide
+        $string5 = /.{0,1000}EfsPotato.{0,1000}lsarpc.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string6 = /EfsPotato.*lsass/ nocase ascii wide
+        $string6 = /.{0,1000}EfsPotato.{0,1000}lsass.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string7 = /EfsPotato.*netlogon/ nocase ascii wide
+        $string7 = /.{0,1000}EfsPotato.{0,1000}netlogon.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string8 = /EfsPotato.*samr/ nocase ascii wide
+        $string8 = /.{0,1000}EfsPotato.{0,1000}samr.{0,1000}/ nocase ascii wide
         // Description: Exploit for EfsPotato(MS-EFSR EfsRpcOpenFileRaw with SeImpersonatePrivilege local privalege escalation vulnerability)
         // Reference: https://github.com/zcgonvh/EfsPotato
-        $string9 = /EfsPotato\-main/ nocase ascii wide
+        $string9 = /.{0,1000}EfsPotato\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

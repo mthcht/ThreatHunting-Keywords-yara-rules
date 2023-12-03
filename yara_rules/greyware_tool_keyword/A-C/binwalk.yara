@@ -10,7 +10,7 @@ rule binwalk
     strings:
         // Description: Binwalk is a fast. easy to use tool for analyzing. reverse engineering. and extracting firmware images.
         // Reference: https://github.com/ReFirmLabs/binwalk
-        $string1 = /binwalk/ nocase ascii wide
+        $string1 = /.{0,1000}binwalk.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

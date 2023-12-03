@@ -10,7 +10,7 @@ rule locate
     strings:
         // Description: Find sensitive files
         // Reference: N/A
-        $string1 = /locate\spassword\s\|\smore/ nocase ascii wide
+        $string1 = /.{0,1000}locate\spassword\s\|\smore.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

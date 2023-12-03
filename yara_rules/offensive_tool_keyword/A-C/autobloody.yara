@@ -10,37 +10,37 @@ rule autobloody
     strings:
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string1 = /\sinstall\sautobloody/ nocase ascii wide
+        $string1 = /.{0,1000}\sinstall\sautobloody.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string2 = /\/autobloody\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/autobloody\.git.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string3 = /\/autobloody\/archive/ nocase ascii wide
+        $string3 = /.{0,1000}\/autobloody\/archive.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string4 = /AD\sPrivesc\sAutomation/ nocase ascii wide
+        $string4 = /.{0,1000}AD\sPrivesc\sAutomation.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string5 = /autobloody\s\-/ nocase ascii wide
+        $string5 = /.{0,1000}autobloody\s\-.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string6 = /autobloody\.py/ nocase ascii wide
+        $string6 = /.{0,1000}autobloody\.py.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string7 = /autobloody\-main/ nocase ascii wide
+        $string7 = /.{0,1000}autobloody\-main.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string8 = /bolt:\/\/localhost:7687/ nocase ascii wide
+        $string8 = /.{0,1000}bolt:\/\/localhost:7687.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string9 = /CravateRouge\/autobloody/ nocase ascii wide
+        $string9 = /.{0,1000}CravateRouge\/autobloody.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string10 = /Proxy\sbypass\senabled\sfor\sNeo4j\sconnection/ nocase ascii wide
+        $string10 = /.{0,1000}Proxy\sbypass\senabled\sfor\sNeo4j\sconnection.{0,1000}/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string11 = /proxy_bypass\.py/ nocase ascii wide
+        $string11 = /.{0,1000}proxy_bypass\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

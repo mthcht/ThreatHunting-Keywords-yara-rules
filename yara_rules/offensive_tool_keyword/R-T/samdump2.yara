@@ -10,16 +10,16 @@ rule samdump2
     strings:
         // Description: Retrieves syskey and extract hashes from Windows 2k/NT/XP/Vista SAM.
         // Reference: https://salsa.debian.org/pkg-security-team/samdump2
-        $string1 = /\/samdump2/ nocase ascii wide
+        $string1 = /.{0,1000}\/samdump2.{0,1000}/ nocase ascii wide
         // Description: Retrieves syskey and extract hashes from Windows 2k/NT/XP/Vista SAM.
         // Reference: https://salsa.debian.org/pkg-security-team/samdump2
-        $string2 = /install\ssamdump2/ nocase ascii wide
+        $string2 = /.{0,1000}install\ssamdump2.{0,1000}/ nocase ascii wide
         // Description: Retrieves syskey and extract hashes from Windows 2k/NT/XP/Vista SAM.
         // Reference: https://salsa.debian.org/pkg-security-team/samdump2
-        $string3 = /samdump2\s/ nocase ascii wide
+        $string3 = /.{0,1000}samdump2\s.{0,1000}/ nocase ascii wide
         // Description: Retrieves syskey and extract hashes from Windows 2k/NT/XP/Vista SAM.
         // Reference: https://salsa.debian.org/pkg-security-team/samdump2
-        $string4 = /samdump2\.c/ nocase ascii wide
+        $string4 = /.{0,1000}samdump2\.c.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,85 +10,85 @@ rule htshells
     strings:
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string1 = /\sprepare\.sh\sshell\/mod_.*\.htaccess/ nocase ascii wide
+        $string1 = /.{0,1000}\sprepare\.sh\sshell\/mod_.{0,1000}\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string2 = /\/htshells\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/htshells\.git.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string3 = /\/prepare\.sh\sshell\/mod_.*\.htaccess/ nocase ascii wide
+        $string3 = /.{0,1000}\/prepare\.sh\sshell\/mod_.{0,1000}\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string4 = /htshells\-master/ nocase ascii wide
+        $string4 = /.{0,1000}htshells\-master.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string5 = /http:\/\/.*\/\.htaccess\?c\=cmd/ nocase ascii wide
+        $string5 = /.{0,1000}http:\/\/.{0,1000}\/\.htaccess\?c\=cmd.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string6 = /http:\/\/.*\/\.htaccess\?c\=uname\s\-a/ nocase ascii wide
+        $string6 = /.{0,1000}http:\/\/.{0,1000}\/\.htaccess\?c\=uname\s\-a.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string7 = /https:\/\/.*\/\.htaccess\?c\=cmd/ nocase ascii wide
+        $string7 = /.{0,1000}https:\/\/.{0,1000}\/\.htaccess\?c\=cmd.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string8 = /https:\/\/.*\/\.htaccess\?c\=uname\s\-a/ nocase ascii wide
+        $string8 = /.{0,1000}https:\/\/.{0,1000}\/\.htaccess\?c\=uname\s\-a.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string9 = /mod_auth_remote\.phish\.htaccess/ nocase ascii wide
+        $string9 = /.{0,1000}mod_auth_remote\.phish\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string10 = /mod_caucho\.shell\.htaccess/ nocase ascii wide
+        $string10 = /.{0,1000}mod_caucho\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string11 = /mod_cgi\.shell\.bash\.htaccess/ nocase ascii wide
+        $string11 = /.{0,1000}mod_cgi\.shell\.bash\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string12 = /mod_cgi\.shell\.bind\.htaccess/ nocase ascii wide
+        $string12 = /.{0,1000}mod_cgi\.shell\.bind\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string13 = /mod_cgi\.shell\.windows\.htaccess/ nocase ascii wide
+        $string13 = /.{0,1000}mod_cgi\.shell\.windows\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string14 = /mod_mono\.shell\.htaccess/ nocase ascii wide
+        $string14 = /.{0,1000}mod_mono\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string15 = /mod_multi\.shell\.htaccess/ nocase ascii wide
+        $string15 = /.{0,1000}mod_multi\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string16 = /mod_perl\.embperl\.shell\.htaccess/ nocase ascii wide
+        $string16 = /.{0,1000}mod_perl\.embperl\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string17 = /mod_perl\.IPP\.shell\.htaccess/ nocase ascii wide
+        $string17 = /.{0,1000}mod_perl\.IPP\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string18 = /mod_perl\.Mason\.shell\.htaccess/ nocase ascii wide
+        $string18 = /.{0,1000}mod_perl\.Mason\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string19 = /mod_perl\.shell\.htaccess/ nocase ascii wide
+        $string19 = /.{0,1000}mod_perl\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string20 = /mod_php\.shell\.htaccess/ nocase ascii wide
+        $string20 = /.{0,1000}mod_php\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string21 = /mod_php\.shell2\.htaccess/ nocase ascii wide
+        $string21 = /.{0,1000}mod_php\.shell2\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string22 = /mod_php\.stealth\-shell\.htaccess/ nocase ascii wide
+        $string22 = /.{0,1000}mod_php\.stealth\-shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string23 = /mod_python\.shell\.htaccess/ nocase ascii wide
+        $string23 = /.{0,1000}mod_python\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string24 = /mod_rivet\.shell\.htaccess/ nocase ascii wide
+        $string24 = /.{0,1000}mod_rivet\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string25 = /mod_ruby\.shell\.htaccess/ nocase ascii wide
+        $string25 = /.{0,1000}mod_ruby\.shell\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string26 = /mod_sendmail\.rce\.htaccess/ nocase ascii wide
+        $string26 = /.{0,1000}mod_sendmail\.rce\.htaccess.{0,1000}/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string27 = /wireghoul\/htshells/ nocase ascii wide
+        $string27 = /.{0,1000}wireghoul\/htshells.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

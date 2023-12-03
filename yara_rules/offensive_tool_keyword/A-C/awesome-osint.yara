@@ -10,7 +10,7 @@ rule awesome_osint
     strings:
         // Description: A curated list of amazingly awesome open source intelligence tools and resources. Open-source intelligence (OSINT) is intelligence collected from publicly available sources. In the intelligence community (IC). the term open refers to overt. publicly available sources (as opposed to covert or clandestine sources)
         // Reference: https://github.com/jivoi/awesome-osint
-        $string1 = /awesome\-osint/ nocase ascii wide
+        $string1 = /.{0,1000}awesome\-osint.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule backdoor_keyword
     strings:
         // Description: keyword observed in multiple backdoor tools
         // Reference: N/A
-        $string1 = /Backdoor\./ nocase ascii wide
+        $string1 = /.{0,1000}Backdoor\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

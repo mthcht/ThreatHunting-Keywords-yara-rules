@@ -10,16 +10,16 @@ rule NTLMRelay2Self
     strings:
         // Description: An other No-Fix LPE - NTLMRelay2Self over HTTP (Webdav).
         // Reference: https://github.com/med0x2e/NTLMRelay2Self
-        $string1 = /\/NTLMRelay2Self/ nocase ascii wide
+        $string1 = /.{0,1000}\/NTLMRelay2Self.{0,1000}/ nocase ascii wide
         // Description: An other No-Fix LPE - NTLMRelay2Self over HTTP (Webdav).
         // Reference: https://github.com/med0x2e/NTLMRelay2Self
-        $string2 = /\\NTLMRelay2Self/ nocase ascii wide
+        $string2 = /.{0,1000}\\NTLMRelay2Self.{0,1000}/ nocase ascii wide
         // Description: An other No-Fix LPE - NTLMRelay2Self over HTTP (Webdav).
         // Reference: https://github.com/med0x2e/NTLMRelay2Self
-        $string3 = /inline\-execute\sStartWebClientSvc\.x64\.o/ nocase ascii wide
+        $string3 = /.{0,1000}inline\-execute\sStartWebClientSvc\.x64\.o.{0,1000}/ nocase ascii wide
         // Description: An other No-Fix LPE - NTLMRelay2Self over HTTP (Webdav).
         // Reference: https://github.com/med0x2e/NTLMRelay2Self
-        $string4 = /NTLMRelay2Self\.git/ nocase ascii wide
+        $string4 = /.{0,1000}NTLMRelay2Self\.git.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

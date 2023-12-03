@@ -10,100 +10,100 @@ rule chisel
     strings:
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string1 = /\sinstall\schisel/ nocase ascii wide
+        $string1 = /.{0,1000}\sinstall\schisel.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string2 = /\/chisel\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/chisel\.exe.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string3 = /\/chisel\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/chisel\.git.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string4 = /\/chisel\/client\// nocase ascii wide
+        $string4 = /.{0,1000}\/chisel\/client\/.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string5 = /\/chisel\/server\// nocase ascii wide
+        $string5 = /.{0,1000}\/chisel\/server\/.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string6 = /\/chisel\@latest/ nocase ascii wide
+        $string6 = /.{0,1000}\/chisel\@latest.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string7 = /\/chisel\-darwin_amd64/ nocase ascii wide
+        $string7 = /.{0,1000}\/chisel\-darwin_amd64.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string8 = /\/chisel\-freebsd/ nocase ascii wide
+        $string8 = /.{0,1000}\/chisel\-freebsd.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string9 = /\/chisel\-linux_/ nocase ascii wide
+        $string9 = /.{0,1000}\/chisel\-linux_.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string10 = /\/chisel\-master/ nocase ascii wide
+        $string10 = /.{0,1000}\/chisel\-master.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string11 = /\/chisel\-windows_amd6/ nocase ascii wide
+        $string11 = /.{0,1000}\/chisel\-windows_amd6.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string12 = /\\chisel\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}\\chisel\.exe.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string13 = /\\chisel\\client\\/ nocase ascii wide
+        $string13 = /.{0,1000}\\chisel\\client\\.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string14 = /\\chisel\\server\\/ nocase ascii wide
+        $string14 = /.{0,1000}\\chisel\\server\\.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string15 = /\\chisel\-master/ nocase ascii wide
+        $string15 = /.{0,1000}\\chisel\-master.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string16 = /chisel\s\-/ nocase ascii wide
+        $string16 = /.{0,1000}chisel\s\-.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string17 = /chisel\sclient\s\-/ nocase ascii wide
+        $string17 = /.{0,1000}chisel\sclient\s\-.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string18 = /chisel\sclient\shttp/ nocase ascii wide
+        $string18 = /.{0,1000}chisel\sclient\shttp.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string19 = /chisel\sserver\s\-/ nocase ascii wide
+        $string19 = /.{0,1000}chisel\sserver\s\-.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string20 = /chisel\.exe\sclient/ nocase ascii wide
+        $string20 = /.{0,1000}chisel\.exe\sclient.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string21 = /chisel\.exe\sserver/ nocase ascii wide
+        $string21 = /.{0,1000}chisel\.exe\sserver.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string22 = /chisel\.jpillora\.com/ nocase ascii wide
+        $string22 = /.{0,1000}chisel\.jpillora\.com.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string23 = /chisel_1.*_darwin_.*\.gz/ nocase ascii wide
+        $string23 = /.{0,1000}chisel_1.{0,1000}_darwin_.{0,1000}\.gz.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string24 = /chisel_1.*_linux_.*\.gz/ nocase ascii wide
+        $string24 = /.{0,1000}chisel_1.{0,1000}_linux_.{0,1000}\.gz.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string25 = /chisel_linux_amd64/ nocase ascii wide
+        $string25 = /.{0,1000}chisel_linux_amd64.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string26 = /chisel_windows_amd64\.exe/ nocase ascii wide
+        $string26 = /.{0,1000}chisel_windows_amd64\.exe.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string27 = /chisel\-master\.zip/ nocase ascii wide
+        $string27 = /.{0,1000}chisel\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string28 = /jpillora\/chisel/ nocase ascii wide
+        $string28 = /.{0,1000}jpillora\/chisel.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string29 = /\-local\=0\.0\.0\.0:4001/ nocase ascii wide
+        $string29 = /.{0,1000}\-local\=0\.0\.0\.0:4001.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string30 = /\-\-name\schisel\s\-p\s/ nocase ascii wide
+        $string30 = /.{0,1000}\-\-name\schisel\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string31 = /\-remote\=127\.0\.0\.1:3000/ nocase ascii wide
+        $string31 = /.{0,1000}\-remote\=127\.0\.0\.1:3000.{0,1000}/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string32 = /\-server\=http:\/\/127\.0\.0\.1:4002/ nocase ascii wide
+        $string32 = /.{0,1000}\-server\=http:\/\/127\.0\.0\.1:4002.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

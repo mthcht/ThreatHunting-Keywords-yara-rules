@@ -10,46 +10,46 @@ rule RustHound
     strings:
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string1 = /\s\-\-adcs\s\-\-old\-bloodhound\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-adcs\s\-\-old\-bloodhound\s.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string2 = /\srusthound\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\srusthound\.exe.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string3 = /\/rusthound\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}\/rusthound\.exe.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string4 = /\/RustHound\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/RustHound\.git.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string5 = /\\rusthound\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}\\rusthound\.exe.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string6 = /OPENCYBER\-FR\/RustHound/ nocase ascii wide
+        $string6 = /.{0,1000}OPENCYBER\-FR\/RustHound.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string7 = /rusthound\s.*\-\-domain/ nocase ascii wide
+        $string7 = /.{0,1000}rusthound\s.{0,1000}\-\-domain.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string8 = /rusthound\s.*\-\-ldapfqdn\s/ nocase ascii wide
+        $string8 = /.{0,1000}rusthound\s.{0,1000}\-\-ldapfqdn\s.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string9 = /rusthound\s.*\-ldaps\s/ nocase ascii wide
+        $string9 = /.{0,1000}rusthound\s.{0,1000}\-ldaps\s.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string10 = /rusthound\s\-d\s/ nocase ascii wide
+        $string10 = /.{0,1000}rusthound\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string11 = /rusthound.*\s\-\-adcs\s\-\-dc\-only/ nocase ascii wide
+        $string11 = /.{0,1000}rusthound.{0,1000}\s\-\-adcs\s\-\-dc\-only.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string12 = /rusthound\.exe\s/ nocase ascii wide
+        $string12 = /.{0,1000}rusthound\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string13 = /RustHound\-main/ nocase ascii wide
+        $string13 = /.{0,1000}RustHound\-main.{0,1000}/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string14 = /usr\/src\/rusthound\srusthound\s/ nocase ascii wide
+        $string14 = /.{0,1000}usr\/src\/rusthound\srusthound\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

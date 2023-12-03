@@ -10,25 +10,25 @@ rule RuralBishop
     strings:
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string1 = /\/RuralBishop\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/RuralBishop\.git.{0,1000}/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string2 = /FE4414D9\-1D7E\-4EEB\-B781\-D278FE7A5619/ nocase ascii wide
+        $string2 = /.{0,1000}FE4414D9\-1D7E\-4EEB\-B781\-D278FE7A5619.{0,1000}/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string3 = /rasta\-mouse\/RuralBishop/ nocase ascii wide
+        $string3 = /.{0,1000}rasta\-mouse\/RuralBishop.{0,1000}/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string4 = /RuralBishop\.csproj/ nocase ascii wide
+        $string4 = /.{0,1000}RuralBishop\.csproj.{0,1000}/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string5 = /RuralBishop\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}RuralBishop\.exe.{0,1000}/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string6 = /RuralBishop\.sln/ nocase ascii wide
+        $string6 = /.{0,1000}RuralBishop\.sln.{0,1000}/ nocase ascii wide
         // Description: creates a local RW section in UrbanBishop and then maps that section as RX into a remote process
         // Reference: https://github.com/rasta-mouse/RuralBishop
-        $string7 = /RuralBishop\-master/ nocase ascii wide
+        $string7 = /.{0,1000}RuralBishop\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

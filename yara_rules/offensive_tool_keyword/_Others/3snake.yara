@@ -10,25 +10,25 @@ rule _3snake
     strings:
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string1 = /\.\/snake/ nocase ascii wide
+        $string1 = /.{0,1000}\.\/snake/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string2 = /\/3snake\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/3snake\.git.{0,1000}/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string3 = /\/passwd_tracer\.c/ nocase ascii wide
+        $string3 = /.{0,1000}\/passwd_tracer\.c.{0,1000}/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string4 = /\/sudo_tracer\.c/ nocase ascii wide
+        $string4 = /.{0,1000}\/sudo_tracer\.c.{0,1000}/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string5 = /\/tracers_fuzzer\.cc/ nocase ascii wide
+        $string5 = /.{0,1000}\/tracers_fuzzer\.cc.{0,1000}/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string6 = /3snake\-master/ nocase ascii wide
+        $string6 = /.{0,1000}3snake\-master.{0,1000}/ nocase ascii wide
         // Description: Tool for extracting information from newly spawned processes
         // Reference: https://github.com/blendin/3snake
-        $string7 = /blendin\/3snake/ nocase ascii wide
+        $string7 = /.{0,1000}blendin\/3snake.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

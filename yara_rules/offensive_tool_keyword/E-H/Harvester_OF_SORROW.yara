@@ -10,13 +10,13 @@ rule Harvester_OF_SORROW
     strings:
         // Description: The payload opens firefox about:logins and tabs and arrows its way through options. It then takes a screen shot with the first set of log in credentials made visible. Finally it sends the screenshot  to an email of your choosing.
         // Reference: https://github.com/hak5/omg-payloads/blob/master/payloads/library/credentials/Harvester_OF_SORROW/payload.txt
-        $string1 = /\sPictures\\Screenshots\\loot\.zip/ nocase ascii wide
+        $string1 = /.{0,1000}\sPictures\\Screenshots\\loot\.zip.{0,1000}/ nocase ascii wide
         // Description: The payload opens firefox about:logins and tabs and arrows its way through options. It then takes a screen shot with the first set of log in credentials made visible. Finally it sends the screenshot  to an email of your choosing.
         // Reference: https://github.com/hak5/omg-payloads/blob/master/payloads/library/credentials/Harvester_OF_SORROW/payload.txt
-        $string2 = /REM\sTitle:\sHarvester_OF_SORROW/ nocase ascii wide
+        $string2 = /.{0,1000}REM\sTitle:\sHarvester_OF_SORROW.{0,1000}/ nocase ascii wide
         // Description: The payload opens firefox about:logins and tabs and arrows its way through options. It then takes a screen shot with the first set of log in credentials made visible. Finally it sends the screenshot  to an email of your choosing.
         // Reference: https://github.com/hak5/omg-payloads/blob/master/payloads/library/credentials/Harvester_OF_SORROW/payload.txt
-        $string3 = /STRING\sfirefox\sabout:logins/ nocase ascii wide
+        $string3 = /.{0,1000}STRING\sfirefox\sabout:logins.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

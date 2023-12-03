@@ -10,19 +10,19 @@ rule JunctionFolder
     strings:
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
-        $string1 = /\%APPDATA\%\/Indexing\./ nocase ascii wide
+        $string1 = /.{0,1000}\%APPDATA\%\/Indexing\..{0,1000}/ nocase ascii wide
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
-        $string2 = /\/master\/JunctionFolder\// nocase ascii wide
+        $string2 = /.{0,1000}\/master\/JunctionFolder\/.{0,1000}/ nocase ascii wide
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
-        $string3 = /\\JunctionFolder\.csproj/ nocase ascii wide
+        $string3 = /.{0,1000}\\JunctionFolder\.csproj.{0,1000}/ nocase ascii wide
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
-        $string4 = /C:\\Users\\.*\\AppData\\Roaming\\Indexing\./ nocase ascii wide
+        $string4 = /.{0,1000}C:\\Users\\.{0,1000}\\AppData\\Roaming\\Indexing\..{0,1000}/ nocase ascii wide
         // Description: Creates a junction folder in the Windows Accessories Start Up folder as described in the Vault 7 leaks. On start or when a user browses the directory - the referenced DLL will be executed by verclsid.exe in medium integrity.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/JunctionFolder
-        $string5 = /JunctionFolder\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}JunctionFolder\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

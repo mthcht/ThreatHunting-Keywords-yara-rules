@@ -10,7 +10,7 @@ rule crack_sh
     strings:
         // Description: crack.sh THE WORLD???S FASTEST DES CRACKER. Used by attackers to submit passwords to crack
         // Reference: https://crack.sh/get-cracking/
-        $string1 = /\/\/crack\.sh\/get\-cracking\// nocase ascii wide
+        $string1 = /.{0,1000}\/\/crack\.sh\/get\-cracking\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

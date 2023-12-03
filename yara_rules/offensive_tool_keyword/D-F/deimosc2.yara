@@ -10,61 +10,61 @@ rule deimosc2
     strings:
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string1 = /\/collection\/screengrab/ nocase ascii wide
+        $string1 = /.{0,1000}\/collection\/screengrab.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string2 = /\/dlls\/c2\.c/ nocase ascii wide
+        $string2 = /.{0,1000}\/dlls\/c2\.c.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string3 = /\/gosecretsdump/ nocase ascii wide
+        $string3 = /.{0,1000}\/gosecretsdump.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string4 = /\/resources\/selfdestruction/ nocase ascii wide
+        $string4 = /.{0,1000}\/resources\/selfdestruction.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string5 = /\/shellinject/ nocase ascii wide
+        $string5 = /.{0,1000}\/shellinject.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string6 = /\/webshells\/shell\.aspx/ nocase ascii wide
+        $string6 = /.{0,1000}\/webshells\/shell\.aspx.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string7 = /\/webshells\/shell\.php/ nocase ascii wide
+        $string7 = /.{0,1000}\/webshells\/shell\.php.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string8 = /00000000000000000041d00000041d9535d5979f591ae8e547c5e5743e5b64/ nocase ascii wide
+        $string8 = /.{0,1000}00000000000000000041d00000041d9535d5979f591ae8e547c5e5743e5b64.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string9 = /04ca7e137e1e9feead96a7df45bb67d5ab3de190/ nocase ascii wide
+        $string9 = /.{0,1000}04ca7e137e1e9feead96a7df45bb67d5ab3de190.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string10 = /38ea755e162c55ef70f9506dddfd01641fc838926af9c43eda652da63c67058b/ nocase ascii wide
+        $string10 = /.{0,1000}38ea755e162c55ef70f9506dddfd01641fc838926af9c43eda652da63c67058b.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string11 = /DeimosC2/ nocase ascii wide
+        $string11 = /.{0,1000}DeimosC2.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string12 = /lsadump\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}lsadump\.exe.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string13 = /minidump\.exe/ nocase ascii wide
+        $string13 = /.{0,1000}minidump\.exe.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string14 = /module\sinject\s/ nocase ascii wide
+        $string14 = /.{0,1000}module\sinject\s.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string15 = /ntdsdump\.exe/ nocase ascii wide
+        $string15 = /.{0,1000}ntdsdump\.exe.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string16 = /samdump\.exe/ nocase ascii wide
+        $string16 = /.{0,1000}samdump\.exe.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string17 = /samdump\.py/ nocase ascii wide
+        $string17 = /.{0,1000}samdump\.py.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string18 = /screengrab\.exe/ nocase ascii wide
+        $string18 = /.{0,1000}screengrab\.exe.{0,1000}/ nocase ascii wide
         // Description: DeimosC2 is a Golang command and control framework for post-exploitation.
         // Reference: https://github.com/DeimosC2/DeimosC2
-        $string19 = /shadowdump\./ nocase ascii wide
+        $string19 = /.{0,1000}shadowdump\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule bash_keylogger
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1 = /history\s\-a.*\stail\s\-n1\s~\/\.bash_history\s\>\s\/dev\/tcp\/.*\// nocase ascii wide
+        $string1 = /.{0,1000}history\s\-a.{0,1000}\stail\s\-n1\s~\/\.bash_history\s\>\s\/dev\/tcp\/.{0,1000}\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

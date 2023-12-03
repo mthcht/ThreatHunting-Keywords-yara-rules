@@ -10,7 +10,7 @@ rule SQLiScanner
     strings:
         // Description: Automatic SQL injection with Charles and sqlmapapi
         // Reference: https://github.com/0xbug/SQLiScanner
-        $string1 = /SQLiScanner/ nocase ascii wide
+        $string1 = /.{0,1000}SQLiScanner.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

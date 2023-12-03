@@ -10,7 +10,7 @@ rule kekeo
     strings:
         // Description: access the LSA (Local Security Authority) and manipulate Kerberos tickets. potentially allowing adversaries to gain unauthorized access to Active Directory resources and CIFS file shares
         // Reference: https://github.com/gentilkiwi/kekeo
-        $string1 = /kirbikator\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}kirbikator\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

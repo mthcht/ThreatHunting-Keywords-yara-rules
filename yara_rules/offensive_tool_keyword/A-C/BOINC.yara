@@ -10,7 +10,7 @@ rule BOINC
     strings:
         // Description: Fake BOINC software distributed by discord - mars stealer
         // Reference: https://cyberint.com/wp-content/uploads/2022/02/Mars-Stealer-7.png.webp
-        $string1 = /discordapp\.com\/attachments\/.*\/BOINCPortable_.*\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}discordapp\.com\/attachments\/.{0,1000}\/BOINCPortable_.{0,1000}\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

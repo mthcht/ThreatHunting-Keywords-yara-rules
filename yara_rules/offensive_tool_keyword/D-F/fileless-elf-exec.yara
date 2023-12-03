@@ -10,34 +10,34 @@ rule fileless_elf_exec
     strings:
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string1 = /\.\/fee\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\.\/fee\.py.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string2 = /fee\s.*\/.*\s\-l\spl\s\|\sperl/ nocase ascii wide
+        $string2 = /.{0,1000}fee\s.{0,1000}\/.{0,1000}\s\-l\spl\s\|\sperl.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string3 = /fee\s.*\/.*\s\-l\spl\s\|\sruby/ nocase ascii wide
+        $string3 = /.{0,1000}fee\s.{0,1000}\/.{0,1000}\s\-l\spl\s\|\sruby.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string4 = /fee\s\-a\s.*killall\ssshd.*\s.*busybox/ nocase ascii wide
+        $string4 = /.{0,1000}fee\s\-a\s.{0,1000}killall\ssshd.{0,1000}\s.{0,1000}busybox.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string5 = /fee\s\-c\s.*\/.*\s\|\sssh\s.*\@/ nocase ascii wide
+        $string5 = /.{0,1000}fee\s\-c\s.{0,1000}\/.{0,1000}\s\|\sssh\s.{0,1000}\@.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string6 = /fee\s\-c\s.*\/.*\s\-w\s64\s\|\s/ nocase ascii wide
+        $string6 = /.{0,1000}fee\s\-c\s.{0,1000}\/.{0,1000}\s\-w\s64\s\|\s.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string7 = /fileless\-elf\-exec/ nocase ascii wide
+        $string7 = /.{0,1000}fileless\-elf\-exec.{0,1000}/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string8 = /pip\sinstall\s\-\-user\sfee/ nocase ascii wide
+        $string8 = /.{0,1000}pip\sinstall\s\-\-user\sfee/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string9 = /pipx\sinstall\sfee/ nocase ascii wide
+        $string9 = /.{0,1000}pipx\sinstall\sfee/ nocase ascii wide
         // Description: Execute ELF files without dropping them on disk
         // Reference: https://github.com/nnsee/fileless-elf-exec
-        $string10 = /python3\sfee\.py/ nocase ascii wide
+        $string10 = /.{0,1000}python3\sfee\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule ad_ldap_enum
     strings:
         // Description: An LDAP based Active Directory user and group enumeration tool
         // Reference: https://github.com/CroweCybersecurity/ad-ldap-enum
-        $string1 = /\s\-p\s\'aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0\'/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-p\s\'aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0\'.{0,1000}/ nocase ascii wide
         // Description: An LDAP based Active Directory user and group enumeration tool
         // Reference: https://github.com/CroweCybersecurity/ad-ldap-enum
-        $string2 = /\/ad\-ldap\-enum\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/ad\-ldap\-enum\.git.{0,1000}/ nocase ascii wide
         // Description: An LDAP based Active Directory user and group enumeration tool
         // Reference: https://github.com/CroweCybersecurity/ad-ldap-enum
-        $string3 = /ad\-ldap\-enum\.py/ nocase ascii wide
+        $string3 = /.{0,1000}ad\-ldap\-enum\.py.{0,1000}/ nocase ascii wide
         // Description: An LDAP based Active Directory user and group enumeration tool
         // Reference: https://github.com/CroweCybersecurity/ad-ldap-enum
-        $string4 = /ad\-ldap\-enum\-main/ nocase ascii wide
+        $string4 = /.{0,1000}ad\-ldap\-enum\-main.{0,1000}/ nocase ascii wide
         // Description: An LDAP based Active Directory user and group enumeration tool
         // Reference: https://github.com/CroweCybersecurity/ad-ldap-enum
-        $string5 = /CroweCybersecurity\/ad\-ldap\-enum/ nocase ascii wide
+        $string5 = /.{0,1000}CroweCybersecurity\/ad\-ldap\-enum.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

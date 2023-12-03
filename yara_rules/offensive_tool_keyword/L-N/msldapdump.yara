@@ -10,25 +10,25 @@ rule msldapdump
     strings:
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string1 = /\.adminusers\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}\.adminusers\.txt.{0,1000}/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string2 = /\.asreproast\.txt/ nocase ascii wide
+        $string2 = /.{0,1000}\.asreproast\.txt.{0,1000}/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string3 = /\.kerberoast\.txt/ nocase ascii wide
+        $string3 = /.{0,1000}\.kerberoast\.txt.{0,1000}/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string4 = /\.ldapdump\.txt/ nocase ascii wide
+        $string4 = /.{0,1000}\.ldapdump\.txt.{0,1000}/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string5 = /\.unconstrained\.txt/ nocase ascii wide
+        $string5 = /.{0,1000}\.unconstrained\.txt.{0,1000}/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string6 = /\/msLDAPDump/ nocase ascii wide
+        $string6 = /.{0,1000}\/msLDAPDump.{0,1000}/ nocase ascii wide
         // Description: LDAP enumeration tool implemented in Python3
         // Reference: https://github.com/dievus/msLDAPDump
-        $string7 = /msLDAPDump\.py/ nocase ascii wide
+        $string7 = /.{0,1000}msLDAPDump\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

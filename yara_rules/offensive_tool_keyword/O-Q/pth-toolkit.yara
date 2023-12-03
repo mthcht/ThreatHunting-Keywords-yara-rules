@@ -10,25 +10,25 @@ rule pth_toolkit
     strings:
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string1 = /pth\-rpcclient/ nocase ascii wide
+        $string1 = /.{0,1000}pth\-rpcclient.{0,1000}/ nocase ascii wide
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string2 = /pth\-smbclient/ nocase ascii wide
+        $string2 = /.{0,1000}pth\-smbclient.{0,1000}/ nocase ascii wide
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string3 = /pth\-smbget/ nocase ascii wide
+        $string3 = /.{0,1000}pth\-smbget.{0,1000}/ nocase ascii wide
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string4 = /pth\-toolkit/ nocase ascii wide
+        $string4 = /.{0,1000}pth\-toolkit.{0,1000}/ nocase ascii wide
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string5 = /pth\-winexe/ nocase ascii wide
+        $string5 = /.{0,1000}pth\-winexe.{0,1000}/ nocase ascii wide
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string6 = /pth\-wmic/ nocase ascii wide
+        $string6 = /.{0,1000}pth\-wmic.{0,1000}/ nocase ascii wide
         // Description: A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
         // Reference: https://github.com/byt3bl33d3r/pth-toolkit
-        $string7 = /pth\-wmis/ nocase ascii wide
+        $string7 = /.{0,1000}pth\-wmis.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

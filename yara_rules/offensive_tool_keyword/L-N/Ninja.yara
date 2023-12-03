@@ -10,151 +10,151 @@ rule Ninja
     strings:
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string1 = /\sNinja\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\sNinja\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string2 = /\sstart_campaign\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\sstart_campaign\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string3 = /\.\/Ninja\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\.\/Ninja\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string4 = /\/ahmedkhlief\/Ninja\// nocase ascii wide
+        $string4 = /.{0,1000}\/ahmedkhlief\/Ninja\/.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string5 = /\/ninja\.crt/ nocase ascii wide
+        $string5 = /.{0,1000}\/ninja\.crt.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string6 = /\/Ninja\.git/ nocase ascii wide
+        $string6 = /.{0,1000}\/Ninja\.git.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string7 = /\/ninja\.key/ nocase ascii wide
+        $string7 = /.{0,1000}\/ninja\.key.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string8 = /\/Ninja\.py/ nocase ascii wide
+        $string8 = /.{0,1000}\/Ninja\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string9 = /\/opt\/Ninja\// nocase ascii wide
+        $string9 = /.{0,1000}\/opt\/Ninja\/.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string10 = /\/payload2\.ps1/ nocase ascii wide
+        $string10 = /.{0,1000}\/payload2\.ps1.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string11 = /\/start_campaign\.py/ nocase ascii wide
+        $string11 = /.{0,1000}\/start_campaign\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string12 = /\/webshell\.py/ nocase ascii wide
+        $string12 = /.{0,1000}\/webshell\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string13 = /\\Ninja\.py/ nocase ascii wide
+        $string13 = /.{0,1000}\\Ninja\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string14 = /\\start_campaign\.py/ nocase ascii wide
+        $string14 = /.{0,1000}\\start_campaign\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string15 = /agents\/Follina\-2/ nocase ascii wide
+        $string15 = /.{0,1000}agents\/Follina\-2.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string16 = /ahmedkhlief\/Ninja/ nocase ascii wide
+        $string16 = /.{0,1000}ahmedkhlief\/Ninja.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string17 = /ahmedkhlief\/Ninja/ nocase ascii wide
+        $string17 = /.{0,1000}ahmedkhlief\/Ninja.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string18 = /AMSI_Bypass\.ps1/ nocase ascii wide
+        $string18 = /.{0,1000}AMSI_Bypass\.ps1.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string19 = /ASBBypass\.ps1/ nocase ascii wide
+        $string19 = /.{0,1000}ASBBypass\.ps1.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string20 = /b64stager/ nocase ascii wide
+        $string20 = /.{0,1000}b64stager.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string21 = /\'C2Default\'/ nocase ascii wide
+        $string21 = /.{0,1000}\'C2Default\'.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string22 = /c2\-logs\.txt/ nocase ascii wide
+        $string22 = /.{0,1000}c2\-logs\.txt.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string23 = /cmd_shellcodex64\./ nocase ascii wide
+        $string23 = /.{0,1000}cmd_shellcodex64\..{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string24 = /cmd_shellcodex86\./ nocase ascii wide
+        $string24 = /.{0,1000}cmd_shellcodex86\..{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string25 = /create\-aws\-instance\.py/ nocase ascii wide
+        $string25 = /.{0,1000}create\-aws\-instance\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string26 = /donut\-shellcode/ nocase ascii wide
+        $string26 = /.{0,1000}donut\-shellcode.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string27 = /dropper_cs\.exe/ nocase ascii wide
+        $string27 = /.{0,1000}dropper_cs\.exe.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string28 = /Find\-PSServiceAccounts\.ps1/ nocase ascii wide
+        $string28 = /.{0,1000}Find\-PSServiceAccounts\.ps1.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string29 = /Follina\.Ninja/ nocase ascii wide
+        $string29 = /.{0,1000}Follina\.Ninja.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string30 = /Follina\/follina\.html/ nocase ascii wide
+        $string30 = /.{0,1000}Follina\/follina\.html.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string31 = /Follina\/Follinadoc/ nocase ascii wide
+        $string31 = /.{0,1000}Follina\/Follinadoc.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string32 = /get_beacon\(/ nocase ascii wide
+        $string32 = /.{0,1000}get_beacon\(.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string33 = /Invoke\-Kerberoast/ nocase ascii wide
+        $string33 = /.{0,1000}Invoke\-Kerberoast.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string34 = /Invoke\-Kerberoast\.ps1/ nocase ascii wide
+        $string34 = /.{0,1000}Invoke\-Kerberoast\.ps1.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string35 = /Invoke\-Mimikatz\-old/ nocase ascii wide
+        $string35 = /.{0,1000}Invoke\-Mimikatz\-old.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string36 = /Invoke\-WMIExec/ nocase ascii wide
+        $string36 = /.{0,1000}Invoke\-WMIExec.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string37 = /Kerberoast\.py/ nocase ascii wide
+        $string37 = /.{0,1000}Kerberoast\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string38 = /Ninja\sc2/ nocase ascii wide
+        $string38 = /.{0,1000}Ninja\sc2.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string39 = /ninjac2/ nocase ascii wide
+        $string39 = /.{0,1000}ninjac2.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string40 = /Obfuscate\.py/ nocase ascii wide
+        $string40 = /.{0,1000}Obfuscate\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string41 = /payloads\/Follina/ nocase ascii wide
+        $string41 = /.{0,1000}payloads\/Follina.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string42 = /payloads\/Powershell/ nocase ascii wide
+        $string42 = /.{0,1000}payloads\/Powershell.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string43 = /payloads\/shellcodes/ nocase ascii wide
+        $string43 = /.{0,1000}payloads\/shellcodes.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string44 = /python3\sNinja\.py/ nocase ascii wide
+        $string44 = /.{0,1000}python3\sNinja\.py.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string45 = /safetydump\.ninja/ nocase ascii wide
+        $string45 = /.{0,1000}safetydump\.ninja.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string46 = /safetydump\.ninja/ nocase ascii wide
+        $string46 = /.{0,1000}safetydump\.ninja.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string47 = /SharpHound\.ps1/ nocase ascii wide
+        $string47 = /.{0,1000}SharpHound\.ps1.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string48 = /simple_dropper\.ninja/ nocase ascii wide
+        $string48 = /.{0,1000}simple_dropper\.ninja.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
-        $string49 = /webshell_execute/ nocase ascii wide
+        $string49 = /.{0,1000}webshell_execute.{0,1000}/ nocase ascii wide
         // Description: Open source C2 server created for stealth red team operations
         // Reference: https://github.com/ahmedkhlief/Ninja
         $string50 = /python3\sstart_campaign\.py/ nocase ascii wide

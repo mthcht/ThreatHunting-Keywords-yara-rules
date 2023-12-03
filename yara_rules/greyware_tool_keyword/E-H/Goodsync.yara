@@ -10,31 +10,31 @@ rule Goodsync
     strings:
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string1 = /\/GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\/GoodSync\-vsub\-Setup\.exe.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string2 = /\\GoodSync\-2.*\-.*\.log/ nocase ascii wide
+        $string2 = /.{0,1000}\\GoodSync\-2.{0,1000}\-.{0,1000}\.log.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string3 = /\\GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}\\GoodSync\-vsub\-Setup\.exe.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string4 = /\\Siber\sSystems\\GoodSync\\/ nocase ascii wide
+        $string4 = /.{0,1000}\\Siber\sSystems\\GoodSync\\.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string5 = /\\Users\\.*\\AppData\\Local\\GoodSync/ nocase ascii wide
+        $string5 = /.{0,1000}\\Users\\.{0,1000}\\AppData\\Local\\GoodSync.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string6 = /Copy\sNew\s.*gdrive:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
+        $string6 = /.{0,1000}Copy\sNew\s.{0,1000}gdrive:\/\/www\.googleapis\.com\/GS_Sync\/.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string7 = /Copy\sNew\s.*sftp:\/\// nocase ascii wide
+        $string7 = /.{0,1000}Copy\sNew\s.{0,1000}sftp:\/\/.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string8 = /GoodSync\sServer/ nocase ascii wide
+        $string8 = /.{0,1000}GoodSync\sServer.{0,1000}/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string9 = /GoodSync\-vsub\-2Go\-Setup\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}GoodSync\-vsub\-2Go\-Setup\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

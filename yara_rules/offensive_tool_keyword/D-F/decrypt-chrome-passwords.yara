@@ -10,13 +10,13 @@ rule decrypt_chrome_passwords
     strings:
         // Description: A simple program to decrypt chrome password saved on your machine.
         // Reference: https://github.com/ohyicong/decrypt-chrome-passwords
-        $string1 = /\/decrypt\-chrome\-passwords/ nocase ascii wide
+        $string1 = /.{0,1000}\/decrypt\-chrome\-passwords.{0,1000}/ nocase ascii wide
         // Description: A simple program to decrypt chrome password saved on your machine.
         // Reference: https://github.com/ohyicong/decrypt-chrome-passwords
-        $string2 = /decrypt_chrome_password\.py/ nocase ascii wide
+        $string2 = /.{0,1000}decrypt_chrome_password\.py.{0,1000}/ nocase ascii wide
         // Description: A simple program to decrypt chrome password saved on your machine.
         // Reference: https://github.com/ohyicong/decrypt-chrome-passwords
-        $string3 = /decrypt\-chrome\-passwords\-main/ nocase ascii wide
+        $string3 = /.{0,1000}decrypt\-chrome\-passwords\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,34 +10,34 @@ rule adfspray
     strings:
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string1 = /\s\-t\s.*https:\/\/autodiscover\..*\/autodiscover\/autodiscover\.xml.*autodiscover/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-t\s.{0,1000}https:\/\/autodiscover\..{0,1000}\/autodiscover\/autodiscover\.xml.{0,1000}autodiscover.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string2 = /\s\-user\s.*\s\-\-passwordlist\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-user\s.{0,1000}\s\-\-passwordlist\s.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string3 = /\/ADFSpray/ nocase ascii wide
+        $string3 = /.{0,1000}\/ADFSpray.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string4 = /\[.*\]\sOverall\scompromised\saccounts:\s/ nocase ascii wide
+        $string4 = /.{0,1000}\[.{0,1000}\]\sOverall\scompromised\saccounts:\s.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string5 = /\[\+\]\sSeems\slike\sthe\screds\sare\svalid:\s.*\s::\s.*\son\s/ nocase ascii wide
+        $string5 = /.{0,1000}\[\+\]\sSeems\slike\sthe\screds\sare\svalid:\s.{0,1000}\s::\s.{0,1000}\son\s.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string6 = /\\ADFSpray/ nocase ascii wide
+        $string6 = /.{0,1000}\\ADFSpray.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string7 = /ADFSpray\.csv/ nocase ascii wide
+        $string7 = /.{0,1000}ADFSpray\.csv.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string8 = /adfspray\.git/ nocase ascii wide
+        $string8 = /.{0,1000}adfspray\.git.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string9 = /ADFSpray\.py/ nocase ascii wide
+        $string9 = /.{0,1000}ADFSpray\.py.{0,1000}/ nocase ascii wide
         // Description: Python3 tool to perform password spraying against Microsoft Online service using various methods
         // Reference: https://github.com/xFreed0m/ADFSpray
-        $string10 = /Total\snumber\sof\spasswords\sto\stest:\s/ nocase ascii wide
+        $string10 = /.{0,1000}Total\snumber\sof\spasswords\sto\stest:\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

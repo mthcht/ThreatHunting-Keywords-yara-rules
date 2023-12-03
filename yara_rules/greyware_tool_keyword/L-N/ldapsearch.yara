@@ -10,13 +10,13 @@ rule ldapsearch
     strings:
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string1 = /ldapsearch\s.*\sldap:\/\// nocase ascii wide
+        $string1 = /.{0,1000}ldapsearch\s.{0,1000}\sldap:\/\/.{0,1000}/ nocase ascii wide
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string2 = /ldapsearch\s\-x\s\-h\s.*\s\-s\sbase/ nocase ascii wide
+        $string2 = /.{0,1000}ldapsearch\s\-x\s\-h\s.{0,1000}\s\-s\sbase.{0,1000}/ nocase ascii wide
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string3 = /ldapsearch\s\-h\s.*\s\-x/ nocase ascii wide
+        $string3 = /ldapsearch\s\-h\s.{0,1000}\s\-x.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

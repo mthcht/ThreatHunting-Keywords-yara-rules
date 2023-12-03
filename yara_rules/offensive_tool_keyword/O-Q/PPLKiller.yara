@@ -10,34 +10,34 @@ rule PPLKiller
     strings:
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string1 = /\.exe\s\/disableLSAProtection/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\s\/disableLSAProtection.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string2 = /\/PPLKiller\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/PPLKiller\.git.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string3 = /\/PPLKiller\// nocase ascii wide
+        $string3 = /.{0,1000}\/PPLKiller\/.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string4 = /\\PPLKiller/ nocase ascii wide
+        $string4 = /.{0,1000}\\PPLKiller.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string5 = /\\Temp\\RTCore64\.sys/ nocase ascii wide
+        $string5 = /.{0,1000}\\Temp\\RTCore64\.sys.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string6 = /PPLKiller\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}PPLKiller\.exe.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string7 = /PPLKiller\.sln/ nocase ascii wide
+        $string7 = /.{0,1000}PPLKiller\.sln.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string8 = /PPLKiller\.vcxproj/ nocase ascii wide
+        $string8 = /.{0,1000}PPLKiller\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string9 = /PPLKiller\-master/ nocase ascii wide
+        $string9 = /.{0,1000}PPLKiller\-master.{0,1000}/ nocase ascii wide
         // Description: Tool to bypass LSA Protection (aka Protected Process Light)
         // Reference: https://github.com/RedCursorSecurityConsulting/PPLKiller
-        $string10 = /processPIDByName.*lsass\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}processPIDByName.{0,1000}lsass\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

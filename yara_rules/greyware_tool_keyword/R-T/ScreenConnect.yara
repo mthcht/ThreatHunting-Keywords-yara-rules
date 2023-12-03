@@ -10,31 +10,31 @@ rule ScreenConnect
     strings:
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string1 = /\\ScreenConnect\.Client\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\\ScreenConnect\.Client\.exe.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string2 = /\\ScreenConnect\.ClientService\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\\ScreenConnect\.ClientService\.exe.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string3 = /\\ScreenConnect\.ClientSetup\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}\\ScreenConnect\.ClientSetup\.exe.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string4 = /\\ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}\\ScreenConnect\.WindowsBackstageShell\.exe.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string5 = /\\ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}\\ScreenConnect\.WindowsClient\.exe.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string6 = /\\TEMP\\ScreenConnect\\.*\.ps1/ nocase ascii wide
+        $string6 = /.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string7 = /cmd\.exe.*\\TEMP\\ScreenConnect\\.*\.cmd/ nocase ascii wide
+        $string7 = /.{0,1000}cmd\.exe.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.cmd.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string8 = /https:\/\/.*\.screenconnect\.com\/Bin\/.*\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}https:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string9 = /server.*\-relay\.screenconnect\.com/ nocase ascii wide
+        $string9 = /.{0,1000}server.{0,1000}\-relay\.screenconnect\.com.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

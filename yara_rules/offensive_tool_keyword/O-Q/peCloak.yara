@@ -10,7 +10,7 @@ rule peCloak
     strings:
         // Description: peCloak.py (beta) - A Multi-Pass Encoder & Heuristic Sandbox Bypass AV Evasion Tool
         // Reference: https://github.com/v-p-b/peCloakCapstone/blob/master/peCloak.py
-        $string1 = /peCloak/ nocase ascii wide
+        $string1 = /.{0,1000}peCloak.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

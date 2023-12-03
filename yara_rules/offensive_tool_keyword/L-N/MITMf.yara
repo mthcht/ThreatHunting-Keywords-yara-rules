@@ -10,7 +10,7 @@ rule MITMf
     strings:
         // Description: Framework for Man-In-The-Middle attacks
         // Reference: https://github.com/byt3bl33d3r/MITMf
-        $string1 = /MITMf\.py/ nocase ascii wide
+        $string1 = /.{0,1000}MITMf\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

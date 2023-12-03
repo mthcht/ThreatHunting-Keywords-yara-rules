@@ -10,7 +10,7 @@ rule BaRMIe
     strings:
         // Description: BaRMIe is a tool for enumerating and attacking Java RMI (Remote Method Invocation) services.
         // Reference: https://github.com/NickstaDB/BaRMIe
-        $string1 = /BaRMIe/ nocase ascii wide
+        $string1 = /.{0,1000}BaRMIe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

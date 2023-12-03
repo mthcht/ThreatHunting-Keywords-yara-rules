@@ -10,37 +10,37 @@ rule pingcastle
     strings:
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://github.com/sense-of-security/ADRecon
-        $string1 = /\/ADRecon/ nocase ascii wide
+        $string1 = /.{0,1000}\/ADRecon.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string2 = /ACLScanner\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}ACLScanner\.exe.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string3 = /bluekeepscanner\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}bluekeepscanner\.exe.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://github.com/vletoux/pingcastle
-        $string4 = /NullSessionScanner\./ nocase ascii wide
+        $string4 = /.{0,1000}NullSessionScanner\..{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan
         // Reference: https://www.pingcastle.com/
-        $string5 = /pingcastle/ nocase ascii wide
+        $string5 = /.{0,1000}pingcastle.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string6 = /PingCastle\.cs/ nocase ascii wide
+        $string6 = /.{0,1000}PingCastle\.cs.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string7 = /PingCastle\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}PingCastle\.exe.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string8 = /RemoteScanner\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}RemoteScanner\.exe.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string9 = /ROCAVulnerabilityTester/ nocase ascii wide
+        $string9 = /.{0,1000}ROCAVulnerabilityTester.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string10 = /SmbScanner\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}SmbScanner\.exe.{0,1000}/ nocase ascii wide
         // Description: active directory weakness scan Vulnerability scanner and Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/vletoux/pingcastle
-        $string11 = /ZeroLogonScanner\./ nocase ascii wide
+        $string11 = /.{0,1000}ZeroLogonScanner\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

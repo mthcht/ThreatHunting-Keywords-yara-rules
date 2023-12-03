@@ -10,85 +10,85 @@ rule PEASS
     strings:
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string1 = /\slinpeas\.sh\s/ nocase ascii wide
+        $string1 = /.{0,1000}\slinpeas\.sh\s.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string2 = /\s\-linpeas\=http:\/\/127\.0\.0\.1\/linpeas\.sh/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-linpeas\=http:\/\/127\.0\.0\.1\/linpeas\.sh.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string3 = /\/linpeas\.sh/ nocase ascii wide
+        $string3 = /.{0,1000}\/linpeas\.sh.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string4 = /\/PEASS\-ng\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/PEASS\-ng\.git.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string5 = /\/PEASS\-ng\// nocase ascii wide
+        $string5 = /.{0,1000}\/PEASS\-ng\/.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string6 = /\\PEASS\-ng/ nocase ascii wide
+        $string6 = /.{0,1000}\\PEASS\-ng.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string7 = /gather\/peass\.rb/ nocase ascii wide
+        $string7 = /.{0,1000}gather\/peass\.rb.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string8 = /linpeas_builder\.py/ nocase ascii wide
+        $string8 = /.{0,1000}linpeas_builder\.py.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string9 = /linpeas_darwin_amd64/ nocase ascii wide
+        $string9 = /.{0,1000}linpeas_darwin_amd64.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string10 = /linpeas_darwin_arm64/ nocase ascii wide
+        $string10 = /.{0,1000}linpeas_darwin_arm64.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string11 = /linpeas_fat\.sh/ nocase ascii wide
+        $string11 = /.{0,1000}linpeas_fat\.sh.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string12 = /linpeas_linux_386/ nocase ascii wide
+        $string12 = /.{0,1000}linpeas_linux_386.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string13 = /linpeas_linux_amd64/ nocase ascii wide
+        $string13 = /.{0,1000}linpeas_linux_amd64.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string14 = /linpeas_linux_arm64/ nocase ascii wide
+        $string14 = /.{0,1000}linpeas_linux_arm64.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string15 = /metasploit\/peass\.rb/ nocase ascii wide
+        $string15 = /.{0,1000}metasploit\/peass\.rb.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string16 = /PEASS\-ng\-master/ nocase ascii wide
+        $string16 = /.{0,1000}PEASS\-ng\-master.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string17 = /winPEAS\.bat/ nocase ascii wide
+        $string17 = /.{0,1000}winPEAS\.bat.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string18 = /WinPEAS\.exe/ nocase ascii wide
+        $string18 = /.{0,1000}WinPEAS\.exe.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string19 = /winPEAS\.ps1/ nocase ascii wide
+        $string19 = /.{0,1000}winPEAS\.ps1.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string20 = /winPEASany\.exe/ nocase ascii wide
+        $string20 = /.{0,1000}winPEASany\.exe.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string21 = /winPEASany_ofs\.exe/ nocase ascii wide
+        $string21 = /.{0,1000}winPEASany_ofs\.exe.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string22 = /winPEAS\-Obfuscated/ nocase ascii wide
+        $string22 = /.{0,1000}winPEAS\-Obfuscated.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string23 = /winPEASps1/ nocase ascii wide
+        $string23 = /.{0,1000}winPEASps1.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string24 = /winPEASx64\.exe/ nocase ascii wide
+        $string24 = /.{0,1000}winPEASx64\.exe.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string25 = /winPEASx64_ofs\.exe/ nocase ascii wide
+        $string25 = /.{0,1000}winPEASx64_ofs\.exe.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string26 = /winPEASx86\.exe/ nocase ascii wide
+        $string26 = /.{0,1000}winPEASx86\.exe.{0,1000}/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string27 = /winPEASx86_ofs\.exe/ nocase ascii wide
+        $string27 = /.{0,1000}winPEASx86_ofs\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

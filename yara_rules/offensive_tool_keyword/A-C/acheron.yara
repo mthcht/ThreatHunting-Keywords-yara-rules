@@ -10,31 +10,31 @@ rule acheron
     strings:
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string1 = /\/acheron\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/acheron\.git.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string2 = /\/acheron\.go/ nocase ascii wide
+        $string2 = /.{0,1000}\/acheron\.go.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string3 = /\/direct_syscall_amd64\.s/ nocase ascii wide
+        $string3 = /.{0,1000}\/direct_syscall_amd64\.s.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string4 = /\/sc_inject\/inject\// nocase ascii wide
+        $string4 = /.{0,1000}\/sc_inject\/inject\/.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string5 = /acheron\-master\.zip/ nocase ascii wide
+        $string5 = /.{0,1000}acheron\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string6 = /f1zm0\/acheron/ nocase ascii wide
+        $string6 = /.{0,1000}f1zm0\/acheron.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string7 = /process_snapshot\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}process_snapshot\.exe.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string8 = /sc_inject_direct\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}sc_inject_direct\.exe.{0,1000}/ nocase ascii wide
         // Description: indirect syscalls for AV/EDR evasion in Go assembly
         // Reference: https://github.com/f1zm0/acheron
-        $string9 = /sc_inject_indirect\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}sc_inject_indirect\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

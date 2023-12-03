@@ -10,25 +10,25 @@ rule icmpsh
     strings:
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string1 = /bdamele\/icmpsh/ nocase ascii wide
+        $string1 = /.{0,1000}bdamele\/icmpsh.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string2 = /icmpsh\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}icmpsh\.exe.{0,1000}/ nocase ascii wide
         // Description: Simple reverse ICMP shell
         // Reference: https://github.com/bdamele/icmpsh
-        $string3 = /icmpsh\.git/ nocase ascii wide
+        $string3 = /.{0,1000}icmpsh\.git.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string4 = /icmpsh_m\.py/ nocase ascii wide
+        $string4 = /.{0,1000}icmpsh_m\.py.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string5 = /icmpsh\-m\./ nocase ascii wide
+        $string5 = /.{0,1000}icmpsh\-m\..{0,1000}/ nocase ascii wide
         // Description: Simple reverse ICMP shell
         // Reference: https://github.com/bdamele/icmpsh
-        $string6 = /icmpsh\-master/ nocase ascii wide
+        $string6 = /.{0,1000}icmpsh\-master.{0,1000}/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string7 = /icmpsh\-s\./ nocase ascii wide
+        $string7 = /.{0,1000}icmpsh\-s\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

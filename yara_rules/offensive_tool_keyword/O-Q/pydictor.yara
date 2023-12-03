@@ -10,7 +10,7 @@ rule pydictor
     strings:
         // Description: pydictor  A powerful and useful hacker dictionary builder for a brute-force attack
         // Reference: https://github.com/LandGrey/pydictor
-        $string1 = /pydictor/ nocase ascii wide
+        $string1 = /.{0,1000}pydictor.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

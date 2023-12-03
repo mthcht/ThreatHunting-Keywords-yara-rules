@@ -10,10 +10,10 @@ rule chromepass
     strings:
         // Description: ChromePass is a small password recovery tool for Windows that allows you to view the user names and passwords stored by Google Chrome Web browser. For each password entry. the following information is displayed: Origin URL. Action URL. User Name Field. Password Field. User Name. Password. and Created Time. It allows you to get the passwords from your current running system. or from a user profile stored on external drive.
         // Reference: https://www.nirsoft.net/utils/chromepass.html
-        $string1 = /chromepass\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}chromepass\.exe.{0,1000}/ nocase ascii wide
         // Description: ChromePass is a small password recovery tool for Windows that allows you to view the user names and passwords stored by Google Chrome Web browser. For each password entry. the following information is displayed: Origin URL. Action URL. User Name Field. Password Field. User Name. Password. and Created Time. It allows you to get the passwords from your current running system. or from a user profile stored on external drive.
         // Reference: https://www.nirsoft.net/utils/chromepass.html
-        $string2 = /chromepass\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}chromepass\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

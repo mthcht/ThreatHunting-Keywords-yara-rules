@@ -10,7 +10,7 @@ rule nbtstat
     strings:
         // Description: Displays the NetBIOS name table of the local computer. The status of registered indicates that the name is registered either by broadcast or with a WINS server.
         // Reference: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nbtstat
-        $string1 = /nbtstat\s\-n/ nocase ascii wide
+        $string1 = /.{0,1000}nbtstat\s\-n.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

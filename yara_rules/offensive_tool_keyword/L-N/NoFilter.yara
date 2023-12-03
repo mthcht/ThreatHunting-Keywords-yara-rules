@@ -10,46 +10,46 @@ rule NoFilter
     strings:
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string1 = /\/NoFilter\.cpp/ nocase ascii wide
+        $string1 = /.{0,1000}\/NoFilter\.cpp.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string2 = /\/NoFilter\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/NoFilter\.exe.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string3 = /\/NoFilter\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/NoFilter\.git.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string4 = /\/NoFilter\.sln/ nocase ascii wide
+        $string4 = /.{0,1000}\/NoFilter\.sln.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string5 = /\/NoFilter\.vcxproj/ nocase ascii wide
+        $string5 = /.{0,1000}\/NoFilter\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string6 = /\\NoFilter\.cpp/ nocase ascii wide
+        $string6 = /.{0,1000}\\NoFilter\.cpp.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string7 = /\\NoFilter\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}\\NoFilter\.exe.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string8 = /\\NoFilter\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}\\NoFilter\.sln.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string9 = /\\NoFilter\.vcxproj/ nocase ascii wide
+        $string9 = /.{0,1000}\\NoFilter\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string10 = /2CFB9E9E\-479D\-4E23\-9A8E\-18C92E06B731/ nocase ascii wide
+        $string10 = /.{0,1000}2CFB9E9E\-479D\-4E23\-9A8E\-18C92E06B731.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string11 = /deepinstinct\/NoFilter/ nocase ascii wide
+        $string11 = /.{0,1000}deepinstinct\/NoFilter.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string12 = /NoFilter\.exe\s/ nocase ascii wide
+        $string12 = /.{0,1000}NoFilter\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string13 = /NoFilter\-main\.zip/ nocase ascii wide
+        $string13 = /.{0,1000}NoFilter\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: Tool for abusing the Windows Filtering Platform for privilege escalation. It can launch a new console as NT AUTHORITY\SYSTEM or as another user that is logged on to the machine.
         // Reference: https://github.com/deepinstinct/NoFilter
-        $string14 = /WfpEscalation\.exe/ nocase ascii wide
+        $string14 = /.{0,1000}WfpEscalation\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

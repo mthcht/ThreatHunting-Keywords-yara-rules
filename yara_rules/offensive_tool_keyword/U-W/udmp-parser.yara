@@ -10,25 +10,25 @@ rule udmp_parser
     strings:
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string1 = /\/udmp\-parser\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/udmp\-parser\.git.{0,1000}/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string2 = /0vercl0k\/udmp\-parser/ nocase ascii wide
+        $string2 = /.{0,1000}0vercl0k\/udmp\-parser.{0,1000}/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string3 = /import\sudmp_parser/ nocase ascii wide
+        $string3 = /.{0,1000}import\sudmp_parser.{0,1000}/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string4 = /install\sudmp_parser/ nocase ascii wide
+        $string4 = /.{0,1000}install\sudmp_parser.{0,1000}/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string5 = /parser\.exe\s\-a\s.*\.dmp/ nocase ascii wide
+        $string5 = /.{0,1000}parser\.exe\s\-a\s.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string6 = /parser\.exe\s\-a\s.*\.dmp/ nocase ascii wide
+        $string6 = /.{0,1000}parser\.exe\s\-a\s.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
         // Description: A Cross-Platform C++ parser library for Windows user minidumps.
         // Reference: https://github.com/0vercl0k/udmp-parser
-        $string7 = /udmp\-parser\-main/ nocase ascii wide
+        $string7 = /.{0,1000}udmp\-parser\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

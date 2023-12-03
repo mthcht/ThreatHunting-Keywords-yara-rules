@@ -10,31 +10,31 @@ rule krbjack
     strings:
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string1 = /\sinstall\skrbjack/ nocase ascii wide
+        $string1 = /.{0,1000}\sinstall\skrbjack.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string2 = /\sKRB\shijacking\smodule\s/ nocase ascii wide
+        $string2 = /.{0,1000}\sKRB\shijacking\smodule\s.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string3 = /\s\-\-target\-name\s.*\s\-\-domain\s.*\s\-\-dc\-ip\s.*\s\-\-executable\s.*\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-target\-name\s.{0,1000}\s\-\-domain\s.{0,1000}\s\-\-dc\-ip\s.{0,1000}\s\-\-executable\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string4 = /\/krbjack\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/krbjack\.git.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string5 = /almandin\/krbjack/ nocase ascii wide
+        $string5 = /.{0,1000}almandin\/krbjack.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string6 = /krbjack\s\-/ nocase ascii wide
+        $string6 = /.{0,1000}krbjack\s\-.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string7 = /krbjack\.tcpforward/ nocase ascii wide
+        $string7 = /.{0,1000}krbjack\.tcpforward.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string8 = /krbjacker\.py/ nocase ascii wide
+        $string8 = /.{0,1000}krbjacker\.py.{0,1000}/ nocase ascii wide
         // Description: A Kerberos AP-REQ hijacking tool with DNS unsecure updates abuse.
         // Reference: https://github.com/almandin/krbjack
-        $string9 = /krbjack\-main/ nocase ascii wide
+        $string9 = /.{0,1000}krbjack\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

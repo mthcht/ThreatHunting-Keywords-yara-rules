@@ -10,25 +10,25 @@ rule Rudrastra
     strings:
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string1 = /\/Rudrastra\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Rudrastra\.git.{0,1000}/ nocase ascii wide
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string2 = /aircrack\-ng/ nocase ascii wide
+        $string2 = /.{0,1000}aircrack\-ng.{0,1000}/ nocase ascii wide
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string3 = /fake_ap\.py/ nocase ascii wide
+        $string3 = /.{0,1000}fake_ap\.py.{0,1000}/ nocase ascii wide
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string4 = /install\smacchanger/ nocase ascii wide
+        $string4 = /.{0,1000}install\smacchanger.{0,1000}/ nocase ascii wide
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string5 = /macchanger\s\-r/ nocase ascii wide
+        $string5 = /.{0,1000}macchanger\s\-r.{0,1000}/ nocase ascii wide
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string6 = /Rudrastra\-main\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}Rudrastra\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: Make a Fake wireless access point aka Evil Twin
         // Reference: https://github.com/SxNade/Rudrastra
-        $string7 = /SxNade\/Rudrastra/ nocase ascii wide
+        $string7 = /.{0,1000}SxNade\/Rudrastra.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

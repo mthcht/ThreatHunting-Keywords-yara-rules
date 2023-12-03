@@ -10,13 +10,13 @@ rule WerTrigger
     strings:
         // Description: Weaponizing for privileged file writes bugs with windows problem reporting
         // Reference: https://github.com/sailay1996/WerTrigger
-        $string1 = /\/WerTrigger\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/WerTrigger\.git.{0,1000}/ nocase ascii wide
         // Description: Weaponizing for privileged file writes bugs with windows problem reporting
         // Reference: https://github.com/sailay1996/WerTrigger
-        $string2 = /WerTrigger\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}WerTrigger\.exe.{0,1000}/ nocase ascii wide
         // Description: Weaponizing for privileged file writes bugs with windows problem reporting
         // Reference: https://github.com/sailay1996/WerTrigger
-        $string3 = /WerTrigger\-master/ nocase ascii wide
+        $string3 = /.{0,1000}WerTrigger\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

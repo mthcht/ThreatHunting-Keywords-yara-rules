@@ -10,7 +10,7 @@ rule copy
     strings:
         // Description: DCOM lateral movement technique leveraging Excel and ActivateMicrosoftApp works.
         // Reference: https://x.com/ACEResponder/status/1720906842631549377
-        $string1 = /copy\s.*\.exe\s\\\\.*\\c\$\\Windows\\foxprow\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}copy\s.{0,1000}\.exe\s\\\\.{0,1000}\\c\$\\Windows\\foxprow\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

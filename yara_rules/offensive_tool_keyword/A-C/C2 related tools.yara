@@ -10,319 +10,319 @@ rule C2_related_tools
     strings:
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string1 = /\sbeacon64\.bin\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sbeacon64\.bin\s.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string2 = /\sNoPowerShell\./ nocase ascii wide
+        $string2 = /.{0,1000}\sNoPowerShell\..{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string3 = /\s\-pe\-exp\-list\s.*\.dll/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-pe\-exp\-list\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string4 = /\ssigflip\./ nocase ascii wide
+        $string4 = /.{0,1000}\ssigflip\..{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string5 = /\s\-U\smsf\s\-P\smsf\s/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-U\smsf\s\-P\smsf\s.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string6 = /\!wPkgPath\!.*\!ak\!/ nocase ascii wide
+        $string6 = /.{0,1000}\!wPkgPath\!.{0,1000}\!ak\!.{0,1000}/ nocase ascii wide
         // Description: An anti-virus platform written in the Golang-Gin framework with built-in BypassAV methods such as separation and bundling.
         // Reference: https://github.com/Ed1s0nZ/cool
-        $string7 = /\/bypass_mod\/loader/ nocase ascii wide
+        $string7 = /.{0,1000}\/bypass_mod\/loader.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string8 = /\/Cooolis\-ms\// nocase ascii wide
+        $string8 = /.{0,1000}\/Cooolis\-ms\/.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string9 = /\/DllExport\.bat/ nocase ascii wide
+        $string9 = /.{0,1000}\/DllExport\.bat.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string10 = /\/nopowershell\// nocase ascii wide
+        $string10 = /.{0,1000}\/nopowershell\/.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string11 = /\/ShellcodeFluctuation/ nocase ascii wide
+        $string11 = /.{0,1000}\/ShellcodeFluctuation.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string12 = /\/SigFlip\./ nocase ascii wide
+        $string12 = /.{0,1000}\/SigFlip\..{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string13 = /\/SigFlip\// nocase ascii wide
+        $string13 = /.{0,1000}\/SigFlip\/.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string14 = /\/SigLoader\// nocase ascii wide
+        $string14 = /.{0,1000}\/SigLoader\/.{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string15 = /\/unhook\-bof/ nocase ascii wide
+        $string15 = /.{0,1000}\/unhook\-bof.{0,1000}/ nocase ascii wide
         // Description: A shellcode loader written using nim
         // Reference: https://github.com/aeverj/NimShellCodeLoader
-        $string16 = /\\codeloader\.exe/ nocase ascii wide
+        $string16 = /.{0,1000}\\codeloader\.exe.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string17 = /\\Cooolis\-ms\-Loader\\/ nocase ascii wide
+        $string17 = /.{0,1000}\\Cooolis\-ms\-Loader\\.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string18 = /\\DllExport\.bat/ nocase ascii wide
+        $string18 = /.{0,1000}\\DllExport\.bat.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string19 = /\\NoPowerShell\./ nocase ascii wide
+        $string19 = /.{0,1000}\\NoPowerShell\..{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string20 = /\\tests\\beacon64\.bin/ nocase ascii wide
+        $string20 = /.{0,1000}\\tests\\beacon64\.bin.{0,1000}/ nocase ascii wide
         // Description: A shellcode loader written using nim
         // Reference: https://github.com/aeverj/NimShellCodeLoader
-        $string21 = /APC_Ijnect_Load\.nim/ nocase ascii wide
+        $string21 = /.{0,1000}APC_Ijnect_Load\.nim.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string22 = /BOFNET\.dll/ nocase ascii wide
+        $string22 = /.{0,1000}BOFNET\.dll.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string23 = /bofnet_execute\./ nocase ascii wide
+        $string23 = /.{0,1000}bofnet_execute\..{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string24 = /bWV0YXNwbG9pdA\=\=/ nocase ascii wide
+        $string24 = /.{0,1000}bWV0YXNwbG9pdA\=\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string25 = /c2hlbGxjb2Rl/ nocase ascii wide
+        $string25 = /.{0,1000}c2hlbGxjb2Rl.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string26 = /cGlwZW5hbWU9/ nocase ascii wide
+        $string26 = /.{0,1000}cGlwZW5hbWU9.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string27 = /cmVmbGVjdGl2ZQ\=\=/ nocase ascii wide
+        $string27 = /.{0,1000}cmVmbGVjdGl2ZQ\=\=.{0,1000}/ nocase ascii wide
         // Description: A shellcode loader written using nim
         // Reference: https://github.com/aeverj/NimShellCodeLoader
-        $string28 = /codeLoader\/codeLoader\./ nocase ascii wide
+        $string28 = /.{0,1000}codeLoader\/codeLoader\..{0,1000}/ nocase ascii wide
         // Description: An anti-virus platform written in the Golang-Gin framework with built-in BypassAV methods such as separation and bundling.
         // Reference: https://github.com/Ed1s0nZ/cool
-        $string29 = /cool.*\/cool\.zip/ nocase ascii wide
+        $string29 = /.{0,1000}cool.{0,1000}\/cool\.zip.{0,1000}/ nocase ascii wide
         // Description: An anti-virus platform written in the Golang-Gin framework with built-in BypassAV methods such as separation and bundling.
         // Reference: https://github.com/Ed1s0nZ/cool
-        $string30 = /coolv0\.1\.exe/ nocase ascii wide
+        $string30 = /.{0,1000}coolv0\.1\.exe.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string31 = /Cooolis.*shellcode/ nocase ascii wide
+        $string31 = /.{0,1000}Cooolis.{0,1000}shellcode.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string32 = /CooolisAdjustTokenPrivileges/ nocase ascii wide
+        $string32 = /.{0,1000}CooolisAdjustTokenPrivileges.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string33 = /CooolisCreateRemoteThread/ nocase ascii wide
+        $string33 = /.{0,1000}CooolisCreateRemoteThread.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string34 = /Cooolis\-ExternalC2/ nocase ascii wide
+        $string34 = /.{0,1000}Cooolis\-ExternalC2.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string35 = /Cooolis\-ms\.exe/ nocase ascii wide
+        $string35 = /.{0,1000}Cooolis\-ms\.exe.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string36 = /Cooolis\-msf/ nocase ascii wide
+        $string36 = /.{0,1000}Cooolis\-msf.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string37 = /Cooolis\-msX64\.zip/ nocase ascii wide
+        $string37 = /.{0,1000}Cooolis\-msX64\.zip.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string38 = /Cooolis\-msX86\.zip/ nocase ascii wide
+        $string38 = /.{0,1000}Cooolis\-msX86\.zip.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string39 = /Cooolis\-Reflective/ nocase ascii wide
+        $string39 = /.{0,1000}Cooolis\-Reflective.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string40 = /Cooolis\-Shellcode/ nocase ascii wide
+        $string40 = /.{0,1000}Cooolis\-Shellcode.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string41 = /Cooolis\-String\./ nocase ascii wide
+        $string41 = /.{0,1000}Cooolis\-String\..{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string42 = /CooolisVirtualAlloc/ nocase ascii wide
+        $string42 = /.{0,1000}CooolisVirtualAlloc.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string43 = /DllExport\s\-/ nocase ascii wide
+        $string43 = /.{0,1000}DllExport\s\-.{0,1000}/ nocase ascii wide
         // Description: An anti-virus platform written in the Golang-Gin framework with built-in BypassAV methods such as separation and bundling.
         // Reference: https://github.com/Ed1s0nZ/cool
-        $string44 = /Ed1s0nZ\/cool\// nocase ascii wide
+        $string44 = /.{0,1000}Ed1s0nZ\/cool\/.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string45 = /execute\-assembly.*sigflip/ nocase ascii wide
+        $string45 = /.{0,1000}execute\-assembly.{0,1000}sigflip.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string46 = /g_hookedSleep\./ nocase ascii wide
+        $string46 = /.{0,1000}g_hookedSleep\..{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string47 = /GetWhoamiCommand/ nocase ascii wide
+        $string47 = /.{0,1000}GetWhoamiCommand.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string48 = /IERMTCBpbnRvIHByb2Nlc3MgOiA\=/ nocase ascii wide
+        $string48 = /.{0,1000}IERMTCBpbnRvIHByb2Nlc3MgOiA\=.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string49 = /initializeShellcodeFluctuation/ nocase ascii wide
+        $string49 = /.{0,1000}initializeShellcodeFluctuation.{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string50 = /injectShellcode/ nocase ascii wide
+        $string50 = /.{0,1000}injectShellcode.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string51 = /isShellcodeThread/ nocase ascii wide
+        $string51 = /.{0,1000}isShellcodeThread.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string52 = /LUgsLS1IT1NU/ nocase ascii wide
+        $string52 = /.{0,1000}LUgsLS1IT1NU.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string53 = /LVAsLS1QT1JU/ nocase ascii wide
+        $string53 = /.{0,1000}LVAsLS1QT1JU.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string54 = /LW8sLS1vcHRpb25z/ nocase ascii wide
+        $string54 = /.{0,1000}LW8sLS1vcHRpb25z.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string55 = /LWIsLS1idWNrZXQ\=/ nocase ascii wide
+        $string55 = /.{0,1000}LWIsLS1idWNrZXQ\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string56 = /LWYsLS1maWxl/ nocase ascii wide
+        $string56 = /.{0,1000}LWYsLS1maWxl.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string57 = /LXAsLS1waWQ\=/ nocase ascii wide
+        $string57 = /.{0,1000}LXAsLS1waWQ\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string58 = /LXAsLS1wYXlsb2Fk/ nocase ascii wide
+        $string58 = /.{0,1000}LXAsLS1wYXlsb2Fk.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string59 = /LXUsLS11cmk\=/ nocase ascii wide
+        $string59 = /.{0,1000}LXUsLS11cmk\=.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string60 = /med0x2e\/SigFlip/ nocase ascii wide
+        $string60 = /.{0,1000}med0x2e\/SigFlip.{0,1000}/ nocase ascii wide
         // Description: A shellcode loader written using nim
         // Reference: https://github.com/aeverj/NimShellCodeLoader
-        $string61 = /NimShellCodeLoader/ nocase ascii wide
+        $string61 = /.{0,1000}NimShellCodeLoader.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string62 = /NoPowerShell\.cna/ nocase ascii wide
+        $string62 = /.{0,1000}NoPowerShell\.cna.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string63 = /NoPowerShell\.dll/ nocase ascii wide
+        $string63 = /.{0,1000}NoPowerShell\.dll.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string64 = /nopowershell\.exe/ nocase ascii wide
+        $string64 = /.{0,1000}nopowershell\.exe.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string65 = /NoPowerShell\/.*\.cs/ nocase ascii wide
+        $string65 = /.{0,1000}NoPowerShell\/.{0,1000}\.cs.{0,1000}/ nocase ascii wide
         // Description: PowerShell rebuilt in C# for Red Teaming purposes
         // Reference: https://github.com/bitsadmin/nopowershell
-        $string66 = /nps\swhoami/ nocase ascii wide
+        $string66 = /.{0,1000}nps\swhoami.{0,1000}/ nocase ascii wide
         // Description: A shellcode loader written using nim
         // Reference: https://github.com/aeverj/NimShellCodeLoader
-        $string67 = /OEP_Hiijack_Inject_Load/ nocase ascii wide
+        $string67 = /.{0,1000}OEP_Hiijack_Inject_Load.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string68 = /Q29iYWx0IFN0cmlrZSBFeHRlcm5hbCBDMiBMb2FkZXI\=/ nocase ascii wide
+        $string68 = /.{0,1000}Q29iYWx0IFN0cmlrZSBFeHRlcm5hbCBDMiBMb2FkZXI\=.{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string69 = /readShellcode/ nocase ascii wide
+        $string69 = /.{0,1000}readShellcode.{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string70 = /runShellcode/ nocase ascii wide
+        $string70 = /.{0,1000}runShellcode.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string71 = /Rvn0xsy\/Cooolis\-ms/ nocase ascii wide
+        $string71 = /.{0,1000}Rvn0xsy\/Cooolis\-ms.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string72 = /RXh0ZXJuYWwgQzIgUG9ydA\=\=/ nocase ascii wide
+        $string72 = /.{0,1000}RXh0ZXJuYWwgQzIgUG9ydA\=\=.{0,1000}/ nocase ascii wide
         // Description: An anti-virus platform written in the Golang-Gin framework with built-in BypassAV methods such as separation and bundling.
         // Reference: https://github.com/Ed1s0nZ/cool
-        $string73 = /service\/executable\// nocase ascii wide
+        $string73 = /.{0,1000}service\/executable\// nocase ascii wide
         // Description: An anti-virus platform written in the Golang-Gin framework with built-in BypassAV methods such as separation and bundling.
         // Reference: https://github.com/Ed1s0nZ/cool
-        $string74 = /service\/executable\/compile\.exe/ nocase ascii wide
+        $string74 = /.{0,1000}service\/executable\/compile\.exe.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string75 = /shellcodeEncryptDecrypt/ nocase ascii wide
+        $string75 = /.{0,1000}shellcodeEncryptDecrypt.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string76 = /ShellcodeFluctuation\./ nocase ascii wide
+        $string76 = /.{0,1000}ShellcodeFluctuation\..{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string77 = /ShellcodeFluctuation64/ nocase ascii wide
+        $string77 = /.{0,1000}ShellcodeFluctuation64.{0,1000}/ nocase ascii wide
         // Description: An advanced in-memory evasion technique fluctuating shellcode's memory protection between RW/NoAccess & RX and then encrypting/decrypting its contents
         // Reference: https://github.com/mgeeky/ShellcodeFluctuation
-        $string78 = /ShellcodeFluctuation86/ nocase ascii wide
+        $string78 = /.{0,1000}ShellcodeFluctuation86.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string79 = /sigflip.*\/Bof\// nocase ascii wide
+        $string79 = /.{0,1000}sigflip.{0,1000}\/Bof\/.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string80 = /SigInject\s/ nocase ascii wide
+        $string80 = /.{0,1000}SigInject\s.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string81 = /SigLoader\s/ nocase ascii wide
+        $string81 = /.{0,1000}SigLoader\s.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string82 = /SigLoader\./ nocase ascii wide
+        $string82 = /.{0,1000}SigLoader\..{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string83 = /src\\unhook\.c/ nocase ascii wide
+        $string83 = /.{0,1000}src\\unhook\.c.{0,1000}/ nocase ascii wide
         // Description: A shellcode loader written using nim
         // Reference: https://github.com/aeverj/NimShellCodeLoader
-        $string84 = /Thread_Hiijack_Inject_Load\./ nocase ascii wide
+        $string84 = /.{0,1000}Thread_Hiijack_Inject_Load\..{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string85 = /ThreadStackSpoofer/ nocase ascii wide
+        $string85 = /.{0,1000}ThreadStackSpoofer.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string86 = /TWV0YXNwbG9pdCBSUEMgTG9hZGVy/ nocase ascii wide
+        $string86 = /.{0,1000}TWV0YXNwbG9pdCBSUEMgTG9hZGVy.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string87 = /U2hlbGxjb2RlIFBhdGg\=/ nocase ascii wide
+        $string87 = /.{0,1000}U2hlbGxjb2RlIFBhdGg\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string88 = /UFR5cGUgQW5kIFBPcHRpb25zIFRvbyBsb25nIQ\=\=/ nocase ascii wide
+        $string88 = /.{0,1000}UFR5cGUgQW5kIFBPcHRpb25zIFRvbyBsb25nIQ\=\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string89 = /UGF5bG9hZCBOYW1lLCBlLmcuIHdpbmRvd3MvbWV0ZXJwcmV0ZXIvcmV2ZXJzZV90Y3A\=/ nocase ascii wide
+        $string89 = /.{0,1000}UGF5bG9hZCBOYW1lLCBlLmcuIHdpbmRvd3MvbWV0ZXJwcmV0ZXIvcmV2ZXJzZV90Y3A\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string90 = /UGF5bG9hZCBvcHRpb25zLCBlLmcuIExIT1NUPTEuMS4xLjEsTFBPUlQ9ODg2Ng\=\=/ nocase ascii wide
+        $string90 = /.{0,1000}UGF5bG9hZCBvcHRpb25zLCBlLmcuIExIT1NUPTEuMS4xLjEsTFBPUlQ9ODg2Ng\=\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string91 = /UlBDIFNlcnZlciBIb3N0/ nocase ascii wide
+        $string91 = /.{0,1000}UlBDIFNlcnZlciBIb3N0.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string92 = /UlBDIFNlcnZlciBQb3J0/ nocase ascii wide
+        $string92 = /.{0,1000}UlBDIFNlcnZlciBQb3J0.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string93 = /UmVmbGVjdGl2ZSBETEwgaW5qZWN0aW9u/ nocase ascii wide
+        $string93 = /.{0,1000}UmVmbGVjdGl2ZSBETEwgaW5qZWN0aW9u.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string94 = /UmVmbGVjdGl2ZSBETEwgT1NTIEJ1Y2tldA\=\=/ nocase ascii wide
+        $string94 = /.{0,1000}UmVmbGVjdGl2ZSBETEwgT1NTIEJ1Y2tldA\=\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string95 = /UmVmbGVjdGl2ZSBETEwgUGF0aA\=\=/ nocase ascii wide
+        $string95 = /.{0,1000}UmVmbGVjdGl2ZSBETEwgUGF0aA\=\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string96 = /UmVmbGVjdGl2ZSBETEwgVVJJ/ nocase ascii wide
+        $string96 = /.{0,1000}UmVmbGVjdGl2ZSBETEwgVVJJ.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string97 = /UmVmbGVjdGl2ZSBJbmplY3QgUHJvY2VzcyBJZA\=\=/ nocase ascii wide
+        $string97 = /.{0,1000}UmVmbGVjdGl2ZSBJbmplY3QgUHJvY2VzcyBJZA\=\=.{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string98 = /unhook\skernel32/ nocase ascii wide
+        $string98 = /.{0,1000}unhook\skernel32.{0,1000}/ nocase ascii wide
         // Description: Thread Stack Spoofing - PoC for an advanced In-Memory evasion technique allowing to better hide injected shellcode's memory allocation from scanners and analysts.
         // Reference: https://github.com/mgeeky/ThreadStackSpoofer
-        $string99 = /unhook\swldp\samsi/ nocase ascii wide
+        $string99 = /.{0,1000}unhook\swldp\samsi.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string100 = /WypdIENhbid0IENvbm5lY3QgQWxpeXVuIEJ1Y2tldC4\=/ nocase ascii wide
+        $string100 = /.{0,1000}WypdIENhbid0IENvbm5lY3QgQWxpeXVuIEJ1Y2tldC4\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string101 = /WypdIFRoZSBCdWNrZXQgb3IgUmVmbGVjdGl2ZSBETEwgVVJJIGlzIEVtcHR5Lg\=\=/ nocase ascii wide
+        $string101 = /.{0,1000}WypdIFRoZSBCdWNrZXQgb3IgUmVmbGVjdGl2ZSBETEwgVVJJIGlzIEVtcHR5Lg\=\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string102 = /WytdIEluamVjdGVkIHRoZSA\=/ nocase ascii wide
+        $string102 = /.{0,1000}WytdIEluamVjdGVkIHRoZSA\=.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string103 = /Y29iYWx0c3RyaWtl/ nocase ascii wide
+        $string103 = /.{0,1000}Y29iYWx0c3RyaWtl.{0,1000}/ nocase ascii wide
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
-        $string104 = /YmxvY2s9MTAw/ nocase ascii wide
+        $string104 = /.{0,1000}YmxvY2s9MTAw.{0,1000}/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string105 = /SigFlip\s/ nocase ascii wide
+        $string105 = /SigFlip\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

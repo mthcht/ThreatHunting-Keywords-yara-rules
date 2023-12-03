@@ -10,28 +10,28 @@ rule DCOMPotato
     strings:
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string1 = /\/DCOMPotato\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/DCOMPotato\.git.{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string2 = /854A20FB\-2D44\-457D\-992F\-EF13785D2B51/ nocase ascii wide
+        $string2 = /.{0,1000}854A20FB\-2D44\-457D\-992F\-EF13785D2B51.{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string3 = /DCOMPotato\./ nocase ascii wide
+        $string3 = /.{0,1000}DCOMPotato\..{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string4 = /DCOMPotato\-master/ nocase ascii wide
+        $string4 = /.{0,1000}DCOMPotato\-master.{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string5 = /McpManagementPotato\./ nocase ascii wide
+        $string5 = /.{0,1000}McpManagementPotato\..{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string6 = /PrinterNotifyPotato\s/ nocase ascii wide
+        $string6 = /.{0,1000}PrinterNotifyPotato\s.{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string7 = /PrinterNotifyPotato\./ nocase ascii wide
+        $string7 = /.{0,1000}PrinterNotifyPotato\..{0,1000}/ nocase ascii wide
         // Description: Service DCOM Object and SeImpersonatePrivilege abuse.
         // Reference: https://github.com/zcgonvh/DCOMPotato
-        $string8 = /zcgonvh\/DCOMPotato/ nocase ascii wide
+        $string8 = /.{0,1000}zcgonvh\/DCOMPotato.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

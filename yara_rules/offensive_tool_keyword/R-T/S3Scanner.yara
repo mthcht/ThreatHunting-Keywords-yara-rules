@@ -10,34 +10,34 @@ rule S3Scanner
     strings:
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string1 = /\sdump\s\-\-bucket\s.*\-\-dump\-dir/ nocase ascii wide
+        $string1 = /.{0,1000}\sdump\s\-\-bucket\s.{0,1000}\-\-dump\-dir.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string2 = /\s\-\-threads\s.*\sscan\s\-\-buckets\-file.*\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-threads\s.{0,1000}\sscan\s\-\-buckets\-file.{0,1000}\s/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string3 = /\/S3Scanner\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/S3Scanner\.git.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string4 = /install\ss3scanner/ nocase ascii wide
+        $string4 = /.{0,1000}install\ss3scanner.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string5 = /python3\s\-m\sS3Scanner/ nocase ascii wide
+        $string5 = /.{0,1000}python3\s\-m\sS3Scanner.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string6 = /s3scanner\s\-/ nocase ascii wide
+        $string6 = /.{0,1000}s3scanner\s\-.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string7 = /s3scanner\sdump\s/ nocase ascii wide
+        $string7 = /.{0,1000}s3scanner\sdump\s.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string8 = /s3scanner\sscan\s/ nocase ascii wide
+        $string8 = /.{0,1000}s3scanner\sscan\s.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string9 = /S3Scanner\-master/ nocase ascii wide
+        $string9 = /.{0,1000}S3Scanner\-master.{0,1000}/ nocase ascii wide
         // Description: Scan for open S3 buckets and dump the contents
         // Reference: https://github.com/sa7mon/S3Scanner
-        $string10 = /sa7mon\/S3Scanner/ nocase ascii wide
+        $string10 = /.{0,1000}sa7mon\/S3Scanner.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

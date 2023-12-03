@@ -10,22 +10,22 @@ rule TGSThief
     strings:
         // Description: get the TGS of a user whose logon session is just present on the computer
         // Reference: https://github.com/MzHmO/TGSThief
-        $string1 = /\/releases\/download\/.*\/abc\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\/releases\/download\/.{0,1000}\/abc\.exe.{0,1000}/ nocase ascii wide
         // Description: get the TGS of a user whose logon session is just present on the computer
         // Reference: https://github.com/MzHmO/TGSThief
-        $string2 = /\/TGSThief\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/TGSThief\.git.{0,1000}/ nocase ascii wide
         // Description: get the TGS of a user whose logon session is just present on the computer
         // Reference: https://github.com/MzHmO/TGSThief
-        $string3 = /\/TGSThief\// nocase ascii wide
+        $string3 = /.{0,1000}\/TGSThief\/.{0,1000}/ nocase ascii wide
         // Description: get the TGS of a user whose logon session is just present on the computer
         // Reference: https://github.com/MzHmO/TGSThief
-        $string4 = /\\TGSThief\\/ nocase ascii wide
+        $string4 = /.{0,1000}\\TGSThief\\.{0,1000}/ nocase ascii wide
         // Description: get the TGS of a user whose logon session is just present on the computer
         // Reference: https://github.com/MzHmO/TGSThief
-        $string5 = /MzHmO\/TGSThief/ nocase ascii wide
+        $string5 = /.{0,1000}MzHmO\/TGSThief.{0,1000}/ nocase ascii wide
         // Description: get the TGS of a user whose logon session is just present on the computer
         // Reference: https://github.com/MzHmO/TGSThief
-        $string6 = /TGSThief\-main/ nocase ascii wide
+        $string6 = /.{0,1000}TGSThief\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

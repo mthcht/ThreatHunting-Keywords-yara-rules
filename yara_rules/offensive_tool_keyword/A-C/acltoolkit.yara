@@ -10,40 +10,40 @@ rule acltoolkit
     strings:
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string1 = /\sacltoolkit/ nocase ascii wide
+        $string1 = /.{0,1000}\sacltoolkit.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string2 = /\sgive\-dcsync/ nocase ascii wide
+        $string2 = /.{0,1000}\sgive\-dcsync.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string3 = /\sgive\-genericall\s.*\s\-target\-sid\s/ nocase ascii wide
+        $string3 = /.{0,1000}\sgive\-genericall\s.{0,1000}\s\-target\-sid\s.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string4 = /\sset\-objectowner\s.*\s\-target\-sid\s.*\s\-owner\-sid\s/ nocase ascii wide
+        $string4 = /.{0,1000}\sset\-objectowner\s.{0,1000}\s\-target\-sid\s.{0,1000}\s\-owner\-sid\s.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string5 = /\/acltoolkit/ nocase ascii wide
+        $string5 = /.{0,1000}\/acltoolkit.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string6 = /\/add_groupmember\.py/ nocase ascii wide
+        $string6 = /.{0,1000}\/add_groupmember\.py.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string7 = /acltoolkit\s/ nocase ascii wide
+        $string7 = /.{0,1000}acltoolkit\s.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string8 = /acltoolkit\.git/ nocase ascii wide
+        $string8 = /.{0,1000}acltoolkit\.git.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string9 = /acltoolkit\-ad/ nocase ascii wide
+        $string9 = /.{0,1000}acltoolkit\-ad.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string10 = /acltoolkit\-main/ nocase ascii wide
+        $string10 = /.{0,1000}acltoolkit\-main.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string11 = /give_dcsync\.py/ nocase ascii wide
+        $string11 = /.{0,1000}give_dcsync\.py.{0,1000}/ nocase ascii wide
         // Description: acltoolkit is an ACL abuse swiss-army knife. It implements multiple ACL abuses
         // Reference: https://github.com/zblurx/acltoolkit
-        $string12 = /set_logon_script\.py/ nocase ascii wide
+        $string12 = /.{0,1000}set_logon_script\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

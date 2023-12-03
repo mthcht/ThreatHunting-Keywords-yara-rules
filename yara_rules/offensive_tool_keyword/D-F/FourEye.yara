@@ -10,52 +10,52 @@ rule FourEye
     strings:
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string1 = /\sBypassFramework\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\sBypassFramework\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string2 = /\sdarkexe\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\sdarkexe\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string3 = /\sUUID_bypass\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\sUUID_bypass\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string4 = /\/BypassFramework\.py/ nocase ascii wide
+        $string4 = /.{0,1000}\/BypassFramework\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string5 = /\/darkexe\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/darkexe\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string6 = /\/FourEye\.git/ nocase ascii wide
+        $string6 = /.{0,1000}\/FourEye\.git.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string7 = /\/module\/darkexe\// nocase ascii wide
+        $string7 = /.{0,1000}\/module\/darkexe\/.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string8 = /\/root\/shellcode\.c/ nocase ascii wide
+        $string8 = /.{0,1000}\/root\/shellcode\.c.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string9 = /\/root\/shellcode\.cpp/ nocase ascii wide
+        $string9 = /.{0,1000}\/root\/shellcode\.cpp.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string10 = /\/root\/shellcode\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}\/root\/shellcode\.exe.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string11 = /\/UUID_bypass\.py/ nocase ascii wide
+        $string11 = /.{0,1000}\/UUID_bypass\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string12 = /\\darkexe\.py/ nocase ascii wide
+        $string12 = /.{0,1000}\\darkexe\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string13 = /\\UUID_bypass\.py/ nocase ascii wide
+        $string13 = /.{0,1000}\\UUID_bypass\.py.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string14 = /FourEye\(shellcode_bypass/ nocase ascii wide
+        $string14 = /.{0,1000}FourEye\(shellcode_bypass.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string15 = /FourEye\-main/ nocase ascii wide
+        $string15 = /.{0,1000}FourEye\-main.{0,1000}/ nocase ascii wide
         // Description: AV Evasion Tool
         // Reference: https://github.com/lengjibo/FourEye
-        $string16 = /lengjibo\/FourEye/ nocase ascii wide
+        $string16 = /.{0,1000}lengjibo\/FourEye.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

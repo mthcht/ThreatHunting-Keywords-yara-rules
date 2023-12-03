@@ -10,7 +10,7 @@ rule ip_api_com
     strings:
         // Description: get public ip address
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string1 = /www\.ip\-api\.com/ nocase ascii wide
+        $string1 = /.{0,1000}www\.ip\-api\.com.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

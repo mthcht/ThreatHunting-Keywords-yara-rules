@@ -10,19 +10,19 @@ rule EncryptedZIP
     strings:
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
-        $string1 = /\sdecrypt\s.*\.aes\.zip/ nocase ascii wide
+        $string1 = /.{0,1000}\sdecrypt\s.{0,1000}\.aes\.zip.{0,1000}/ nocase ascii wide
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
-        $string2 = /EncryptedZIP\.csproj/ nocase ascii wide
+        $string2 = /.{0,1000}EncryptedZIP\.csproj.{0,1000}/ nocase ascii wide
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
-        $string3 = /EncryptedZIP\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}EncryptedZIP\.exe.{0,1000}/ nocase ascii wide
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
-        $string4 = /master\/EncryptedZIP/ nocase ascii wide
+        $string4 = /.{0,1000}master\/EncryptedZIP.{0,1000}/ nocase ascii wide
         // Description: Compresses a directory or file and then encrypts the ZIP file with a supplied key using AES256 CFB. This assembly also clears the key out of memory using RtlZeroMemory
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/EncryptedZIP
-        $string5 = /Output\.aes\.zip/ nocase ascii wide
+        $string5 = /.{0,1000}Output\.aes\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

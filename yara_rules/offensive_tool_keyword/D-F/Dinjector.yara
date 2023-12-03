@@ -10,76 +10,76 @@ rule Dinjector
     strings:
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string1 = /\/cradle\.ps1/ nocase ascii wide
+        $string1 = /.{0,1000}\/cradle\.ps1.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string2 = /\/DInjector\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/DInjector\.git.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string3 = /\/pid:1337\s.*\/dll:/ nocase ascii wide
+        $string3 = /.{0,1000}\/pid:1337\s.{0,1000}\/dll:.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string4 = /\\cradle\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}\\cradle\.ps1.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string5 = /\\DInjector\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}\\DInjector\.sln.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string6 = /\\DInjector\\/ nocase ascii wide
+        $string6 = /.{0,1000}\\DInjector\\.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string7 = /5086CE01\-1032\-4CA3\-A302\-6CFF2A8B64DC/ nocase ascii wide
+        $string7 = /.{0,1000}5086CE01\-1032\-4CA3\-A302\-6CFF2A8B64DC.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string8 = /creds_hunt\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}creds_hunt\.exe.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string9 = /DInjector\.csproj/ nocase ascii wide
+        $string9 = /.{0,1000}DInjector\.csproj.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string10 = /DInjector\.Detonator/ nocase ascii wide
+        $string10 = /.{0,1000}DInjector\.Detonator.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string11 = /DInjector\.dll/ nocase ascii wide
+        $string11 = /.{0,1000}DInjector\.dll.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string12 = /DInjector\/Dinjector/ nocase ascii wide
+        $string12 = /.{0,1000}DInjector\/Dinjector.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string13 = /Dinjector\-main/ nocase ascii wide
+        $string13 = /.{0,1000}Dinjector\-main.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string14 = /DllCanUnloadNow/ nocase ascii wide
+        $string14 = /.{0,1000}DllCanUnloadNow.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string15 = /encrypt\.py\s.*\.bin\s\-p\s.*\s\-o\s.*\.enc/ nocase ascii wide
+        $string15 = /.{0,1000}encrypt\.py\s.{0,1000}\.bin\s\-p\s.{0,1000}\s\-o\s.{0,1000}\.enc.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string16 = /\-\-entrypoint\sDinjector/ nocase ascii wide
+        $string16 = /.{0,1000}\-\-entrypoint\sDinjector.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string17 = /http:\/\/10\.10\.13\.37/ nocase ascii wide
+        $string17 = /.{0,1000}http:\/\/10\.10\.13\.37.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string18 = /KeeFarceReborn\./ nocase ascii wide
+        $string18 = /.{0,1000}KeeFarceReborn\..{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string19 = /Metro\-Holografix\/Dinjector/ nocase ascii wide
+        $string19 = /.{0,1000}Metro\-Holografix\/Dinjector.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string20 = /NtCreateUserProcessShellcode/ nocase ascii wide
+        $string20 = /.{0,1000}NtCreateUserProcessShellcode.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string21 = /PIC\-Exec.*runshellcode\.asm/ nocase ascii wide
+        $string21 = /.{0,1000}PIC\-Exec.{0,1000}runshellcode\.asm.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string22 = /PIC\-Exec\\addresshunter/ nocase ascii wide
+        $string22 = /.{0,1000}PIC\-Exec\\addresshunter.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string23 = /win\-x64\-DynamicKernelWinExecCalc/ nocase ascii wide
+        $string23 = /.{0,1000}win\-x64\-DynamicKernelWinExecCalc.{0,1000}/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string24 = /x64win\-DynamicNoNull\-WinExec\-PopCalc\-Shellcode/ nocase ascii wide
+        $string24 = /.{0,1000}x64win\-DynamicNoNull\-WinExec\-PopCalc\-Shellcode.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

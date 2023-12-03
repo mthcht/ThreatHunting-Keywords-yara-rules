@@ -10,19 +10,19 @@ rule ntdsutil
     strings:
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string1 = /\\system32\.zip/ nocase ascii wide
+        $string1 = /.{0,1000}\\system32\.zip.{0,1000}/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string2 = /ntdsutil\s.*ac\si\sntds.*\s.*create\sfull.*\\temp/ nocase ascii wide
+        $string2 = /.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}create\sfull.{0,1000}\\temp.{0,1000}/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string3 = /ntdsutil\.exe\s.*ac\si\sntds.*\s.*ifm.*\s.*create\sfull\s.*c:\\ProgramData/ nocase ascii wide
+        $string3 = /.{0,1000}ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}c:\\ProgramData.{0,1000}/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string4 = /ntdsutil\.exe\s.*ac\si\sntds.*\s.*ifm.*\s.*create\sfull\s.*users\\public/ nocase ascii wide
+        $string4 = /.{0,1000}ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}users\\public.{0,1000}/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string5 = /ntdsutil\.exe\s.*ac\si\sntds.*ifm.*create\sfull\s.*temp/ nocase ascii wide
+        $string5 = /.{0,1000}ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}ifm.{0,1000}create\sfull\s.{0,1000}temp.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

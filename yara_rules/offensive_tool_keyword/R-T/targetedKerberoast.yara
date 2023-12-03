@@ -10,19 +10,19 @@ rule targetedKerberoast
     strings:
         // Description: Kerberoast with ACL abuse capabilities
         // Reference: https://github.com/ShutdownRepo/targetedKerberoast
-        $string1 = /\/targetedKerberoast/ nocase ascii wide
+        $string1 = /.{0,1000}\/targetedKerberoast.{0,1000}/ nocase ascii wide
         // Description: Kerberoast with ACL abuse capabilities
         // Reference: https://github.com/ShutdownRepo/targetedKerberoast
-        $string2 = /kerberoastables\.txt/ nocase ascii wide
+        $string2 = /.{0,1000}kerberoastables\.txt.{0,1000}/ nocase ascii wide
         // Description: Kerberoast with ACL abuse capabilities
         // Reference: https://github.com/ShutdownRepo/targetedKerberoast
-        $string3 = /targetedKerberoast\.git/ nocase ascii wide
+        $string3 = /.{0,1000}targetedKerberoast\.git.{0,1000}/ nocase ascii wide
         // Description: Kerberoast with ACL abuse capabilities
         // Reference: https://github.com/ShutdownRepo/targetedKerberoast
-        $string4 = /targetedKerberoast\.py/ nocase ascii wide
+        $string4 = /.{0,1000}targetedKerberoast\.py.{0,1000}/ nocase ascii wide
         // Description: Kerberoast with ACL abuse capabilities
         // Reference: https://github.com/ShutdownRepo/targetedKerberoast
-        $string5 = /targetedKerberoast\-main/ nocase ascii wide
+        $string5 = /.{0,1000}targetedKerberoast\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

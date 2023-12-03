@@ -10,19 +10,19 @@ rule privexchange
     strings:
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
-        $string1 = /\/PrivExchange\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/PrivExchange\.git.{0,1000}/ nocase ascii wide
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
-        $string2 = /dirkjanm\/PrivExchange/ nocase ascii wide
+        $string2 = /.{0,1000}dirkjanm\/PrivExchange.{0,1000}/ nocase ascii wide
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
-        $string3 = /httpattack\.py/ nocase ascii wide
+        $string3 = /.{0,1000}httpattack\.py.{0,1000}/ nocase ascii wide
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
-        $string4 = /privexchange\.py/ nocase ascii wide
+        $string4 = /.{0,1000}privexchange\.py.{0,1000}/ nocase ascii wide
         // Description: Exchange your privileges for Domain Admin privs by abusing Exchange
         // Reference: https://github.com/dirkjanm/PrivExchange
-        $string5 = /PrivExchange\-master\.zip/ nocase ascii wide
+        $string5 = /.{0,1000}PrivExchange\-master\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

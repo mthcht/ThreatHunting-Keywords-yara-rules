@@ -10,16 +10,16 @@ rule Admin2Sys
     strings:
         // Description: Admin2Sys it's a C++ malware to escalate privileges from Administrator account to NT AUTORITY SYSTEM
         // Reference: https://github.com/S12cybersecurity/Admin2Sys
-        $string1 = /\/Admin2Sys\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Admin2Sys\.git.{0,1000}/ nocase ascii wide
         // Description: Admin2Sys it's a C++ malware to escalate privileges from Administrator account to NT AUTORITY SYSTEM
         // Reference: https://github.com/S12cybersecurity/Admin2Sys
-        $string2 = /Admin2Sys\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}Admin2Sys\.exe.{0,1000}/ nocase ascii wide
         // Description: Admin2Sys it's a C++ malware to escalate privileges from Administrator account to NT AUTORITY SYSTEM
         // Reference: https://github.com/S12cybersecurity/Admin2Sys
-        $string3 = /Admin2Sys\-main/ nocase ascii wide
+        $string3 = /.{0,1000}Admin2Sys\-main.{0,1000}/ nocase ascii wide
         // Description: Admin2Sys it's a C++ malware to escalate privileges from Administrator account to NT AUTORITY SYSTEM
         // Reference: https://github.com/S12cybersecurity/Admin2Sys
-        $string4 = /S12cybersecurity\/Admin2Sys/ nocase ascii wide
+        $string4 = /.{0,1000}S12cybersecurity\/Admin2Sys.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

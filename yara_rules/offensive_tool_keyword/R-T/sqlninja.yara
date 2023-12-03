@@ -10,7 +10,7 @@ rule sqlninja
     strings:
         // Description: ...a SQL Server injection & takeover tool
         // Reference: http://sqlninja.sourceforge.net/
-        $string1 = /sqlninja/ nocase ascii wide
+        $string1 = /.{0,1000}sqlninja.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule CertStealer
     strings:
         // Description: A .NET tool for exporting and importing certificates without touching disk.
         // Reference: https://github.com/TheWover/CertStealer
-        $string1 = /\/CertStealer/ nocase ascii wide
+        $string1 = /.{0,1000}\/CertStealer.{0,1000}/ nocase ascii wide
         // Description: A .NET tool for exporting and importing certificates without touching disk.
         // Reference: https://github.com/TheWover/CertStealer
-        $string2 = /CertStealer\.csproj/ nocase ascii wide
+        $string2 = /.{0,1000}CertStealer\.csproj.{0,1000}/ nocase ascii wide
         // Description: A .NET tool for exporting and importing certificates without touching disk.
         // Reference: https://github.com/TheWover/CertStealer
-        $string3 = /CertStealer\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}CertStealer\.exe.{0,1000}/ nocase ascii wide
         // Description: A .NET tool for exporting and importing certificates without touching disk.
         // Reference: https://github.com/TheWover/CertStealer
-        $string4 = /CertStealer\.sln/ nocase ascii wide
+        $string4 = /.{0,1000}CertStealer\.sln.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

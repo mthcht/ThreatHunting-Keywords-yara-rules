@@ -10,10 +10,10 @@ rule tir_blanc_holiseum
     strings:
         // Description: Ransomware simulation
         // Reference: https://www.holiseum.com/services/auditer/tir-a-blanc-ransomware
-        $string1 = /\\tir_blanc_holiseum\\.*\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\\tir_blanc_holiseum\\.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: Ransomware simulation
         // Reference: https://www.holiseum.com/services/auditer/tir-a-blanc-ransomware
-        $string2 = /kindloader\.exe.*\s\-\-extract\skindlocker/ nocase ascii wide
+        $string2 = /.{0,1000}kindloader\.exe.{0,1000}\s\-\-extract\skindlocker.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

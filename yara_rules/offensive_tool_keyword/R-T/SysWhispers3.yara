@@ -10,25 +10,25 @@ rule SysWhispers3
     strings:
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string1 = /\s\-\-functions\sNtProtectVirtualMemory.*NtWriteVirtualMemory\s\-o\ssyscalls_mem/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-functions\sNtProtectVirtualMemory.{0,1000}NtWriteVirtualMemory\s\-o\ssyscalls_mem.{0,1000}/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string2 = /\s\-\-preset\sall\s\-o\ssyscalls_all/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-preset\sall\s\-o\ssyscalls_all.{0,1000}/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string3 = /\s\-\-preset\scommon\s\-o\ssyscalls_common/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-preset\scommon\s\-o\ssyscalls_common.{0,1000}/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string4 = /\/SysWhispers2/ nocase ascii wide
+        $string4 = /.{0,1000}\/SysWhispers2.{0,1000}/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string5 = /\/SysWhispers3/ nocase ascii wide
+        $string5 = /.{0,1000}\/SysWhispers3.{0,1000}/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string6 = /\/SysWhispers3\.git/ nocase ascii wide
+        $string6 = /.{0,1000}\/SysWhispers3\.git.{0,1000}/ nocase ascii wide
         // Description: SysWhispers on Steroids - AV/EDR evasion via direct system calls.
         // Reference: https://github.com/klezVirus/SysWhispers3
-        $string7 = /syswhispers\.py/ nocase ascii wide
+        $string7 = /.{0,1000}syswhispers\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

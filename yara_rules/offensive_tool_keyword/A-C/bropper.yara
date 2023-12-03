@@ -10,31 +10,31 @@ rule bropper
     strings:
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string1 = /\sbropper\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\sbropper\.py.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string2 = /\s\-t\s127\.0\.0\.1\s\-p\s1337\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-t\s127\.0\.0\.1\s\-p\s1337\s.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string3 = /\.py\s.*\s\-\-brop\s/ nocase ascii wide
+        $string3 = /.{0,1000}\.py\s.{0,1000}\s\-\-brop\s.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string4 = /\/Bropper\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/Bropper\.git.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string5 = /\/bropper\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/bropper\.py.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string6 = /bropper\.py\s/ nocase ascii wide
+        $string6 = /.{0,1000}bropper\.py\s.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string7 = /Bropper\-main\.zip/ nocase ascii wide
+        $string7 = /.{0,1000}Bropper\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string8 = /\-\-expected\sBad\s\-\-expected\-stop\sWelcome/ nocase ascii wide
+        $string8 = /.{0,1000}\-\-expected\sBad\s\-\-expected\-stop\sWelcome.{0,1000}/ nocase ascii wide
         // Description: An automatic Blind ROP exploitation tool 
         // Reference: https://github.com/Hakumarachi/Bropper
-        $string9 = /Hakumarachi\/Bropper/ nocase ascii wide
+        $string9 = /.{0,1000}Hakumarachi\/Bropper.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule ftype
     strings:
         // Description: will return the file type information for file types that include the string dfil - hidden objectif is to find cmdfile string
         // Reference: N/A
-        $string1 = /ftype\s.*findstr\s.*dfil/ nocase ascii wide
+        $string1 = /.{0,1000}ftype\s.{0,1000}findstr\s.{0,1000}dfil.{0,1000}/ nocase ascii wide
         // Description: will return the file type information for file types that include the string SHCm - hidden objectif is to find SHCmdFile string
         // Reference: N/A
-        $string2 = /ftype\s.*findstr\s.*SHCm/ nocase ascii wide
+        $string2 = /.{0,1000}ftype\s.{0,1000}findstr\s.{0,1000}SHCm.{0,1000}/ nocase ascii wide
         // Description: will return the file type information for file types that include the string dfil - hidden objectif is to find cmdfile string
         // Reference: N/A
-        $string3 = /ftype\s.*findstr\sdfil/ nocase ascii wide
+        $string3 = /.{0,1000}ftype\s.{0,1000}findstr\sdfil.{0,1000}/ nocase ascii wide
         // Description: will return the file type information for file types that include the string SHCm - hidden objectif is to find SHCmdFile string
         // Reference: N/A
-        $string4 = /ftype\s.*findstr\sSHCm/ nocase ascii wide
+        $string4 = /.{0,1000}ftype\s.{0,1000}findstr\sSHCm.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

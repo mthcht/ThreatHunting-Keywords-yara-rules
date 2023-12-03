@@ -10,7 +10,7 @@ rule CMSeek
     strings:
         // Description: CMS Detection and Exploitation suite - Scan WordPress. Joomla. Drupal and 130 other CMSs.
         // Reference: https://github.com/Tuhinshubhra/CMSeek
-        $string1 = /\/CMSeek/ nocase ascii wide
+        $string1 = /.{0,1000}\/CMSeek.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

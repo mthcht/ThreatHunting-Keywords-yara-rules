@@ -10,52 +10,52 @@ rule SharPyShell
     strings:
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string1 = /\sinteract\s\-u\shttp.*:\/\/.*\/.*\.aspx\s\-p\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sinteract\s\-u\shttp.{0,1000}:\/\/.{0,1000}\/.{0,1000}\.aspx\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string2 = /\/SharPyShell/ nocase ascii wide
+        $string2 = /.{0,1000}\/SharPyShell.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string3 = /\\SharPyShell/ nocase ascii wide
+        $string3 = /.{0,1000}\\SharPyShell.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string4 = /inject_dll_reflective\.py/ nocase ascii wide
+        $string4 = /.{0,1000}inject_dll_reflective\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string5 = /inject_dll_srdi\.py/ nocase ascii wide
+        $string5 = /.{0,1000}inject_dll_srdi\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string6 = /inject_shellcode\.py/ nocase ascii wide
+        $string6 = /.{0,1000}inject_shellcode\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string7 = /JuicyPotato\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}JuicyPotato\.exe.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string8 = /juicypotato_reflective\.dll/ nocase ascii wide
+        $string8 = /.{0,1000}juicypotato_reflective\.dll.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string9 = /lateral_wmi\.py/ nocase ascii wide
+        $string9 = /.{0,1000}lateral_wmi\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string10 = /messagebox_reflective\.dll/ nocase ascii wide
+        $string10 = /.{0,1000}messagebox_reflective\.dll.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string11 = /net_portscan\.py/ nocase ascii wide
+        $string11 = /.{0,1000}net_portscan\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string12 = /privesc_juicy_potato\.py/ nocase ascii wide
+        $string12 = /.{0,1000}privesc_juicy_potato\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string13 = /privesc_powerup\.py/ nocase ascii wide
+        $string13 = /.{0,1000}privesc_powerup\.py.{0,1000}/ nocase ascii wide
         // Description: SharPyShell is a tiny and obfuscated ASP.NET webshell that executes commands received by an encrypted channel compiling them in memory at runtime.
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string14 = /SharPyShell/ nocase ascii wide
+        $string14 = /.{0,1000}SharPyShell.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string15 = /sharpyshell\.aspx/ nocase ascii wide
+        $string15 = /.{0,1000}sharpyshell\.aspx.{0,1000}/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string16 = /SharPyShell\.py/ nocase ascii wide
+        $string16 = /.{0,1000}SharPyShell\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

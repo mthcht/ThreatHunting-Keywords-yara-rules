@@ -10,25 +10,25 @@ rule Powermad
     strings:
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string1 = /\/Powermad\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Powermad\.git.{0,1000}/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string2 = /\\Powermad/ nocase ascii wide
+        $string2 = /.{0,1000}\\Powermad.{0,1000}/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string3 = /Invoke\-DNSUpdate\.ps1/ nocase ascii wide
+        $string3 = /.{0,1000}Invoke\-DNSUpdate\.ps1.{0,1000}/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string4 = /powermad\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}powermad\.ps1.{0,1000}/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string5 = /Powermad\.psd1/ nocase ascii wide
+        $string5 = /.{0,1000}Powermad\.psd1.{0,1000}/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string6 = /Powermad\.psm1/ nocase ascii wide
+        $string6 = /.{0,1000}Powermad\.psm1.{0,1000}/ nocase ascii wide
         // Description: PowerShell MachineAccountQuota and DNS exploit tools
         // Reference: https://github.com/Kevin-Robertson/Powermad
-        $string7 = /Powermad\-master/ nocase ascii wide
+        $string7 = /.{0,1000}Powermad\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

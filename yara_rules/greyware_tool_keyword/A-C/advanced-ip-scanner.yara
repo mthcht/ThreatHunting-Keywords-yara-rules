@@ -10,16 +10,16 @@ rule advanced_ip_scanner
     strings:
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string1 = /Advanced\sIP\sScanner/ nocase ascii wide
+        $string1 = /.{0,1000}Advanced\sIP\sScanner.{0,1000}/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string2 = /advanced_ip_scanner/ nocase ascii wide
+        $string2 = /.{0,1000}advanced_ip_scanner.{0,1000}/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string3 = /Advanced_IP_Scanner.*\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}Advanced_IP_Scanner.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string4 = /https:\/\/download\.advanced\-ip\-scanner\.com\/download\/files\/.*\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}https:\/\/download\.advanced\-ip\-scanner\.com\/download\/files\/.{0,1000}\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

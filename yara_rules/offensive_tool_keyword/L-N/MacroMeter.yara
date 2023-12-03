@@ -10,7 +10,7 @@ rule MacroMeter
     strings:
         // Description: VBA Reversed TCP Meterpreter Stager CSharp Meterpreter Stager build by Cn33liz and embedded within VBA using DotNetToJScript from James Forshaw https://github.com/tyranid/DotNetToJScript
         // Reference: https://github.com/Cn33liz/MacroMeter
-        $string1 = /\/MacroMeter/ nocase ascii wide
+        $string1 = /.{0,1000}\/MacroMeter.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

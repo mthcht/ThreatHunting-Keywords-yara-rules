@@ -10,19 +10,19 @@ rule RedTeam_toolkit
     strings:
         // Description: Fast and customizable vulnerability scanner For JIRA written in Python
         // Reference: https://github.com/MayankPandey01/Jira-Lens
-        $string1 = /\/Jira\-Lens\// nocase ascii wide
+        $string1 = /.{0,1000}\/Jira\-Lens\/.{0,1000}/ nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
-        $string2 = /\/RedTeam_toolkit/ nocase ascii wide
+        $string2 = /.{0,1000}\/RedTeam_toolkit.{0,1000}/ nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
-        $string3 = /cvescanner\.py/ nocase ascii wide
+        $string3 = /.{0,1000}cvescanner\.py.{0,1000}/ nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
-        $string4 = /dirscanner\.py/ nocase ascii wide
+        $string4 = /.{0,1000}dirscanner\.py.{0,1000}/ nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
-        $string5 = /rdpbrute\.py/ nocase ascii wide
+        $string5 = /.{0,1000}rdpbrute\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

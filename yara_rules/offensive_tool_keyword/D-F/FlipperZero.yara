@@ -10,7 +10,7 @@ rule FlipperZero
     strings:
         // Description: Flipper ZeroFlipper Zero is a portable multi-tool for pentesters and geeks in a toy-like body
         // Reference: https://docs.flipper.net/qflipper/windows-debug
-        $string1 = /VID_0483\&PID_5740/ nocase ascii wide
+        $string1 = /.{0,1000}VID_0483\&PID_5740.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

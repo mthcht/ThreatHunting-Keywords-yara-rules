@@ -10,7 +10,7 @@ rule Invoke_WCMDump
     strings:
         // Description: PowerShell script to dump Windows credentials from the Credential Manager Invoke-WCMDump enumerates Windows credentials in the Credential Manager and then extracts available information about each one. Passwords are retrieved for Generic type credentials. but can not be retrived by the same method for Domain type credentials. Credentials are only returned for the current user
         // Reference: https://github.com/peewpw/Invoke-WCMDump
-        $string1 = /Invoke\-WCMDump/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-WCMDump.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

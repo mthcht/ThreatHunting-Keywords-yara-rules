@@ -10,10 +10,10 @@ rule DomainPasswordSpray
     strings:
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string1 = /DomainPasswordSpray/ nocase ascii wide
+        $string1 = /.{0,1000}DomainPasswordSpray.{0,1000}/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string2 = /PasswordSpray\s/ nocase ascii wide
+        $string2 = /.{0,1000}PasswordSpray\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

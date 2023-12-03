@@ -10,718 +10,718 @@ rule NetExec
     strings:
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string1 = /\s\-\-asreproast\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-asreproast\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string2 = /\s\-\-bloodhound\s\-\-ns\sip\s\-\-collection\sAll/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-bloodhound\s\-\-ns\sip\s\-\-collection\sAll.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string3 = /\se2e_test\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\se2e_test\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string4 = /\s\-\-gen\-relay\-list\s\/tmp\/relaylistOutputFilename\.txt/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-\-gen\-relay\-list\s\/tmp\/relaylistOutputFilename\.txt.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string5 = /\s\-\-gmsa\-decrypt\-lsa\s/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-\-gmsa\-decrypt\-lsa\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string6 = /\s\-\-kerberoasting\s/ nocase ascii wide
+        $string6 = /.{0,1000}\s\-\-kerberoasting\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string7 = /\sldap\s.*\s\-\-trusted\-for\-delegation/ nocase ascii wide
+        $string7 = /.{0,1000}\sldap\s.{0,1000}\s\-\-trusted\-for\-delegation.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string8 = /\sldap\s.*\s\-u\s.*\s\-p\s.*\s\-\-admin\-count/ nocase ascii wide
+        $string8 = /.{0,1000}\sldap\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-admin\-count.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string9 = /\sldap\s.*\s\-u\s.*\s\-p\s.*\s\-M\swhoami\s/ nocase ascii wide
+        $string9 = /.{0,1000}\sldap\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\swhoami\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string10 = /\s\-M\sempire_exec\s\-o\sLISTENER\=http\-listener/ nocase ascii wide
+        $string10 = /.{0,1000}\s\-M\sempire_exec\s\-o\sLISTENER\=http\-listener.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string11 = /\s\-M\sgpp_autologin/ nocase ascii wide
+        $string11 = /.{0,1000}\s\-M\sgpp_autologin.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string12 = /\s\-M\skeepass_discover/ nocase ascii wide
+        $string12 = /.{0,1000}\s\-M\skeepass_discover.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string13 = /\s\-M\skeepass_trigger\s\-o\sACTION\=ALL\sUSER\=/ nocase ascii wide
+        $string13 = /.{0,1000}\s\-M\skeepass_trigger\s\-o\sACTION\=ALL\sUSER\=.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string14 = /\s\-M\sldap\-checker\s/ nocase ascii wide
+        $string14 = /.{0,1000}\s\-M\sldap\-checker\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string15 = /\s\-M\spetitpotam/ nocase ascii wide
+        $string15 = /.{0,1000}\s\-M\spetitpotam.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string16 = /\s\-M\sscuffy\s\-o\sSERVER\=127\.0\.0\.1/ nocase ascii wide
+        $string16 = /.{0,1000}\s\-M\sscuffy\s\-o\sSERVER\=127\.0\.0\.1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string17 = /\s\-M\sshadowcoerce/ nocase ascii wide
+        $string17 = /.{0,1000}\s\-M\sshadowcoerce.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string18 = /\s\-M\sslinky\s\-o\sSERVER\=/ nocase ascii wide
+        $string18 = /.{0,1000}\s\-M\sslinky\s\-o\sSERVER\=.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string19 = /\s\-M\sspider_plus\s\-o\sMAX_FILE_SIZE\=100/ nocase ascii wide
+        $string19 = /.{0,1000}\s\-M\sspider_plus\s\-o\sMAX_FILE_SIZE\=100.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string20 = /\s\-M\swdigest\s\-o\sACTION\=disable/ nocase ascii wide
+        $string20 = /.{0,1000}\s\-M\swdigest\s\-o\sACTION\=disable.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string21 = /\s\-M\swdigest\s\-o\sACTION\=enable/ nocase ascii wide
+        $string21 = /.{0,1000}\s\-M\swdigest\s\-o\sACTION\=enable.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string22 = /\smssql\s.*\s\-u\s.*\s\-p\s.*\s\-M\smet_inject/ nocase ascii wide
+        $string22 = /.{0,1000}\smssql\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\smet_inject.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string23 = /\smssql\s.*\s\-u\s.*\s\-p\s.*\s\-M\smssql_priv/ nocase ascii wide
+        $string23 = /.{0,1000}\smssql\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\smssql_priv.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string24 = /\smssql\s.*\s\-u\s.*\s\-p\s.*\s\-M\sweb_delivery\s/ nocase ascii wide
+        $string24 = /.{0,1000}\smssql\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\sweb_delivery\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string25 = /\s\-\-no\-bruteforce\s\-\-continue\-on\-success/ nocase ascii wide
+        $string25 = /.{0,1000}\s\-\-no\-bruteforce\s\-\-continue\-on\-success.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string26 = /\s\-p\stest_passwords\.txt/ nocase ascii wide
+        $string26 = /.{0,1000}\s\-p\stest_passwords\.txt.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string27 = /\srdp\s.*\s\-u\s.*\s\-p\s.*\s\-\-nla\-screenshot/ nocase ascii wide
+        $string27 = /.{0,1000}\srdp\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-nla\-screenshot.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string28 = /\srun\snetexec\s/ nocase ascii wide
+        $string28 = /.{0,1000}\srun\snetexec\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string29 = /\srun\snxc\ssmb\s/ nocase ascii wide
+        $string29 = /.{0,1000}\srun\snxc\ssmb\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string30 = /\ssmb\s.*\s\-M\slsassy/ nocase ascii wide
+        $string30 = /.{0,1000}\ssmb\s.{0,1000}\s\-M\slsassy.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string31 = /\ssmb\s.*\s\-M\smasky\s\-o\sCA\=/ nocase ascii wide
+        $string31 = /.{0,1000}\ssmb\s.{0,1000}\s\-M\smasky\s\-o\sCA\=.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string32 = /\ssmb\s.*\s\-M\srdp\s\-o\sACTION\=enable/ nocase ascii wide
+        $string32 = /.{0,1000}\ssmb\s.{0,1000}\s\-M\srdp\s\-o\sACTION\=enable.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string33 = /\ssmb\s.*\s\-M\srunasppl/ nocase ascii wide
+        $string33 = /.{0,1000}\ssmb\s.{0,1000}\s\-M\srunasppl.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string34 = /\ssmb\s.*\s\-M\szerologon/ nocase ascii wide
+        $string34 = /.{0,1000}\ssmb\s.{0,1000}\s\-M\szerologon.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string35 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s.*\s\-M\sdfscoerce/ nocase ascii wide
+        $string35 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s.{0,1000}\s\-M\sdfscoerce.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string36 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s.*\s\-\-rid\-brute/ nocase ascii wide
+        $string36 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s.{0,1000}\s\-\-rid\-brute.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string37 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s.*\s\-\-shares\s\-\-filter\-shares\s/ nocase ascii wide
+        $string37 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s.{0,1000}\s\-\-shares\s\-\-filter\-shares\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string38 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s.*\s\-X\swhoami\s\-\-obfs/ nocase ascii wide
+        $string38 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s.{0,1000}\s\-X\swhoami\s\-\-obfs.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string39 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s\-M\senum_av/ nocase ascii wide
+        $string39 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\senum_av.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string40 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s\-M\senum_dns/ nocase ascii wide
+        $string40 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\senum_dns.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string41 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s\-M\sgpp_password/ nocase ascii wide
+        $string41 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\sgpp_password.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string42 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s\-M\smet_inject\s/ nocase ascii wide
+        $string42 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\smet_inject\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string43 = /\ssmb\s.*\s\-u\s.*\s\-p\s.*\s\-\-wmi\s\"select\sName\sfrom\swin32_computersystem\"/ nocase ascii wide
+        $string43 = /.{0,1000}\ssmb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-wmi\s\"select\sName\sfrom\swin32_computersystem\".{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string44 = /\sSRVHOST\=127\.0\.0\.1\sSRVPORT\=4444\sRAND\=12345/ nocase ascii wide
+        $string44 = /.{0,1000}\sSRVHOST\=127\.0\.0\.1\sSRVPORT\=4444\sRAND\=12345.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string45 = /\s\-u\s.*\s\-p\s.*\s\-M\shandlekatz/ nocase ascii wide
+        $string45 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\shandlekatz.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string46 = /\s\-u\s.*\s\-p\s.*\s\-M\snanodump/ nocase ascii wide
+        $string46 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\snanodump.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string47 = /\s\-u\s.*\s\-p\s.*\s\-M\sntdsutil/ nocase ascii wide
+        $string47 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\sntdsutil.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string48 = /\swinrm\s.*\s\-u\s.*\s\-p\s.*\s\-\-laps/ nocase ascii wide
+        $string48 = /.{0,1000}\swinrm\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-laps.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string49 = /\swinrm\s.*\s\-u\s.*\s\-p\s.*\s\-X\swhoami/ nocase ascii wide
+        $string49 = /.{0,1000}\swinrm\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-X\swhoami.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string50 = /\s\-x\s.*\s\-\-exec\-method\s/ nocase ascii wide
+        $string50 = /.{0,1000}\s\-x\s.{0,1000}\s\-\-exec\-method\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string51 = /\s\-X\swhoami\s\-\-obfs/ nocase ascii wide
+        $string51 = /.{0,1000}\s\-X\swhoami\s\-\-obfs.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string52 = /\/\.nxc\/obfuscated_scripts\// nocase ascii wide
+        $string52 = /.{0,1000}\/\.nxc\/obfuscated_scripts\/.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string53 = /\/adcs\.py/ nocase ascii wide
+        $string53 = /.{0,1000}\/adcs\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string54 = /\/add_computer\.py/ nocase ascii wide
+        $string54 = /.{0,1000}\/add_computer\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string55 = /\/bh_owned\.py/ nocase ascii wide
+        $string55 = /.{0,1000}\/bh_owned\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string56 = /\/bin\/nxcdb/ nocase ascii wide
+        $string56 = /.{0,1000}\/bin\/nxcdb.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string57 = /\/daclread\.py/ nocase ascii wide
+        $string57 = /.{0,1000}\/daclread\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string58 = /\/data\/nxc\.conf/ nocase ascii wide
+        $string58 = /.{0,1000}\/data\/nxc\.conf.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string59 = /\/dfscoerce\.py/ nocase ascii wide
+        $string59 = /.{0,1000}\/dfscoerce\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string60 = /\/drop\-sc\.py/ nocase ascii wide
+        $string60 = /.{0,1000}\/drop\-sc\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string61 = /\/e2e_commands\.txt/ nocase ascii wide
+        $string61 = /.{0,1000}\/e2e_commands\.txt.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string62 = /\/e2e_test\.py/ nocase ascii wide
+        $string62 = /.{0,1000}\/e2e_test\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string63 = /\/empire_exec\.py/ nocase ascii wide
+        $string63 = /.{0,1000}\/empire_exec\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string64 = /\/enum_av\.py/ nocase ascii wide
+        $string64 = /.{0,1000}\/enum_av\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string65 = /\/enum_dns\.py/ nocase ascii wide
+        $string65 = /.{0,1000}\/enum_dns\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string66 = /\/find\-computer\.py/ nocase ascii wide
+        $string66 = /.{0,1000}\/find\-computer\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string67 = /\/get\-desc\-users\.py/ nocase ascii wide
+        $string67 = /.{0,1000}\/get\-desc\-users\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string68 = /\/gpp_autologin\.py/ nocase ascii wide
+        $string68 = /.{0,1000}\/gpp_autologin\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string69 = /\/gpp_password\.py/ nocase ascii wide
+        $string69 = /.{0,1000}\/gpp_password\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string70 = /\/handlekatz\.py/ nocase ascii wide
+        $string70 = /.{0,1000}\/handlekatz\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string71 = /\/hash_spider\.py/ nocase ascii wide
+        $string71 = /.{0,1000}\/hash_spider\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string72 = /\/impersonate\.py/ nocase ascii wide
+        $string72 = /.{0,1000}\/impersonate\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string73 = /\/install_elevated\.py/ nocase ascii wide
+        $string73 = /.{0,1000}\/install_elevated\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string74 = /\/IOXIDResolver\.py/ nocase ascii wide
+        $string74 = /.{0,1000}\/IOXIDResolver\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string75 = /\/keepass_discover\.py/ nocase ascii wide
+        $string75 = /.{0,1000}\/keepass_discover\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string76 = /\/keepass_trigger\.py/ nocase ascii wide
+        $string76 = /.{0,1000}\/keepass_trigger\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string77 = /\/laps\.py/ nocase ascii wide
+        $string77 = /.{0,1000}\/laps\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string78 = /\/ldap\-checker\.py/ nocase ascii wide
+        $string78 = /.{0,1000}\/ldap\-checker\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string79 = /\/lsassy_dump\.py/ nocase ascii wide
+        $string79 = /.{0,1000}\/lsassy_dump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string80 = /\/masky\.py/ nocase ascii wide
+        $string80 = /.{0,1000}\/masky\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string81 = /\/met_inject\.py/ nocase ascii wide
+        $string81 = /.{0,1000}\/met_inject\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string82 = /\/ms17\-010\.py/ nocase ascii wide
+        $string82 = /.{0,1000}\/ms17\-010\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string83 = /\/msol\.py/ nocase ascii wide
+        $string83 = /.{0,1000}\/msol\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string84 = /\/mssql_priv\.py/ nocase ascii wide
+        $string84 = /.{0,1000}\/mssql_priv\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string85 = /\/nanodump\.py/ nocase ascii wide
+        $string85 = /.{0,1000}\/nanodump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string86 = /\/NetExec\.git/ nocase ascii wide
+        $string86 = /.{0,1000}\/NetExec\.git.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string87 = /\/netexec\.py/ nocase ascii wide
+        $string87 = /.{0,1000}\/netexec\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string88 = /\/NetExec\-main/ nocase ascii wide
+        $string88 = /.{0,1000}\/NetExec\-main.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string89 = /\/nopac\.py/ nocase ascii wide
+        $string89 = /.{0,1000}\/nopac\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string90 = /\/ntdsutil\.py/ nocase ascii wide
+        $string90 = /.{0,1000}\/ntdsutil\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string91 = /\/ntlmv1\.py/ nocase ascii wide
+        $string91 = /.{0,1000}\/ntlmv1\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string92 = /\/nxc\s\-\-help/ nocase ascii wide
+        $string92 = /.{0,1000}\/nxc\s\-\-help.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string93 = /\/nxc\.exe/ nocase ascii wide
+        $string93 = /.{0,1000}\/nxc\.exe.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string94 = /\/nxc\/parsers\/ip\.py/ nocase ascii wide
+        $string94 = /.{0,1000}\/nxc\/parsers\/ip\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string95 = /\/nxc\/parsers\/nmap\.py/ nocase ascii wide
+        $string95 = /.{0,1000}\/nxc\/parsers\/nmap\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string96 = /\/nxc\-ubuntu\-latest/ nocase ascii wide
+        $string96 = /.{0,1000}\/nxc\-ubuntu\-latest.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string97 = /\/parsers\/nessus\.py/ nocase ascii wide
+        $string97 = /.{0,1000}\/parsers\/nessus\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string98 = /\/petitpotam\.py/ nocase ascii wide
+        $string98 = /.{0,1000}\/petitpotam\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string99 = /\/printnightmare\.py/ nocase ascii wide
+        $string99 = /.{0,1000}\/printnightmare\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string100 = /\/procdump\.py/ nocase ascii wide
+        $string100 = /.{0,1000}\/procdump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string101 = /\/rdcman\.py/ nocase ascii wide
+        $string101 = /.{0,1000}\/rdcman\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string102 = /\/rdp\.py/ nocase ascii wide
+        $string102 = /.{0,1000}\/rdp\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string103 = /\/reg\-query\.py/ nocase ascii wide
+        $string103 = /.{0,1000}\/reg\-query\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string104 = /\/runasppl\.py/ nocase ascii wide
+        $string104 = /.{0,1000}\/runasppl\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string105 = /\/scan\-network\.py/ nocase ascii wide
+        $string105 = /.{0,1000}\/scan\-network\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string106 = /\/scuffy\.py/ nocase ascii wide
+        $string106 = /.{0,1000}\/scuffy\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string107 = /\/shadowcoerce\.py/ nocase ascii wide
+        $string107 = /.{0,1000}\/shadowcoerce\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string108 = /\/slinky\.py/ nocase ascii wide
+        $string108 = /.{0,1000}\/slinky\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string109 = /\/spider_plus\.py/ nocase ascii wide
+        $string109 = /.{0,1000}\/spider_plus\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string110 = /\/spooler\.py/ nocase ascii wide
+        $string110 = /.{0,1000}\/spooler\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string111 = /\/teams_localdb\.py/ nocase ascii wide
+        $string111 = /.{0,1000}\/teams_localdb\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string112 = /\/uac\.py/ nocase ascii wide
+        $string112 = /.{0,1000}\/uac\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string113 = /\/usr\/src\/netexec/ nocase ascii wide
+        $string113 = /.{0,1000}\/usr\/src\/netexec.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string114 = /\/veeam_dump\.py/ nocase ascii wide
+        $string114 = /.{0,1000}\/veeam_dump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string115 = /\/wdigest\.py/ nocase ascii wide
+        $string115 = /.{0,1000}\/wdigest\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string116 = /\/web_delivery\.py/ nocase ascii wide
+        $string116 = /.{0,1000}\/web_delivery\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string117 = /\/webdav\.py/ nocase ascii wide
+        $string117 = /.{0,1000}\/webdav\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string118 = /\/whoami\.py/ nocase ascii wide
+        $string118 = /.{0,1000}\/whoami\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string119 = /\/winscp_dump\.py/ nocase ascii wide
+        $string119 = /.{0,1000}\/winscp_dump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string120 = /\/wireless\.py/ nocase ascii wide
+        $string120 = /.{0,1000}\/wireless\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string121 = /\/zerologon\.py/ nocase ascii wide
+        $string121 = /.{0,1000}\/zerologon\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string122 = /\[\!\]\sDumping\sthe\sntds\scan\scrash\sthe\sDC\son\sWindows\sServer\s2019\.\sUse\sthe\soption/ nocase ascii wide
+        $string122 = /.{0,1000}\[\!\]\sDumping\sthe\sntds\scan\scrash\sthe\sDC\son\sWindows\sServer\s2019\.\sUse\sthe\soption.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string123 = /\\adcs\.py/ nocase ascii wide
+        $string123 = /.{0,1000}\\adcs\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string124 = /\\add_computer\.py/ nocase ascii wide
+        $string124 = /.{0,1000}\\add_computer\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string125 = /\\bh_owned\.py/ nocase ascii wide
+        $string125 = /.{0,1000}\\bh_owned\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string126 = /\\daclread\.py/ nocase ascii wide
+        $string126 = /.{0,1000}\\daclread\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string127 = /\\dfscoerce\.py/ nocase ascii wide
+        $string127 = /.{0,1000}\\dfscoerce\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string128 = /\\drop\-sc\.py/ nocase ascii wide
+        $string128 = /.{0,1000}\\drop\-sc\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string129 = /\\empire_exec\.py/ nocase ascii wide
+        $string129 = /.{0,1000}\\empire_exec\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string130 = /\\enum_av\.py/ nocase ascii wide
+        $string130 = /.{0,1000}\\enum_av\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string131 = /\\enum_dns\.py/ nocase ascii wide
+        $string131 = /.{0,1000}\\enum_dns\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string132 = /\\find\-computer\.py/ nocase ascii wide
+        $string132 = /.{0,1000}\\find\-computer\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string133 = /\\get_netconnections\.py/ nocase ascii wide
+        $string133 = /.{0,1000}\\get_netconnections\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string134 = /\\get\-desc\-users\.py/ nocase ascii wide
+        $string134 = /.{0,1000}\\get\-desc\-users\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string135 = /\\gpp_autologin\.py/ nocase ascii wide
+        $string135 = /.{0,1000}\\gpp_autologin\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string136 = /\\gpp_password\.py/ nocase ascii wide
+        $string136 = /.{0,1000}\\gpp_password\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string137 = /\\group_members\.py/ nocase ascii wide
+        $string137 = /.{0,1000}\\group_members\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string138 = /\\groupmembership\.py/ nocase ascii wide
+        $string138 = /.{0,1000}\\groupmembership\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string139 = /\\handlekatz\.exe/ nocase ascii wide
+        $string139 = /.{0,1000}\\handlekatz\.exe.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string140 = /\\handlekatz\.py/ nocase ascii wide
+        $string140 = /.{0,1000}\\handlekatz\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string141 = /\\hash_spider\.py/ nocase ascii wide
+        $string141 = /.{0,1000}\\hash_spider\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string142 = /\\impersonate\.py/ nocase ascii wide
+        $string142 = /.{0,1000}\\impersonate\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string143 = /\\install_elevated\.py/ nocase ascii wide
+        $string143 = /.{0,1000}\\install_elevated\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string144 = /\\IOXIDResolver\.py/ nocase ascii wide
+        $string144 = /.{0,1000}\\IOXIDResolver\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string145 = /\\keepass_discover\.py/ nocase ascii wide
+        $string145 = /.{0,1000}\\keepass_discover\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string146 = /\\keepass_trigger\.py/ nocase ascii wide
+        $string146 = /.{0,1000}\\keepass_trigger\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string147 = /\\laps\.py/ nocase ascii wide
+        $string147 = /.{0,1000}\\laps\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string148 = /\\ldap\-checker\.py/ nocase ascii wide
+        $string148 = /.{0,1000}\\ldap\-checker\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string149 = /\\lsassy_dump\.py/ nocase ascii wide
+        $string149 = /.{0,1000}\\lsassy_dump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string150 = /\\MachineAccountQuota\.py/ nocase ascii wide
+        $string150 = /.{0,1000}\\MachineAccountQuota\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string151 = /\\masky\.py/ nocase ascii wide
+        $string151 = /.{0,1000}\\masky\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string152 = /\\met_inject\.py/ nocase ascii wide
+        $string152 = /.{0,1000}\\met_inject\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string153 = /\\ms17\-010\.py/ nocase ascii wide
+        $string153 = /.{0,1000}\\ms17\-010\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string154 = /\\msol\.py/ nocase ascii wide
+        $string154 = /.{0,1000}\\msol\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string155 = /\\mssql_priv\.py/ nocase ascii wide
+        $string155 = /.{0,1000}\\mssql_priv\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string156 = /\\nanodump\.py/ nocase ascii wide
+        $string156 = /.{0,1000}\\nanodump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string157 = /\\netexec\.py/ nocase ascii wide
+        $string157 = /.{0,1000}\\netexec\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string158 = /\\netexec\.yml/ nocase ascii wide
+        $string158 = /.{0,1000}\\netexec\.yml.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string159 = /\\NetExec\-main/ nocase ascii wide
+        $string159 = /.{0,1000}\\NetExec\-main.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string160 = /\\NetExec\-main\\/ nocase ascii wide
+        $string160 = /.{0,1000}\\NetExec\-main\\.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string161 = /\\nopac\.py/ nocase ascii wide
+        $string161 = /.{0,1000}\\nopac\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string162 = /\\ntdsutil\.py/ nocase ascii wide
+        $string162 = /.{0,1000}\\ntdsutil\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string163 = /\\ntlmv1\.py/ nocase ascii wide
+        $string163 = /.{0,1000}\\ntlmv1\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string164 = /\\nxc\.exe/ nocase ascii wide
+        $string164 = /.{0,1000}\\nxc\.exe.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string165 = /\\nxc\\parsers\\ip\.py/ nocase ascii wide
+        $string165 = /.{0,1000}\\nxc\\parsers\\ip\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string166 = /\\nxc\\parsers\\nmap\.py/ nocase ascii wide
+        $string166 = /.{0,1000}\\nxc\\parsers\\nmap\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string167 = /\\parsers\\nessus\.py/ nocase ascii wide
+        $string167 = /.{0,1000}\\parsers\\nessus\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string168 = /\\petitpotam\.py/ nocase ascii wide
+        $string168 = /.{0,1000}\\petitpotam\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string169 = /\\printnightmare\.py/ nocase ascii wide
+        $string169 = /.{0,1000}\\printnightmare\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string170 = /\\procdump\.py/ nocase ascii wide
+        $string170 = /.{0,1000}\\procdump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string171 = /\\rdcman\.py/ nocase ascii wide
+        $string171 = /.{0,1000}\\rdcman\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string172 = /\\rdp\.py/ nocase ascii wide
+        $string172 = /.{0,1000}\\rdp\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string173 = /\\reg\-query\.py/ nocase ascii wide
+        $string173 = /.{0,1000}\\reg\-query\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string174 = /\\runasppl\.py/ nocase ascii wide
+        $string174 = /.{0,1000}\\runasppl\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string175 = /\\scan\-network\.py/ nocase ascii wide
+        $string175 = /.{0,1000}\\scan\-network\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string176 = /\\scuffy\.py/ nocase ascii wide
+        $string176 = /.{0,1000}\\scuffy\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string177 = /\\shadowcoerce\.py/ nocase ascii wide
+        $string177 = /.{0,1000}\\shadowcoerce\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string178 = /\\slinky\.py/ nocase ascii wide
+        $string178 = /.{0,1000}\\slinky\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string179 = /\\spider_plus\.py/ nocase ascii wide
+        $string179 = /.{0,1000}\\spider_plus\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string180 = /\\spooler\.py/ nocase ascii wide
+        $string180 = /.{0,1000}\\spooler\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string181 = /\\teams_localdb\.py/ nocase ascii wide
+        $string181 = /.{0,1000}\\teams_localdb\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string182 = /\\Temp\\whoami\.txt/ nocase ascii wide
+        $string182 = /.{0,1000}\\Temp\\whoami\.txt.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string183 = /\\uac\.py/ nocase ascii wide
+        $string183 = /.{0,1000}\\uac\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string184 = /\\veeam_dump\.py/ nocase ascii wide
+        $string184 = /.{0,1000}\\veeam_dump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string185 = /\\wdigest\.py/ nocase ascii wide
+        $string185 = /.{0,1000}\\wdigest\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string186 = /\\web_delivery\.py/ nocase ascii wide
+        $string186 = /.{0,1000}\\web_delivery\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string187 = /\\webdav\.py/ nocase ascii wide
+        $string187 = /.{0,1000}\\webdav\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string188 = /\\whoami\.py/ nocase ascii wide
+        $string188 = /.{0,1000}\\whoami\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string189 = /\\winscp_dump\.py/ nocase ascii wide
+        $string189 = /.{0,1000}\\winscp_dump\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string190 = /\\wireless\.py/ nocase ascii wide
+        $string190 = /.{0,1000}\\wireless\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string191 = /\\zerologon\.py/ nocase ascii wide
+        $string191 = /.{0,1000}\\zerologon\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string192 = /AddKeePassTrigger\.ps1/ nocase ascii wide
+        $string192 = /.{0,1000}AddKeePassTrigger\.ps1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string193 = /crackmapexec\.py/ nocase ascii wide
+        $string193 = /.{0,1000}crackmapexec\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string194 = /crackmapexec\.spec/ nocase ascii wide
+        $string194 = /.{0,1000}crackmapexec\.spec.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string195 = /EC235B9DDBCA83FD5BE2B80E2D543B07BE7E1052/ nocase ascii wide
+        $string195 = /.{0,1000}EC235B9DDBCA83FD5BE2B80E2D543B07BE7E1052.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string196 = /Exec_Command_Silent\.vbs/ nocase ascii wide
+        $string196 = /.{0,1000}Exec_Command_Silent\.vbs.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string197 = /Exec_Command_WithOutput\.vbs/ nocase ascii wide
+        $string197 = /.{0,1000}Exec_Command_WithOutput\.vbs.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string198 = /export\sKRB5CCNAME\=\/.*\/impacket\/administrator\.ccache.*\s/ nocase ascii wide
+        $string198 = /.{0,1000}export\sKRB5CCNAME\=\/.{0,1000}\/impacket\/administrator\.ccache.{0,1000}\s/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string199 = /HANDLEKATZ_EXE_NAME\=/ nocase ascii wide
+        $string199 = /.{0,1000}HANDLEKATZ_EXE_NAME\=.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string200 = /hook\-lsassy\.py/ nocase ascii wide
+        $string200 = /.{0,1000}hook\-lsassy\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string201 = /hook\-pypykatz\.py/ nocase ascii wide
+        $string201 = /.{0,1000}hook\-pypykatz\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string202 = /Invoke\-Obfuscation\s\-ScriptPath\s/ nocase ascii wide
+        $string202 = /.{0,1000}Invoke\-Obfuscation\s\-ScriptPath\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string203 = /Invoke\-Obfuscation\.psd1/ nocase ascii wide
+        $string203 = /.{0,1000}Invoke\-Obfuscation\.psd1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string204 = /Invoke\-PSInject\.ps1/ nocase ascii wide
+        $string204 = /.{0,1000}Invoke\-PSInject\.ps1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string205 = /\-M\shandlekatz\s\-o\s/ nocase ascii wide
+        $string205 = /.{0,1000}\-M\shandlekatz\s\-o\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string206 = /msol_dump\.ps1/ nocase ascii wide
+        $string206 = /.{0,1000}msol_dump\.ps1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string207 = /NetExec\sldap\s.*\s\-\-/ nocase ascii wide
+        $string207 = /.{0,1000}NetExec\sldap\s.{0,1000}\s\-\-.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string208 = /NetExec\sldap\s.*\s\-\-dc\-ip/ nocase ascii wide
+        $string208 = /.{0,1000}NetExec\sldap\s.{0,1000}\s\-\-dc\-ip.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string209 = /NetExec\sldap\s.*\s\-M\senum_trusts/ nocase ascii wide
+        $string209 = /.{0,1000}NetExec\sldap\s.{0,1000}\s\-M\senum_trusts.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string210 = /netexec\ssmb\s/ nocase ascii wide
+        $string210 = /.{0,1000}netexec\ssmb\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string211 = /NetExec\swinrm\s.*\-\-/ nocase ascii wide
+        $string211 = /.{0,1000}NetExec\swinrm\s.{0,1000}\-\-.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string212 = /NetExec\-main\.zip/ nocase ascii wide
+        $string212 = /.{0,1000}NetExec\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string213 = /NetExec\-main\.zip/ nocase ascii wide
+        $string213 = /.{0,1000}NetExec\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string214 = /nxc\sftp\s.*bruteforce/ nocase ascii wide
+        $string214 = /.{0,1000}nxc\sftp\s.{0,1000}bruteforce.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string215 = /nxc\shttp\s.*\-\-port/ nocase ascii wide
+        $string215 = /.{0,1000}nxc\shttp\s.{0,1000}\-\-port.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string216 = /nxc\sldap\s.*\s\-\-admin\-count/ nocase ascii wide
+        $string216 = /.{0,1000}nxc\sldap\s.{0,1000}\s\-\-admin\-count.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string217 = /nxc\sldap\s.*\s\-\-trusted\-for\-delegation/ nocase ascii wide
+        $string217 = /.{0,1000}nxc\sldap\s.{0,1000}\s\-\-trusted\-for\-delegation.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string218 = /nxc\smssql\s.*\-\-get\-file/ nocase ascii wide
+        $string218 = /.{0,1000}nxc\smssql\s.{0,1000}\-\-get\-file.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string219 = /nxc\smssql\s.*\-\-local\-auth/ nocase ascii wide
+        $string219 = /.{0,1000}nxc\smssql\s.{0,1000}\-\-local\-auth.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string220 = /nxc\sssh\s/ nocase ascii wide
+        $string220 = /.{0,1000}nxc\sssh\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string221 = /nxc\swinrm\s.*\s\-X\s/ nocase ascii wide
+        $string221 = /.{0,1000}nxc\swinrm\s.{0,1000}\s\-X\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string222 = /nxc.*nxcdb\.py/ nocase ascii wide
+        $string222 = /.{0,1000}nxc.{0,1000}nxcdb\.py.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string223 = /nxc\.netexec:main/ nocase ascii wide
+        $string223 = /.{0,1000}nxc\.netexec:main.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string224 = /nxc\.protocols\.smb/ nocase ascii wide
+        $string224 = /.{0,1000}nxc\.protocols\.smb.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string225 = /nxcdb\-zipapp\-/ nocase ascii wide
+        $string225 = /.{0,1000}nxcdb\-zipapp\-.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string226 = /Pennyw0rth\/NetExec/ nocase ascii wide
+        $string226 = /.{0,1000}Pennyw0rth\/NetExec.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string227 = /poetry\srun\sNetExec\s/ nocase ascii wide
+        $string227 = /.{0,1000}poetry\srun\sNetExec\s.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string228 = /pwn3d_label\s\=\sPwn3d\!/ nocase ascii wide
+        $string228 = /.{0,1000}pwn3d_label\s\=\sPwn3d\!.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string229 = /pyinstaller\snetexec\.spec/ nocase ascii wide
+        $string229 = /.{0,1000}pyinstaller\snetexec\.spec.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string230 = /python3.*\.exe\s\.\\nxc/ nocase ascii wide
+        $string230 = /.{0,1000}python3.{0,1000}\.exe\s\.\\nxc.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string231 = /RemoveKeePassTrigger\.ps1/ nocase ascii wide
+        $string231 = /.{0,1000}RemoveKeePassTrigger\.ps1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string232 = /RestartKeePass\.ps1/ nocase ascii wide
+        $string232 = /.{0,1000}RestartKeePass\.ps1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string233 = /smb\s.*\s\-u\s.*\s\-p\s.*\s.*\s\-M\sbh_owned/ nocase ascii wide
+        $string233 = /.{0,1000}smb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s.{0,1000}\s\-M\sbh_owned.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string234 = /smb\s.*\s\-u\s.*\s\-p\s.*\s\-M\sioxidresolver/ nocase ascii wide
+        $string234 = /.{0,1000}smb\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-M\sioxidresolver.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string235 = /smb\s1.*\s\-u\s.*\s\-p\s.*\s\-x\s\"whoami\"/ nocase ascii wide
+        $string235 = /.{0,1000}smb\s1.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-x\s\"whoami\".{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string236 = /taskkill\s\/F\s\/T\s\/IM\skeepass\.exe\s\/FI/ nocase ascii wide
+        $string236 = /.{0,1000}taskkill\s\/F\s\/T\s\/IM\skeepass\.exe\s\/FI.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string237 = /veeam_dump_mssql\.ps1/ nocase ascii wide
+        $string237 = /.{0,1000}veeam_dump_mssql\.ps1.{0,1000}/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string238 = /veeam_dump_postgresql\.ps1/ nocase ascii wide
+        $string238 = /.{0,1000}veeam_dump_postgresql\.ps1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

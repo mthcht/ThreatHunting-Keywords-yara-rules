@@ -10,7 +10,7 @@ rule macro_pack
     strings:
         // Description: The macro_pack is a tool used to automatize obfuscation and generation of retro formats such as MS Office documents or VBS like format. Now it also handles various shortcuts formats.
         // Reference: https://github.com/sevagas/macro_pack
-        $string1 = /macro_pack/ nocase ascii wide
+        $string1 = /.{0,1000}macro_pack.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

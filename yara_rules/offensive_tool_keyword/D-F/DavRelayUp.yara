@@ -10,28 +10,28 @@ rule DavRelayUp
     strings:
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string1 = /\/DavRelayUp\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/DavRelayUp\.git.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string2 = /\/DavRelayUp\// nocase ascii wide
+        $string2 = /.{0,1000}\/DavRelayUp\/.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string3 = /DavRelayUp\.csproj/ nocase ascii wide
+        $string3 = /.{0,1000}DavRelayUp\.csproj.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string4 = /DavRelayUp\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}DavRelayUp\.exe.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string5 = /DavRelayUp\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}DavRelayUp\.sln.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string6 = /DavRelayUp\-master/ nocase ascii wide
+        $string6 = /.{0,1000}DavRelayUp\-master.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string7 = /GoRelayServer\.dll/ nocase ascii wide
+        $string7 = /.{0,1000}GoRelayServer\.dll.{0,1000}/ nocase ascii wide
         // Description: DavRelayUp - a universal no-fix local privilege escalation in domain-joined windows workstations where LDAP signing is not enforced
         // Reference: https://github.com/ShorSec/DavRelayUp
-        $string8 = /ShorSec\/DavRelayUp/ nocase ascii wide
+        $string8 = /.{0,1000}ShorSec\/DavRelayUp.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

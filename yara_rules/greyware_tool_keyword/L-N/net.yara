@@ -10,169 +10,169 @@ rule net
     strings:
         // Description: Enumerate local accounts
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string1 = /\\net\.exe\"\saccounts/ nocase ascii wide
+        $string1 = /.{0,1000}\\net\.exe\"\saccounts.{0,1000}/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string2 = /\\net\.exe.*\slocalgroup\sadmin/ nocase ascii wide
+        $string2 = /.{0,1000}\\net\.exe.{0,1000}\slocalgroup\sadmin.{0,1000}/ nocase ascii wide
         // Description: List active SMB session
         // Reference: N/A
-        $string3 = /\\net\.exe.*\ssessions/ nocase ascii wide
+        $string3 = /.{0,1000}\\net\.exe.{0,1000}\ssessions.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string4 = /\\net\.exe.*\sview\s.*\/domain/ nocase ascii wide
+        $string4 = /.{0,1000}\\net\.exe.{0,1000}\sview\s.{0,1000}\/domain.{0,1000}/ nocase ascii wide
         // Description: List active SMB session
         // Reference: N/A
-        $string5 = /\\net1\ssessions/ nocase ascii wide
+        $string5 = /.{0,1000}\\net1\ssessions.{0,1000}/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string6 = /net\sgroup\s\"Domain\sAdmins\"\s\/domain/ nocase ascii wide
+        $string6 = /.{0,1000}net\sgroup\s\"Domain\sAdmins\"\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string7 = /net\sgroup\s.*Account\sOperators.*\s\/domain/ nocase ascii wide
+        $string7 = /.{0,1000}net\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string8 = /net\sgroup\s.*Backup\sOperators.*\s\/domain/ nocase ascii wide
+        $string8 = /.{0,1000}net\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string9 = /net\sgroup\s.*Domain\sComputers.*\s\/domain/ nocase ascii wide
+        $string9 = /.{0,1000}net\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string10 = /net\sgroup\s.*Domain\sControllers.*\s\/domain/ nocase ascii wide
+        $string10 = /.{0,1000}net\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: Query Domain Comtrollers Computers in the current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string11 = /net\sgroup\s.*Domain\sControllers.*\/domain/ nocase ascii wide
+        $string11 = /.{0,1000}net\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string12 = /net\sgroup\s.*Enterprise\sAdmins.*\s\/domain/ nocase ascii wide
+        $string12 = /.{0,1000}net\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string13 = /net\sgroup\s.*Exchange\sTrusted\sSubsystem.*\s\/domain/ nocase ascii wide
+        $string13 = /.{0,1000}net\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string14 = /net\sgroup\s.*Microsoft\sExchange\sServers.*\s\/domain/ nocase ascii wide
+        $string14 = /.{0,1000}net\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string15 = /net\sgroup\s.*Print\sOperators.*\s\/domain/ nocase ascii wide
+        $string15 = /.{0,1000}net\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string16 = /net\sgroup\s.*Schema\sAdmins.*\s\/domain/ nocase ascii wide
+        $string16 = /.{0,1000}net\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string17 = /net\sgroup\s.*Server\sOperators.*\s\/domain/ nocase ascii wide
+        $string17 = /.{0,1000}net\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string18 = /net\sgroup\s\/domain\s.*Domain\sAdmins/ nocase ascii wide
+        $string18 = /.{0,1000}net\sgroup\s\/domain\s.{0,1000}Domain\sAdmins.{0,1000}/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string19 = /net\sgroup\sadministrators\s\/domain/ nocase ascii wide
+        $string19 = /.{0,1000}net\sgroup\sadministrators\s\/domain.{0,1000}/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string20 = /net\slocalgroup\sadmin/ nocase ascii wide
+        $string20 = /.{0,1000}net\slocalgroup\sadmin.{0,1000}/ nocase ascii wide
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string21 = /net\sstop\sMSSQL\$CONTOSO1/ nocase ascii wide
+        $string21 = /.{0,1000}net\sstop\sMSSQL\$CONTOSO1.{0,1000}/ nocase ascii wide
         // Description: manipulation of an hidden local account with the net command
         // Reference: N/A
-        $string22 = /net\suser\s.*\$.*\s\// nocase ascii wide
+        $string22 = /.{0,1000}net\suser\s.{0,1000}\$.{0,1000}\s\/.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string23 = /net\sview\s\/all\s\/domain/ nocase ascii wide
+        $string23 = /.{0,1000}net\sview\s\/all\s\/domain.{0,1000}/ nocase ascii wide
         // Description: adding a user to a privileged group. This action can be used by adversaries to maintain unauthorized access or escalate privileges within the targeted environment.
         // Reference: N/A
-        $string24 = /net.*\sgroup\sAdministrator.*\s\/add\s\/domain/ nocase ascii wide
+        $string24 = /.{0,1000}net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string25 = /net\.exe.*\sgroup\s.*Account\sOperators.*\s\/domain/ nocase ascii wide
+        $string25 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string26 = /net\.exe.*\sgroup\s.*Backup\sOperators.*\s\/domain/ nocase ascii wide
+        $string26 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string27 = /net\.exe.*\sgroup\s.*Domain\sComputers.*\s\/domain/ nocase ascii wide
+        $string27 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string28 = /net\.exe.*\sgroup\s.*Domain\sControllers.*\s\/domain/ nocase ascii wide
+        $string28 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string29 = /net\.exe.*\sgroup\s.*Enterprise\sAdmins.*\s\/domain/ nocase ascii wide
+        $string29 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string30 = /net\.exe.*\sgroup\s.*Exchange\sTrusted\sSubsystem.*\s\/domain/ nocase ascii wide
+        $string30 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string31 = /net\.exe.*\sgroup\s.*Microsoft\sExchange\sServers.*\s\/domain/ nocase ascii wide
+        $string31 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string32 = /net\.exe.*\sgroup\s.*Print\sOperators.*\s\/domain/ nocase ascii wide
+        $string32 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string33 = /net\.exe.*\sgroup\s.*Schema\sAdmins.*\s\/domain/ nocase ascii wide
+        $string33 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string34 = /net\.exe.*\sgroup\s.*Server\sOperators.*\s\/domain/ nocase ascii wide
+        $string34 = /.{0,1000}net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string35 = /net1\sgroup\s.*Account\sOperators.*\s\/domain/ nocase ascii wide
+        $string35 = /.{0,1000}net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string36 = /net1\sgroup\s.*Backup\sOperators.*\s\/domain/ nocase ascii wide
+        $string36 = /.{0,1000}net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string37 = /net1\sgroup\s.*Domain\sComputers.*\s\/domain/ nocase ascii wide
+        $string37 = /.{0,1000}net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string38 = /net1\sgroup\s.*Domain\sControllers.*\s\/domain/ nocase ascii wide
+        $string38 = /.{0,1000}net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string39 = /net1\sgroup\s.*Enterprise\sAdmins.*\s\/domain/ nocase ascii wide
+        $string39 = /.{0,1000}net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string40 = /net1\sgroup\s.*Exchange\sTrusted\sSubsystem.*\s\/domain/ nocase ascii wide
+        $string40 = /.{0,1000}net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string41 = /net1\sgroup\s.*Microsoft\sExchange\sServers.*\s\/domain/ nocase ascii wide
+        $string41 = /.{0,1000}net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string42 = /net1\sgroup\s.*Print\sOperators.*\s\/domain/ nocase ascii wide
+        $string42 = /.{0,1000}net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string43 = /net1\sgroup\s.*Schema\sAdmins.*\s\/domain/ nocase ascii wide
+        $string43 = /.{0,1000}net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string44 = /net1\sgroup\s.*Server\sOperators.*\s\/domain/ nocase ascii wide
+        $string44 = /.{0,1000}net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string45 = /net1\slocalgroup\sadmin/ nocase ascii wide
+        $string45 = /.{0,1000}net1\slocalgroup\sadmin.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string46 = /net1\.exe.*\sgroup\s.*Account\sOperators.*\s\/domain/ nocase ascii wide
+        $string46 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string47 = /net1\.exe.*\sgroup\s.*Backup\sOperators.*\s\/domain/ nocase ascii wide
+        $string47 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string48 = /net1\.exe.*\sgroup\s.*Domain\sComputers.*\s\/domain/ nocase ascii wide
+        $string48 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string49 = /net1\.exe.*\sgroup\s.*Domain\sControllers.*\s\/domain/ nocase ascii wide
+        $string49 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string50 = /net1\.exe.*\sgroup\s.*Enterprise\sAdmins.*\s\/domain/ nocase ascii wide
+        $string50 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string51 = /net1\.exe.*\sgroup\s.*Exchange\sTrusted\sSubsystem.*\s\/domain/ nocase ascii wide
+        $string51 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string52 = /net1\.exe.*\sgroup\s.*Microsoft\sExchange\sServers.*\s\/domain/ nocase ascii wide
+        $string52 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string53 = /net1\.exe.*\sgroup\s.*Print\sOperators.*\s\/domain/ nocase ascii wide
+        $string53 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string54 = /net1\.exe.*\sgroup\s.*Schema\sAdmins.*\s\/domain/ nocase ascii wide
+        $string54 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string55 = /net1\.exe.*\sgroup\s.*Server\sOperators.*\s\/domain/ nocase ascii wide
+        $string55 = /.{0,1000}net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

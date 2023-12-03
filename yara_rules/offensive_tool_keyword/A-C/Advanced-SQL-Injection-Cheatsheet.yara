@@ -10,7 +10,7 @@ rule Advanced_SQL_Injection_Cheatsheet
     strings:
         // Description: A cheat sheet that contains advanced queries for SQL Injection of all types.
         // Reference: https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet
-        $string1 = /Advanced\-SQL\-Injection\-Cheatsheet/ nocase ascii wide
+        $string1 = /.{0,1000}Advanced\-SQL\-Injection\-Cheatsheet.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

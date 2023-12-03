@@ -10,43 +10,43 @@ rule RDPCredentialStealer
     strings:
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string1 = /\/RDPCredentialStealer\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/RDPCredentialStealer\.git.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string2 = /:\\Users\\Public\\Music\\.*\.dll/ nocase ascii wide
+        $string2 = /.{0,1000}:\\Users\\Public\\Music\\.{0,1000}\.dll.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string3 = /\\Public\\Music\\RDPCreds\.txt/ nocase ascii wide
+        $string3 = /.{0,1000}\\Public\\Music\\RDPCreds\.txt.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string4 = /\\RDPCredsStealerDLL/ nocase ascii wide
+        $string4 = /.{0,1000}\\RDPCredsStealerDLL.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string5 = /APIHookInjectorBin\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}APIHookInjectorBin\.exe.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string6 = /APIHookInjectorBin\.log/ nocase ascii wide
+        $string6 = /.{0,1000}APIHookInjectorBin\.log.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string7 = /APIHookInjectorBin\.pdb/ nocase ascii wide
+        $string7 = /.{0,1000}APIHookInjectorBin\.pdb.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string8 = /APIHookInjectorBin\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}APIHookInjectorBin\.sln.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string9 = /RDPCredentialStealer\.zip/ nocase ascii wide
+        $string9 = /.{0,1000}RDPCredentialStealer\.zip.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string10 = /RDPCredentialStealer\-main/ nocase ascii wide
+        $string10 = /.{0,1000}RDPCredentialStealer\-main.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string11 = /RDPCredsStealerDLL\./ nocase ascii wide
+        $string11 = /.{0,1000}RDPCredsStealerDLL\..{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string12 = /RDPCredsStealerDLL\.dll/ nocase ascii wide
+        $string12 = /.{0,1000}RDPCredsStealerDLL\.dll.{0,1000}/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string13 = /S12cybersecurity\/RDPCredentialStealer/ nocase ascii wide
+        $string13 = /.{0,1000}S12cybersecurity\/RDPCredentialStealer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

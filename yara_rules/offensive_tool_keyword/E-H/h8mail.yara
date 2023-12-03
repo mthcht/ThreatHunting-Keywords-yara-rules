@@ -10,22 +10,22 @@ rule h8mail
     strings:
         // Description: Powerful and user-friendly password hunting tool.
         // Reference: https://github.com/opencubicles/h8mail
-        $string1 = /\/h8mail\// nocase ascii wide
+        $string1 = /.{0,1000}\/h8mail\/.{0,1000}/ nocase ascii wide
         // Description: Powerful and user-friendly password hunting tool.
         // Reference: https://github.com/opencubicles/h8mail
-        $string2 = /h8mail\s\-/ nocase ascii wide
+        $string2 = /.{0,1000}h8mail\s\-.{0,1000}/ nocase ascii wide
         // Description: h8mail is an email OSINT and breach hunting tool using different breach and reconnaissance services. or local breaches such as Troy Hunts Collection1 and the infamous Breach Compilation torrent
         // Reference: https://github.com/khast3x/h8mail
-        $string3 = /h8mail/ nocase ascii wide
+        $string3 = /.{0,1000}h8mail.{0,1000}/ nocase ascii wide
         // Description: Powerful and user-friendly password hunting tool.
         // Reference: https://github.com/opencubicles/h8mail
-        $string4 = /install\sh8mail/ nocase ascii wide
+        $string4 = /.{0,1000}install\sh8mail.{0,1000}/ nocase ascii wide
         // Description: Powerful and user-friendly password hunting tool.
         // Reference: https://github.com/opencubicles/h8mail
-        $string5 = /khast3x\/h8mail/ nocase ascii wide
+        $string5 = /.{0,1000}khast3x\/h8mail.{0,1000}/ nocase ascii wide
         // Description: Powerful and user-friendly password hunting tool.
         // Reference: https://github.com/opencubicles/h8mail
-        $string6 = /opencubicles\/h8mail/ nocase ascii wide
+        $string6 = /.{0,1000}opencubicles\/h8mail.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

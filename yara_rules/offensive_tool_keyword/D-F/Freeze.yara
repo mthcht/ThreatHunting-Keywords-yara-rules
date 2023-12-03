@@ -10,22 +10,22 @@ rule Freeze
     strings:
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string1 = /\s\-encrypt\s.*\s\-process\s.*\s\-sandbox\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-encrypt\s.{0,1000}\s\-process\s.{0,1000}\s\-sandbox\s.{0,1000}/ nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string2 = /\/optiv\/Freeze\// nocase ascii wide
+        $string2 = /.{0,1000}\/optiv\/Freeze\/.{0,1000}/ nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string3 = /\\freeze\.go/ nocase ascii wide
+        $string3 = /.{0,1000}\\freeze\.go/ nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string4 = /build\sFreeze\.go/ nocase ascii wide
+        $string4 = /.{0,1000}build\sFreeze\.go.{0,1000}/ nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string5 = /Freeze_.*_darwin_amd64/ nocase ascii wide
+        $string5 = /.{0,1000}Freeze_.{0,1000}_darwin_amd64.{0,1000}/ nocase ascii wide
         // Description: Freeze is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls. and alternative execution methods
         // Reference: https://github.com/optiv/Freeze
-        $string6 = /Freeze_.*_linux_amd64/ nocase ascii wide
+        $string6 = /.{0,1000}Freeze_.{0,1000}_linux_amd64.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

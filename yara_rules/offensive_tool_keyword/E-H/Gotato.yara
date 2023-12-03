@@ -10,49 +10,49 @@ rule Gotato
     strings:
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string1 = /\s\-p\s4644\s\-n\smal/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-p\s4644\s\-n\smal.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string2 = /\sProcess\sspawned\swith\sstolen\stoken\!/ nocase ascii wide
+        $string2 = /.{0,1000}\sProcess\sspawned\swith\sstolen\stoken\!.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string3 = /\/Gotato\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/Gotato\.git.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string4 = /\/gotato\.go/ nocase ascii wide
+        $string4 = /.{0,1000}\/gotato\.go.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string5 = /\[\+\]\sStole\stoken\sfrom/ nocase ascii wide
+        $string5 = /.{0,1000}\[\+\]\sStole\stoken\sfrom.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string6 = /\\\\\\\\\.\\\\pipe\\\\mal/ nocase ascii wide
+        $string6 = /.{0,1000}\\\\\\\\\.\\\\pipe\\\\mal.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string7 = /gotato\s\-m\shttp/ nocase ascii wide
+        $string7 = /.{0,1000}gotato\s\-m\shttp.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string8 = /gotato\s\-m\spipe/ nocase ascii wide
+        $string8 = /.{0,1000}gotato\s\-m\spipe.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string9 = /gotato.*\s\-n\smal/ nocase ascii wide
+        $string9 = /.{0,1000}gotato.{0,1000}\s\-n\smal.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string10 = /gotato.*\s\-p\s4644/ nocase ascii wide
+        $string10 = /.{0,1000}gotato.{0,1000}\s\-p\s4644.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string11 = /Gotato\-main\./ nocase ascii wide
+        $string11 = /.{0,1000}Gotato\-main\..{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string12 = /httpntlm\.go/ nocase ascii wide
+        $string12 = /.{0,1000}httpntlm\.go.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string13 = /httpntlm\.old/ nocase ascii wide
+        $string13 = /.{0,1000}httpntlm\.old.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string14 = /iammaguire\/Gotato/ nocase ascii wide
+        $string14 = /.{0,1000}iammaguire\/Gotato.{0,1000}/ nocase ascii wide
         // Description: Generic impersonation and privilege escalation with Golang. Like GenericPotato both named pipes and HTTP are supported.
         // Reference: https://github.com/iammaguire/Gotato
-        $string15 = /TlRMTVNTUAACAAAABgAGADgAAAAFAomih5Y9EpIdLmMAAAAAAAAAAIAAgAA/ nocase ascii wide
+        $string15 = /.{0,1000}TlRMTVNTUAACAAAABgAGADgAAAAFAomih5Y9EpIdLmMAAAAAAAAAAIAAgAA.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

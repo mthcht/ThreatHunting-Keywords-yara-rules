@@ -10,7 +10,7 @@ rule PcapXray
     strings:
         // Description: Given a Pcap File. plot a network diagram displaying hosts in the network. network traffic. highlight important traffic and Tor traffic as well as potential malicious traffic including data involved in the communication.
         // Reference: https://github.com/Srinivas11789/PcapXray
-        $string1 = /PcapXray/ nocase ascii wide
+        $string1 = /.{0,1000}PcapXray.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

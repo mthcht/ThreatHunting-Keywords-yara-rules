@@ -10,34 +10,34 @@ rule NPPSpy
     strings:
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string1 = /\/NPPSPY\.dll/ nocase ascii wide
+        $string1 = /.{0,1000}\/NPPSPY\.dll.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string2 = /\/NPPSpy\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/NPPSpy\.exe.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string3 = /\/PSPY\.dll/ nocase ascii wide
+        $string3 = /.{0,1000}\/PSPY\.dll.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string4 = /\\NPPSpy\.c/ nocase ascii wide
+        $string4 = /.{0,1000}\\NPPSpy\.c.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string5 = /\\NPPSPY\.dll/ nocase ascii wide
+        $string5 = /.{0,1000}\\NPPSPY\.dll.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string6 = /\\NPPSpy\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}\\NPPSpy\.exe.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string7 = /\\NPPSpy\.txt/ nocase ascii wide
+        $string7 = /.{0,1000}\\NPPSpy\.txt.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string8 = /\\PSPY\.dll/ nocase ascii wide
+        $string8 = /.{0,1000}\\PSPY\.dll.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string9 = /\\PSPY\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}\\PSPY\.exe.{0,1000}/ nocase ascii wide
         // Description: Simple code for NPLogonNotify(). The function obtains logon data including cleartext password
         // Reference: https://github.com/gtworek/PSBits/blob/master/PasswordStealing/NPPSpy
-        $string10 = /\\StolenPasswords\.txt/ nocase ascii wide
+        $string10 = /.{0,1000}\\StolenPasswords\.txt.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

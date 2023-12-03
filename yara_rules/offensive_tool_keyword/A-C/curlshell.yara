@@ -10,28 +10,28 @@ rule curlshell
     strings:
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string1 = /\.py\s.*0\.0\.0\.0.*\-\-serve\-forever/ nocase ascii wide
+        $string1 = /.{0,1000}\.py\s.{0,1000}0\.0\.0\.0.{0,1000}\-\-serve\-forever.{0,1000}/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string2 = /\.py\s.*\-\-dependabot\-workaround/ nocase ascii wide
+        $string2 = /.{0,1000}\.py\s.{0,1000}\-\-dependabot\-workaround.{0,1000}/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string3 = /\.py\s\-\-certificate\s.*\.pem\s\-\-private\-key\s.*\.pem\s\-\-listen\-port\s/ nocase ascii wide
+        $string3 = /.{0,1000}\.py\s\-\-certificate\s.{0,1000}\.pem\s\-\-private\-key\s.{0,1000}\.pem\s\-\-listen\-port\s.{0,1000}/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string4 = /\/curlshell\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/curlshell\.git.{0,1000}/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string5 = /\\curlshell\-main/ nocase ascii wide
+        $string5 = /.{0,1000}\\curlshell\-main.{0,1000}/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string6 = /curlshell\.py/ nocase ascii wide
+        $string6 = /.{0,1000}curlshell\.py.{0,1000}/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string7 = /https:\/\/curlshell:.*\s\|\sbash/ nocase ascii wide
+        $string7 = /.{0,1000}https:\/\/curlshell:.{0,1000}\s\|\sbash/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string8 = /irsl\/curlshell/ nocase ascii wide
+        $string8 = /.{0,1000}irsl\/curlshell.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

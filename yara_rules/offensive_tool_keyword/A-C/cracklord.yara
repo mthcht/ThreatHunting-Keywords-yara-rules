@@ -10,22 +10,22 @@ rule cracklord
     strings:
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string1 = /\/cracklord\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/cracklord\.git.{0,1000}/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string2 = /\/cracklord\/cmd\// nocase ascii wide
+        $string2 = /.{0,1000}\/cracklord\/cmd\/.{0,1000}/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string3 = /cracklord\-master\./ nocase ascii wide
+        $string3 = /.{0,1000}cracklord\-master\..{0,1000}/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string4 = /cracklord\-queued.*_amd64\.deb/ nocase ascii wide
+        $string4 = /.{0,1000}cracklord\-queued.{0,1000}_amd64\.deb.{0,1000}/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string5 = /cracklord\-resourced.*_amd64\.deb/ nocase ascii wide
+        $string5 = /.{0,1000}cracklord\-resourced.{0,1000}_amd64\.deb.{0,1000}/ nocase ascii wide
         // Description: Queue and resource system for cracking passwords
         // Reference: https://github.com/jmmcatee/cracklord
-        $string6 = /jmmcatee\/cracklord/ nocase ascii wide
+        $string6 = /.{0,1000}jmmcatee\/cracklord.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

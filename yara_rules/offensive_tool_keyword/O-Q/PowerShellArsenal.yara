@@ -10,7 +10,7 @@ rule PowerShellArsenal
     strings:
         // Description: PowerShellArsenal is a PowerShell module used to aid a reverse engineer. The module can be used to disassemble managed and unmanaged code. perform .NET malware analysis. analyze/scrape memory. parse file formats and memory structures. obtain internal system information. etc.
         // Reference: https://github.com/mattifestation/PowerShellArsenal
-        $string1 = /PowerShellArsenal/ nocase ascii wide
+        $string1 = /.{0,1000}PowerShellArsenal.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

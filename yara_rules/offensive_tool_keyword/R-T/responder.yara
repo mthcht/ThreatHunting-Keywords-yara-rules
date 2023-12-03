@@ -10,79 +10,79 @@ rule responder
     strings:
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string1 = /\/Analyzer\-Session\.log/ nocase ascii wide
+        $string1 = /.{0,1000}\/Analyzer\-Session\.log.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string2 = /\/FindSQLSrv\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\/FindSQLSrv\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string3 = /\/NBTNS\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\/NBTNS\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string4 = /\/poisoners\/.*\.py/ nocase ascii wide
+        $string4 = /.{0,1000}\/poisoners\/.{0,1000}\.py/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string5 = /\/Responder\.git/ nocase ascii wide
+        $string5 = /.{0,1000}\/Responder\.git.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string6 = /\/responder\/Responder\.conf\s/ nocase ascii wide
+        $string6 = /.{0,1000}\/responder\/Responder\.conf\s.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string7 = /\/Responder\-master\.zip/ nocase ascii wide
+        $string7 = /.{0,1000}\/Responder\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string8 = /\/tools\/DHCP\.py/ nocase ascii wide
+        $string8 = /.{0,1000}\/tools\/DHCP\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string9 = /0fa31c8c34a370931d8ffe8097e998f778db63e2e036fbd7727a71a0dcf5d28c/ nocase ascii wide
+        $string9 = /.{0,1000}0fa31c8c34a370931d8ffe8097e998f778db63e2e036fbd7727a71a0dcf5d28c.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string10 = /BrowserListener\.py/ nocase ascii wide
+        $string10 = /.{0,1000}BrowserListener\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string11 = /cert.*responder\.crt/ nocase ascii wide
+        $string11 = /.{0,1000}cert.{0,1000}responder\.crt.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string12 = /cert.*responder\.key/ nocase ascii wide
+        $string12 = /.{0,1000}cert.{0,1000}responder\.key.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string13 = /files\/BindShell\.exe/ nocase ascii wide
+        $string13 = /.{0,1000}files\/BindShell\.exe.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string14 = /FindSMB2UPTime\.py/ nocase ascii wide
+        $string14 = /.{0,1000}FindSMB2UPTime\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string15 = /Icmp\-Redirect\.py/ nocase ascii wide
+        $string15 = /.{0,1000}Icmp\-Redirect\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string16 = /LLMNR\.py/ nocase ascii wide
+        $string16 = /.{0,1000}LLMNR\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string17 = /Poisoners\-Session\.log/ nocase ascii wide
+        $string17 = /.{0,1000}Poisoners\-Session\.log.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string18 = /RelayPackets\.py/ nocase ascii wide
+        $string18 = /.{0,1000}RelayPackets\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string19 = /responder\s.*\s\-\-lm/ nocase ascii wide
+        $string19 = /.{0,1000}responder\s.{0,1000}\s\-\-lm.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string20 = /responder\s\-i\s/ nocase ascii wide
+        $string20 = /.{0,1000}responder\s\-i\s.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string21 = /Responder\.py/ nocase ascii wide
+        $string21 = /.{0,1000}Responder\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string22 = /Responder\-Session\.log/ nocase ascii wide
+        $string22 = /.{0,1000}Responder\-Session\.log.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string23 = /Responder\-Windows/ nocase ascii wide
+        $string23 = /.{0,1000}Responder\-Windows.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string24 = /SMBRelay\.py/ nocase ascii wide
+        $string24 = /.{0,1000}SMBRelay\.py.{0,1000}/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder
-        $string25 = /SpiderLabs\/Responder/ nocase ascii wide
+        $string25 = /.{0,1000}SpiderLabs\/Responder.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule unDefender
     strings:
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string1 = /\sunDefender\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\sunDefender\.exe.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string2 = /\/unDefender\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/unDefender\.exe.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string3 = /\/unDefender\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/unDefender\.git.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string4 = /\\unDefender\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}\\unDefender\.exe.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string5 = /APTortellini\/unDefender/ nocase ascii wide
+        $string5 = /.{0,1000}APTortellini\/unDefender.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string6 = /copy\s.*\\legit\.sys\s.*Windows\\System32\\Drivers\\.*\.sys/ nocase ascii wide
+        $string6 = /.{0,1000}copy\s.{0,1000}\\legit\.sys\s.{0,1000}Windows\\System32\\Drivers\\.{0,1000}\.sys.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string7 = /ImpersonateAndUnload\.cpp/ nocase ascii wide
+        $string7 = /.{0,1000}ImpersonateAndUnload\.cpp.{0,1000}/ nocase ascii wide
         // Description: Killing your preferred antimalware by abusing native symbolic links and NT paths.
         // Reference: https://github.com/APTortellini/unDefender
-        $string8 = /unDefender\-master/ nocase ascii wide
+        $string8 = /.{0,1000}unDefender\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

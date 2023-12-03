@@ -10,58 +10,58 @@ rule HRShell
     strings:
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string1 = /\sclient\.py\s\-s\shttp.*:5000\s\-\-cert\s\/.*\.pem/ nocase ascii wide
+        $string1 = /.{0,1000}\sclient\.py\s\-s\shttp.{0,1000}:5000\s\-\-cert\s\/.{0,1000}\.pem.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string2 = /\sserver\.py\s\-s\stornado\s\-\-cert\s\/.*pem\s\-\-key\s\/.*\.pem/ nocase ascii wide
+        $string2 = /.{0,1000}\sserver\.py\s\-s\stornado\s\-\-cert\s\/.{0,1000}pem\s\-\-key\s\/.{0,1000}\.pem.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string3 = /\/HRShell\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/HRShell\.git.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string4 = /\/HRShell\// nocase ascii wide
+        $string4 = /.{0,1000}\/HRShell\/.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string5 = /\/meterpreter\/reverse_tcp/ nocase ascii wide
+        $string5 = /.{0,1000}\/meterpreter\/reverse_tcp.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string6 = /\/shellcodes\/utils\.py/ nocase ascii wide
+        $string6 = /.{0,1000}\/shellcodes\/utils\.py.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string7 = /chrispetrou\/HRShell/ nocase ascii wide
+        $string7 = /.{0,1000}chrispetrou\/HRShell.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string8 = /clear_cmd/ nocase ascii wide
+        $string8 = /.{0,1000}clear_cmd/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string9 = /from\sshellcodes\simport\s/ nocase ascii wide
+        $string9 = /.{0,1000}from\sshellcodes\simport\s.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string10 = /history_cmd/ nocase ascii wide
+        $string10 = /.{0,1000}history_cmd/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string11 = /HRShell.*client\.py/ nocase ascii wide
+        $string11 = /.{0,1000}HRShell.{0,1000}client\.py.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string12 = /HRShell.*server\.py/ nocase ascii wide
+        $string12 = /.{0,1000}HRShell.{0,1000}server\.py.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string13 = /inject\sshellcode/ nocase ascii wide
+        $string13 = /.{0,1000}inject\sshellcode.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string14 = /set\sshellcode\s/ nocase ascii wide
+        $string14 = /.{0,1000}set\sshellcode\s.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string15 = /set_shellcode/ nocase ascii wide
+        $string15 = /.{0,1000}set_shellcode/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string16 = /shellcode1\s\+\=\sb/ nocase ascii wide
+        $string16 = /.{0,1000}shellcode1\s\+\=\sb.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
         $string17 = /exploit\s\-j\s\-z/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string18 = /set\sshellcode\s/ nocase ascii wide
+        $string18 = /set\sshellcode\s.{0,1000}/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
         $string19 = /show\sshellcodes/ nocase ascii wide

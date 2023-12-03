@@ -10,7 +10,7 @@ rule ssh_auditor
     strings:
         // Description: The best way to scan for weak ssh passwords on your network.
         // Reference: https://github.com/ncsa/ssh-auditor
-        $string1 = /ssh\-auditor/ nocase ascii wide
+        $string1 = /.{0,1000}ssh\-auditor.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

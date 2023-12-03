@@ -10,16 +10,16 @@ rule DarkLoadLibrary
     strings:
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string1 = /\/DarkLoadLibrary\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/DarkLoadLibrary\.git.{0,1000}/ nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string2 = /\\DarkLoadLibrary\./ nocase ascii wide
+        $string2 = /.{0,1000}\\DarkLoadLibrary\..{0,1000}/ nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string3 = /bats3c\/DarkLoadLibrary/ nocase ascii wide
+        $string3 = /.{0,1000}bats3c\/DarkLoadLibrary.{0,1000}/ nocase ascii wide
         // Description: LoadLibrary for offensive operations
         // Reference: https://github.com/bats3c/DarkLoadLibrary
-        $string4 = /DarkLoadLibrary\-maser/ nocase ascii wide
+        $string4 = /.{0,1000}DarkLoadLibrary\-maser.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,1435 +10,1435 @@ rule exegol
     strings:
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string1 = /\s\/\.exegol\// nocase ascii wide
+        $string1 = /.{0,1000}\s\/\.exegol\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string2 = /\sASREProastables\.txt/ nocase ascii wide
+        $string2 = /.{0,1000}\sASREProastables\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string3 = /\sASREProastables\.txt/ nocase ascii wide
+        $string3 = /.{0,1000}\sASREProastables\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string4 = /\s\-\-attack\spartial_d\s\-\-key\s/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-\-attack\spartial_d\s\-\-key\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string5 = /\s\-\-attack\spartial_q\s\-\-key\s/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-\-attack\spartial_q\s\-\-key\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string6 = /\s\-\-basic\s\"FUZZ:FUZ2Z\"/ nocase ascii wide
+        $string6 = /.{0,1000}\s\-\-basic\s\"FUZZ:FUZ2Z\".{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string7 = /\s\-\-convert_idrsa_pub\s\-\-publickey\s\$HOME\/\.ssh\/id_rsa\.pub/ nocase ascii wide
+        $string7 = /.{0,1000}\s\-\-convert_idrsa_pub\s\-\-publickey\s\$HOME\/\.ssh\/id_rsa\.pub.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string8 = /\s\-\-createpub\s\-n\s7828374823761928712873129873981723\.\.\.12837182\s\-e\s65537/ nocase ascii wide
+        $string8 = /.{0,1000}\s\-\-createpub\s\-n\s7828374823761928712873129873981723\.\.\.12837182\s\-e\s65537.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string9 = /\s\-d\s.*\s\-dc\s.*\s\-nu\s\'neo4j\'\s\-np\s/ nocase ascii wide
+        $string9 = /.{0,1000}\s\-d\s.{0,1000}\s\-dc\s.{0,1000}\s\-nu\s\'neo4j\'\s\-np\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string10 = /\s\-d\s.*\s\-u\s.*\s\-p\s.*\s\-\-listener\s.*\s\-\-target\s.*\$DC_HOST/ nocase ascii wide
+        $string10 = /.{0,1000}\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-listener\s.{0,1000}\s\-\-target\s.{0,1000}\$DC_HOST.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string11 = /\s\-\-deauth\s.*\s\-a\sTR:GT:AP:BS:SS:ID\swlan/ nocase ascii wide
+        $string11 = /.{0,1000}\s\-\-deauth\s.{0,1000}\s\-a\sTR:GT:AP:BS:SS:ID\swlan.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string12 = /\sdeepce\.sh\s.*\-\-install/ nocase ascii wide
+        $string12 = /.{0,1000}\sdeepce\.sh\s.{0,1000}\-\-install.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string13 = /\s\-enabled\s\-u\s.*\s\-p\s.*\s\-old\-bloodhound/ nocase ascii wide
+        $string13 = /.{0,1000}\s\-enabled\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-old\-bloodhound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string14 = /\sexegol\.apk/ nocase ascii wide
+        $string14 = /.{0,1000}\sexegol\.apk.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string15 = /\sexegol\.py/ nocase ascii wide
+        $string15 = /.{0,1000}\sexegol\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string16 = /\s\-\-file\sownedusers\.txt/ nocase ascii wide
+        $string16 = /.{0,1000}\s\-\-file\sownedusers\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string17 = /\s\-\-hash\-type\s.*\s\-\-attack\-mode\s/ nocase ascii wide
+        $string17 = /.{0,1000}\s\-\-hash\-type\s.{0,1000}\s\-\-attack\-mode\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string18 = /\s\-\-host\s.*\s\-\-port\s.*\s\-\-executable\s.*\.exe\s\-\-command\s.*cmd\.exe/ nocase ascii wide
+        $string18 = /.{0,1000}\s\-\-host\s.{0,1000}\s\-\-port\s.{0,1000}\s\-\-executable\s.{0,1000}\.exe\s\-\-command\s.{0,1000}cmd\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string19 = /\sinstall\sevil\-winrm/ nocase ascii wide
+        $string19 = /.{0,1000}\sinstall\sevil\-winrm.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string20 = /\s\-\-interface\s.*\s\-\-analyze\s\-\-disable\-ess/ nocase ascii wide
+        $string20 = /.{0,1000}\s\-\-interface\s.{0,1000}\s\-\-analyze\s\-\-disable\-ess.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string21 = /\s\-\-interface\s.*\s\-\-analyze\s\-\-lm\s\-\-disable\-ess/ nocase ascii wide
+        $string21 = /.{0,1000}\s\-\-interface\s.{0,1000}\s\-\-analyze\s\-\-lm\s\-\-disable\-ess.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string22 = /\s\-\-isroca\s\-\-publickey\s/ nocase ascii wide
+        $string22 = /.{0,1000}\s\-\-isroca\s\-\-publickey\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string23 = /\s\-just\-dc\-user\s\'krbtgt\'\s\-dc\-ip\s\s.*\s\-k\s\-no\-pass\s\@/ nocase ascii wide
+        $string23 = /.{0,1000}\s\-just\-dc\-user\s\'krbtgt\'\s\-dc\-ip\s\s.{0,1000}\s\-k\s\-no\-pass\s\@.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string24 = /\sKerberoastables\.txt/ nocase ascii wide
+        $string24 = /.{0,1000}\sKerberoastables\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string25 = /\skerberos\stgt\s.*kerberos\+rc4:\/\/.*:.*\@/ nocase ascii wide
+        $string25 = /.{0,1000}\skerberos\stgt\s.{0,1000}kerberos\+rc4:\/\/.{0,1000}:.{0,1000}\@.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string26 = /\s\-\-key\sexamples\/conspicuous\.priv\s\-\-isconspicuous/ nocase ascii wide
+        $string26 = /.{0,1000}\s\-\-key\sexamples\/conspicuous\.priv\s\-\-isconspicuous.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string27 = /\s\-\-krbpass\s.*\s\-\-krbsalt\s.*\s\-t\s.*\s\-\-escalate\-user\s/ nocase ascii wide
+        $string27 = /.{0,1000}\s\-\-krbpass\s.{0,1000}\s\-\-krbsalt\s.{0,1000}\s\-t\s.{0,1000}\s\-\-escalate\-user\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string28 = /\slinpeas\.sh/ nocase ascii wide
+        $string28 = /.{0,1000}\slinpeas\.sh.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string29 = /\s\-\-lport\s1337\s/ nocase ascii wide
+        $string29 = /.{0,1000}\s\-\-lport\s1337\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string30 = /\slsa\sminidump\s.*\.dmp/ nocase ascii wide
+        $string30 = /.{0,1000}\slsa\sminidump\s.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string31 = /\slsass_creds\.txt/ nocase ascii wide
+        $string31 = /.{0,1000}\slsass_creds\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string32 = /\slsassy\s\-k\s\-d\s/ nocase ascii wide
+        $string32 = /.{0,1000}\slsassy\s\-k\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string33 = /\smoodlescan\s\-r\s\-u\s/ nocase ascii wide
+        $string33 = /.{0,1000}\smoodlescan\s\-r\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string34 = /\s\-ntds\sntds\.dit\.save\s\-system\ssystem\.save\sLOCAL/ nocase ascii wide
+        $string34 = /.{0,1000}\s\-ntds\sntds\.dit\.save\s\-system\ssystem\.save\sLOCAL.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string35 = /\s\-nthash\s.*\s\-spn\s.*\s\-domain\-sid\s.*\s\-domain\s/ nocase ascii wide
+        $string35 = /.{0,1000}\s\-nthash\s.{0,1000}\s\-spn\s.{0,1000}\s\-domain\-sid\s.{0,1000}\s\-domain\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string36 = /\s\-nthash\s.*\-domain\-sid\sS\-1\-5\-11\-39129514\-1145628974\-103568174\s\-domain/ nocase ascii wide
+        $string36 = /.{0,1000}\s\-nthash\s.{0,1000}\-domain\-sid\sS\-1\-5\-11\-39129514\-1145628974\-103568174\s\-domain.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string37 = /\sntlmv1\.py/ nocase ascii wide
+        $string37 = /.{0,1000}\sntlmv1\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string38 = /\s\-\-outdir\sldapdomaindump\s/ nocase ascii wide
+        $string38 = /.{0,1000}\s\-\-outdir\sldapdomaindump\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string39 = /\s\-\-plugin\sKeeFarceRebornPlugin\.dll/ nocase ascii wide
+        $string39 = /.{0,1000}\s\-\-plugin\sKeeFarceRebornPlugin\.dll.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string40 = /\s\-\-publickey\s.*\s\-\-ecmdigits\s25\s\-\-verbose\s\-\-private/ nocase ascii wide
+        $string40 = /.{0,1000}\s\-\-publickey\s.{0,1000}\s\-\-ecmdigits\s25\s\-\-verbose\s\-\-private.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string41 = /\s\-\-publickey\s.*\s\-\-uncipherfile\s\.\/ciphered\\_file/ nocase ascii wide
+        $string41 = /.{0,1000}\s\-\-publickey\s.{0,1000}\s\-\-uncipherfile\s\.\/ciphered\\_file.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string42 = /\spywsus\.py\s/ nocase ascii wide
+        $string42 = /.{0,1000}\spywsus\.py\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string43 = /\sreq\s\-username\s.*\s\-p\s.*\s\-ca\s.*\s\-target\s.*\s\-template\s.*\s\-upn\s/ nocase ascii wide
+        $string43 = /.{0,1000}\sreq\s\-username\s.{0,1000}\s\-p\s.{0,1000}\s\-ca\s.{0,1000}\s\-target\s.{0,1000}\s\-template\s.{0,1000}\s\-upn\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string44 = /\s\-request\s\-format\shashcat\s\-outputfile\s/ nocase ascii wide
+        $string44 = /.{0,1000}\s\-request\s\-format\shashcat\s\-outputfile\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string45 = /\s\-\-requirement\s.*Exegol\/requirements\.txt/ nocase ascii wide
+        $string45 = /.{0,1000}\s\-\-requirement\s.{0,1000}Exegol\/requirements\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string46 = /\s\-s\s.*\s\-\-method\s1\s\-\-function\sshell_exec\s\-\-parameters\scmd:id/ nocase ascii wide
+        $string46 = /.{0,1000}\s\-s\s.{0,1000}\s\-\-method\s1\s\-\-function\sshell_exec\s\-\-parameters\scmd:id.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string47 = /\s\-\-script\sdns\-srv\-enum\s/ nocase ascii wide
+        $string47 = /.{0,1000}\s\-\-script\sdns\-srv\-enum\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string48 = /\s\-\-script\shttp\-ntlm\-info\s/ nocase ascii wide
+        $string48 = /.{0,1000}\s\-\-script\shttp\-ntlm\-info\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string49 = /\s\-\-script\ssmb\-enum\-shares\s/ nocase ascii wide
+        $string49 = /.{0,1000}\s\-\-script\ssmb\-enum\-shares\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string50 = /\s\-\-script\=ldap\-search\s\-p\s/ nocase ascii wide
+        $string50 = /.{0,1000}\s\-\-script\=ldap\-search\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string51 = /\s\-\-script\=realvnc\-auth\-bypass\s/ nocase ascii wide
+        $string51 = /.{0,1000}\s\-\-script\=realvnc\-auth\-bypass\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string52 = /\s\-\-script\-args\sdns\-srv\-enum\.domain\=/ nocase ascii wide
+        $string52 = /.{0,1000}\s\-\-script\-args\sdns\-srv\-enum\.domain\=.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string53 = /\s\-\-set\-as\-owned\ssmart\s\-bp\s.*\skerberos\s.*\s\-\-kdc\-ip\s/ nocase ascii wide
+        $string53 = /.{0,1000}\s\-\-set\-as\-owned\ssmart\s\-bp\s.{0,1000}\skerberos\s.{0,1000}\s\-\-kdc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string54 = /\s\-\-shell\stcsh\sexegol/ nocase ascii wide
+        $string54 = /.{0,1000}\s\-\-shell\stcsh\sexegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string55 = /\s\-t\sdcsync:\/\/.*\s\-/ nocase ascii wide
+        $string55 = /.{0,1000}\s\-t\sdcsync:\/\/.{0,1000}\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string56 = /\stargetedKerberoast\.py\s/ nocase ascii wide
+        $string56 = /.{0,1000}\stargetedKerberoast\.py\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string57 = /\stheHarvester\.py\s/ nocase ascii wide
+        $string57 = /.{0,1000}\stheHarvester\.py\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string58 = /\suberfile\.py\s/ nocase ascii wide
+        $string58 = /.{0,1000}\suberfile\.py\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string59 = /\s\-\-wpad\s\-\-lm\s\-\-ProxyAuth\s\-\-disable\-ess.*/ nocase ascii wide
+        $string59 = /.{0,1000}\s\-\-wpad\s\-\-lm\s\-\-ProxyAuth\s\-\-disable\-ess.{0,1000}.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string60 = /\.py\s\-aesKey\s\"9ff86898afa70f5f7b9f2bf16320cb38edb2639409e1bc441ac417fac1fed5ab\"/ nocase ascii wide
+        $string60 = /.{0,1000}\.py\s\-aesKey\s\"9ff86898afa70f5f7b9f2bf16320cb38edb2639409e1bc441ac417fac1fed5ab\".{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string61 = /\.py\s\-\-zip\s\-c\sAll\s\-d\s.*\s\-u\s.*\s\-\-hashes\s\'ffffffffffffffffffffffffffffffff\':.*\s\-dc\s/ nocase ascii wide
+        $string61 = /.{0,1000}\.py\s\-\-zip\s\-c\sAll\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-\-hashes\s\'ffffffffffffffffffffffffffffffff\':.{0,1000}\s\-dc\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string62 = /\/\.cme\/cme\.conf/ nocase ascii wide
+        $string62 = /.{0,1000}\/\.cme\/cme\.conf.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string63 = /\/\.exegol\// nocase ascii wide
+        $string63 = /.{0,1000}\/\.exegol\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string64 = /\/ASREProastables\.txt/ nocase ascii wide
+        $string64 = /.{0,1000}\/ASREProastables\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string65 = /\/AzureHound\.ps1/ nocase ascii wide
+        $string65 = /.{0,1000}\/AzureHound\.ps1.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string66 = /\/bash_completion\.d\/exegol/ nocase ascii wide
+        $string66 = /.{0,1000}\/bash_completion\.d\/exegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string67 = /\/completions\/exegol\.fish/ nocase ascii wide
+        $string67 = /.{0,1000}\/completions\/exegol\.fish.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string68 = /\/CrackMapExec\.git/ nocase ascii wide
+        $string68 = /.{0,1000}\/CrackMapExec\.git/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string69 = /\/crackmapexec\/cme\.conf/ nocase ascii wide
+        $string69 = /.{0,1000}\/crackmapexec\/cme\.conf.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string70 = /\/darkweb2017\-top100\.txt/ nocase ascii wide
+        $string70 = /.{0,1000}\/darkweb2017\-top100\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string71 = /\/deepce\.sh\s.*\-\-install/ nocase ascii wide
+        $string71 = /.{0,1000}\/deepce\.sh\s.{0,1000}\-\-install.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string72 = /\/exegol\.py/ nocase ascii wide
+        $string72 = /.{0,1000}\/exegol\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string73 = /\/exegol_user_sources\.list/ nocase ascii wide
+        $string73 = /.{0,1000}\/exegol_user_sources\.list.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string74 = /\/exegol\-docker\-build\// nocase ascii wide
+        $string74 = /.{0,1000}\/exegol\-docker\-build\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string75 = /\/Exegol\-history\// nocase ascii wide
+        $string75 = /.{0,1000}\/Exegol\-history\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string76 = /\/Exegol\-images\-.*\.zip/ nocase ascii wide
+        $string76 = /.{0,1000}\/Exegol\-images\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string77 = /\/Exegol\-images\.git/ nocase ascii wide
+        $string77 = /.{0,1000}\/Exegol\-images\.git.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string78 = /\/linpeas\.sh/ nocase ascii wide
+        $string78 = /.{0,1000}\/linpeas\.sh.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string79 = /\/metasploit\-framework\/embedded\/framework/ nocase ascii wide
+        $string79 = /.{0,1000}\/metasploit\-framework\/embedded\/framework.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string80 = /\/ntlmv1\.py/ nocase ascii wide
+        $string80 = /.{0,1000}\/ntlmv1\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string81 = /\/opt\/\.exegol_aliases/ nocase ascii wide
+        $string81 = /.{0,1000}\/opt\/\.exegol_aliases.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string82 = /\/opt\/seclists\/Discovery\// nocase ascii wide
+        $string82 = /.{0,1000}\/opt\/seclists\/Discovery\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string83 = /\/Plazmaz\/LNKUp/ nocase ascii wide
+        $string83 = /.{0,1000}\/Plazmaz\/LNKUp.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string84 = /\/pywsus\.py/ nocase ascii wide
+        $string84 = /.{0,1000}\/pywsus\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string85 = /\/Responder\/Responder\.conf/ nocase ascii wide
+        $string85 = /.{0,1000}\/Responder\/Responder\.conf.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string86 = /\/root\/\.mozilla\/firefox\/.*\.Exegol/ nocase ascii wide
+        $string86 = /.{0,1000}\/root\/\.mozilla\/firefox\/.{0,1000}\.Exegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string87 = /\/shadowcoerce\.py/ nocase ascii wide
+        $string87 = /.{0,1000}\/shadowcoerce\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string88 = /\/targetedKerberoast\.py/ nocase ascii wide
+        $string88 = /.{0,1000}\/targetedKerberoast\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string89 = /\/theHarvester\.py/ nocase ascii wide
+        $string89 = /.{0,1000}\/theHarvester\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string90 = /\/tmp\/metasploit_install/ nocase ascii wide
+        $string90 = /.{0,1000}\/tmp\/metasploit_install.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string91 = /\/top\-usernames\-shortlist\.txt/ nocase ascii wide
+        $string91 = /.{0,1000}\/top\-usernames\-shortlist\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string92 = /\/uberfile\.py/ nocase ascii wide
+        $string92 = /.{0,1000}\/uberfile\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string93 = /\/usr\/local\/bin\/exegol/ nocase ascii wide
+        $string93 = /.{0,1000}\/usr\/local\/bin\/exegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string94 = /\/var\/log\/exegol\/.*\.log/ nocase ascii wide
+        $string94 = /.{0,1000}\/var\/log\/exegol\/.{0,1000}\.log.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string95 = /:\'123pentest\'/ nocase ascii wide
+        $string95 = /.{0,1000}:\'123pentest\'.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string96 = /\\AzureHound\.ps1/ nocase ascii wide
+        $string96 = /.{0,1000}\\AzureHound\.ps1.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string97 = /\\Exegol\-.*\.zip/ nocase ascii wide
+        $string97 = /.{0,1000}\\Exegol\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string98 = /\\exegol\.py/ nocase ascii wide
+        $string98 = /.{0,1000}\\exegol\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string99 = /\\Exegol\-images\-.*\.zip/ nocase ascii wide
+        $string99 = /.{0,1000}\\Exegol\-images\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string100 = /\\Exegol\-images\-.*\\.*docker/ nocase ascii wide
+        $string100 = /.{0,1000}\\Exegol\-images\-.{0,1000}\\.{0,1000}docker.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string101 = /\\pywsus\.py/ nocase ascii wide
+        $string101 = /.{0,1000}\\pywsus\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string102 = /\\shadowcoerce\.py/ nocase ascii wide
+        $string102 = /.{0,1000}\\shadowcoerce\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string103 = /\\uberfile\.py/ nocase ascii wide
+        $string103 = /.{0,1000}\\uberfile\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string104 = /aclpwn\s\-f\s.*\s\-ft\scomputer\s\-t\s.*\s\-tt\sdomain\s\-d\s.*\s\-dry/ nocase ascii wide
+        $string104 = /.{0,1000}aclpwn\s\-f\s.{0,1000}\s\-ft\scomputer\s\-t\s.{0,1000}\s\-tt\sdomain\s\-d\s.{0,1000}\s\-dry.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string105 = /addcomputer\.py\s\-computer\-name\s.*\s\-computer\-pass\s.*\s\-dc\-host\s.*\s\-domain\-netbios\s/ nocase ascii wide
+        $string105 = /.{0,1000}addcomputer\.py\s\-computer\-name\s.{0,1000}\s\-computer\-pass\s.{0,1000}\s\-dc\-host\s.{0,1000}\s\-domain\-netbios\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string106 = /addcomputer\.py\s\-delete\s\-computer\-name\s.*\s\-dc\-host\s.*\s\-domain\-netbios\s/ nocase ascii wide
+        $string106 = /.{0,1000}addcomputer\.py\s\-delete\s\-computer\-name\s.{0,1000}\s\-dc\-host\s.{0,1000}\s\-domain\-netbios\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string107 = /addspn\.py\s\-u\s.*\s\-p\s.*\s\-t\s.*\s\-s\s.*\s\-\-additional\s/ nocase ascii wide
+        $string107 = /.{0,1000}addspn\.py\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-t\s.{0,1000}\s\-s\s.{0,1000}\s\-\-additional\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string108 = /adidnsdump\s\-u\s/ nocase ascii wide
+        $string108 = /.{0,1000}adidnsdump\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string109 = /aireplay\-ng\s/ nocase ascii wide
+        $string109 = /.{0,1000}aireplay\-ng\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string110 = /aireplay\-ng\s/ nocase ascii wide
+        $string110 = /.{0,1000}aireplay\-ng\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string111 = /airodump\-ng\s/ nocase ascii wide
+        $string111 = /.{0,1000}airodump\-ng\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string112 = /amass\senum\s\-d\s/ nocase ascii wide
+        $string112 = /.{0,1000}amass\senum\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string113 = /avrdude\s\-c\susbasp\s\-p\sm328p\s\-U\sflash:w:avr\.hex/ nocase ascii wide
+        $string113 = /.{0,1000}avrdude\s\-c\susbasp\s\-p\sm328p\s\-U\sflash:w:avr\.hex.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string114 = /aws\sconfigure\s\-\-profile\sexegol/ nocase ascii wide
+        $string114 = /.{0,1000}aws\sconfigure\s\-\-profile\sexegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string115 = /bettercap\s\-iface\seth0/ nocase ascii wide
+        $string115 = /.{0,1000}bettercap\s\-iface\seth0.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string116 = /binwalk\s\-e\simage\.png/ nocase ascii wide
+        $string116 = /.{0,1000}binwalk\s\-e\simage\.png.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string117 = /bloodhound\s\&\>\s\/dev\/null\s\&/ nocase ascii wide
+        $string117 = /.{0,1000}bloodhound\s\&\>\s\/dev\/null\s\&.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string118 = /bloodhound\-import\s\-du\sneo4j\s\-dp\s.*\.json/ nocase ascii wide
+        $string118 = /.{0,1000}bloodhound\-import\s\-du\sneo4j\s\-dp\s.{0,1000}\.json.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string119 = /bloodhound\-quickwin\s\-u\s.*\s\-p\s/ nocase ascii wide
+        $string119 = /.{0,1000}bloodhound\-quickwin\s\-u\s.{0,1000}\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string120 = /bruteforce\-luks\s\-/ nocase ascii wide
+        $string120 = /.{0,1000}bruteforce\-luks\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string121 = /bruteforce\-luks\s\-t\s4\s\-l\s5\s\-m\s5\s\/dev\/sdb1/ nocase ascii wide
+        $string121 = /.{0,1000}bruteforce\-luks\s\-t\s4\s\-l\s5\s\-m\s5\s\/dev\/sdb1.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string122 = /bully\swlan1mon\s\-b\s.*\s\-c\s9\s\-S\s\-F\s\-B\s\-v\s3/ nocase ascii wide
+        $string122 = /.{0,1000}bully\swlan1mon\s\-b\s.{0,1000}\s\-c\s9\s\-S\s\-F\s\-B\s\-v\s3.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string123 = /buster\s\-e\s.*\s\-f\sjohn\s\-l\sdoe\s\-b\s\'.*.*.*.*1989\'/ nocase ascii wide
+        $string123 = /.{0,1000}buster\s\-e\s.{0,1000}\s\-f\sjohn\s\-l\sdoe\s\-b\s\'.{0,1000}.{0,1000}.{0,1000}.{0,1000}1989\'.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string124 = /byt3bl33d3r\/pth\-toolkit/ nocase ascii wide
+        $string124 = /.{0,1000}byt3bl33d3r\/pth\-toolkit.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string125 = /calebstewart\/pwncat/ nocase ascii wide
+        $string125 = /.{0,1000}calebstewart\/pwncat.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string126 = /cat\sdomains\.txt\s\|\sdnsx\s\-silent\s\-w\sjira.*grafana.*jenkins\s\-d\s\-/ nocase ascii wide
+        $string126 = /.{0,1000}cat\sdomains\.txt\s\|\sdnsx\s\-silent\s\-w\sjira.{0,1000}grafana.{0,1000}jenkins\s\-d\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string127 = /certipy\sfind\s/ nocase ascii wide
+        $string127 = /.{0,1000}certipy\sfind\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string128 = /certipy\srelay\s\-ca\s/ nocase ascii wide
+        $string128 = /.{0,1000}certipy\srelay\s\-ca\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string129 = /certipy\sreq\s\-username\s/ nocase ascii wide
+        $string129 = /.{0,1000}certipy\sreq\s\-username\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string130 = /certsync\s\-u\s.*\s\-p\s.*\-d\s.*\s\-ca\-ip\s/ nocase ascii wide
+        $string130 = /.{0,1000}certsync\s\-u\s.{0,1000}\s\-p\s.{0,1000}\-d\s.{0,1000}\s\-ca\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string131 = /cewl\s\-\-depth\s.*\s\-\-with\-numbers\s\-/ nocase ascii wide
+        $string131 = /.{0,1000}cewl\s\-\-depth\s.{0,1000}\s\-\-with\-numbers\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string132 = /client\s\$ATTACKER\-IP:\$ATTACKER\-PORT\sR:\$PORT:socks/ nocase ascii wide
+        $string132 = /.{0,1000}client\s\$ATTACKER\-IP:\$ATTACKER\-PORT\sR:\$PORT:socks.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string133 = /cloudfail\.py\s\-\-target\sseo\.com\s\-\-tor/ nocase ascii wide
+        $string133 = /.{0,1000}cloudfail\.py\s\-\-target\sseo\.com\s\-\-tor.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string134 = /cloudmapper\scollect\s\-\-account\sparent\s\-\-profile\sparent/ nocase ascii wide
+        $string134 = /.{0,1000}cloudmapper\scollect\s\-\-account\sparent\s\-\-profile\sparent.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string135 = /cloudmapper\sconfigure\sadd\-account\s\-\-config\-file\sconfig\.json\s\-\-name\sparent\s\-\-id\sXXX\s\-\-default\strue/ nocase ascii wide
+        $string135 = /.{0,1000}cloudmapper\sconfigure\sadd\-account\s\-\-config\-file\sconfig\.json\s\-\-name\sparent\s\-\-id\sXXX\s\-\-default\strue.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string136 = /cloudmapper\sconfigure\sdiscover\-organization\-accounts/ nocase ascii wide
+        $string136 = /.{0,1000}cloudmapper\sconfigure\sdiscover\-organization\-accounts.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string137 = /cloudsplaining\screate\-multi\-account\-config\-file\s\-o\saccounts\.yml/ nocase ascii wide
+        $string137 = /.{0,1000}cloudsplaining\screate\-multi\-account\-config\-file\s\-o\saccounts\.yml.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string138 = /cloudsplaining\sdownload\s\-\-profile\ssomeprofile/ nocase ascii wide
+        $string138 = /.{0,1000}cloudsplaining\sdownload\s\-\-profile\ssomeprofile.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string139 = /cloudsplaining\sscan\s\-\-input\-file\sdefault\.json/ nocase ascii wide
+        $string139 = /.{0,1000}cloudsplaining\sscan\s\-\-input\-file\sdefault\.json.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string140 = /cloudsplaining\sscan\-multi\-account\s\-c\saccounts\.yml\s\-r\sTargetRole\s\-\-output\-directory\s\.\// nocase ascii wide
+        $string140 = /.{0,1000}cloudsplaining\sscan\-multi\-account\s\-c\saccounts\.yml\s\-r\sTargetRole\s\-\-output\-directory\s\.\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string141 = /cloudsplaining\sscan\-policy\-file\s\-\-input\-file\sexamples\/policies\/wildcards\.json/ nocase ascii wide
+        $string141 = /.{0,1000}cloudsplaining\sscan\-policy\-file\s\-\-input\-file\sexamples\/policies\/wildcards\.json.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string142 = /coercer\s\-d\s.*\s\-u\s/ nocase ascii wide
+        $string142 = /.{0,1000}coercer\s\-d\s.{0,1000}\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string143 = /corscanner\s\-i\surls\.txt\s\-t\s100/ nocase ascii wide
+        $string143 = /.{0,1000}corscanner\s\-i\surls\.txt\s\-t\s100.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string144 = /cowpatty\s\-f\s.*\.txt\s\-r\s.*\.cap\s\-s\s/ nocase ascii wide
+        $string144 = /.{0,1000}cowpatty\s\-f\s.{0,1000}\.txt\s\-r\s.{0,1000}\.cap\s\-s\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string145 = /cp\ssliver\-.*\s\/opt\/tools\/bin/ nocase ascii wide
+        $string145 = /.{0,1000}cp\ssliver\-.{0,1000}\s\/opt\/tools\/bin.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string146 = /crackhound\.py\s\-\-verbose\s\-\-password\s.*\s\-\-plain\-text\s.*\s\-\-domain\s.*\s\-\-file\s.*\s\-\-add\-password\s/ nocase ascii wide
+        $string146 = /.{0,1000}crackhound\.py\s\-\-verbose\s\-\-password\s.{0,1000}\s\-\-plain\-text\s.{0,1000}\s\-\-domain\s.{0,1000}\s\-\-file\s.{0,1000}\s\-\-add\-password\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string147 = /crunch\s4\s7\sabcdefghijklmnopqrstuvwxyz1234567890\s\-o\swordlist\.txt/ nocase ascii wide
+        $string147 = /.{0,1000}crunch\s4\s7\sabcdefghijklmnopqrstuvwxyz1234567890\s\-o\swordlist\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string148 = /curl\s.*\s\-\-upload\-file\sbackdoor\.php\s\-v/ nocase ascii wide
+        $string148 = /.{0,1000}curl\s.{0,1000}\s\-\-upload\-file\sbackdoor\.php\s\-v.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string149 = /cypheroth\s\-u\sneo4j\s\-p\s/ nocase ascii wide
+        $string149 = /.{0,1000}cypheroth\s\-u\sneo4j\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string150 = /dacledit\.py\s\-action\swrite\s\-rights\sDCSync\s\-principal\s.*\s\-target\-dn\s/ nocase ascii wide
+        $string150 = /.{0,1000}dacledit\.py\s\-action\swrite\s\-rights\sDCSync\s\-principal\s.{0,1000}\s\-target\-dn\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string151 = /danielmiessler\/SecLists/ nocase ascii wide
+        $string151 = /.{0,1000}danielmiessler\/SecLists.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string152 = /danielmiessler\/SecLists\.git/ nocase ascii wide
+        $string152 = /.{0,1000}danielmiessler\/SecLists\.git.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string153 = /darkarmour\s\-f\s.*\.exe\s\-\-encrypt\sxor\s\-\-jmp\s\-\-loop\s7\s\-o\s.*\.exe/ nocase ascii wide
+        $string153 = /.{0,1000}darkarmour\s\-f\s.{0,1000}\.exe\s\-\-encrypt\sxor\s\-\-jmp\s\-\-loop\s7\s\-o\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string154 = /das\sadd\s\-db\sdbname\smasscan\s/ nocase ascii wide
+        $string154 = /.{0,1000}das\sadd\s\-db\sdbname\smasscan\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string155 = /das\sadd\s\-db\sdbname\srustscan\s/ nocase ascii wide
+        $string155 = /.{0,1000}das\sadd\s\-db\sdbname\srustscan\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string156 = /das\sreport\s\-hosts\s192\.168\.1\.0\/24\s\-oA\sreport2/ nocase ascii wide
+        $string156 = /.{0,1000}das\sreport\s\-hosts\s192\.168\.1\.0\/24\s\-oA\sreport2.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string157 = /das\sscan\s\-db\sdbname\s\-hosts\sall\s\-oA\sreport1\s\-nmap\s\'\-Pn\s\-sVC\s\-O\'\s\-parallel/ nocase ascii wide
+        $string157 = /.{0,1000}das\sscan\s\-db\sdbname\s\-hosts\sall\s\-oA\sreport1\s\-nmap\s\'\-Pn\s\-sVC\s\-O\'\s\-parallel.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string158 = /das\sscan\s\-db\sdbname\s\-ports\s22.*80.*443.*445\s\-show/ nocase ascii wide
+        $string158 = /.{0,1000}das\sscan\s\-db\sdbname\s\-ports\s22.{0,1000}80.{0,1000}443.{0,1000}445\s\-show.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string159 = /dfscoerce\.py\s\-d\s/ nocase ascii wide
+        $string159 = /.{0,1000}dfscoerce\.py\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string160 = /dirb\s.*http.*\s\/usr\/share\/seclists\/Discovery\/Web\-Content\/big\.txt/ nocase ascii wide
+        $string160 = /.{0,1000}dirb\s.{0,1000}http.{0,1000}\s\/usr\/share\/seclists\/Discovery\/Web\-Content\/big\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string161 = /dirkjanm\/ldapdomaindump/ nocase ascii wide
+        $string161 = /.{0,1000}dirkjanm\/ldapdomaindump.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string162 = /dirkjanm\/PKINITtools/ nocase ascii wide
+        $string162 = /.{0,1000}dirkjanm\/PKINITtools.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string163 = /dirsearch\s\-r\s\-w\s\/usr\/share\/wordlists\/seclists\/Discovery\/Web\-Content\/quickhits\.txt/ nocase ascii wide
+        $string163 = /.{0,1000}dirsearch\s\-r\s\-w\s\/usr\/share\/wordlists\/seclists\/Discovery\/Web\-Content\/quickhits\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string164 = /dnschef\s\-\-fakeip\s127\.0\.0\.1\s\-q/ nocase ascii wide
+        $string164 = /.{0,1000}dnschef\s\-\-fakeip\s127\.0\.0\.1\s\-q.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string165 = /dnsx\s\-silent\s\-d\s.*\s\-w\sdns_worldlist\.txt/ nocase ascii wide
+        $string165 = /.{0,1000}dnsx\s\-silent\s\-d\s.{0,1000}\s\-w\sdns_worldlist\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string166 = /dnsx\s\-silent\s\-d\sdomains\.txt\s\-w\sjira.*grafana.*jenkins/ nocase ascii wide
+        $string166 = /.{0,1000}dnsx\s\-silent\s\-d\sdomains\.txt\s\-w\sjira.{0,1000}grafana.{0,1000}jenkins.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string167 = /DonPAPI\s\"\$DOMAIN\"\// nocase ascii wide
+        $string167 = /.{0,1000}DonPAPI\s\"\$DOMAIN\"\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string168 = /droopescan\sscan\sdrupal\s\-u\s.*\s\-t\s32/ nocase ascii wide
+        $string168 = /.{0,1000}droopescan\sscan\sdrupal\s\-u\s.{0,1000}\s\-t\s32.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string169 = /drupwn\s\-\-mode\sexploit\s\-\-target\s/ nocase ascii wide
+        $string169 = /.{0,1000}drupwn\s\-\-mode\sexploit\s\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string170 = /dump_WPA\-PBKDF2\-PMKID_EAPOL\.hashcat/ nocase ascii wide
+        $string170 = /.{0,1000}dump_WPA\-PBKDF2\-PMKID_EAPOL\.hashcat.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string171 = /dump_WPA\-PMKID\-PBKDF2\.hashcat/ nocase ascii wide
+        $string171 = /.{0,1000}dump_WPA\-PMKID\-PBKDF2\.hashcat.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string172 = /eaphammer\s\-i\seth0\s\-\-channel\s4\s\-\-auth\swpa\-eap\s\-\-essid\s.*\s\-\-creds/ nocase ascii wide
+        $string172 = /.{0,1000}eaphammer\s\-i\seth0\s\-\-channel\s4\s\-\-auth\swpa\-eap\s\-\-essid\s.{0,1000}\s\-\-creds.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string173 = /echo\s.*\/24\s\|\sdnsx\s\-silent\s\-resp\-only\s\-ptr/ nocase ascii wide
+        $string173 = /.{0,1000}echo\s.{0,1000}\/24\s\|\sdnsx\s\-silent\s\-resp\-only\s\-ptr.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string174 = /echo\s\'8\.8\.8\.8\'\s\|\shakrevdns/ nocase ascii wide
+        $string174 = /.{0,1000}echo\s\'8\.8\.8\.8\'\s\|\shakrevdns.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string175 = /EgeBalci\/amber\@latest/ nocase ascii wide
+        $string175 = /.{0,1000}EgeBalci\/amber\@latest.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string176 = /enum4linux\-ng\s\-A\s\-u\s/ nocase ascii wide
+        $string176 = /.{0,1000}enum4linux\-ng\s\-A\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string177 = /evilmog\/ntlmv1\-multi/ nocase ascii wide
+        $string177 = /.{0,1000}evilmog\/ntlmv1\-multi.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string178 = /evil\-winrm\s\-/ nocase ascii wide
+        $string178 = /.{0,1000}evil\-winrm\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string179 = /exegol4thewin/ nocase ascii wide
+        $string179 = /.{0,1000}exegol4thewin.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string180 = /ExegolController\.py/ nocase ascii wide
+        $string180 = /.{0,1000}ExegolController\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string181 = /exegol\-docker\-build/ nocase ascii wide
+        $string181 = /.{0,1000}exegol\-docker\-build.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string182 = /ExegolExceptions\.py/ nocase ascii wide
+        $string182 = /.{0,1000}ExegolExceptions\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string183 = /Exegol\-images\-main/ nocase ascii wide
+        $string183 = /.{0,1000}Exegol\-images\-main.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string184 = /ExegolManager\.py/ nocase ascii wide
+        $string184 = /.{0,1000}ExegolManager\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string185 = /ExegolProgress\.py/ nocase ascii wide
+        $string185 = /.{0,1000}ExegolProgress\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string186 = /ExegolPrompt\.py/ nocase ascii wide
+        $string186 = /.{0,1000}ExegolPrompt\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string187 = /eyewitness\s\-f\surls\.txt\s\-\-web/ nocase ascii wide
+        $string187 = /.{0,1000}eyewitness\s\-f\surls\.txt\s\-\-web.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string188 = /faketime\s\'202.*\szsh/ nocase ascii wide
+        $string188 = /.{0,1000}faketime\s\'202.{0,1000}\szsh.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string189 = /fcrackzip\s\-u\s\-v\s\-D\s\-p\s.*\.zip/ nocase ascii wide
+        $string189 = /.{0,1000}fcrackzip\s\-u\s\-v\s\-D\s\-p\s.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string190 = /feroxbuster\s\-w\s.*fzf\-wordlists.*\s\-u\s/ nocase ascii wide
+        $string190 = /.{0,1000}feroxbuster\s\-w\s.{0,1000}fzf\-wordlists.{0,1000}\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string191 = /ffuf\s\-fs\s185\s\-c\s\-w\s/ nocase ascii wide
+        $string191 = /.{0,1000}ffuf\s\-fs\s185\s\-c\s\-w\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string192 = /fierce\s\-\-domain.*\s\-\-dns\-servers\s/ nocase ascii wide
+        $string192 = /.{0,1000}fierce\s\-\-domain.{0,1000}\s\-\-dns\-servers\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string193 = /finalrecon\.py\s\-\-/ nocase ascii wide
+        $string193 = /.{0,1000}finalrecon\.py\s\-\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string194 = /findDelegation\.py\s\-dc\-ip\s/ nocase ascii wide
+        $string194 = /.{0,1000}findDelegation\.py\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string195 = /FindUncommonShares\.p/ nocase ascii wide
+        $string195 = /.{0,1000}FindUncommonShares\.p.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string196 = /frida\s\-l\sdisableRoot\.js\s\-f\sowasp\.mstg\.uncrackable1/ nocase ascii wide
+        $string196 = /.{0,1000}frida\s\-l\sdisableRoot\.js\s\-f\sowasp\.mstg\.uncrackable1.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string197 = /frida\-ps\s\-U/ nocase ascii wide
+        $string197 = /.{0,1000}frida\-ps\s\-U.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string198 = /fuxploider\s\-\-url\s.*\s\-\-not\-regex\s\"wrong\sfile\stype\"/ nocase ascii wide
+        $string198 = /.{0,1000}fuxploider\s\-\-url\s.{0,1000}\s\-\-not\-regex\s\"wrong\sfile\stype\".{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string199 = /geowordlists\s\-\-postal\-code\s75001\s\-\-kilometers\s25\s\-\-output\-file\s\/tmp\/around_paris\.txt/ nocase ascii wide
+        $string199 = /.{0,1000}geowordlists\s\-\-postal\-code\s75001\s\-\-kilometers\s25\s\-\-output\-file\s\/tmp\/around_paris\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string200 = /Get\-GPPPassword\s\-/ nocase ascii wide
+        $string200 = /.{0,1000}Get\-GPPPassword\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string201 = /GetNPUsers\.py\s\-request/ nocase ascii wide
+        $string201 = /.{0,1000}GetNPUsers\.py\s\-request.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string202 = /getnthash\.py\s\-key\s\'8eb7a6388780dd52eb358769dc53ff685fd135f89c4ef55abb277d7d98995f72\'/ nocase ascii wide
+        $string202 = /.{0,1000}getnthash\.py\s\-key\s\'8eb7a6388780dd52eb358769dc53ff685fd135f89c4ef55abb277d7d98995f72\'.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string203 = /getST\.py\s\-k\s\-no\-pass\s\-spn/ nocase ascii wide
+        $string203 = /.{0,1000}getST\.py\s\-k\s\-no\-pass\s\-spn.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string204 = /getTGT\.py\s\-dc\-ip\s/ nocase ascii wide
+        $string204 = /.{0,1000}getTGT\.py\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string205 = /gettgtpkinit\.py\s\-cert\-pfx/ nocase ascii wide
+        $string205 = /.{0,1000}gettgtpkinit\.py\s\-cert\-pfx.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string206 = /gettgtpkinit\.py\s\-pfx\-base64\s/ nocase ascii wide
+        $string206 = /.{0,1000}gettgtpkinit\.py\s\-pfx\-base64\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string207 = /gMSADumper\.py/ nocase ascii wide
+        $string207 = /.{0,1000}gMSADumper\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string208 = /gobuster\sdir\s\-w\s/ nocase ascii wide
+        $string208 = /.{0,1000}gobuster\sdir\s\-w\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string209 = /goldencopy\s.*\s\-\-password\s.*\s\-\-stealth\s\-\-krbtgt\s060ee2d06c5648e60a9ed916c9221ad19d90e5fb7b1cccf9d51f540fe991ada1\s/ nocase ascii wide
+        $string209 = /.{0,1000}goldencopy\s.{0,1000}\s\-\-password\s.{0,1000}\s\-\-stealth\s\-\-krbtgt\s060ee2d06c5648e60a9ed916c9221ad19d90e5fb7b1cccf9d51f540fe991ada1\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string210 = /gopherus\s\-\-exploit\smysql/ nocase ascii wide
+        $string210 = /.{0,1000}gopherus\s\-\-exploit\smysql.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string211 = /gosecretsdump\s\-ntds\s.*\-system\s/ nocase ascii wide
+        $string211 = /.{0,1000}gosecretsdump\s\-ntds\s.{0,1000}\-system\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string212 = /goshs\s\-b\s.*\s\-\-ssl\s\-\-self\-signed\s\-p\s.*\s\-d\s\/workspace/ nocase ascii wide
+        $string212 = /.{0,1000}goshs\s\-b\s.{0,1000}\s\-\-ssl\s\-\-self\-signed\s\-p\s.{0,1000}\s\-d\s\/workspace.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string213 = /gpp\-decrypt\.py\s\-f\sgroups\.xml/ nocase ascii wide
+        $string213 = /.{0,1000}gpp\-decrypt\.py\s\-f\sgroups\.xml.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string214 = /h2csmuggler\s\-\-scan\-list\s/ nocase ascii wide
+        $string214 = /.{0,1000}h2csmuggler\s\-\-scan\-list\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string215 = /h2csmuggler\s\-x\s.*\s\-\-test/ nocase ascii wide
+        $string215 = /.{0,1000}h2csmuggler\s\-x\s.{0,1000}\s\-\-test.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string216 = /h8mail\s\-t\s.*\@.*\./ nocase ascii wide
+        $string216 = /.{0,1000}h8mail\s\-t\s.{0,1000}\@.{0,1000}\..{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string217 = /Hackndo\/sprayhound/ nocase ascii wide
+        $string217 = /.{0,1000}Hackndo\/sprayhound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string218 = /Hackplayers\/evil\-winrm/ nocase ascii wide
+        $string218 = /.{0,1000}Hackplayers\/evil\-winrm.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string219 = /hackrf_sweep\s\-f\s/ nocase ascii wide
+        $string219 = /.{0,1000}hackrf_sweep\s\-f\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string220 = /hashonymize\s\-\-ntds\s.*\s\-\-kerberoast\s/ nocase ascii wide
+        $string220 = /.{0,1000}hashonymize\s\-\-ntds\s.{0,1000}\s\-\-kerberoast\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string221 = /HashPals\/Name\-That\-Hash/ nocase ascii wide
+        $string221 = /.{0,1000}HashPals\/Name\-That\-Hash.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string222 = /\-\-hash\-type\s1000\s\-\-potfile\-path.*\.ntds\.cracked/ nocase ascii wide
+        $string222 = /.{0,1000}\-\-hash\-type\s1000\s\-\-potfile\-path.{0,1000}\.ntds\.cracked.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string223 = /hcxdumptool\s\-i\swlan1\s\-o\s.*\s\-\-active_beacon\s\-\-enable_status\=1/ nocase ascii wide
+        $string223 = /.{0,1000}hcxdumptool\s\-i\swlan1\s\-o\s.{0,1000}\s\-\-active_beacon\s\-\-enable_status\=1.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string224 = /hcxhashtool\s\-i\s.*\.hashcat\s\-\-info\sstdout/ nocase ascii wide
+        $string224 = /.{0,1000}hcxhashtool\s\-i\s.{0,1000}\.hashcat\s\-\-info\sstdout.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string225 = /hcxpcapngtool\s\-\-all\s\-o\s.*\.hashcat/ nocase ascii wide
+        $string225 = /.{0,1000}hcxpcapngtool\s\-\-all\s\-o\s.{0,1000}\.hashcat.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string226 = /hcxpcapngtool\s\-o\s.*\.hashcat\s.*\.pcapng/ nocase ascii wide
+        $string226 = /.{0,1000}hcxpcapngtool\s\-o\s.{0,1000}\.hashcat\s.{0,1000}\.pcapng.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string227 = /HOST\/EXEGOL\-01\./ nocase ascii wide
+        $string227 = /.{0,1000}HOST\/EXEGOL\-01\..{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string228 = /Host:\sFUZZ\.machine\.org/ nocase ascii wide
+        $string228 = /.{0,1000}Host:\sFUZZ\.machine\.org.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string229 = /http.*\s\|\shakrawler\s\-d\s/ nocase ascii wide
+        $string229 = /.{0,1000}http.{0,1000}\s\|\shakrawler\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string230 = /HTTP\/EXEGOL\-01\./ nocase ascii wide
+        $string230 = /.{0,1000}HTTP\/EXEGOL\-01\..{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string231 = /infoga\.py\s\-/ nocase ascii wide
+        $string231 = /.{0,1000}infoga\.py\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string232 = /install_aclpwn/ nocase ascii wide
+        $string232 = /.{0,1000}install_aclpwn.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string233 = /install_ad_apt_tools/ nocase ascii wide
+        $string233 = /.{0,1000}install_ad_apt_tools.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string234 = /install_adidnsdump/ nocase ascii wide
+        $string234 = /.{0,1000}install_adidnsdump.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string235 = /install_amber/ nocase ascii wide
+        $string235 = /.{0,1000}install_amber.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string236 = /install_bloodhound/ nocase ascii wide
+        $string236 = /.{0,1000}install_bloodhound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string237 = /install_bloodhound\-import/ nocase ascii wide
+        $string237 = /.{0,1000}install_bloodhound\-import.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string238 = /install_bloodhound\-py/ nocase ascii wide
+        $string238 = /.{0,1000}install_bloodhound\-py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string239 = /install_bloodhound\-quickwin/ nocase ascii wide
+        $string239 = /.{0,1000}install_bloodhound\-quickwin.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string240 = /install_certipy/ nocase ascii wide
+        $string240 = /.{0,1000}install_certipy.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string241 = /install_certsync/ nocase ascii wide
+        $string241 = /.{0,1000}install_certsync.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string242 = /install_coercer/ nocase ascii wide
+        $string242 = /.{0,1000}install_coercer.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string243 = /install_crackhound/ nocase ascii wide
+        $string243 = /.{0,1000}install_crackhound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string244 = /install_cracking_apt_tools/ nocase ascii wide
+        $string244 = /.{0,1000}install_cracking_apt_tools.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string245 = /install_crackmapexec/ nocase ascii wide
+        $string245 = /.{0,1000}install_crackmapexec.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string246 = /install_cypheroth/ nocase ascii wide
+        $string246 = /.{0,1000}install_cypheroth.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string247 = /install_darkarmour/ nocase ascii wide
+        $string247 = /.{0,1000}install_darkarmour.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string248 = /install_dfscoerce/ nocase ascii wide
+        $string248 = /.{0,1000}install_dfscoerce.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string249 = /install_donpapi/ nocase ascii wide
+        $string249 = /.{0,1000}install_donpapi.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string250 = /install_enum4linux\-ng/ nocase ascii wide
+        $string250 = /.{0,1000}install_enum4linux\-ng.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string251 = /install_enyx/ nocase ascii wide
+        $string251 = /.{0,1000}install_enyx.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string252 = /install_evilwinrm/ nocase ascii wide
+        $string252 = /.{0,1000}install_evilwinrm.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string253 = /install_finduncommonshares/ nocase ascii wide
+        $string253 = /.{0,1000}install_finduncommonshares.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string254 = /install_gmsadumper/ nocase ascii wide
+        $string254 = /.{0,1000}install_gmsadumper.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string255 = /install_goldencopy/ nocase ascii wide
+        $string255 = /.{0,1000}install_goldencopy.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string256 = /install_gosecretsdump/ nocase ascii wide
+        $string256 = /.{0,1000}install_gosecretsdump.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string257 = /install_gpp\-decrypt/ nocase ascii wide
+        $string257 = /.{0,1000}install_gpp\-decrypt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string258 = /install_hashonymize/ nocase ascii wide
+        $string258 = /.{0,1000}install_hashonymize.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string259 = /install_impacket/ nocase ascii wide
+        $string259 = /.{0,1000}install_impacket.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string260 = /install_keepwn/ nocase ascii wide
+        $string260 = /.{0,1000}install_keepwn.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string261 = /install_kerbrute/ nocase ascii wide
+        $string261 = /.{0,1000}install_kerbrute.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string262 = /install_krbrelayx/ nocase ascii wide
+        $string262 = /.{0,1000}install_krbrelayx.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string263 = /install_ldapdomaindump/ nocase ascii wide
+        $string263 = /.{0,1000}install_ldapdomaindump.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string264 = /install_ldaprelayscan/ nocase ascii wide
+        $string264 = /.{0,1000}install_ldaprelayscan.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string265 = /install_ldapsearch\-ad/ nocase ascii wide
+        $string265 = /.{0,1000}install_ldapsearch\-ad.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string266 = /install_lnkup/ nocase ascii wide
+        $string266 = /.{0,1000}install_lnkup.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string267 = /install_lsassy/ nocase ascii wide
+        $string267 = /.{0,1000}install_lsassy.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string268 = /install_manspider/ nocase ascii wide
+        $string268 = /.{0,1000}install_manspider.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string269 = /install_mitm6_pip/ nocase ascii wide
+        $string269 = /.{0,1000}install_mitm6_pip.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string270 = /install_noPac/ nocase ascii wide
+        $string270 = /.{0,1000}install_noPac.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string271 = /install_ntlmv1\-multi/ nocase ascii wide
+        $string271 = /.{0,1000}install_ntlmv1\-multi.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string272 = /install_oaburl/ nocase ascii wide
+        $string272 = /.{0,1000}install_oaburl.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string273 = /install_PassTheCert/ nocase ascii wide
+        $string273 = /.{0,1000}install_PassTheCert.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string274 = /install_pcredz/ nocase ascii wide
+        $string274 = /.{0,1000}install_pcredz.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string275 = /install_petitpotam/ nocase ascii wide
+        $string275 = /.{0,1000}install_petitpotam.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string276 = /install_pkinittools/ nocase ascii wide
+        $string276 = /.{0,1000}install_pkinittools.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string277 = /install_polenum/ nocase ascii wide
+        $string277 = /.{0,1000}install_polenum.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string278 = /install_privexchange/ nocase ascii wide
+        $string278 = /.{0,1000}install_privexchange.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string279 = /install_pth\-tools/ nocase ascii wide
+        $string279 = /.{0,1000}install_pth\-tools.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string280 = /install_pygpoabuse/ nocase ascii wide
+        $string280 = /.{0,1000}install_pygpoabuse.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string281 = /install_pykek/ nocase ascii wide
+        $string281 = /.{0,1000}install_pykek.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string282 = /install_pylaps/ nocase ascii wide
+        $string282 = /.{0,1000}install_pylaps.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string283 = /install_pypykatz/ nocase ascii wide
+        $string283 = /.{0,1000}install_pypykatz.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string284 = /install_pywhisker/ nocase ascii wide
+        $string284 = /.{0,1000}install_pywhisker.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string285 = /install_pywsus/ nocase ascii wide
+        $string285 = /.{0,1000}install_pywsus.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string286 = /install_responder/ nocase ascii wide
+        $string286 = /.{0,1000}install_responder.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string287 = /install_roastinthemiddle/ nocase ascii wide
+        $string287 = /.{0,1000}install_roastinthemiddle.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string288 = /install_ruler/ nocase ascii wide
+        $string288 = /.{0,1000}install_ruler.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string289 = /install_rusthound/ nocase ascii wide
+        $string289 = /.{0,1000}install_rusthound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string290 = /install_shadowcoerce/ nocase ascii wide
+        $string290 = /.{0,1000}install_shadowcoerce.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string291 = /install_smartbrute/ nocase ascii wide
+        $string291 = /.{0,1000}install_smartbrute.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string292 = /install_smbmap/ nocase ascii wide
+        $string292 = /.{0,1000}install_smbmap.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string293 = /install_smtp\-user\-enum/ nocase ascii wide
+        $string293 = /.{0,1000}install_smtp\-user\-enum.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string294 = /install_sprayhound/ nocase ascii wide
+        $string294 = /.{0,1000}install_sprayhound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string295 = /install_targetedKerberoast/ nocase ascii wide
+        $string295 = /.{0,1000}install_targetedKerberoast.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string296 = /install_webclientservicescanner/ nocase ascii wide
+        $string296 = /.{0,1000}install_webclientservicescanner.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string297 = /install_windapsearch\-go/ nocase ascii wide
+        $string297 = /.{0,1000}install_windapsearch\-go.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string298 = /install_zerologon/ nocase ascii wide
+        $string298 = /.{0,1000}install_zerologon.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string299 = /\-\-interface\s.*\s\-\-wpad\s\-\-lm\s\-\-disable\-ess/ nocase ascii wide
+        $string299 = /.{0,1000}\-\-interface\s.{0,1000}\s\-\-wpad\s\-\-lm\s\-\-disable\-ess.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string300 = /ip\slink\sset\sligolo\sup/ nocase ascii wide
+        $string300 = /.{0,1000}ip\slink\sset\sligolo\sup.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string301 = /ip\sroute\sadd\s.*\sdev\sligolo/ nocase ascii wide
+        $string301 = /.{0,1000}ip\sroute\sadd\s.{0,1000}\sdev\sligolo.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string302 = /ip\stuntap\sadd\suser\sroot\smode\stun\sligolo/ nocase ascii wide
+        $string302 = /.{0,1000}ip\stuntap\sadd\suser\sroot\smode\stun\sligolo.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string303 = /irkjanm\/krbrelayx/ nocase ascii wide
+        $string303 = /.{0,1000}irkjanm\/krbrelayx.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string304 = /jackit\s\-\-reset\s\-\-debug/ nocase ascii wide
+        $string304 = /.{0,1000}jackit\s\-\-reset\s\-\-debug.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string305 = /jdwp\-shellifier\.py\s\-t\s.*\s\-p\s.*\s\-\-cmd\s/ nocase ascii wide
+        $string305 = /.{0,1000}jdwp\-shellifier\.py\s\-t\s.{0,1000}\s\-p\s.{0,1000}\s\-\-cmd\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string306 = /john\s\-\-format\=/ nocase ascii wide
+        $string306 = /.{0,1000}john\s\-\-format\=.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string307 = /john\s\-\-wordlist\=/ nocase ascii wide
+        $string307 = /.{0,1000}john\s\-\-wordlist\=.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string308 = /joomscan\s\-u\s/ nocase ascii wide
+        $string308 = /.{0,1000}joomscan\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string309 = /JuicyPotato\.exe/ nocase ascii wide
+        $string309 = /.{0,1000}JuicyPotato\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string310 = /\-K\slsass_loot/ nocase ascii wide
+        $string310 = /.{0,1000}\-K\slsass_loot.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string311 = /KeePwn\splugin\sadd\s\-u\s.*\s\-p\s.*\s\-d\s.*\s\-t\s/ nocase ascii wide
+        $string311 = /.{0,1000}KeePwn\splugin\sadd\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-d\s.{0,1000}\s\-t\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string312 = /KeePwn\splugin\scheck\s\-u\s/ nocase ascii wide
+        $string312 = /.{0,1000}KeePwn\splugin\scheck\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string313 = /kerbrute\sbruteuser\s/ nocase ascii wide
+        $string313 = /.{0,1000}kerbrute\sbruteuser\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string314 = /kerbrute\spasswordspray\s/ nocase ascii wide
+        $string314 = /.{0,1000}kerbrute\spasswordspray\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string315 = /kerbrute\suserenum\s/ nocase ascii wide
+        $string315 = /.{0,1000}kerbrute\suserenum\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string316 = /kraken\.py\s\-\-connect\s\-\-mode\s.*\s\-\-profile\s.*\s\-\-compiler\s/ nocase ascii wide
+        $string316 = /.{0,1000}kraken\.py\s\-\-connect\s\-\-mode\s.{0,1000}\s\-\-profile\s.{0,1000}\s\-\-compiler\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string317 = /KRB5CCNAME\=.*\.ccache.*\sgetST\.py\s\-self\s\-impersonate\s.*\s\-k\s\-no\-pass\s\-dc\-ip\s/ nocase ascii wide
+        $string317 = /.{0,1000}KRB5CCNAME\=.{0,1000}\.ccache.{0,1000}\sgetST\.py\s\-self\s\-impersonate\s.{0,1000}\s\-k\s\-no\-pass\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string318 = /krbrelayx\.py\s\-/ nocase ascii wide
+        $string318 = /.{0,1000}krbrelayx\.py\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string319 = /LdapRelayScan\.py/ nocase ascii wide
+        $string319 = /.{0,1000}LdapRelayScan\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string320 = /libnfc_crypto1_crack\sa0a1a2a3a4a5\s0\sA\s4\sB/ nocase ascii wide
+        $string320 = /.{0,1000}libnfc_crypto1_crack\sa0a1a2a3a4a5\s0\sA\s4\sB.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string321 = /ligolo\-ng\s\-selfcert/ nocase ascii wide
+        $string321 = /.{0,1000}ligolo\-ng\s\-selfcert.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string322 = /linkedin2username\.py\s\-u/ nocase ascii wide
+        $string322 = /.{0,1000}linkedin2username\.py\s\-u.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string323 = /linpeas_darwin_amd64/ nocase ascii wide
+        $string323 = /.{0,1000}linpeas_darwin_amd64.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string324 = /linpeas_darwin_arm64/ nocase ascii wide
+        $string324 = /.{0,1000}linpeas_darwin_arm64.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string325 = /linpeas_linux_386/ nocase ascii wide
+        $string325 = /.{0,1000}linpeas_linux_386.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string326 = /linpeas_linux_amd64/ nocase ascii wide
+        $string326 = /.{0,1000}linpeas_linux_amd64.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string327 = /linpeas_linux_arm/ nocase ascii wide
+        $string327 = /.{0,1000}linpeas_linux_arm.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string328 = /linux\-exploit\-suggester\.sh/ nocase ascii wide
+        $string328 = /.{0,1000}linux\-exploit\-suggester\.sh.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string329 = /linux\-smart\-enumeration\.sh/ nocase ascii wide
+        $string329 = /.{0,1000}linux\-smart\-enumeration\.sh.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string330 = /lnk\-generate\.py\s\-\-host\s.*\s\-\-type\sntlm\s\-\-output\s.*\.lnk/ nocase ascii wide
+        $string330 = /.{0,1000}lnk\-generate\.py\s\-\-host\s.{0,1000}\s\-\-type\sntlm\s\-\-output\s.{0,1000}\.lnk.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string331 = /lookupsid\.py\s\-hashes\s:.*\s.*\@.*\s0/ nocase ascii wide
+        $string331 = /.{0,1000}lookupsid\.py\s\-hashes\s:.{0,1000}\s.{0,1000}\@.{0,1000}\s0.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string332 = /lsassy\s\-v\s\-/ nocase ascii wide
+        $string332 = /.{0,1000}lsassy\s\-v\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string333 = /manspider\s\-\-threads\s.*\s\-d\s.*\s\-u\s.*\s\-H\s.*\s\-\-content\sadmin/ nocase ascii wide
+        $string333 = /.{0,1000}manspider\s\-\-threads\s.{0,1000}\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-H\s.{0,1000}\s\-\-content\sadmin.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string334 = /mitm6\s\-\-/ nocase ascii wide
+        $string334 = /.{0,1000}mitm6\s\-\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string335 = /ms14\-068\.py\s\-u\s/ nocase ascii wide
+        $string335 = /.{0,1000}ms14\-068\.py\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string336 = /ms14\-068\.py\s\-u/ nocase ascii wide
+        $string336 = /.{0,1000}ms14\-068\.py\s\-u.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string337 = /noPac\s.*\s\-dc\-ip\s.*\s\-\-impersonate\s/ nocase ascii wide
+        $string337 = /.{0,1000}noPac\s.{0,1000}\s\-dc\-ip\s.{0,1000}\s\-\-impersonate\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string338 = /nrf24\-scanner\.py\s\-l\s\-v/ nocase ascii wide
+        $string338 = /.{0,1000}nrf24\-scanner\.py\s\-l\s\-v.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string339 = /nth\s\-\-text\s5f4dcc3b5aa765d61d8327deb882cf99/ nocase ascii wide
+        $string339 = /.{0,1000}nth\s\-\-text\s5f4dcc3b5aa765d61d8327deb882cf99.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string340 = /ntlmrelayx\s\-/ nocase ascii wide
+        $string340 = /.{0,1000}ntlmrelayx\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string341 = /ntlmv1\-multi\s\-\-ntlmv1\s/ nocase ascii wide
+        $string341 = /.{0,1000}ntlmv1\-multi\s\-\-ntlmv1\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string342 = /nuclei\s\-u\s/ nocase ascii wide
+        $string342 = /.{0,1000}nuclei\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string343 = /oaburl\.py\s.*\/.*:.*\@.*\s\-e\s/ nocase ascii wide
+        $string343 = /.{0,1000}oaburl\.py\s.{0,1000}\/.{0,1000}:.{0,1000}\@.{0,1000}\s\-e\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string344 = /onesixtyone\s\-c\s.*snmp_default_pass\.txt/ nocase ascii wide
+        $string344 = /.{0,1000}onesixtyone\s\-c\s.{0,1000}snmp_default_pass\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string345 = /onesixtyone\s\-c\s.*wordlists\// nocase ascii wide
+        $string345 = /.{0,1000}onesixtyone\s\-c\s.{0,1000}wordlists\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string346 = /pass\-station\ssearch\stomcat/ nocase ascii wide
+        $string346 = /.{0,1000}pass\-station\ssearch\stomcat.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string347 = /passthecert\.py\s\-action\sadd_computer\s\-crt\suser\.crt\s\-key\suser\.key\s\-domain\s.*\s\-dc\-ip\s/ nocase ascii wide
+        $string347 = /.{0,1000}passthecert\.py\s\-action\sadd_computer\s\-crt\suser\.crt\s\-key\suser\.key\s\-domain\s.{0,1000}\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string348 = /patator\sftp_login\shost\=.*\suser\=FILE0\s0\=.*\.txt\s/ nocase ascii wide
+        $string348 = /.{0,1000}patator\sftp_login\shost\=.{0,1000}\suser\=FILE0\s0\=.{0,1000}\.txt\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string349 = /PCredz\s\-f\s.*\.pcap/ nocase ascii wide
+        $string349 = /.{0,1000}PCredz\s\-f\s.{0,1000}\.pcap.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string350 = /pdfcrack\s\-f\s.*\.pdf/ nocase ascii wide
+        $string350 = /.{0,1000}pdfcrack\s\-f\s.{0,1000}\.pdf.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string351 = /petitpotam\.py/ nocase ascii wide
+        $string351 = /.{0,1000}petitpotam\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string352 = /phoneinfoga\sscan\s\-n\s/ nocase ascii wide
+        $string352 = /.{0,1000}phoneinfoga\sscan\s\-n\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string353 = /photon\.py\s\-u\s.*\s\-l\s3\s\-t\s100\s\-\-wayback/ nocase ascii wide
+        $string353 = /.{0,1000}photon\.py\s\-u\s.{0,1000}\s\-l\s3\s\-t\s100\s\-\-wayback.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string354 = /php_filter_chain_generator\s\-\-chain\s.*php\ssystem.*\'cmd\'\]/ nocase ascii wide
+        $string354 = /.{0,1000}php_filter_chain_generator\s\-\-chain\s.{0,1000}php\ssystem.{0,1000}\'cmd\'\].{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string355 = /phpggc\s\-l/ nocase ascii wide
+        $string355 = /.{0,1000}phpggc\s\-l.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string356 = /phpggc\smonolog\/rce1\sassert\s\'phpinfo\(\)\'/ nocase ascii wide
+        $string356 = /.{0,1000}phpggc\smonolog\/rce1\sassert\s\'phpinfo\(\)\'.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string357 = /phpggc\ssymfony\/rce1\sid/ nocase ascii wide
+        $string357 = /.{0,1000}phpggc\ssymfony\/rce1\sid.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string358 = /pip\sinstall\sexegol/ nocase ascii wide
+        $string358 = /.{0,1000}pip\sinstall\sexegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string359 = /pm3\s\-p\s\/dev\/ttyACM0/ nocase ascii wide
+        $string359 = /.{0,1000}pm3\s\-p\s\/dev\/ttyACM0.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string360 = /pre2k\sauth\s.*\s\-\-dc\-ip\s/ nocase ascii wide
+        $string360 = /.{0,1000}pre2k\sauth\s.{0,1000}\s\-\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string361 = /printerbug\.py\s.*:.*\@.*\s/ nocase ascii wide
+        $string361 = /.{0,1000}printerbug\.py\s.{0,1000}:.{0,1000}\@.{0,1000}\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string362 = /privexchange\.py/ nocase ascii wide
+        $string362 = /.{0,1000}privexchange\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string363 = /prowler\sgcp\s\-\-credentials\-file\spath/ nocase ascii wide
+        $string363 = /.{0,1000}prowler\sgcp\s\-\-credentials\-file\spath.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string364 = /proxmark3\s\-p\s\/dev\/ttyACM0/ nocase ascii wide
+        $string364 = /.{0,1000}proxmark3\s\-p\s\/dev\/ttyACM0.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string365 = /proxychains\satexec\.py/ nocase ascii wide
+        $string365 = /.{0,1000}proxychains\satexec\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string366 = /proxychains\sdcomexec\.py/ nocase ascii wide
+        $string366 = /.{0,1000}proxychains\sdcomexec\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string367 = /proxychains\spsexec\.py/ nocase ascii wide
+        $string367 = /.{0,1000}proxychains\spsexec\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string368 = /proxychains\ssecretsdump/ nocase ascii wide
+        $string368 = /.{0,1000}proxychains\ssecretsdump.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string369 = /proxychains\ssmbexec\.py/ nocase ascii wide
+        $string369 = /.{0,1000}proxychains\ssmbexec\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string370 = /proxychains\swmiexec\.py/ nocase ascii wide
+        $string370 = /.{0,1000}proxychains\swmiexec\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string371 = /pth\-net\srpc\sgroup\smembers\s.*Domain\sadmins/ nocase ascii wide
+        $string371 = /.{0,1000}pth\-net\srpc\sgroup\smembers\s.{0,1000}Domain\sadmins.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string372 = /pth\-net\srpc\sgroup\smembers\s.*Exchange\sServers/ nocase ascii wide
+        $string372 = /.{0,1000}pth\-net\srpc\sgroup\smembers\s.{0,1000}Exchange\sServers.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string373 = /pth\-net\srpc\spassword\s.*\s\-U\s.*\s\-S\s/ nocase ascii wide
+        $string373 = /.{0,1000}pth\-net\srpc\spassword\s.{0,1000}\s\-U\s.{0,1000}\s\-S\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string374 = /pth\-net\srpc\suser\sadd\s.*\s\-U\s.*\-S\s/ nocase ascii wide
+        $string374 = /.{0,1000}pth\-net\srpc\suser\sadd\s.{0,1000}\s\-U\s.{0,1000}\-S\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string375 = /pwncat\-cs\s.*:/ nocase ascii wide
+        $string375 = /.{0,1000}pwncat\-cs\s.{0,1000}:.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string376 = /pwncat\-cs\s\-lp\s/ nocase ascii wide
+        $string376 = /.{0,1000}pwncat\-cs\s\-lp\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string377 = /pwncat\-cs\sssh:\/\// nocase ascii wide
+        $string377 = /.{0,1000}pwncat\-cs\sssh:\/\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string378 = /pwndb\s\-\-target\s\@.*\s\-\-output\s/ nocase ascii wide
+        $string378 = /.{0,1000}pwndb\s\-\-target\s\@.{0,1000}\s\-\-output\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string379 = /pygpoabuse\s.*\s\-hashes\slm:.*\s\-gpo\-id\s/ nocase ascii wide
+        $string379 = /.{0,1000}pygpoabuse\s.{0,1000}\s\-hashes\slm:.{0,1000}\s\-gpo\-id\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string380 = /pyLAPS\.py\s\-\-action\sget\s\-d\s.*\s\-u\s.*\s\-p\s.*\s\-\-dc\-ip\s/ nocase ascii wide
+        $string380 = /.{0,1000}pyLAPS\.py\s\-\-action\sget\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string381 = /pyrit\s\-e\s.*\screate_essid/ nocase ascii wide
+        $string381 = /.{0,1000}pyrit\s\-e\s.{0,1000}\screate_essid.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string382 = /pyrit\s\-i\s.*\.txt\simport_passwords/ nocase ascii wide
+        $string382 = /.{0,1000}pyrit\s\-i\s.{0,1000}\.txt\simport_passwords.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string383 = /pyrit\s\-r\s.*\.pcap\sattack_db/ nocase ascii wide
+        $string383 = /.{0,1000}pyrit\s\-r\s.{0,1000}\.pcap\sattack_db.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string384 = /pyrit\s\-r\s.*\.pcap\s\-b\s.*\s\-i\s.*\.txt\sattack_passthrough/ nocase ascii wide
+        $string384 = /.{0,1000}pyrit\s\-r\s.{0,1000}\.pcap\s\-b\s.{0,1000}\s\-i\s.{0,1000}\.txt\sattack_passthrough.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string385 = /python\srsf\.py/ nocase ascii wide
+        $string385 = /.{0,1000}python\srsf\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string386 = /python3\srsf\.py/ nocase ascii wide
+        $string386 = /.{0,1000}python3\srsf\.py.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string387 = /pywhisker\.py\s\-/ nocase ascii wide
+        $string387 = /.{0,1000}pywhisker\.py\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string388 = /rbcd\.py\s\-delegate\-from\s.*\s\-delegate\-to\s.*\s\-dc\-ip\s.*\s\-action\swrite\s/ nocase ascii wide
+        $string388 = /.{0,1000}rbcd\.py\s\-delegate\-from\s.{0,1000}\s\-delegate\-to\s.{0,1000}\s\-dc\-ip\s.{0,1000}\s\-action\swrite\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string389 = /rebootuser\/LinEnum/ nocase ascii wide
+        $string389 = /.{0,1000}rebootuser\/LinEnum.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string390 = /reg\.py\s.*\@.*\ssave\s\-keyName\s\'HKLM\\SAM/ nocase ascii wide
+        $string390 = /.{0,1000}reg\.py\s.{0,1000}\@.{0,1000}\ssave\s\-keyName\s\'HKLM\\SAM.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string391 = /reg\.py\s.*\@.*\ssave\s\-keyName\s\'HKLM\\SECURITY/ nocase ascii wide
+        $string391 = /.{0,1000}reg\.py\s.{0,1000}\@.{0,1000}\ssave\s\-keyName\s\'HKLM\\SECURITY.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string392 = /reg\.py\s.*\@.*\ssave\s\-keyName\s\'HKLM\\SYSTEM/ nocase ascii wide
+        $string392 = /.{0,1000}reg\.py\s.{0,1000}\@.{0,1000}\ssave\s\-keyName\s\'HKLM\\SYSTEM.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string393 = /register\-python\-argcomplete\s\-\-no\-defaults\sexegol/ nocase ascii wide
+        $string393 = /.{0,1000}register\-python\-argcomplete\s\-\-no\-defaults\sexegol.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string394 = /renameMachine\.py\s\-current\-name\s.*\s\-new\-name\s.*\s\-dc\-ip\s.*\s.*:/ nocase ascii wide
+        $string394 = /.{0,1000}renameMachine\.py\s\-current\-name\s.{0,1000}\s\-new\-name\s.{0,1000}\s\-dc\-ip\s.{0,1000}\s.{0,1000}:.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string395 = /responder\s\-\-interface/ nocase ascii wide
+        $string395 = /.{0,1000}responder\s\-\-interface.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string396 = /Responder\/tools\/MultiRelay\/bin\/Runas\.exe/ nocase ascii wide
+        $string396 = /.{0,1000}Responder\/tools\/MultiRelay\/bin\/Runas\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string397 = /Responder\/tools\/MultiRelay\/bin\/Syssvc\.exe/ nocase ascii wide
+        $string397 = /.{0,1000}Responder\/tools\/MultiRelay\/bin\/Syssvc\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string398 = /responder\-http\-off/ nocase ascii wide
+        $string398 = /.{0,1000}responder\-http\-off.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string399 = /responder\-http\-on/ nocase ascii wide
+        $string399 = /.{0,1000}responder\-http\-on.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string400 = /responder\-smb\-off/ nocase ascii wide
+        $string400 = /.{0,1000}responder\-smb\-off.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string401 = /responder\-smb\-on/ nocase ascii wide
+        $string401 = /.{0,1000}responder\-smb\-on.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string402 = /rlwrap\snc\s\-lvnp\s/ nocase ascii wide
+        $string402 = /.{0,1000}rlwrap\snc\s\-lvnp\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string403 = /roastinthemiddle\s\-i\s.*\s\-t\s.*\s\-u\s.*\.txt\s\-g\s/ nocase ascii wide
+        $string403 = /.{0,1000}roastinthemiddle\s\-i\s.{0,1000}\s\-t\s.{0,1000}\s\-u\s.{0,1000}\.txt\s\-g\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string404 = /ropnop\/go\-windapsearch/ nocase ascii wide
+        $string404 = /.{0,1000}ropnop\/go\-windapsearch.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string405 = /rsactftool\s\-\-/ nocase ascii wide
+        $string405 = /.{0,1000}rsactftool\s\-\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string406 = /rsactftool.*\s\-\-dumpkey\s\-\-key\s/ nocase ascii wide
+        $string406 = /.{0,1000}rsactftool.{0,1000}\s\-\-dumpkey\s\-\-key\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string407 = /ruler\s.*\sabk\sdump\s\-o\s/ nocase ascii wide
+        $string407 = /.{0,1000}ruler\s.{0,1000}\sabk\sdump\s\-o\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string408 = /ruler\s\-k\s\-d\s.*\sbrute\s\-\-users\s/ nocase ascii wide
+        $string408 = /.{0,1000}ruler\s\-k\s\-d\s.{0,1000}\sbrute\s\-\-users\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string409 = /rusthound\s.*\s\-\-zip\s\-\-ldaps\s\-\-adcs\s\-\-old\-bloodhound/ nocase ascii wide
+        $string409 = /.{0,1000}rusthound\s.{0,1000}\s\-\-zip\s\-\-ldaps\s\-\-adcs\s\-\-old\-bloodhound.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string410 = /samdump2\sSYSTEM\sSAM\s\>\s/ nocase ascii wide
+        $string410 = /.{0,1000}samdump2\sSYSTEM\sSAM\s\>\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string411 = /\-\-script\sbroadcast\-dhcp\-discover/ nocase ascii wide
+        $string411 = /.{0,1000}\-\-script\sbroadcast\-dhcp\-discover.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string412 = /searchsploit\s\-m\s/ nocase ascii wide
+        $string412 = /.{0,1000}searchsploit\s\-m\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string413 = /searchsploit\s\-x\s/ nocase ascii wide
+        $string413 = /.{0,1000}searchsploit\s\-x\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string414 = /secret_fragment_exploit\.py\s.*\/_fragment/ nocase ascii wide
+        $string414 = /.{0,1000}secret_fragment_exploit\.py\s.{0,1000}\/_fragment.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string415 = /secretsdump\s\-sam\s/ nocase ascii wide
+        $string415 = /.{0,1000}secretsdump\s\-sam\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string416 = /shadowcoerce\.py\s/ nocase ascii wide
+        $string416 = /.{0,1000}shadowcoerce\.py\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string417 = /ShawnDEvans\/smbmap/ nocase ascii wide
+        $string417 = /.{0,1000}ShawnDEvans\/smbmap.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string418 = /shellerator\s\-\-reverse\-shell\s\-\-lhost\s.*\s\-\-lport\s.*\s\-\-type\s/ nocase ascii wide
+        $string418 = /.{0,1000}shellerator\s\-\-reverse\-shell\s\-\-lhost\s.{0,1000}\s\-\-lport\s.{0,1000}\s\-\-type\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string419 = /ShutdownRepo\/smartbrute/ nocase ascii wide
+        $string419 = /.{0,1000}ShutdownRepo\/smartbrute.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string420 = /sipvicious_svcrack.*\s\-u100/ nocase ascii wide
+        $string420 = /.{0,1000}sipvicious_svcrack.{0,1000}\s\-u100/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string421 = /smartbrute\s.*kerberos/ nocase ascii wide
+        $string421 = /.{0,1000}smartbrute\s.{0,1000}kerberos.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string422 = /\-smb2support\s\-\-remove\-mic\s\-\-shadow\-credentials\s\-\-shadow\-target\s/ nocase ascii wide
+        $string422 = /.{0,1000}\-smb2support\s\-\-remove\-mic\s\-\-shadow\-credentials\s\-\-shadow\-target\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string423 = /smbexec\.py\s\-hashes\s:/ nocase ascii wide
+        $string423 = /.{0,1000}smbexec\.py\s\-hashes\s:.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string424 = /smbexec\.py\s\-share/ nocase ascii wide
+        $string424 = /.{0,1000}smbexec\.py\s\-share.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string425 = /smbmap\s\-u\sguest\s\-H\s/ nocase ascii wide
+        $string425 = /.{0,1000}smbmap\s\-u\sguest\s\-H\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string426 = /smbpasswd\.py\s\-newpass\s/ nocase ascii wide
+        $string426 = /.{0,1000}smbpasswd\.py\s\-newpass\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string427 = /smbserver\.py\s\-smb2support\sEXEGOL/ nocase ascii wide
+        $string427 = /.{0,1000}smbserver\.py\s\-smb2support\sEXEGOL.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string428 = /smtp\-user\-enum\s.*\s\-M\sEXPN\s/ nocase ascii wide
+        $string428 = /.{0,1000}smtp\-user\-enum\s.{0,1000}\s\-M\sEXPN\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string429 = /smtp\-user\-enum\s.*\s\-M\sRCPT\s/ nocase ascii wide
+        $string429 = /.{0,1000}smtp\-user\-enum\s.{0,1000}\s\-M\sRCPT\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string430 = /smtp\-user\-enum\s.*\s\-M\sVRFY\s/ nocase ascii wide
+        $string430 = /.{0,1000}smtp\-user\-enum\s.{0,1000}\s\-M\sVRFY\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string431 = /spiderfoot\s\-l\s127\.0\.0\.1:/ nocase ascii wide
+        $string431 = /.{0,1000}spiderfoot\s\-l\s127\.0\.0\.1:.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string432 = /spiderfoot\-cli\s\-s\shttp/ nocase ascii wide
+        $string432 = /.{0,1000}spiderfoot\-cli\s\-s\shttp.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string433 = /SpoolSample_v4\.5_x64\.exe/ nocase ascii wide
+        $string433 = /.{0,1000}SpoolSample_v4\.5_x64\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string434 = /sprayhound\s\-d\s/ nocase ascii wide
+        $string434 = /.{0,1000}sprayhound\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string435 = /sqlmap\s\-\-forms\s\-\-batch\s\-u\s/ nocase ascii wide
+        $string435 = /.{0,1000}sqlmap\s\-\-forms\s\-\-batch\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string436 = /sshuttle\s\-r\s.*0\.0\.0\.0\/24/ nocase ascii wide
+        $string436 = /.{0,1000}sshuttle\s\-r\s.{0,1000}0\.0\.0\.0\/24.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string437 = /ssrfmap\s\-r\s.*\.txt\s\-p\sid\s\-m\sreadfiles.*portscan/ nocase ascii wide
+        $string437 = /.{0,1000}ssrfmap\s\-r\s.{0,1000}\.txt\s\-p\sid\s\-m\sreadfiles.{0,1000}portscan.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string438 = /subfinder\s\-d\s/ nocase ascii wide
+        $string438 = /.{0,1000}subfinder\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string439 = /subfinder\s\-silent\s\-d\s/ nocase ascii wide
+        $string439 = /.{0,1000}subfinder\s\-silent\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string440 = /sublist3r\s\-v\s\-d\s/ nocase ascii wide
+        $string440 = /.{0,1000}sublist3r\s\-v\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string441 = /swaks\s\-\-to\s.*\s\-\-from\s.*\s\-\-header\s.*Subject:\s.*\s\-\-body\s.*\s\-\-server\s/ nocase ascii wide
+        $string441 = /.{0,1000}swaks\s\-\-to\s.{0,1000}\s\-\-from\s.{0,1000}\s\-\-header\s.{0,1000}Subject:\s.{0,1000}\s\-\-body\s.{0,1000}\s\-\-server\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string442 = /swisskyrepo\/SSRFmap/ nocase ascii wide
+        $string442 = /.{0,1000}swisskyrepo\/SSRFmap.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string443 = /tarunkant\/Gopherus/ nocase ascii wide
+        $string443 = /.{0,1000}tarunkant\/Gopherus.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string444 = /ThePorgs\/Exegol\-images/ nocase ascii wide
+        $string444 = /.{0,1000}ThePorgs\/Exegol\-images.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string445 = /ticketer\.py\s\-nthash/ nocase ascii wide
+        $string445 = /.{0,1000}ticketer\.py\s\-nthash.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string446 = /timing_attack\s.*\s\-\-brute\-force/ nocase ascii wide
+        $string446 = /.{0,1000}timing_attack\s.{0,1000}\s\-\-brute\-force.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string447 = /tls\-scanner\s\-connect\s.*:/ nocase ascii wide
+        $string447 = /.{0,1000}tls\-scanner\s\-connect\s.{0,1000}:.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string448 = /tomcatWarDeployer\s\-v\s\-x\s\-p\s.*\s\-H\s.*\s/ nocase ascii wide
+        $string448 = /.{0,1000}tomcatWarDeployer\s\-v\s\-x\s\-p\s.{0,1000}\s\-H\s.{0,1000}\s/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string449 = /trevorspray\s.*\-\-recon\s/ nocase ascii wide
+        $string449 = /.{0,1000}trevorspray\s.{0,1000}\-\-recon\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string450 = /trevorspray\s\-u\s/ nocase ascii wide
+        $string450 = /.{0,1000}trevorspray\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string451 = /trickster0\/Enyx/ nocase ascii wide
+        $string451 = /.{0,1000}trickster0\/Enyx.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string452 = /twint\s\-g\=.*km.*\s\-o\s.*\s\-\-csv/ nocase ascii wide
+        $string452 = /.{0,1000}twint\s\-g\=.{0,1000}km.{0,1000}\s\-o\s.{0,1000}\s\-\-csv.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string453 = /twint\s\-u\s.*\s\-\-since\s/ nocase ascii wide
+        $string453 = /.{0,1000}twint\s\-u\s.{0,1000}\s\-\-since\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string454 = /uberfile\s\-\-lhost.*\s\-\-lport\s.*\s\-\-target\-os\s.*\s\-\-downloader\s/ nocase ascii wide
+        $string454 = /.{0,1000}uberfile\s\-\-lhost.{0,1000}\s\-\-lport\s.{0,1000}\s\-\-target\-os\s.{0,1000}\s\-\-downloader\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string455 = /wafw00f\shttps:\/\// nocase ascii wide
+        $string455 = /.{0,1000}wafw00f\shttps:\/\/.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string456 = /webclientservicescanner\s\-dc\-ip\s/ nocase ascii wide
+        $string456 = /.{0,1000}webclientservicescanner\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string457 = /webshell\-exegol\.php/ nocase ascii wide
+        $string457 = /.{0,1000}webshell\-exegol\.php.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string458 = /weevely\sgenerate\s.*\.php/ nocase ascii wide
+        $string458 = /.{0,1000}weevely\sgenerate\s.{0,1000}\.php.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string459 = /weevely\shttps:\/\/.*\.php\s.*\sid/ nocase ascii wide
+        $string459 = /.{0,1000}weevely\shttps:\/\/.{0,1000}\.php\s.{0,1000}\sid.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string460 = /wfuzz\s\-\-.*\.txt/ nocase ascii wide
+        $string460 = /.{0,1000}wfuzz\s\-\-.{0,1000}\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string461 = /Wh1t3Fox\/polenum/ nocase ascii wide
+        $string461 = /.{0,1000}Wh1t3Fox\/polenum.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string462 = /wifite\s\-\-dict\s.*\.txt/ nocase ascii wide
+        $string462 = /.{0,1000}wifite\s\-\-dict\s.{0,1000}\.txt.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string463 = /wifite\s\-\-kill/ nocase ascii wide
+        $string463 = /.{0,1000}wifite\s\-\-kill.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string464 = /windapsearch\s\-\-dc\s/ nocase ascii wide
+        $string464 = /.{0,1000}windapsearch\s\-\-dc\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string465 = /winPEAS\.bat/ nocase ascii wide
+        $string465 = /.{0,1000}winPEAS\.bat.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string466 = /winPEASany\.exe/ nocase ascii wide
+        $string466 = /.{0,1000}winPEASany\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string467 = /winPEASany_ofs\.exe/ nocase ascii wide
+        $string467 = /.{0,1000}winPEASany_ofs\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string468 = /winPEASx64\.exe/ nocase ascii wide
+        $string468 = /.{0,1000}winPEASx64\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string469 = /winPEASx86\.exe/ nocase ascii wide
+        $string469 = /.{0,1000}winPEASx86\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string470 = /winPEASx86_ofs\.exe/ nocase ascii wide
+        $string470 = /.{0,1000}winPEASx86_ofs\.exe.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string471 = /wmiexec\.py\s\-/ nocase ascii wide
+        $string471 = /.{0,1000}wmiexec\.py\s\-.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string472 = /wpscan\s\-\-api\-token\s/ nocase ascii wide
+        $string472 = /.{0,1000}wpscan\s\-\-api\-token\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string473 = /XSpear\s\-u\s/ nocase ascii wide
+        $string473 = /.{0,1000}XSpear\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string474 = /xsrfprobe\s\-u\s/ nocase ascii wide
+        $string474 = /.{0,1000}xsrfprobe\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string475 = /xsser\s\-u\s.*\s\-g\s.*\/login\?password\=.*\s\-\-Coo/ nocase ascii wide
+        $string475 = /.{0,1000}xsser\s\-u\s.{0,1000}\s\-g\s.{0,1000}\/login\?password\=.{0,1000}\s\-\-Coo.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string476 = /zerologon\sclone\s.*https/ nocase ascii wide
+        $string476 = /.{0,1000}zerologon\sclone\s.{0,1000}https.{0,1000}/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string477 = /zerologon\-restore\s.*\s\-target\-ip\s/ nocase ascii wide
+        $string477 = /.{0,1000}zerologon\-restore\s.{0,1000}\s\-target\-ip\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

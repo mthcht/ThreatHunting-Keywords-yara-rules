@@ -10,16 +10,16 @@ rule DesertNut
     strings:
         // Description: DesertNut is a proof-of-concept for code injection using subclassed window callbacks (more commonly known as PROPagate)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/DesertNut
-        $string1 = /DesertNut\.csproj/ nocase ascii wide
+        $string1 = /.{0,1000}DesertNut\.csproj.{0,1000}/ nocase ascii wide
         // Description: DesertNut is a proof-of-concept for code injection using subclassed window callbacks (more commonly known as PROPagate)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/DesertNut
-        $string2 = /DesertNut\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}DesertNut\.exe.{0,1000}/ nocase ascii wide
         // Description: DesertNut is a proof-of-concept for code injection using subclassed window callbacks (more commonly known as PROPagate)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/DesertNut
-        $string3 = /DesertNut\.sln/ nocase ascii wide
+        $string3 = /.{0,1000}DesertNut\.sln.{0,1000}/ nocase ascii wide
         // Description: DesertNut is a proof-of-concept for code injection using subclassed window callbacks (more commonly known as PROPagate)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/DesertNut
-        $string4 = /DesertNut_h\.cs/ nocase ascii wide
+        $string4 = /.{0,1000}DesertNut_h\.cs.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule EventViewer_UACBypass
     strings:
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string1 = /\sEventViewer\-UACBypass/ nocase ascii wide
+        $string1 = /.{0,1000}\sEventViewer\-UACBypass.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string2 = /\/EventViewer\-UACBypass/ nocase ascii wide
+        $string2 = /.{0,1000}\/EventViewer\-UACBypass.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string3 = /\\EventViewer\-UACBypass/ nocase ascii wide
+        $string3 = /.{0,1000}\\EventViewer\-UACBypass.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string4 = /\\Windows\\Tasks\\p4yl0ad/ nocase ascii wide
+        $string4 = /.{0,1000}\\Windows\\Tasks\\p4yl0ad.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string5 = /EventViewerRCE\.ps1/ nocase ascii wide
+        $string5 = /.{0,1000}EventViewerRCE\.ps1.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string6 = /Invoke\-EventViewer\s.*\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}Invoke\-EventViewer\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string7 = /Invoke\-EventViewer\.ps1/ nocase ascii wide
+        $string7 = /.{0,1000}Invoke\-EventViewer\.ps1.{0,1000}/ nocase ascii wide
         // Description: RCE through Unsafe .Net Deserialization in Windows Event Viewer which leads to UAC bypass
         // Reference: https://github.com/CsEnox/EventViewer-UACBypass
-        $string8 = /OgBcAFcAaQBuAGQAbwB3AHMAXABUAGEAcwBrAHMAXABFAHYAZQBuAHQAVgBpAGUAdwBlAHIAUgBDAEUALgBwAHMAMQA\=/ nocase ascii wide
+        $string8 = /.{0,1000}OgBcAFcAaQBuAGQAbwB3AHMAXABUAGEAcwBrAHMAXABFAHYAZQBuAHQAVgBpAGUAdwBlAHIAUgBDAEUALgBwAHMAMQA\=.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

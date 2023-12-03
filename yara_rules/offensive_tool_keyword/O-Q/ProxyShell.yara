@@ -10,10 +10,10 @@ rule ProxyShell
     strings:
         // Description: Microsoft Exchange Servers exploits - ProxyLogon and ProxyShell  CVE-2021-27065 CVE-2021-34473 CVE-2021-34523 CVE-2021-31207
         // Reference: https://www.cert.ssi.gouv.fr/uploads/ANSSI_TLPWHITE_ProxyShell_ProxyLogon_Sigma_yml.txt
-        $string1 = /New\-MailBoxExportRequest\s\-Mailbox\s.*\@.*\s\-FilePath\s.*\.aspx/ nocase ascii wide
+        $string1 = /.{0,1000}New\-MailBoxExportRequest\s\-Mailbox\s.{0,1000}\@.{0,1000}\s\-FilePath\s.{0,1000}\.aspx.{0,1000}/ nocase ascii wide
         // Description: Microsoft Exchange Servers exploits - ProxyLogon and ProxyShell  CVE-2021-27065 CVE-2021-34473 CVE-2021-34523 CVE-2021-31207
         // Reference: https://www.cert.ssi.gouv.fr/uploads/ANSSI_TLPWHITE_ProxyShell_ProxyLogon_Sigma_yml.txt
-        $string2 = /Set\-OabVirtualDirectory\s\-ExternalUrl\s\'http.*:\/\/.*function\sPage_Load\(\){.*}\<\/script\>/ nocase ascii wide
+        $string2 = /.{0,1000}Set\-OabVirtualDirectory\s\-ExternalUrl\s\'http.{0,1000}:\/\/.{0,1000}function\sPage_Load\(\){.{0,1000}}\<\/script\>.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

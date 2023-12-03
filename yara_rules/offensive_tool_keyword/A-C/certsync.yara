@@ -10,28 +10,28 @@ rule certsync
     strings:
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string1 = /\/certsync\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/certsync\.git.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string2 = /\\certipy\.pfx/ nocase ascii wide
+        $string2 = /.{0,1000}\\certipy\.pfx.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string3 = /\\Windows\\Tasks\\Certipy/ nocase ascii wide
+        $string3 = /.{0,1000}\\Windows\\Tasks\\Certipy.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string4 = /certsync\s.*\-\-dc\-ip/ nocase ascii wide
+        $string4 = /.{0,1000}certsync\s.{0,1000}\-\-dc\-ip.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string5 = /certsync\s\-u\s/ nocase ascii wide
+        $string5 = /.{0,1000}certsync\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string6 = /certsync\-master\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}certsync\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string7 = /install\scertsync/ nocase ascii wide
+        $string7 = /.{0,1000}install\scertsync.{0,1000}/ nocase ascii wide
         // Description: Dump NTDS with golden certificates and UnPAC the hash
         // Reference: https://github.com/zblurx/certsync
-        $string8 = /zblurx\/certsync/ nocase ascii wide
+        $string8 = /.{0,1000}zblurx\/certsync.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

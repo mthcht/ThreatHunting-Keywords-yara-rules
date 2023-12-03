@@ -10,13 +10,13 @@ rule evilginx2
     strings:
         // Description: Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies allowing for the bypass of 2-factor authentication
         // Reference: https://github.com/kgretzky/evilginx2
-        $string1 = /evilginx\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}evilginx\.exe.{0,1000}/ nocase ascii wide
         // Description: Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies allowing for the bypass of 2-factor authentication
         // Reference: https://github.com/kgretzky/evilginx2
-        $string2 = /evilginx2/ nocase ascii wide
+        $string2 = /.{0,1000}evilginx2.{0,1000}/ nocase ascii wide
         // Description: Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies allowing for the bypass of 2-factor authentication
         // Reference: https://github.com/kgretzky/evilginx2
-        $string3 = /evilginx\-mastery/ nocase ascii wide
+        $string3 = /.{0,1000}evilginx\-mastery.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

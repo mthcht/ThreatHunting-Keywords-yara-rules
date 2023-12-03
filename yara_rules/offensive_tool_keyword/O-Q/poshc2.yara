@@ -10,520 +10,520 @@ rule poshc2
     strings:
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string1 = /\s\-c2server\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-c2server\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string2 = /\s\-daisyserver\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-daisyserver\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string3 = /\s\-LocalPoshC2ProjectDir\s/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-LocalPoshC2ProjectDir\s.{0,1000}/ nocase ascii wide
         // Description: PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming. post-exploitation and lateral movement. PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools. allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python implants with payloads written in PowerShell v2 and v4. C++ and C# source code. a variety of executables. DLLs and raw shellcode in addition to a Python2 payload. These enable C2 functionality on a wide range of devices and operating systems. including Windows. *nix and OSX.
         // Reference: https://github.com/nettitude/PoshC2
-        $string4 = /\s\-LocalPoshC2ProjectDir\s/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-LocalPoshC2ProjectDir\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string5 = /\s\-Payload\s.*\s\-method\ssysprep/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-Payload\s.{0,1000}\s\-method\ssysprep.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string6 = /\sPayloadsDirectory/ nocase ascii wide
+        $string6 = /.{0,1000}\sPayloadsDirectory.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string7 = /\sPoshC2\s/ nocase ascii wide
+        $string7 = /.{0,1000}\sPoshC2\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string8 = /\s\-PoshC2Dir\s/ nocase ascii wide
+        $string8 = /.{0,1000}\s\-PoshC2Dir\s.{0,1000}/ nocase ascii wide
         // Description: PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming. post-exploitation and lateral movement. PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools. allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python implants with payloads written in PowerShell v2 and v4. C++ and C# source code. a variety of executables. DLLs and raw shellcode in addition to a Python2 payload. These enable C2 functionality on a wide range of devices and operating systems. including Windows. *nix and OSX.
         // Reference: https://github.com/nettitude/PoshC2
-        $string9 = /\s\-PoshC2Dir\s/ nocase ascii wide
+        $string9 = /.{0,1000}\s\-PoshC2Dir\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string10 = /\sSharpSocks\s/ nocase ascii wide
+        $string10 = /.{0,1000}\sSharpSocks\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string11 = /\/bin\/posh/ nocase ascii wide
+        $string11 = /.{0,1000}\/bin\/posh.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string12 = /\/C2Server\.py/ nocase ascii wide
+        $string12 = /.{0,1000}\/C2Server\.py.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string13 = /\/Macro\-Payloads\.py/ nocase ascii wide
+        $string13 = /.{0,1000}\/Macro\-Payloads\.py.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string14 = /\/nettitude\// nocase ascii wide
+        $string14 = /.{0,1000}\/nettitude\/.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string15 = /\/opt\/PoshC2/ nocase ascii wide
+        $string15 = /.{0,1000}\/opt\/PoshC2.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string16 = /\/posh\.key/ nocase ascii wide
+        $string16 = /.{0,1000}\/posh\.key.{0,1000}/ nocase ascii wide
         // Description: PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming. post-exploitation and lateral movement. PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools. allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python implants with payloads written in PowerShell v2 and v4. C++ and C# source code. a variety of executables. DLLs and raw shellcode in addition to a Python2 payload. These enable C2 functionality on a wide range of devices and operating systems. including Windows. *nix and OSX.
         // Reference: https://github.com/nettitude/PoshC2
-        $string17 = /\/PoshC2/ nocase ascii wide
+        $string17 = /.{0,1000}\/PoshC2.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string18 = /\/poshc2\-/ nocase ascii wide
+        $string18 = /.{0,1000}\/poshc2\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string19 = /\/PoshC2\// nocase ascii wide
+        $string19 = /.{0,1000}\/PoshC2\/.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string20 = /\/posh\-config/ nocase ascii wide
+        $string20 = /.{0,1000}\/posh\-config.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string21 = /\/posh\-log/ nocase ascii wide
+        $string21 = /.{0,1000}\/posh\-log.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string22 = /\/posh\-project/ nocase ascii wide
+        $string22 = /.{0,1000}\/posh\-project.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string23 = /\/posh\-server/ nocase ascii wide
+        $string23 = /.{0,1000}\/posh\-server.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string24 = /\/posh\-service/ nocase ascii wide
+        $string24 = /.{0,1000}\/posh\-service.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string25 = /\/posh\-stop\-service/ nocase ascii wide
+        $string25 = /.{0,1000}\/posh\-stop\-service.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string26 = /\/posh\-update/ nocase ascii wide
+        $string26 = /.{0,1000}\/posh\-update.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string27 = /\/SharpHandler\.py/ nocase ascii wide
+        $string27 = /.{0,1000}\/SharpHandler\.py.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string28 = /\\PoshC2/ nocase ascii wide
+        $string28 = /.{0,1000}\\PoshC2.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string29 = /_posh\-common/ nocase ascii wide
+        $string29 = /.{0,1000}_posh\-common.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string30 = /_Shellcode\.bin/ nocase ascii wide
+        $string30 = /.{0,1000}_Shellcode\.bin.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string31 = /brute\-locadmin\s/ nocase ascii wide
+        $string31 = /.{0,1000}brute\-locadmin\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string32 = /bypass\-amsi/ nocase ascii wide
+        $string32 = /.{0,1000}bypass\-amsi.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string33 = /C2\.KillDate/ nocase ascii wide
+        $string33 = /.{0,1000}C2\.KillDate.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string34 = /C2\.UserAgent/ nocase ascii wide
+        $string34 = /.{0,1000}C2\.UserAgent.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string35 = /clipboard\-monitor\s/ nocase ascii wide
+        $string35 = /.{0,1000}clipboard\-monitor\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string36 = /createdaisypayload/ nocase ascii wide
+        $string36 = /.{0,1000}createdaisypayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string37 = /createlinuxpayload/ nocase ascii wide
+        $string37 = /.{0,1000}createlinuxpayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string38 = /createnewpayload/ nocase ascii wide
+        $string38 = /.{0,1000}createnewpayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string39 = /createnewshellcode/ nocase ascii wide
+        $string39 = /.{0,1000}createnewshellcode.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string40 = /createpbindpayload/ nocase ascii wide
+        $string40 = /.{0,1000}createpbindpayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string41 = /createproxypayload\s\-/ nocase ascii wide
+        $string41 = /.{0,1000}createproxypayload\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string42 = /createproxypayload/ nocase ascii wide
+        $string42 = /.{0,1000}createproxypayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string43 = /cred\-popper\s/ nocase ascii wide
+        $string43 = /.{0,1000}cred\-popper\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string44 = /dcomexec\s\-/ nocase ascii wide
+        $string44 = /.{0,1000}dcomexec\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string45 = /dllsearcher\s.*\.dll/ nocase ascii wide
+        $string45 = /.{0,1000}dllsearcher\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string46 = /find\-allvulns/ nocase ascii wide
+        $string46 = /.{0,1000}find\-allvulns.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string47 = /find\-interestingfile\s\-/ nocase ascii wide
+        $string47 = /.{0,1000}find\-interestingfile\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string48 = /fpc\s\-c\sSeatbelt/ nocase ascii wide
+        $string48 = /.{0,1000}fpc\s\-c\sSeatbelt.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string49 = /get_c2_messages/ nocase ascii wide
+        $string49 = /.{0,1000}get_c2_messages.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string50 = /get_c2server_all/ nocase ascii wide
+        $string50 = /.{0,1000}get_c2server_all.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string51 = /get_cmd_from_task_id/ nocase ascii wide
+        $string51 = /.{0,1000}get_cmd_from_task_id.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string52 = /get_implants_all/ nocase ascii wide
+        $string52 = /.{0,1000}get_implants_all.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string53 = /get_newimplanturl/ nocase ascii wide
+        $string53 = /.{0,1000}get_newimplanturl.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string54 = /get_sharpurls/ nocase ascii wide
+        $string54 = /.{0,1000}get_sharpurls.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string55 = /get\-creditcarddata\s/ nocase ascii wide
+        $string55 = /.{0,1000}get\-creditcarddata\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string56 = /getdllbaseaddress/ nocase ascii wide
+        $string56 = /.{0,1000}getdllbaseaddress.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string57 = /get\-dodgyprocesses/ nocase ascii wide
+        $string57 = /.{0,1000}get\-dodgyprocesses.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string58 = /getgppgroups\s\s/ nocase ascii wide
+        $string58 = /.{0,1000}getgppgroups\s\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string59 = /getgpppassword\s/ nocase ascii wide
+        $string59 = /.{0,1000}getgpppassword\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string60 = /get\-implantworkingdirectory/ nocase ascii wide
+        $string60 = /.{0,1000}get\-implantworkingdirectory.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string61 = /Get\-KeystrokeData/ nocase ascii wide
+        $string61 = /.{0,1000}Get\-KeystrokeData.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string62 = /get\-keystrokes/ nocase ascii wide
+        $string62 = /.{0,1000}get\-keystrokes.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string63 = /get\-killdate/ nocase ascii wide
+        $string63 = /.{0,1000}get\-killdate.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string64 = /get\-netfileserver\s\-domain\s/ nocase ascii wide
+        $string64 = /.{0,1000}get\-netfileserver\s\-domain\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string65 = /get\-passnotexp/ nocase ascii wide
+        $string65 = /.{0,1000}get\-passnotexp.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string66 = /get\-process\s.*amsi\.dll/ nocase ascii wide
+        $string66 = /.{0,1000}get\-process\s.{0,1000}amsi\.dll.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string67 = /getremoteprocesslisting/ nocase ascii wide
+        $string67 = /.{0,1000}getremoteprocesslisting.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string68 = /get\-screenshot/ nocase ascii wide
+        $string68 = /.{0,1000}get\-screenshot.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string69 = /get\-screenshotallwindows/ nocase ascii wide
+        $string69 = /.{0,1000}get\-screenshotallwindows.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string70 = /get\-wmiregcachedrdpconnection/ nocase ascii wide
+        $string70 = /.{0,1000}get\-wmiregcachedrdpconnection.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string71 = /get\-wmireglastloggedon/ nocase ascii wide
+        $string71 = /.{0,1000}get\-wmireglastloggedon.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string72 = /get\-wmiregmounteddrive/ nocase ascii wide
+        $string72 = /.{0,1000}get\-wmiregmounteddrive.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string73 = /hide\-implant/ nocase ascii wide
+        $string73 = /.{0,1000}hide\-implant.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string74 = /inject\-shellcode\s/ nocase ascii wide
+        $string74 = /.{0,1000}inject\-shellcode\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string75 = /installexe\-persistence/ nocase ascii wide
+        $string75 = /.{0,1000}installexe\-persistence.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string76 = /install\-persistence/ nocase ascii wide
+        $string76 = /.{0,1000}install\-persistence.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string77 = /install\-persistence\-cron/ nocase ascii wide
+        $string77 = /.{0,1000}install\-persistence\-cron.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string78 = /invoke\-aclscanner/ nocase ascii wide
+        $string78 = /.{0,1000}invoke\-aclscanner.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string79 = /invoke\-arpscan/ nocase ascii wide
+        $string79 = /.{0,1000}invoke\-arpscan.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string80 = /invoke\-bloodhound/ nocase ascii wide
+        $string80 = /.{0,1000}invoke\-bloodhound.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string81 = /invoke\-daisychain/ nocase ascii wide
+        $string81 = /.{0,1000}invoke\-daisychain.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string82 = /invoke\-dcompayload/ nocase ascii wide
+        $string82 = /.{0,1000}invoke\-dcompayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string83 = /invoke\-edrchecker/ nocase ascii wide
+        $string83 = /.{0,1000}invoke\-edrchecker.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string84 = /invoke\-eternalblue/ nocase ascii wide
+        $string84 = /.{0,1000}invoke\-eternalblue.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string85 = /invoke\-hostenum\s\-/ nocase ascii wide
+        $string85 = /.{0,1000}invoke\-hostenum\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string86 = /invoke\-hostscan/ nocase ascii wide
+        $string86 = /.{0,1000}invoke\-hostscan.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string87 = /invoke\-kerberoast\s/ nocase ascii wide
+        $string87 = /.{0,1000}invoke\-kerberoast\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string88 = /invoke\-pipekat\s/ nocase ascii wide
+        $string88 = /.{0,1000}invoke\-pipekat\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string89 = /invoke\-psexecpayload/ nocase ascii wide
+        $string89 = /.{0,1000}invoke\-psexecpayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string90 = /Invoke\-PsUACme/ nocase ascii wide
+        $string90 = /.{0,1000}Invoke\-PsUACme.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string91 = /invoke\-runaspayload/ nocase ascii wide
+        $string91 = /.{0,1000}invoke\-runaspayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string92 = /invoke\-sharefinder\s/ nocase ascii wide
+        $string92 = /.{0,1000}invoke\-sharefinder\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string93 = /invoke\-smbclient\s/ nocase ascii wide
+        $string93 = /.{0,1000}invoke\-smbclient\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string94 = /invoke\-smbexec\s/ nocase ascii wide
+        $string94 = /.{0,1000}invoke\-smbexec\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string95 = /invoke\-smblogin\s/ nocase ascii wide
+        $string95 = /.{0,1000}invoke\-smblogin\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string96 = /invoke\-sniffer\s/ nocase ascii wide
+        $string96 = /.{0,1000}invoke\-sniffer\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string97 = /invoke\-urlcheck\s\-urls/ nocase ascii wide
+        $string97 = /.{0,1000}invoke\-urlcheck\s\-urls.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string98 = /invoke\-winrmsession/ nocase ascii wide
+        $string98 = /.{0,1000}invoke\-winrmsession.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string99 = /invoke\-wmiexec\s/ nocase ascii wide
+        $string99 = /.{0,1000}invoke\-wmiexec\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string100 = /invoke\-wmijspayload/ nocase ascii wide
+        $string100 = /.{0,1000}invoke\-wmijspayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string101 = /invoke\-wmipayload/ nocase ascii wide
+        $string101 = /.{0,1000}invoke\-wmipayload.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string102 = /kill\-implant/ nocase ascii wide
+        $string102 = /.{0,1000}kill\-implant.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string103 = /label\-implant\s/ nocase ascii wide
+        $string103 = /.{0,1000}label\-implant\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string104 = /ldap\-searcher\s/ nocase ascii wide
+        $string104 = /.{0,1000}ldap\-searcher\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string105 = /linuxprivchecker/ nocase ascii wide
+        $string105 = /.{0,1000}linuxprivchecker.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string106 = /loadmodule\s.*\.ps1/ nocase ascii wide
+        $string106 = /.{0,1000}loadmodule\s.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string107 = /loadmodume\s.*\/modules\/.*\.ps1.*/ nocase ascii wide
+        $string107 = /.{0,1000}loadmodume\s.{0,1000}\/modules\/.{0,1000}\.ps1.{0,1000}.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string108 = /lockless\s.*\.dat/ nocase ascii wide
+        $string108 = /.{0,1000}lockless\s.{0,1000}\.dat.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string109 = /PayloadCommsHost/ nocase ascii wide
+        $string109 = /.{0,1000}PayloadCommsHost.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string110 = /Posh_v4_dropper_/ nocase ascii wide
+        $string110 = /.{0,1000}Posh_v4_dropper_.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string111 = /Posh_v4_x64_.*\.bin/ nocase ascii wide
+        $string111 = /.{0,1000}Posh_v4_x64_.{0,1000}\.bin.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string112 = /Posh_v4_x86_.*\.bin/ nocase ascii wide
+        $string112 = /.{0,1000}Posh_v4_x86_.{0,1000}\.bin.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string113 = /PoshC2\-.*\.zip/ nocase ascii wide
+        $string113 = /.{0,1000}PoshC2\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string114 = /poshc2\.server/ nocase ascii wide
+        $string114 = /.{0,1000}poshc2\.server.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string115 = /poshc2\.service/ nocase ascii wide
+        $string115 = /.{0,1000}poshc2\.service.{0,1000}/ nocase ascii wide
         // Description: PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming. post-exploitation and lateral movement. PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools. allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python implants with payloads written in PowerShell v2 and v4. C++ and C# source code. a variety of executables. DLLs and raw shellcode in addition to a Python2 payload. These enable C2 functionality on a wide range of devices and operating systems. including Windows. *nix and OSX.
         // Reference: https://github.com/nettitude/PoshC2
-        $string116 = /poshc2\-ansible\-main\.yml/ nocase ascii wide
+        $string116 = /.{0,1000}poshc2\-ansible\-main\.yml.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string117 = /posh\-cookie\-decryptor/ nocase ascii wide
+        $string117 = /.{0,1000}posh\-cookie\-decryptor.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string118 = /posh\-delete\s/ nocase ascii wide
+        $string118 = /.{0,1000}posh\-delete\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string119 = /posh\-project\s/ nocase ascii wide
+        $string119 = /.{0,1000}posh\-project\s.{0,1000}/ nocase ascii wide
         // Description: PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming. post-exploitation and lateral movement. PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools. allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python implants with payloads written in PowerShell v2 and v4. C++ and C# source code. a variety of executables. DLLs and raw shellcode in addition to a Python2 payload. These enable C2 functionality on a wide range of devices and operating systems. including Windows. *nix and OSX.
         // Reference: https://github.com/nettitude/PoshC2
-        $string120 = /posh\-project\s\-/ nocase ascii wide
+        $string120 = /.{0,1000}posh\-project\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string121 = /posh\-server\s\-/ nocase ascii wide
+        $string121 = /.{0,1000}posh\-server\s\-.{0,1000}/ nocase ascii wide
         // Description: PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming. post-exploitation and lateral movement. PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools. allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python implants with payloads written in PowerShell v2 and v4. C++ and C# source code. a variety of executables. DLLs and raw shellcode in addition to a Python2 payload. These enable C2 functionality on a wide range of devices and operating systems. including Windows. *nix and OSX.
         // Reference: https://github.com/nettitude/PoshC2
-        $string122 = /posh\-server\s\-/ nocase ascii wide
+        $string122 = /.{0,1000}posh\-server\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string123 = /posh\-update\s/ nocase ascii wide
+        $string123 = /.{0,1000}posh\-update\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string124 = /process_mimikatz/ nocase ascii wide
+        $string124 = /.{0,1000}process_mimikatz.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string125 = /pslo\s.*\.ps1/ nocase ascii wide
+        $string125 = /.{0,1000}pslo\s.{0,1000}\.ps1.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string126 = /removeexe\-persistence/ nocase ascii wide
+        $string126 = /.{0,1000}removeexe\-persistence.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string127 = /remove\-persistence/ nocase ascii wide
+        $string127 = /.{0,1000}remove\-persistence.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string128 = /remove\-persistence\-cron/ nocase ascii wide
+        $string128 = /.{0,1000}remove\-persistence\-cron.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string129 = /runas\-netonly\s/ nocase ascii wide
+        $string129 = /.{0,1000}runas\-netonly\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string130 = /run\-dll\sSharpSploit/ nocase ascii wide
+        $string130 = /.{0,1000}run\-dll\sSharpSploit.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string131 = /safetydump/ nocase ascii wide
+        $string131 = /.{0,1000}safetydump.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string132 = /seatbelt\s\-/ nocase ascii wide
+        $string132 = /.{0,1000}seatbelt\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string133 = /seatbelt\sall/ nocase ascii wide
+        $string133 = /.{0,1000}seatbelt\sall.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string134 = /set\-killdate\s/ nocase ascii wide
+        $string134 = /.{0,1000}set\-killdate\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string135 = /set\-pushover\-applicationtoken/ nocase ascii wide
+        $string135 = /.{0,1000}set\-pushover\-applicationtoken.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string136 = /set\-pushover\-userkeys/ nocase ascii wide
+        $string136 = /.{0,1000}set\-pushover\-userkeys.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string137 = /shadowcopy\senum/ nocase ascii wide
+        $string137 = /.{0,1000}shadowcopy\senum.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string138 = /Sharp_v4_x64.*\.bin/ nocase ascii wide
+        $string138 = /.{0,1000}Sharp_v4_x64.{0,1000}\.bin.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string139 = /Sharp_v4_x86.*\.bin/ nocase ascii wide
+        $string139 = /.{0,1000}Sharp_v4_x86.{0,1000}\.bin.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string140 = /sharpapplocker/ nocase ascii wide
+        $string140 = /.{0,1000}sharpapplocker.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string141 = /sharpchromium\s/ nocase ascii wide
+        $string141 = /.{0,1000}sharpchromium\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string142 = /sharpcookiemonster/ nocase ascii wide
+        $string142 = /.{0,1000}sharpcookiemonster.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string143 = /sharpedrchecker/ nocase ascii wide
+        $string143 = /.{0,1000}sharpedrchecker.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string144 = /sharphound\s\-/ nocase ascii wide
+        $string144 = /.{0,1000}sharphound\s\-.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string145 = /sharpps\s\$psversiontable/ nocase ascii wide
+        $string145 = /.{0,1000}sharpps\s\$psversiontable.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string146 = /sharpps\sget\-process/ nocase ascii wide
+        $string146 = /.{0,1000}sharpps\sget\-process.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string147 = /sharpsc\s.*cmd/ nocase ascii wide
+        $string147 = /.{0,1000}sharpsc\s.{0,1000}cmd.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string148 = /sharptelnet\s/ nocase ascii wide
+        $string148 = /.{0,1000}sharptelnet\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string149 = /sharpweb\sall/ nocase ascii wide
+        $string149 = /.{0,1000}sharpweb\sall.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string150 = /sharpwmi\saction\=/ nocase ascii wide
+        $string150 = /.{0,1000}sharpwmi\saction\=.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string151 = /standin\s\-\-asrep/ nocase ascii wide
+        $string151 = /.{0,1000}standin\s\-\-asrep.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string152 = /standin\s\-\-dc/ nocase ascii wide
+        $string152 = /.{0,1000}standin\s\-\-dc.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string153 = /standin\s\-\-delegation/ nocase ascii wide
+        $string153 = /.{0,1000}standin\s\-\-delegation.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string154 = /standin\s\-\-group\s.*Domain\sAdmins/ nocase ascii wide
+        $string154 = /.{0,1000}standin\s\-\-group\s.{0,1000}Domain\sAdmins.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string155 = /standin\s\-\-object\s/ nocase ascii wide
+        $string155 = /.{0,1000}standin\s\-\-object\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string156 = /standin\s\-\-spn/ nocase ascii wide
+        $string156 = /.{0,1000}standin\s\-\-spn.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string157 = /startanotherimplant/ nocase ascii wide
+        $string157 = /.{0,1000}startanotherimplant.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string158 = /startdaisy/ nocase ascii wide
+        $string158 = /.{0,1000}startdaisy.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string159 = /start\-keystrokes/ nocase ascii wide
+        $string159 = /.{0,1000}start\-keystrokes.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string160 = /start\-keystrokes\-writefile/ nocase ascii wide
+        $string160 = /.{0,1000}start\-keystrokes\-writefile.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string161 = /start\-process\sntdsutil\.exe\s.*create\sfull.*/ nocase ascii wide
+        $string161 = /.{0,1000}start\-process\sntdsutil\.exe\s.{0,1000}create\sfull.{0,1000}.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string162 = /stopdaisy/ nocase ascii wide
+        $string162 = /.{0,1000}stopdaisy.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string163 = /stop\-keystrokes/ nocase ascii wide
+        $string163 = /.{0,1000}stop\-keystrokes.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string164 = /sweetpotato\s\-p/ nocase ascii wide
+        $string164 = /.{0,1000}sweetpotato\s\-p.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string165 = /timestomp\sc:/ nocase ascii wide
+        $string165 = /.{0,1000}timestomp\sc:.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string166 = /unhide\-implant/ nocase ascii wide
+        $string166 = /.{0,1000}unhide\-implant.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string167 = /XOR\-Payloads\.py/ nocase ascii wide
+        $string167 = /.{0,1000}XOR\-Payloads\.py.{0,1000}/ nocase ascii wide
         // Description: pipe name from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string168 = /\\jaccdpqnvbrrxlaf/ nocase ascii wide
+        $string168 = /\\jaccdpqnvbrrxlaf.{0,1000}/ nocase ascii wide
         // Description: pipe name from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string169 = /\\Posh/ nocase ascii wide
+        $string169 = /\\Posh.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string170 = /posh\s\-u\s/ nocase ascii wide
+        $string170 = /posh\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string171 = /runof\s.*\.o/ nocase ascii wide
+        $string171 = /runof\s.{0,1000}\.o.{0,1000}/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string172 = /runpe\s.*\.exe/ nocase ascii wide
+        $string172 = /runpe\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

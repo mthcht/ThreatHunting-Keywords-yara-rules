@@ -10,31 +10,31 @@ rule RecycledInjector
     strings:
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string1 = /\/RecycledInjector/ nocase ascii wide
+        $string1 = /.{0,1000}\/RecycledInjector.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string2 = /\/RecycledInjector\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/RecycledInjector\.git.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string3 = /\/src\/RecycledGate\.h/ nocase ascii wide
+        $string3 = /.{0,1000}\/src\/RecycledGate\.h.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string4 = /\\RecycledGate\.c/ nocase ascii wide
+        $string4 = /.{0,1000}\\RecycledGate\.c.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string5 = /GateTrampolin\.asm/ nocase ascii wide
+        $string5 = /.{0,1000}GateTrampolin\.asm.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string6 = /poc\.exe.*poc\.txt/ nocase ascii wide
+        $string6 = /.{0,1000}poc\.exe.{0,1000}poc\.txt.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string7 = /RecycledInjector\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}RecycledInjector\.exe.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string8 = /RecycledInjector\-main/ nocase ascii wide
+        $string8 = /.{0,1000}RecycledInjector\-main.{0,1000}/ nocase ascii wide
         // Description: Native Syscalls Shellcode Injector
         // Reference: https://github.com/florylsk/RecycledInjector
-        $string9 = /RecycledInjector\-main/ nocase ascii wide
+        $string9 = /.{0,1000}RecycledInjector\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

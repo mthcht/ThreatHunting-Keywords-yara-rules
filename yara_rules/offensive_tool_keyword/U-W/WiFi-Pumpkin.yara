@@ -10,7 +10,7 @@ rule WiFi_Pumpkin
     strings:
         // Description: Framework for Rogue Wi-Fi Access Point Attack.
         // Reference: https://github.com/P0cL4bs/WiFi-Pumpkin
-        $string1 = /WiFi\-Pumpkin/ nocase ascii wide
+        $string1 = /.{0,1000}WiFi\-Pumpkin.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

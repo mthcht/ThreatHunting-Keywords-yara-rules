@@ -10,16 +10,16 @@ rule Direct_Syscalls
     strings:
         // Description: Direct-Syscalls technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string1 = /Direct_Syscalls_Create_Thread\.c/ nocase ascii wide
+        $string1 = /.{0,1000}Direct_Syscalls_Create_Thread\.c.{0,1000}/ nocase ascii wide
         // Description: Direct-Syscalls technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string2 = /Direct_Syscalls_Create_Thread\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}Direct_Syscalls_Create_Thread\.exe.{0,1000}/ nocase ascii wide
         // Description: Direct-Syscalls technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string3 = /Direct_Syscalls_Create_Thread\.sln/ nocase ascii wide
+        $string3 = /.{0,1000}Direct_Syscalls_Create_Thread\.sln.{0,1000}/ nocase ascii wide
         // Description: Direct-Syscalls technique is a method employed by malware to hide its malicious behavior and avoid detection. This technique involves executing system calls directly thus bypassing the Windows API (Application Programming Interface) which is typically monitored by EDRs
         // Reference: https://github.com/VirtualAlllocEx/Direct-Syscalls-vs-Indirect-Syscalls
-        $string4 = /Direct_Syscalls_Create_Thread\.vcxproj/ nocase ascii wide
+        $string4 = /.{0,1000}Direct_Syscalls_Create_Thread\.vcxproj.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

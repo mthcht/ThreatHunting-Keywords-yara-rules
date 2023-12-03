@@ -10,133 +10,133 @@ rule Nuages
     strings:
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string1 = /\snuages\.formatImplantLastSeen/ nocase ascii wide
+        $string1 = /.{0,1000}\snuages\.formatImplantLastSeen.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string2 = /\sNuagesImplant/ nocase ascii wide
+        $string2 = /.{0,1000}\sNuagesImplant.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string3 = /\!autoruns\s/ nocase ascii wide
+        $string3 = /.{0,1000}\!autoruns\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string4 = /\!files\supload\s/ nocase ascii wide
+        $string4 = /.{0,1000}\!files\supload\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string5 = /\!handlers\sload\s/ nocase ascii wide
+        $string5 = /.{0,1000}\!handlers\sload\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string6 = /\!implants\s/ nocase ascii wide
+        $string6 = /.{0,1000}\!implants\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string7 = /\!interactive\s/ nocase ascii wide
+        $string7 = /.{0,1000}\!interactive\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string8 = /\!modules\sload\s/ nocase ascii wide
+        $string8 = /.{0,1000}\!modules\sload\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string9 = /\!put\s.*\/tmp/ nocase ascii wide
+        $string9 = /.{0,1000}\!put\s.{0,1000}\/tmp.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string10 = /\!shell\s/ nocase ascii wide
+        $string10 = /.{0,1000}\!shell\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string11 = /\!tunnels\s\-\-tcp/ nocase ascii wide
+        $string11 = /.{0,1000}\!tunnels\s\-\-tcp.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string12 = /\!use\s.*aes256_py/ nocase ascii wide
+        $string12 = /.{0,1000}\!use\s.{0,1000}aes256_py.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string13 = /\!use\s.*reflected_assembly/ nocase ascii wide
+        $string13 = /.{0,1000}\!use\s.{0,1000}reflected_assembly.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string14 = /\/implant\/callback/ nocase ascii wide
+        $string14 = /.{0,1000}\/implant\/callback.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string15 = /\/Nuages_Cli/ nocase ascii wide
+        $string15 = /.{0,1000}\/Nuages_Cli.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string16 = /\/nuagesAPI\.js/ nocase ascii wide
+        $string16 = /.{0,1000}\/nuagesAPI\.js.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string17 = /\\Nuages_Cli/ nocase ascii wide
+        $string17 = /.{0,1000}\\Nuages_Cli.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string18 = /before\-create\-implant\-callback/ nocase ascii wide
+        $string18 = /.{0,1000}before\-create\-implant\-callback.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string19 = /before\-create\-implant\-io\-bin/ nocase ascii wide
+        $string19 = /.{0,1000}before\-create\-implant\-io\-bin.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string20 = /before\-find\-implant\-chunks/ nocase ascii wide
+        $string20 = /.{0,1000}before\-find\-implant\-chunks.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string21 = /DNSAES256Handler\./ nocase ascii wide
+        $string21 = /.{0,1000}DNSAES256Handler\..{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string22 = /http.*127\.0\.0\.1:3030/ nocase ascii wide
+        $string22 = /.{0,1000}http.{0,1000}127\.0\.0\.1:3030.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string23 = /http.*localhost:3030/ nocase ascii wide
+        $string23 = /.{0,1000}http.{0,1000}localhost:3030.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string24 = /HTTPAES256Handler\./ nocase ascii wide
+        $string24 = /.{0,1000}HTTPAES256Handler\..{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string25 = /implant\-callback\./ nocase ascii wide
+        $string25 = /.{0,1000}implant\-callback\..{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string26 = /Nuages.*\/Implants/ nocase ascii wide
+        $string26 = /.{0,1000}Nuages.{0,1000}\/Implants.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string27 = /nuages\.clearImplants\s/ nocase ascii wide
+        $string27 = /.{0,1000}nuages\.clearImplants\s.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string28 = /nuages\.getAutoruns/ nocase ascii wide
+        $string28 = /.{0,1000}nuages\.getAutoruns.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string29 = /nuages\.getImplants/ nocase ascii wide
+        $string29 = /.{0,1000}nuages\.getImplants.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string30 = /nuages\.getListeners/ nocase ascii wide
+        $string30 = /.{0,1000}nuages\.getListeners.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string31 = /nuages\.printImplants/ nocase ascii wide
+        $string31 = /.{0,1000}nuages\.printImplants.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string32 = /nuages\.printListeners/ nocase ascii wide
+        $string32 = /.{0,1000}nuages\.printListeners.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string33 = /nuages_cli\.js/ nocase ascii wide
+        $string33 = /.{0,1000}nuages_cli\.js.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string34 = /NuagesC2Connector/ nocase ascii wide
+        $string34 = /.{0,1000}NuagesC2Connector.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string35 = /NuagesC2Implant/ nocase ascii wide
+        $string35 = /.{0,1000}NuagesC2Implant.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string36 = /NuagesPythonImplant/ nocase ascii wide
+        $string36 = /.{0,1000}NuagesPythonImplant.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string37 = /NuagesSharpImplant/ nocase ascii wide
+        $string37 = /.{0,1000}NuagesSharpImplant.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string38 = /p3nt4\/Nuages/ nocase ascii wide
+        $string38 = /.{0,1000}p3nt4\/Nuages.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string39 = /posh_in_mem/ nocase ascii wide
+        $string39 = /.{0,1000}posh_in_mem.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string40 = /processImplantMessage/ nocase ascii wide
+        $string40 = /.{0,1000}processImplantMessage.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string41 = /runFakeTerminal/ nocase ascii wide
+        $string41 = /.{0,1000}runFakeTerminal.{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string42 = /SLACKAES256Handler\./ nocase ascii wide
+        $string42 = /.{0,1000}SLACKAES256Handler\..{0,1000}/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string43 = /Utils\\Posh\.cs/ nocase ascii wide
+        $string43 = /.{0,1000}Utils\\Posh\.cs.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

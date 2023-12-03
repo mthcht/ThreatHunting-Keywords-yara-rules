@@ -10,19 +10,19 @@ rule nps_payload
     strings:
         // Description: This script will generate payloads for basic intrusion detection avoidance
         // Reference: https://github.com/trustedsec/nps_payload
-        $string1 = /\/nps_payload\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/nps_payload\.git.{0,1000}/ nocase ascii wide
         // Description: This script will generate payloads for basic intrusion detection avoidance
         // Reference: https://github.com/trustedsec/nps_payload
-        $string2 = /msf_payload\.ps1/ nocase ascii wide
+        $string2 = /.{0,1000}msf_payload\.ps1.{0,1000}/ nocase ascii wide
         // Description: This script will generate payloads for basic intrusion detection avoidance. It utilizes publicly demonstrated techniques from several different sources.
         // Reference: https://github.com/trustedsec/nps_payload
-        $string3 = /nps_payload/ nocase ascii wide
+        $string3 = /.{0,1000}nps_payload.{0,1000}/ nocase ascii wide
         // Description: This script will generate payloads for basic intrusion detection avoidance
         // Reference: https://github.com/trustedsec/nps_payload
-        $string4 = /nps_payload\.py/ nocase ascii wide
+        $string4 = /.{0,1000}nps_payload\.py.{0,1000}/ nocase ascii wide
         // Description: This script will generate payloads for basic intrusion detection avoidance
         // Reference: https://github.com/trustedsec/nps_payload
-        $string5 = /nps_payload\-master/ nocase ascii wide
+        $string5 = /.{0,1000}nps_payload\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

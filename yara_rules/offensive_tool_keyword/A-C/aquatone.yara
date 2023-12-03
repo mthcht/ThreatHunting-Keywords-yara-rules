@@ -10,7 +10,7 @@ rule aquatone
     strings:
         // Description: Aquatone is a tool for visual inspection of websites across a large amount of hosts and is convenient for quickly gaining an overview of HTTP-based attack surface.
         // Reference: https://github.com/michenriksen/aquatone
-        $string1 = /aquatone/ nocase ascii wide
+        $string1 = /.{0,1000}aquatone.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule mimikittenz
     strings:
         // Description: mimikittenz is a post-exploitation powershell tool that utilizes the Windows function ReadProcessMemory() in order to extract plain-text passwords from various target processes mimikittenz can also easily extract other kinds of juicy info from target processes using regex patterns including but not limited Encryption Keys & All the other goodstuff
         // Reference: https://github.com/orlyjamie/mimikittenz
-        $string1 = /mimikittenz/ nocase ascii wide
+        $string1 = /.{0,1000}mimikittenz.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

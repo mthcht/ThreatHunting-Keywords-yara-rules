@@ -10,40 +10,40 @@ rule OffensiveNotion
     strings:
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string1 = /\s\/create\s\/tn\sNotion\s\/tr\s\\.*cmd\.exe.*\s\-c\s.*\\.*\s\/sc\sonlogon\s\/ru\sSystem\\/ nocase ascii wide
+        $string1 = /.{0,1000}\s\/create\s\/tn\sNotion\s\/tr\s\\.{0,1000}cmd\.exe.{0,1000}\s\-c\s.{0,1000}\\.{0,1000}\s\/sc\sonlogon\s\/ru\sSystem\\.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string2 = /\$FilterArgs\s\=\s\@{\sname\=\'Notion\'.*EventNameSpace\=\'root\\\\CimV2\'.*QueryLanguage\=.*WQL.*\sQuery\=.*SELECT\s.*\sFROM\s__InstanceModificationE/ nocase ascii wide
+        $string2 = /.{0,1000}\$FilterArgs\s\=\s\@{\sname\=\'Notion\'.{0,1000}EventNameSpace\=\'root\\\\CimV2\'.{0,1000}QueryLanguage\=.{0,1000}WQL.{0,1000}\sQuery\=.{0,1000}SELECT\s.{0,1000}\sFROM\s__InstanceModificationE.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string3 = /\/OffensiveNotion\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/OffensiveNotion\.git/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string4 = /\/OffensiveNotion\/agent/ nocase ascii wide
+        $string4 = /.{0,1000}\/OffensiveNotion\/agent.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string5 = /\/OffensiveNotion\/osxcross\/target\/bin/ nocase ascii wide
+        $string5 = /.{0,1000}\/OffensiveNotion\/osxcross\/target\/bin.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string6 = /\/OffensiveNotion\/utils/ nocase ascii wide
+        $string6 = /.{0,1000}\/OffensiveNotion\/utils.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string7 = /cddownloadelevategetprivsinjectpersistportscanpspwdrunassaveshellshutdownsleep/ nocase ascii wide
+        $string7 = /.{0,1000}cddownloadelevategetprivsinjectpersistportscanpspwdrunassaveshellshutdownsleep.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string8 = /mttaggart\/OffensiveNotion/ nocase ascii wide
+        $string8 = /.{0,1000}mttaggart\/OffensiveNotion.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string9 = /offensive_notion\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}offensive_notion\.exe.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string10 = /offensive_notion_darwin_/ nocase ascii wide
+        $string10 = /.{0,1000}offensive_notion_darwin_.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string11 = /offensive_notion_linux_/ nocase ascii wide
+        $string11 = /.{0,1000}offensive_notion_linux_.{0,1000}/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string12 = /offensive_notion_win_.*\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}offensive_notion_win_.{0,1000}\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

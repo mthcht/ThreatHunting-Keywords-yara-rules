@@ -10,22 +10,22 @@ rule SnaffPoint
     strings:
         // Description: A tool for pointesters to find candies in SharePoint
         // Reference: https://github.com/nheiniger/SnaffPoint
-        $string1 = /\/SnaffPoint\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/SnaffPoint\.git.{0,1000}/ nocase ascii wide
         // Description: A tool for pointesters to find candies in SharePoint
         // Reference: https://github.com/nheiniger/SnaffPoint
-        $string2 = /879A49C7\-0493\-4235\-85F6\-EBF962613A76/ nocase ascii wide
+        $string2 = /.{0,1000}879A49C7\-0493\-4235\-85F6\-EBF962613A76.{0,1000}/ nocase ascii wide
         // Description: A tool for pointesters to find candies in SharePoint
         // Reference: https://github.com/nheiniger/SnaffPoint
-        $string3 = /GetBearerToken\.exe\shttps:\/\/.*\.sharepoint\.com/ nocase ascii wide
+        $string3 = /.{0,1000}GetBearerToken\.exe\shttps:\/\/.{0,1000}\.sharepoint\.com.{0,1000}/ nocase ascii wide
         // Description: A tool for pointesters to find candies in SharePoint
         // Reference: https://github.com/nheiniger/SnaffPoint
-        $string4 = /nheiniger\/SnaffPoint/ nocase ascii wide
+        $string4 = /.{0,1000}nheiniger\/SnaffPoint.{0,1000}/ nocase ascii wide
         // Description: A tool for pointesters to find candies in SharePoint
         // Reference: https://github.com/nheiniger/SnaffPoint
-        $string5 = /SnaffPoint\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}SnaffPoint\.exe.{0,1000}/ nocase ascii wide
         // Description: A tool for pointesters to find candies in SharePoint
         // Reference: https://github.com/nheiniger/SnaffPoint
-        $string6 = /SnaffPoint\-main/ nocase ascii wide
+        $string6 = /.{0,1000}SnaffPoint\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

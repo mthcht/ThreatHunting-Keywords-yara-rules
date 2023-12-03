@@ -10,130 +10,130 @@ rule sharphound
     strings:
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string1 = /\s\-c\sall\s\-d\s.*\s\-\-domaincontroller\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-c\sall\s\-d\s.{0,1000}\s\-\-domaincontroller\s.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string2 = /\s\-\-collectallproperties/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-collectallproperties.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string3 = /\s\-\-CollectionMethod\sAll\s.*ldap/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-CollectionMethod\sAll\s.{0,1000}ldap.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string4 = /\s\-\-CollectionMethod\sAll\s.*\-\-ZipFileName\s.*\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-\-CollectionMethod\sAll\s.{0,1000}\-\-ZipFileName\s.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string5 = /\s\-\-collectionmethods\sACL/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-\-collectionmethods\sACL.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string6 = /\s\-\-collectionmethods\sComputerOnly/ nocase ascii wide
+        $string6 = /.{0,1000}\s\-\-collectionmethods\sComputerOnly.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string7 = /\s\-\-collectionmethods\sContainer/ nocase ascii wide
+        $string7 = /.{0,1000}\s\-\-collectionmethods\sContainer.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string8 = /\s\-\-collectionmethods\sDCOM/ nocase ascii wide
+        $string8 = /.{0,1000}\s\-\-collectionmethods\sDCOM/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string9 = /\s\-\-collectionmethods\sDCOnly/ nocase ascii wide
+        $string9 = /.{0,1000}\s\-\-collectionmethods\sDCOnly.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string10 = /\s\-\-collectionmethods\sGPOLocalGroup/ nocase ascii wide
+        $string10 = /.{0,1000}\s\-\-collectionmethods\sGPOLocalGroup.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string11 = /\s\-\-collectionmethods\sGroup/ nocase ascii wide
+        $string11 = /.{0,1000}\s\-\-collectionmethods\sGroup.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string12 = /\s\-\-collectionmethods\sLocalGroup/ nocase ascii wide
+        $string12 = /.{0,1000}\s\-\-collectionmethods\sLocalGroup.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string13 = /\s\-\-collectionmethods\sLoggedOn/ nocase ascii wide
+        $string13 = /.{0,1000}\s\-\-collectionmethods\sLoggedOn.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string14 = /\s\-\-collectionmethods\sObjectProps/ nocase ascii wide
+        $string14 = /.{0,1000}\s\-\-collectionmethods\sObjectProps.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string15 = /\s\-\-collectionmethods\sPSRemote/ nocase ascii wide
+        $string15 = /.{0,1000}\s\-\-collectionmethods\sPSRemote.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string16 = /\s\-\-collectionmethods\sRDP/ nocase ascii wide
+        $string16 = /.{0,1000}\s\-\-collectionmethods\sRDP.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string17 = /\s\-\-collectionmethods\sSession/ nocase ascii wide
+        $string17 = /.{0,1000}\s\-\-collectionmethods\sSession.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string18 = /\s\-\-collectionmethods\sTrusts/ nocase ascii wide
+        $string18 = /.{0,1000}\s\-\-collectionmethods\sTrusts.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string19 = /\s\-\-excludedcs/ nocase ascii wide
+        $string19 = /.{0,1000}\s\-\-excludedcs.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string20 = /\s\-\-ldapusername\s\s.*\s\-\-ldappassword\s/ nocase ascii wide
+        $string20 = /.{0,1000}\s\-\-ldapusername\s\s.{0,1000}\s\-\-ldappassword\s.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string21 = /\-\s\-\-skippasswordcheck/ nocase ascii wide
+        $string21 = /.{0,1000}\-\s\-\-skippasswordcheck.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string22 = /\s\-\-skipregistryloggedon/ nocase ascii wide
+        $string22 = /.{0,1000}\s\-\-skipregistryloggedon.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string23 = /\\SharpHoundCommon\\/ nocase ascii wide
+        $string23 = /.{0,1000}\\SharpHoundCommon\\.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string24 = /BloodHoundAD/ nocase ascii wide
+        $string24 = /.{0,1000}BloodHoundAD.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string25 = /DisableKerberosSigning/ nocase ascii wide
+        $string25 = /.{0,1000}DisableKerberosSigning.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string26 = /GetDomainsForEnumeration/ nocase ascii wide
+        $string26 = /.{0,1000}GetDomainsForEnumeration.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string27 = /Invoke\-BloodHound/ nocase ascii wide
+        $string27 = /.{0,1000}Invoke\-BloodHound.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string28 = /InvokeSharpHound/ nocase ascii wide
+        $string28 = /.{0,1000}InvokeSharpHound.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string29 = /Out\-CompressedDLL\.ps1/ nocase ascii wide
+        $string29 = /.{0,1000}Out\-CompressedDLL\.ps1.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string30 = /Release\sof\sBloodHound/ nocase ascii wide
+        $string30 = /.{0,1000}Release\sof\sBloodHound.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string31 = /running\sSharpHound/ nocase ascii wide
+        $string31 = /.{0,1000}running\sSharpHound.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string32 = /SharpHound\-.*\.zip/ nocase ascii wide
+        $string32 = /.{0,1000}SharpHound\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string33 = /sharphound.*\-\-stealth/ nocase ascii wide
+        $string33 = /.{0,1000}sharphound.{0,1000}\-\-stealth.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string34 = /sharphound\./ nocase ascii wide
+        $string34 = /.{0,1000}sharphound\..{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string35 = /SharpHound\.exe/ nocase ascii wide
+        $string35 = /.{0,1000}SharpHound\.exe.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string36 = /SharpHound\.ps1/ nocase ascii wide
+        $string36 = /.{0,1000}SharpHound\.ps1.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string37 = /SharpHound2/ nocase ascii wide
+        $string37 = /.{0,1000}SharpHound2.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string38 = /SharpHound3/ nocase ascii wide
+        $string38 = /.{0,1000}SharpHound3.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string39 = /SharpHoundCommon\./ nocase ascii wide
+        $string39 = /.{0,1000}SharpHoundCommon\..{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string40 = /SharpHoundCommonLib/ nocase ascii wide
+        $string40 = /.{0,1000}SharpHoundCommonLib.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string41 = /SkipPasswordAgeCheck/ nocase ascii wide
+        $string41 = /.{0,1000}SkipPasswordAgeCheck.{0,1000}/ nocase ascii wide
         // Description: C# Data Collector for BloodHound
         // Reference: https://github.com/BloodHoundAD/SharpHound
-        $string42 = /SkipPortScan/ nocase ascii wide
+        $string42 = /.{0,1000}SkipPortScan.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

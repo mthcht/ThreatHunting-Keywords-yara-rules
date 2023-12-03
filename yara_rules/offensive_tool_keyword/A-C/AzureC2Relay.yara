@@ -10,43 +10,43 @@ rule AzureC2Relay
     strings:
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string1 = /\/AzureC2Relay/ nocase ascii wide
+        $string1 = /.{0,1000}\/AzureC2Relay.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string2 = /\/ParsedMalleableData\.txt/ nocase ascii wide
+        $string2 = /.{0,1000}\/ParsedMalleableData\.txt.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string3 = /\\AzureC2Proxy\\/ nocase ascii wide
+        $string3 = /.{0,1000}\\AzureC2Proxy\\.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string4 = /\\AzureC2Relay/ nocase ascii wide
+        $string4 = /.{0,1000}\\AzureC2Relay.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string5 = /\\ParsedMalleableData\.txt/ nocase ascii wide
+        $string5 = /.{0,1000}\\ParsedMalleableData\.txt.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string6 = /AzureC2Relay\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}AzureC2Relay\.zip.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string7 = /AzureC2Relay\-main/ nocase ascii wide
+        $string7 = /.{0,1000}AzureC2Relay\-main.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string8 = /cobaltstrike\-dist\.tgz/ nocase ascii wide
+        $string8 = /.{0,1000}cobaltstrike\-dist\.tgz.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string9 = /dotnet\sParseMalleable\/ParseMalleable\.dll/ nocase ascii wide
+        $string9 = /.{0,1000}dotnet\sParseMalleable\/ParseMalleable\.dll.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string10 = /GenericC2Relay\.cs/ nocase ascii wide
+        $string10 = /.{0,1000}GenericC2Relay\.cs.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string11 = /MalleableProfileB64/ nocase ascii wide
+        $string11 = /.{0,1000}MalleableProfileB64.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string12 = /mojo\.5688\.8052\.183894939787088877\#\#/ nocase ascii wide
+        $string12 = /.{0,1000}mojo\.5688\.8052\.183894939787088877\#\#.{0,1000}/ nocase ascii wide
         // Description: AzureC2Relay is an Azure Function that validates and relays Cobalt Strike beacon traffic by verifying the incoming requests based on a Cobalt Strike Malleable C2 profile.
         // Reference: https://github.com/Flangvik/AzureC2Relay
-        $string13 = /mojo\.5688\.8052\.35780273329370473\#\#/ nocase ascii wide
+        $string13 = /.{0,1000}mojo\.5688\.8052\.35780273329370473\#\#.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

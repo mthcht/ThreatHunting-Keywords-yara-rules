@@ -10,19 +10,19 @@ rule SharpWSUS
     strings:
         // Description: SharpWSUS is a CSharp tool for lateral movement through WSUS
         // Reference: https://github.com/nettitude/SharpWSUS
-        $string1 = /\.exe\screate\s\/payload.*\s\/kb/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\screate\s\/payload.{0,1000}\s\/kb.{0,1000}/ nocase ascii wide
         // Description: SharpWSUS is a CSharp tool for lateral movement through WSUS
         // Reference: https://github.com/nettitude/SharpWSUS
-        $string2 = /\/SharpWSUS/ nocase ascii wide
+        $string2 = /.{0,1000}\/SharpWSUS.{0,1000}/ nocase ascii wide
         // Description: SharpWSUS is a CSharp tool for lateral movement through WSUS
         // Reference: https://github.com/nettitude/SharpWSUS
-        $string3 = /sharpwsus\slocate/ nocase ascii wide
+        $string3 = /.{0,1000}sharpwsus\slocate.{0,1000}/ nocase ascii wide
         // Description: SharpWSUS is a CSharp tool for lateral movement through WSUS
         // Reference: https://github.com/nettitude/SharpWSUS
-        $string4 = /SharpWSUS/ nocase ascii wide
+        $string4 = /.{0,1000}SharpWSUS.{0,1000}/ nocase ascii wide
         // Description: SharpWSUS is a CSharp tool for lateral movement through WSUS
         // Reference: https://github.com/nettitude/SharpWSUS
-        $string5 = /SharpWSUS\./ nocase ascii wide
+        $string5 = /.{0,1000}SharpWSUS\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

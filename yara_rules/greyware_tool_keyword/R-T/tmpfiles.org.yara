@@ -10,7 +10,7 @@ rule tmpfiles_org
     strings:
         // Description: download of an executable files from tmpfiles.org often used by ransomware groups
         // Reference: N/A
-        $string1 = /https:\/\/tmpfiles\.org\/dl\/.*\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/tmpfiles\.org\/dl\/.{0,1000}\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

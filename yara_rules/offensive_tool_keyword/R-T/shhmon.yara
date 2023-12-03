@@ -10,28 +10,28 @@ rule shhmon
     strings:
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string1 = /\/Shhmon\// nocase ascii wide
+        $string1 = /.{0,1000}\/Shhmon\/.{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string2 = /\\Shhmon\./ nocase ascii wide
+        $string2 = /.{0,1000}\\Shhmon\..{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string3 = /matterpreter\/Shhmon/ nocase ascii wide
+        $string3 = /.{0,1000}matterpreter\/Shhmon.{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string4 = /Shhmon\.csproj/ nocase ascii wide
+        $string4 = /.{0,1000}Shhmon\.csproj.{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string5 = /Shhmon\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}Shhmon\.exe.{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string6 = /Shhmon\.git/ nocase ascii wide
+        $string6 = /.{0,1000}Shhmon\.git.{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string7 = /sshmon.*hunt/ nocase ascii wide
+        $string7 = /.{0,1000}sshmon.{0,1000}hunt.{0,1000}/ nocase ascii wide
         // Description: Neutering Sysmon via driver unload
         // Reference: https://github.com/matterpreter/Shhmon
-        $string8 = /sshmon.*kill/ nocase ascii wide
+        $string8 = /.{0,1000}sshmon.{0,1000}kill.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

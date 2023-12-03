@@ -10,49 +10,49 @@ rule Alcatraz
     strings:
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string1 = /\sAlcatraz\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\sAlcatraz\.exe.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string2 = /\/Alcatraz\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/Alcatraz\.exe.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string3 = /\/Alcatraz\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/Alcatraz\.git.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string4 = /\/Alcatraz\/files\/.*\/Alcatraz\.zip/ nocase ascii wide
+        $string4 = /.{0,1000}\/Alcatraz\/files\/.{0,1000}\/Alcatraz\.zip.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string5 = /\/Alcatraz\/x64/ nocase ascii wide
+        $string5 = /.{0,1000}\/Alcatraz\/x64.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string6 = /\/Alcatraz\-gui/ nocase ascii wide
+        $string6 = /.{0,1000}\/Alcatraz\-gui.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string7 = /\/obfuscator\/obfuscator\./ nocase ascii wide
+        $string7 = /.{0,1000}\/obfuscator\/obfuscator\..{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string8 = /\\Alcatraz\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\\Alcatraz\.exe.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string9 = /Alcatraz\.sln/ nocase ascii wide
+        $string9 = /.{0,1000}Alcatraz\.sln.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string10 = /Alcatraz\.vcxproj/ nocase ascii wide
+        $string10 = /.{0,1000}Alcatraz\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string11 = /Alcatraz\/obfuscator/ nocase ascii wide
+        $string11 = /.{0,1000}Alcatraz\/obfuscator.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string12 = /Alcatraz\-master\.zip/ nocase ascii wide
+        $string12 = /.{0,1000}Alcatraz\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string13 = /obfuscator.*antidisassembly\./ nocase ascii wide
+        $string13 = /.{0,1000}obfuscator.{0,1000}antidisassembly\..{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string14 = /obfuscator\.cpp/ nocase ascii wide
+        $string14 = /.{0,1000}obfuscator\.cpp.{0,1000}/ nocase ascii wide
         // Description: x64 binary obfuscator
         // Reference: https://github.com/weak1337/Alcatraz
-        $string15 = /weak1337\/Alcatraz/ nocase ascii wide
+        $string15 = /.{0,1000}weak1337\/Alcatraz.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

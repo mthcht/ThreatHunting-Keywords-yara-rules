@@ -10,37 +10,37 @@ rule grep
     strings:
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
         // Reference: N/A
-        $string1 = /grep\s\-.*\s.*DBPassword/ nocase ascii wide
+        $string1 = /.{0,1000}grep\s\-.{0,1000}\s.{0,1000}DBPassword.{0,1000}/ nocase ascii wide
         // Description: search for passwords
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2 = /grep\s.*password\s\/var\/www/ nocase ascii wide
+        $string2 = /.{0,1000}grep\s.{0,1000}password\s\/var\/www.{0,1000}/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
         // Reference: N/A
-        $string3 = /grep\s.*password\..*\s\/etc\/.*\.conf/ nocase ascii wide
+        $string3 = /.{0,1000}grep\s.{0,1000}password\..{0,1000}\s\/etc\/.{0,1000}\.conf.{0,1000}/ nocase ascii wide
         // Description: Look for users with a UID of 0
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4 = /grep\s:0:\s\/etc\/passwd/ nocase ascii wide
+        $string4 = /.{0,1000}grep\s:0:\s\/etc\/passwd.{0,1000}/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string5 = /grep\s\-i\spass\s/ nocase ascii wide
+        $string5 = /.{0,1000}grep\s\-i\spass\s.{0,1000}/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
         // Reference: https://gtfobins.github.io/
-        $string6 = /grep\s\-i\suser\s/ nocase ascii wide
+        $string6 = /.{0,1000}grep\s\-i\suser\s.{0,1000}/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
         // Reference: N/A
-        $string7 = /grep\s\-R\sdb_passwd/ nocase ascii wide
+        $string7 = /.{0,1000}grep\s\-R\sdb_passwd.{0,1000}/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
         // Reference: N/A
-        $string8 = /grep\s\-roiE\s.*password/ nocase ascii wide
+        $string8 = /.{0,1000}grep\s\-roiE\s.{0,1000}password.{0,1000}/ nocase ascii wide
         // Description: search for passwords
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string9 = /grep.*\|pwd\=\|passwd\=\|password\=/ nocase ascii wide
+        $string9 = /.{0,1000}grep.{0,1000}\|pwd\=\|passwd\=\|password\=.{0,1000}/ nocase ascii wide
         // Description: search for passwords
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string10 = /grep.*password\|pwd\|pass/ nocase ascii wide
+        $string10 = /.{0,1000}grep.{0,1000}password\|pwd\|pass.{0,1000}/ nocase ascii wide
         // Description: search for passwords in memory and core dumps
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string11 = /strings\s\-n\s.*\s\/dev\/mem\s\|\sgrep\s\-i\spass/ nocase ascii wide
+        $string11 = /.{0,1000}strings\s\-n\s.{0,1000}\s\/dev\/mem\s\|\sgrep\s\-i\spass.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

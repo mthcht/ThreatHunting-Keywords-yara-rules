@@ -10,7 +10,7 @@ rule Procdump
     strings:
         // Description: dump lsass process with procdump
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
-        $string1 = /procdump.*lsass/ nocase ascii wide
+        $string1 = /.{0,1000}procdump.{0,1000}lsass.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,13 +10,13 @@ rule smuggler_py
     strings:
         // Description: HTML Smuggling Generator
         // Reference: https://github.com/infosecn1nja/red-team-scripts/blob/main/smuggler.py
-        $string1 = /\ssmuggler\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\ssmuggler\.py.{0,1000}/ nocase ascii wide
         // Description: HTML Smuggling Generator
         // Reference: https://github.com/infosecn1nja/red-team-scripts/blob/main/smuggler.py
-        $string2 = /\/smuggler\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\/smuggler\.py.{0,1000}/ nocase ascii wide
         // Description: HTML Smuggling Generator
         // Reference: https://github.com/infosecn1nja/red-team-scripts/blob/main/smuggler.py
-        $string3 = /\\smuggler\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\\smuggler\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

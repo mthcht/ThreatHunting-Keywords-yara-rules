@@ -10,7 +10,7 @@ rule myexternalip_com
     strings:
         // Description: return external ip address
         // Reference: https://myexternalip.com/raw
-        $string1 = /https:\/\/myexternalip\.com\/raw/ nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/myexternalip\.com\/raw.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

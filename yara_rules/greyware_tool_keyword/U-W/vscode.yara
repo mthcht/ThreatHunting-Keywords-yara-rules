@@ -10,19 +10,19 @@ rule vscode
     strings:
         // Description: built-in port forwarding. This feature allows you to share locally running services over the internet to other people and devices.
         // Reference: https://twitter.com/code/status/1699869087071899669
-        $string1 = /aue\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string1 = /.{0,1000}aue\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: built-in port forwarding. This feature allows you to share locally running services over the internet to other people and devices.
         // Reference: https://twitter.com/code/status/1699869087071899669
-        $string2 = /aue\-data\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string2 = /.{0,1000}aue\-data\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Starts a reverse connection over global.rel.tunnels.api.visualstudio.com via websockets
         // Reference: https://badoption.eu/blog/2023/01/31/code_c2.html
-        $string3 = /code\.exe\stunnel\s\-\-accept\-server\-license\-terms\s\-\-name\s/ nocase ascii wide
+        $string3 = /.{0,1000}code\.exe\stunnel\s\-\-accept\-server\-license\-terms\s\-\-name\s.{0,1000}/ nocase ascii wide
         // Description: built-in port forwarding. This feature allows you to share locally running services over the internet to other people and devices.
         // Reference: https://twitter.com/code/status/1699869087071899669
-        $string4 = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string4 = /.{0,1000}global\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
         // Description: Starts a reverse connection over global.rel.tunnels.api.visualstudio.com via websockets
         // Reference: https://badoption.eu/blog/2023/01/31/code_c2.html
-        $string5 = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        $string5 = /.{0,1000}global\.rel\.tunnels\.api\.visualstudio\.com.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

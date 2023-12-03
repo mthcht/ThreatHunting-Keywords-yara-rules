@@ -10,67 +10,67 @@ rule DocPlz
     strings:
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string1 = /\sComunicationC2\.cpp/ nocase ascii wide
+        $string1 = /.{0,1000}\sComunicationC2\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string2 = /\/ComunicationC2\.cpp/ nocase ascii wide
+        $string2 = /.{0,1000}\/ComunicationC2\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string3 = /\/DocPlz\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/DocPlz\.git.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string4 = /\/DocsPLZ\.cpp/ nocase ascii wide
+        $string4 = /.{0,1000}\/DocsPLZ\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string5 = /\/DocsPLZ\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}\/DocsPLZ\.exe.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string6 = /\/Persistence\.cpp/ nocase ascii wide
+        $string6 = /.{0,1000}\/Persistence\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string7 = /\/ServerC2\.cpp/ nocase ascii wide
+        $string7 = /.{0,1000}\/ServerC2\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string8 = /\/ServerC2\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\/ServerC2\.exe.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string9 = /\\ComunicationC2\.cpp/ nocase ascii wide
+        $string9 = /.{0,1000}\\ComunicationC2\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string10 = /\\DocsPLZ\.cpp/ nocase ascii wide
+        $string10 = /.{0,1000}\\DocsPLZ\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string11 = /\\DocsPLZ\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}\\DocsPLZ\.exe.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string12 = /\\Persistence\.cpp/ nocase ascii wide
+        $string12 = /.{0,1000}\\Persistence\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string13 = /\\Persistence\.exe/ nocase ascii wide
+        $string13 = /.{0,1000}\\Persistence\.exe.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string14 = /\\ServerC2\.cpp/ nocase ascii wide
+        $string14 = /.{0,1000}\\ServerC2\.cpp.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string15 = /\\ServerC2\.exe/ nocase ascii wide
+        $string15 = /.{0,1000}\\ServerC2\.exe.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string16 = /\\ServerC2\\ServerC2\./ nocase ascii wide
+        $string16 = /.{0,1000}\\ServerC2\\ServerC2\..{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string17 = /4C3B106C\-8782\-4374\-9459\-851749072123/ nocase ascii wide
+        $string17 = /.{0,1000}4C3B106C\-8782\-4374\-9459\-851749072123.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string18 = /5E0812A9\-C727\-44F3\-A2E3\-8286CDC3ED4F/ nocase ascii wide
+        $string18 = /.{0,1000}5E0812A9\-C727\-44F3\-A2E3\-8286CDC3ED4F.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string19 = /DocPlz\-main\.zip/ nocase ascii wide
+        $string19 = /.{0,1000}DocPlz\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string20 = /DocsPLZ\\DocsPLZ\./ nocase ascii wide
+        $string20 = /.{0,1000}DocsPLZ\\DocsPLZ\..{0,1000}/ nocase ascii wide
         // Description: Documents Exfiltration and C2 project
         // Reference: https://github.com/TheD1rkMtr/DocPlz
-        $string21 = /TheD1rkMtr\/DocPlz/ nocase ascii wide
+        $string21 = /.{0,1000}TheD1rkMtr\/DocPlz.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

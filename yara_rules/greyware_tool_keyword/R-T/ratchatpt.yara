@@ -10,7 +10,7 @@ rule ratchatpt
     strings:
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string1 = /https:\/\/api\.openai\.com\/v1\/files/ nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/api\.openai\.com\/v1\/files.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule XSS_Payloads
     strings:
         // Description: A fine collection of selected javascript payloads.
         // Reference: http://www.xss-payloads.com/
-        $string1 = /XSS\-Payloads/ nocase ascii wide
+        $string1 = /.{0,1000}XSS\-Payloads.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

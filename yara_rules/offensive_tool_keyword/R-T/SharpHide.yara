@@ -10,25 +10,25 @@ rule SharpHide
     strings:
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string1 = /\/SharpHide\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/SharpHide\.git.{0,1000}/ nocase ascii wide
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string2 = /443D8CBF\-899C\-4C22\-B4F6\-B7AC202D4E37/ nocase ascii wide
+        $string2 = /.{0,1000}443D8CBF\-899C\-4C22\-B4F6\-B7AC202D4E37.{0,1000}/ nocase ascii wide
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string3 = /outflanknl\/SharpHide/ nocase ascii wide
+        $string3 = /.{0,1000}outflanknl\/SharpHide.{0,1000}/ nocase ascii wide
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string4 = /SharpHide\.csproj/ nocase ascii wide
+        $string4 = /.{0,1000}SharpHide\.csproj.{0,1000}/ nocase ascii wide
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string5 = /SharpHide\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}SharpHide\.exe.{0,1000}/ nocase ascii wide
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string6 = /SharpHide\.sln/ nocase ascii wide
+        $string6 = /.{0,1000}SharpHide\.sln.{0,1000}/ nocase ascii wide
         // Description: Tool to create hidden registry keys
         // Reference: https://github.com/outflanknl/SharpHide
-        $string7 = /SharpHide\-master/ nocase ascii wide
+        $string7 = /.{0,1000}SharpHide\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

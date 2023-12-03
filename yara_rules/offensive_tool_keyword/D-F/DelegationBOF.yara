@@ -10,34 +10,34 @@ rule DelegationBOF
     strings:
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string1 = /\/DelegationBOF\// nocase ascii wide
+        $string1 = /.{0,1000}\/DelegationBOF\/.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string2 = /\\DelegationBOF\./ nocase ascii wide
+        $string2 = /.{0,1000}\\DelegationBOF\..{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string3 = /DelegationBOF\./ nocase ascii wide
+        $string3 = /.{0,1000}DelegationBOF\..{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string4 = /get\-delegation\s.*All/ nocase ascii wide
+        $string4 = /.{0,1000}get\-delegation\s.{0,1000}All.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string5 = /get\-delegation\s.*Unconstrained/ nocase ascii wide
+        $string5 = /.{0,1000}get\-delegation\s.{0,1000}Unconstrained.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string6 = /get\-spns\sAll/ nocase ascii wide
+        $string6 = /.{0,1000}get\-spns\sAll.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string7 = /get\-spns\sASREP/ nocase ascii wide
+        $string7 = /.{0,1000}get\-spns\sASREP.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string8 = /get\-spns\sspns/ nocase ascii wide
+        $string8 = /.{0,1000}get\-spns\sspns.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string9 = /IcebreakerSecurity\/DelegationBOF/ nocase ascii wide
+        $string9 = /.{0,1000}IcebreakerSecurity\/DelegationBOF.{0,1000}/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string10 = /get\-delegation\s/ nocase ascii wide
+        $string10 = /get\-delegation\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,22 +10,22 @@ rule SharpChromium
     strings:
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
-        $string1 = /\/SharpChromium\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/SharpChromium\.git.{0,1000}/ nocase ascii wide
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
-        $string2 = /djhohnstein\/SharpChromium/ nocase ascii wide
+        $string2 = /.{0,1000}djhohnstein\/SharpChromium.{0,1000}/ nocase ascii wide
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
-        $string3 = /SharpChromium\.csproj/ nocase ascii wide
+        $string3 = /.{0,1000}SharpChromium\.csproj.{0,1000}/ nocase ascii wide
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
-        $string4 = /SharpChromium\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}SharpChromium\.exe.{0,1000}/ nocase ascii wide
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
-        $string5 = /SharpChromium\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}SharpChromium\.sln.{0,1000}/ nocase ascii wide
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
-        $string6 = /SharpChromium\-master/ nocase ascii wide
+        $string6 = /.{0,1000}SharpChromium\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

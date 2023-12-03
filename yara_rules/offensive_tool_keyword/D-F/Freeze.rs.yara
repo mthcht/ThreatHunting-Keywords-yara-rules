@@ -10,25 +10,25 @@ rule Freeze_rs
     strings:
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string1 = /\sFreeze\.rs\// nocase ascii wide
+        $string1 = /.{0,1000}\sFreeze\.rs\/.{0,1000}/ nocase ascii wide
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string2 = /\/Freeze\.rs/ nocase ascii wide
+        $string2 = /.{0,1000}\/Freeze\.rs.{0,1000}/ nocase ascii wide
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string3 = /Freeze\-rs\s\-/ nocase ascii wide
+        $string3 = /.{0,1000}Freeze\-rs\s\-.{0,1000}/ nocase ascii wide
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string4 = /Freeze\-rs\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}Freeze\-rs\.exe.{0,1000}/ nocase ascii wide
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string5 = /Freeze\-rs_darwin_amd64/ nocase ascii wide
+        $string5 = /.{0,1000}Freeze\-rs_darwin_amd64.{0,1000}/ nocase ascii wide
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string6 = /Freeze\-rs_linux_amd64/ nocase ascii wide
+        $string6 = /.{0,1000}Freeze\-rs_linux_amd64.{0,1000}/ nocase ascii wide
         // Description: Freeze.rs is a payload toolkit for bypassing EDRs using suspended processes. direct syscalls written in RUST
         // Reference: https://github.com/optiv/Freeze.rs
-        $string7 = /Freeze\-rs_windows_amd64\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}Freeze\-rs_windows_amd64\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

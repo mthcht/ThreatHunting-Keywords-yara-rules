@@ -10,28 +10,28 @@ rule forkatz
     strings:
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string1 = /\/forkatz\.filters/ nocase ascii wide
+        $string1 = /.{0,1000}\/forkatz\.filters.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string2 = /\/forkatz\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/forkatz\.git.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string3 = /forkatz\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}forkatz\.exe.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string4 = /forkatz\.sln/ nocase ascii wide
+        $string4 = /.{0,1000}forkatz\.sln.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string5 = /forkatz\.vcxproj/ nocase ascii wide
+        $string5 = /.{0,1000}forkatz\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string6 = /forkatz\-main/ nocase ascii wide
+        $string6 = /.{0,1000}forkatz\-main.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string7 = /users\\public\\example\.bin/ nocase ascii wide
+        $string7 = /.{0,1000}users\\public\\example\.bin.{0,1000}/ nocase ascii wide
         // Description: credential dump using foreshaw technique using SeTrustedCredmanAccessPrivilege
         // Reference: https://github.com/Barbarisch/forkatz
-        $string8 = /users\\public\\temp\.bin/ nocase ascii wide
+        $string8 = /.{0,1000}users\\public\\temp\.bin.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

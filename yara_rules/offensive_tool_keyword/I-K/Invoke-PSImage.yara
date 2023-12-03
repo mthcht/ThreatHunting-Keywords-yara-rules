@@ -10,7 +10,7 @@ rule Invoke_PSImage
     strings:
         // Description: Encodes a PowerShell script in the pixels of a PNG file and generates a oneliner to executenInvoke-PSImage takes a PowerShell script and encodes the bytes of the script into the pixels of a PNG image. It generates a oneliner for executing either from a file of from the web.
         // Reference: https://github.com/peewpw/Invoke-PSImage
-        $string1 = /Invoke\-PSImage/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-PSImage.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

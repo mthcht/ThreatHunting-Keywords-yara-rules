@@ -10,31 +10,31 @@ rule primusC2
     strings:
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string1 = /\/C2\/server\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\/C2\/server\.py.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string2 = /\/PrimusC2/ nocase ascii wide
+        $string2 = /.{0,1000}\/PrimusC2.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string3 = /\/PrimusC2\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/PrimusC2\.git.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string4 = /:8999\/Payloads\// nocase ascii wide
+        $string4 = /.{0,1000}:8999\/Payloads\/.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string5 = /127\.0\.0\.1:4567/ nocase ascii wide
+        $string5 = /.{0,1000}127\.0\.0\.1:4567.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string6 = /localhost:4567/ nocase ascii wide
+        $string6 = /.{0,1000}localhost:4567.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string7 = /PrimusC2\-main\.zip/ nocase ascii wide
+        $string7 = /.{0,1000}PrimusC2\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string8 = /SELECT\sdisplayName\sFROM\sAntiVirusProduct/ nocase ascii wide
+        $string8 = /.{0,1000}SELECT\sdisplayName\sFROM\sAntiVirusProduct.{0,1000}/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string9 = /ssh\s\-N\s\-R\s4567:localhost:.*root/ nocase ascii wide
+        $string9 = /.{0,1000}ssh\s\-N\s\-R\s4567:localhost:.{0,1000}root.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule domain_analyzer
     strings:
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string1 = /\scrawler\.py\s\-u\shttp/ nocase ascii wide
+        $string1 = /.{0,1000}\scrawler\.py\s\-u\shttp.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string2 = /\/crawler\.py\s\-u\shttp/ nocase ascii wide
+        $string2 = /.{0,1000}\/crawler\.py\s\-u\shttp.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string3 = /\/domain_analyzer\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/domain_analyzer\.git.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string4 = /\/domain_analyzer:latest/ nocase ascii wide
+        $string4 = /.{0,1000}\/domain_analyzer:latest.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string5 = /domain_analyzer\.py/ nocase ascii wide
+        $string5 = /.{0,1000}domain_analyzer\.py.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string6 = /domain_analyzer\-master/ nocase ascii wide
+        $string6 = /.{0,1000}domain_analyzer\-master.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string7 = /eldraco\/domain_analyzer/ nocase ascii wide
+        $string7 = /.{0,1000}eldraco\/domain_analyzer.{0,1000}/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string8 = /verovaleros\/domain_analyzer/ nocase ascii wide
+        $string8 = /.{0,1000}verovaleros\/domain_analyzer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

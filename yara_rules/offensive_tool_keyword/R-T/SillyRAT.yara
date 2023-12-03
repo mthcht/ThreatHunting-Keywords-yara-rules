@@ -10,19 +10,19 @@ rule SillyRAT
     strings:
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string1 = /hash3liZer\/SillyRAT/ nocase ascii wide
+        $string1 = /.{0,1000}hash3liZer\/SillyRAT.{0,1000}/ nocase ascii wide
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string2 = /keylogger\sdump/ nocase ascii wide
+        $string2 = /.{0,1000}keylogger\sdump.{0,1000}/ nocase ascii wide
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string3 = /server\.py\sgenerate\s\-\-address\s.*\s\-\-port\s.*\s\-\-output\s.*\s\-\-source/ nocase ascii wide
+        $string3 = /.{0,1000}server\.py\sgenerate\s\-\-address\s.{0,1000}\s\-\-port\s.{0,1000}\s\-\-output\s.{0,1000}\s\-\-source.{0,1000}/ nocase ascii wide
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string4 = /SillyRAT\.git/ nocase ascii wide
+        $string4 = /.{0,1000}SillyRAT\.git.{0,1000}/ nocase ascii wide
         // Description: A Cross Platform multifunctional (Windows/Linux/Mac) RAT.
         // Reference: https://github.com/hash3liZer/SillyRAT
-        $string5 = /sillyrat\.py/ nocase ascii wide
+        $string5 = /.{0,1000}sillyrat\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

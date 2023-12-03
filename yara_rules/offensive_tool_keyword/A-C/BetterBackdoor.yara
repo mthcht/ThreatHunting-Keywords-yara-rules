@@ -10,7 +10,7 @@ rule BetterBackdoor
     strings:
         // Description: A backdoor is a tool used to gain remote access to a machine.
         // Reference: https://github.com/thatcherclough/BetterBackdoor
-        $string1 = /BetterBackdoor/ nocase ascii wide
+        $string1 = /.{0,1000}BetterBackdoor.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

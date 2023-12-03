@@ -10,19 +10,19 @@ rule CloakNDaggerC2
     strings:
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string1 = /\/CloakNDaggerC2/ nocase ascii wide
+        $string1 = /.{0,1000}\/CloakNDaggerC2.{0,1000}/ nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string2 = /\\CloakNDaggerC2/ nocase ascii wide
+        $string2 = /.{0,1000}\\CloakNDaggerC2.{0,1000}/ nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string3 = /CloakNDaggerC2\-main/ nocase ascii wide
+        $string3 = /.{0,1000}CloakNDaggerC2\-main.{0,1000}/ nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string4 = /http:\/\/192\.168\.1\.179:8000\/session/ nocase ascii wide
+        $string4 = /.{0,1000}http:\/\/192\.168\.1\.179:8000\/session.{0,1000}/ nocase ascii wide
         // Description: A C2 framework designed around the use of public/private RSA key pairs to sign and authenticate commands being executed. This prevents MiTM interception of calls and ensures opsec during delicate operations.
         // Reference: https://github.com/matt-culbert/CloakNDaggerC2
-        $string5 = /nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4pz/ nocase ascii wide
+        $string5 = /.{0,1000}nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4pz.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

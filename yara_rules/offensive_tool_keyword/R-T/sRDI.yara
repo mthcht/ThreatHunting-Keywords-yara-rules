@@ -10,22 +10,22 @@ rule sRDI
     strings:
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string1 = /ConvertTo\-Shellcode\s\-/ nocase ascii wide
+        $string1 = /.{0,1000}ConvertTo\-Shellcode\s\-.{0,1000}/ nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string2 = /ConvertTo\-Shellcode\./ nocase ascii wide
+        $string2 = /.{0,1000}ConvertTo\-Shellcode\..{0,1000}/ nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string3 = /ConvertToShellcode\.py/ nocase ascii wide
+        $string3 = /.{0,1000}ConvertToShellcode\.py.{0,1000}/ nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string4 = /Invoke\-Shellcode/ nocase ascii wide
+        $string4 = /.{0,1000}Invoke\-Shellcode.{0,1000}/ nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string5 = /monoxgas\/sRDI/ nocase ascii wide
+        $string5 = /.{0,1000}monoxgas\/sRDI.{0,1000}/ nocase ascii wide
         // Description: Shellcode Reflective DLL Injection - Shellcode implementation of Reflective DLL Injection. Convert DLLs to position independent shellcode
         // Reference: https://github.com/monoxgas/sRDI
-        $string6 = /ShellcodeRDI\./ nocase ascii wide
+        $string6 = /.{0,1000}ShellcodeRDI\..{0,1000}/ nocase ascii wide
 
     condition:
         any of them

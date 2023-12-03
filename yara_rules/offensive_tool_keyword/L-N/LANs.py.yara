@@ -10,7 +10,7 @@ rule LANs_py
     strings:
         // Description: Automatically find the most active WLAN users then spy on one of them and/or inject arbitrary HTML/JS into pages they visit
         // Reference: https://github.com/DanMcInerney/LANs.py
-        $string1 = /LANs\.py/ nocase ascii wide
+        $string1 = /.{0,1000}LANs\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

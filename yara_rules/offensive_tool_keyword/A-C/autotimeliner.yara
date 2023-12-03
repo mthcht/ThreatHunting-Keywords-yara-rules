@@ -10,19 +10,19 @@ rule autotimeliner
     strings:
         // Description: Automagically extract forensic timeline from volatile memory dumps.
         // Reference: https://github.com/andreafortuna/autotimeliner
-        $string1 = /\/autotimeliner/ nocase ascii wide
+        $string1 = /.{0,1000}\/autotimeliner.{0,1000}/ nocase ascii wide
         // Description: Automagically extract forensic timeline from volatile memory dumps.
         // Reference: https://github.com/andreafortuna/autotimeliner
-        $string2 = /\\autotimeline/ nocase ascii wide
+        $string2 = /.{0,1000}\\autotimeline.{0,1000}/ nocase ascii wide
         // Description: Automagically extract forensic timeline from volatile memory dumps.
         // Reference: https://github.com/andreafortuna/autotimeliner
-        $string3 = /autotimeline\s/ nocase ascii wide
+        $string3 = /.{0,1000}autotimeline\s.{0,1000}/ nocase ascii wide
         // Description: Automagically extract forensic timeline from volatile memory dumps.
         // Reference: https://github.com/andreafortuna/autotimeliner
-        $string4 = /autotimeline\.py/ nocase ascii wide
+        $string4 = /.{0,1000}autotimeline\.py.{0,1000}/ nocase ascii wide
         // Description: Automagically extract forensic timeline from volatile memory dumps.
         // Reference: https://github.com/andreafortuna/autotimeliner
-        $string5 = /autotimeliner\.git/ nocase ascii wide
+        $string5 = /.{0,1000}autotimeliner\.git.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

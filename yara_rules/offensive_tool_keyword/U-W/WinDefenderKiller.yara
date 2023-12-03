@@ -10,22 +10,22 @@ rule WinDefenderKiller
     strings:
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string1 = /\swinDefKiller\s/ nocase ascii wide
+        $string1 = /.{0,1000}\swinDefKiller\s.{0,1000}/ nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string2 = /disableWinDef\.cpp/ nocase ascii wide
+        $string2 = /.{0,1000}disableWinDef\.cpp.{0,1000}/ nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string3 = /reverseDisableWinDef\.cpp/ nocase ascii wide
+        $string3 = /.{0,1000}reverseDisableWinDef\.cpp.{0,1000}/ nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string4 = /RevWinDefKiller\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}RevWinDefKiller\.exe.{0,1000}/ nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string5 = /WinDefenderKiller/ nocase ascii wide
+        $string5 = /.{0,1000}WinDefenderKiller.{0,1000}/ nocase ascii wide
         // Description: Windows Defender Killer | C++ Code Disabling Permanently Windows Defender using Registry Keys
         // Reference: https://github.com/S12cybersecurity/WinDefenderKiller
-        $string6 = /winDefKiller\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}winDefKiller\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

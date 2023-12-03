@@ -10,7 +10,7 @@ rule Invoke_ZeroLogon
     strings:
         // Description: Zerologon CVE exploitation
         // Reference: https://github.com/BC-SECURITY/Invoke-ZeroLogon
-        $string1 = /Invoke\-ZeroLogon/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-ZeroLogon.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

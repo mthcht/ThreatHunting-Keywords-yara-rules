@@ -10,7 +10,7 @@ rule Python_Wordlist_Generator
     strings:
         // Description: Create awesome wordlists with Python.
         // Reference: https://github.com/agusmakmun/Python-Wordlist-Generator
-        $string1 = /wgen\.py/ nocase ascii wide
+        $string1 = /.{0,1000}wgen\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

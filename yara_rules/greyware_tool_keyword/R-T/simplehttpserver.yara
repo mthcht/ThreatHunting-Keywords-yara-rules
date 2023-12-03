@@ -10,16 +10,16 @@ rule simplehttpserver
     strings:
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string1 = /\s\-m\sSimpleHTTPServer\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-m\sSimpleHTTPServer\s.{0,1000}/ nocase ascii wide
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string2 = /import\sSimpleHTTPServer/ nocase ascii wide
+        $string2 = /.{0,1000}import\sSimpleHTTPServer.{0,1000}/ nocase ascii wide
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string3 = /python\s\-m\sSimpleHTTPServer/ nocase ascii wide
+        $string3 = /.{0,1000}python\s\-m\sSimpleHTTPServer.{0,1000}/ nocase ascii wide
         // Description: quick web server in python
         // Reference: https://docs.python.org/2/library/simplehttpserver.html
-        $string4 = /SimpleHTTPServer\.SimpleHTTPRequestHandler/ nocase ascii wide
+        $string4 = /.{0,1000}SimpleHTTPServer\.SimpleHTTPRequestHandler.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

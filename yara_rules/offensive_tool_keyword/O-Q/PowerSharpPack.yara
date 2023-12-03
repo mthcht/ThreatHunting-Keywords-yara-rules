@@ -10,334 +10,334 @@ rule PowerSharpPack
     strings:
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string1 = /\s\-grouper2\s\-Command\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-grouper2\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string2 = /\s\-Internalmonologue\s\s\-Command\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-Internalmonologue\s\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string3 = /\s\-lockless\s\-Command\s/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-lockless\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string4 = /\s\-Rubeus\s\-Command\s.*kerberoast/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-Rubeus\s\-Command\s.{0,1000}kerberoast.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string5 = /\s\-SauronEye\s\-Command\s/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-SauronEye\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string6 = /\s\-seatbelt\s\-Command\s/ nocase ascii wide
+        $string6 = /.{0,1000}\s\-seatbelt\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string7 = /\s\-SharpChromium\s/ nocase ascii wide
+        $string7 = /.{0,1000}\s\-SharpChromium\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string8 = /\s\-SharpDPAPI\s\-Command\s/ nocase ascii wide
+        $string8 = /.{0,1000}\s\-SharpDPAPI\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string9 = /\s\-SharPersist\s/ nocase ascii wide
+        $string9 = /.{0,1000}\s\-SharPersist\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string10 = /\s\-SharpShares\s/ nocase ascii wide
+        $string10 = /.{0,1000}\s\-SharpShares\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string11 = /\s\-SharpSniper\s/ nocase ascii wide
+        $string11 = /.{0,1000}\s\-SharpSniper\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string12 = /\s\-SharpSpray\s/ nocase ascii wide
+        $string12 = /.{0,1000}\s\-SharpSpray\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string13 = /\s\-SharpUp\s\-Command\s/ nocase ascii wide
+        $string13 = /.{0,1000}\s\-SharpUp\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string14 = /\s\-Sharpview\s/ nocase ascii wide
+        $string14 = /.{0,1000}\s\-Sharpview\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string15 = /\s\-sharpweb\s\-Command\s/ nocase ascii wide
+        $string15 = /.{0,1000}\s\-sharpweb\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string16 = /\s\-Tokenvator\s\-Command\s/ nocase ascii wide
+        $string16 = /.{0,1000}\s\-Tokenvator\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string17 = /\s\-UrbanBishop\s\-Command\s/ nocase ascii wide
+        $string17 = /.{0,1000}\s\-UrbanBishop\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string18 = /\s\-watson\s\-Command\s/ nocase ascii wide
+        $string18 = /.{0,1000}\s\-watson\s\-Command\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string19 = /\s\-winPEAS\s/ nocase ascii wide
+        $string19 = /.{0,1000}\s\-winPEAS\s.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string20 = /\/GzipB64\.exe/ nocase ascii wide
+        $string20 = /.{0,1000}\/GzipB64\.exe.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string21 = /\/PowerSharpPack\.git/ nocase ascii wide
+        $string21 = /.{0,1000}\/PowerSharpPack\.git.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string22 = /\\GzipB64\.exe/ nocase ascii wide
+        $string22 = /.{0,1000}\\GzipB64\.exe.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string23 = /\\windows\\temp\\pwned\.trx/ nocase ascii wide
+        $string23 = /.{0,1000}\\windows\\temp\\pwned\.trx.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string24 = /Invoke\-BadPotato/ nocase ascii wide
+        $string24 = /.{0,1000}Invoke\-BadPotato.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string25 = /Invoke\-BetterSafetyKatz/ nocase ascii wide
+        $string25 = /.{0,1000}Invoke\-BetterSafetyKatz.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string26 = /Invoke\-BlockETW/ nocase ascii wide
+        $string26 = /.{0,1000}Invoke\-BlockETW.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string27 = /Invoke\-Carbuncle/ nocase ascii wide
+        $string27 = /.{0,1000}Invoke\-Carbuncle.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string28 = /Invoke\-Certify/ nocase ascii wide
+        $string28 = /.{0,1000}Invoke\-Certify.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string29 = /Invoke\-DAFT\./ nocase ascii wide
+        $string29 = /.{0,1000}Invoke\-DAFT\..{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string30 = /Invoke\-DinvokeKatz/ nocase ascii wide
+        $string30 = /.{0,1000}Invoke\-DinvokeKatz.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string31 = /Invoke\-Eyewitness/ nocase ascii wide
+        $string31 = /.{0,1000}Invoke\-Eyewitness.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string32 = /Invoke\-FakeLogonScreen/ nocase ascii wide
+        $string32 = /.{0,1000}Invoke\-FakeLogonScreen.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string33 = /Invoke\-Farmer/ nocase ascii wide
+        $string33 = /.{0,1000}Invoke\-Farmer.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string34 = /Invoke\-Get\-RBCD\-Threaded/ nocase ascii wide
+        $string34 = /.{0,1000}Invoke\-Get\-RBCD\-Threaded.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string35 = /Invoke\-Gopher/ nocase ascii wide
+        $string35 = /.{0,1000}Invoke\-Gopher.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string36 = /Invoke\-Grouper2/ nocase ascii wide
+        $string36 = /.{0,1000}Invoke\-Grouper2.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string37 = /Invoke\-Grouper3/ nocase ascii wide
+        $string37 = /.{0,1000}Invoke\-Grouper3.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string38 = /Invoke\-HandleKatz/ nocase ascii wide
+        $string38 = /.{0,1000}Invoke\-HandleKatz.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string39 = /Invoke\-Internalmonologue/ nocase ascii wide
+        $string39 = /.{0,1000}Invoke\-Internalmonologue.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string40 = /Invoke\-KrbRelay/ nocase ascii wide
+        $string40 = /.{0,1000}Invoke\-KrbRelay.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string41 = /Invoke\-LdapSignCheck/ nocase ascii wide
+        $string41 = /.{0,1000}Invoke\-LdapSignCheck.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string42 = /Invoke\-Lockless/ nocase ascii wide
+        $string42 = /.{0,1000}Invoke\-Lockless.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string43 = /Invoke\-MalSCCM/ nocase ascii wide
+        $string43 = /.{0,1000}Invoke\-MalSCCM.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string44 = /Invoke\-MITM6/ nocase ascii wide
+        $string44 = /.{0,1000}Invoke\-MITM6.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string45 = /Invoke\-NanoDump/ nocase ascii wide
+        $string45 = /.{0,1000}Invoke\-NanoDump.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string46 = /Invoke\-OxidResolver/ nocase ascii wide
+        $string46 = /.{0,1000}Invoke\-OxidResolver.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string47 = /Invoke\-P0wnedshell/ nocase ascii wide
+        $string47 = /.{0,1000}Invoke\-P0wnedshell.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string48 = /Invoke\-P0wnedshellx86/ nocase ascii wide
+        $string48 = /.{0,1000}Invoke\-P0wnedshellx86.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string49 = /Invoke\-PPLDump/ nocase ascii wide
+        $string49 = /.{0,1000}Invoke\-PPLDump.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string50 = /Invoke\-Rubeus/ nocase ascii wide
+        $string50 = /.{0,1000}Invoke\-Rubeus.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string51 = /Invoke\-SafetyKatz/ nocase ascii wide
+        $string51 = /.{0,1000}Invoke\-SafetyKatz.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string52 = /Invoke\-SauronEye/ nocase ascii wide
+        $string52 = /.{0,1000}Invoke\-SauronEye.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string53 = /Invoke\-SCShell/ nocase ascii wide
+        $string53 = /.{0,1000}Invoke\-SCShell.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string54 = /Invoke\-Seatbelt/ nocase ascii wide
+        $string54 = /.{0,1000}Invoke\-Seatbelt.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string55 = /Invoke\-ShadowSpray/ nocase ascii wide
+        $string55 = /.{0,1000}Invoke\-ShadowSpray.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string56 = /Invoke\-SharpAllowedToAct/ nocase ascii wide
+        $string56 = /.{0,1000}Invoke\-SharpAllowedToAct.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string57 = /Invoke\-SharpBlock/ nocase ascii wide
+        $string57 = /.{0,1000}Invoke\-SharpBlock.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string58 = /Invoke\-SharpBypassUAC/ nocase ascii wide
+        $string58 = /.{0,1000}Invoke\-SharpBypassUAC.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string59 = /Invoke\-SharpChromium/ nocase ascii wide
+        $string59 = /.{0,1000}Invoke\-SharpChromium.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string60 = /Invoke\-SharpClipboard/ nocase ascii wide
+        $string60 = /.{0,1000}Invoke\-SharpClipboard.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string61 = /Invoke\-SharpCloud/ nocase ascii wide
+        $string61 = /.{0,1000}Invoke\-SharpCloud.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string62 = /Invoke\-SharpDPAPI/ nocase ascii wide
+        $string62 = /.{0,1000}Invoke\-SharpDPAPI.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string63 = /Invoke\-SharpDump/ nocase ascii wide
+        $string63 = /.{0,1000}Invoke\-SharpDump.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string64 = /Invoke\-SharPersist/ nocase ascii wide
+        $string64 = /.{0,1000}Invoke\-SharPersist.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string65 = /Invoke\-SharpGPOAbuse/ nocase ascii wide
+        $string65 = /.{0,1000}Invoke\-SharpGPOAbuse.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string66 = /Invoke\-SharpGPO\-RemoteAccessPolicies/ nocase ascii wide
+        $string66 = /.{0,1000}Invoke\-SharpGPO\-RemoteAccessPolicies.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string67 = /Invoke\-SharpHandler/ nocase ascii wide
+        $string67 = /.{0,1000}Invoke\-SharpHandler.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string68 = /Invoke\-SharpHide/ nocase ascii wide
+        $string68 = /.{0,1000}Invoke\-SharpHide.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string69 = /Invoke\-Sharphound2/ nocase ascii wide
+        $string69 = /.{0,1000}Invoke\-Sharphound2.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string70 = /Invoke\-Sharphound3/ nocase ascii wide
+        $string70 = /.{0,1000}Invoke\-Sharphound3.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string71 = /Invoke\-SharpHound4/ nocase ascii wide
+        $string71 = /.{0,1000}Invoke\-SharpHound4.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string72 = /Invoke\-SharpImpersonation/ nocase ascii wide
+        $string72 = /.{0,1000}Invoke\-SharpImpersonation.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string73 = /Invoke\-SharpImpersonationNoSpace/ nocase ascii wide
+        $string73 = /.{0,1000}Invoke\-SharpImpersonationNoSpace.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string74 = /Invoke\-SharpKatz/ nocase ascii wide
+        $string74 = /.{0,1000}Invoke\-SharpKatz.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string75 = /Invoke\-SharpLdapRelayScan/ nocase ascii wide
+        $string75 = /.{0,1000}Invoke\-SharpLdapRelayScan.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string76 = /Invoke\-Sharplocker/ nocase ascii wide
+        $string76 = /.{0,1000}Invoke\-Sharplocker.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string77 = /Invoke\-SharpLoginPrompt/ nocase ascii wide
+        $string77 = /.{0,1000}Invoke\-SharpLoginPrompt.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string78 = /Invoke\-SharpMove/ nocase ascii wide
+        $string78 = /.{0,1000}Invoke\-SharpMove.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string79 = /Invoke\-SharpPrinter/ nocase ascii wide
+        $string79 = /.{0,1000}Invoke\-SharpPrinter.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string80 = /Invoke\-SharpPrintNightmare/ nocase ascii wide
+        $string80 = /.{0,1000}Invoke\-SharpPrintNightmare.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string81 = /Invoke\-SharpRDP/ nocase ascii wide
+        $string81 = /.{0,1000}Invoke\-SharpRDP.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string82 = /Invoke\-SharpSCCM/ nocase ascii wide
+        $string82 = /.{0,1000}Invoke\-SharpSCCM.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string83 = /Invoke\-SharpSecDump/ nocase ascii wide
+        $string83 = /.{0,1000}Invoke\-SharpSecDump.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string84 = /Invoke\-Sharpshares/ nocase ascii wide
+        $string84 = /.{0,1000}Invoke\-Sharpshares.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string85 = /Invoke\-SharpSniper/ nocase ascii wide
+        $string85 = /.{0,1000}Invoke\-SharpSniper.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string86 = /Invoke\-SharpSploit/ nocase ascii wide
+        $string86 = /.{0,1000}Invoke\-SharpSploit.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string87 = /Invoke\-Sharpsploit_nomimi/ nocase ascii wide
+        $string87 = /.{0,1000}Invoke\-Sharpsploit_nomimi.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string88 = /Invoke\-SharpSpray/ nocase ascii wide
+        $string88 = /.{0,1000}Invoke\-SharpSpray.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string89 = /Invoke\-SharpSSDP/ nocase ascii wide
+        $string89 = /.{0,1000}Invoke\-SharpSSDP.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string90 = /Invoke\-SharpStay/ nocase ascii wide
+        $string90 = /.{0,1000}Invoke\-SharpStay.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string91 = /Invoke\-SharpUp/ nocase ascii wide
+        $string91 = /.{0,1000}Invoke\-SharpUp.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string92 = /Invoke\-Sharpview/ nocase ascii wide
+        $string92 = /.{0,1000}Invoke\-Sharpview.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string93 = /Invoke\-SharpWatson/ nocase ascii wide
+        $string93 = /.{0,1000}Invoke\-SharpWatson.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string94 = /Invoke\-Sharpweb/ nocase ascii wide
+        $string94 = /.{0,1000}Invoke\-Sharpweb.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string95 = /Invoke\-SharpWSUS/ nocase ascii wide
+        $string95 = /.{0,1000}Invoke\-SharpWSUS.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string96 = /Invoke\-Snaffler/ nocase ascii wide
+        $string96 = /.{0,1000}Invoke\-Snaffler.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string97 = /Invoke\-Spoolsample/ nocase ascii wide
+        $string97 = /.{0,1000}Invoke\-Spoolsample.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string98 = /Invoke\-StandIn\./ nocase ascii wide
+        $string98 = /.{0,1000}Invoke\-StandIn\..{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string99 = /Invoke\-StickyNotesExtract/ nocase ascii wide
+        $string99 = /.{0,1000}Invoke\-StickyNotesExtract.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string100 = /Invoke\-Thunderfox/ nocase ascii wide
+        $string100 = /.{0,1000}Invoke\-Thunderfox.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string101 = /Invoke\-Tokenvator/ nocase ascii wide
+        $string101 = /.{0,1000}Invoke\-Tokenvator.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string102 = /Invoke\-UrbanBishop/ nocase ascii wide
+        $string102 = /.{0,1000}Invoke\-UrbanBishop.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string103 = /Invoke\-Whisker/ nocase ascii wide
+        $string103 = /.{0,1000}Invoke\-Whisker.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string104 = /Invoke\-winPEAS/ nocase ascii wide
+        $string104 = /.{0,1000}Invoke\-winPEAS.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string105 = /Invoke\-WireTap/ nocase ascii wide
+        $string105 = /.{0,1000}Invoke\-WireTap.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string106 = /no\sMimik\@tz\s\-\sloaded\ssuccessfully/ nocase ascii wide
+        $string106 = /.{0,1000}no\sMimik\@tz\s\-\sloaded\ssuccessfully.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string107 = /PowerSharpBinaries/ nocase ascii wide
+        $string107 = /.{0,1000}PowerSharpBinaries.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string108 = /PowerSharpPack\.ps1/ nocase ascii wide
+        $string108 = /.{0,1000}PowerSharpPack\.ps1.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string109 = /PowerSharpPack\-master/ nocase ascii wide
+        $string109 = /.{0,1000}PowerSharpPack\-master.{0,1000}/ nocase ascii wide
         // Description: Many useful offensive CSharp Projects wraped into Powershell for easy usage
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string110 = /S3cur3Th1sSh1t\/PowerSharpPack/ nocase ascii wide
+        $string110 = /.{0,1000}S3cur3Th1sSh1t\/PowerSharpPack.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

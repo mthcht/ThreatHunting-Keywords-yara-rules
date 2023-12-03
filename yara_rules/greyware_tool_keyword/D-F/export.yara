@@ -10,10 +10,10 @@ rule export
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1 = /export\sHISTFILESIZE\=0/ nocase ascii wide
+        $string1 = /.{0,1000}export\sHISTFILESIZE\=0.{0,1000}/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2 = /export\sHISTSIZE\=0/ nocase ascii wide
+        $string2 = /.{0,1000}export\sHISTSIZE\=0.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

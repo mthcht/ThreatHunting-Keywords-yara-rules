@@ -10,7 +10,7 @@ rule PWCrack
     strings:
         // Description: cracking tool for multiple hash type
         // Reference: https://github.com/L-codes/pwcrack-framework
-        $string1 = /PWCrack/ nocase ascii wide
+        $string1 = /.{0,1000}PWCrack.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

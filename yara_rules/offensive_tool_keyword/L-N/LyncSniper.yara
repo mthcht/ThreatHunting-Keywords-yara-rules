@@ -10,7 +10,7 @@ rule LyncSniper
     strings:
         // Description: LyncSniper is a tool for penetration testing Lync and Skype for Business deployments hosted either on premise or in Office 365
         // Reference: https://github.com/mdsecactivebreach/LyncSniper
-        $string1 = /LyncSniper/ nocase ascii wide
+        $string1 = /.{0,1000}LyncSniper.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

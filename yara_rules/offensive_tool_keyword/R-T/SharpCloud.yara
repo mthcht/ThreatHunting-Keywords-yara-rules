@@ -10,28 +10,28 @@ rule SharpCloud
     strings:
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string1 = /\/SharpCloud\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/SharpCloud\.git.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string2 = /chrismaddalena\/SharpCloud/ nocase ascii wide
+        $string2 = /.{0,1000}chrismaddalena\/SharpCloud.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string3 = /execute_assembly\sSharpCloud/ nocase ascii wide
+        $string3 = /.{0,1000}execute_assembly\sSharpCloud.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string4 = /sharpcloud\.cna/ nocase ascii wide
+        $string4 = /.{0,1000}sharpcloud\.cna.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string5 = /SharpCloud\.csproj/ nocase ascii wide
+        $string5 = /.{0,1000}SharpCloud\.csproj.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string6 = /SharpCloud\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}SharpCloud\.exe.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string7 = /SharpCloud\.sln/ nocase ascii wide
+        $string7 = /.{0,1000}SharpCloud\.sln.{0,1000}/ nocase ascii wide
         // Description: Simple C# for checking for the existence of credential files related to AWS - Microsoft Azure and Google Compute.
         // Reference: https://github.com/chrismaddalena/SharpCloud
-        $string8 = /SharpCloud\-master/ nocase ascii wide
+        $string8 = /.{0,1000}SharpCloud\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

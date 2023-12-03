@@ -10,415 +10,415 @@ rule crackmapexec
     strings:
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string1 = /\scmedb/ nocase ascii wide
+        $string1 = /.{0,1000}\scmedb/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string2 = /\sempire_exec/ nocase ascii wide
+        $string2 = /.{0,1000}\sempire_exec.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string3 = /\sempireadmin/ nocase ascii wide
+        $string3 = /.{0,1000}\sempireadmin.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string4 = /\senum_avproducts/ nocase ascii wide
+        $string4 = /.{0,1000}\senum_avproducts.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string5 = /\senum_chrome/ nocase ascii wide
+        $string5 = /.{0,1000}\senum_chrome.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string6 = /\senum_dns/ nocase ascii wide
+        $string6 = /.{0,1000}\senum_dns.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string7 = /\s\-\-force\-ps32/ nocase ascii wide
+        $string7 = /.{0,1000}\s\-\-force\-ps32/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string8 = /\s\-\-gen\-relay\-list\s/ nocase ascii wide
+        $string8 = /.{0,1000}\s\-\-gen\-relay\-list\s.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string9 = /\sget_keystrokes/ nocase ascii wide
+        $string9 = /.{0,1000}\sget_keystrokes.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string10 = /\sget_netdomaincontroller/ nocase ascii wide
+        $string10 = /.{0,1000}\sget_netdomaincontroller.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string11 = /\sget_netrdpsession/ nocase ascii wide
+        $string11 = /.{0,1000}\sget_netrdpsession.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string12 = /\sget_timedscreenshot/ nocase ascii wide
+        $string12 = /.{0,1000}\sget_timedscreenshot.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string13 = /\sgpp_autologin/ nocase ascii wide
+        $string13 = /.{0,1000}\sgpp_autologin.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string14 = /\sgpp_password/ nocase ascii wide
+        $string14 = /.{0,1000}\sgpp_password.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string15 = /\sinvoke_sessiongopher/ nocase ascii wide
+        $string15 = /.{0,1000}\sinvoke_sessiongopher.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string16 = /\sinvoke_vnc/ nocase ascii wide
+        $string16 = /.{0,1000}\sinvoke_vnc.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string17 = /\skerberos\.py/ nocase ascii wide
+        $string17 = /.{0,1000}\skerberos\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string18 = /\s\-\-local\-auth\s\-\-shares/ nocase ascii wide
+        $string18 = /.{0,1000}\s\-\-local\-auth\s\-\-shares.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string19 = /\s\-\-loggedon\-users/ nocase ascii wide
+        $string19 = /.{0,1000}\s\-\-loggedon\-users.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string20 = /\s\-M\smultirdp/ nocase ascii wide
+        $string20 = /.{0,1000}\s\-M\smultirdp.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string21 = /\s\-M\spe_inject/ nocase ascii wide
+        $string21 = /.{0,1000}\s\-M\spe_inject.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string22 = /\s\-M\sscuffy/ nocase ascii wide
+        $string22 = /.{0,1000}\s\-M\sscuffy.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string23 = /\s\-M\sshellcode_inject/ nocase ascii wide
+        $string23 = /.{0,1000}\s\-M\sshellcode_inject.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string24 = /\s\-M\sslinky/ nocase ascii wide
+        $string24 = /.{0,1000}\s\-M\sslinky/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string25 = /\s\-M\stokens/ nocase ascii wide
+        $string25 = /.{0,1000}\s\-M\stokens.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string26 = /\s\-M\suac/ nocase ascii wide
+        $string26 = /.{0,1000}\s\-M\suac/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string27 = /\s\-M\sweb_delivery/ nocase ascii wide
+        $string27 = /.{0,1000}\s\-M\sweb_delivery.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string28 = /\smet_inject/ nocase ascii wide
+        $string28 = /.{0,1000}\smet_inject.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string29 = /\smimikittenz/ nocase ascii wide
+        $string29 = /.{0,1000}\smimikittenz.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string30 = /\snetripper/ nocase ascii wide
-        // Description: A swiss army knife for pentesting networks
-        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string31 = /\s\-\-no\-bruteforce\s/ nocase ascii wide
-        // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
-        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string32 = /\s\-\-ntds\-history/ nocase ascii wide
-        // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
-        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string33 = /\s\-\-ntds\-pwdLastSet/ nocase ascii wide
+        $string30 = /.{0,1000}\snetripper.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string34 = /\s\-p\s.*\s\-\-amsi\-bypass\s/ nocase ascii wide
+        $string31 = /.{0,1000}\s\-\-no\-bruteforce\s.{0,1000}/ nocase ascii wide
+        // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
+        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
+        $string32 = /.{0,1000}\s\-\-ntds\-history.{0,1000}/ nocase ascii wide
+        // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
+        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
+        $string33 = /.{0,1000}\s\-\-ntds\-pwdLastSet.{0,1000}/ nocase ascii wide
+        // Description: A swiss army knife for pentesting networks
+        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
+        $string34 = /.{0,1000}\s\-p\s.{0,1000}\s\-\-amsi\-bypass\s.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string35 = /\sPwn3d\!/ nocase ascii wide
+        $string35 = /.{0,1000}\sPwn3d\!.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string36 = /\s\-\-rid\-brute/ nocase ascii wide
+        $string36 = /.{0,1000}\s\-\-rid\-brute.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string37 = /\ssmb\s\-M\smimikatz\s\-\-options/ nocase ascii wide
+        $string37 = /.{0,1000}\ssmb\s\-M\smimikatz\s\-\-options.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string38 = /\ssmb.*\s\-u\s\'\'\s\-p\s\'\'/ nocase ascii wide
+        $string38 = /.{0,1000}\ssmb.{0,1000}\s\-u\s\'\'\s\-p\s\'\'.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string39 = /\ssmbexec\.py/ nocase ascii wide
+        $string39 = /.{0,1000}\ssmbexec\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string40 = /\s\-u\s.*\s\-\-local\-auth/ nocase ascii wide
+        $string40 = /.{0,1000}\s\-u\s.{0,1000}\s\-\-local\-auth.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string41 = /\s\-u\s.*\s\-p\s.*\s\-\-lusers/ nocase ascii wide
+        $string41 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-lusers.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string42 = /\s\-u\s.*\s\-p\s.*\s\-\-sam/ nocase ascii wide
+        $string42 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-sam/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string43 = /\s\-u\s.*\s\-p\s.*\s\-\-shares/ nocase ascii wide
+        $string43 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-\-shares.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string44 = /\s\-u\s.*\s\-p\s.*\-\-pass\-pol/ nocase ascii wide
+        $string44 = /.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\-\-pass\-pol.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string45 = /\s\-\-wdigest\sdisable/ nocase ascii wide
+        $string45 = /.{0,1000}\s\-\-wdigest\sdisable.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string46 = /\s\-\-wdigest\senable/ nocase ascii wide
+        $string46 = /.{0,1000}\s\-\-wdigest\senable.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string47 = /\swinrm\.py/ nocase ascii wide
+        $string47 = /.{0,1000}\swinrm\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string48 = /\s\-\-wmi\s.*SELECT\s/ nocase ascii wide
+        $string48 = /.{0,1000}\s\-\-wmi\s.{0,1000}SELECT\s.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string49 = /\swmiexec\.py/ nocase ascii wide
+        $string49 = /.{0,1000}\swmiexec\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string50 = /\s\-\-wmi\-namespace\s\'root\\cimv2\'/ nocase ascii wide
+        $string50 = /.{0,1000}\s\-\-wmi\-namespace\s\'root\\cimv2\'.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string51 = /\s\-X\s\'\$PSVersionTable\'\s/ nocase ascii wide
+        $string51 = /.{0,1000}\s\-X\s\'\$PSVersionTable\'\s.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string52 = /\s\-X\s\'\[System\.Environment\]::Is64BitProcess\'/ nocase ascii wide
+        $string52 = /.{0,1000}\s\-X\s\'\[System\.Environment\]::Is64BitProcess\'.{0,1000}/ nocase ascii wide
         // Description: Variable name from script RestartKeePass.ps1 from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks  
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string53 = /\$DummyServiceName/ nocase ascii wide
+        $string53 = /.{0,1000}\$DummyServiceName.{0,1000}/ nocase ascii wide
         // Description: Variable name from script RestartKeePass.ps1 from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks  
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string54 = /\$KeePassBinaryPath/ nocase ascii wide
+        $string54 = /.{0,1000}\$KeePassBinaryPath.{0,1000}/ nocase ascii wide
         // Description: Variable name from script RestartKeePass.ps1 from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks  
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string55 = /\$KeePassUser/ nocase ascii wide
+        $string55 = /.{0,1000}\$KeePassUser.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string56 = /\.exe.*\s\-d\slocalhost\s.*\s\-u\s.*\s\-p\s.*\/24/ nocase ascii wide
+        $string56 = /.{0,1000}\.exe.{0,1000}\s\-d\slocalhost\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\/24.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string57 = /\.exe.*\s\-u\sadministrator\s\-H\s:.*\-\-shares/ nocase ascii wide
+        $string57 = /.{0,1000}\.exe.{0,1000}\s\-u\sadministrator\s\-H\s:.{0,1000}\-\-shares.{0,1000}/ nocase ascii wide
         // Description: bloodhound integration with crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks 
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string58 = /\/bloodhound\.py/ nocase ascii wide
+        $string58 = /.{0,1000}\/bloodhound\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string59 = /\/cme\ssmb\s/ nocase ascii wide
+        $string59 = /.{0,1000}\/cme\ssmb\s.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string60 = /\/cme\swinrm\s/ nocase ascii wide
+        $string60 = /.{0,1000}\/cme\swinrm\s.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral move
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string61 = /\/cmedb/ nocase ascii wide
+        $string61 = /.{0,1000}\/cmedb/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string62 = /\/enum_av\.py/ nocase ascii wide
+        $string62 = /.{0,1000}\/enum_av\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string63 = /\/kerberos\.py/ nocase ascii wide
+        $string63 = /.{0,1000}\/kerberos\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string64 = /\/mssqlexec\.py/ nocase ascii wide
+        $string64 = /.{0,1000}\/mssqlexec\.py.{0,1000}/ nocase ascii wide
         // Description: parser nessus.py from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string65 = /\/nessus\.py/ nocase ascii wide
+        $string65 = /.{0,1000}\/nessus\.py.{0,1000}/ nocase ascii wide
         // Description: parser nmap.py from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string66 = /\/nmap\.py/ nocase ascii wide
+        $string66 = /.{0,1000}\/nmap\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string67 = /\/obfuscated_scripts\// nocase ascii wide
+        $string67 = /.{0,1000}\/obfuscated_scripts\/.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string68 = /\/protocols\/ftp\.py/ nocase ascii wide
+        $string68 = /.{0,1000}\/protocols\/ftp\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string69 = /\/protocols\/ldap\.py/ nocase ascii wide
+        $string69 = /.{0,1000}\/protocols\/ldap\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string70 = /\/protocols\/mssql\.py/ nocase ascii wide
+        $string70 = /.{0,1000}\/protocols\/mssql\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string71 = /\/protocols\/rdp\.py/ nocase ascii wide
+        $string71 = /.{0,1000}\/protocols\/rdp\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted 
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string72 = /\/protocols\/rdp\.py/ nocase ascii wide
+        $string72 = /.{0,1000}\/protocols\/rdp\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string73 = /\/protocols\/smb\.py/ nocase ascii wide
+        $string73 = /.{0,1000}\/protocols\/smb\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string74 = /\/protocols\/ssh\.py/ nocase ascii wide
+        $string74 = /.{0,1000}\/protocols\/ssh\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string75 = /\/samruser\.py/ nocase ascii wide
+        $string75 = /.{0,1000}\/samruser\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string76 = /\/smbexec\.py/ nocase ascii wide
+        $string76 = /.{0,1000}\/smbexec\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string77 = /\/smbldap\.py/ nocase ascii wide
+        $string77 = /.{0,1000}\/smbldap\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string78 = /\/winrm\.py/ nocase ascii wide
+        $string78 = /.{0,1000}\/winrm\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string79 = /\/wmiexec\.py/ nocase ascii wide
+        $string79 = /.{0,1000}\/wmiexec\.py.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string80 = /\/wmiexec\.py/ nocase ascii wide
+        $string80 = /.{0,1000}\/wmiexec\.py.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string81 = /\\bin\\cme\.exe/ nocase ascii wide
+        $string81 = /.{0,1000}\\bin\\cme\.exe.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string82 = /\\cme\.exe.*\s\-d\s.*\s\-u\s.*\s\-H\s/ nocase ascii wide
+        $string82 = /.{0,1000}\\cme\.exe.{0,1000}\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-H\s.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string83 = /\\cme\.exe.*\s\-d\s.*\s\-u\s.*\s\-p\s/ nocase ascii wide
+        $string83 = /.{0,1000}\\cme\.exe.{0,1000}\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string84 = /\\cme\.exe.*\s\-\-shares/ nocase ascii wide
+        $string84 = /.{0,1000}\\cme\.exe.{0,1000}\s\-\-shares.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string85 = /\\crackmapexecwin/ nocase ascii wide
+        $string85 = /.{0,1000}\\crackmapexecwin.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string86 = /_enum_vault_creds/ nocase ascii wide
+        $string86 = /.{0,1000}_enum_vault_creds.{0,1000}/ nocase ascii wide
         // Description: Keepass exploitations from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string87 = /AddKeePassTrigger\.ps1/ nocase ascii wide
+        $string87 = /.{0,1000}AddKeePassTrigger\.ps1.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string88 = /BloodHound\-modified\.ps1/ nocase ascii wide
+        $string88 = /.{0,1000}BloodHound\-modified\.ps1.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string89 = /cmd\ssmb\s.*\-u.*\-p/ nocase ascii wide
+        $string89 = /.{0,1000}cmd\ssmb\s.{0,1000}\-u.{0,1000}\-p.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string90 = /cme\s\-d\s.*\s\-/ nocase ascii wide
+        $string90 = /.{0,1000}cme\s\-d\s.{0,1000}\s\-.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string91 = /cme\s\-d\s.*localhost/ nocase ascii wide
+        $string91 = /.{0,1000}cme\s\-d\s.{0,1000}localhost.{0,1000}/ nocase ascii wide
         // Description: macOS default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string92 = /cme.*\-macOS\-latest\-/ nocase ascii wide
+        $string92 = /.{0,1000}cme.{0,1000}\-macOS\-latest\-.{0,1000}/ nocase ascii wide
         // Description: ubuntu default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string93 = /cme.*\-ubuntu\-latest\-/ nocase ascii wide
+        $string93 = /.{0,1000}cme.{0,1000}\-ubuntu\-latest\-.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral move
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string94 = /cme.*\-windows\-latest\-/ nocase ascii wide
+        $string94 = /.{0,1000}cme.{0,1000}\-windows\-latest\-.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string95 = /cme\/cme\.conf/ nocase ascii wide
+        $string95 = /.{0,1000}cme\/cme\.conf.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string96 = /cme\-macOS\-latest\-.*\.zip/ nocase ascii wide
+        $string96 = /.{0,1000}cme\-macOS\-latest\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string97 = /cme\-ubuntu\-latest\-.*\.zip/ nocase ascii wide
+        $string97 = /.{0,1000}cme\-ubuntu\-latest\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string98 = /cme\-windows\-latest\-.*\.zip/ nocase ascii wide
+        $string98 = /.{0,1000}cme\-windows\-latest\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string99 = /CrackMapExec/ nocase ascii wide
+        $string99 = /.{0,1000}CrackMapExec.{0,1000}/ nocase ascii wide
         // Description: crackmapexec execution name. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks 
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string100 = /crackmapexec/ nocase ascii wide
+        $string100 = /.{0,1000}crackmapexec.{0,1000}/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string101 = /crackmapexec\.exe/ nocase ascii wide
+        $string101 = /.{0,1000}crackmapexec\.exe.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string102 = /crackmapexec\.py/ nocase ascii wide
+        $string102 = /.{0,1000}crackmapexec\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string103 = /DNS\-Enum\-.*\-.*\.log/ nocase ascii wide
+        $string103 = /.{0,1000}DNS\-Enum\-.{0,1000}\-.{0,1000}\.log.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string104 = /empire_exec\.py/ nocase ascii wide
+        $string104 = /.{0,1000}empire_exec\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string105 = /enum_avproducts\.py/ nocase ascii wide
+        $string105 = /.{0,1000}enum_avproducts\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string106 = /\-\-exec\-method\ssmbexec/ nocase ascii wide
+        $string106 = /.{0,1000}\-\-exec\-method\ssmbexec.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string107 = /get_keystrokes\.py/ nocase ascii wide
+        $string107 = /.{0,1000}get_keystrokes\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string108 = /Get\-ComputerDetails/ nocase ascii wide
+        $string108 = /.{0,1000}Get\-ComputerDetails.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string109 = /gpp_autologin\.py/ nocase ascii wide
+        $string109 = /.{0,1000}gpp_autologin\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string110 = /gpp_password\.py/ nocase ascii wide
+        $string110 = /.{0,1000}gpp_password\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string111 = /\-H\slm\-hash:nt\-hash/ nocase ascii wide
+        $string111 = /.{0,1000}\-H\slm\-hash:nt\-hash.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string112 = /\-H\s\'LMHASH:NTHASH\'/ nocase ascii wide
+        $string112 = /.{0,1000}\-H\s\'LMHASH:NTHASH\'.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines patterns. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string113 = /\-H\s\'NTHASH\'/ nocase ascii wide
+        $string113 = /.{0,1000}\-H\s\'NTHASH\'.{0,1000}/ nocase ascii wide
         // Description: function name from nessus.py from crackmapexec.  CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string114 = /handle_nessus_file/ nocase ascii wide
+        $string114 = /.{0,1000}handle_nessus_file.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string115 = /handlekatz\.py/ nocase ascii wide
+        $string115 = /.{0,1000}handlekatz\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string116 = /hook\-lsassy\.py/ nocase ascii wide
+        $string116 = /.{0,1000}hook\-lsassy\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string117 = /hook\-lsassy\.py/ nocase ascii wide
+        $string117 = /.{0,1000}hook\-lsassy\.py.{0,1000}/ nocase ascii wide
         // Description: hook script for lsassy from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string118 = /hook\-lsassy\.py/ nocase ascii wide
+        $string118 = /.{0,1000}hook\-lsassy\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string119 = /invoke_sessiongopher\.py/ nocase ascii wide
+        $string119 = /.{0,1000}invoke_sessiongopher\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string120 = /keepass_discover\.py/ nocase ascii wide
+        $string120 = /.{0,1000}keepass_discover\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string121 = /lsassy_dump/ nocase ascii wide
+        $string121 = /.{0,1000}lsassy_dump.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string122 = /lsassy_dump\.py/ nocase ascii wide
+        $string122 = /.{0,1000}lsassy_dump\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string123 = /met_inject\.py/ nocase ascii wide
+        $string123 = /.{0,1000}met_inject\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string124 = /mimipenguin\.py/ nocase ascii wide
+        $string124 = /.{0,1000}mimipenguin\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string125 = /modules.*daclread\.py/ nocase ascii wide
+        $string125 = /.{0,1000}modules.{0,1000}daclread\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string126 = /ntlmv1\.py/ nocase ascii wide
+        $string126 = /.{0,1000}ntlmv1\.py.{0,1000}/ nocase ascii wide
         // Description: function name from nessus.py from crackmapexec.  CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string127 = /parse_nessus_file/ nocase ascii wide
+        $string127 = /.{0,1000}parse_nessus_file.{0,1000}/ nocase ascii wide
         // Description: function name from nmap.py from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string128 = /parse_nmap_xml/ nocase ascii wide
+        $string128 = /.{0,1000}parse_nmap_xml.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string129 = /petitpotam\.py/ nocase ascii wide
+        $string129 = /.{0,1000}petitpotam\.py.{0,1000}/ nocase ascii wide
         // Description: Keepass exploitations from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string130 = /RemoveKeePassTrigger\.ps1/ nocase ascii wide
+        $string130 = /.{0,1000}RemoveKeePassTrigger\.ps1.{0,1000}/ nocase ascii wide
         // Description: Keepass exploitations from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string131 = /RestartKeePass\.ps1/ nocase ascii wide
+        $string131 = /.{0,1000}RestartKeePass\.ps1.{0,1000}/ nocase ascii wide
         // Description: protocol scripts from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string132 = /smbspider\.py/ nocase ascii wide
+        $string132 = /.{0,1000}smbspider\.py.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string133 = /temp.*whoami\.txt/ nocase ascii wide
+        $string133 = /.{0,1000}temp.{0,1000}whoami\.txt.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string134 = /whoami\.py/ nocase ascii wide
+        $string134 = /.{0,1000}whoami\.py.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string135 = /cme\ssmb\s/ nocase ascii wide
+        $string135 = /cme\ssmb\s.{0,1000}/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string136 = /cme\ssmb\s\-/ nocase ascii wide
+        $string136 = /cme\ssmb\s\-.{0,1000}/ nocase ascii wide
         // Description: crackmapexec command lines. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct lateral movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string137 = /cme\swinrm\s/ nocase ascii wide
+        $string137 = /cme\swinrm\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

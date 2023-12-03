@@ -10,34 +10,34 @@ rule MalSCCM
     strings:
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string1 = /\.exe\sapp\s\/create\s\/name:.*\s\/uncpath:.*\\\\/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\sapp\s\/create\s\/name:.{0,1000}\s\/uncpath:.{0,1000}\\\\.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string2 = /\.exe\sapp\s\/deploy\s\/name:.*\s\/groupname:.*\s\/assignmentname:/ nocase ascii wide
+        $string2 = /.{0,1000}\.exe\sapp\s\/deploy\s\/name:.{0,1000}\s\/groupname:.{0,1000}\s\/assignmentname:.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string3 = /\/MalSCCM\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/MalSCCM\.git.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string4 = /\/MalSCCM\.sln/ nocase ascii wide
+        $string4 = /.{0,1000}\/MalSCCM\.sln.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string5 = /5439CECD\-3BB3\-4807\-B33F\-E4C299B71CA2/ nocase ascii wide
+        $string5 = /.{0,1000}5439CECD\-3BB3\-4807\-B33F\-E4C299B71CA2.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string6 = /Action:\sLocating\sSCCM\sManagement\sServers/ nocase ascii wide
+        $string6 = /.{0,1000}Action:\sLocating\sSCCM\sManagement\sServers.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string7 = /Action:\sLocating\sSCCM\sServers\sin\sRegistry/ nocase ascii wide
+        $string7 = /.{0,1000}Action:\sLocating\sSCCM\sServers\sin\sRegistry.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string8 = /MalSCCM\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}MalSCCM\.exe.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string9 = /MalSCCM\-main/ nocase ascii wide
+        $string9 = /.{0,1000}MalSCCM\-main.{0,1000}/ nocase ascii wide
         // Description: This tool allows you to abuse local or remote SCCM servers to deploy malicious applications to hosts they manage
         // Reference: https://github.com/nettitude/MalSCCM
-        $string10 = /nettitude\/MalSCCM/ nocase ascii wide
+        $string10 = /.{0,1000}nettitude\/MalSCCM.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

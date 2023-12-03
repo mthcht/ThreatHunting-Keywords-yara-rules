@@ -10,7 +10,7 @@ rule zerosum0x0
     strings:
         // Description: github repo username hosting backdoors pocs and exploitation tools
         // Reference: https://github.com/zerosum0x0
-        $string1 = /zerosum0x0/ nocase ascii wide
+        $string1 = /.{0,1000}zerosum0x0.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

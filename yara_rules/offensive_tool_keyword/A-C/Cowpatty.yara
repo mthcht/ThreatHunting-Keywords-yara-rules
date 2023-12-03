@@ -10,7 +10,7 @@ rule Cowpatty
     strings:
         // Description: coWPAtty - Brute-force dictionary attack against WPA-PSK.
         // Reference: https://github.com/joswr1ght/cowpatty
-        $string1 = /Cowpatty/ nocase ascii wide
+        $string1 = /.{0,1000}Cowpatty.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule WorldWind_Stealer
     strings:
         // Description: WorldWind Stealer This stealer sends logs directly to your telegram id from a Bot that YOU Create with telegram
         // Reference: https://github.com/Leecher21/WorldWind-Stealer
-        $string1 = /WorldWind\sStealer\.zip/ nocase ascii wide
+        $string1 = /.{0,1000}WorldWind\sStealer\.zip.{0,1000}/ nocase ascii wide
         // Description: WorldWind Stealer This stealer sends logs directly to your telegram id from a Bot that YOU Create with telegram
         // Reference: https://github.com/Leecher21/WorldWind-Stealer
-        $string2 = /WorldWind\-Stealer/ nocase ascii wide
+        $string2 = /.{0,1000}WorldWind\-Stealer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

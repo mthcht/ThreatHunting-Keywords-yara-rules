@@ -10,70 +10,70 @@ rule TREVORspray
     strings:
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string1 = /\/TREVORspray\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/TREVORspray\.git.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string2 = /\/trevorspray\.log/ nocase ascii wide
+        $string2 = /.{0,1000}\/trevorspray\.log.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string3 = /\/tried_logins\.txt/ nocase ascii wide
+        $string3 = /.{0,1000}\/tried_logins\.txt.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string4 = /blacklanternsecurity\/trevorproxy/ nocase ascii wide
+        $string4 = /.{0,1000}blacklanternsecurity\/trevorproxy.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string5 = /blacklanternsecurity\/TREVORspray/ nocase ascii wide
+        $string5 = /.{0,1000}blacklanternsecurity\/TREVORspray.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string6 = /import\sBaseSprayModule/ nocase ascii wide
+        $string6 = /.{0,1000}import\sBaseSprayModule.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string7 = /spray.*\s\-\-recon\s.*\..*\s\-u\s.*\.txt\s\-\-threads\s10/ nocase ascii wide
+        $string7 = /.{0,1000}spray.{0,1000}\s\-\-recon\s.{0,1000}\..{0,1000}\s\-u\s.{0,1000}\.txt\s\-\-threads\s10.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string8 = /TlRMTVNTUAABAAAABYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAwAAAA/ nocase ascii wide
+        $string8 = /.{0,1000}TlRMTVNTUAABAAAABYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAwAAAA.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string9 = /trevorproxy\sssh/ nocase ascii wide
+        $string9 = /.{0,1000}trevorproxy\sssh.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string10 = /trevorproxy\ssubnet/ nocase ascii wide
+        $string10 = /.{0,1000}trevorproxy\ssubnet.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string11 = /trevorspray\s\-/ nocase ascii wide
+        $string11 = /.{0,1000}trevorspray\s\-.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string12 = /trevorspray\.cli/ nocase ascii wide
+        $string12 = /.{0,1000}trevorspray\.cli.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string13 = /trevorspray\.enumerators/ nocase ascii wide
+        $string13 = /.{0,1000}trevorspray\.enumerators.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string14 = /trevorspray\.looters/ nocase ascii wide
+        $string14 = /.{0,1000}trevorspray\.looters.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string15 = /trevorspray\.py/ nocase ascii wide
+        $string15 = /.{0,1000}trevorspray\.py.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string16 = /trevorspray\.sprayers/ nocase ascii wide
+        $string16 = /.{0,1000}trevorspray\.sprayers.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string17 = /trevorspray\/existent_users\.txt/ nocase ascii wide
+        $string17 = /.{0,1000}trevorspray\/existent_users\.txt.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string18 = /trevorspray\/valid_logins\.txt/ nocase ascii wide
+        $string18 = /.{0,1000}trevorspray\/valid_logins\.txt.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string19 = /TREVORspray\-dev/ nocase ascii wide
+        $string19 = /.{0,1000}TREVORspray\-dev.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string20 = /TREVORspray\-master/ nocase ascii wide
+        $string20 = /.{0,1000}TREVORspray\-master.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string21 = /TREVORspray\-trevorspray/ nocase ascii wide
+        $string21 = /.{0,1000}TREVORspray\-trevorspray.{0,1000}/ nocase ascii wide
         // Description: TREVORspray is a modular password sprayer with threading - clever proxying - loot modules and more
         // Reference: https://github.com/blacklanternsecurity/TREVORspray
-        $string22 = /Your\sMoms\sSmart\sVibrator/ nocase ascii wide
+        $string22 = /.{0,1000}Your\sMoms\sSmart\sVibrator.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

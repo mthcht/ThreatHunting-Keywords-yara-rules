@@ -10,13 +10,13 @@ rule Browser_C2
     strings:
         // Description: Post Exploitation agent which uses a browser to do C2 operations.
         // Reference: https://github.com/0x09AL/Browser-C2
-        $string1 = /\/Browser\-C2/ nocase ascii wide
+        $string1 = /.{0,1000}\/Browser\-C2.{0,1000}/ nocase ascii wide
         // Description: Post Exploitation agent which uses a browser to do C2 operations.
         // Reference: https://github.com/0x09AL/Browser-C2
-        $string2 = /Browser\-C2\.git/ nocase ascii wide
+        $string2 = /.{0,1000}Browser\-C2\.git.{0,1000}/ nocase ascii wide
         // Description: Post Exploitation agent which uses a browser to do C2 operations.
         // Reference: https://github.com/0x09AL/Browser-C2
-        $string3 = /Browser\-C2\-master\.zip/ nocase ascii wide
+        $string3 = /.{0,1000}Browser\-C2\-master\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

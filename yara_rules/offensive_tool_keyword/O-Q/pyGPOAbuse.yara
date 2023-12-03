@@ -10,10 +10,10 @@ rule pyGPOAbuse
     strings:
         // Description: python implementation of SharpGPOAbuse
         // Reference: https://github.com/Hackndo/pyGPOAbuse
-        $string1 = /\s\-hashes\slm:nt\s\-gpo\-id\s.*\s\-powershell\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-hashes\slm:nt\s\-gpo\-id\s.{0,1000}\s\-powershell\s.{0,1000}/ nocase ascii wide
         // Description: python implementation of SharpGPOAbuse
         // Reference: https://github.com/Hackndo/pyGPOAbuse
-        $string2 = /pygpoabuse\.py/ nocase ascii wide
+        $string2 = /.{0,1000}pygpoabuse\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

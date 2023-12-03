@@ -10,7 +10,7 @@ rule SharpUp
     strings:
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string1 = /SharpUp/ nocase ascii wide
+        $string1 = /.{0,1000}SharpUp.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

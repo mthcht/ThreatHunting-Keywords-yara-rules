@@ -10,10 +10,10 @@ rule Tool_X
     strings:
         // Description: Tool-X is a Kali Linux hacking tools installer for Termux and linux system. Tool-X was developed for Termux and linux based systems. Using Tool-X you can install almost 370+ hacking tools in Termux (android) and other Linux based distributions. Now Tool-X is available for Ubuntu Debian etc.
         // Reference: https://github.com/rajkumardusad/Tool-X
-        $string1 = /\/Tool\-X\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Tool\-X\.git.{0,1000}/ nocase ascii wide
         // Description: Tool-X is a Kali Linux hacking tools installer for Termux and linux system. Tool-X was developed for Termux and linux based systems. Using Tool-X you can install almost 370+ hacking tools in Termux (android) and other Linux based distributions. Now Tool-X is available for Ubuntu Debian etc.
         // Reference: https://github.com/rajkumardusad/Tool-X
-        $string2 = /rajkumardusad\/Tool\-X/ nocase ascii wide
+        $string2 = /.{0,1000}rajkumardusad\/Tool\-X.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

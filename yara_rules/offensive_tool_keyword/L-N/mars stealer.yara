@@ -10,7 +10,7 @@ rule mars_stealer
     strings:
         // Description: Self-removal 'mars stealer' command
         // Reference: https://3xp0rt.com/posts/mars-stealer
-        $string1 = /cmd\.exe\s\/c\stimeout\s\/t\s5\s\&\sdel\s\/f\s\/q\s.*\%s.*\s\&\sexit/ nocase ascii wide
+        $string1 = /.{0,1000}cmd\.exe\s\/c\stimeout\s\/t\s5\s\&\sdel\s\/f\s\/q\s.{0,1000}\%s.{0,1000}\s\&\sexit.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

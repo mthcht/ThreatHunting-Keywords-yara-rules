@@ -10,79 +10,79 @@ rule weakpass
     strings:
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string1 = /\/1\/all_in_one\.7z\.torrent/ nocase ascii wide
+        $string1 = /.{0,1000}\/1\/all_in_one\.7z\.torrent.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string2 = /\/1\/all_in_one_p\.7z/ nocase ascii wide
+        $string2 = /.{0,1000}\/1\/all_in_one_p\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string3 = /\/1\/all_in_one_w\.7z/ nocase ascii wide
+        $string3 = /.{0,1000}\/1\/all_in_one_w\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string4 = /\/dicassassin\.7z/ nocase ascii wide
+        $string4 = /.{0,1000}\/dicassassin\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string5 = /\/hashesorg2019\.gz/ nocase ascii wide
+        $string5 = /.{0,1000}\/hashesorg2019\.gz.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string6 = /\/weakpass\.git/ nocase ascii wide
+        $string6 = /.{0,1000}\/weakpass\.git.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string7 = /\/weakpass_2a\.gz/ nocase ascii wide
+        $string7 = /.{0,1000}\/weakpass_2a\.gz.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string8 = /\/weakpass_3a\.7z/ nocase ascii wide
+        $string8 = /.{0,1000}\/weakpass_3a\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string9 = /\\online_brute\.gz/ nocase ascii wide
+        $string9 = /.{0,1000}\\online_brute\.gz.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string10 = /cyclone\.hashesorg\.hashkiller\.combined/ nocase ascii wide
+        $string10 = /.{0,1000}cyclone\.hashesorg\.hashkiller\.combined.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string11 = /download\.weakpass\.com\// nocase ascii wide
+        $string11 = /.{0,1000}download\.weakpass\.com\/.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string12 = /github\.io\/weakpass\/generator\// nocase ascii wide
+        $string12 = /.{0,1000}github\.io\/weakpass\/generator\/.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string13 = /https:\/\/weakpass\.com\// nocase ascii wide
+        $string13 = /.{0,1000}https:\/\/weakpass\.com\/.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string14 = /js\-cracker\-client\/cracker\.js/ nocase ascii wide
+        $string14 = /.{0,1000}js\-cracker\-client\/cracker\.js.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string15 = /online_brute\.gz\.torrent/ nocase ascii wide
+        $string15 = /.{0,1000}online_brute\.gz\.torrent.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string16 = /weakpass\.com\/crack\-js/ nocase ascii wide
+        $string16 = /.{0,1000}weakpass\.com\/crack\-js.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string17 = /weakpass\.com\/generate/ nocase ascii wide
+        $string17 = /.{0,1000}weakpass\.com\/generate.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string18 = /weakpass\.com\/wordlist\// nocase ascii wide
+        $string18 = /.{0,1000}weakpass\.com\/wordlist\/.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string19 = /weakpass\/crack\-js/ nocase ascii wide
+        $string19 = /.{0,1000}weakpass\/crack\-js.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string20 = /weakpass_3\.7z/ nocase ascii wide
+        $string20 = /.{0,1000}weakpass_3\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string21 = /weakpass_3a\.7z\.torrent/ nocase ascii wide
+        $string21 = /.{0,1000}weakpass_3a\.7z\.torrent.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string22 = /weakpass\-main\./ nocase ascii wide
+        $string22 = /.{0,1000}weakpass\-main\..{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string23 = /wordlists.*all_in_one\.7z/ nocase ascii wide
+        $string23 = /.{0,1000}wordlists.{0,1000}all_in_one\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string24 = /xsukax\-Wordlist\-All\.7z/ nocase ascii wide
+        $string24 = /.{0,1000}xsukax\-Wordlist\-All\.7z.{0,1000}/ nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string25 = /zzzteph\/weakpass/ nocase ascii wide
+        $string25 = /.{0,1000}zzzteph\/weakpass.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

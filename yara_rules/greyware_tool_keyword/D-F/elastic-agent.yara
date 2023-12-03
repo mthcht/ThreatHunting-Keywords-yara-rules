@@ -10,7 +10,7 @@ rule elastic_agent
     strings:
         // Description: uninstall elast-agent from the system
         // Reference: N/A
-        $string1 = /elastic\-agent\.exe\suninstall/ nocase ascii wide
+        $string1 = /.{0,1000}elastic\-agent\.exe\suninstall.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

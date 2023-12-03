@@ -10,16 +10,16 @@ rule DFSCoerce
     strings:
         // Description: PoC for MS-DFSNM coerce authentication using NetrDfsRemoveStdRoot and NetrDfsAddStdRoot?
         // Reference: https://github.com/Wh04m1001/DFSCoerce
-        $string1 = /\/DFSCoerce\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/DFSCoerce\.git.{0,1000}/ nocase ascii wide
         // Description: PoC for MS-DFSNM coerce authentication using NetrDfsRemoveStdRoot and NetrDfsAddStdRoot?
         // Reference: https://github.com/Wh04m1001/DFSCoerce
-        $string2 = /dfscoerce\.py/ nocase ascii wide
+        $string2 = /.{0,1000}dfscoerce\.py.{0,1000}/ nocase ascii wide
         // Description: PoC for MS-DFSNM coerce authentication using NetrDfsRemoveStdRoot and NetrDfsAddStdRoot?
         // Reference: https://github.com/Wh04m1001/DFSCoerce
-        $string3 = /DFSCoerce\-main/ nocase ascii wide
+        $string3 = /.{0,1000}DFSCoerce\-main.{0,1000}/ nocase ascii wide
         // Description: PoC for MS-DFSNM coerce authentication using NetrDfsRemoveStdRoot and NetrDfsAddStdRoot?
         // Reference: https://github.com/Wh04m1001/DFSCoerce
-        $string4 = /Wh04m1001\/DFSCoerce/ nocase ascii wide
+        $string4 = /.{0,1000}Wh04m1001\/DFSCoerce.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

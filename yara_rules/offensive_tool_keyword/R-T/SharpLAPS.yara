@@ -10,13 +10,13 @@ rule SharpLAPS
     strings:
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string1 = /SharpLAPS\./ nocase ascii wide
+        $string1 = /.{0,1000}SharpLAPS\..{0,1000}/ nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string2 = /SharpLAPS\-main/ nocase ascii wide
+        $string2 = /.{0,1000}SharpLAPS\-main.{0,1000}/ nocase ascii wide
         // Description: Retrieve LAPS password from LDAP
         // Reference: https://github.com/swisskyrepo/SharpLAPS
-        $string3 = /swisskyrepo\/SharpLAPS/ nocase ascii wide
+        $string3 = /.{0,1000}swisskyrepo\/SharpLAPS.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

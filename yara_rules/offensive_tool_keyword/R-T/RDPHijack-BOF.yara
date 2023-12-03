@@ -10,22 +10,22 @@ rule RDPHijack_BOF
     strings:
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string1 = /beacon_inline_execute/ nocase ascii wide
+        $string1 = /.{0,1000}beacon_inline_execute.{0,1000}/ nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string2 = /bof\-rdphijack/ nocase ascii wide
+        $string2 = /.{0,1000}bof\-rdphijack.{0,1000}/ nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string3 = /rdphijack\./ nocase ascii wide
+        $string3 = /.{0,1000}rdphijack\..{0,1000}/ nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string4 = /rdphijack\.x64\./ nocase ascii wide
+        $string4 = /.{0,1000}rdphijack\.x64\..{0,1000}/ nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string5 = /rdphijack\.x86\./ nocase ascii wide
+        $string5 = /.{0,1000}rdphijack\.x86\..{0,1000}/ nocase ascii wide
         // Description: BOF - RDPHijack - Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string6 = /RDPHijack\-BOF/ nocase ascii wide
+        $string6 = /.{0,1000}RDPHijack\-BOF.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

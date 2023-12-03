@@ -10,25 +10,25 @@ rule Privileger
     strings:
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string1 = /\/Privileger\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Privileger\.git.{0,1000}/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string2 = /MzHmO\/Privileger/ nocase ascii wide
+        $string2 = /.{0,1000}MzHmO\/Privileger.{0,1000}/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string3 = /Privileger\.cpp/ nocase ascii wide
+        $string3 = /.{0,1000}Privileger\.cpp.{0,1000}/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string4 = /Privileger\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}Privileger\.exe.{0,1000}/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string5 = /Privileger\-main\./ nocase ascii wide
+        $string5 = /.{0,1000}Privileger\-main\..{0,1000}/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string6 = /Privilegerx64\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}Privilegerx64\.exe.{0,1000}/ nocase ascii wide
         // Description: Privileger is a tool to work with Windows Privileges
         // Reference: https://github.com/MzHmO/Privileger
-        $string7 = /Privilegerx86\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}Privilegerx86\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

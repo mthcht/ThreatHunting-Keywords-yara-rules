@@ -10,10 +10,10 @@ rule wpaf
     strings:
         // Description: WordPress admin finder
         // Reference: https://github.com/kancotdiq/wpaf
-        $string1 = /\/wpaf\/finder\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\/wpaf\/finder\.py.{0,1000}/ nocase ascii wide
         // Description: WordPress admin finder
         // Reference: https://github.com/kancotdiq/wpaf
-        $string2 = /kancotdiq\/wpaf/ nocase ascii wide
+        $string2 = /.{0,1000}kancotdiq\/wpaf.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

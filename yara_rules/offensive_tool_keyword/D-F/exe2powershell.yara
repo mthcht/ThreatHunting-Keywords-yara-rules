@@ -10,22 +10,22 @@ rule exe2powershell
     strings:
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string1 = /\/exe2powershell/ nocase ascii wide
+        $string1 = /.{0,1000}\/exe2powershell.{0,1000}/ nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string2 = /exe2bat\.cpp/ nocase ascii wide
+        $string2 = /.{0,1000}exe2bat\.cpp.{0,1000}/ nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string3 = /exe2bat\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}exe2bat\.exe.{0,1000}/ nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string4 = /exe2powershell\.cpp/ nocase ascii wide
+        $string4 = /.{0,1000}exe2powershell\.cpp.{0,1000}/ nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string5 = /exe2powershell\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}exe2powershell\.exe.{0,1000}/ nocase ascii wide
         // Description: exe2powershell is used to convert any binary file to a bat/powershell file
         // Reference: https://github.com/yanncam/exe2powershell
-        $string6 = /exe2powershell\-master/ nocase ascii wide
+        $string6 = /.{0,1000}exe2powershell\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

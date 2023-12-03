@@ -10,7 +10,7 @@ rule xcopy
     strings:
         // Description: command abused by attackers - exfiltraiton to remote host with xcopy
         // Reference: N/A
-        $string1 = /xcopy\sc:\\.*\s\\\\.*\\c\$/ nocase ascii wide
+        $string1 = /.{0,1000}xcopy\sc:\\.{0,1000}\s\\\\.{0,1000}\\c\$.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

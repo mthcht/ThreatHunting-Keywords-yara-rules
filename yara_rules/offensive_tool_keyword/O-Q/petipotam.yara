@@ -10,25 +10,25 @@ rule petipotam
     strings:
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string1 = /\/PetitPotam\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/PetitPotam\.git.{0,1000}/ nocase ascii wide
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string2 = /PetitPotam\.cpp/ nocase ascii wide
+        $string2 = /.{0,1000}PetitPotam\.cpp.{0,1000}/ nocase ascii wide
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string3 = /PetitPotam\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}PetitPotam\.exe.{0,1000}/ nocase ascii wide
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string4 = /PetitPotam\.py/ nocase ascii wide
+        $string4 = /.{0,1000}PetitPotam\.py.{0,1000}/ nocase ascii wide
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string5 = /PetitPotam\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}PetitPotam\.sln.{0,1000}/ nocase ascii wide
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string6 = /topotam\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}topotam\.exe.{0,1000}/ nocase ascii wide
         // Description: PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions.
         // Reference: https://github.com/topotam/PetitPotam
-        $string7 = /topotam\/PetitPotam/ nocase ascii wide
+        $string7 = /.{0,1000}topotam\/PetitPotam.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

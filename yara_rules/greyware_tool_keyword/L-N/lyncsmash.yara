@@ -10,7 +10,7 @@ rule lyncsmash
     strings:
         // Description: default user agent used by lyncsmash.py - a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string1 = /UCCAPI\/16\.0\.13328\.20130\sOC\/16\.0\.13426\.20234/ nocase ascii wide
+        $string1 = /.{0,1000}UCCAPI\/16\.0\.13328\.20130\sOC\/16\.0\.13426\.20234.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

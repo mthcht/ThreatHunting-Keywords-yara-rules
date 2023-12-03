@@ -10,10 +10,10 @@ rule kismet
     strings:
         // Description: Kismet is a wireless network and device detector. sniffer. wardriving tool. and WIDS (wireless intrusion detection) framework.
         // Reference: https://github.com/kismetwireless/kismet
-        $string1 = /\/kismet/ nocase ascii wide
+        $string1 = /.{0,1000}\/kismet.{0,1000}/ nocase ascii wide
         // Description: Kismet is a wireless network and device detector. sniffer. wardriving tool. and WIDS (wireless intrusion detection) framework.
         // Reference: https://github.com/kismetwireless/kismet
-        $string2 = /\/kismetwireless\// nocase ascii wide
+        $string2 = /.{0,1000}\/kismetwireless\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

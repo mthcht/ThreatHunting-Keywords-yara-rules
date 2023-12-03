@@ -10,31 +10,31 @@ rule ntlmquic
     strings:
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string1 = /\/ntlmquic/ nocase ascii wide
+        $string1 = /.{0,1000}\/ntlmquic.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string2 = /\/quicserver\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/quicserver\.exe.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string3 = /msquic_openssl\/msquic\.dll/ nocase ascii wide
+        $string3 = /.{0,1000}msquic_openssl\/msquic\.dll.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string4 = /msquic_openssl\/msquic\.lib/ nocase ascii wide
+        $string4 = /.{0,1000}msquic_openssl\/msquic\.lib.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string5 = /ntlmquic\./ nocase ascii wide
+        $string5 = /.{0,1000}ntlmquic\..{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string6 = /ntlmquic\-go/ nocase ascii wide
+        $string6 = /.{0,1000}ntlmquic\-go.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string7 = /ntlmquic\-master/ nocase ascii wide
+        $string7 = /.{0,1000}ntlmquic\-master.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string8 = /xcopy\s\/y\s\/d\s\s.*\\msquic_schannel\\msquic\.dll/ nocase ascii wide
+        $string8 = /.{0,1000}xcopy\s\/y\s\/d\s\s.{0,1000}\\msquic_schannel\\msquic\.dll.{0,1000}/ nocase ascii wide
         // Description: POC tools for exploring SMB over QUIC protocol
         // Reference: https://github.com/xpn/ntlmquic
-        $string9 = /xpn.*ntlmquic/ nocase ascii wide
+        $string9 = /.{0,1000}xpn.{0,1000}ntlmquic.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

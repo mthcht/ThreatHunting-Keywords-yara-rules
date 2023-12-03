@@ -10,13 +10,13 @@ rule rapid7
     strings:
         // Description: Vulnerability scanner
         // Reference: https://www.rapid7.com/products/nexpose/
-        $string1 = /Nexpose/ nocase ascii wide
+        $string1 = /.{0,1000}Nexpose.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://www.rapid7.com/
-        $string2 = /Rapid7/ nocase ascii wide
+        $string2 = /.{0,1000}Rapid7.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://www.rapid7.com/
-        $string3 = /test\.endpoint\.rapid7\.com/ nocase ascii wide
+        $string3 = /.{0,1000}test\.endpoint\.rapid7\.com.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

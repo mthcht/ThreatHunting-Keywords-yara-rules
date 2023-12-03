@@ -10,319 +10,319 @@ rule AutoRecon
     strings:
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string1 = /\sautorecon\.py\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sautorecon\.py\s.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string2 = /\/AutoRecon\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/AutoRecon\.git.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string3 = /\/bruteforce\-ftp\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\/bruteforce\-ftp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string4 = /\/bruteforce\-http\.py/ nocase ascii wide
+        $string4 = /.{0,1000}\/bruteforce\-http\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string5 = /\/bruteforce\-rdp\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/bruteforce\-rdp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string6 = /\/bruteforce\-smb\.py/ nocase ascii wide
+        $string6 = /.{0,1000}\/bruteforce\-smb\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string7 = /\/bruteforce\-ssh\.py/ nocase ascii wide
+        $string7 = /.{0,1000}\/bruteforce\-ssh\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string8 = /\/dirbuster\.py/ nocase ascii wide
+        $string8 = /.{0,1000}\/dirbuster\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string9 = /\/dnsrecon\.py/ nocase ascii wide
+        $string9 = /.{0,1000}\/dnsrecon\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string10 = /\/dnsrecon\-subdomain\-bruteforce\.py/ nocase ascii wide
+        $string10 = /.{0,1000}\/dnsrecon\-subdomain\-bruteforce\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string11 = /\/dns\-zone\-transfer\.py/ nocase ascii wide
+        $string11 = /.{0,1000}\/dns\-zone\-transfer\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string12 = /\/enum4linux\.py/ nocase ascii wide
+        $string12 = /.{0,1000}\/enum4linux\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string13 = /\/oracle\-patator\.py/ nocase ascii wide
+        $string13 = /.{0,1000}\/oracle\-patator\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string14 = /\/oracle\-scanner\.py/ nocase ascii wide
+        $string14 = /.{0,1000}\/oracle\-scanner\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string15 = /\/oracle\-tnscmd\.py/ nocase ascii wide
+        $string15 = /.{0,1000}\/oracle\-tnscmd\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string16 = /\/rpcdump\.py/ nocase ascii wide
+        $string16 = /.{0,1000}\/rpcdump\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string17 = /\/rsync\-list\-files\.py/ nocase ascii wide
+        $string17 = /.{0,1000}\/rsync\-list\-files\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string18 = /\/sipvicious\.py/ nocase ascii wide
+        $string18 = /.{0,1000}\/sipvicious\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string19 = /\/smbmap\.py/ nocase ascii wide
+        $string19 = /.{0,1000}\/smbmap\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string20 = /\/smb\-vuln\.py/ nocase ascii wide
+        $string20 = /.{0,1000}\/smb\-vuln\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string21 = /\/wpscan\.py/ nocase ascii wide
+        $string21 = /.{0,1000}\/wpscan\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string22 = /\\AutoRecon\-main/ nocase ascii wide
+        $string22 = /.{0,1000}\\AutoRecon\-main.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string23 = /\\bruteforce\-ftp\.py/ nocase ascii wide
+        $string23 = /.{0,1000}\\bruteforce\-ftp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string24 = /\\bruteforce\-http\.py/ nocase ascii wide
+        $string24 = /.{0,1000}\\bruteforce\-http\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string25 = /\\bruteforce\-rdp\.py/ nocase ascii wide
+        $string25 = /.{0,1000}\\bruteforce\-rdp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string26 = /\\bruteforce\-smb\.py/ nocase ascii wide
+        $string26 = /.{0,1000}\\bruteforce\-smb\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string27 = /\\bruteforce\-ssh\.py/ nocase ascii wide
+        $string27 = /.{0,1000}\\bruteforce\-ssh\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string28 = /\\dirbuster\.py/ nocase ascii wide
+        $string28 = /.{0,1000}\\dirbuster\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string29 = /\\dnsrecon\.py/ nocase ascii wide
+        $string29 = /.{0,1000}\\dnsrecon\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string30 = /\\dnsrecon\-subdomain\-bruteforce\.py/ nocase ascii wide
+        $string30 = /.{0,1000}\\dnsrecon\-subdomain\-bruteforce\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string31 = /\\dns\-zone\-transfer\.py/ nocase ascii wide
+        $string31 = /.{0,1000}\\dns\-zone\-transfer\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string32 = /\\enum4linux\.py/ nocase ascii wide
+        $string32 = /.{0,1000}\\enum4linux\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string33 = /\\ldap\-search\.py/ nocase ascii wide
+        $string33 = /.{0,1000}\\ldap\-search\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string34 = /\\lookup\-sid\.py/ nocase ascii wide
+        $string34 = /.{0,1000}\\lookup\-sid\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string35 = /\\nbtscan\.py/ nocase ascii wide
+        $string35 = /.{0,1000}\\nbtscan\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string36 = /\\nikto\.py/ nocase ascii wide
+        $string36 = /.{0,1000}\\nikto\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string37 = /\\nmap\-ajp\.py/ nocase ascii wide
+        $string37 = /.{0,1000}\\nmap\-ajp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string38 = /\\nmap\-cassandra\.py/ nocase ascii wide
+        $string38 = /.{0,1000}\\nmap\-cassandra\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string39 = /\\nmap\-cups\.py/ nocase ascii wide
+        $string39 = /.{0,1000}\\nmap\-cups\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string40 = /\\nmap\-distccd\.py/ nocase ascii wide
+        $string40 = /.{0,1000}\\nmap\-distccd\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string41 = /\\nmap\-dns\.py/ nocase ascii wide
+        $string41 = /.{0,1000}\\nmap\-dns\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string42 = /\\nmap\-finger\.py/ nocase ascii wide
+        $string42 = /.{0,1000}\\nmap\-finger\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string43 = /\\nmap\-ftp\.py/ nocase ascii wide
+        $string43 = /.{0,1000}\\nmap\-ftp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string44 = /\\nmap\-http\.py/ nocase ascii wide
+        $string44 = /.{0,1000}\\nmap\-http\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string45 = /\\nmap\-imap\.py/ nocase ascii wide
+        $string45 = /.{0,1000}\\nmap\-imap\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string46 = /\\nmap\-irc\.py/ nocase ascii wide
+        $string46 = /.{0,1000}\\nmap\-irc\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string47 = /\\nmap\-kerberos\.py/ nocase ascii wide
+        $string47 = /.{0,1000}\\nmap\-kerberos\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string48 = /\\nmap\-ldap\.py/ nocase ascii wide
+        $string48 = /.{0,1000}\\nmap\-ldap\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string49 = /\\nmap\-mongodb\.py/ nocase ascii wide
+        $string49 = /.{0,1000}\\nmap\-mongodb\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string50 = /\\nmap\-mountd\.py/ nocase ascii wide
+        $string50 = /.{0,1000}\\nmap\-mountd\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string51 = /\\nmap\-msrpc\.py/ nocase ascii wide
+        $string51 = /.{0,1000}\\nmap\-msrpc\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string52 = /\\nmap\-mssql\.py/ nocase ascii wide
+        $string52 = /.{0,1000}\\nmap\-mssql\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string53 = /\\nmap\-multicast\-dns\.py/ nocase ascii wide
+        $string53 = /.{0,1000}\\nmap\-multicast\-dns\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string54 = /\\nmap\-mysql\.py/ nocase ascii wide
+        $string54 = /.{0,1000}\\nmap\-mysql\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string55 = /\\nmap\-nfs\.py/ nocase ascii wide
+        $string55 = /.{0,1000}\\nmap\-nfs\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string56 = /\\nmap\-nntp\.py/ nocase ascii wide
+        $string56 = /.{0,1000}\\nmap\-nntp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string57 = /\\nmap\-ntp\.py/ nocase ascii wide
+        $string57 = /.{0,1000}\\nmap\-ntp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string58 = /\\nmap\-oracle\.py/ nocase ascii wide
+        $string58 = /.{0,1000}\\nmap\-oracle\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string59 = /\\nmap\-pop3\.py/ nocase ascii wide
+        $string59 = /.{0,1000}\\nmap\-pop3\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string60 = /\\nmap\-rdp\.py/ nocase ascii wide
+        $string60 = /.{0,1000}\\nmap\-rdp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string61 = /\\nmap\-redis\.py/ nocase ascii wide
+        $string61 = /.{0,1000}\\nmap\-redis\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string62 = /\\nmap\-rmi\.py/ nocase ascii wide
+        $string62 = /.{0,1000}\\nmap\-rmi\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string63 = /\\nmap\-rsync\.py/ nocase ascii wide
+        $string63 = /.{0,1000}\\nmap\-rsync\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string64 = /\\nmap\-sip\.py/ nocase ascii wide
+        $string64 = /.{0,1000}\\nmap\-sip\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string65 = /\\nmap\-smb\.py/ nocase ascii wide
+        $string65 = /.{0,1000}\\nmap\-smb\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string66 = /\\nmap\-smtp\.py/ nocase ascii wide
+        $string66 = /.{0,1000}\\nmap\-smtp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string67 = /\\nmap\-snmp\.py/ nocase ascii wide
+        $string67 = /.{0,1000}\\nmap\-snmp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string68 = /\\nmap\-ssh\.py/ nocase ascii wide
+        $string68 = /.{0,1000}\\nmap\-ssh\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string69 = /\\nmap\-telnet\.py/ nocase ascii wide
+        $string69 = /.{0,1000}\\nmap\-telnet\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string70 = /\\nmap\-tftp\.py/ nocase ascii wide
+        $string70 = /.{0,1000}\\nmap\-tftp\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string71 = /\\nmap\-vnc\.py/ nocase ascii wide
+        $string71 = /.{0,1000}\\nmap\-vnc\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string72 = /\\onesixtyone\.py/ nocase ascii wide
+        $string72 = /.{0,1000}\\onesixtyone\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string73 = /\\oracle\-patator\.py/ nocase ascii wide
+        $string73 = /.{0,1000}\\oracle\-patator\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string74 = /\\oracle\-scanner\.py/ nocase ascii wide
+        $string74 = /.{0,1000}\\oracle\-scanner\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string75 = /\\oracle\-tnscmd\.py/ nocase ascii wide
+        $string75 = /.{0,1000}\\oracle\-tnscmd\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string76 = /\\rpcdump\.py/ nocase ascii wide
+        $string76 = /.{0,1000}\\rpcdump\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string77 = /\\smbmap\.py/ nocase ascii wide
+        $string77 = /.{0,1000}\\smbmap\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string78 = /_smtp_user\-enum_hydra_/ nocase ascii wide
+        $string78 = /.{0,1000}_smtp_user\-enum_hydra_.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string79 = /_snmp_snmpwalk\.txt/ nocase ascii wide
+        $string79 = /.{0,1000}_snmp_snmpwalk\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string80 = /_snmp_snmpwalk_process_paths\.txt/ nocase ascii wide
+        $string80 = /.{0,1000}_snmp_snmpwalk_process_paths\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string81 = /_snmp_snmpwalk_running_processes\.txt/ nocase ascii wide
+        $string81 = /.{0,1000}_snmp_snmpwalk_running_processes\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string82 = /_snmp_snmpwalk_software_names\.txt/ nocase ascii wide
+        $string82 = /.{0,1000}_snmp_snmpwalk_software_names\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string83 = /_snmp_snmpwalk_storage_units\.txt/ nocase ascii wide
+        $string83 = /.{0,1000}_snmp_snmpwalk_storage_units\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string84 = /_snmp_snmpwalk_system_processes\.txt/ nocase ascii wide
+        $string84 = /.{0,1000}_snmp_snmpwalk_system_processes\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string85 = /_snmp_snmpwalk_tcp_ports\.txt/ nocase ascii wide
+        $string85 = /.{0,1000}_snmp_snmpwalk_tcp_ports\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string86 = /_snmp_snmpwalk_user_accounts\.txt/ nocase ascii wide
+        $string86 = /.{0,1000}_snmp_snmpwalk_user_accounts\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string87 = /apt\sinstall\sseclists/ nocase ascii wide
+        $string87 = /.{0,1000}apt\sinstall\sseclists.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string88 = /autorecon\s\-t\s/ nocase ascii wide
+        $string88 = /.{0,1000}autorecon\s\-t\s.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string89 = /AutoRecon\\autorecon\.py/ nocase ascii wide
+        $string89 = /.{0,1000}AutoRecon\\autorecon\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string90 = /darkweb2017\-top100\.txt/ nocase ascii wide
+        $string90 = /.{0,1000}darkweb2017\-top100\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string91 = /import.*autorecon\.config/ nocase ascii wide
+        $string91 = /.{0,1000}import.{0,1000}autorecon\.config.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string92 = /import.*autorecon\.plugins/ nocase ascii wide
+        $string92 = /.{0,1000}import.{0,1000}autorecon\.plugins.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string93 = /pip\suninstall\sautorecon/ nocase ascii wide
+        $string93 = /.{0,1000}pip\suninstall\sautorecon.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string94 = /pipx\supgrade\sautorecon/ nocase ascii wide
+        $string94 = /.{0,1000}pipx\supgrade\sautorecon.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string95 = /smbmap\-execute\-command\.txt/ nocase ascii wide
+        $string95 = /.{0,1000}smbmap\-execute\-command\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string96 = /smbmap\-list\-contents\.txt/ nocase ascii wide
+        $string96 = /.{0,1000}smbmap\-list\-contents\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string97 = /smbmap\-share\-permissions\.txt/ nocase ascii wide
+        $string97 = /.{0,1000}smbmap\-share\-permissions\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string98 = /smtp\-user\-enum\.py/ nocase ascii wide
+        $string98 = /.{0,1000}smtp\-user\-enum\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string99 = /subdomain\-enumeration\.py/ nocase ascii wide
+        $string99 = /.{0,1000}subdomain\-enumeration\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string100 = /subdomains\-top1million\-110000\.txt/ nocase ascii wide
+        $string100 = /.{0,1000}subdomains\-top1million\-110000\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string101 = /Tib3rius\/AutoRecon/ nocase ascii wide
+        $string101 = /.{0,1000}Tib3rius\/AutoRecon.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string102 = /top\-usernames\-shortlist\.txt/ nocase ascii wide
+        $string102 = /.{0,1000}top\-usernames\-shortlist\.txt.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string103 = /virtual\-host\-enumeration\.py/ nocase ascii wide
+        $string103 = /.{0,1000}virtual\-host\-enumeration\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string104 = /winrm\-detection\.py/ nocase ascii wide
+        $string104 = /.{0,1000}winrm\-detection\.py.{0,1000}/ nocase ascii wide
         // Description: AutoRecon is a multi-threaded network reconnaissance tool which performs automated enumeration of services.
         // Reference: https://github.com/Tib3rius/AutoRecon
-        $string105 = /wkhtmltoimage\.py/ nocase ascii wide
+        $string105 = /.{0,1000}wkhtmltoimage\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

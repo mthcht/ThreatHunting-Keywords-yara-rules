@@ -10,16 +10,16 @@ rule Timeroast
     strings:
         // Description: Timeroasting takes advantage of Windows NTP authentication mechanism allowing unauthenticated attackers to effectively request a password hash of any computer or trust account by sending an NTP request with that account's RID
         // Reference: https://github.com/SecuraBV/Timeroast
-        $string1 = /extra\-scripts.*timecrack\.py/ nocase ascii wide
+        $string1 = /.{0,1000}extra\-scripts.{0,1000}timecrack\.py.{0,1000}/ nocase ascii wide
         // Description: Timeroasting takes advantage of Windows NTP authentication mechanism allowing unauthenticated attackers to effectively request a password hash of any computer or trust account by sending an NTP request with that account's RID
         // Reference: https://github.com/SecuraBV/Timeroast
-        $string2 = /kirbi_to_hashcat\.py/ nocase ascii wide
+        $string2 = /.{0,1000}kirbi_to_hashcat\.py.{0,1000}/ nocase ascii wide
         // Description: Timeroasting takes advantage of Windows NTP authentication mechanism allowing unauthenticated attackers to effectively request a password hash of any computer or trust account by sending an NTP request with that account's RID
         // Reference: https://github.com/SecuraBV/Timeroast
-        $string3 = /timeroast\.ps1/ nocase ascii wide
+        $string3 = /.{0,1000}timeroast\.ps1.{0,1000}/ nocase ascii wide
         // Description: Timeroasting takes advantage of Windows NTP authentication mechanism allowing unauthenticated attackers to effectively request a password hash of any computer or trust account by sending an NTP request with that account's RID
         // Reference: https://github.com/SecuraBV/Timeroast
-        $string4 = /timeroast\.py/ nocase ascii wide
+        $string4 = /.{0,1000}timeroast\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

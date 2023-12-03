@@ -10,13 +10,13 @@ rule nltest
     strings:
         // Description: enumerate domain trusts with nltest
         // Reference: N/A
-        $string1 = /nltest\s\/all_trusts/ nocase ascii wide
+        $string1 = /.{0,1000}nltest\s\/all_trusts.{0,1000}/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: N/A
-        $string2 = /nltest\s\/dclist/ nocase ascii wide
+        $string2 = /.{0,1000}nltest\s\/dclist.{0,1000}/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: N/A
-        $string3 = /nltest\s\/domain_trusts/ nocase ascii wide
+        $string3 = /.{0,1000}nltest\s\/domain_trusts.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule chcp
     strings:
         // Description: chcp displays the number of the active console code page
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string1 = /cmd\.exe\s\/c\schcp\s\>\&2/ nocase ascii wide
+        $string1 = /.{0,1000}cmd\.exe\s\/c\schcp\s\>\&2.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule dnsteal
     strings:
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
-        $string1 = /\/dnsteal/ nocase ascii wide
+        $string1 = /.{0,1000}\/dnsteal.{0,1000}/ nocase ascii wide
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
-        $string2 = /dnsteal\.git/ nocase ascii wide
+        $string2 = /.{0,1000}dnsteal\.git.{0,1000}/ nocase ascii wide
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
-        $string3 = /dnsteal\.py/ nocase ascii wide
+        $string3 = /.{0,1000}dnsteal\.py.{0,1000}/ nocase ascii wide
         // Description: This is a fake DNS server that allows you to stealthily extract files from a victim machine through DNS requests.
         // Reference: https://github.com/m57/dnsteal
-        $string4 = /dnsteal\-master/ nocase ascii wide
+        $string4 = /.{0,1000}dnsteal\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule hashcat_rule
     strings:
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string1 = /\/hashcat\-rule\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/hashcat\-rule\.git.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string2 = /\/password_ruled\.txt/ nocase ascii wide
+        $string2 = /.{0,1000}\/password_ruled\.txt.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string3 = /clem9669\/hashcat\-rule/ nocase ascii wide
+        $string3 = /.{0,1000}clem9669\/hashcat\-rule.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string4 = /clem9669_case\.rule/ nocase ascii wide
+        $string4 = /.{0,1000}clem9669_case\.rule.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string5 = /clem9669_large\.rule/ nocase ascii wide
+        $string5 = /.{0,1000}clem9669_large\.rule.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string6 = /clem9669_medium\.rule/ nocase ascii wide
+        $string6 = /.{0,1000}clem9669_medium\.rule.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string7 = /clem9669_small\.rule/ nocase ascii wide
+        $string7 = /.{0,1000}clem9669_small\.rule.{0,1000}/ nocase ascii wide
         // Description: Rule for hashcat or john. Aiming to crack how people generate their password
         // Reference: https://github.com/clem9669/hashcat-rule
-        $string8 = /hashcat\-rule\-master/ nocase ascii wide
+        $string8 = /.{0,1000}hashcat\-rule\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

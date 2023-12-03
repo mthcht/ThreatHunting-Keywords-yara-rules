@@ -10,37 +10,37 @@ rule SharpTerminator
     strings:
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string1 = /\.exe.*\\Terminator\.sys/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe.{0,1000}\\Terminator\.sys.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string2 = /\/SharpTerminator\// nocase ascii wide
+        $string2 = /.{0,1000}\/SharpTerminator\/.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string3 = /\/terminate\/Terminator\.sys/ nocase ascii wide
+        $string3 = /.{0,1000}\/terminate\/Terminator\.sys.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string4 = /\\SharpTerminator\.csproj/ nocase ascii wide
+        $string4 = /.{0,1000}\\SharpTerminator\.csproj.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string5 = /http.*:\/\/.*\/Terminator\.sys/ nocase ascii wide
+        $string5 = /.{0,1000}http.{0,1000}:\/\/.{0,1000}\/Terminator\.sys/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string6 = /mertdas\/SharpTerminator/ nocase ascii wide
+        $string6 = /.{0,1000}mertdas\/SharpTerminator.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string7 = /sc\screate\sTerminator\s.*\.sys/ nocase ascii wide
+        $string7 = /.{0,1000}sc\screate\sTerminator\s.{0,1000}\.sys.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string8 = /SharpTerminator\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}SharpTerminator\.exe.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string9 = /SharpTerminator\.git/ nocase ascii wide
+        $string9 = /.{0,1000}SharpTerminator\.git.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string10 = /SharpTerminator\.sln/ nocase ascii wide
+        $string10 = /.{0,1000}SharpTerminator\.sln.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string11 = /SharpTerminator\-main\.zip/ nocase ascii wide
+        $string11 = /.{0,1000}SharpTerminator\-main\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

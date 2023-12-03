@@ -10,49 +10,49 @@ rule Heroinn
     strings:
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string1 = /\/Heroinn\// nocase ascii wide
+        $string1 = /.{0,1000}\/Heroinn\/.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string2 = /\/shell\/shell_port\./ nocase ascii wide
+        $string2 = /.{0,1000}\/shell\/shell_port\..{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string3 = /0x9999997B3deF7b69c09D7a9CA65E5242fb04a764/ nocase ascii wide
+        $string3 = /.{0,1000}0x9999997B3deF7b69c09D7a9CA65E5242fb04a764.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string4 = /1HeroYcNYMhjsq8RYCx1stSaRZnQd9B9Eq/ nocase ascii wide
+        $string4 = /.{0,1000}1HeroYcNYMhjsq8RYCx1stSaRZnQd9B9Eq.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string5 = /b23r0\/Heroinn/ nocase ascii wide
+        $string5 = /.{0,1000}b23r0\/Heroinn.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string6 = /Heroinn\sFTP/ nocase ascii wide
+        $string6 = /.{0,1000}Heroinn\sFTP.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string7 = /heroinn_client/ nocase ascii wide
+        $string7 = /.{0,1000}heroinn_client.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string8 = /heroinn_core/ nocase ascii wide
+        $string8 = /.{0,1000}heroinn_core.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string9 = /heroinn_ftp/ nocase ascii wide
+        $string9 = /.{0,1000}heroinn_ftp.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string10 = /heroinn_shell/ nocase ascii wide
+        $string10 = /.{0,1000}heroinn_shell.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string11 = /heroinn_util/ nocase ascii wide
+        $string11 = /.{0,1000}heroinn_util.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string12 = /HeroinnApp/ nocase ascii wide
+        $string12 = /.{0,1000}HeroinnApp.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string13 = /HeroinnProtocol/ nocase ascii wide
+        $string13 = /.{0,1000}HeroinnProtocol.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string14 = /HeroinnServerCommand/ nocase ascii wide
+        $string14 = /.{0,1000}HeroinnServerCommand.{0,1000}/ nocase ascii wide
         // Description: A cross platform C2/post-exploitation framework implementation by Rust.
         // Reference: https://github.com/b23r0/Heroinn
-        $string15 = /th3rd\/heroinn/ nocase ascii wide
+        $string15 = /.{0,1000}th3rd\/heroinn.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

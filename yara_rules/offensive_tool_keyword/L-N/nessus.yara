@@ -10,49 +10,49 @@ rule nessus
     strings:
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string1 = /\/opt\/nessus\// nocase ascii wide
+        $string1 = /.{0,1000}\/opt\/nessus\/.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string2 = /log4shell.*\.nessus\.org/ nocase ascii wide
+        $string2 = /.{0,1000}log4shell.{0,1000}\.nessus\.org.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string3 = /nessus.*\s\-\-set\slisten_address\=127\.0\.0\.1/ nocase ascii wide
+        $string3 = /.{0,1000}nessus.{0,1000}\s\-\-set\slisten_address\=127\.0\.0\.1.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string4 = /Nessus\-.*\.deb/ nocase ascii wide
+        $string4 = /.{0,1000}Nessus\-.{0,1000}\.deb.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string5 = /Nessus\-.*\.dmg/ nocase ascii wide
+        $string5 = /.{0,1000}Nessus\-.{0,1000}\.dmg.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string6 = /Nessus\-.*\.msi/ nocase ascii wide
+        $string6 = /.{0,1000}Nessus\-.{0,1000}\.msi.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string7 = /Nessus\-.*\.rpm/ nocase ascii wide
+        $string7 = /.{0,1000}Nessus\-.{0,1000}\.rpm.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string8 = /Nessus\-.*\.tar\.gz/ nocase ascii wide
+        $string8 = /.{0,1000}Nessus\-.{0,1000}\.tar\.gz.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string9 = /Nessus\-.*\.txz/ nocase ascii wide
+        $string9 = /.{0,1000}Nessus\-.{0,1000}\.txz.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string10 = /nessuscli\sfetch/ nocase ascii wide
+        $string10 = /.{0,1000}nessuscli\sfetch.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string11 = /nessuscli\sfix/ nocase ascii wide
+        $string11 = /.{0,1000}nessuscli\sfix.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string12 = /nessus\-updates.*\.tar\.gz/ nocase ascii wide
+        $string12 = /.{0,1000}nessus\-updates.{0,1000}\.tar\.gz.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string13 = /plugins\.nessus\.org\./ nocase ascii wide
+        $string13 = /.{0,1000}plugins\.nessus\.org\..{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string14 = /systemctl\sstart\snessusd/ nocase ascii wide
+        $string14 = /.{0,1000}systemctl\sstart\snessusd.{0,1000}/ nocase ascii wide
         // Description: Vulnerability scanner
         // Reference: https://fr.tenable.com/products/nessus
-        $string15 = /tenable\.com\/downloads\/nessus/ nocase ascii wide
+        $string15 = /.{0,1000}tenable\.com\/downloads\/nessus.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

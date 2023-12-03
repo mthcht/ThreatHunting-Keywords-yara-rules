@@ -10,7 +10,7 @@ rule _base64
     strings:
         // Description: start of an executable payload in base64
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/MockDirUACBypass
-        $string1 = /TVqQAAMAAAAEAAAA/ nocase ascii wide
+        $string1 = /.{0,1000}TVqQAAMAAAAEAAAA.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule PayGen
     strings:
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string1 = /\/signer\-exe\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\/signer\-exe\.py.{0,1000}/ nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string2 = /PayGen.*python3\sgenerate\.py/ nocase ascii wide
+        $string2 = /.{0,1000}PayGen.{0,1000}python3\sgenerate\.py.{0,1000}/ nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string3 = /shellcode\-exec\.ps1/ nocase ascii wide
+        $string3 = /.{0,1000}shellcode\-exec\.ps1.{0,1000}/ nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string4 = /shellcode\-runner\.py/ nocase ascii wide
+        $string4 = /.{0,1000}shellcode\-runner\.py.{0,1000}/ nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
-        $string5 = /youhacker55\/PayGen/ nocase ascii wide
+        $string5 = /.{0,1000}youhacker55\/PayGen.{0,1000}/ nocase ascii wide
         // Description: FUD metasploit Persistence RAT
         // Reference: https://github.com/youhacker55/PayGen
         $string6 = /cd\sPayGen/ nocase ascii wide

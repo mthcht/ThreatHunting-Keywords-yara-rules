@@ -10,7 +10,7 @@ rule cirt_fuzzer
     strings:
         // Description: A simple TCP/UDP protocol fuzzer.
         // Reference: https://www.ecrimelabs.com/
-        $string1 = /cirt\-fuzzer/ nocase ascii wide
+        $string1 = /.{0,1000}cirt\-fuzzer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

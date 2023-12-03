@@ -10,7 +10,7 @@ rule Simple_Reverse_Shell
     strings:
         // Description: Simple C++ reverse shell without obfuscation to avoid Win 11 defender detection (At the time of publication
         // Reference: https://github.com/tihanyin/Simple-Reverse-Shell/
-        $string1 = /\/Simple\-Reverse\-Shell/ nocase ascii wide
+        $string1 = /.{0,1000}\/Simple\-Reverse\-Shell.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

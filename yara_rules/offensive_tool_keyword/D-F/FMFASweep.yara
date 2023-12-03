@@ -10,16 +10,16 @@ rule FMFASweep
     strings:
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
-        $string1 = /\/MFASweep\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/MFASweep\.git.{0,1000}/ nocase ascii wide
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
-        $string2 = /dafthack\/MFASweep/ nocase ascii wide
+        $string2 = /.{0,1000}dafthack\/MFASweep.{0,1000}/ nocase ascii wide
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
-        $string3 = /Invoke\-MFASweep/ nocase ascii wide
+        $string3 = /.{0,1000}Invoke\-MFASweep.{0,1000}/ nocase ascii wide
         // Description: A tool for checking if MFA is enabled on multiple Microsoft Services
         // Reference: https://github.com/dafthack/MFASweep
-        $string4 = /MFASweep\.ps1/ nocase ascii wide
+        $string4 = /.{0,1000}MFASweep\.ps1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,82 +10,82 @@ rule ContainYourself
     strings:
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string1 = /\s\-\-copy\-file\s\-\-source\-file\s.*\.docx\s\-\-target\-file\s.*\.docx\s\-\-target\-volume\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-copy\-file\s\-\-source\-file\s.{0,1000}\.docx\s\-\-target\-file\s.{0,1000}\.docx\s\-\-target\-volume\s.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string2 = /\.exe\s\-\-override\-file\s\-\-source\-file\s.*\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\.exe\s\-\-override\-file\s\-\-source\-file\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string3 = /\.exe\s\-\-remove\-reparse\s\-\-source\-file\s.*\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}\.exe\s\-\-remove\-reparse\s\-\-source\-file\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string4 = /\.exe\s\-\-set\-reparse\soverride\s\-\-source\-file\s.*\.exe\s\-\-target\-file\s/ nocase ascii wide
+        $string4 = /.{0,1000}\.exe\s\-\-set\-reparse\soverride\s\-\-source\-file\s.{0,1000}\.exe\s\-\-target\-file\s.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string5 = /\/ContainYourself\.git/ nocase ascii wide
+        $string5 = /.{0,1000}\/ContainYourself\.git.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string6 = /\\WiperPoc\.cpp/ nocase ascii wide
+        $string6 = /.{0,1000}\\WiperPoc\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string7 = /4F2AD0E0\-8C4D\-45CB\-97DE\-CE8D4177E7BF/ nocase ascii wide
+        $string7 = /.{0,1000}4F2AD0E0\-8C4D\-45CB\-97DE\-CE8D4177E7BF.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string8 = /79F54747\-048D\-4FD6\-AEF4\-7B098F923FD8/ nocase ascii wide
+        $string8 = /.{0,1000}79F54747\-048D\-4FD6\-AEF4\-7B098F923FD8.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string9 = /B5627919\-4DFB\-49C6\-AC1B\-C757F4B4A103/ nocase ascii wide
+        $string9 = /.{0,1000}B5627919\-4DFB\-49C6\-AC1B\-C757F4B4A103.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string10 = /ContainYourself\.cpp/ nocase ascii wide
+        $string10 = /.{0,1000}ContainYourself\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string11 = /ContainYourself\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}ContainYourself\.exe.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string12 = /ContainYourself\.sln/ nocase ascii wide
+        $string12 = /.{0,1000}ContainYourself\.sln.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string13 = /ContainYourself\-main/ nocase ascii wide
+        $string13 = /.{0,1000}ContainYourself\-main.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string14 = /ContainYourselfPoc\.cpp/ nocase ascii wide
+        $string14 = /.{0,1000}ContainYourselfPoc\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string15 = /ContainYourselfPoc\.exe/ nocase ascii wide
+        $string15 = /.{0,1000}ContainYourselfPoc\.exe.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string16 = /ContainYourselfPoc\\/ nocase ascii wide
+        $string16 = /.{0,1000}ContainYourselfPoc\\.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string17 = /ContainYourselfTempFile\.txt/ nocase ascii wide
+        $string17 = /.{0,1000}ContainYourselfTempFile\.txt.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string18 = /deepinstinct\/ContainYourself/ nocase ascii wide
+        $string18 = /.{0,1000}deepinstinct\/ContainYourself.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string19 = /FA0DAF13\-5058\-4382\-AE07\-65E44AFB5592/ nocase ascii wide
+        $string19 = /.{0,1000}FA0DAF13\-5058\-4382\-AE07\-65E44AFB5592.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string20 = /Ransomware\sPOC\stool\sthat\sencrypts\sa\sgiven\sdirectory/ nocase ascii wide
+        $string20 = /.{0,1000}Ransomware\sPOC\stool\sthat\sencrypts\sa\sgiven\sdirectory.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string21 = /RansomwarePoc\.cpp/ nocase ascii wide
+        $string21 = /.{0,1000}RansomwarePoc\.cpp.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string22 = /RansomwarePoc\.exe/ nocase ascii wide
+        $string22 = /.{0,1000}RansomwarePoc\.exe.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string23 = /RansomwarePoc\\RansomwarePoc/ nocase ascii wide
+        $string23 = /.{0,1000}RansomwarePoc\\RansomwarePoc.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string24 = /Wiper\sPOC\stool\sthat\swipes\sa\sgiven\sdirectory/ nocase ascii wide
+        $string24 = /.{0,1000}Wiper\sPOC\stool\sthat\swipes\sa\sgiven\sdirectory.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string25 = /WiperPoc\.exe/ nocase ascii wide
+        $string25 = /.{0,1000}WiperPoc\.exe.{0,1000}/ nocase ascii wide
         // Description: Abuses the Windows containers framework to bypass EDRs.
         // Reference: https://github.com/deepinstinct/ContainYourself
-        $string26 = /WiperPoc\\WiperPoc/ nocase ascii wide
+        $string26 = /.{0,1000}WiperPoc\\WiperPoc.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

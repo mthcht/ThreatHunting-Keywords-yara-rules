@@ -10,7 +10,7 @@ rule my_ip_io
     strings:
         // Description: abused by ransomwares
         // Reference: https://github.com/rivitna/Malware
-        $string1 = /https:\/\/api\.my\-ip\.io\/ip/ nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/api\.my\-ip\.io\/ip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

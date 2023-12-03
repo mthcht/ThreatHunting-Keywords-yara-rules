@@ -10,7 +10,7 @@ rule Invoke_ProcessScan
     strings:
         // Description: This script uses a list from the Equation Group leak from the shadow brokers to provide context to executeables that are running on a system.
         // Reference: https://github.com/vysecurity/Invoke-ProcessScan
-        $string1 = /Invoke\-ProcessScan/ nocase ascii wide
+        $string1 = /.{0,1000}Invoke\-ProcessScan.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

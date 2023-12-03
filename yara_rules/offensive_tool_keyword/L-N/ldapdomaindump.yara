@@ -10,28 +10,28 @@ rule ldapdomaindump
     strings:
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string1 = /\sdomainDumper/ nocase ascii wide
+        $string1 = /.{0,1000}\sdomainDumper.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string2 = /\/john\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/john\.git.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string3 = /bin\/ldd2pretty/ nocase ascii wide
+        $string3 = /.{0,1000}bin\/ldd2pretty.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string4 = /dirkjan\@sanoweb\.nl/ nocase ascii wide
+        $string4 = /.{0,1000}dirkjan\@sanoweb\.nl.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string5 = /domainDumpConfig/ nocase ascii wide
+        $string5 = /.{0,1000}domainDumpConfig.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string6 = /getAllUserSpns/ nocase ascii wide
+        $string6 = /.{0,1000}getAllUserSpns.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string7 = /ldapdomaindump/ nocase ascii wide
+        $string7 = /.{0,1000}ldapdomaindump.{0,1000}/ nocase ascii wide
         // Description: Active Directory information dumper via LDAP
         // Reference: https://github.com/dirkjanm/ldapdomaindump
-        $string8 = /ldd2bloodhound/ nocase ascii wide
+        $string8 = /.{0,1000}ldd2bloodhound.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

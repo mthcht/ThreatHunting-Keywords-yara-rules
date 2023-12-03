@@ -10,7 +10,7 @@ rule LinkedInt
     strings:
         // Description: LinkedInt: A LinkedIn scraper for reconnaissance during adversary simulation
         // Reference: https://github.com/mdsecactivebreach/LinkedInt
-        $string1 = /LinkedInt/ nocase ascii wide
+        $string1 = /.{0,1000}LinkedInt.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule Amsi_Killer
     strings:
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string1 = /\/Amsi\-Killer\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Amsi\-Killer\.git.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string2 = /AMSI\spatched\sin\sall\spowershells/ nocase ascii wide
+        $string2 = /.{0,1000}AMSI\spatched\sin\sall\spowershells.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string3 = /Amsi\-Killer\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}Amsi\-Killer\.exe.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string4 = /Amsi\-Killer\.sln/ nocase ascii wide
+        $string4 = /.{0,1000}Amsi\-Killer\.sln.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string5 = /Amsi\-Killer\.vcxproj/ nocase ascii wide
+        $string5 = /.{0,1000}Amsi\-Killer\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string6 = /Amsi\-Killer\-master/ nocase ascii wide
+        $string6 = /.{0,1000}Amsi\-Killer\-master.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string7 = /E2E64E89\-8ACE\-4AA1\-9340\-8E987F5F142F/ nocase ascii wide
+        $string7 = /.{0,1000}E2E64E89\-8ACE\-4AA1\-9340\-8E987F5F142F.{0,1000}/ nocase ascii wide
         // Description: Lifetime AMSI bypass
         // Reference: https://github.com/ZeroMemoryEx/Amsi-Killer
-        $string8 = /ZeroMemoryEx\/Amsi\-Killer/ nocase ascii wide
+        $string8 = /.{0,1000}ZeroMemoryEx\/Amsi\-Killer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

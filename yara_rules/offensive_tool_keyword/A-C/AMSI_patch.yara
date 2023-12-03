@@ -10,31 +10,31 @@ rule AMSI_patch
     strings:
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string1 = /\/AMSI_patch\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/AMSI_patch\.git.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string2 = /\/AmsiOpenSession\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/AmsiOpenSession\.exe.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string3 = /AMS1\-Patch\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}AMS1\-Patch\.exe.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string4 = /AMSI_patch\-main/ nocase ascii wide
+        $string4 = /.{0,1000}AMSI_patch\-main.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string5 = /AmsiOpenSession\.cpp/ nocase ascii wide
+        $string5 = /.{0,1000}AmsiOpenSession\.cpp.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string6 = /AmsiOpenSession\.sln/ nocase ascii wide
+        $string6 = /.{0,1000}AmsiOpenSession\.sln.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string7 = /AmsiOpenSession\.vcxproj/ nocase ascii wide
+        $string7 = /.{0,1000}AmsiOpenSession\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string8 = /E09F4899\-D8B3\-4282\-9E3A\-B20EE9A3D463/ nocase ascii wide
+        $string8 = /.{0,1000}E09F4899\-D8B3\-4282\-9E3A\-B20EE9A3D463.{0,1000}/ nocase ascii wide
         // Description: Patching AmsiOpenSession by forcing an error branching
         // Reference: https://github.com/TheD1rkMtr/AMSI_patch
-        $string9 = /TheD1rkMtr\/AMSI_patch/ nocase ascii wide
+        $string9 = /.{0,1000}TheD1rkMtr\/AMSI_patch.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

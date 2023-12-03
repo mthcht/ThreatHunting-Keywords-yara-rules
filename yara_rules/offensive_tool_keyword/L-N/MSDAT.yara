@@ -10,7 +10,7 @@ rule MSDAT
     strings:
         // Description: MSDAT (Microsoft SQL Database Attacking Tool) is an open source penetration testing tool that tests the security of Microsoft SQL Databases remotely.
         // Reference: https://github.com/quentinhardy/msdat
-        $string1 = /quentinhardy.*msdat/ nocase ascii wide
+        $string1 = /.{0,1000}quentinhardy.{0,1000}msdat.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

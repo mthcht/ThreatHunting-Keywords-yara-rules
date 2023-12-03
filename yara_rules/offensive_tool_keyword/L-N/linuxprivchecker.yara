@@ -10,7 +10,7 @@ rule linuxprivchecker
     strings:
         // Description: search for common privilege escalation vectors such as world writable files. misconfigurations. clear-text passwords and applicable exploits
         // Reference: https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py
-        $string1 = /linuxprivchecker/ nocase ascii wide
+        $string1 = /.{0,1000}linuxprivchecker.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

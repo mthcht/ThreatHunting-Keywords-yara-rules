@@ -10,94 +10,94 @@ rule Earth_Lusca_Operations_Tools
     strings:
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string1 = /\shackergu\s/ nocase ascii wide
+        $string1 = /.{0,1000}\shackergu\s.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string2 = /\.\/agscript\s/ nocase ascii wide
+        $string2 = /.{0,1000}\.\/agscript\s.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string3 = /\.\/teamserver\s/ nocase ascii wide
+        $string3 = /.{0,1000}\.\/teamserver\s.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string4 = /\/m\s.*\.lnk.*\s\/c\s.*cmd\s\/c\secho\sf\|xcopy\s\@file\s\%temp\%/ nocase ascii wide
+        $string4 = /.{0,1000}\/m\s.{0,1000}\.lnk.{0,1000}\s\/c\s.{0,1000}cmd\s\/c\secho\sf\|xcopy\s\@file\s\%temp\%.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string5 = /\\Doraemon/ nocase ascii wide
+        $string5 = /.{0,1000}\\Doraemon.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string6 = /\\macoffe\.pdb/ nocase ascii wide
+        $string6 = /.{0,1000}\\macoffe\.pdb.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string7 = /\\mem_dll\.pdb/ nocase ascii wide
+        $string7 = /.{0,1000}\\mem_dll\.pdb.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string8 = /\\pwn\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\\pwn\.exe.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string9 = /\\while_dll_ms/ nocase ascii wide
+        $string9 = /.{0,1000}\\while_dll_ms.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string10 = /cscript\s.*wmi\.vbs\s\-h/ nocase ascii wide
+        $string10 = /.{0,1000}cscript\s.{0,1000}wmi\.vbs\s\-h.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string11 = /findstr\.exe\sTvndrgaaa/ nocase ascii wide
+        $string11 = /.{0,1000}findstr\.exe\sTvndrgaaa.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string12 = /fodhelperbypass/ nocase ascii wide
+        $string12 = /.{0,1000}fodhelperbypass.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string13 = /for\s\/f\s\%\%i\sin\s\(C:\\Windows\\IME\\ok\.txt\)/ nocase ascii wide
+        $string13 = /.{0,1000}for\s\/f\s\%\%i\sin\s\(C:\\Windows\\IME\\ok\.txt\).{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string14 = /for\s\/r\sc:\\windows\\system32\\\s\%i\sin\s\(.*sht.*\.exe\)/ nocase ascii wide
+        $string14 = /.{0,1000}for\s\/r\sc:\\windows\\system32\\\s\%i\sin\s\(.{0,1000}sht.{0,1000}\.exe\).{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string15 = /frpc\.exe\s\-c\sfrpc\.in/ nocase ascii wide
+        $string15 = /.{0,1000}frpc\.exe\s\-c\sfrpc\.in.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string16 = /libxselinux\.old/ nocase ascii wide
+        $string16 = /.{0,1000}libxselinux\.old.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string17 = /libxselinux\.so/ nocase ascii wide
+        $string17 = /.{0,1000}libxselinux\.so.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string18 = /megacmd\s\-conf\s.*\sput\s.*mega:/ nocase ascii wide
+        $string18 = /.{0,1000}megacmd\s\-conf\s.{0,1000}\sput\s.{0,1000}mega:.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string19 = /net\sstart\sSysUpdate/ nocase ascii wide
+        $string19 = /.{0,1000}net\sstart\sSysUpdate.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string20 = /powershell\s.*Get\-EventLog\s\-LogName\ssecurity\s\-Newest\s500\s\|\swhere\s{\$_\.EventID\s\-eq\s4624}\s\|\sformat\-list\s\-property\s.*\s\|\sfindstr/ nocase ascii wide
+        $string20 = /.{0,1000}powershell\s.{0,1000}Get\-EventLog\s\-LogName\ssecurity\s\-Newest\s500\s\|\swhere\s{\$_\.EventID\s\-eq\s4624}\s\|\sformat\-list\s\-property\s.{0,1000}\s\|\sfindstr.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string21 = /powershell\sIEX\s\(New\-Object\sNet\.WebClient\)\.DownloadString\(.*\)\s\sGet\-NetComputer\s\-FullData\s/ nocase ascii wide
+        $string21 = /.{0,1000}powershell\sIEX\s\(New\-Object\sNet\.WebClient\)\.DownloadString\(.{0,1000}\)\s\sGet\-NetComputer\s\-FullData\s.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string22 = /powershell\sIEX\s\(New\-Object\sNet\.WebClient\)\.DownloadString.*\.ps1.*Get\-NetComputer\s\-FullData/ nocase ascii wide
+        $string22 = /.{0,1000}powershell\sIEX\s\(New\-Object\sNet\.WebClient\)\.DownloadString.{0,1000}\.ps1.{0,1000}Get\-NetComputer\s\-FullData.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string23 = /PowerShellMafia/ nocase ascii wide
+        $string23 = /.{0,1000}PowerShellMafia.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string24 = /PowerView\.ps1/ nocase ascii wide
+        $string24 = /.{0,1000}PowerView\.ps1.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string25 = /Rar\sa\s\-v3g\s\-k\s\-r\s\-s\s\-m3\s/ nocase ascii wide
+        $string25 = /.{0,1000}Rar\sa\s\-v3g\s\-k\s\-r\s\-s\s\-m3\s.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string26 = /tas389\.ps1/ nocase ascii wide
+        $string26 = /.{0,1000}tas389\.ps1.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string27 = /ts\.php.*vi\.txt/ nocase ascii wide
+        $string27 = /.{0,1000}ts\.php.{0,1000}vi\.txt.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string28 = /we\.exe\s\-s\srssocks\s\-d\s/ nocase ascii wide
+        $string28 = /.{0,1000}we\.exe\s\-s\srssocks\s\-d\s.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string29 = /wevtutil\sqe\ssecurity\s\/format:text\s\/q:.*Event\[System\[\(EventID\=4624\)\].*find\s.*Source\sNetwork\sAddress/ nocase ascii wide
+        $string29 = /.{0,1000}wevtutil\sqe\ssecurity\s\/format:text\s\/q:.{0,1000}Event\[System\[\(EventID\=4624\)\].{0,1000}find\s.{0,1000}Source\sNetwork\sAddress.{0,1000}/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf
-        $string30 = /xs\.exe\s\-connect\s/ nocase ascii wide
+        $string30 = /.{0,1000}xs\.exe\s\-connect\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,214 +10,214 @@ rule covenant
     strings:
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string1 = /\s\-\-name\scovenant\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-name\scovenant\s.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string2 = /\sstart\scovenant/ nocase ascii wide
+        $string2 = /.{0,1000}\sstart\scovenant.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string3 = /\sstop\scovenant/ nocase ascii wide
+        $string3 = /.{0,1000}\sstop\scovenant.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string4 = /\/Brute\/BruteStager/ nocase ascii wide
+        $string4 = /.{0,1000}\/Brute\/BruteStager.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string5 = /\/BruteStager\.cs/ nocase ascii wide
+        $string5 = /.{0,1000}\/BruteStager\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string6 = /\/Covenant.*\.cs/ nocase ascii wide
+        $string6 = /.{0,1000}\/Covenant.{0,1000}\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string7 = /\/Covenant\.git/ nocase ascii wide
+        $string7 = /.{0,1000}\/Covenant\.git.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string8 = /\/Covenant\// nocase ascii wide
+        $string8 = /.{0,1000}\/Covenant\/.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string9 = /\/CovenantUsers\// nocase ascii wide
+        $string9 = /.{0,1000}\/CovenantUsers\/.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string10 = /\/Elite\/Elite/ nocase ascii wide
+        $string10 = /.{0,1000}\/Elite\/Elite.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string11 = /\/GruntHTTP\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}\/GruntHTTP\.exe.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string12 = /\/Models\/PowerShellLauncher\./ nocase ascii wide
+        $string12 = /.{0,1000}\/Models\/PowerShellLauncher\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string13 = /\/Models\/Regsvr32Launcher\./ nocase ascii wide
+        $string13 = /.{0,1000}\/Models\/Regsvr32Launcher\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string14 = /\/Models\/ShellCodeLauncher\./ nocase ascii wide
+        $string14 = /.{0,1000}\/Models\/ShellCodeLauncher\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string15 = /\/opt\/Covenant\/Covenant\// nocase ascii wide
+        $string15 = /.{0,1000}\/opt\/Covenant\/Covenant\/.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string16 = /\/SharpDump/ nocase ascii wide
+        $string16 = /.{0,1000}\/SharpDump.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string17 = /\/SharpSploit/ nocase ascii wide
+        $string17 = /.{0,1000}\/SharpSploit.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string18 = /\/WhoAmI\.task/ nocase ascii wide
+        $string18 = /.{0,1000}\/WhoAmI\.task.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string19 = /\\Elite\.csproj/ nocase ascii wide
+        $string19 = /.{0,1000}\\Elite\.csproj.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string20 = /\\Elite\.sln/ nocase ascii wide
+        $string20 = /.{0,1000}\\Elite\.sln.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string21 = /Brute\/Brute\.cs/ nocase ascii wide
+        $string21 = /.{0,1000}Brute\/Brute\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string22 = /Brute\/Brute\.csproj/ nocase ascii wide
+        $string22 = /.{0,1000}Brute\/Brute\.csproj.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string23 = /Brute\/Brute\.sln/ nocase ascii wide
+        $string23 = /.{0,1000}Brute\/Brute\.sln.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string24 = /BruteStager\.csproj/ nocase ascii wide
+        $string24 = /.{0,1000}BruteStager\.csproj.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string25 = /BruteStager\.sln/ nocase ascii wide
+        $string25 = /.{0,1000}BruteStager\.sln.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string26 = /CapturedCredential\.cs/ nocase ascii wide
+        $string26 = /.{0,1000}CapturedCredential\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string27 = /CapturedCredential\.exe/ nocase ascii wide
+        $string27 = /.{0,1000}CapturedCredential\.exe.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string28 = /CapturedHashCredential\./ nocase ascii wide
+        $string28 = /.{0,1000}CapturedHashCredential\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string29 = /CapturedPasswordCredential\./ nocase ascii wide
+        $string29 = /.{0,1000}CapturedPasswordCredential\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string30 = /CapturedTicketCredential\./ nocase ascii wide
+        $string30 = /.{0,1000}CapturedTicketCredential\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string31 = /cobbr\/Covenant/ nocase ascii wide
+        $string31 = /.{0,1000}cobbr\/Covenant.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string32 = /cobbr\/Elite/ nocase ascii wide
+        $string32 = /.{0,1000}cobbr\/Elite.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string33 = /Covenant\.API/ nocase ascii wide
+        $string33 = /.{0,1000}Covenant\.API.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string34 = /Covenant\.csproj/ nocase ascii wide
+        $string34 = /.{0,1000}Covenant\.csproj.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string35 = /Covenant\.exe/ nocase ascii wide
+        $string35 = /.{0,1000}Covenant\.exe.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string36 = /Covenant\.Models/ nocase ascii wide
+        $string36 = /.{0,1000}Covenant\.Models.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string37 = /Covenant\.sln/ nocase ascii wide
+        $string37 = /.{0,1000}Covenant\.sln.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string38 = /Covenant\/Covenant/ nocase ascii wide
+        $string38 = /.{0,1000}Covenant\/Covenant.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string39 = /Covenant\/wwwroot/ nocase ascii wide
+        $string39 = /.{0,1000}Covenant\/wwwroot.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string40 = /CovenantAPI\./ nocase ascii wide
+        $string40 = /.{0,1000}CovenantAPI\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string41 = /CovenantAPIExtensions\./ nocase ascii wide
+        $string41 = /.{0,1000}CovenantAPIExtensions\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string42 = /CovenantBaseMenuItem\./ nocase ascii wide
+        $string42 = /.{0,1000}CovenantBaseMenuItem\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string43 = /CovenantService\.cs/ nocase ascii wide
+        $string43 = /.{0,1000}CovenantService\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string44 = /CovenantUser\.cs/ nocase ascii wide
+        $string44 = /.{0,1000}CovenantUser\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string45 = /CovenantUserLogin\./ nocase ascii wide
+        $string45 = /.{0,1000}CovenantUserLogin\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string46 = /CovenantUserLoginResult\./ nocase ascii wide
+        $string46 = /.{0,1000}CovenantUserLoginResult\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string47 = /CovenantUserRegister\./ nocase ascii wide
+        $string47 = /.{0,1000}CovenantUserRegister\..{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string48 = /docker\s.*\scovenant/ nocase ascii wide
+        $string48 = /.{0,1000}docker\s.{0,1000}\scovenant.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string49 = /docker\s.*\s\-\-name\selite\s/ nocase ascii wide
+        $string49 = /.{0,1000}docker\s.{0,1000}\s\-\-name\selite\s.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string50 = /docker\s.*\s\-t\selite\s/ nocase ascii wide
+        $string50 = /.{0,1000}docker\s.{0,1000}\s\-t\selite\s.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string51 = /donut\-loader\s\-/ nocase ascii wide
+        $string51 = /.{0,1000}donut\-loader\s\-.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string52 = /donut\-maker\.py\s\-/ nocase ascii wide
+        $string52 = /.{0,1000}donut\-maker\.py\s\-.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string53 = /donut\-shellcode/ nocase ascii wide
+        $string53 = /.{0,1000}donut\-shellcode.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string54 = /GruntInjection\.exe/ nocase ascii wide
+        $string54 = /.{0,1000}GruntInjection\.exe.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string55 = /gruntstager\.cs/ nocase ascii wide
+        $string55 = /.{0,1000}gruntstager\.cs.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string56 = /GruntStager\.exe/ nocase ascii wide
+        $string56 = /.{0,1000}GruntStager\.exe.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string57 = /http.*127\.0\.0\.1:57230/ nocase ascii wide
+        $string57 = /.{0,1000}http.{0,1000}127\.0\.0\.1:57230.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string58 = /http.*localhost:57230/ nocase ascii wide
+        $string58 = /.{0,1000}http.{0,1000}localhost:57230.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string59 = /https:\/\/127\.0\.0\.1:7443/ nocase ascii wide
+        $string59 = /.{0,1000}https:\/\/127\.0\.0\.1:7443.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string60 = /https:\/\/localhost:7443\// nocase ascii wide
+        $string60 = /.{0,1000}https:\/\/localhost:7443\/.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string61 = /obfuscate\.py\sgrunt/ nocase ascii wide
+        $string61 = /.{0,1000}obfuscate\.py\sgrunt.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string62 = /powerkatz_x64\.dll/ nocase ascii wide
+        $string62 = /.{0,1000}powerkatz_x64\.dll.{0,1000}/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string63 = /powerkatz_x86\.dll/ nocase ascii wide
+        $string63 = /.{0,1000}powerkatz_x86\.dll.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string64 = /SharpUp\saudit/ nocase ascii wide
+        $string64 = /.{0,1000}SharpUp\saudit.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string65 = /ShellCmd\scmd\.exe\s/ nocase ascii wide
+        $string65 = /.{0,1000}ShellCmd\scmd\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string66 = /ShellCmd\scopy\s/ nocase ascii wide
+        $string66 = /.{0,1000}ShellCmd\scopy\s.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string67 = /ShellCmd\snet\s/ nocase ascii wide
+        $string67 = /.{0,1000}ShellCmd\snet\s.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string68 = /ShellCmd\ssc\sqc\s/ nocase ascii wide
+        $string68 = /.{0,1000}ShellCmd\ssc\sqc\s.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string69 = /BypassUAC\s/ nocase ascii wide
+        $string69 = /BypassUAC\s.{0,1000}/ nocase ascii wide
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string70 = /ShellCmd\s/ nocase ascii wide
+        $string70 = /ShellCmd\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

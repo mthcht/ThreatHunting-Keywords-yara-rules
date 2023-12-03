@@ -10,34 +10,34 @@ rule metatwin
     strings:
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string1 = /\s\-Source\sc:\\windows\\.*\.exe\s\-Target\s.*\.exe\s\-Sign/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-Source\sc:\\windows\\.{0,1000}\.exe\s\-Target\s.{0,1000}\.exe\s\-Sign.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string2 = /\s\-Source\sc:\\windows\\system32\\.*\.dll\s\-Target\s.*\.exe\s\-Sign/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-Source\sc:\\windows\\system32\\.{0,1000}\.dll\s\-Target\s.{0,1000}\.exe\s\-Sign.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string3 = /\/metatwin\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/metatwin\.git.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string4 = /\\dist\\sigthief\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}\\dist\\sigthief\.exe.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string5 = /\\sigthief\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}\\sigthief\.exe.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string6 = /Invoke\-MetaTwin/ nocase ascii wide
+        $string6 = /.{0,1000}Invoke\-MetaTwin.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string7 = /metatwin\.ps1/ nocase ascii wide
+        $string7 = /.{0,1000}metatwin\.ps1.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string8 = /metatwin\-master/ nocase ascii wide
+        $string8 = /.{0,1000}metatwin\-master.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string9 = /sigthief\.exe\.manifest/ nocase ascii wide
+        $string9 = /.{0,1000}sigthief\.exe\.manifest.{0,1000}/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string10 = /SigThief\-master/ nocase ascii wide
+        $string10 = /.{0,1000}SigThief\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

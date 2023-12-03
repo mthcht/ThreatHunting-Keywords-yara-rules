@@ -10,7 +10,7 @@ rule SharpSpray
     strings:
         // Description: This project is a C# port of my PowerSpray.ps1 script. SharpSpray a simple code set to perform a password spraying attack against all users of a domain using LDAP and is compatible with Cobalt Strike.
         // Reference: https://github.com/jnqpblc/SharpSpray
-        $string1 = /SharpSpray/ nocase ascii wide
+        $string1 = /.{0,1000}SharpSpray.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

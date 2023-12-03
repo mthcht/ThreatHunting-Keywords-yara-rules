@@ -10,10 +10,10 @@ rule dialupass
     strings:
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
-        $string1 = /Dialupass\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}Dialupass\.exe.{0,1000}/ nocase ascii wide
         // Description: This utility enumerates all dialup/VPN entries on your computers. and displays their logon details: User Name. Password. and Domain. You can use it to recover a lost password of your Internet connection or VPN.
         // Reference: https://www.nirsoft.net/utils/dialupass.html
-        $string2 = /Dialupass\.zip/ nocase ascii wide
+        $string2 = /.{0,1000}Dialupass\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

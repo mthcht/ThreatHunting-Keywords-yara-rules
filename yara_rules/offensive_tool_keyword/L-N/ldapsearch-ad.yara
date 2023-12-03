@@ -10,22 +10,22 @@ rule ldapsearch_ad
     strings:
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string1 = /\s\-\-server\s.*\s\-\-type\spass\-pols/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-server\s.{0,1000}\s\-\-type\spass\-pols.{0,1000}/ nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string2 = /\s\-\-type\sasreproast/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-type\sasreproast.{0,1000}/ nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string3 = /\s\-\-type\ssearch\-spn/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-type\ssearch\-spn.{0,1000}/ nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string4 = /\/ldapsearch\-ad\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/ldapsearch\-ad\.git.{0,1000}/ nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string5 = /ldapsearchad\.py/ nocase ascii wide
+        $string5 = /.{0,1000}ldapsearchad\.py.{0,1000}/ nocase ascii wide
         // Description: Python3 script to quickly get various information from a domain controller through his LDAP service.
         // Reference: https://github.com/yaap7/ldapsearch-ad
-        $string6 = /ldapsearch\-ad\.py/ nocase ascii wide
+        $string6 = /.{0,1000}ldapsearch\-ad\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule trackerjacker
     strings:
         // Description: Like nmap for mapping wifi networks you're not connected to. Maps and tracks wifi networks and devices through raw 802.11 monitoring.
         // Reference: https://github.com/calebmadrigal/trackerjacker
-        $string1 = /\/trackerjacker/ nocase ascii wide
+        $string1 = /.{0,1000}\/trackerjacker.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

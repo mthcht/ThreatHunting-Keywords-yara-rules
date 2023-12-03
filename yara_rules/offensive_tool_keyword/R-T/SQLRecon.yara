@@ -10,25 +10,25 @@ rule SQLRecon
     strings:
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string1 = /\s\-m\slagentcmd\s.*powershell\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-m\slagentcmd\s.{0,1000}powershell\s.{0,1000}/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string2 = /\s\-m\solecmd\s\-o\s.*powershell\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-m\solecmd\s\-o\s.{0,1000}powershell\s.{0,1000}/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string3 = /\/SQLRecon/ nocase ascii wide
+        $string3 = /.{0,1000}\/SQLRecon.{0,1000}/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string4 = /\\SQLRecon/ nocase ascii wide
+        $string4 = /.{0,1000}\\SQLRecon.{0,1000}/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string5 = /\\temp\\hollow\.dll/ nocase ascii wide
+        $string5 = /.{0,1000}\\temp\\hollow\.dll.{0,1000}/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string6 = /SQLRecon\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}SQLRecon\.exe.{0,1000}/ nocase ascii wide
         // Description: A C# MS SQL toolkit designed for offensive reconnaissance and post-exploitation
         // Reference: https://github.com/skahwah/SQLRecon
-        $string7 = /SQLRecon\.git/ nocase ascii wide
+        $string7 = /.{0,1000}SQLRecon\.git.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

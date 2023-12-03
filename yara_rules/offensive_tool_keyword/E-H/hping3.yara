@@ -10,7 +10,7 @@ rule hping3
     strings:
         // Description: HPING3 DoS
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string1 = /hping3\s.*\s\-\-flood\s\-\-frag\s\-\-spoof\s.*\s\-\-destport/ nocase ascii wide
+        $string1 = /.{0,1000}hping3\s.{0,1000}\s\-\-flood\s\-\-frag\s\-\-spoof\s.{0,1000}\s\-\-destport.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule portscan
     strings:
         // Description: A simple TCP and UDP portscanner written in Go
         // Reference: https://github.com/zs5460/portscan
-        $string1 = /portscan/ nocase ascii wide
+        $string1 = /.{0,1000}portscan.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

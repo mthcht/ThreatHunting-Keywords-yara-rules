@@ -10,7 +10,7 @@ rule ldifde
     strings:
         // Description: using ldifde.exe to export data from Active Directory to a .txt file in the Temp directory
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string1 = /ldifde\.exe\s\-f\s.*\\temp\\.*\.txt\s\-p\ssubtree/ nocase ascii wide
+        $string1 = /.{0,1000}ldifde\.exe\s\-f\s.{0,1000}\\temp\\.{0,1000}\.txt\s\-p\ssubtree.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

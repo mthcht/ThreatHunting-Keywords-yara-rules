@@ -10,7 +10,7 @@ rule WMImplant
     strings:
         // Description: WMImplant is a PowerShell based tool that leverages WMI to both perform actions against targeted machines. but also as the C2 channel for issuing commands and receiving results. WMImplant will likely require local administrator permissions on the targeted machine.
         // Reference: https://github.com/FortyNorthSecurity/WMImplant
-        $string1 = /WMImplant/ nocase ascii wide
+        $string1 = /.{0,1000}WMImplant.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,25 +10,25 @@ rule shellcodetester
     strings:
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string1 = /\/shellcodetester/ nocase ascii wide
+        $string1 = /.{0,1000}\/shellcodetester.{0,1000}/ nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string2 = /shellcodetester\s/ nocase ascii wide
+        $string2 = /.{0,1000}shellcodetester\s.{0,1000}/ nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string3 = /ShellCodeTester\.csproj/ nocase ascii wide
+        $string3 = /.{0,1000}ShellCodeTester\.csproj.{0,1000}/ nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string4 = /shellcodetester\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}shellcodetester\.exe.{0,1000}/ nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string5 = /shellcodetester\.git/ nocase ascii wide
+        $string5 = /.{0,1000}shellcodetester\.git.{0,1000}/ nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string6 = /shellcodetester\.sh/ nocase ascii wide
+        $string6 = /.{0,1000}shellcodetester\.sh.{0,1000}/ nocase ascii wide
         // Description: This tools test generated ShellCodes
         // Reference: https://github.com/helviojunior/shellcodetester
-        $string7 = /ShellCodeTester\.sln/ nocase ascii wide
+        $string7 = /.{0,1000}ShellCodeTester\.sln.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

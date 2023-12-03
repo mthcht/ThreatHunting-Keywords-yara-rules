@@ -10,7 +10,7 @@ rule gtfobins
     strings:
         // Description: GTFOBins is a curated list of Unix binaries that can used to bypass local security restrictions in misconfigured systems malicious use of legitimate binaries
         // Reference: https://gtfobins.github.io/
-        $string1 = /gtfobins/ nocase ascii wide
+        $string1 = /.{0,1000}gtfobins.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,85 +10,85 @@ rule elevationstation
     strings:
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string1 = /\.exe\s\-uac/ nocase ascii wide
+        $string1 = /.{0,1000}\.exe\s\-uac/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string2 = /\/elevateit\.bat/ nocase ascii wide
+        $string2 = /.{0,1000}\/elevateit\.bat.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string3 = /\\\\\\\\\.\\\\pipe\\\\warpzone8/ nocase ascii wide
+        $string3 = /.{0,1000}\\\\\\\\\.\\\\pipe\\\\warpzone8.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string4 = /\\\\\\\\127\.0\.0\.1\\\\pipe\\\\warpzone8/ nocase ascii wide
+        $string4 = /.{0,1000}\\\\\\\\127\.0\.0\.1\\\\pipe\\\\warpzone8.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string5 = /\\elevateit\.bat/ nocase ascii wide
+        $string5 = /.{0,1000}\\elevateit\.bat.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string6 = /cmd\.exe\s\/c\ssc\sstart\splumber/ nocase ascii wide
+        $string6 = /.{0,1000}cmd\.exe\s\/c\ssc\sstart\splumber.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string7 = /easinvoker\.exe.*System32/ nocase ascii wide
+        $string7 = /.{0,1000}easinvoker\.exe.{0,1000}System32.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string8 = /elevationstation\.cpp/ nocase ascii wide
+        $string8 = /.{0,1000}elevationstation\.cpp.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string9 = /elevationstation\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}elevationstation\.exe.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string10 = /elevationstation\.git/ nocase ascii wide
+        $string10 = /.{0,1000}elevationstation\.git.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string11 = /elevationstation\.sln/ nocase ascii wide
+        $string11 = /.{0,1000}elevationstation\.sln.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string12 = /elevationstation\-main/ nocase ascii wide
+        $string12 = /.{0,1000}elevationstation\-main.{0,1000}/ nocase ascii wide
         // Description: github user hosting multiple exploitation tools
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string13 = /github\.com\/g3tsyst3m/ nocase ascii wide
+        $string13 = /.{0,1000}github\.com\/g3tsyst3m.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string14 = /n0de\.exe.*elevationstation/ nocase ascii wide
+        $string14 = /.{0,1000}n0de\.exe.{0,1000}elevationstation.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string15 = /sc\screate\splumber.*warpzoneclient/ nocase ascii wide
+        $string15 = /.{0,1000}sc\screate\splumber.{0,1000}warpzoneclient.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string16 = /sc\sdelete\splumber/ nocase ascii wide
+        $string16 = /.{0,1000}sc\sdelete\splumber.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string17 = /tokenprivs\.cpp/ nocase ascii wide
+        $string17 = /.{0,1000}tokenprivs\.cpp.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string18 = /tokenprivs\.exe/ nocase ascii wide
+        $string18 = /.{0,1000}tokenprivs\.exe.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string19 = /uac_easinvoker\./ nocase ascii wide
+        $string19 = /.{0,1000}uac_easinvoker\..{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string20 = /uacbypass_files/ nocase ascii wide
+        $string20 = /.{0,1000}uacbypass_files.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string21 = /users\\\\public\\\\elevationstation\.js/ nocase ascii wide
+        $string21 = /.{0,1000}users\\\\public\\\\elevationstation\.js.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string22 = /users\\\\usethis\\\\NewFile\.txt/ nocase ascii wide
+        $string22 = /.{0,1000}users\\\\usethis\\\\NewFile\.txt.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string23 = /warpzoneclient\.cpp/ nocase ascii wide
+        $string23 = /.{0,1000}warpzoneclient\.cpp.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string24 = /warpzoneclient\.exe/ nocase ascii wide
+        $string24 = /.{0,1000}warpzoneclient\.exe.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string25 = /warpzoneclient\.exe/ nocase ascii wide
+        $string25 = /.{0,1000}warpzoneclient\.exe.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string26 = /warpzoneclient\.sln/ nocase ascii wide
+        $string26 = /.{0,1000}warpzoneclient\.sln.{0,1000}/ nocase ascii wide
         // Description: elevate to SYSTEM any way we can! Metasploit and PSEXEC getsystem alternative
         // Reference: https://github.com/g3tsyst3m/elevationstation
-        $string27 = /warpzoneclient\.vcxproj/ nocase ascii wide
+        $string27 = /.{0,1000}warpzoneclient\.vcxproj.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

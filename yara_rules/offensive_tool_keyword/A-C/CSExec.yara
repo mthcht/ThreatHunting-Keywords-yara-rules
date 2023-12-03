@@ -10,142 +10,142 @@ rule CSExec
     strings:
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string1 = /\s\-\-blockDLLs\s\-\-ruy\-lopez/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-blockDLLs\s\-\-ruy\-lopez.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string2 = /\sCSExec\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\sCSExec\.py.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string3 = /\s\-\-dll\s\-\-dllhijack\s/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-dll\s\-\-dllhijack\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string4 = /\s\-\-donut\s\-\-rehash\sn\s\-\-silent\s\-o\s\/tmp\// nocase ascii wide
+        $string4 = /.{0,1000}\s\-\-donut\s\-\-rehash\sn\s\-\-silent\s\-o\s\/tmp\/.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string5 = /\s\-m\svenv\scsexec\s/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-m\svenv\scsexec\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string6 = /\s\-\-no\-ppid\-spoof/ nocase ascii wide
+        $string6 = /.{0,1000}\s\-\-no\-ppid\-spoof.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string7 = /\s\-\-no\-sigthief/ nocase ascii wide
+        $string7 = /.{0,1000}\s\-\-no\-sigthief.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string8 = /\s\-pi\s\\\\\\\\\\\\\\\\\.\\\\\\\\pipe\\\\\\\\/ nocase ascii wide
+        $string8 = /.{0,1000}\s\-pi\s\\\\\\\\\\\\\\\\\.\\\\\\\\pipe\\\\\\\\.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string9 = /\s\-s\sputty\.exe_sig\s/ nocase ascii wide
+        $string9 = /.{0,1000}\s\-s\sputty\.exe_sig\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string10 = /\s\-sc\sGetSyscallStub\s/ nocase ascii wide
+        $string10 = /.{0,1000}\s\-sc\sGetSyscallStub\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string11 = /\s\-sc\sSysWhispers3/ nocase ascii wide
+        $string11 = /.{0,1000}\s\-sc\sSysWhispers3.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string12 = /\s\-\-shellcode\s.*\-\-dc\-ip\s/ nocase ascii wide
+        $string12 = /.{0,1000}\s\-\-shellcode\s.{0,1000}\-\-dc\-ip\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string13 = /\s\-\-shellcode\s.*\-\-silent/ nocase ascii wide
+        $string13 = /.{0,1000}\s\-\-shellcode\s.{0,1000}\-\-silent.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string14 = /\s\-\-shellcode\s\-\-remoteinject/ nocase ascii wide
+        $string14 = /.{0,1000}\s\-\-shellcode\s\-\-remoteinject.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string15 = /\s\-\-silent\s\-obf\sNixImports\s\-o\s\/tmp\// nocase ascii wide
+        $string15 = /.{0,1000}\s\-\-silent\s\-obf\sNixImports\s\-o\s\/tmp\/.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string16 = /\s\-\-syscalls\sGetSyscallStub/ nocase ascii wide
+        $string16 = /.{0,1000}\s\-\-syscalls\sGetSyscallStub.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string17 = /\s\-\-syscalls\sSysWhispers3/ nocase ascii wide
+        $string17 = /.{0,1000}\s\-\-syscalls\sSysWhispers3.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string18 = /\s\-\-syswhispers\s\-\-jump/ nocase ascii wide
+        $string18 = /.{0,1000}\s\-\-syswhispers\s\-\-jump.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string19 = /\/CSExec\.py/ nocase ascii wide
+        $string19 = /.{0,1000}\/CSExec\.py.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string20 = /\/CSExec\.py\.git/ nocase ascii wide
+        $string20 = /.{0,1000}\/CSExec\.py\.git.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string21 = /~\/\.csexec/ nocase ascii wide
+        $string21 = /.{0,1000}~\/\.csexec.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string22 = /Attempted\sto\sspawn\sa\ssocks\sproxy\sserver\sat\s0\.0\.0\.0:/ nocase ascii wide
+        $string22 = /.{0,1000}Attempted\sto\sspawn\sa\ssocks\sproxy\sserver\sat\s0\.0\.0\.0:.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string23 = /beacon_generate\.py/ nocase ascii wide
+        $string23 = /.{0,1000}beacon_generate\.py.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string24 = /bof_pack\.py\s/ nocase ascii wide
+        $string24 = /.{0,1000}bof_pack\.py\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string25 = /csexec\/csexec_history/ nocase ascii wide
+        $string25 = /.{0,1000}csexec\/csexec_history.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string26 = /dinjector\s\/i:.*\s\/p:/ nocase ascii wide
+        $string26 = /.{0,1000}dinjector\s\/i:.{0,1000}\s\/p:.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string27 = /dll_generator\.py/ nocase ascii wide
+        $string27 = /.{0,1000}dll_generator\.py.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string28 = /keethief\-syscalls/ nocase ascii wide
+        $string28 = /.{0,1000}keethief\-syscalls.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string29 = /Metro\-Holografix\/CSExec/ nocase ascii wide
+        $string29 = /.{0,1000}Metro\-Holografix\/CSExec.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string30 = /nanodump_pipe/ nocase ascii wide
+        $string30 = /.{0,1000}nanodump_pipe.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string31 = /nanodump\-pipes/ nocase ascii wide
+        $string31 = /.{0,1000}nanodump\-pipes.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string32 = /NimSyscallLoader\s\-/ nocase ascii wide
+        $string32 = /.{0,1000}NimSyscallLoader\s\-.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string33 = /\-\-noWAIT\s\-\-noFUNC\s\-\-donut\s\-\-rehash\sn\s\-\-silent\s\-o\s\/tmp\// nocase ascii wide
+        $string33 = /.{0,1000}\-\-noWAIT\s\-\-noFUNC\s\-\-donut\s\-\-rehash\sn\s\-\-silent\s\-o\s\/tmp\/.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string34 = /pypykatz\slsa\sminidump\s/ nocase ascii wide
+        $string34 = /.{0,1000}pypykatz\slsa\sminidump\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string35 = /reflective_assembly_minified\.ps1/ nocase ascii wide
+        $string35 = /.{0,1000}reflective_assembly_minified\.ps1.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string36 = /reverse_shell_minified\.js/ nocase ascii wide
+        $string36 = /.{0,1000}reverse_shell_minified\.js.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string37 = /rlwrap\s\-cAr\snc\s\-lvnp\s/ nocase ascii wide
+        $string37 = /.{0,1000}rlwrap\s\-cAr\snc\s\-lvnp\s.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string38 = /secretsdump\s.*\-\-silent/ nocase ascii wide
+        $string38 = /.{0,1000}secretsdump\s.{0,1000}\-\-silent.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string39 = /sharpsecretsdump/ nocase ascii wide
+        $string39 = /.{0,1000}sharpsecretsdump.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string40 = /SharpShot\.exe\s\// nocase ascii wide
+        $string40 = /.{0,1000}SharpShot\.exe\s\/.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string41 = /temp.*lsass_.*\.dmp/ nocase ascii wide
+        $string41 = /.{0,1000}temp.{0,1000}lsass_.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string42 = /templates.*CSExec\.cs/ nocase ascii wide
+        $string42 = /.{0,1000}templates.{0,1000}CSExec\.cs.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string43 = /templates.*HIPS_LIPS_processes\.txt/ nocase ascii wide
+        $string43 = /.{0,1000}templates.{0,1000}HIPS_LIPS_processes\.txt.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string44 = /templates.*reflective_assembly_minified\.ps1/ nocase ascii wide
+        $string44 = /.{0,1000}templates.{0,1000}reflective_assembly_minified\.ps1.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string45 = /tmp.*lsass_.*\.dmp/ nocase ascii wide
+        $string45 = /.{0,1000}tmp.{0,1000}lsass_.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string46 = /utils\/payloads\.db/ nocase ascii wide
+        $string46 = /.{0,1000}utils\/payloads\.db.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

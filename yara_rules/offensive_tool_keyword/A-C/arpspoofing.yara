@@ -10,10 +10,10 @@ rule arpspoofing
     strings:
         // Description: arp spoofing scripts
         // Reference: https://github.com/luijait/arpspoofing
-        $string1 = /\/luijait\/arpspoofing/ nocase ascii wide
+        $string1 = /.{0,1000}\/luijait\/arpspoofing.{0,1000}/ nocase ascii wide
         // Description: arp spoofing scripts
         // Reference: https://github.com/luijait/arpspoofing
-        $string2 = /arpspoofing\.py\s/ nocase ascii wide
+        $string2 = /.{0,1000}arpspoofing\.py\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

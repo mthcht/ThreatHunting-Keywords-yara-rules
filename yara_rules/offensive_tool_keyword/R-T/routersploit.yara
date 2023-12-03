@@ -10,7 +10,7 @@ rule routersploit
     strings:
         // Description: The RouterSploit Framework is an open-source exploitation framework dedicated to embedded devices.exploits
         // Reference: https://github.com/threat9/routersploit
-        $string1 = /routersploit/ nocase ascii wide
+        $string1 = /.{0,1000}routersploit.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

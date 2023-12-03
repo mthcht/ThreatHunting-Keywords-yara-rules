@@ -10,7 +10,7 @@ rule Hive
     strings:
         // Description: Hive ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string1 = /HOW_TO_DECRYPT\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}HOW_TO_DECRYPT\.txt.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

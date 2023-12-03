@@ -10,7 +10,7 @@ rule chaos
     strings:
         // Description: Chaos ransomware behavior
         // Reference: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/17/the-chaos-ransomware-can-be-ravaging
-        $string1 = /C:\\Users\\.*\\AppData\\Roaming\\svchost\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}C:\\Users\\.{0,1000}\\AppData\\Roaming\\svchost\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

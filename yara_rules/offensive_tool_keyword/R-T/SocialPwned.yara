@@ -10,25 +10,25 @@ rule SocialPwned
     strings:
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string1 = /\/lib\/GHunt\// nocase ascii wide
+        $string1 = /.{0,1000}\/lib\/GHunt\/.{0,1000}/ nocase ascii wide
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string2 = /\/PwnDB\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\/PwnDB\.py.{0,1000}/ nocase ascii wide
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string3 = /\/SocialPwned/ nocase ascii wide
+        $string3 = /.{0,1000}\/SocialPwned.{0,1000}/ nocase ascii wide
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string4 = /SocialPwned\.git/ nocase ascii wide
+        $string4 = /.{0,1000}SocialPwned\.git.{0,1000}/ nocase ascii wide
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string5 = /socialpwned\.py/ nocase ascii wide
+        $string5 = /.{0,1000}socialpwned\.py.{0,1000}/ nocase ascii wide
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string6 = /socialpwned_.*\.txt/ nocase ascii wide
+        $string6 = /.{0,1000}socialpwned_.{0,1000}\.txt.{0,1000}/ nocase ascii wide
         // Description: SocialPwned is an OSINT tool that allows to get the emails. from a target. published in social networks like Instagram. Linkedin and Twitter to find the possible credential leaks in PwnDB or Dehashed and obtain Google account information via GHunt.
         // Reference: https://github.com/MrTuxx/SocialPwned
-        $string7 = /\-\-tor\-proxy.*\-\-pwndb/ nocase ascii wide
+        $string7 = /.{0,1000}\-\-tor\-proxy.{0,1000}\-\-pwndb.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

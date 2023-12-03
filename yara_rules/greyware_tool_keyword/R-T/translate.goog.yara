@@ -10,7 +10,7 @@ rule translate_goog
     strings:
         // Description: accessing github through google translate (evasion) false positive risk
         // Reference: https://*-com.translate.goog/*
-        $string1 = /https:\/\/github\-com\.translate\.goog\// nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/github\-com\.translate\.goog\/.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

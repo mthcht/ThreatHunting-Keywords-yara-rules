@@ -10,25 +10,25 @@ rule recon_archy
     strings:
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string1 = /\/recon\-archy\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/recon\-archy\.git.{0,1000}/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string2 = /recon\-archy\sanalyse/ nocase ascii wide
+        $string2 = /.{0,1000}recon\-archy\sanalyse.{0,1000}/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string3 = /recon\-archy\sbuild/ nocase ascii wide
+        $string3 = /.{0,1000}recon\-archy\sbuild.{0,1000}/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string4 = /recon\-archy\scrawl/ nocase ascii wide
+        $string4 = /.{0,1000}recon\-archy\scrawl.{0,1000}/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string5 = /recon\-archy\-master/ nocase ascii wide
+        $string5 = /.{0,1000}recon\-archy\-master.{0,1000}/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string6 = /remiflavien1\/recon\-archy/ nocase ascii wide
+        $string6 = /.{0,1000}remiflavien1\/recon\-archy.{0,1000}/ nocase ascii wide
         // Description: Linkedin Tools to reconstruct a company hierarchy from scraping relations and jobs title
         // Reference: https://github.com/shadawck/recon-archy
-        $string7 = /shadawck\/recon\-archy/ nocase ascii wide
+        $string7 = /.{0,1000}shadawck\/recon\-archy.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule SharpSQLPwn
     strings:
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string1 = /\s\/cmdtech:.*\s\/cmd:.*\s\/impuser:/ nocase ascii wide
+        $string1 = /.{0,1000}\s\/cmdtech:.{0,1000}\s\/cmd:.{0,1000}\s\/impuser:.{0,1000}/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string2 = /\s\/cmdtech:.*\s\/cmd:.*\s\/query:/ nocase ascii wide
+        $string2 = /.{0,1000}\s\/cmdtech:.{0,1000}\s\/cmd:.{0,1000}\s\/query:.{0,1000}/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string3 = /\s\/modules:.*\s\/target:.*\s\/linkedsql:/ nocase ascii wide
+        $string3 = /.{0,1000}\s\/modules:.{0,1000}\s\/target:.{0,1000}\s\/linkedsql:.{0,1000}/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string4 = /SharpSQLPwn/ nocase ascii wide
+        $string4 = /.{0,1000}SharpSQLPwn.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

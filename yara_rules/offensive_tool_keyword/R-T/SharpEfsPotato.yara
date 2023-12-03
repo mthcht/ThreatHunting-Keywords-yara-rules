@@ -10,34 +10,34 @@ rule SharpEfsPotato
     strings:
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string1 = /\sC:\\temp\\w\.log/ nocase ascii wide
+        $string1 = /.{0,1000}\sC:\\temp\\w\.log.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string2 = /\sSharpEfsPotato/ nocase ascii wide
+        $string2 = /.{0,1000}\sSharpEfsPotato.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string3 = /\/SharpEfsPotato/ nocase ascii wide
+        $string3 = /.{0,1000}\/SharpEfsPotato.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string4 = /\\SharpEfsPotato/ nocase ascii wide
+        $string4 = /.{0,1000}\\SharpEfsPotato.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string5 = /AAB4D641\-C310\-4572\-A9C2\-6D12593AB28E/ nocase ascii wide
+        $string5 = /.{0,1000}AAB4D641\-C310\-4572\-A9C2\-6D12593AB28E.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string6 = /SharpEfsPotato\sby\s\@bugch3ck/ nocase ascii wide
+        $string6 = /.{0,1000}SharpEfsPotato\sby\s\@bugch3ck.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string7 = /SharpEfsPotato\.cs/ nocase ascii wide
+        $string7 = /.{0,1000}SharpEfsPotato\.cs.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string8 = /SharpEfsPotato\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}SharpEfsPotato\.exe.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string9 = /SharpEfsPotato\.sln/ nocase ascii wide
+        $string9 = /.{0,1000}SharpEfsPotato\.sln.{0,1000}/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string10 = /SharpEfsPotato\-master/ nocase ascii wide
+        $string10 = /.{0,1000}SharpEfsPotato\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

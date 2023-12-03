@@ -10,232 +10,232 @@ rule PrivescCheck
     strings:
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string1 = /\/PrivescCheck/ nocase ascii wide
+        $string1 = /.{0,1000}\/PrivescCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string2 = /\\PrivescCheck/ nocase ascii wide
+        $string2 = /.{0,1000}\\PrivescCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string3 = /Find\-ProtectionSoftware/ nocase ascii wide
+        $string3 = /.{0,1000}Find\-ProtectionSoftware.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string4 = /Get\-AclModificationRights/ nocase ascii wide
+        $string4 = /.{0,1000}Get\-AclModificationRights.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string5 = /Get\-DecodedPassword/ nocase ascii wide
+        $string5 = /.{0,1000}Get\-DecodedPassword.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string6 = /Get\-DecryptedPassword/ nocase ascii wide
+        $string6 = /.{0,1000}Get\-DecryptedPassword.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string7 = /Get\-ExploitableUnquotedPath/ nocase ascii wide
+        $string7 = /.{0,1000}Get\-ExploitableUnquotedPath.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string8 = /Get\-RemoteDesktopUserSessionList/ nocase ascii wide
+        $string8 = /.{0,1000}Get\-RemoteDesktopUserSessionList.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string9 = /Get\-RemoteDesktopUserSessionList\./ nocase ascii wide
+        $string9 = /.{0,1000}Get\-RemoteDesktopUserSessionList\..{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string10 = /Get\-SccmCacheFolder/ nocase ascii wide
+        $string10 = /.{0,1000}Get\-SccmCacheFolder.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string11 = /Get\-ShadowCopies/ nocase ascii wide
+        $string11 = /.{0,1000}Get\-ShadowCopies.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string12 = /Get\-VaultCreds/ nocase ascii wide
+        $string12 = /.{0,1000}Get\-VaultCreds.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string13 = /Invoke\-AirstrikeAttackCheck/ nocase ascii wide
+        $string13 = /.{0,1000}Invoke\-AirstrikeAttackCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string14 = /Invoke\-ApplicationsOnStartupCheck/ nocase ascii wide
+        $string14 = /.{0,1000}Invoke\-ApplicationsOnStartupCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string15 = /Invoke\-BitlockerCheck/ nocase ascii wide
+        $string15 = /.{0,1000}Invoke\-BitlockerCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string16 = /Invoke\-CredentialFilesCheck/ nocase ascii wide
+        $string16 = /.{0,1000}Invoke\-CredentialFilesCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string17 = /Invoke\-CredentialGuardCheck/ nocase ascii wide
+        $string17 = /.{0,1000}Invoke\-CredentialGuardCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string18 = /Invoke\-DefenderExclusionsCheck/ nocase ascii wide
+        $string18 = /.{0,1000}Invoke\-DefenderExclusionsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string19 = /Invoke\-DllHijackingCheck/ nocase ascii wide
+        $string19 = /.{0,1000}Invoke\-DllHijackingCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string20 = /Invoke\-DriverCoInstallersCheck/ nocase ascii wide
+        $string20 = /.{0,1000}Invoke\-DriverCoInstallersCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string21 = /Invoke\-EndpointProtectionCheck/ nocase ascii wide
+        $string21 = /.{0,1000}Invoke\-EndpointProtectionCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string22 = /Invoke\-ExploitableLeakedHandlesCheck/ nocase ascii wide
+        $string22 = /.{0,1000}Invoke\-ExploitableLeakedHandlesCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string23 = /Invoke\-GPPPasswordCheck/ nocase ascii wide
+        $string23 = /.{0,1000}Invoke\-GPPPasswordCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string24 = /Invoke\-HardenedUNCPathCheck/ nocase ascii wide
+        $string24 = /.{0,1000}Invoke\-HardenedUNCPathCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string25 = /Invoke\-HijackableDllsCheck/ nocase ascii wide
+        $string25 = /.{0,1000}Invoke\-HijackableDllsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string26 = /Invoke\-HotFixVulnCheck/ nocase ascii wide
+        $string26 = /.{0,1000}Invoke\-HotFixVulnCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string27 = /Invoke\-InstalledProgramsCheck/ nocase ascii wide
+        $string27 = /.{0,1000}Invoke\-InstalledProgramsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string28 = /Invoke\-InstalledServicesCheck/ nocase ascii wide
+        $string28 = /.{0,1000}Invoke\-InstalledServicesCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string29 = /Invoke\-LapsCheck/ nocase ascii wide
+        $string29 = /.{0,1000}Invoke\-LapsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string30 = /Invoke\-LocalAdminGroupCheck/ nocase ascii wide
+        $string30 = /.{0,1000}Invoke\-LocalAdminGroupCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string31 = /Invoke\-LsaProtectionCheck/ nocase ascii wide
+        $string31 = /.{0,1000}Invoke\-LsaProtectionCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string32 = /Invoke\-MachineRoleCheck/ nocase ascii wide
+        $string32 = /.{0,1000}Invoke\-MachineRoleCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string33 = /Invoke\-ModifiableProgramsCheck/ nocase ascii wide
+        $string33 = /.{0,1000}Invoke\-ModifiableProgramsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string34 = /Invoke\-NamedPipePermissionsCheck/ nocase ascii wide
+        $string34 = /.{0,1000}Invoke\-NamedPipePermissionsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string35 = /Invoke\-NetworkAdaptersCheck/ nocase ascii wide
+        $string35 = /.{0,1000}Invoke\-NetworkAdaptersCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string36 = /Invoke\-PowerShellHistoryCheck/ nocase ascii wide
+        $string36 = /.{0,1000}Invoke\-PowerShellHistoryCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string37 = /Invoke\-PowershellTranscriptionCheck/ nocase ascii wide
+        $string37 = /.{0,1000}Invoke\-PowershellTranscriptionCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string38 = /Invoke\-PrintNightmareCheck/ nocase ascii wide
+        $string38 = /.{0,1000}Invoke\-PrintNightmareCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string39 = /Invoke\-PrivescCheck/ nocase ascii wide
+        $string39 = /.{0,1000}Invoke\-PrivescCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string40 = /Invoke\-RegistryAlwaysInstallElevatedCheck/ nocase ascii wide
+        $string40 = /.{0,1000}Invoke\-RegistryAlwaysInstallElevatedCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string41 = /Invoke\-RunningProcessCheck/ nocase ascii wide
+        $string41 = /.{0,1000}Invoke\-RunningProcessCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string42 = /Invoke\-SccmCacheFolderCheck/ nocase ascii wide
+        $string42 = /.{0,1000}Invoke\-SccmCacheFolderCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string43 = /Invoke\-ScheduledTasksImagePermissionsCheck/ nocase ascii wide
+        $string43 = /.{0,1000}Invoke\-ScheduledTasksImagePermissionsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string44 = /Invoke\-ScheduledTasksUnquotedPathCheck/ nocase ascii wide
+        $string44 = /.{0,1000}Invoke\-ScheduledTasksUnquotedPathCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string45 = /Invoke\-SCMPermissionsCheck/ nocase ascii wide
+        $string45 = /.{0,1000}Invoke\-SCMPermissionsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string46 = /Invoke\-SensitiveHiveFileAccessCheck/ nocase ascii wide
+        $string46 = /.{0,1000}Invoke\-SensitiveHiveFileAccessCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string47 = /Invoke\-SensitiveHiveShadowCopyCheck/ nocase ascii wide
+        $string47 = /.{0,1000}Invoke\-SensitiveHiveShadowCopyCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string48 = /Invoke\-ServicesImagePermissionsCheck/ nocase ascii wide
+        $string48 = /.{0,1000}Invoke\-ServicesImagePermissionsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string49 = /Invoke\-ServicesPermissionsCheck/ nocase ascii wide
+        $string49 = /.{0,1000}Invoke\-ServicesPermissionsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string50 = /Invoke\-ServicesPermissionsRegistryCheck/ nocase ascii wide
+        $string50 = /.{0,1000}Invoke\-ServicesPermissionsRegistryCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string51 = /Invoke\-ServicesUnquotedPathCheck/ nocase ascii wide
+        $string51 = /.{0,1000}Invoke\-ServicesUnquotedPathCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string52 = /Invoke\-SystemStartupCheck/ nocase ascii wide
+        $string52 = /.{0,1000}Invoke\-SystemStartupCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string53 = /Invoke\-SystemStartupHistoryCheck/ nocase ascii wide
+        $string53 = /.{0,1000}Invoke\-SystemStartupHistoryCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string54 = /Invoke\-TcpEndpointsCheck/ nocase ascii wide
+        $string54 = /.{0,1000}Invoke\-TcpEndpointsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string55 = /Invoke\-ThirdPartyDriversCheck/ nocase ascii wide
+        $string55 = /.{0,1000}Invoke\-ThirdPartyDriversCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string56 = /Invoke\-UacCheck/ nocase ascii wide
+        $string56 = /.{0,1000}Invoke\-UacCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string57 = /Invoke\-UdpEndpointsCheck/ nocase ascii wide
+        $string57 = /.{0,1000}Invoke\-UdpEndpointsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string58 = /Invoke\-UnattendFilesCheck/ nocase ascii wide
+        $string58 = /.{0,1000}Invoke\-UnattendFilesCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string59 = /Invoke\-UserCheck/ nocase ascii wide
+        $string59 = /.{0,1000}Invoke\-UserCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string60 = /Invoke\-UserEnvCheck/ nocase ascii wide
+        $string60 = /.{0,1000}Invoke\-UserEnvCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string61 = /Invoke\-UserGroupsCheck/ nocase ascii wide
+        $string61 = /.{0,1000}Invoke\-UserGroupsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string62 = /Invoke\-UserPrivilegesCheck/ nocase ascii wide
+        $string62 = /.{0,1000}Invoke\-UserPrivilegesCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string63 = /Invoke\-UserRestrictedSidsCheck/ nocase ascii wide
+        $string63 = /.{0,1000}Invoke\-UserRestrictedSidsCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string64 = /Invoke\-UserSessionListCheck/ nocase ascii wide
+        $string64 = /.{0,1000}Invoke\-UserSessionListCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string65 = /Invoke\-UsersHomeFolderCheck/ nocase ascii wide
+        $string65 = /.{0,1000}Invoke\-UsersHomeFolderCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string66 = /Invoke\-VaultCredCheck/ nocase ascii wide
+        $string66 = /.{0,1000}Invoke\-VaultCredCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string67 = /Invoke\-VaultListCheck/ nocase ascii wide
+        $string67 = /.{0,1000}Invoke\-VaultListCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string68 = /Invoke\-WindowsUpdateCheck/ nocase ascii wide
+        $string68 = /.{0,1000}Invoke\-WindowsUpdateCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string69 = /Invoke\-WinlogonCheck/ nocase ascii wide
+        $string69 = /.{0,1000}Invoke\-WinlogonCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string70 = /Invoke\-WlanProfilesCheck/ nocase ascii wide
+        $string70 = /.{0,1000}Invoke\-WlanProfilesCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string71 = /itm4n\/PrivescCheck/ nocase ascii wide
+        $string71 = /.{0,1000}itm4n\/PrivescCheck.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string72 = /PrivescCheck\.ps1/ nocase ascii wide
+        $string72 = /.{0,1000}PrivescCheck\.ps1.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string73 = /PrivescCheck_.*\./ nocase ascii wide
+        $string73 = /.{0,1000}PrivescCheck_.{0,1000}\..{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string74 = /PrivescCheckAsciiReport/ nocase ascii wide
+        $string74 = /.{0,1000}PrivescCheckAsciiReport.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string75 = /Test\-DllExists/ nocase ascii wide
+        $string75 = /.{0,1000}Test\-DllExists.{0,1000}/ nocase ascii wide
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
-        $string76 = /Test\-HijackableDll/ nocase ascii wide
+        $string76 = /.{0,1000}Test\-HijackableDll.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

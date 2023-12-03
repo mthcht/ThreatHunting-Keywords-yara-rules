@@ -10,49 +10,49 @@ rule Sitadel
     strings:
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string1 = /\s\-a\sbruteforce\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-a\sbruteforce\s.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string2 = /\s\-\-attack\sbruteforce/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-attack\sbruteforce.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string3 = /\s\-\-attack\sinjection/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-\-attack\sinjection.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string4 = /\s\-\-attack\svulns\s/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-\-attack\svulns\s.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string5 = /\ssitadel\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\ssitadel\.py.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string6 = /\/Sitadel\.git/ nocase ascii wide
+        $string6 = /.{0,1000}\/Sitadel\.git.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string7 = /\/sitadel\.log/ nocase ascii wide
+        $string7 = /.{0,1000}\/sitadel\.log.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string8 = /\/sitadel\.py/ nocase ascii wide
+        $string8 = /.{0,1000}\/sitadel\.py.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string9 = /\\sitadel\.log/ nocase ascii wide
+        $string9 = /.{0,1000}\\sitadel\.log.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string10 = /docker\srun\ssitadel/ nocase ascii wide
+        $string10 = /.{0,1000}docker\srun\ssitadel.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string11 = /python3\ssitadel/ nocase ascii wide
+        $string11 = /.{0,1000}python3\ssitadel.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string12 = /sitadel\shttp:\/\// nocase ascii wide
+        $string12 = /.{0,1000}sitadel\shttp:\/\/.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string13 = /sitadel\shttps:\/\// nocase ascii wide
+        $string13 = /.{0,1000}sitadel\shttps:\/\/.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string14 = /sitadel\.py\s/ nocase ascii wide
+        $string14 = /.{0,1000}sitadel\.py\s.{0,1000}/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string15 = /Sitadel\-master\.zip/ nocase ascii wide
+        $string15 = /.{0,1000}Sitadel\-master\.zip.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule findstr
     strings:
         // Description: findstr used to find credentials
         // Reference: N/A
-        $string1 = /findstr\s.*BEGIN\sCERTIFICATE/ nocase ascii wide
+        $string1 = /.{0,1000}findstr\s.{0,1000}BEGIN\sCERTIFICATE.{0,1000}/ nocase ascii wide
         // Description: findstr used to find credentials
         // Reference: N/A
-        $string2 = /findstr\s.*confidential/ nocase ascii wide
+        $string2 = /.{0,1000}findstr\s.{0,1000}confidential.{0,1000}/ nocase ascii wide
         // Description: findstr used to find credentials
         // Reference: N/A
-        $string3 = /findstr\s.*net\suse/ nocase ascii wide
+        $string3 = /.{0,1000}findstr\s.{0,1000}net\suse.{0,1000}/ nocase ascii wide
         // Description: findstr used to find credentials
         // Reference: N/A
-        $string4 = /findstr\s.*password/ nocase ascii wide
+        $string4 = /.{0,1000}findstr\s.{0,1000}password.{0,1000}/ nocase ascii wide
         // Description: findstr used to find lsass pid in order to dump lsass process
         // Reference: https://github.com/gabriellandau/PPLFault
-        $string5 = /findstr\slsass/ nocase ascii wide
+        $string5 = /.{0,1000}findstr\slsass.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

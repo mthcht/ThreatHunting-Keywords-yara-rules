@@ -10,37 +10,37 @@ rule NtRemoteLoad
     strings:
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string1 = /\/HWSyscalls\.cpp/ nocase ascii wide
+        $string1 = /.{0,1000}\/HWSyscalls\.cpp.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string2 = /\/NtRemoteLoad\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\/NtRemoteLoad\.exe.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string3 = /\/NtRemoteLoad\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/NtRemoteLoad\.git.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string4 = /\\donut\\VanillaProgram\.bin/ nocase ascii wide
+        $string4 = /.{0,1000}\\donut\\VanillaProgram\.bin.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string5 = /\\HWSyscalls\.cpp/ nocase ascii wide
+        $string5 = /.{0,1000}\\HWSyscalls\.cpp.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string6 = /\\HWSyscalls\-Example\./ nocase ascii wide
+        $string6 = /.{0,1000}\\HWSyscalls\-Example\..{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string7 = /\\NtRemoteLoad\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}\\NtRemoteLoad\.exe.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string8 = /\\NtRemoteLoad\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}\\NtRemoteLoad\.sln.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string9 = /40B05F26\-6A2F\-40BC\-88DE\-F40D4BC77FB0/ nocase ascii wide
+        $string9 = /.{0,1000}40B05F26\-6A2F\-40BC\-88DE\-F40D4BC77FB0.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string10 = /florylsk\/NtRemoteLoad/ nocase ascii wide
+        $string10 = /.{0,1000}florylsk\/NtRemoteLoad.{0,1000}/ nocase ascii wide
         // Description: Remote Shellcode Injector
         // Reference: https://github.com/florylsk/NtRemoteLoad
-        $string11 = /NtRemoteLoad\-main/ nocase ascii wide
+        $string11 = /.{0,1000}NtRemoteLoad\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

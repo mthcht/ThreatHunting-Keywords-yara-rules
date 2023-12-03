@@ -10,13 +10,13 @@ rule tetanus
     strings:
         // Description: Mythic C2 agent targeting Linux and Windows hosts written in Rust
         // Reference: https://github.com/MythicAgents/tetanus
-        $string1 = /\.\/mythic\-cli\s/ nocase ascii wide
+        $string1 = /.{0,1000}\.\/mythic\-cli\s.{0,1000}/ nocase ascii wide
         // Description: Mythic C2 agent targeting Linux and Windows hosts written in Rust
         // Reference: https://github.com/MythicAgents/tetanus
-        $string2 = /MythicAgents\/tetanus/ nocase ascii wide
+        $string2 = /.{0,1000}MythicAgents\/tetanus.{0,1000}/ nocase ascii wide
         // Description: Mythic C2 agent targeting Linux and Windows hosts written in Rust
         // Reference: https://github.com/MythicAgents/tetanus
-        $string3 = /payload\sstart\stetanus/ nocase ascii wide
+        $string3 = /.{0,1000}payload\sstart\stetanus.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

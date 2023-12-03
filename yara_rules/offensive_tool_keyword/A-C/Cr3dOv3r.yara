@@ -10,7 +10,7 @@ rule Cr3dOv3r
     strings:
         // Description: Know the dangers of credential reuse attacks.
         // Reference: https://github.com/D4Vinci/Cr3dOv3r
-        $string1 = /Cr3dOv3r/ nocase ascii wide
+        $string1 = /.{0,1000}Cr3dOv3r.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

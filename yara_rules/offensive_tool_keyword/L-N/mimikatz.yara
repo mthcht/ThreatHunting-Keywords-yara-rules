@@ -10,799 +10,799 @@ rule mimikatz
     strings:
         // Description: mimikatz default strings
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string1 = /\sBenjamin\sDELPY\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sBenjamin\sDELPY\s.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string2 = /\'\sp::d\s\'/ nocase ascii wide
+        $string2 = /.{0,1000}\'\sp::d\s\'.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string3 = /\'\ss::l\s\'/ nocase ascii wide
+        $string3 = /.{0,1000}\'\ss::l\s\'.{0,1000}/ nocase ascii wide
         // Description: removing process protection for the lsass.exe process can potentially enable adversaries to inject malicious code or manipulate the process to escalate privileges or gather sensitive information such as credentials. command: !processprotect /process:lsass.exe /remove
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string4 = /\!processprotect\s.*lsass\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}\!processprotect\s.{0,1000}lsass\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string5 = /\.kirbi\s/ nocase ascii wide
+        $string5 = /.{0,1000}\.kirbi\s.{0,1000}/ nocase ascii wide
         // Description: Mimikatz Using domain trust key From the DC dump the hash of the currentdomain\targetdomain$ trust account using Mimikatz (e.g. with LSADump or DCSync). Then using this trust key and the domain SIDs. forge an inter-realm TGT using Mimikatz adding the SID for the target domains enterprise admins group to our SID history.
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string6 = /\/domain:.*\s\/sid:.*\s\/sids:.*\s\/rc4:.*\s\/user:.*\s\/service:krbtgt\s\/target:.*\.kirbi/ nocase ascii wide
+        $string6 = /.{0,1000}\/domain:.{0,1000}\s\/sid:.{0,1000}\s\/sids:.{0,1000}\s\/rc4:.{0,1000}\s\/user:.{0,1000}\s\/service:krbtgt\s\/target:.{0,1000}\.kirbi.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 script argument
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string7 = /\/DumpCerts/ nocase ascii wide
+        $string7 = /.{0,1000}\/DumpCerts.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 script argument
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string8 = /\/DumpCreds/ nocase ascii wide
+        $string8 = /.{0,1000}\/DumpCreds.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/vyrus001/go-mimikatz
-        $string9 = /\/go\-mimikatz/ nocase ascii wide
+        $string9 = /.{0,1000}\/go\-mimikatz.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string10 = /\/kiwi_passwords\.yar/ nocase ascii wide
+        $string10 = /.{0,1000}\/kiwi_passwords\.yar.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string11 = /\/mimi32\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}\/mimi32\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string12 = /\/mimi64\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}\/mimi64\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string13 = /\/mimicom\.idl/ nocase ascii wide
+        $string13 = /.{0,1000}\/mimicom\.idl.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string14 = /\/mimidrv\.sys/ nocase ascii wide
+        $string14 = /.{0,1000}\/mimidrv\.sys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string15 = /\/mimidrv\.zip/ nocase ascii wide
+        $string15 = /.{0,1000}\/mimidrv\.zip.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string16 = /\/mimikatz\.sln/ nocase ascii wide
+        $string16 = /.{0,1000}\/mimikatz\.sln.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string17 = /\/mimikatz_bypass\/mimikatz\.py/ nocase ascii wide
+        $string17 = /.{0,1000}\/mimikatz_bypass\/mimikatz\.py.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string18 = /\/mimikatz_bypass\/mimikatz2\.py/ nocase ascii wide
+        $string18 = /.{0,1000}\/mimikatz_bypass\/mimikatz2\.py.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string19 = /\/mimikatz_bypassAV\/main\.exe/ nocase ascii wide
+        $string19 = /.{0,1000}\/mimikatz_bypassAV\/main\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string20 = /\/mimikatz_bypassAV\/mimikatz_load\.exe/ nocase ascii wide
+        $string20 = /.{0,1000}\/mimikatz_bypassAV\/mimikatz_load\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string21 = /\/mimikatz_load\.exe/ nocase ascii wide
+        $string21 = /.{0,1000}\/mimikatz_load\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string22 = /\/mimilib\.def/ nocase ascii wide
+        $string22 = /.{0,1000}\/mimilib\.def.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string23 = /\/mimilove\.c/ nocase ascii wide
+        $string23 = /.{0,1000}\/mimilove\.c.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string24 = /\/mimilove\.h/ nocase ascii wide
+        $string24 = /.{0,1000}\/mimilove\.h.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string25 = /\/mimilove\.rc/ nocase ascii wide
+        $string25 = /.{0,1000}\/mimilove\.rc.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/skelsec/pypykatz
-        $string26 = /\/pypykatz\.py/ nocase ascii wide
+        $string26 = /.{0,1000}\/pypykatz\.py.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string27 = /\/rakjong\/mimikatz_bypassAV\// nocase ascii wide
+        $string27 = /.{0,1000}\/rakjong\/mimikatz_bypassAV\/.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/skelsec/pypykatz
-        $string28 = /\/skelsec\/pypykatz/ nocase ascii wide
+        $string28 = /.{0,1000}\/skelsec\/pypykatz.{0,1000}/ nocase ascii wide
         // Description: mimikatz powershell alternative name
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string29 = /\\katz\.ps1/ nocase ascii wide
+        $string29 = /.{0,1000}\\katz\.ps1.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string30 = /\\mimi32\.exe/ nocase ascii wide
+        $string30 = /.{0,1000}\\mimi32\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string31 = /\\mimi64\.exe/ nocase ascii wide
+        $string31 = /.{0,1000}\\mimi64\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string32 = /\<3\seo\.oe/ nocase ascii wide
+        $string32 = /.{0,1000}\<3\seo\.oe.{0,1000}/ nocase ascii wide
         // Description: mimikatz default strings
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string33 = /A\sLa\sVie.*\sA\sL\'Amour/ nocase ascii wide
+        $string33 = /.{0,1000}A\sLa\sVie.{0,1000}\sA\sL\'Amour.{0,1000}/ nocase ascii wide
         // Description: mimikatz default strings
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string34 = /benjamin\@gentilkiwi\.com/ nocase ascii wide
+        $string34 = /.{0,1000}benjamin\@gentilkiwi\.com.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string35 = /chocolate\.kirbi/ nocase ascii wide
+        $string35 = /.{0,1000}chocolate\.kirbi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string36 = /Copyright\s\(c\)\s2007\s\-\s2021\sgentilkiwi\s\(Benjamin\sDELPY\)/ nocase ascii wide
+        $string36 = /.{0,1000}Copyright\s\(c\)\s2007\s\-\s2021\sgentilkiwi\s\(Benjamin\sDELPY\).{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string37 = /crypto::capi/ nocase ascii wide
+        $string37 = /.{0,1000}crypto::capi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string38 = /crypto::certificates/ nocase ascii wide
+        $string38 = /.{0,1000}crypto::certificates.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string39 = /crypto::certtohw/ nocase ascii wide
+        $string39 = /.{0,1000}crypto::certtohw.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string40 = /crypto::cng/ nocase ascii wide
+        $string40 = /.{0,1000}crypto::cng.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string41 = /crypto::extract/ nocase ascii wide
+        $string41 = /.{0,1000}crypto::extract.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string42 = /crypto::hash/ nocase ascii wide
+        $string42 = /.{0,1000}crypto::hash.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string43 = /crypto::keys/ nocase ascii wide
+        $string43 = /.{0,1000}crypto::keys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string44 = /crypto::providers/ nocase ascii wide
+        $string44 = /.{0,1000}crypto::providers.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string45 = /crypto::sc/ nocase ascii wide
+        $string45 = /.{0,1000}crypto::sc.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string46 = /crypto::scauth/ nocase ascii wide
+        $string46 = /.{0,1000}crypto::scauth.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string47 = /crypto::stores/ nocase ascii wide
+        $string47 = /.{0,1000}crypto::stores.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string48 = /crypto::system/ nocase ascii wide
+        $string48 = /.{0,1000}crypto::system.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string49 = /crypto::tpminfo/ nocase ascii wide
+        $string49 = /.{0,1000}crypto::tpminfo.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string50 = /dpapi::blob/ nocase ascii wide
+        $string50 = /.{0,1000}dpapi::blob.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string51 = /dpapi::cache/ nocase ascii wide
+        $string51 = /.{0,1000}dpapi::cache.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string52 = /dpapi::capi/ nocase ascii wide
+        $string52 = /.{0,1000}dpapi::capi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string53 = /dpapi::chrome/ nocase ascii wide
+        $string53 = /.{0,1000}dpapi::chrome.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string54 = /dpapi::cloudapkd/ nocase ascii wide
+        $string54 = /.{0,1000}dpapi::cloudapkd.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string55 = /dpapi::cloudapreg/ nocase ascii wide
+        $string55 = /.{0,1000}dpapi::cloudapreg.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string56 = /dpapi::cng/ nocase ascii wide
+        $string56 = /.{0,1000}dpapi::cng.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string57 = /dpapi::create/ nocase ascii wide
+        $string57 = /.{0,1000}dpapi::create.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string58 = /dpapi::cred/ nocase ascii wide
+        $string58 = /.{0,1000}dpapi::cred.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string59 = /dpapi::credhist/ nocase ascii wide
+        $string59 = /.{0,1000}dpapi::credhist.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string60 = /dpapi::luna/ nocase ascii wide
+        $string60 = /.{0,1000}dpapi::luna.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string61 = /dpapi::masterkey/ nocase ascii wide
+        $string61 = /.{0,1000}dpapi::masterkey.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string62 = /dpapi::protect/ nocase ascii wide
+        $string62 = /.{0,1000}dpapi::protect.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string63 = /dpapi::ps/ nocase ascii wide
+        $string63 = /.{0,1000}dpapi::ps.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string64 = /dpapi::rdg/ nocase ascii wide
+        $string64 = /.{0,1000}dpapi::rdg.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string65 = /dpapi::sccm/ nocase ascii wide
+        $string65 = /.{0,1000}dpapi::sccm.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string66 = /dpapi::ssh/ nocase ascii wide
+        $string66 = /.{0,1000}dpapi::ssh.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string67 = /dpapi::tpm/ nocase ascii wide
+        $string67 = /.{0,1000}dpapi::tpm.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string68 = /dpapi::vault/ nocase ascii wide
+        $string68 = /.{0,1000}dpapi::vault.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string69 = /dpapi::wifi/ nocase ascii wide
+        $string69 = /.{0,1000}dpapi::wifi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string70 = /dpapi::wwman/ nocase ascii wide
+        $string70 = /.{0,1000}dpapi::wwman.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 script argument
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string71 = /\-DumpCreds/ nocase ascii wide
+        $string71 = /.{0,1000}\-DumpCreds.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 function name
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string72 = /Enable\-SeDebugPrivilege/ nocase ascii wide
+        $string72 = /.{0,1000}Enable\-SeDebugPrivilege.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string73 = /eo\.oe\.kiwi/ nocase ascii wide
+        $string73 = /.{0,1000}eo\.oe\.kiwi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string74 = /event::clear/ nocase ascii wide
+        $string74 = /.{0,1000}event::clear.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string75 = /event::drop/ nocase ascii wide
+        $string75 = /.{0,1000}event::drop.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string76 = /gentilkiwi\s\(Benjamin\sDELPY\)/ nocase ascii wide
+        $string76 = /.{0,1000}gentilkiwi\s\(Benjamin\sDELPY\).{0,1000}/ nocase ascii wide
         // Description: author of mimikatz and multiple other windows exploitation tools
         // Reference: https://github.com/gentilkiwi/
-        $string77 = /gentilkiwi/ nocase ascii wide
+        $string77 = /.{0,1000}gentilkiwi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string78 = /Hello\sfrom\sDCShadow/ nocase ascii wide
+        $string78 = /.{0,1000}Hello\sfrom\sDCShadow.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string79 = /id::modify/ nocase ascii wide
+        $string79 = /.{0,1000}id::modify.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 function name
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string80 = /Import\-DllInRemoteProcess/ nocase ascii wide
+        $string80 = /.{0,1000}Import\-DllInRemoteProcess.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 function name
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string81 = /Invoke\-CreateRemoteThread/ nocase ascii wide
+        $string81 = /.{0,1000}Invoke\-CreateRemoteThread.{0,1000}/ nocase ascii wide
         // Description: Invoke-Mimikatz.ps1 function name
         // Reference: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
-        $string82 = /Invoke\-Mimikatz/ nocase ascii wide
+        $string82 = /.{0,1000}Invoke\-Mimikatz.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/g4uss47/Invoke-Mimikatz
-        $string83 = /Invoke\-Mimikatz/ nocase ascii wide
+        $string83 = /.{0,1000}Invoke\-Mimikatz.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/g4uss47/Invoke-Mimikatz
-        $string84 = /Invoke\-Mimikatz\.ps1/ nocase ascii wide
+        $string84 = /.{0,1000}Invoke\-Mimikatz\.ps1.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/g4uss47/Invoke-Mimikatz
-        $string85 = /Invoke\-UpdateMimikatzScript\.ps1/ nocase ascii wide
+        $string85 = /.{0,1000}Invoke\-UpdateMimikatzScript\.ps1.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string86 = /kerberos::ask/ nocase ascii wide
+        $string86 = /.{0,1000}kerberos::ask.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string87 = /kerberos::clist/ nocase ascii wide
+        $string87 = /.{0,1000}kerberos::clist.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string88 = /kerberos::golden/ nocase ascii wide
+        $string88 = /.{0,1000}kerberos::golden.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string89 = /kerberos::golden/ nocase ascii wide
+        $string89 = /.{0,1000}kerberos::golden.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string90 = /kerberos::hash/ nocase ascii wide
+        $string90 = /.{0,1000}kerberos::hash.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string91 = /kerberos::list/ nocase ascii wide
+        $string91 = /.{0,1000}kerberos::list.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. This function lists all Kerberos tickets in memory
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string92 = /kerberos::list/ nocase ascii wide
+        $string92 = /.{0,1000}kerberos::list.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string93 = /kerberos::ptc/ nocase ascii wide
+        $string93 = /.{0,1000}kerberos::ptc.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string94 = /kerberos::ptt/ nocase ascii wide
+        $string94 = /.{0,1000}kerberos::ptt.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string95 = /kerberos::ptt/ nocase ascii wide
+        $string95 = /.{0,1000}kerberos::ptt.{0,1000}/ nocase ascii wide
         // Description: Mimikatz Unconstrained delegation. With administrative privileges on a server with Unconstrained Delegation set we can dump the TGTs for other users that have a connection. If we do this successfully. we can impersonate the victim user towards any service in the domain.
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string96 = /kerberos::ptt.*\.kirbi/ nocase ascii wide
+        $string96 = /.{0,1000}kerberos::ptt.{0,1000}\.kirbi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string97 = /kerberos::purge/ nocase ascii wide
+        $string97 = /.{0,1000}kerberos::purge.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string98 = /kerberos::tgt/ nocase ascii wide
+        $string98 = /.{0,1000}kerberos::tgt.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string99 = /Kiwi\sLegit\sPrinter/ nocase ascii wide
+        $string99 = /.{0,1000}Kiwi\sLegit\sPrinter.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string100 = /kuhl_m_sekurlsa_nt6\.c/ nocase ascii wide
+        $string100 = /.{0,1000}kuhl_m_sekurlsa_nt6\.c.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string101 = /kuhl_m_sekurlsa_nt6\.h/ nocase ascii wide
+        $string101 = /.{0,1000}kuhl_m_sekurlsa_nt6\.h.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string102 = /kuhl_m_sekurlsa_packages\.c/ nocase ascii wide
+        $string102 = /.{0,1000}kuhl_m_sekurlsa_packages\.c.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string103 = /kuhl_m_sekurlsa_packages\.h/ nocase ascii wide
+        $string103 = /.{0,1000}kuhl_m_sekurlsa_packages\.h.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string104 = /kuhl_m_sekurlsa_utils\.c/ nocase ascii wide
+        $string104 = /.{0,1000}kuhl_m_sekurlsa_utils\.c.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string105 = /kuhl_m_sekurlsa_utils\.h/ nocase ascii wide
+        $string105 = /.{0,1000}kuhl_m_sekurlsa_utils\.h.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string106 = /lsadump::/ nocase ascii wide
+        $string106 = /.{0,1000}lsadump::.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string107 = /lsadump::backupkeys/ nocase ascii wide
+        $string107 = /.{0,1000}lsadump::backupkeys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string108 = /lsadump::cache/ nocase ascii wide
+        $string108 = /.{0,1000}lsadump::cache.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string109 = /lsadump::changentlm/ nocase ascii wide
+        $string109 = /.{0,1000}lsadump::changentlm.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string110 = /lsadump::dcshadow/ nocase ascii wide
+        $string110 = /.{0,1000}lsadump::dcshadow.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string111 = /lsadump::dcsync/ nocase ascii wide
+        $string111 = /.{0,1000}lsadump::dcsync.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string112 = /lsadump::lsa/ nocase ascii wide
+        $string112 = /.{0,1000}lsadump::lsa.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string113 = /lsadump::mbc/ nocase ascii wide
+        $string113 = /.{0,1000}lsadump::mbc.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string114 = /lsadump::netsync/ nocase ascii wide
+        $string114 = /.{0,1000}lsadump::netsync.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string115 = /lsadump::packages/ nocase ascii wide
+        $string115 = /.{0,1000}lsadump::packages.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string116 = /lsadump::postzerologon/ nocase ascii wide
+        $string116 = /.{0,1000}lsadump::postzerologon.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string117 = /lsadump::RpData/ nocase ascii wide
+        $string117 = /.{0,1000}lsadump::RpData.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string118 = /lsadump::sam/ nocase ascii wide
+        $string118 = /.{0,1000}lsadump::sam.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string119 = /lsadump::secrets/ nocase ascii wide
+        $string119 = /.{0,1000}lsadump::secrets.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string120 = /lsadump::setntlm/ nocase ascii wide
+        $string120 = /.{0,1000}lsadump::setntlm.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string121 = /lsadump::trust/ nocase ascii wide
+        $string121 = /.{0,1000}lsadump::trust.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string122 = /lsadump::zerologon/ nocase ascii wide
+        $string122 = /.{0,1000}lsadump::zerologon.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string123 = /mimi32\.exe\s/ nocase ascii wide
+        $string123 = /.{0,1000}mimi32\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string124 = /mimi64\.exe\s/ nocase ascii wide
+        $string124 = /.{0,1000}mimi64\.exe\s.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string125 = /mimidrv\s\(mimikatz\)/ nocase ascii wide
+        $string125 = /.{0,1000}mimidrv\s\(mimikatz\).{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation 
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string126 = /mimidrv/ nocase ascii wide
+        $string126 = /.{0,1000}mimidrv.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string127 = /mimidrv\.pdb/ nocase ascii wide
+        $string127 = /.{0,1000}mimidrv\.pdb.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation 
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string128 = /mimidrv\.sys/ nocase ascii wide
+        $string128 = /.{0,1000}mimidrv\.sys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string129 = /mimidrv\.sys/ nocase ascii wide
+        $string129 = /.{0,1000}mimidrv\.sys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string130 = /mimidrv\.sys/ nocase ascii wide
+        $string130 = /.{0,1000}mimidrv\.sys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string131 = /mimidrv\.zip/ nocase ascii wide
+        $string131 = /.{0,1000}mimidrv\.zip.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string132 = /mimikatz\sfor\sWindows/ nocase ascii wide
+        $string132 = /.{0,1000}mimikatz\sfor\sWindows.{0,1000}/ nocase ascii wide
         // Description: Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets.
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string133 = /Mimikatz/ nocase ascii wide
+        $string133 = /.{0,1000}Mimikatz.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string134 = /mimikatz\.exe/ nocase ascii wide
+        $string134 = /.{0,1000}mimikatz\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string135 = /mimikatz_trunk/ nocase ascii wide
+        $string135 = /.{0,1000}mimikatz_trunk.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string136 = /mimilib\s\(mimikatz\)/ nocase ascii wide
+        $string136 = /.{0,1000}mimilib\s\(mimikatz\).{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string137 = /mimilib\sfor\sWindows\s\(mimikatz\)/ nocase ascii wide
+        $string137 = /.{0,1000}mimilib\sfor\sWindows\s\(mimikatz\).{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation 
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string138 = /mimilib/ nocase ascii wide
+        $string138 = /.{0,1000}mimilib.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string139 = /mimilib\.dll/ nocase ascii wide
+        $string139 = /.{0,1000}mimilib\.dll.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string140 = /mimilib\.dll/ nocase ascii wide
+        $string140 = /.{0,1000}mimilib\.dll.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation 
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string141 = /mimilove/ nocase ascii wide
+        $string141 = /.{0,1000}mimilove.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation 
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string142 = /mimilove\.exe/ nocase ascii wide
+        $string142 = /.{0,1000}mimilove\.exe.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string143 = /mimilove\.vcxproj/ nocase ascii wide
+        $string143 = /.{0,1000}mimilove\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation 
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string144 = /mimispool\.dll/ nocase ascii wide
+        $string144 = /.{0,1000}mimispool\.dll.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string145 = /misc::aadcookie/ nocase ascii wide
+        $string145 = /.{0,1000}misc::aadcookie.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string146 = /misc::clip/ nocase ascii wide
+        $string146 = /.{0,1000}misc::clip.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string147 = /misc::cmd/ nocase ascii wide
+        $string147 = /.{0,1000}misc::cmd.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string148 = /misc::compress/ nocase ascii wide
+        $string148 = /.{0,1000}misc::compress.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string149 = /misc::detours/ nocase ascii wide
+        $string149 = /.{0,1000}misc::detours.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string150 = /misc::efs/ nocase ascii wide
+        $string150 = /.{0,1000}misc::efs.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string151 = /misc::lock/ nocase ascii wide
+        $string151 = /.{0,1000}misc::lock.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string152 = /misc::memssp/ nocase ascii wide
+        $string152 = /.{0,1000}misc::memssp.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string153 = /misc::mflt/ nocase ascii wide
+        $string153 = /.{0,1000}misc::mflt.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string154 = /misc::ncroutemon/ nocase ascii wide
+        $string154 = /.{0,1000}misc::ncroutemon.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string155 = /misc::ngcsign/ nocase ascii wide
+        $string155 = /.{0,1000}misc::ngcsign.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string156 = /misc::printnightmare/ nocase ascii wide
+        $string156 = /.{0,1000}misc::printnightmare.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string157 = /misc::regedit/ nocase ascii wide
+        $string157 = /.{0,1000}misc::regedit.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string158 = /misc::sccm/ nocase ascii wide
+        $string158 = /.{0,1000}misc::sccm.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string159 = /misc::shadowcopies/ nocase ascii wide
+        $string159 = /.{0,1000}misc::shadowcopies.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string160 = /misc::skeleton/ nocase ascii wide
+        $string160 = /.{0,1000}misc::skeleton.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string161 = /misc::spooler/ nocase ascii wide
+        $string161 = /.{0,1000}misc::spooler.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string162 = /misc::taskmgr/ nocase ascii wide
+        $string162 = /.{0,1000}misc::taskmgr.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string163 = /misc::wp/ nocase ascii wide
+        $string163 = /.{0,1000}misc::wp.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string164 = /misc::xor/ nocase ascii wide
+        $string164 = /.{0,1000}misc::xor.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string165 = /net::alias/ nocase ascii wide
+        $string165 = /.{0,1000}net::alias.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string166 = /net::deleg/ nocase ascii wide
+        $string166 = /.{0,1000}net::deleg.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string167 = /net::group/ nocase ascii wide
+        $string167 = /.{0,1000}net::group.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string168 = /net::if/ nocase ascii wide
+        $string168 = /.{0,1000}net::if.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string169 = /net::serverinfo/ nocase ascii wide
+        $string169 = /.{0,1000}net::serverinfo.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string170 = /net::session/ nocase ascii wide
+        $string170 = /.{0,1000}net::session.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string171 = /net::share/ nocase ascii wide
+        $string171 = /.{0,1000}net::share.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string172 = /net::stats/ nocase ascii wide
+        $string172 = /.{0,1000}net::stats.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string173 = /net::tod/ nocase ascii wide
+        $string173 = /.{0,1000}net::tod.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string174 = /net::trust/ nocase ascii wide
+        $string174 = /.{0,1000}net::trust.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string175 = /net::user/ nocase ascii wide
+        $string175 = /.{0,1000}net::user.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string176 = /net::wsession/ nocase ascii wide
+        $string176 = /.{0,1000}net::wsession.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/Stealthbits/poshkatz
-        $string177 = /poshkatz\.psd1/ nocase ascii wide
+        $string177 = /.{0,1000}poshkatz\.psd1.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string178 = /privilege::backup/ nocase ascii wide
+        $string178 = /.{0,1000}privilege::backup.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string179 = /privilege::debug/ nocase ascii wide
+        $string179 = /.{0,1000}privilege::debug.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string180 = /privilege::debug/ nocase ascii wide
+        $string180 = /.{0,1000}privilege::debug.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string181 = /privilege::driver/ nocase ascii wide
+        $string181 = /.{0,1000}privilege::driver.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string182 = /privilege::id/ nocase ascii wide
+        $string182 = /.{0,1000}privilege::id.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string183 = /privilege::name/ nocase ascii wide
+        $string183 = /.{0,1000}privilege::name.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string184 = /privilege::restore/ nocase ascii wide
+        $string184 = /.{0,1000}privilege::restore.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string185 = /privilege::security/ nocase ascii wide
+        $string185 = /.{0,1000}privilege::security.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string186 = /privilege::sysenv/ nocase ascii wide
+        $string186 = /.{0,1000}privilege::sysenv.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string187 = /privilege::tcb/ nocase ascii wide
+        $string187 = /.{0,1000}privilege::tcb.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string188 = /process::exports/ nocase ascii wide
+        $string188 = /.{0,1000}process::exports.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string189 = /process::imports/ nocase ascii wide
+        $string189 = /.{0,1000}process::imports.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string190 = /process::list/ nocase ascii wide
+        $string190 = /.{0,1000}process::list.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string191 = /process::resume/ nocase ascii wide
+        $string191 = /.{0,1000}process::resume.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string192 = /process::run/ nocase ascii wide
+        $string192 = /.{0,1000}process::run.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string193 = /process::runp/ nocase ascii wide
+        $string193 = /.{0,1000}process::runp.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string194 = /process::start/ nocase ascii wide
+        $string194 = /.{0,1000}process::start.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string195 = /process::stop/ nocase ascii wide
+        $string195 = /.{0,1000}process::stop.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string196 = /process::suspend/ nocase ascii wide
+        $string196 = /.{0,1000}process::suspend.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/skelsec/pypykatz
-        $string197 = /pypykatz\slsa\sminidump/ nocase ascii wide
+        $string197 = /.{0,1000}pypykatz\slsa\sminidump.{0,1000}/ nocase ascii wide
         // Description: invoke mimiaktz string found used by the tool EDRaser 
         // Reference: https://github.com/SafeBreach-Labs/EDRaser
-        $string198 = /QWRkLU1lbWJlciBOb3RlUHJvcGVydHkgLU5hbWUgVmlydHVhbFByb3RlY3QgLVZhbHVlICRWaXJ0dWFsUHJvdGVjdA/ nocase ascii wide
+        $string198 = /.{0,1000}QWRkLU1lbWJlciBOb3RlUHJvcGVydHkgLU5hbWUgVmlydHVhbFByb3RlY3QgLVZhbHVlICRWaXJ0dWFsUHJvdGVjdA.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string199 = /rpc::close/ nocase ascii wide
+        $string199 = /.{0,1000}rpc::close.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string200 = /rpc::connect/ nocase ascii wide
+        $string200 = /.{0,1000}rpc::connect.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string201 = /rpc::enum/ nocase ascii wide
+        $string201 = /.{0,1000}rpc::enum.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string202 = /rpc::server/ nocase ascii wide
+        $string202 = /.{0,1000}rpc::server.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string203 = /sekurlsa\s/ nocase ascii wide
+        $string203 = /.{0,1000}sekurlsa\s.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string204 = /sekurlsa::backupkeys/ nocase ascii wide
+        $string204 = /.{0,1000}sekurlsa::backupkeys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string205 = /sekurlsa::bootkey/ nocase ascii wide
+        $string205 = /.{0,1000}sekurlsa::bootkey.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string206 = /sekurlsa::cloudap/ nocase ascii wide
+        $string206 = /.{0,1000}sekurlsa::cloudap.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string207 = /sekurlsa::credman/ nocase ascii wide
+        $string207 = /.{0,1000}sekurlsa::credman.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string208 = /sekurlsa::dpapi/ nocase ascii wide
+        $string208 = /.{0,1000}sekurlsa::dpapi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string209 = /sekurlsa::dpapisystem/ nocase ascii wide
+        $string209 = /.{0,1000}sekurlsa::dpapisystem.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. This function dumps DPAPI backup keys for users who have logged on to the system
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string210 = /sekurlsa::ekeys/ nocase ascii wide
+        $string210 = /.{0,1000}sekurlsa::ekeys.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string211 = /sekurlsa::kerberos/ nocase ascii wide
+        $string211 = /.{0,1000}sekurlsa::kerberos.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string212 = /sekurlsa::krbtgt/ nocase ascii wide
+        $string212 = /.{0,1000}sekurlsa::krbtgt.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string213 = /sekurlsa::livessp/ nocase ascii wide
+        $string213 = /.{0,1000}sekurlsa::livessp.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. This function retrieves plaintext credentials from the LSA secrets in memory.
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string214 = /sekurlsa::logonpasswords/ nocase ascii wide
+        $string214 = /.{0,1000}sekurlsa::logonpasswords.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string215 = /sekurlsa::minidump/ nocase ascii wide
+        $string215 = /.{0,1000}sekurlsa::minidump.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string216 = /sekurlsa::msv/ nocase ascii wide
+        $string216 = /.{0,1000}sekurlsa::msv.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string217 = /sekurlsa::process/ nocase ascii wide
+        $string217 = /.{0,1000}sekurlsa::process.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash.This function performs pass-the-hash attacks allowing an attacker to authenticate to a remote system with a stolen hash.
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string218 = /sekurlsa::pth/ nocase ascii wide
+        $string218 = /.{0,1000}sekurlsa::pth.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string219 = /sekurlsa::ssp/ nocase ascii wide
+        $string219 = /.{0,1000}sekurlsa::ssp.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string220 = /sekurlsa::tickets/ nocase ascii wide
+        $string220 = /.{0,1000}sekurlsa::tickets.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string221 = /sekurlsa::trust/ nocase ascii wide
+        $string221 = /.{0,1000}sekurlsa::trust.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string222 = /sekurlsa::tspkg/ nocase ascii wide
+        $string222 = /.{0,1000}sekurlsa::tspkg.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string223 = /sekurlsa::wdigest/ nocase ascii wide
+        $string223 = /.{0,1000}sekurlsa::wdigest.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string224 = /service::me/ nocase ascii wide
+        $string224 = /.{0,1000}service::me.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string225 = /service::preshutdown/ nocase ascii wide
+        $string225 = /.{0,1000}service::preshutdown.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string226 = /service::remove/ nocase ascii wide
+        $string226 = /.{0,1000}service::remove.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string227 = /service::resume/ nocase ascii wide
+        $string227 = /.{0,1000}service::resume.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string228 = /service::shutdown/ nocase ascii wide
+        $string228 = /.{0,1000}service::shutdown.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string229 = /service::start/ nocase ascii wide
+        $string229 = /.{0,1000}service::start.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string230 = /service::stop/ nocase ascii wide
+        $string230 = /.{0,1000}service::stop.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string231 = /service::suspend/ nocase ascii wide
+        $string231 = /.{0,1000}service::suspend.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string232 = /sid::add/ nocase ascii wide
+        $string232 = /.{0,1000}sid::add.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string233 = /sid::clear/ nocase ascii wide
+        $string233 = /.{0,1000}sid::clear.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string234 = /sid::lookup/ nocase ascii wide
+        $string234 = /.{0,1000}sid::lookup.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string235 = /sid::modify/ nocase ascii wide
+        $string235 = /.{0,1000}sid::modify.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string236 = /sid::patch/ nocase ascii wide
+        $string236 = /.{0,1000}sid::patch.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string237 = /sid::query/ nocase ascii wide
+        $string237 = /.{0,1000}sid::query.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string238 = /standard::answer/ nocase ascii wide
+        $string238 = /.{0,1000}standard::answer.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string239 = /standard::base64/ nocase ascii wide
+        $string239 = /.{0,1000}standard::base64.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string240 = /standard::cd/ nocase ascii wide
+        $string240 = /.{0,1000}standard::cd.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string241 = /standard::cls/ nocase ascii wide
+        $string241 = /.{0,1000}standard::cls.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string242 = /standard::coffee/ nocase ascii wide
+        $string242 = /.{0,1000}standard::coffee.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string243 = /standard::exit/ nocase ascii wide
+        $string243 = /.{0,1000}standard::exit.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string244 = /standard::hostname/ nocase ascii wide
+        $string244 = /.{0,1000}standard::hostname.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string245 = /standard::localtime/ nocase ascii wide
+        $string245 = /.{0,1000}standard::localtime.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string246 = /standard::log/ nocase ascii wide
+        $string246 = /.{0,1000}standard::log.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string247 = /standard::sleep/ nocase ascii wide
+        $string247 = /.{0,1000}standard::sleep.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string248 = /standard::version/ nocase ascii wide
+        $string248 = /.{0,1000}standard::version.{0,1000}/ nocase ascii wide
         // Description: Mimikatz Unconstrained delegation. With administrative privileges on a server with Unconstrained Delegation set we can dump the TGTs for other users that have a connection. If we do this successfully. we can impersonate the victim user towards any service in the domain.
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string249 = /ticket\.kirbi/ nocase ascii wide
+        $string249 = /.{0,1000}ticket\.kirbi.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string250 = /token::elevate/ nocase ascii wide
+        $string250 = /.{0,1000}token::elevate.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string251 = /token::list/ nocase ascii wide
+        $string251 = /.{0,1000}token::list.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string252 = /token::revert/ nocase ascii wide
+        $string252 = /.{0,1000}token::revert.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string253 = /token::run/ nocase ascii wide
+        $string253 = /.{0,1000}token::run.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string254 = /token::whoami/ nocase ascii wide
+        $string254 = /.{0,1000}token::whoami.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string255 = /ts::logonpasswords/ nocase ascii wide
+        $string255 = /.{0,1000}ts::logonpasswords.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string256 = /ts::mstsc/ nocase ascii wide
+        $string256 = /.{0,1000}ts::mstsc.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string257 = /ts::multirdp/ nocase ascii wide
+        $string257 = /.{0,1000}ts::multirdp.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string258 = /ts::remote/ nocase ascii wide
+        $string258 = /.{0,1000}ts::remote.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string259 = /ts::sessions/ nocase ascii wide
+        $string259 = /.{0,1000}ts::sessions.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation command
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string260 = /vault::/ nocase ascii wide
+        $string260 = /.{0,1000}vault::.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string261 = /vault::cred/ nocase ascii wide
+        $string261 = /.{0,1000}vault::cred.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets. keyword taken from hayabusa-rules win_alert_mimikatz_keywords.yml
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string262 = /vault::list/ nocase ascii wide
+        $string262 = /.{0,1000}vault::list.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string263 = /vincent\.letoux\@gmail\.com/ nocase ascii wide
+        $string263 = /.{0,1000}vincent\.letoux\@gmail\.com.{0,1000}/ nocase ascii wide
         // Description: Mimikatz keywords and commands Well known to extract plaintexts passwords. hash. PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash. pass-the-ticket or build Golden tickets
         // Reference: https://github.com/vyrus001/go-mimikatz
-        $string264 = /vyrus001\/go\-mimikatz/ nocase ascii wide
+        $string264 = /.{0,1000}vyrus001\/go\-mimikatz.{0,1000}/ nocase ascii wide
         // Description: mimikatz exploitation default password
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string265 = /waza1234/ nocase ascii wide
+        $string265 = /.{0,1000}waza1234.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

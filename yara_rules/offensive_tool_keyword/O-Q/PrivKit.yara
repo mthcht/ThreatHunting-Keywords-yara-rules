@@ -10,67 +10,67 @@ rule PrivKit
     strings:
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string1 = /\/PrivKit\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/PrivKit\.git.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string2 = /\/PrivKit\// nocase ascii wide
+        $string2 = /.{0,1000}\/PrivKit\/.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string3 = /\\modifiableautorun\.o/ nocase ascii wide
+        $string3 = /.{0,1000}\\modifiableautorun\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string4 = /\\PrivKit\\/ nocase ascii wide
+        $string4 = /.{0,1000}\\PrivKit\\.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string5 = /\\tokenprivileges\.c/ nocase ascii wide
+        $string5 = /.{0,1000}\\tokenprivileges\.c.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string6 = /\\tokenprivileges\.o/ nocase ascii wide
+        $string6 = /.{0,1000}\\tokenprivileges\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string7 = /\\unquotedsvcpath\.o/ nocase ascii wide
+        $string7 = /.{0,1000}\\unquotedsvcpath\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string8 = /alwaysinstallelevated\.c/ nocase ascii wide
+        $string8 = /.{0,1000}alwaysinstallelevated\.c.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string9 = /alwaysinstallelevated\.o/ nocase ascii wide
+        $string9 = /.{0,1000}alwaysinstallelevated\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string10 = /\-c\scredentialmanager\.c\s\-o\scredentialmanager\.o/ nocase ascii wide
+        $string10 = /.{0,1000}\-c\scredentialmanager\.c\s\-o\scredentialmanager\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string11 = /\-c\smodifiableautorun\.c\s\-o\smodifiableautorun\.o/ nocase ascii wide
+        $string11 = /.{0,1000}\-c\smodifiableautorun\.c\s\-o\smodifiableautorun\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string12 = /\-c\stokenprivileges\.c\s\-o\stokenprivileges\.o/ nocase ascii wide
+        $string12 = /.{0,1000}\-c\stokenprivileges\.c\s\-o\stokenprivileges\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string13 = /\-c\sunquotedsvcpath\.c\s\-o\sunquotedsvcpath\.o/ nocase ascii wide
+        $string13 = /.{0,1000}\-c\sunquotedsvcpath\.c\s\-o\sunquotedsvcpath\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string14 = /hijackablepath\.c/ nocase ascii wide
+        $string14 = /.{0,1000}hijackablepath\.c.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string15 = /hijackablepath\.o/ nocase ascii wide
+        $string15 = /.{0,1000}hijackablepath\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string16 = /inline\-execute\s.*tokenprivileges\.o/ nocase ascii wide
+        $string16 = /.{0,1000}inline\-execute\s.{0,1000}tokenprivileges\.o.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string17 = /Priv\sEsc\sCheck\sBof/ nocase ascii wide
+        $string17 = /.{0,1000}Priv\sEsc\sCheck\sBof.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string18 = /privcheck\.cna/ nocase ascii wide
+        $string18 = /.{0,1000}privcheck\.cna.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string19 = /privcheck32/ nocase ascii wide
+        $string19 = /.{0,1000}privcheck32.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string20 = /PrivKit32/ nocase ascii wide
+        $string20 = /.{0,1000}PrivKit32.{0,1000}/ nocase ascii wide
         // Description: PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS.
         // Reference: https://github.com/mertdas/PrivKit
-        $string21 = /PrivKit\-main/ nocase ascii wide
+        $string21 = /.{0,1000}PrivKit\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

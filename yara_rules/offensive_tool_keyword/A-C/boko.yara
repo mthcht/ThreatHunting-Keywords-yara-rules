@@ -10,22 +10,22 @@ rule boko
     strings:
         // Description: boko.py is an application scanner for macOS that searches for and identifies potential dylib hijacking and weak dylib vulnerabilities for application executables as well as scripts an application may use that have the potential to be backdoored
         // Reference: https://github.com/bashexplode/boko
-        $string1 = /\/bashexplode\/boko/ nocase ascii wide
+        $string1 = /.{0,1000}\/bashexplode\/boko.{0,1000}/ nocase ascii wide
         // Description: boko.py is an application scanner for macOS that searches for and identifies potential dylib hijacking and weak dylib vulnerabilities for application executables as well as scripts an application may use that have the potential to be backdoored
         // Reference: https://github.com/bashexplode/boko
-        $string2 = /\/boko\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\/boko\.py.{0,1000}/ nocase ascii wide
         // Description: boko.py is an application scanner for macOS that searches for and identifies potential dylib hijacking and weak dylib vulnerabilities for application executables as well as scripts an application may use that have the potential to be backdoored
         // Reference: https://github.com/bashexplode/boko
-        $string3 = /BackdoorableScript/ nocase ascii wide
+        $string3 = /.{0,1000}BackdoorableScript.{0,1000}/ nocase ascii wide
         // Description: boko.py is an application scanner for macOS that searches for and identifies potential dylib hijacking and weak dylib vulnerabilities for application executables as well as scripts an application may use that have the potential to be backdoored
         // Reference: https://github.com/bashexplode/boko
-        $string4 = /boko\.py\s/ nocase ascii wide
+        $string4 = /.{0,1000}boko\.py\s.{0,1000}/ nocase ascii wide
         // Description: boko.py is an application scanner for macOS that searches for and identifies potential dylib hijacking and weak dylib vulnerabilities for application executables as well as scripts an application may use that have the potential to be backdoored
         // Reference: https://github.com/bashexplode/boko
-        $string5 = /bokoscanner\./ nocase ascii wide
+        $string5 = /.{0,1000}bokoscanner\..{0,1000}/ nocase ascii wide
         // Description: boko.py is an application scanner for macOS that searches for and identifies potential dylib hijacking and weak dylib vulnerabilities for application executables as well as scripts an application may use that have the potential to be backdoored
         // Reference: https://github.com/bashexplode/boko
-        $string6 = /import\sboko/ nocase ascii wide
+        $string6 = /import\sboko.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

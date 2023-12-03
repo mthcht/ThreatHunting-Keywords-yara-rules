@@ -10,7 +10,7 @@ rule WitnessMe
     strings:
         // Description: WitnessMe is primarily a Web Inventory tool inspired by Eyewitness. its also written to be extensible allowing you to create custom functionality that can take advantage of the headless browser it drives in the back-end.
         // Reference: https://github.com/byt3bl33d3r/WitnessMe
-        $string1 = /WitnessMe/ nocase ascii wide
+        $string1 = /.{0,1000}WitnessMe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

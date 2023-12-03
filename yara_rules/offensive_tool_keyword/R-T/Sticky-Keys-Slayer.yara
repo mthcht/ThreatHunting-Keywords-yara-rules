@@ -10,7 +10,7 @@ rule Sticky_Keys_Slayer
     strings:
         // Description: Scans for accessibility tools backdoors via RDP
         // Reference: https://github.com/linuz/Sticky-Keys-Slayer
-        $string1 = /Sticky\-Keys\-Slayer/ nocase ascii wide
+        $string1 = /.{0,1000}Sticky\-Keys\-Slayer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

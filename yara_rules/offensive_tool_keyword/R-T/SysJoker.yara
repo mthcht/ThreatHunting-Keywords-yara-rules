@@ -10,22 +10,22 @@ rule SysJoker
     strings:
         // Description: SysJoker backdoor - multi-platform backdoor that targets Windows Mac and Linux
         // Reference: https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
-        $string1 = /:\\ProgramData\\RecoverySystem\\recoveryWindows\.zip/ nocase ascii wide
+        $string1 = /.{0,1000}:\\ProgramData\\RecoverySystem\\recoveryWindows\.zip.{0,1000}/ nocase ascii wide
         // Description: SysJoker backdoor - multi-platform backdoor that targets Windows Mac and Linux
         // Reference: https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
-        $string2 = /:\\ProgramData\\SystemData\\igfxCUIService\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}:\\ProgramData\\SystemData\\igfxCUIService\.exe.{0,1000}/ nocase ascii wide
         // Description: SysJoker backdoor - multi-platform backdoor that targets Windows Mac and Linux
         // Reference: https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
-        $string3 = /:\\ProgramData\\SystemData\\tempo1\.txt/ nocase ascii wide
+        $string3 = /.{0,1000}:\\ProgramData\\SystemData\\tempo1\.txt.{0,1000}/ nocase ascii wide
         // Description: SysJoker backdoor - multi-platform backdoor that targets Windows Mac and Linux
         // Reference: https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
-        $string4 = /:\\ProgramData\\SystemData\\tempo2\.txt/ nocase ascii wide
+        $string4 = /.{0,1000}:\\ProgramData\\SystemData\\tempo2\.txt.{0,1000}/ nocase ascii wide
         // Description: SysJoker backdoor - multi-platform backdoor that targets Windows Mac and Linux
         // Reference: https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
-        $string5 = /C:\\ProgramData\\SystemData\\microsoft_Windows\.dll/ nocase ascii wide
+        $string5 = /.{0,1000}C:\\ProgramData\\SystemData\\microsoft_Windows\.dll.{0,1000}/ nocase ascii wide
         // Description: SysJoker backdoor - multi-platform backdoor that targets Windows Mac and Linux
         // Reference: https://www.intezer.com/blog/malware-analysis/new-backdoor-sysjoker/
-        $string6 = /REG\sADD\s.*igfxCUIService/ nocase ascii wide
+        $string6 = /.{0,1000}REG\sADD\s.{0,1000}igfxCUIService.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

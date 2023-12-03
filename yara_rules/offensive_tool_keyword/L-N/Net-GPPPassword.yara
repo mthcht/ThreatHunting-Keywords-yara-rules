@@ -10,22 +10,22 @@ rule Net_GPPPassword
     strings:
         // Description: .NET implementation of Get-GPPPassword. Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
         // Reference: https://github.com/outflanknl/Net-GPPPassword
-        $string1 = /\/Net\-GPPPassword\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/Net\-GPPPassword\.git.{0,1000}/ nocase ascii wide
         // Description: .NET implementation of Get-GPPPassword. Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
         // Reference: https://github.com/outflanknl/Net-GPPPassword
-        $string2 = /Net\-GPPPassword\.cs/ nocase ascii wide
+        $string2 = /.{0,1000}Net\-GPPPassword\.cs.{0,1000}/ nocase ascii wide
         // Description: .NET implementation of Get-GPPPassword. Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
         // Reference: https://github.com/outflanknl/Net-GPPPassword
-        $string3 = /Net\-GPPPassword\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}Net\-GPPPassword\.exe.{0,1000}/ nocase ascii wide
         // Description: .NET implementation of Get-GPPPassword. Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
         // Reference: https://github.com/outflanknl/Net-GPPPassword
-        $string4 = /Net\-GPPPassword_dotNET/ nocase ascii wide
+        $string4 = /.{0,1000}Net\-GPPPassword_dotNET.{0,1000}/ nocase ascii wide
         // Description: .NET implementation of Get-GPPPassword. Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
         // Reference: https://github.com/outflanknl/Net-GPPPassword
-        $string5 = /Net\-GPPPassword\-master/ nocase ascii wide
+        $string5 = /.{0,1000}Net\-GPPPassword\-master.{0,1000}/ nocase ascii wide
         // Description: .NET implementation of Get-GPPPassword. Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
         // Reference: https://github.com/outflanknl/Net-GPPPassword
-        $string6 = /outflanknl\/Net\-GPPPassword/ nocase ascii wide
+        $string6 = /.{0,1000}outflanknl\/Net\-GPPPassword.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

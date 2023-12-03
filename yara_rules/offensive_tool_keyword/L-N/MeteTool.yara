@@ -10,7 +10,7 @@ rule MeteTool
     strings:
         // Description: Metatool Minetest mod provides API for registering metadata manipulation tools and other tools primarily focused on special node data operations.
         // Reference: https://github.com/S-S-X/metatool
-        $string1 = /MeteTool/ nocase ascii wide
+        $string1 = /.{0,1000}MeteTool.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

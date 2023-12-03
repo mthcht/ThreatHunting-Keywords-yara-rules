@@ -10,13 +10,13 @@ rule snmpwalk
     strings:
         // Description: allows you to enumerate the SNMP devices and places the output in a very human readable friendly format
         // Reference: https://wiki.debian.org/SNMP
-        $string1 = /snmpwalk\s\s\-v1\s\-cpublic\s/ nocase ascii wide
+        $string1 = /.{0,1000}snmpwalk\s\s\-v1\s\-cpublic\s.{0,1000}/ nocase ascii wide
         // Description: allows you to enumerate the SNMP devices and places the output in a very human readable friendly format
         // Reference: https://wiki.debian.org/SNMP
-        $string2 = /snmpwalk\s.*\spublic\s.*1\.3\.6\.1\./ nocase ascii wide
+        $string2 = /.{0,1000}snmpwalk\s.{0,1000}\spublic\s.{0,1000}1\.3\.6\.1\..{0,1000}/ nocase ascii wide
         // Description: allows you to enumerate the SNMP devices and places the output in a very human readable friendly format
         // Reference: https://wiki.debian.org/SNMP
-        $string3 = /snmpwalk\s\-c\spublic\s\-v1\s/ nocase ascii wide
+        $string3 = /.{0,1000}snmpwalk\s\-c\spublic\s\-v1\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

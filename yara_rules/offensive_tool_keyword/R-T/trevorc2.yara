@@ -10,10 +10,10 @@ rule trevorc2
     strings:
         // Description: Command and Control via Legitimate Behavior over HTTP
         // Reference: https://github.com/trustedsec/trevorc2
-        $string1 = /pSNIRFgTuZnCdHN/ nocase ascii wide
+        $string1 = /.{0,1000}pSNIRFgTuZnCdHN.{0,1000}/ nocase ascii wide
         // Description: Command and Control via Legitimate Behavior over HTTP
         // Reference: https://github.com/trustedsec/trevorc2
-        $string2 = /TrevorC2/ nocase ascii wide
+        $string2 = /.{0,1000}TrevorC2.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

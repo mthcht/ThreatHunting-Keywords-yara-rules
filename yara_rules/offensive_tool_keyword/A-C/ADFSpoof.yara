@@ -10,22 +10,22 @@ rule ADFSpoof
     strings:
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string1 = /\sADFSpoof\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\sADFSpoof\.py.{0,1000}/ nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string2 = /\s\-b\s.*\.bin\s.*\.bin\sdump/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-b\s.{0,1000}\.bin\s.{0,1000}\.bin\sdump.{0,1000}/ nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string3 = /\/ADFSpoof\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\/ADFSpoof\.py.{0,1000}/ nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string4 = /\\ADFSpoof\.py/ nocase ascii wide
+        $string4 = /.{0,1000}\\ADFSpoof\.py.{0,1000}/ nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string5 = /ADFSpoof\-master/ nocase ascii wide
+        $string5 = /.{0,1000}ADFSpoof\-master.{0,1000}/ nocase ascii wide
         // Description: A python tool to forge AD FS security tokens.
         // Reference: https://github.com/mandiant/ADFSpoof
-        $string6 = /EncryptedPfx\.py/ nocase ascii wide
+        $string6 = /.{0,1000}EncryptedPfx\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

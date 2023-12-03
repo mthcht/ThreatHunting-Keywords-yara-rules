@@ -10,16 +10,16 @@ rule PhantomService
     strings:
         // Description: Searches for and removes non-ASCII services that can't be easily removed by built-in Windows tools
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/PhantomService
-        $string1 = /\/master\/PhantomService\// nocase ascii wide
+        $string1 = /.{0,1000}\/master\/PhantomService\/.{0,1000}/ nocase ascii wide
         // Description: Searches for and removes non-ASCII services that can't be easily removed by built-in Windows tools
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/PhantomService
-        $string2 = /\]\sFound\snon\-ASCII\sservice:\s/ nocase ascii wide
+        $string2 = /.{0,1000}\]\sFound\snon\-ASCII\sservice:\s.{0,1000}/ nocase ascii wide
         // Description: Searches for and removes non-ASCII services that can't be easily removed by built-in Windows tools
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/PhantomService
-        $string3 = /PhantomService\.csproj/ nocase ascii wide
+        $string3 = /.{0,1000}PhantomService\.csproj.{0,1000}/ nocase ascii wide
         // Description: Searches for and removes non-ASCII services that can't be easily removed by built-in Windows tools
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/PhantomService
-        $string4 = /PhantomService\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}PhantomService\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

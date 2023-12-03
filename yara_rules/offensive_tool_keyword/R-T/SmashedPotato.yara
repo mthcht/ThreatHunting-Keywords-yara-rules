@@ -10,10 +10,10 @@ rule SmashedPotato
     strings:
         // Description: A modification of @breenmachine original Hot Potato Priv Esc Exploit
         // Reference: https://github.com/Cn33liz/SmashedPotato
-        $string1 = /SmashedPotato\.cs/ nocase ascii wide
+        $string1 = /.{0,1000}SmashedPotato\.cs.{0,1000}/ nocase ascii wide
         // Description: A modification of @breenmachine original Hot Potato Priv Esc Exploit
         // Reference: https://github.com/Cn33liz/SmashedPotato
-        $string2 = /SmashedPotato\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}SmashedPotato\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

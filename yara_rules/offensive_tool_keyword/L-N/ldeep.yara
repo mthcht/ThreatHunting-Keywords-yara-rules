@@ -10,37 +10,37 @@ rule ldeep
     strings:
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string1 = /\sldeep_dump\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sldeep_dump\s.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string2 = /\/ldeep\// nocase ascii wide
+        $string2 = /.{0,1000}\/ldeep\/.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string3 = /_dump_users\.lst/ nocase ascii wide
+        $string3 = /.{0,1000}_dump_users\.lst.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string4 = /cache_activedirectory\.py/ nocase ascii wide
+        $string4 = /.{0,1000}cache_activedirectory\.py.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string5 = /ldeep\scache\s/ nocase ascii wide
+        $string5 = /.{0,1000}ldeep\scache\s.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string6 = /ldeep\sldap\s\-u\s/ nocase ascii wide
+        $string6 = /.{0,1000}ldeep\sldap\s\-u\s.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string7 = /ldeep.*activedirectory\.py/ nocase ascii wide
+        $string7 = /.{0,1000}ldeep.{0,1000}activedirectory\.py.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string8 = /ldeep.*ldap_activedirectory\.py/ nocase ascii wide
+        $string8 = /.{0,1000}ldeep.{0,1000}ldap_activedirectory\.py.{0,1000}/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string9 = /ldeep_dump_users_enabled\.json/ nocase ascii wide
+        $string9 = /.{0,1000}ldeep_dump_users_enabled\.json/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string10 = /ldeep_dump_users_enabled\.lst/ nocase ascii wide
+        $string10 = /.{0,1000}ldeep_dump_users_enabled\.lst/ nocase ascii wide
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
-        $string11 = /ldeep\s/ nocase ascii wide
+        $string11 = /ldeep\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

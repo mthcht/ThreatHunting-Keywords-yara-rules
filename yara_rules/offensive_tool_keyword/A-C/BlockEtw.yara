@@ -10,25 +10,25 @@ rule BlockEtw
     strings:
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string1 = /\/BlockEtw\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/BlockEtw\.git.{0,1000}/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string2 = /blocketw\.bin/ nocase ascii wide
+        $string2 = /.{0,1000}blocketw\.bin.{0,1000}/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string3 = /blocketw\.csproj/ nocase ascii wide
+        $string3 = /.{0,1000}blocketw\.csproj.{0,1000}/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string4 = /blocketw\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}blocketw\.exe.{0,1000}/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string5 = /blocketw\.pdb/ nocase ascii wide
+        $string5 = /.{0,1000}blocketw\.pdb.{0,1000}/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string6 = /BlockEtw\-master/ nocase ascii wide
+        $string6 = /.{0,1000}BlockEtw\-master.{0,1000}/ nocase ascii wide
         // Description: .Net Assembly to block ETW telemetry in current process
         // Reference: https://github.com/Soledge/BlockEtw
-        $string7 = /Soledge\/BlockEtw/ nocase ascii wide
+        $string7 = /.{0,1000}Soledge\/BlockEtw.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

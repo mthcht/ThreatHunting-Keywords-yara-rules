@@ -10,49 +10,49 @@ rule spoolsploit
     strings:
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string1 = /\s\-a\snightmare/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-a\snightmare.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string2 = /\s\-a\sspoolsample/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-a\sspoolsample.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string3 = /\sevil\.corp\s/ nocase ascii wide
+        $string3 = /.{0,1000}\sevil\.corp\s.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string4 = /\sspoolsploit\s/ nocase ascii wide
+        $string4 = /.{0,1000}\sspoolsploit\s.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string5 = /\/smbserver\/smb_server\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\/smbserver\/smb_server\.py.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string6 = /\/ssploit\// nocase ascii wide
+        $string6 = /.{0,1000}\/ssploit\/.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string7 = /\-\-attack\snightmare/ nocase ascii wide
+        $string7 = /.{0,1000}\-\-attack\snightmare.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string8 = /\-\-attack\sspoolsample/ nocase ascii wide
+        $string8 = /.{0,1000}\-\-attack\sspoolsample.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string9 = /BeetleChunks\/SpoolSploit/ nocase ascii wide
+        $string9 = /.{0,1000}BeetleChunks\/SpoolSploit.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string10 = /impacket\./ nocase ascii wide
+        $string10 = /.{0,1000}impacket\..{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string11 = /malicious\.dll/ nocase ascii wide
+        $string11 = /.{0,1000}malicious\.dll.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string12 = /PrintNightmare\./ nocase ascii wide
+        $string12 = /.{0,1000}PrintNightmare\..{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string13 = /spool_sploit\.py/ nocase ascii wide
+        $string13 = /.{0,1000}spool_sploit\.py.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string14 = /SpoolSploit\// nocase ascii wide
+        $string14 = /.{0,1000}SpoolSploit\/.{0,1000}/ nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string15 = /spoolsploit:latest/ nocase ascii wide
+        $string15 = /.{0,1000}spoolsploit:latest.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

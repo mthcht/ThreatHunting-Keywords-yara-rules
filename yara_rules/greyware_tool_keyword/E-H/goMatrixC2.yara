@@ -10,7 +10,7 @@ rule goMatrixC2
     strings:
         // Description: C2 leveraging Matrix/Element Messaging Platform as Backend to control Implants in goLang.
         // Reference: https://github.com/n1k7l4i/goMatrixC2
-        $string1 = /https:\/\/matrix\.org\/_matrix\/client\/r0\/rooms\/.*\/send\/m\.room\.message/ nocase ascii wide
+        $string1 = /.{0,1000}https:\/\/matrix\.org\/_matrix\/client\/r0\/rooms\/.{0,1000}\/send\/m\.room\.message.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

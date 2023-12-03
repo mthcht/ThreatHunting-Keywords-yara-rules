@@ -10,16 +10,16 @@ rule Pachine
     strings:
         // Description: Python implementation for CVE-2021-42278 (Active Directory Privilege Escalation)
         // Reference: https://github.com/ly4k/Pachine
-        $string1 = /\s\-dc\-host\s.*\s\-spn\s.*\s\-impersonate\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-dc\-host\s.{0,1000}\s\-spn\s.{0,1000}\s\-impersonate\s.{0,1000}/ nocase ascii wide
         // Description: Python implementation for CVE-2021-42278 (Active Directory Privilege Escalation)
         // Reference: https://github.com/ly4k/Pachine
-        $string2 = /\.\/pachine\.py/ nocase ascii wide
+        $string2 = /.{0,1000}\.\/pachine\.py.{0,1000}/ nocase ascii wide
         // Description: Python implementation for CVE-2021-42278 (Active Directory Privilege Escalation)
         // Reference: https://github.com/ly4k/Pachine
-        $string3 = /\/ly4k\/Pachine/ nocase ascii wide
+        $string3 = /.{0,1000}\/ly4k\/Pachine.{0,1000}/ nocase ascii wide
         // Description: Python implementation for CVE-2021-42278 (Active Directory Privilege Escalation)
         // Reference: https://github.com/ly4k/Pachine
-        $string4 = /python.*\spachine\.py/ nocase ascii wide
+        $string4 = /.{0,1000}python.{0,1000}\spachine\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

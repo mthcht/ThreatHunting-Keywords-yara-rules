@@ -10,7 +10,7 @@ rule luckystrike
     strings:
         // Description: A PowerShell based utility for the creation of malicious Office macro documents.
         // Reference: https://github.com/curi0usJack/luckystrike
-        $string1 = /luckystrike\.ps1/ nocase ascii wide
+        $string1 = /.{0,1000}luckystrike\.ps1.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule Internal_Monologue
     strings:
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string1 = /\s\-Downgrade\sFalse\s\-Restore\sFalse\s\-Impersonate\sTrue\s.*\s\-challange\s/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-Downgrade\sFalse\s\-Restore\sFalse\s\-Impersonate\sTrue\s.{0,1000}\s\-challange\s.{0,1000}/ nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string2 = /Internal\-Monologue\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}Internal\-Monologue\.exe.{0,1000}/ nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string3 = /InternalMonologueDll/ nocase ascii wide
+        $string3 = /.{0,1000}InternalMonologueDll.{0,1000}/ nocase ascii wide
         // Description: Internal Monologue Attack: Retrieving NTLM Hashes without Touching LSASS
         // Reference: https://github.com/eladshamir/Internal-Monologue
-        $string4 = /InternalMonologueExe/ nocase ascii wide
+        $string4 = /.{0,1000}InternalMonologueExe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

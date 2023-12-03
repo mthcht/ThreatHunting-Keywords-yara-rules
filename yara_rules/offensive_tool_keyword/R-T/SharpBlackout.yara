@@ -10,34 +10,34 @@ rule SharpBlackout
     strings:
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string1 = /\/SharpBlackout\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/SharpBlackout\.git.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string2 = /07DFC5AA\-5B1F\-4CCC\-A3D3\-816ECCBB6CB6/ nocase ascii wide
+        $string2 = /.{0,1000}07DFC5AA\-5B1F\-4CCC\-A3D3\-816ECCBB6CB6.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string3 = /dmcxblue\/SharpBlackout/ nocase ascii wide
+        $string3 = /.{0,1000}dmcxblue\/SharpBlackout.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string4 = /SharpBlackout.*\s\-p\s/ nocase ascii wide
+        $string4 = /.{0,1000}SharpBlackout.{0,1000}\s\-p\s.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string5 = /SharpBlackOut\.csproj/ nocase ascii wide
+        $string5 = /.{0,1000}SharpBlackOut\.csproj.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string6 = /SharpBlackout\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}SharpBlackout\.exe.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string7 = /SharpBlackOut\.pdb/ nocase ascii wide
+        $string7 = /.{0,1000}SharpBlackOut\.pdb.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string8 = /SharpBlackOut\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}SharpBlackOut\.sln.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string9 = /SharpBlackout\-main/ nocase ascii wide
+        $string9 = /.{0,1000}SharpBlackout\-main.{0,1000}/ nocase ascii wide
         // Description: Terminate AV/EDR leveraging BYOVD attack
         // Reference: https://github.com/dmcxblue/SharpBlackout
-        $string10 = /Terminating\sWindows\sDefender\?/ nocase ascii wide
+        $string10 = /.{0,1000}Terminating\sWindows\sDefender\?.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

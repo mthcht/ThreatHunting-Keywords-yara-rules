@@ -10,7 +10,7 @@ rule fuzz_txt
     strings:
         // Description: list of sensible files for fuzzing in system
         // Reference: https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt
-        $string1 = /\/fuzz\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}\/fuzz\.txt.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

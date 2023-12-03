@@ -10,10 +10,10 @@ rule SharpDXWebcam
     strings:
         // Description: Utilizing DirectX and DShowNET assemblies to record video from a host's webcam
         // Reference: https://github.com/snovvcrash/SharpDXWebcam
-        $string1 = /Get\-DXWebcamVideo\.ps1/ nocase ascii wide
+        $string1 = /.{0,1000}Get\-DXWebcamVideo\.ps1.{0,1000}/ nocase ascii wide
         // Description: Utilizing DirectX and DShowNET assemblies to record video from a host's webcam
         // Reference: https://github.com/snovvcrash/SharpDXWebcam
-        $string2 = /SharpDXWebcam/ nocase ascii wide
+        $string2 = /.{0,1000}SharpDXWebcam.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

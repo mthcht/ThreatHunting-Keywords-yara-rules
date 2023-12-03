@@ -10,31 +10,31 @@ rule ShellGhost
     strings:
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string1 = /\/ShellGhost\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/ShellGhost\.git.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string2 = /lem0nSec\/ShellGhost/ nocase ascii wide
+        $string2 = /.{0,1000}lem0nSec\/ShellGhost.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string3 = /ShellGhost\.dll/ nocase ascii wide
+        $string3 = /.{0,1000}ShellGhost\.dll/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string4 = /ShellGhost\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}ShellGhost\.exe.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string5 = /ShellGhost\.sln/ nocase ascii wide
+        $string5 = /.{0,1000}ShellGhost\.sln.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string6 = /ShellGhost\.vcxproj/ nocase ascii wide
+        $string6 = /.{0,1000}ShellGhost\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string7 = /ShellGhost_mapping\.py/ nocase ascii wide
+        $string7 = /.{0,1000}ShellGhost_mapping\.py.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string8 = /ShellGhost\-master\.zip/ nocase ascii wide
+        $string8 = /.{0,1000}ShellGhost\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: A memory-based evasion technique which makes shellcode invisible from process start to end
         // Reference: https://github.com/lem0nSec/ShellGhost
-        $string9 = /src\/ShellGhost\.c/ nocase ascii wide
+        $string9 = /.{0,1000}src\/ShellGhost\.c.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

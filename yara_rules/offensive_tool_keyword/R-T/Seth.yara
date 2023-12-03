@@ -10,28 +10,28 @@ rule Seth
     strings:
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string1 = /\.\/seth\.sh\s.*\s/ nocase ascii wide
+        $string1 = /.{0,1000}\.\/seth\.sh\s.{0,1000}\s.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string2 = /\.py\s.*\s\s\-\-fake\-server/ nocase ascii wide
+        $string2 = /.{0,1000}\.py\s.{0,1000}\s\s\-\-fake\-server.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string3 = /arpspoof\s\-i\s/ nocase ascii wide
+        $string3 = /.{0,1000}arpspoof\s\-i\s.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string4 = /Server\senforces\sNLA\;\sswitching\sto\s\'fake\sserver\'\smode/ nocase ascii wide
+        $string4 = /.{0,1000}Server\senforces\sNLA\;\sswitching\sto\s\'fake\sserver\'\smode.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string5 = /Seth\sby\sSySS\sGmbH/ nocase ascii wide
+        $string5 = /.{0,1000}Seth\sby\sSySS\sGmbH.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string6 = /seth\.py\s.*\s\-j\sINJECT/ nocase ascii wide
+        $string6 = /.{0,1000}seth\.py\s.{0,1000}\s\-j\sINJECT.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string7 = /Seth\-master\.zip/ nocase ascii wide
+        $string7 = /.{0,1000}Seth\-master\.zip.{0,1000}/ nocase ascii wide
         // Description: Perform a MitM attack and extract clear text credentials from RDP connections
         // Reference: https://github.com/SySS-Research/Seth
-        $string8 = /SySS\-Research\/Seth/ nocase ascii wide
+        $string8 = /.{0,1000}SySS\-Research\/Seth.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

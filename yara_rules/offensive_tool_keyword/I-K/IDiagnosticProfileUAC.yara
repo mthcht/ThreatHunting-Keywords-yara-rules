@@ -10,19 +10,19 @@ rule IDiagnosticProfileUAC
     strings:
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string1 = /\/IDiagnosticProfileUAC/ nocase ascii wide
+        $string1 = /.{0,1000}\/IDiagnosticProfileUAC.{0,1000}/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string2 = /\\IDiagnosticProfileUAC/ nocase ascii wide
+        $string2 = /.{0,1000}\\IDiagnosticProfileUAC.{0,1000}/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string3 = /C:\\Uac\\results\.cab/ nocase ascii wide
+        $string3 = /.{0,1000}C:\\Uac\\results\.cab.{0,1000}/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string4 = /IDiagnosticProfileUAC\.git/ nocase ascii wide
+        $string4 = /.{0,1000}IDiagnosticProfileUAC\.git.{0,1000}/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string5 = /IDiagnosticProfileUAC\-main/ nocase ascii wide
+        $string5 = /.{0,1000}IDiagnosticProfileUAC\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

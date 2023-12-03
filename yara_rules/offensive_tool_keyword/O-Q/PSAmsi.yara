@@ -10,67 +10,67 @@ rule PSAmsi
     strings:
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string1 = /\s\|\sFind\-AmsiSignatures/ nocase ascii wide
+        $string1 = /.{0,1000}\s\|\sFind\-AmsiSignatures.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string2 = /\s\|\sTest\-ContainsAmsiSignatures/ nocase ascii wide
+        $string2 = /.{0,1000}\s\|\sTest\-ContainsAmsiSignatures.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string3 = /\s\-ScriptString\s.*\s\-GetMinimallyObfuscated/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-ScriptString\s.{0,1000}\s\-GetMinimallyObfuscated.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string4 = /\s\-ScriptString\s.*\s\-PSAmsiScanner\s/ nocase ascii wide
+        $string4 = /.{0,1000}\s\-ScriptString\s.{0,1000}\s\-PSAmsiScanner\s.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string5 = /\s\-ServerUri\s.*\s\-FindAmsiSignatures/ nocase ascii wide
+        $string5 = /.{0,1000}\s\-ServerUri\s.{0,1000}\s\-FindAmsiSignatures.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string6 = /\?PSAmsi.*PSReflect\.ps1/ nocase ascii wide
+        $string6 = /.{0,1000}\?PSAmsi.{0,1000}PSReflect\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string7 = /cobbr\/PSAmsi/ nocase ascii wide
+        $string7 = /.{0,1000}cobbr\/PSAmsi.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string8 = /Find\-AmsiAstSignatures\s\-/ nocase ascii wide
+        $string8 = /.{0,1000}Find\-AmsiAstSignatures\s\-.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string9 = /Find\-AmsiPSTokenSignatures\s\-/ nocase ascii wide
+        $string9 = /.{0,1000}Find\-AmsiPSTokenSignatures\s\-.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string10 = /Find\-AmsiSignatures\.ps1/ nocase ascii wide
+        $string10 = /.{0,1000}Find\-AmsiSignatures\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string11 = /Invoke\-PSAmsiScan/ nocase ascii wide
+        $string11 = /.{0,1000}Invoke\-PSAmsiScan.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string12 = /New\-PSAmsiScanner\s\-/ nocase ascii wide
+        $string12 = /.{0,1000}New\-PSAmsiScanner\s\-.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string13 = /Out\-ObfuscatedAst\.ps1/ nocase ascii wide
+        $string13 = /.{0,1000}Out\-ObfuscatedAst\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string14 = /Out\-ObfuscatedStringCommand\.ps1/ nocase ascii wide
+        $string14 = /.{0,1000}Out\-ObfuscatedStringCommand\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string15 = /Out\-ObfuscatedTokenCommand\.ps1/ nocase ascii wide
+        $string15 = /.{0,1000}Out\-ObfuscatedTokenCommand\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string16 = /PowerShellObfuscator\.ps1/ nocase ascii wide
+        $string16 = /.{0,1000}PowerShellObfuscator\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string17 = /PSAmsiClient\.ps1/ nocase ascii wide
+        $string17 = /.{0,1000}PSAmsiClient\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string18 = /PSAmsiScanner\.ps1/ nocase ascii wide
+        $string18 = /.{0,1000}PSAmsiScanner\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string19 = /Start\-PSAmsiClient\.ps1/ nocase ascii wide
+        $string19 = /.{0,1000}Start\-PSAmsiClient\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string20 = /Start\-PSAmsiServer\.ps1/ nocase ascii wide
+        $string20 = /.{0,1000}Start\-PSAmsiServer\.ps1.{0,1000}/ nocase ascii wide
         // Description: PSAmsi is a tool for auditing and defeating AMSI signatures.
         // Reference: https://github.com/cobbr/PSAmsi
-        $string21 = /Test\-ContainsAmsiPSTokenSignatures\s\-/ nocase ascii wide
+        $string21 = /.{0,1000}Test\-ContainsAmsiPSTokenSignatures\s\-.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

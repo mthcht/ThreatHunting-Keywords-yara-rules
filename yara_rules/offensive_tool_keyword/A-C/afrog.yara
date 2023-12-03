@@ -10,10 +10,10 @@ rule afrog
     strings:
         // Description: A tool for finding vulnerabilities
         // Reference: https://github.com/zan8in/afrog
-        $string1 = /\/afrog\-pocs\// nocase ascii wide
+        $string1 = /.{0,1000}\/afrog\-pocs\/.{0,1000}/ nocase ascii wide
         // Description: A tool for finding vulnerabilities
         // Reference: https://github.com/zan8in/afrog
-        $string2 = /afrog\s\-/ nocase ascii wide
+        $string2 = /afrog\s\-.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

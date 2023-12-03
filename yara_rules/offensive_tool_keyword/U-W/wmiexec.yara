@@ -10,40 +10,40 @@ rule wmiexec
     strings:
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string1 = /\/wmiexec\// nocase ascii wide
+        $string1 = /.{0,1000}\/wmiexec\/.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string2 = /cmd\.exe\s\/Q\s\/c\s.*\.bat\s.*\>\s\\\\127\.0\.0\.1\\ADMIN\$\\.*\s2\&/ nocase ascii wide
+        $string2 = /.{0,1000}cmd\.exe\s\/Q\s\/c\s.{0,1000}\.bat\s.{0,1000}\>\s\\\\127\.0\.0\.1\\ADMIN\$\\.{0,1000}\s2\&.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string3 = /cmd\.exe\s\/Q\s\/c\s\/start\s\/min\spowershell\.exe\s\-nop\s\-c/ nocase ascii wide
+        $string3 = /.{0,1000}cmd\.exe\s\/Q\s\/c\s\/start\s\/min\spowershell\.exe\s\-nop\s\-c.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string4 = /cmd\.exe\s\/Q\s\/c\shostname1\>\s.*\\\\127\.0\.0\.1\\ADMIN\$\\.*\s2\>/ nocase ascii wide
+        $string4 = /.{0,1000}cmd\.exe\s\/Q\s\/c\shostname1\>\s.{0,1000}\\\\127\.0\.0\.1\\ADMIN\$\\.{0,1000}\s2\>.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string5 = /cmd\.exe\s\/Q\s\/c\snslookup\s1\>\s.*\\\\127\.0\.0\.1\\ADMIN\$\\.*\s2\>/ nocase ascii wide
+        $string5 = /.{0,1000}cmd\.exe\s\/Q\s\/c\snslookup\s1\>\s.{0,1000}\\\\127\.0\.0\.1\\ADMIN\$\\.{0,1000}\s2\>.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string6 = /cmd\.exe\s\/Q\s\/c\spowershell\.exe\s\-nop\s\-w\s\-hidden\s\-c.*IEX/ nocase ascii wide
+        $string6 = /.{0,1000}cmd\.exe\s\/Q\s\/c\spowershell\.exe\s\-nop\s\-w\s\-hidden\s\-c.{0,1000}IEX.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string7 = /cmd\.exe\s\/Q\s\/c\spowershelll\.exe\s1\>\s.*\\\\127\.0\.0\.1\\ADMIN\$\\.*\s2\>/ nocase ascii wide
+        $string7 = /.{0,1000}cmd\.exe\s\/Q\s\/c\spowershelll\.exe\s1\>\s.{0,1000}\\\\127\.0\.0\.1\\ADMIN\$\\.{0,1000}\s2\>.{0,1000}/ nocase ascii wide
         // Description: wmiexec.py from impacket used by metasploit
         // Reference: https://github.com/rapid7/metasploit-framework/blob/2722067108b5c034da9f77b95eaf1c1db33db4fa/modules/auxiliary/scanner/smb/impacket/wmiexec.py#L127
-        $string8 = /cmd\.exe\s\/Q\s\/c\squser\s1\s\>\s\\\\127\.0\.0\.1\\ADMIN\$\\/ nocase ascii wide
+        $string8 = /.{0,1000}cmd\.exe\s\/Q\s\/c\squser\s1\s\>\s\\\\127\.0\.0\.1\\ADMIN\$\\.{0,1000}/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string9 = /WMIExec\.git/ nocase ascii wide
+        $string9 = /.{0,1000}WMIExec\.git.{0,1000}/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string10 = /wmiexec_scheduledjob\.py/ nocase ascii wide
+        $string10 = /.{0,1000}wmiexec_scheduledjob\.py.{0,1000}/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string11 = /wmiexec_win32process\.py/ nocase ascii wide
+        $string11 = /.{0,1000}wmiexec_win32process\.py.{0,1000}/ nocase ascii wide
         // Description: Set of python scripts which perform different ways of command execution via WMI protocol
         // Reference: https://github.com/WKL-Sec/wmiexec
-        $string12 = /WMIExec\-main/ nocase ascii wide
+        $string12 = /.{0,1000}WMIExec\-main.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

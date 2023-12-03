@@ -10,34 +10,34 @@ rule AutoSmuggle
     strings:
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string1 = /\/AutoSmuggle\.git/ nocase ascii wide
+        $string1 = /.{0,1000}\/AutoSmuggle\.git.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string2 = /\[.*\]\sSmuggling\sin\sHTML/ nocase ascii wide
+        $string2 = /.{0,1000}\[.{0,1000}\]\sSmuggling\sin\sHTML.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string3 = /\[.*\]\sSmuggling\sin\sSVG/ nocase ascii wide
+        $string3 = /.{0,1000}\[.{0,1000}\]\sSmuggling\sin\sSVG.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string4 = /\\AutoSmuggle\\.*\.cs/ nocase ascii wide
+        $string4 = /.{0,1000}\\AutoSmuggle\\.{0,1000}\.cs.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string5 = /57A893C7\-7527\-4B55\-B4E9\-D644BBDA89D1/ nocase ascii wide
+        $string5 = /.{0,1000}57A893C7\-7527\-4B55\-B4E9\-D644BBDA89D1.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string6 = /AutoSmuggle\.csproj/ nocase ascii wide
+        $string6 = /.{0,1000}AutoSmuggle\.csproj.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string7 = /AutoSmuggle\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}AutoSmuggle\.exe.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string8 = /AutoSmuggle\.sln/ nocase ascii wide
+        $string8 = /.{0,1000}AutoSmuggle\.sln.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string9 = /AutoSmuggle\-master/ nocase ascii wide
+        $string9 = /.{0,1000}AutoSmuggle\-master.{0,1000}/ nocase ascii wide
         // Description: Utility to craft HTML or SVG smuggled files for Red Team engagements
         // Reference: https://github.com/surajpkhetani/AutoSmuggle
-        $string10 = /surajpkhetani\/AutoSmuggle/ nocase ascii wide
+        $string10 = /.{0,1000}surajpkhetani\/AutoSmuggle.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

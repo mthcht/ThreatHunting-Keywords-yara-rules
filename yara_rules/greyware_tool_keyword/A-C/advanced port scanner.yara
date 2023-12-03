@@ -10,22 +10,22 @@ rule advanced_port_scanner
     strings:
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string1 = /\/lansearch\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\/lansearch\.exe.{0,1000}/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string2 = /\\lansearch\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\\lansearch\.exe.{0,1000}/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string3 = /Advanced_Port_Scanner_.*\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}Advanced_Port_Scanner_.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string4 = /lansearch\.exe\s/ nocase ascii wide
+        $string4 = /.{0,1000}lansearch\.exe\s.{0,1000}/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string5 = /lansearchpro_portable\.zip/ nocase ascii wide
+        $string5 = /.{0,1000}lansearchpro_portable\.zip.{0,1000}/ nocase ascii wide
         // Description: port scanner tool abused by ransomware actors
         // Reference: https://www.advanced-port-scanner.com/
-        $string6 = /lansearchpro_setup\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}lansearchpro_setup\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

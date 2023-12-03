@@ -10,28 +10,28 @@ rule darkarmour
     strings:
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string1 = /\s\-f\s.*\.exe\s\-\-encrypt\sxor\s\-\-jmp\s\-o\s.*\.exe/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-f\s.{0,1000}\.exe\s\-\-encrypt\sxor\s\-\-jmp\s\-o\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string2 = /\/darkarmour\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/darkarmour\.git.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string3 = /avflagged\.exe/ nocase ascii wide
+        $string3 = /.{0,1000}avflagged\.exe.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string4 = /bats3c\/darkarmour/ nocase ascii wide
+        $string4 = /.{0,1000}bats3c\/darkarmour.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string5 = /darkarmour\.py/ nocase ascii wide
+        $string5 = /.{0,1000}darkarmour\.py.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string6 = /darkarmour\-master/ nocase ascii wide
+        $string6 = /.{0,1000}darkarmour\-master.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string7 = /reflct_dll_inject\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}reflct_dll_inject\.exe.{0,1000}/ nocase ascii wide
         // Description: Store and execute an encrypted windows binary from inside memorywithout a single bit touching disk.
         // Reference: https://github.com/bats3c/darkarmour
-        $string8 = /shellcode_dropper\.c/ nocase ascii wide
+        $string8 = /.{0,1000}shellcode_dropper\.c.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

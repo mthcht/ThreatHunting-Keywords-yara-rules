@@ -10,25 +10,25 @@ rule MaliciousMacroMSBuild
     strings:
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string1 = /\sm3\-gen\.py\s/ nocase ascii wide
+        $string1 = /.{0,1000}\sm3\-gen\.py\s.{0,1000}/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string2 = /\s\-p\spowershell\s\-i\s.*\.ps1\s\-o\s.*\.vba/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-p\spowershell\s\-i\s.{0,1000}\.ps1\s\-o\s.{0,1000}\.vba.{0,1000}/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string3 = /\s\-p\sshellcode\s\-i\s.*\.bin\s\-o\s.*\.vba/ nocase ascii wide
+        $string3 = /.{0,1000}\s\-p\sshellcode\s\-i\s.{0,1000}\.bin\s\-o\s.{0,1000}\.vba.{0,1000}/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string4 = /\/m3\-gen\.py\s/ nocase ascii wide
+        $string4 = /.{0,1000}\/m3\-gen\.py\s.{0,1000}/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string5 = /\/MaliciousMacroMSBuild/ nocase ascii wide
+        $string5 = /.{0,1000}\/MaliciousMacroMSBuild.{0,1000}/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string6 = /\\m3\-gen\.py/ nocase ascii wide
+        $string6 = /.{0,1000}\\m3\-gen\.py.{0,1000}/ nocase ascii wide
         // Description: Generates Malicious Macro and Execute Powershell or Shellcode via MSBuild Application Whitelisting Bypass.
         // Reference: https://github.com/infosecn1nja/MaliciousMacroMSBuild
-        $string7 = /MaliciousMacroMSBuild\-master/ nocase ascii wide
+        $string7 = /.{0,1000}MaliciousMacroMSBuild\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

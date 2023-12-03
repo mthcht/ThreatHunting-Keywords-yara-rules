@@ -10,7 +10,7 @@ rule _7zip
     strings:
         // Description: 7zip command to zip results from adfind scans. attackers perform Active Directory collection using AdFind in batch scriptsfrom C:\Windows\Temp\adf\ or C:\temp\ and store output in CSV files
         // Reference: http://www.joeware.net/freetools/tools/adfind/index.htm
-        $string1 = /7\.exe\sa\s\-mx3\sad\.7z\sad_.*\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}7\.exe\sa\s\-mx3\sad\.7z\sad_.{0,1000}\.txt.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

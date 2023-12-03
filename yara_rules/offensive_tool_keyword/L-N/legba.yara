@@ -10,112 +10,112 @@ rule legba
     strings:
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string1 = /\s\-\-password\swordlists\/.*\.txt/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-password\swordlists\/.{0,1000}\.txt.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string2 = /\/legba\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/legba\.git.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string3 = /\/legba\/target\/release\/legba/ nocase ascii wide
+        $string3 = /.{0,1000}\/legba\/target\/release\/legba.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string4 = /\/usr\/bin\/legba/ nocase ascii wide
+        $string4 = /.{0,1000}\/usr\/bin\/legba.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string5 = /A\sfast\smulti\sprotocol\scredential\sbruteforcer\/sprayer\/enumerator/ nocase ascii wide
+        $string5 = /.{0,1000}A\sfast\smulti\sprotocol\scredential\sbruteforcer\/sprayer\/enumerator.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string6 = /docker\sbuild\s\-t\slegba\s\./ nocase ascii wide
+        $string6 = /.{0,1000}docker\sbuild\s\-t\slegba\s\..{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string7 = /docker\srun\slegba/ nocase ascii wide
+        $string7 = /.{0,1000}docker\srun\slegba.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string8 = /evilsocket\/legba/ nocase ascii wide
+        $string8 = /.{0,1000}evilsocket\/legba.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string9 = /legba\s.*\s\-\-username/ nocase ascii wide
+        $string9 = /.{0,1000}legba\s.{0,1000}\s\-\-username.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string10 = /legba\samqp\s.*\-\-target\s/ nocase ascii wide
+        $string10 = /.{0,1000}legba\samqp\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string11 = /legba\sdns\s.*\-\-data\s/ nocase ascii wide
+        $string11 = /.{0,1000}legba\sdns\s.{0,1000}\-\-data\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string12 = /legba\sftp\s.*\-\-target\s/ nocase ascii wide
+        $string12 = /.{0,1000}legba\sftp\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string13 = /legba\shttp\s.*\-\-http\-payload\s/ nocase ascii wide
+        $string13 = /.{0,1000}legba\shttp\s.{0,1000}\-\-http\-payload\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string14 = /legba\shttp\.basic\s.*\-\-target\s/ nocase ascii wide
+        $string14 = /.{0,1000}legba\shttp\.basic\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string15 = /legba\shttp\.enum\s.*\-\-http/ nocase ascii wide
+        $string15 = /.{0,1000}legba\shttp\.enum\s.{0,1000}\-\-http.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string16 = /legba\shttp\.ntlm1\s/ nocase ascii wide
+        $string16 = /.{0,1000}legba\shttp\.ntlm1\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string17 = /legba\shttp\.ntlm2\s/ nocase ascii wide
+        $string17 = /.{0,1000}legba\shttp\.ntlm2\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string18 = /legba\simap\s.*\-\-target\s/ nocase ascii wide
+        $string18 = /.{0,1000}legba\simap\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string19 = /legba\skerberos\s.*\-\-target\s/ nocase ascii wide
+        $string19 = /.{0,1000}legba\skerberos\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string20 = /legba\skerberos.*\-\-kerberos\-realm\s/ nocase ascii wide
+        $string20 = /.{0,1000}legba\skerberos.{0,1000}\-\-kerberos\-realm\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string21 = /legba\sldap\s.*\-\-ldap\-domain/ nocase ascii wide
+        $string21 = /.{0,1000}legba\sldap\s.{0,1000}\-\-ldap\-domain.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string22 = /legba\smongodb.*\s\-\-target\s/ nocase ascii wide
+        $string22 = /.{0,1000}legba\smongodb.{0,1000}\s\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string23 = /legba\smssql\s.*\s\-\-target\s/ nocase ascii wide
+        $string23 = /.{0,1000}legba\smssql\s.{0,1000}\s\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string24 = /legba\smysql\s.*\s\-\-target\s/ nocase ascii wide
+        $string24 = /.{0,1000}legba\smysql\s.{0,1000}\s\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string25 = /legba\spgsql\s.*\s\-\-target\s/ nocase ascii wide
+        $string25 = /.{0,1000}legba\spgsql\s.{0,1000}\s\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string26 = /legba\spop3\s.*\-\-target\s/ nocase ascii wide
+        $string26 = /.{0,1000}legba\spop3\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string27 = /legba\srdp\s.*\-\-target\s/ nocase ascii wide
+        $string27 = /.{0,1000}legba\srdp\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string28 = /legba\ssftp\s.*\-\-target\s/ nocase ascii wide
+        $string28 = /.{0,1000}legba\ssftp\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string29 = /legba\ssmtp\s.*\-\-target\s/ nocase ascii wide
+        $string29 = /.{0,1000}legba\ssmtp\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string30 = /legba\sssh\s.*\-\-target\s/ nocase ascii wide
+        $string30 = /.{0,1000}legba\sssh\s.{0,1000}\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string31 = /legba\sstomp\s.*\-\-target/ nocase ascii wide
+        $string31 = /.{0,1000}legba\sstomp\s.{0,1000}\-\-target.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string32 = /legba\stelnet\s.*\-\-telnet\-/ nocase ascii wide
+        $string32 = /.{0,1000}legba\stelnet\s.{0,1000}\-\-telnet\-.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string33 = /legba\svnc.*\s\-\-target\s/ nocase ascii wide
+        $string33 = /.{0,1000}legba\svnc.{0,1000}\s\-\-target\s.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string34 = /legba\-main\.zip/ nocase ascii wide
+        $string34 = /.{0,1000}legba\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string35 = /root\scargo\snew\s\-\-bin\slegba/ nocase ascii wide
+        $string35 = /.{0,1000}root\scargo\snew\s\-\-bin\slegba.{0,1000}/ nocase ascii wide
         // Description: A multiprotocol credentials bruteforcer / password sprayer and enumerator
         // Reference: https://github.com/evilsocket/legba
-        $string36 = /Simone\sMargaritelli\s\<evilsocket\@gmail\.com\>/ nocase ascii wide
+        $string36 = /.{0,1000}Simone\sMargaritelli\s\<evilsocket\@gmail\.com\>.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

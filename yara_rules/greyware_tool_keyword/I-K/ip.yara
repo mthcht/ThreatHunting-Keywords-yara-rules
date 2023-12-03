@@ -10,7 +10,7 @@ rule ip
     strings:
         // Description: changing mac address with ip
         // Reference: N/A
-        $string1 = /ip\sl\sset\sdev\s.*\saddress\s.*:.*:/ nocase ascii wide
+        $string1 = /.{0,1000}ip\sl\sset\sdev\s.{0,1000}\saddress\s.{0,1000}:.{0,1000}:.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

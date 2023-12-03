@@ -10,49 +10,49 @@ rule MultiPotato
     strings:
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string1 = /\s\-t\sBindShell\s\-p\s.*pwned\\pipe\\spoolss/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-t\sBindShell\s\-p\s.{0,1000}pwned\\pipe\\spoolss.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string2 = /\s\-t\sCreateProcessAsUserW\s\-p\s.*pwned\\pipe\\spoolss.*\s\-e\s.*\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-t\sCreateProcessAsUserW\s\-p\s.{0,1000}pwned\\pipe\\spoolss.{0,1000}\s\-e\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string3 = /\/MultiPotato\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/MultiPotato\.git.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string4 = /\\\\\.\\pipe\\pwned\/pipe\/srvsvc/ nocase ascii wide
+        $string4 = /.{0,1000}\\\\\.\\pipe\\pwned\/pipe\/srvsvc.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string5 = /61CE6716\-E619\-483C\-B535\-8694F7617548/ nocase ascii wide
+        $string5 = /.{0,1000}61CE6716\-E619\-483C\-B535\-8694F7617548.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string6 = /localhost\/pipe\/pwned/ nocase ascii wide
+        $string6 = /.{0,1000}localhost\/pipe\/pwned.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string7 = /MS\-RPRN\.exe\s\\\\.*\s\\\\.*\/pipe\/pwned/ nocase ascii wide
+        $string7 = /.{0,1000}MS\-RPRN\.exe\s\\\\.{0,1000}\s\\\\.{0,1000}\/pipe\/pwned.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string8 = /MultiPotato\.cpp/ nocase ascii wide
+        $string8 = /.{0,1000}MultiPotato\.cpp.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string9 = /MultiPotato\.exe/ nocase ascii wide
+        $string9 = /.{0,1000}MultiPotato\.exe.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string10 = /MultiPotato\-main/ nocase ascii wide
+        $string10 = /.{0,1000}MultiPotato\-main.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string11 = /PetitPotamModified\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}PetitPotamModified\.exe.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string12 = /S3cretP4ssw0rd\!/ nocase ascii wide
+        $string12 = /.{0,1000}S3cretP4ssw0rd\!.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string13 = /S3cur3Th1sSh1t\/MultiPotato/ nocase ascii wide
+        $string13 = /.{0,1000}S3cur3Th1sSh1t\/MultiPotato.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string14 = /TokenKidnapping\.cpp/ nocase ascii wide
+        $string14 = /.{0,1000}TokenKidnapping\.cpp.{0,1000}/ nocase ascii wide
         // Description: get SYSTEM via SeImpersonate privileges
         // Reference: https://github.com/S3cur3Th1sSh1t/MultiPotato
-        $string15 = /TokenKidnapping\.exe/ nocase ascii wide
+        $string15 = /.{0,1000}TokenKidnapping\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

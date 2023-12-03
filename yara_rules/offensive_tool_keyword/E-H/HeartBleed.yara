@@ -10,7 +10,7 @@ rule HeartBleed
     strings:
         // Description: Heart Bleed scanner 
         // Reference: https://github.com/TechnicalMujeeb/HeartBleed
-        $string1 = /HeartBleed/ nocase ascii wide
+        $string1 = /.{0,1000}HeartBleed.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

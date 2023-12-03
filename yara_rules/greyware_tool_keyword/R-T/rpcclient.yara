@@ -10,7 +10,7 @@ rule rpcclient
     strings:
         // Description: tool for executing client side MS-RPC functions
         // Reference: https://www.samba.org/samba/docs/current/man-html/rpcclient.1.html
-        $string1 = /rpcclient\s\-/ nocase ascii wide
+        $string1 = /rpcclient\s\-.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

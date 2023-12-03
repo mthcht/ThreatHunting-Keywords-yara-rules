@@ -10,7 +10,7 @@ rule Operative_Framework
     strings:
         // Description: Framework based on fingerprint action. this tool is used for get information on a website or a enterprise target with multiple modules.
         // Reference: https://github.com/graniet/operative-framework
-        $string1 = /Operative\sFramework/ nocase ascii wide
+        $string1 = /.{0,1000}Operative\sFramework.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,61 +10,61 @@ rule ptunnel_ng
     strings:
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string1 = /\sptunnel\-ng/ nocase ascii wide
+        $string1 = /.{0,1000}\sptunnel\-ng.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string2 = /\/ptunnel\-ng/ nocase ascii wide
+        $string2 = /.{0,1000}\/ptunnel\-ng.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string3 = /\/var\/lib\/ptunnel/ nocase ascii wide
+        $string3 = /.{0,1000}\/var\/lib\/ptunnel.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string4 = /nc\s127\.0\.0\.1\s4000/ nocase ascii wide
+        $string4 = /.{0,1000}nc\s127\.0\.0\.1\s4000.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string5 = /new\ssession\sto\s127\.0\.0\.1:3000/ nocase ascii wide
+        $string5 = /.{0,1000}new\ssession\sto\s127\.0\.0\.1:3000.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string6 = /ptunnel\-client\.log/ nocase ascii wide
+        $string6 = /.{0,1000}ptunnel\-client\.log.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string7 = /ptunnel\-data\-recv/ nocase ascii wide
+        $string7 = /.{0,1000}ptunnel\-data\-recv.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string8 = /ptunnel\-data\-send/ nocase ascii wide
+        $string8 = /.{0,1000}ptunnel\-data\-send.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string9 = /ptunnel\-master/ nocase ascii wide
+        $string9 = /.{0,1000}ptunnel\-master.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string10 = /ptunnel\-ng\s/ nocase ascii wide
+        $string10 = /.{0,1000}ptunnel\-ng\s.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string11 = /ptunnel\-ng\.conf/ nocase ascii wide
+        $string11 = /.{0,1000}ptunnel\-ng\.conf.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string12 = /ptunnel\-ng\.git/ nocase ascii wide
+        $string12 = /.{0,1000}ptunnel\-ng\.git.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string13 = /ptunnel\-ng\.service/ nocase ascii wide
+        $string13 = /.{0,1000}ptunnel\-ng\.service.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string14 = /ptunnel\-ng\.te/ nocase ascii wide
+        $string14 = /.{0,1000}ptunnel\-ng\.te.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string15 = /ptunnel\-ng\-x64\.exe/ nocase ascii wide
+        $string15 = /.{0,1000}ptunnel\-ng\-x64\.exe.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string16 = /ptunnel\-ng\-x64\-dbg\.exe/ nocase ascii wide
+        $string16 = /.{0,1000}ptunnel\-ng\-x64\-dbg\.exe.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string17 = /ptunnel\-ng\-x86\.exe/ nocase ascii wide
+        $string17 = /.{0,1000}ptunnel\-ng\-x86\.exe.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string18 = /ptunnel\-ng\-x86\-dbg\.exe/ nocase ascii wide
+        $string18 = /.{0,1000}ptunnel\-ng\-x86\-dbg\.exe.{0,1000}/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string19 = /ptunnel\-server\.log/ nocase ascii wide
+        $string19 = /.{0,1000}ptunnel\-server\.log.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

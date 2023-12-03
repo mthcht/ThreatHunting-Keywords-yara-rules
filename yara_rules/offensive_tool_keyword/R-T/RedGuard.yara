@@ -10,43 +10,43 @@ rule RedGuard
     strings:
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string1 = /\.\/RedGuard/ nocase ascii wide
+        $string1 = /.{0,1000}\.\/RedGuard.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string2 = /\/RedGuard\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/RedGuard\.git.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string3 = /\/RedGuard\.go/ nocase ascii wide
+        $string3 = /.{0,1000}\/RedGuard\.go.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string4 = /\/RedGuard_32/ nocase ascii wide
+        $string4 = /.{0,1000}\/RedGuard_32/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string5 = /\/RedGuard_64/ nocase ascii wide
+        $string5 = /.{0,1000}\/RedGuard_64/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string6 = /\/wikiZ\/RedGuard/ nocase ascii wide
+        $string6 = /.{0,1000}\/wikiZ\/RedGuard.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string7 = /866e5289337ab033f89bc57c5274c7ca/ nocase ascii wide
+        $string7 = /.{0,1000}866e5289337ab033f89bc57c5274c7ca.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string8 = /OverrideLHOST\s360\.com/ nocase ascii wide
+        $string8 = /.{0,1000}OverrideLHOST\s360\.com.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string9 = /RedGuard\.log/ nocase ascii wide
+        $string9 = /.{0,1000}RedGuard\.log.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string10 = /RedGuard\/core/ nocase ascii wide
+        $string10 = /.{0,1000}RedGuard\/core.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string11 = /RedGuard_x64\.exe/ nocase ascii wide
+        $string11 = /.{0,1000}RedGuard_x64\.exe.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string12 = /RedGuard_x86\.exe/ nocase ascii wide
+        $string12 = /.{0,1000}RedGuard_x86\.exe.{0,1000}/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string13 = /RedGuard\s\-/ nocase ascii wide
+        $string13 = /RedGuard\s\-.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

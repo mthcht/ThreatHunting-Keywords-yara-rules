@@ -10,28 +10,28 @@ rule disctopia_c2
     strings:
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string1 = /\/disctopia\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\/disctopia\.py.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string2 = /\/disctopia\-c2/ nocase ascii wide
+        $string2 = /.{0,1000}\/disctopia\-c2.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string3 = /\/distopia\-test/ nocase ascii wide
+        $string3 = /.{0,1000}\/distopia\-test.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string4 = /Disctopia\sBackdoor/ nocase ascii wide
+        $string4 = /.{0,1000}Disctopia\sBackdoor.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string5 = /disctopia\-c2\.git/ nocase ascii wide
+        $string5 = /.{0,1000}disctopia\-c2\.git.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string6 = /disctopia\-c2\-main\.zip/ nocase ascii wide
+        $string6 = /.{0,1000}disctopia\-c2\-main\.zip.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string7 = /keylogger\.py/ nocase ascii wide
+        $string7 = /.{0,1000}keylogger\.py.{0,1000}/ nocase ascii wide
         // Description: Windows Remote Administration Tool that uses Discord Telegram and GitHub as C2s
         // Reference: https://github.com/3ct0s/disctopia-c2
-        $string8 = /sandboxevasion\.py/ nocase ascii wide
+        $string8 = /.{0,1000}sandboxevasion\.py.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

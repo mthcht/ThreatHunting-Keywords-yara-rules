@@ -10,46 +10,46 @@ rule hashview
     strings:
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string1 = /\shashview\.py/ nocase ascii wide
+        $string1 = /.{0,1000}\shashview\.py.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string2 = /\shashview\-agent\s/ nocase ascii wide
+        $string2 = /.{0,1000}\shashview\-agent\s.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string3 = /\.\/hashview\// nocase ascii wide
+        $string3 = /.{0,1000}\.\/hashview\/.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string4 = /\/hashview\.py/ nocase ascii wide
+        $string4 = /.{0,1000}\/hashview\.py.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string5 = /\\hashview\.py/ nocase ascii wide
+        $string5 = /.{0,1000}\\hashview\.py.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string6 = /DoNotUseThisPassword123\!/ nocase ascii wide
+        $string6 = /.{0,1000}DoNotUseThisPassword123\!.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string7 = /hashview.*\@.*localhost/ nocase ascii wide
+        $string7 = /.{0,1000}hashview.{0,1000}\@.{0,1000}localhost.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string8 = /hashview\/config\.conf/ nocase ascii wide
+        $string8 = /.{0,1000}hashview\/config\.conf.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string9 = /hashview\/hashview/ nocase ascii wide
+        $string9 = /.{0,1000}hashview\/hashview.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string10 = /hashview\-agent\..*\.tgz/ nocase ascii wide
+        $string10 = /.{0,1000}hashview\-agent\..{0,1000}\.tgz.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string11 = /hashview\-agent\.py/ nocase ascii wide
+        $string11 = /.{0,1000}hashview\-agent\.py.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string12 = /rockyou\.txt\.gz/ nocase ascii wide
+        $string12 = /.{0,1000}rockyou\.txt\.gz.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string13 = /wordlists\/dynamic\-all\.txt/ nocase ascii wide
+        $string13 = /.{0,1000}wordlists\/dynamic\-all\.txt.{0,1000}/ nocase ascii wide
         // Description: A web front-end for password cracking and analytics
         // Reference: https://github.com/hashview/hashview
-        $string14 = /wordlists\/rockyou\.txt\'/ nocase ascii wide
+        $string14 = /.{0,1000}wordlists\/rockyou\.txt\'.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

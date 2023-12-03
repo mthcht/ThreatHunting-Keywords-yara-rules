@@ -10,7 +10,7 @@ rule Awesome_Hacking
     strings:
         // Description: A collection of awesome lists for hackers. pentesters & security researchers.
         // Reference: https://github.com/Hack-with-Github/Awesome-Hacking
-        $string1 = /Awesome\-Hacking/ nocase ascii wide
+        $string1 = /.{0,1000}Awesome\-Hacking.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

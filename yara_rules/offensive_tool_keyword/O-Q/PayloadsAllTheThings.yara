@@ -10,7 +10,7 @@ rule PayloadsAllTheThings
     strings:
         // Description: A list of useful payloads and bypasses for Web Application Security. Feel free to improve with your payloads and techniques ! 
         // Reference: https://github.com/Bo0oM/PayloadsAllTheThings
-        $string1 = /PayloadsAllTheThings/ nocase ascii wide
+        $string1 = /.{0,1000}PayloadsAllTheThings.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

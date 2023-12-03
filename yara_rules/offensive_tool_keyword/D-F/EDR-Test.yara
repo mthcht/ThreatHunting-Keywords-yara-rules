@@ -10,7 +10,7 @@ rule EDR_Test
     strings:
         // Description: Automating EDR Testing with reference to MITRE ATTACK via Cobalt Strike [Purple Team].
         // Reference: https://github.com/TH3xACE/EDR-Test
-        $string1 = /TH3xACE\/EDR\-Test/ nocase ascii wide
+        $string1 = /.{0,1000}TH3xACE\/EDR\-Test.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

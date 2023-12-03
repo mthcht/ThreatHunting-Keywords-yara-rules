@@ -10,46 +10,46 @@ rule SharpSocks
     strings:
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string1 = /\s\-\-beacon\=/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-\-beacon\=.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string2 = /\s\-\-payloadcookie\s/ nocase ascii wide
+        $string2 = /.{0,1000}\s\-\-payloadcookie\s.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string3 = /\/SharpSocks/ nocase ascii wide
+        $string3 = /.{0,1000}\/SharpSocks.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string4 = /\-\-payload\-cookie/ nocase ascii wide
+        $string4 = /.{0,1000}\-\-payload\-cookie.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string5 = /ProcessCommandChannelImplantMessage/ nocase ascii wide
+        $string5 = /.{0,1000}ProcessCommandChannelImplantMessage.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string6 = /ProcessEncryptedC2Request/ nocase ascii wide
+        $string6 = /.{0,1000}ProcessEncryptedC2Request.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string7 = /SharpSocks\.exe/ nocase ascii wide
+        $string7 = /.{0,1000}SharpSocks\.exe.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string8 = /SharpSocks\.pfx/ nocase ascii wide
+        $string8 = /.{0,1000}SharpSocks\.pfx.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string9 = /SharpSocks\.resx/ nocase ascii wide
+        $string9 = /.{0,1000}SharpSocks\.resx.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string10 = /SharpSocks\.sln/ nocase ascii wide
+        $string10 = /.{0,1000}SharpSocks\.sln.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string11 = /SharpSocksCommon/ nocase ascii wide
+        $string11 = /.{0,1000}SharpSocksCommon.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string12 = /SharpSocksConfig/ nocase ascii wide
+        $string12 = /.{0,1000}SharpSocksConfig.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string13 = /SharpSocksImplant/ nocase ascii wide
+        $string13 = /.{0,1000}SharpSocksImplant.{0,1000}/ nocase ascii wide
         // Description: Tunnellable HTTP/HTTPS socks4a proxy written in C# and deployable via PowerShell
         // Reference: https://github.com/nettitude/SharpSocks
-        $string14 = /SharpSocksServer/ nocase ascii wide
+        $string14 = /.{0,1000}SharpSocksServer.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

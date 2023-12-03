@@ -10,34 +10,34 @@ rule SCMUACBypass
     strings:
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string1 = /\sscmuacbypass\.cpp/ nocase ascii wide
+        $string1 = /.{0,1000}\sscmuacbypass\.cpp.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string2 = /\sscmuacbypass\.exe/ nocase ascii wide
+        $string2 = /.{0,1000}\sscmuacbypass\.exe.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string3 = /\/scmuacbypass\.cpp/ nocase ascii wide
+        $string3 = /.{0,1000}\/scmuacbypass\.cpp.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string4 = /\/scmuacbypass\.exe/ nocase ascii wide
+        $string4 = /.{0,1000}\/scmuacbypass\.exe.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string5 = /\/SCMUACBypass\.git/ nocase ascii wide
+        $string5 = /.{0,1000}\/SCMUACBypass\.git.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string6 = /\/SCMUACBypass\// nocase ascii wide
+        $string6 = /.{0,1000}\/SCMUACBypass\/.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string7 = /\\scmuacbypass\.cpp/ nocase ascii wide
+        $string7 = /.{0,1000}\\scmuacbypass\.cpp.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string8 = /\\scmuacbypass\.exe/ nocase ascii wide
+        $string8 = /.{0,1000}\\scmuacbypass\.exe.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string9 = /\\SCMUACBypass\\/ nocase ascii wide
+        $string9 = /.{0,1000}\\SCMUACBypass\\.{0,1000}/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string10 = /UACBypassedService\.exe/ nocase ascii wide
+        $string10 = /.{0,1000}UACBypassedService\.exe.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

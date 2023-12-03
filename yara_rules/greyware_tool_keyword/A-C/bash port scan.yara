@@ -10,7 +10,7 @@ rule bash_port_scan
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1 = /for\si\sin\s{1\.\.65535}/ nocase ascii wide
+        $string1 = /.{0,1000}for\si\sin\s{1\.\.65535}.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

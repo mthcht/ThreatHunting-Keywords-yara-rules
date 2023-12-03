@@ -10,28 +10,28 @@ rule Group3r
     strings:
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string1 = /\/LibSnaffle/ nocase ascii wide
+        $string1 = /.{0,1000}\/LibSnaffle.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string2 = /\\LibSnaffle/ nocase ascii wide
+        $string2 = /.{0,1000}\\LibSnaffle.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string3 = /EnumerateDomainGpo/ nocase ascii wide
+        $string3 = /.{0,1000}EnumerateDomainGpo.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string4 = /Group3r\.cs/ nocase ascii wide
+        $string4 = /.{0,1000}Group3r\.cs.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string5 = /Group3r\.exe/ nocase ascii wide
+        $string5 = /.{0,1000}Group3r\.exe.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string6 = /Group3r\/Group3r/ nocase ascii wide
+        $string6 = /.{0,1000}Group3r\/Group3r.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string7 = /LibSnaffle\.ActiveDirectory/ nocase ascii wide
+        $string7 = /.{0,1000}LibSnaffle\.ActiveDirectory.{0,1000}/ nocase ascii wide
         // Description: Find vulnerabilities in AD Group Policy
         // Reference: https://github.com/Group3r/Group3r
-        $string8 = /LibSnaffle\.FileDiscovery/ nocase ascii wide
+        $string8 = /.{0,1000}LibSnaffle\.FileDiscovery.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

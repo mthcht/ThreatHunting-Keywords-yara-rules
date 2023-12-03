@@ -10,7 +10,7 @@ rule CACTUSTORCH
     strings:
         // Description: A JavaScript and VBScript shellcode launcher. This will spawn a 32 bit version of the binary specified and inject shellcode into it.
         // Reference: https://github.com/mdsecactivebreach/CACTUSTORCH
-        $string1 = /CACTUSTORCH/ nocase ascii wide
+        $string1 = /.{0,1000}CACTUSTORCH.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

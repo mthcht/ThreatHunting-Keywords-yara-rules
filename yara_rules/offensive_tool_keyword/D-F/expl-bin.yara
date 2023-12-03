@@ -10,7 +10,7 @@ rule expl_bin
     strings:
         // Description: some of my modified exploits and some scripts.
         // Reference: https://github.com/sailay1996/expl-bin
-        $string1 = /expl\-bin/ nocase ascii wide
+        $string1 = /.{0,1000}expl\-bin.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

@@ -10,76 +10,76 @@ rule dns2tcp
     strings:
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string1 = /\.dns2tcpdrc/ nocase ascii wide
+        $string1 = /.{0,1000}\.dns2tcpdrc.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string2 = /\/\.dns2tcprc/ nocase ascii wide
+        $string2 = /.{0,1000}\/\.dns2tcprc.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string3 = /\/debian\/dns2tcp/ nocase ascii wide
+        $string3 = /.{0,1000}\/debian\/dns2tcp.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string4 = /\/dns2tcp\.git/ nocase ascii wide
+        $string4 = /.{0,1000}\/dns2tcp\.git.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string5 = /\/dns2tcp\/client\// nocase ascii wide
+        $string5 = /.{0,1000}\/dns2tcp\/client\/.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string6 = /\/dns2tcp\/common\// nocase ascii wide
+        $string6 = /.{0,1000}\/dns2tcp\/common\/.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string7 = /\/dns2tcp\/server/ nocase ascii wide
+        $string7 = /.{0,1000}\/dns2tcp\/server.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string8 = /\/root\/dns2tcp/ nocase ascii wide
+        $string8 = /.{0,1000}\/root\/dns2tcp.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string9 = /\\\\\.\\pipe\\win\-sux\-no\-async\-anon\-pipe\-.*\-/ nocase ascii wide
+        $string9 = /.{0,1000}\\\\\.\\pipe\\win\-sux\-no\-async\-anon\-pipe\-.{0,1000}\-.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string10 = /\\dns2tcp\\/ nocase ascii wide
+        $string10 = /.{0,1000}\\dns2tcp\\.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string11 = /\\dns2tcp\\server/ nocase ascii wide
+        $string11 = /.{0,1000}\\dns2tcp\\server.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string12 = /\\dns2tcp\-0\./ nocase ascii wide
+        $string12 = /.{0,1000}\\dns2tcp\-0\..{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string13 = /alex\-sector\/dns2tcp/ nocase ascii wide
+        $string13 = /.{0,1000}alex\-sector\/dns2tcp.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string14 = /apt\sinstall\sdns2tcp/ nocase ascii wide
+        $string14 = /.{0,1000}apt\sinstall\sdns2tcp.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string15 = /dns2tcp\-.*\.zip/ nocase ascii wide
+        $string15 = /.{0,1000}dns2tcp\-.{0,1000}\.zip.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string16 = /dns2tcp\.exe/ nocase ascii wide
+        $string16 = /.{0,1000}dns2tcp\.exe.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string17 = /dns2tcp\.hsc\.fr/ nocase ascii wide
+        $string17 = /.{0,1000}dns2tcp\.hsc\.fr.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string18 = /dns2tcp\.kali\.org/ nocase ascii wide
+        $string18 = /.{0,1000}dns2tcp\.kali\.org.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string19 = /dns2tcp\.pid/ nocase ascii wide
+        $string19 = /.{0,1000}dns2tcp\.pid.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string20 = /dns2tcpc\s\-z\s/ nocase ascii wide
+        $string20 = /.{0,1000}dns2tcpc\s\-z\s.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string21 = /dns2tcpc\.exe/ nocase ascii wide
+        $string21 = /.{0,1000}dns2tcpc\.exe.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string22 = /dns2tcpd\s\-\-/ nocase ascii wide
+        $string22 = /.{0,1000}dns2tcpd\s\-\-.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string23 = /dns2tcpd\s\-f\s/ nocase ascii wide
+        $string23 = /.{0,1000}dns2tcpd\s\-f\s.{0,1000}/ nocase ascii wide
         // Description: Dns2tcp is a tool for relaying TCP connections over DNS
         // Reference: https://github.com/alex-sector/dns2tcp
-        $string24 = /dns2tcp\-master/ nocase ascii wide
+        $string24 = /.{0,1000}dns2tcp\-master.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

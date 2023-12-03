@@ -10,46 +10,46 @@ rule HadesLdr
     strings:
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string1 = /\s\-h\s.*\-p\s.*\s\-c\scypher\.bin\s\-k\skey\.bin/ nocase ascii wide
+        $string1 = /.{0,1000}\s\-h\s.{0,1000}\-p\s.{0,1000}\s\-c\scypher\.bin\s\-k\skey\.bin.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string2 = /\/HadesLdr\.git/ nocase ascii wide
+        $string2 = /.{0,1000}\/HadesLdr\.git.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string3 = /\/scripts\/xor\.py/ nocase ascii wide
+        $string3 = /.{0,1000}\/scripts\/xor\.py.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string4 = /CognisysGroup\/HadesLdr/ nocase ascii wide
+        $string4 = /.{0,1000}CognisysGroup\/HadesLdr.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string5 = /HadesLdr\-main/ nocase ascii wide
+        $string5 = /.{0,1000}HadesLdr\-main.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string6 = /IDSyscall\.exe/ nocase ascii wide
+        $string6 = /.{0,1000}IDSyscall\.exe.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string7 = /IDSyscall\.sln/ nocase ascii wide
+        $string7 = /.{0,1000}IDSyscall\.sln.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string8 = /IDSyscall\.vcxproj/ nocase ascii wide
+        $string8 = /.{0,1000}IDSyscall\.vcxproj.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string9 = /IDSyscall\/IDSyscall/ nocase ascii wide
+        $string9 = /.{0,1000}IDSyscall\/IDSyscall.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string10 = /IDSyscall\\IDSyscall/ nocase ascii wide
+        $string10 = /.{0,1000}IDSyscall\\IDSyscall.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string11 = /python3\sGetHash\.py\sNtCreateFile/ nocase ascii wide
+        $string11 = /.{0,1000}python3\sGetHash\.py\sNtCreateFile.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string12 = /rc4\.py\s.*\.bin/ nocase ascii wide
+        $string12 = /.{0,1000}rc4\.py\s.{0,1000}\.bin.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string13 = /syscallStuff\.asm/ nocase ascii wide
+        $string13 = /.{0,1000}syscallStuff\.asm.{0,1000}/ nocase ascii wide
         // Description: Shellcode Loader Implementing Indirect Dynamic Syscall - API Hashing - Fileless Shellcode retrieving using Winsock2
         // Reference: https://github.com/CognisysGroup/HadesLdr
-        $string14 = /xor\.py\s.*\.dll/ nocase ascii wide
+        $string14 = /.{0,1000}xor\.py\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

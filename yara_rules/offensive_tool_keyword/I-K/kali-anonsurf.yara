@@ -10,7 +10,7 @@ rule kali_anonsurf
     strings:
         // Description: Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p as well.
         // Reference: https://github.com/Und3rf10w/kali-anonsurf
-        $string1 = /kali\-anonsurf/ nocase ascii wide
+        $string1 = /.{0,1000}kali\-anonsurf.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

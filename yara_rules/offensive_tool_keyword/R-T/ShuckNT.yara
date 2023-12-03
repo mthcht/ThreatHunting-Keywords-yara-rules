@@ -10,31 +10,31 @@ rule ShuckNT
     strings:
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string1 = /\/\/shuck\.sh/ nocase ascii wide
+        $string1 = /.{0,1000}\/\/shuck\.sh.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string2 = /\/get\-shucking\.php/ nocase ascii wide
+        $string2 = /.{0,1000}\/get\-shucking\.php.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string3 = /\/ShuckNT\.git/ nocase ascii wide
+        $string3 = /.{0,1000}\/ShuckNT\.git.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string4 = /99\$1a7F1qr2HihoXfs\/56u5XMdpDZ83N6hW\/HI\=/ nocase ascii wide
+        $string4 = /.{0,1000}99\$1a7F1qr2HihoXfs\/56u5XMdpDZ83N6hW\/HI\=.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string5 = /pwned\-passwords\-ntlm/ nocase ascii wide
+        $string5 = /.{0,1000}pwned\-passwords\-ntlm.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string6 = /shucknt\.php/ nocase ascii wide
+        $string6 = /.{0,1000}shucknt\.php.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string7 = /ShuckNT\-main/ nocase ascii wide
+        $string7 = /.{0,1000}ShuckNT\-main.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string8 = /wordlist\-nthash\-reversed/ nocase ascii wide
+        $string8 = /.{0,1000}wordlist\-nthash\-reversed.{0,1000}/ nocase ascii wide
         // Description: ShuckNT is the script of Shuck.sh online service for on-premise use. It is design to dowgrade - convert - dissect and shuck authentication token based on Data Encryption Standard (DES)
         // Reference: https://github.com/yanncam/ShuckNT
-        $string9 = /yanncam\/ShuckNT/ nocase ascii wide
+        $string9 = /.{0,1000}yanncam\/ShuckNT.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

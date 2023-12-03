@@ -10,7 +10,7 @@ rule ducky
     strings:
         // Description: rubber ducky
         // Reference: https://github.com/greghanley/ducky-decode-wiki/blob/master/Guide_Change_USB_VID_PID.wiki
-        $string1 = /VID_03EB\&PID_2403\s/ nocase ascii wide
+        $string1 = /.{0,1000}VID_03EB\&PID_2403\s.{0,1000}/ nocase ascii wide
 
     condition:
         any of them

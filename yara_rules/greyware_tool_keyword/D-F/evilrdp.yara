@@ -10,10 +10,10 @@ rule evilrdp
     strings:
         // Description: Th evil twin of aardwolfgui using the aardwolf RDP client library that gives you extended control over the target and additional scripting capabilities from the command line.
         // Reference: https://github.com/skelsec/evilrdp
-        $string1 = /.{0,1000}dorgreen1\@gmail\.com.{0,1000}/ nocase ascii wide
+        $string1 = /dorgreen1\@gmail\.com/ nocase ascii wide
         // Description: Th evil twin of aardwolfgui using the aardwolf RDP client library that gives you extended control over the target and additional scripting capabilities from the command line.
         // Reference: https://github.com/skelsec/evilrdp
-        $string2 = /.{0,1000}info\@skelsecprojects\.com.{0,1000}/ nocase ascii wide
+        $string2 = /info\@skelsecprojects\.com/ nocase ascii wide
 
     condition:
         any of them

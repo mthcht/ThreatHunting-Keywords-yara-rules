@@ -10,16 +10,16 @@ rule Jatayu
     strings:
         // Description: Stealthy Stand Alone PHP Web Shell
         // Reference: https://github.com/SpiderMate/Jatayu
-        $string1 = /.{0,1000}\/SpiderMate\/Jatayu.{0,1000}/ nocase ascii wide
+        $string1 = /\/SpiderMate\/Jatayu/ nocase ascii wide
         // Description: Stealthy Stand Alone PHP Web Shell
         // Reference: https://github.com/SpiderMate/Jatayu
-        $string2 = /.{0,1000}bb3b1a1f\-0447\-42a6\-955a\-88681fb88499.{0,1000}/ nocase ascii wide
+        $string2 = /bb3b1a1f\-0447\-42a6\-955a\-88681fb88499/ nocase ascii wide
         // Description: Stealthy Stand Alone PHP Web Shell
         // Reference: https://github.com/SpiderMate/Jatayu
-        $string3 = /.{0,1000}jatayu\.php.{0,1000}/ nocase ascii wide
+        $string3 = /jatayu\.php/ nocase ascii wide
         // Description: Stealthy Stand Alone PHP Web Shell
         // Reference: https://github.com/SpiderMate/Jatayu
-        $string4 = /.{0,1000}jatayu\-image\.png.{0,1000}/ nocase ascii wide
+        $string4 = /jatayu\-image\.png/ nocase ascii wide
 
     condition:
         any of them

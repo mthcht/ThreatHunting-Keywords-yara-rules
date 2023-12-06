@@ -10,13 +10,13 @@ rule crunch
     strings:
         // Description: Generate a dictionary file containing words with a minimum and maximum length
         // Reference: https://sourceforge.net/projects/crunch-wordlist/
-        $string1 = /.{0,1000}\/crunch\-wordlist\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/crunch\-wordlist\// nocase ascii wide
         // Description: Generate a dictionary file containing words with a minimum and maximum length
         // Reference: https://sourceforge.net/projects/crunch-wordlist/
-        $string2 = /.{0,1000}apt\sinstall\scrunch.{0,1000}/ nocase ascii wide
+        $string2 = /apt\sinstall\scrunch/ nocase ascii wide
         // Description: Generate a dictionary file containing words with a minimum and maximum length
         // Reference: https://sourceforge.net/projects/crunch-wordlist/
-        $string3 = /.{0,1000}crunch\s.{0,1000}\s\-o\s.{0,1000}\.txt.{0,1000}/ nocase ascii wide
+        $string3 = /crunch\s.{0,1000}\s\-o\s.{0,1000}\.txt/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule MpCmdRun
     strings:
         // Description: Removing all the signature from windows defender - used by a metasploit module
         // Reference: N/A
-        $string1 = /.{0,1000}MpCmdRun\.exe.{0,1000}\s\-RemoveDefinitions\s\-All.{0,1000}/ nocase ascii wide
+        $string1 = /MpCmdRun\.exe.{0,1000}\s\-RemoveDefinitions\s\-All/ nocase ascii wide
 
     condition:
         any of them

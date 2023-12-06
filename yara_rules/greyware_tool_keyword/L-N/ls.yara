@@ -10,7 +10,7 @@ rule ls
     strings:
         // Description: list remote pipename 
         // Reference: https://outflank.nl/blog/2023/10/19/listing-remote-named-pipes/
-        $string1 = /.{0,1000}ls\s\\\\1.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}\\IPC\$\\.{0,1000}/ nocase ascii wide
+        $string1 = /ls\s\\\\1.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}\\IPC\$\\/ nocase ascii wide
 
     condition:
         any of them

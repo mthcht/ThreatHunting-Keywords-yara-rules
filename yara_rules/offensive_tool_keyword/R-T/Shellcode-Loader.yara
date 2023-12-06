@@ -10,16 +10,16 @@ rule Shellcode_Loader
     strings:
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string1 = /.{0,1000}\/Shellcode\-Loader\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/Shellcode\-Loader\.git/ nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string2 = /.{0,1000}C:\\Windows\\DirectX\.log.{0,1000}\\Windows\\Temp\\backup\.log.{0,1000}/ nocase ascii wide
+        $string2 = /C:\\Windows\\DirectX\.log.{0,1000}\\Windows\\Temp\\backup\.log/ nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string3 = /.{0,1000}ReversingID\/Shellcode\-Loader.{0,1000}/ nocase ascii wide
+        $string3 = /ReversingID\/Shellcode\-Loader/ nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string4 = /.{0,1000}Shellcode\-Loader\-master.{0,1000}/ nocase ascii wide
+        $string4 = /Shellcode\-Loader\-master/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule dirsearch
     strings:
         // Description: Dirsearch is a mature command-line tool designed to brute force directories and files in webservers.
         // Reference: https://github.com/maurosoria/dirsearch
-        $string1 = /.{0,1000}dirsearch.{0,1000}/ nocase ascii wide
+        $string1 = /dirsearch/ nocase ascii wide
 
     condition:
         any of them

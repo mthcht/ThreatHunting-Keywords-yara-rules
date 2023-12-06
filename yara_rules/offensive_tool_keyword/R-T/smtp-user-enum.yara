@@ -10,10 +10,10 @@ rule smtp_user_enum
     strings:
         // Description: Username guessing tool primarily for use against the default Solaris SMTP service. Can use either EXPN - VRFY or RCPT TO.
         // Reference: https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum
-        $string1 = /.{0,1000}\/smtp\-user\-enum.{0,1000}/ nocase ascii wide
+        $string1 = /\/smtp\-user\-enum/ nocase ascii wide
         // Description: Username guessing tool primarily for use against the default Solaris SMTP service. Can use either EXPN - VRFY or RCPT TO.
         // Reference: https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum
-        $string2 = /.{0,1000}smtp\-user\-enum.{0,1000}/ nocase ascii wide
+        $string2 = /smtp\-user\-enum/ nocase ascii wide
 
     condition:
         any of them

@@ -10,13 +10,13 @@ rule Get_WmiObject
     strings:
         // Description: Get logged on user on remote host with Get-WmiObject
         // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string1 = /.{0,1000}Get\-WmiObject\s\?ComputerName\s.{0,1000}\s\?Class\sWin32_ComputerSystem\s\|\s.{0,1000}\sUserName.{0,1000}/ nocase ascii wide
+        $string1 = /Get\-WmiObject\s\?ComputerName\s.{0,1000}\s\?Class\sWin32_ComputerSystem\s\|\s.{0,1000}\sUserName/ nocase ascii wide
         // Description: Get SCCM server with Get-WmiObject
         // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string2 = /.{0,1000}Get\-WmiObject\s\-class\sSMS_Authority\s\-namespace\sroot\\CCM.{0,1000}/ nocase ascii wide
+        $string2 = /Get\-WmiObject\s\-class\sSMS_Authority\s\-namespace\sroot\\CCM/ nocase ascii wide
         // Description: Get logged on user on remote host with Get-WmiObject
         // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string3 = /.{0,1000}Get\-WmiObject\swin32_loggedonuser\s\-ComputerName\s.{0,1000}/ nocase ascii wide
+        $string3 = /Get\-WmiObject\swin32_loggedonuser\s\-ComputerName\s/ nocase ascii wide
 
     condition:
         any of them

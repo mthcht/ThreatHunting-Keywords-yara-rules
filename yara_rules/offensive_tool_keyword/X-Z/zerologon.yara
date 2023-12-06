@@ -10,7 +10,7 @@ rule zerologon
     strings:
         // Description: Zerologon CVE exploitation
         // Reference: https://github.com/michaelpoznecki/zerologon
-        $string1 = /.{0,1000}nrpc\.py.{0,1000}/ nocase ascii wide
+        $string1 = /nrpc\.py/ nocase ascii wide
 
     condition:
         any of them

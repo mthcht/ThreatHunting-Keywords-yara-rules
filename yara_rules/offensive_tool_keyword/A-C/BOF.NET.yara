@@ -10,10 +10,10 @@ rule BOF_NET
     strings:
         // Description: A .NET Runtime for Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/CCob/BOF.NET
-        $string1 = /.{0,1000}BOF\.NET\.git.{0,1000}/ nocase ascii wide
+        $string1 = /BOF\.NET\.git/ nocase ascii wide
         // Description: A .NET Runtime for Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/CCob/BOF.NET
-        $string2 = /.{0,1000}BOF\.NET\-main.{0,1000}/ nocase ascii wide
+        $string2 = /BOF\.NET\-main/ nocase ascii wide
 
     condition:
         any of them

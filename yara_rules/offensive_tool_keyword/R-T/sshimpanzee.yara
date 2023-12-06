@@ -10,43 +10,43 @@ rule sshimpanzee
     strings:
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string1 = /.{0,1000}\.\/sshimpanzee.{0,1000}/ nocase ascii wide
+        $string1 = /\.\/sshimpanzee/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string2 = /.{0,1000}\/bin\/proxy_cli\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\/bin\/proxy_cli\.py/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string3 = /.{0,1000}\/sshimpanzee\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/sshimpanzee\.git/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string4 = /.{0,1000}blog\.lexfo\.fr\/sshimpanzee\.html.{0,1000}/ nocase ascii wide
+        $string4 = /blog\.lexfo\.fr\/sshimpanzee\.html/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string5 = /.{0,1000}dns\.lexfo\.fr.{0,1000}/ nocase ascii wide
+        $string5 = /dns\.lexfo\.fr/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string6 = /.{0,1000}git\sreset\seb88d07c43afe407094e7d609248d85a15e148ef\s\-\-hard.{0,1000}\srm\s\-f\ssshd.{0,1000}/ nocase ascii wide
+        $string6 = /git\sreset\seb88d07c43afe407094e7d609248d85a15e148ef\s\-\-hard.{0,1000}\srm\s\-f\ssshd/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string7 = /.{0,1000}lexfo\/sshimpanzee.{0,1000}/ nocase ascii wide
+        $string7 = /lexfo\/sshimpanzee/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string8 = /.{0,1000}MODE\=.{0,1000}\sREMOTE\=.{0,1000}sshimpanzee.{0,1000}/ nocase ascii wide
+        $string8 = /MODE\=.{0,1000}\sREMOTE\=.{0,1000}sshimpanzee/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string9 = /.{0,1000}ProxyCommand\=nc\s\-lp\s8080\s\-s\s127\.0\.0\.1.{0,1000}/ nocase ascii wide
+        $string9 = /ProxyCommand\=nc\s\-lp\s8080\s\-s\s127\.0\.0\.1/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string10 = /.{0,1000}sshimpanzee\s\-\-.{0,1000}/ nocase ascii wide
+        $string10 = /sshimpanzee\s\-\-/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string11 = /.{0,1000}sshimpanzee:127\.0\.0\.1:.{0,1000}/ nocase ascii wide
+        $string11 = /sshimpanzee:127\.0\.0\.1:/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string12 = /.{0,1000}sshimpanzee\-1\.1\-exp.{0,1000}/ nocase ascii wide
+        $string12 = /sshimpanzee\-1\.1\-exp/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string13 = /.{0,1000}sshimpanzee\-main.{0,1000}/ nocase ascii wide
+        $string13 = /sshimpanzee\-main/ nocase ascii wide
 
     condition:
         any of them

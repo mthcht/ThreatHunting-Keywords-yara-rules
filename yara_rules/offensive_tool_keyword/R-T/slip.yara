@@ -10,43 +10,43 @@ rule slip
     strings:
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string1 = /.{0,1000}\s\-\-archive\-type\star\s\-\-mass\-find\s.{0,1000}\s\-\-mass\-find\-mode\ssymlinks\sarchive.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-archive\-type\star\s\-\-mass\-find\s.{0,1000}\s\-\-mass\-find\-mode\ssymlinks\sarchive/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string2 = /.{0,1000}\s\-\-archive\-type\szip\s\-\-symlinks\s\"\.\.\/etc\/hosts.{0,1000}linkname\"\sarchive\s\s.{0,1000}/ nocase ascii wide
+        $string2 = /\s\-\-archive\-type\szip\s\-\-symlinks\s\"\.\.\/etc\/hosts.{0,1000}linkname\"\sarchive\s\s/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string3 = /.{0,1000}\sslip\.py\s.{0,1000}/ nocase ascii wide
+        $string3 = /\sslip\.py\s/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string4 = /.{0,1000}\.\/slip\.py\s.{0,1000}/ nocase ascii wide
+        $string4 = /\.\/slip\.py\s/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string5 = /.{0,1000}\/path_traversal_dict\.txt.{0,1000}/ nocase ascii wide
+        $string5 = /\/path_traversal_dict\.txt/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string6 = /.{0,1000}\/slip\.git/ nocase ascii wide
+        $string6 = /\/slip\.git/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string7 = /.{0,1000}\/slip\-main\.zip/ nocase ascii wide
+        $string7 = /\/slip\-main\.zip/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string8 = /.{0,1000}\\path_traversal_dict\.txt.{0,1000}/ nocase ascii wide
+        $string8 = /\\path_traversal_dict\.txt/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string9 = /.{0,1000}\\slip\.py\s.{0,1000}/ nocase ascii wide
+        $string9 = /\\slip\.py\s/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string10 = /.{0,1000}\\slip\-main\.zip/ nocase ascii wide
+        $string10 = /\\slip\-main\.zip/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string11 = /.{0,1000}0xless\/slip.{0,1000}/ nocase ascii wide
+        $string11 = /0xless\/slip/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string12 = /.{0,1000}python3\sslip\.py.{0,1000}/ nocase ascii wide
+        $string12 = /python3\sslip\.py/ nocase ascii wide
         // Description: Slip is a CLI tool to create malicious archive files containing path traversal payloads
         // Reference: https://github.com/0xless/slip
-        $string13 = /.{0,1000}slip.{0,1000}\s\-\-archive\-type\s.{0,1000}\s\-\-compression\s.{0,1000}\s\-\-paths\s.{0,1000}\s\-\-file\-content\s.{0,1000}/ nocase ascii wide
+        $string13 = /slip.{0,1000}\s\-\-archive\-type\s.{0,1000}\s\-\-compression\s.{0,1000}\s\-\-paths\s.{0,1000}\s\-\-file\-content\s/ nocase ascii wide
 
     condition:
         any of them

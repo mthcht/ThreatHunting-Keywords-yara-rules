@@ -10,13 +10,13 @@ rule red_team_scripts
     strings:
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands (i.e. no Powershell. binary calls. or process injection). Additionally. adds a basic enumerate alias for Linux based systems in SSH sessions.
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string1 = /.{0,1000}enumerate\.cna.{0,1000}/ nocase ascii wide
+        $string1 = /enumerate\.cna/ nocase ascii wide
         // Description: script comprised of multiple system enumeration / situational awareness techniques collected over time. If system is a member of a Windows domain. it can also perform limited domain enumeration with the -Domain switch
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string2 = /.{0,1000}HostEnum\.ps1.{0,1000}/ nocase ascii wide
+        $string2 = /HostEnum\.ps1/ nocase ascii wide
         // Description: script comprised of multiple system enumeration / situational awareness techniques collected over time. If system is a member of a Windows domain. it can also perform limited domain enumeration with the -Domain switch
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string3 = /.{0,1000}Invoke\-HostEnum.{0,1000}/ nocase ascii wide
+        $string3 = /Invoke\-HostEnum/ nocase ascii wide
 
     condition:
         any of them

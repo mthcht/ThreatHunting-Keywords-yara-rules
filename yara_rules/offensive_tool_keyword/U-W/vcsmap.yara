@@ -10,7 +10,7 @@ rule vcsmap
     strings:
         // Description: vcsmap is a plugin-based tool to scan public version control systems (currently GitHub and possibly Gitlab soon) for sensitive information like access tokens and credentials.
         // Reference: https://github.com/melvinsh/vcsmap
-        $string1 = /.{0,1000}vcsmap.{0,1000}/ nocase ascii wide
+        $string1 = /vcsmap/ nocase ascii wide
 
     condition:
         any of them

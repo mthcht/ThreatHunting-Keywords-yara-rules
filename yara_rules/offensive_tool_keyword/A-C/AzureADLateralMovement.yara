@@ -10,7 +10,7 @@ rule AzureADLateralMovement
     strings:
         // Description: AzureADLateralMovement allows to build Lateral Movement graph for Azure Active Directory entities - Users. Computers. Groups and Roles. Using the Microsoft Graph API AzureADLateralMovement extracts interesting information and builds json files containing lateral movement graph data compatible with Bloodhound 2.2.0
         // Reference: https://github.com/talmaor/AzureADLateralMovement
-        $string1 = /.{0,1000}AzureADLateralMovement.{0,1000}/ nocase ascii wide
+        $string1 = /AzureADLateralMovement/ nocase ascii wide
 
     condition:
         any of them

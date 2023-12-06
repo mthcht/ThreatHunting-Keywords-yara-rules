@@ -10,7 +10,7 @@ rule changeme
     strings:
         // Description: A default credential scanner.
         // Reference: https://github.com/ztgrace/changeme
-        $string1 = /.{0,1000}ztgrace.{0,1000}changeme.{0,1000}/ nocase ascii wide
+        $string1 = /ztgrace.{0,1000}changeme/ nocase ascii wide
 
     condition:
         any of them

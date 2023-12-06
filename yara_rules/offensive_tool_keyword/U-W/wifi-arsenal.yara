@@ -10,7 +10,7 @@ rule wifi_arsenal
     strings:
         // Description: github repo with all the wireless exploitation tools available
         // Reference: https://github.com/0x90/wifi-arsenal
-        $string1 = /.{0,1000}wifi\-arsenal.{0,1000}/ nocase ascii wide
+        $string1 = /wifi\-arsenal/ nocase ascii wide
 
     condition:
         any of them

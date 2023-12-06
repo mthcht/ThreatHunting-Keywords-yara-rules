@@ -10,10 +10,10 @@ rule SMBGhost
     strings:
         // Description: Simple scanner for CVE-2020-0796 - SMBv3 RCE.
         // Reference: https://github.com/ollypwn/SMBGhost
-        $string1 = /.{0,1000}\/SMBGhost\/scanner\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\/SMBGhost\/scanner\.py/ nocase ascii wide
         // Description: Simple scanner for CVE-2020-0796 - SMBv3 RCE.
         // Reference: https://github.com/ollypwn/SMBGhost
-        $string2 = /.{0,1000}SMBGhost\.pcap.{0,1000}/ nocase ascii wide
+        $string2 = /SMBGhost\.pcap/ nocase ascii wide
 
     condition:
         any of them

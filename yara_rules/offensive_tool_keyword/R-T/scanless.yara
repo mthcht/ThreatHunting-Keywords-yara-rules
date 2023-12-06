@@ -10,7 +10,7 @@ rule scanless
     strings:
         // Description: This is a Python 3 command-line utility and library for using websites that can perform port scans on your behalf
         // Reference: https://github.com/vesche/scanless
-        $string1 = /.{0,1000}scanless.{0,1000}/ nocase ascii wide
+        $string1 = /scanless/ nocase ascii wide
 
     condition:
         any of them

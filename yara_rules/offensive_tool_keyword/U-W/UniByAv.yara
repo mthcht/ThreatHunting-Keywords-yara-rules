@@ -10,7 +10,7 @@ rule UniByAv
     strings:
         // Description: UniByAv is a simple obfuscator that take raw shellcode and generate executable that are Anti-Virus friendly. The obfuscation routine is purely writtend in assembly to remain pretty short and efficient. In a nutshell the application generate a 32 bits xor key and brute force the key at run time then perform the decryption of the actually shellcode.
         // Reference: https://github.com/Mr-Un1k0d3r/UniByAv
-        $string1 = /.{0,1000}UniByAv.{0,1000}/ nocase ascii wide
+        $string1 = /UniByAv/ nocase ascii wide
 
     condition:
         any of them

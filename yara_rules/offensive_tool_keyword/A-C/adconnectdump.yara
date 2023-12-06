@@ -10,28 +10,28 @@ rule adconnectdump
     strings:
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string1 = /.{0,1000}\/adconnectdump\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/adconnectdump\.git/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string2 = /.{0,1000}adconnectdump\.py.{0,1000}/ nocase ascii wide
+        $string2 = /adconnectdump\.py/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string3 = /.{0,1000}adconnectdump\-master.{0,1000}/ nocase ascii wide
+        $string3 = /adconnectdump\-master/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string4 = /.{0,1000}ADSyncDecrypt\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /ADSyncDecrypt\.exe/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string5 = /.{0,1000}ADSyncGather\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /ADSyncGather\.exe/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string6 = /.{0,1000}ADSyncQuery.{0,1000}ADSync\.mdf.{0,1000}\.txt.{0,1000}/ nocase ascii wide
+        $string6 = /ADSyncQuery.{0,1000}ADSync\.mdf.{0,1000}\.txt/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string7 = /.{0,1000}decrypt\.py\s\.\\.{0,1000}\.txt\sutf\-16\-le.{0,1000}/ nocase ascii wide
+        $string7 = /decrypt\.py\s\.\\.{0,1000}\.txt\sutf\-16\-le/ nocase ascii wide
         // Description: Dump Azure AD Connect credentials for Azure AD and Active Directory
         // Reference: https://github.com/fox-it/adconnectdump
-        $string8 = /.{0,1000}fox\-it\/adconnectdump.{0,1000}/ nocase ascii wide
+        $string8 = /fox\-it\/adconnectdump/ nocase ascii wide
 
     condition:
         any of them

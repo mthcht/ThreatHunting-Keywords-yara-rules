@@ -10,7 +10,7 @@ rule Intercepter_NG
     strings:
         // Description: android wifi sniffer
         // Reference: https://github.com/intercepter-ng
-        $string1 = /.{0,1000}Intercepter\-NG.{0,1000}/ nocase ascii wide
+        $string1 = /Intercepter\-NG/ nocase ascii wide
 
     condition:
         any of them

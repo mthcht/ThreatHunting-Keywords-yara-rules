@@ -10,19 +10,19 @@ rule HTMLSmuggler
     strings:
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string1 = /.{0,1000}\/HTMLSmuggler\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/HTMLSmuggler\.git/ nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string2 = /.{0,1000}\/HTMLSmuggler\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/HTMLSmuggler\// nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string3 = /.{0,1000}\\HTMLSmuggler\\.{0,1000}/ nocase ascii wide
+        $string3 = /\\HTMLSmuggler\\/ nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string4 = /.{0,1000}D00Movenok\/HTMLSmuggler.{0,1000}/ nocase ascii wide
+        $string4 = /D00Movenok\/HTMLSmuggler/ nocase ascii wide
         // Description: HTML Smuggling generator&obfuscator for your Red Team operations
         // Reference: https://github.com/D00Movenok/HTMLSmuggler
-        $string5 = /.{0,1000}HTMLSmuggler\-main.{0,1000}/ nocase ascii wide
+        $string5 = /HTMLSmuggler\-main/ nocase ascii wide
 
     condition:
         any of them

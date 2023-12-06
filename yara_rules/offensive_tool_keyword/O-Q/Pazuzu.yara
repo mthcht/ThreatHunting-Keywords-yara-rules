@@ -10,7 +10,7 @@ rule Pazuzu
     strings:
         // Description: Pazuzu is a Python script that allows you to embed a binary within a precompiled DLL which uses reflective DLL injection. The goal is that you can run your own binary directly from memory. This can be useful in various scenarios.
         // Reference: https://github.com/BorjaMerino/Pazuzu
-        $string1 = /.{0,1000}BorjaMerino.{0,1000}Pazuzu.{0,1000}/ nocase ascii wide
+        $string1 = /BorjaMerino.{0,1000}Pazuzu/ nocase ascii wide
 
     condition:
         any of them

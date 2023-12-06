@@ -10,10 +10,10 @@ rule WPScan
     strings:
         // Description: WPScan is a black box WordPress vulnerability scanner.
         // Reference: https://github.com/wpscanteam/wpscan
-        $string1 = /.{0,1000}wpscan\s\?url.{0,1000}/ nocase ascii wide
+        $string1 = /wpscan\s\?url/ nocase ascii wide
         // Description: WPScan is a black box WordPress vulnerability scanner.
         // Reference: https://github.com/wpscanteam/wpscan
-        $string2 = /.{0,1000}wpscanteam\/wpscan.{0,1000}/ nocase ascii wide
+        $string2 = /wpscanteam\/wpscan/ nocase ascii wide
 
     condition:
         any of them

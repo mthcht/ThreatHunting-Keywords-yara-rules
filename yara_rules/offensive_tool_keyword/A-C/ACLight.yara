@@ -10,76 +10,76 @@ rule ACLight
     strings:
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string1 = /.{0,1000}\s\-\sSensitive\sAccounts\.csv.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\sSensitive\sAccounts\.csv/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string2 = /.{0,1000}\/ACLight\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/ACLight\.git/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string3 = /.{0,1000}\/ACLight\/.{0,1000}/ nocase ascii wide
+        $string3 = /\/ACLight\// nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string4 = /.{0,1000}\\scanACLsResults\.csv.{0,1000}/ nocase ascii wide
+        $string4 = /\\scanACLsResults\.csv/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string5 = /.{0,1000}Accounts\swith\sextra\spermissions\.txt.{0,1000}/ nocase ascii wide
+        $string5 = /Accounts\swith\sextra\spermissions\.txt/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string6 = /.{0,1000}ACLight\.ps1.{0,1000}/ nocase ascii wide
+        $string6 = /ACLight\.ps1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string7 = /.{0,1000}ACLight\.psd1.{0,1000}/ nocase ascii wide
+        $string7 = /ACLight\.psd1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string8 = /.{0,1000}ACLight\.psm1.{0,1000}/ nocase ascii wide
+        $string8 = /ACLight\.psm1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string9 = /.{0,1000}ACLight2\.ps1.{0,1000}/ nocase ascii wide
+        $string9 = /ACLight2\.ps1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string10 = /.{0,1000}ACLight2\.psd1.{0,1000}/ nocase ascii wide
+        $string10 = /ACLight2\.psd1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string11 = /.{0,1000}ACLight2\.psm1.{0,1000}/ nocase ascii wide
+        $string11 = /ACLight2\.psm1/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string12 = /.{0,1000}ACLight\-master.{0,1000}/ nocase ascii wide
+        $string12 = /ACLight\-master/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string13 = /.{0,1000}cyberark\/ACLight.{0,1000}/ nocase ascii wide
+        $string13 = /cyberark\/ACLight/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string14 = /.{0,1000}Execute\-ACLight\.bat.{0,1000}/ nocase ascii wide
+        $string14 = /Execute\-ACLight\.bat/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string15 = /.{0,1000}Execute\-ACLight2\.bat.{0,1000}/ nocase ascii wide
+        $string15 = /Execute\-ACLight2\.bat/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string16 = /.{0,1000}Invoke\-ACLcsvFileAnalysis.{0,1000}/ nocase ascii wide
+        $string16 = /Invoke\-ACLcsvFileAnalysis/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string17 = /.{0,1000}Invoke\-ACLScanner\s.{0,1000}\s\-Filter\s.{0,1000}/ nocase ascii wide
+        $string17 = /Invoke\-ACLScanner\s.{0,1000}\s\-Filter\s/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string18 = /.{0,1000}Invoke\-ACLScanner\s.{0,1000}\s\-Name\s.{0,1000}/ nocase ascii wide
+        $string18 = /Invoke\-ACLScanner\s.{0,1000}\s\-Name\s/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string19 = /.{0,1000}Privileged\sAccounts\s\-\sLayers\sAnalysis\.txt.{0,1000}/ nocase ascii wide
+        $string19 = /Privileged\sAccounts\s\-\sLayers\sAnalysis\.txt/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string20 = /.{0,1000}Privileged\sAccounts\sPermissions\s\-\sFinal\sReport\.csv.{0,1000}/ nocase ascii wide
+        $string20 = /Privileged\sAccounts\sPermissions\s\-\sFinal\sReport\.csv/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string21 = /.{0,1000}Privileged\sAccounts\sPermissions\s\-\sIrregular\sAccounts\.csv.{0,1000}/ nocase ascii wide
+        $string21 = /Privileged\sAccounts\sPermissions\s\-\sIrregular\sAccounts\.csv/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string22 = /.{0,1000}Start\-ACLsAnalysis\s\-Domain.{0,1000}/ nocase ascii wide
+        $string22 = /Start\-ACLsAnalysis\s\-Domain/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string23 = /.{0,1000}Start\-domainACLsAnalysis.{0,1000}/ nocase ascii wide
+        $string23 = /Start\-domainACLsAnalysis/ nocase ascii wide
         // Description: A tool for advanced discovery of Privileged Accounts - including Shadow Admins.
         // Reference: https://github.com/cyberark/ACLight
-        $string24 = /.{0,1000}starting\sMulti\-Layered\sACLight\sscan.{0,1000}/ nocase ascii wide
+        $string24 = /starting\sMulti\-Layered\sACLight\sscan/ nocase ascii wide
 
     condition:
         any of them

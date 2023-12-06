@@ -10,25 +10,25 @@ rule Invoke_SMBRemoting
     strings:
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string1 = /.{0,1000}\s\-PipeName\s.{0,1000}\s\-ServiceName\s.{0,1000}\s\-Command\swhoami.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-PipeName\s.{0,1000}\s\-ServiceName\s.{0,1000}\s\-Command\swhoami/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string2 = /.{0,1000}\/Invoke\-SMBRemoting\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/Invoke\-SMBRemoting\.git/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string3 = /.{0,1000}Enter\-SMBSession\s\-ComputerName\s.{0,1000}/ nocase ascii wide
+        $string3 = /Enter\-SMBSession\s\-ComputerName\s/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string4 = /.{0,1000}Enter\-SMBSession.{0,1000}\s\-PipeName\s.{0,1000}\s\-ServiceName\s.{0,1000}/ nocase ascii wide
+        $string4 = /Enter\-SMBSession.{0,1000}\s\-PipeName\s.{0,1000}\s\-ServiceName\s/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string5 = /.{0,1000}Invoke\-SMBRemoting\.ps1.{0,1000}/ nocase ascii wide
+        $string5 = /Invoke\-SMBRemoting\.ps1/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string6 = /.{0,1000}Invoke\-SMBRemoting\-main.{0,1000}/ nocase ascii wide
+        $string6 = /Invoke\-SMBRemoting\-main/ nocase ascii wide
         // Description: Interactive Shell and Command Execution over Named-Pipes (SMB)
         // Reference: https://github.com/Leo4j/Invoke-SMBRemoting
-        $string7 = /.{0,1000}Leo4j\/Invoke\-SMBRemoting.{0,1000}/ nocase ascii wide
+        $string7 = /Leo4j\/Invoke\-SMBRemoting/ nocase ascii wide
 
     condition:
         any of them

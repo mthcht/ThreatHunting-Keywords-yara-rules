@@ -10,22 +10,22 @@ rule netscan
     strings:
         // Description: SoftPerfect Network Scanner abused by threat actor
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string1 = /.{0,1000}\/netscan\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\/netscan\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner abused by threat actor
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string2 = /.{0,1000}\\netscan\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /\\netscan\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner abused by threat actor
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string3 = /.{0,1000}\\netscan\.lic.{0,1000}/ nocase ascii wide
+        $string3 = /\\netscan\.lic/ nocase ascii wide
         // Description: SoftPerfect Network Scanner abused by threat actor
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string4 = /.{0,1000}\\netscan\.xml.{0,1000}/ nocase ascii wide
+        $string4 = /\\netscan\.xml/ nocase ascii wide
         // Description: SoftPerfect Network Scanner abused by threat actor
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string5 = /.{0,1000}\\SoftPerfect\sNetwork\sScanner.{0,1000}/ nocase ascii wide
+        $string5 = /\\SoftPerfect\sNetwork\sScanner/ nocase ascii wide
         // Description: SoftPerfect Network Scanner abused by threat actor
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string6 = /.{0,1000}netscan_setup\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /netscan_setup\.exe/ nocase ascii wide
 
     condition:
         any of them

@@ -10,25 +10,25 @@ rule teamstracker
     strings:
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string1 = /.{0,1000}\steamstracker\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\steamstracker\.py/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string2 = /.{0,1000}\/teamstracker\.db.{0,1000}/ nocase ascii wide
+        $string2 = /\/teamstracker\.db/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string3 = /.{0,1000}\/teamstracker\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/teamstracker\.git/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string4 = /.{0,1000}\/teamstracker\.py.{0,1000}/ nocase ascii wide
+        $string4 = /\/teamstracker\.py/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string5 = /.{0,1000}\\teamstracker\.py.{0,1000}/ nocase ascii wide
+        $string5 = /\\teamstracker\.py/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string6 = /.{0,1000}nyxgeek\/teamstracker.{0,1000}/ nocase ascii wide
+        $string6 = /nyxgeek\/teamstracker/ nocase ascii wide
         // Description: using graph proxy to monitor teams user presence
         // Reference: https://github.com/nyxgeek/teamstracker
-        $string7 = /.{0,1000}teamstracker\-main.{0,1000}/ nocase ascii wide
+        $string7 = /teamstracker\-main/ nocase ascii wide
 
     condition:
         any of them

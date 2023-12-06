@@ -10,7 +10,7 @@ rule DumpCreds
     strings:
         // Description: Dumpcreds is a tool that may be used to extract various credentials from running processes. I just take a look at mimipenguin(https://github.com/huntergregal/mimipenguin) and tried to improve it a bit
         // Reference: https://github.com/ponypot/dumpcreds
-        $string1 = /.{0,1000}DumpCreds.{0,1000}/ nocase ascii wide
+        $string1 = /DumpCreds/ nocase ascii wide
 
     condition:
         any of them

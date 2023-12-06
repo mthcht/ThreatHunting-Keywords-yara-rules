@@ -10,25 +10,25 @@ rule ETWHash
     strings:
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string1 = /.{0,1000}\sEtwHash.{0,1000}/ nocase ascii wide
+        $string1 = /\sEtwHash/ nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string2 = /.{0,1000}\/ETWHash\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/ETWHash\// nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string3 = /.{0,1000}\\ETWHash\..{0,1000}/ nocase ascii wide
+        $string3 = /\\ETWHash\./ nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string4 = /.{0,1000}EtwHash\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /EtwHash\.exe/ nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string5 = /.{0,1000}EtwHash\.git.{0,1000}/ nocase ascii wide
+        $string5 = /EtwHash\.git/ nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string6 = /.{0,1000}ETWHash\.sln.{0,1000}/ nocase ascii wide
+        $string6 = /ETWHash\.sln/ nocase ascii wide
         // Description: C# POC to extract NetNTLMv1/v2 hashes from ETW provider
         // Reference: https://github.com/nettitude/ETWHash
-        $string7 = /.{0,1000}nettitude\/ETWHash.{0,1000}/ nocase ascii wide
+        $string7 = /nettitude\/ETWHash/ nocase ascii wide
 
     condition:
         any of them

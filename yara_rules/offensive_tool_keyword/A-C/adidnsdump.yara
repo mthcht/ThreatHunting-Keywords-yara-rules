@@ -10,7 +10,7 @@ rule adidnsdump
     strings:
         // Description: By default any user in Active Directory can enumerate all DNS records in the Domain or Forest DNS zones. similar to a zone transfer. This tool enables enumeration and exporting of all DNS records in the zone for recon purposes of internal networks.
         // Reference: https://github.com/dirkjanm/adidnsdump
-        $string1 = /.{0,1000}adidnsdump.{0,1000}/ nocase ascii wide
+        $string1 = /adidnsdump/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule ssh_mitm
     strings:
         // Description: An SSH/SFTP man-in-the-middle tool that logs interactive sessions and passwords.
         // Reference: https://github.com/jtesta/ssh-mitm
-        $string1 = /.{0,1000}ssh\-mitm.{0,1000}/ nocase ascii wide
+        $string1 = /ssh\-mitm/ nocase ascii wide
 
     condition:
         any of them

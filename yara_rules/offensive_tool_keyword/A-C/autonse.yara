@@ -10,7 +10,7 @@ rule autonse
     strings:
         // Description: Massive NSE (Nmap Scripting Engine) AutoSploit and AutoScanner. The Nmap Scripting Engine (NSE) is one of Nmaps most powerful and flexible features. It allows users to write (and share) simple scripts (using the Lua programming language ) to automate a wide variety of networking tasks. Those scripts are executed in parallel with the speed and efficiency you expect from Nmap. Users can rely on the growing and diverse set of scripts distributed with Nmap. or write their own to meet custom needs. For more informations https://nmap.org/book/man-nse.html
         // Reference: https://github.com/m4ll0k/AutoNSE
-        $string1 = /.{0,1000}AutoNSE.{0,1000}/ nocase ascii wide
+        $string1 = /AutoNSE/ nocase ascii wide
 
     condition:
         any of them

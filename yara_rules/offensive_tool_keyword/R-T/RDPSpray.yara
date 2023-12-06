@@ -10,7 +10,7 @@ rule RDPSpray
     strings:
         // Description: Tool for password spraying RDP
         // Reference: https://github.com/dafthack/RDPSpray
-        $string1 = /.{0,1000}RDPSpray.{0,1000}/ nocase ascii wide
+        $string1 = /RDPSpray/ nocase ascii wide
 
     condition:
         any of them

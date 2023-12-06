@@ -10,7 +10,7 @@ rule badtouch
     strings:
         // Description: Scriptable network authentication cracker
         // Reference: https://github.com/kpcyrd/badtouch
-        $string1 = /.{0,1000}badtouch.{0,1000}/ nocase ascii wide
+        $string1 = /badtouch/ nocase ascii wide
 
     condition:
         any of them

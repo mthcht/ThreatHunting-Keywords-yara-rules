@@ -10,43 +10,43 @@ rule Kubestroyer
     strings:
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string1 = /.{0,1000}\.\/kubestroyer.{0,1000}/ nocase ascii wide
+        $string1 = /\.\/kubestroyer/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string2 = /.{0,1000}\/Kubestroyer\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/Kubestroyer\.git/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string3 = /.{0,1000}cmd\/kubestroyer.{0,1000}/ nocase ascii wide
+        $string3 = /cmd\/kubestroyer/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string4 = /.{0,1000}kubestroyer\s\-t\s.{0,1000}/ nocase ascii wide
+        $string4 = /kubestroyer\s\-t\s/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string5 = /.{0,1000}Kubestroyer\@latest.{0,1000}/ nocase ascii wide
+        $string5 = /Kubestroyer\@latest/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string6 = /.{0,1000}kubestroyer_linux_x64.{0,1000}/ nocase ascii wide
+        $string6 = /kubestroyer_linux_x64/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string7 = /.{0,1000}kubestroyer_macos_arm64.{0,1000}/ nocase ascii wide
+        $string7 = /kubestroyer_macos_arm64/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string8 = /.{0,1000}kubestroyer_macos_x64.{0,1000}/ nocase ascii wide
+        $string8 = /kubestroyer_macos_x64/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string9 = /.{0,1000}kubestroyer_windows_x64.{0,1000}/ nocase ascii wide
+        $string9 = /kubestroyer_windows_x64/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string10 = /.{0,1000}Kubestroyer\-master.{0,1000}/ nocase ascii wide
+        $string10 = /Kubestroyer\-master/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string11 = /.{0,1000}Rolix44\/Kubestroyer.{0,1000}/ nocase ascii wide
+        $string11 = /Rolix44\/Kubestroyer/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string12 = /.{0,1000}Starting\sport\sscan\sfor\s.{0,1000}/ nocase ascii wide
+        $string12 = /Starting\sport\sscan\sfor\s/ nocase ascii wide
         // Description: Kubestroyer aims to exploit Kubernetes clusters misconfigurations and be the swiss army knife of your Kubernetes pentests
         // Reference: https://github.com/Rolix44/Kubestroyer
-        $string13 = /.{0,1000}Trying\sanon\sRCE\susing\s.{0,1000}\sfor\s.{0,1000}/ nocase ascii wide
+        $string13 = /Trying\sanon\sRCE\susing\s.{0,1000}\sfor\s/ nocase ascii wide
 
     condition:
         any of them

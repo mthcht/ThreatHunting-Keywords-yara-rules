@@ -10,7 +10,7 @@ rule http_server
     strings:
         // Description: setup a simple http server
         // Reference: N/A
-        $string1 = /.{0,1000}python\s\-m\shttp\.server.{0,1000}/ nocase ascii wide
+        $string1 = /python\s\-m\shttp\.server/ nocase ascii wide
 
     condition:
         any of them

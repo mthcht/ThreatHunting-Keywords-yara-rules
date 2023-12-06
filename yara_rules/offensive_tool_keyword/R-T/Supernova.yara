@@ -10,55 +10,55 @@ rule Supernova
     strings:
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string1 = /.{0,1000}\.bin\s\-enc\src4\s\-lang\sc\s\-k\s3\s\-o\s.{0,1000}\.bin.{0,1000}/ nocase ascii wide
+        $string1 = /\.bin\s\-enc\src4\s\-lang\sc\s\-k\s3\s\-o\s.{0,1000}\.bin/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string2 = /.{0,1000}\.bin\s\-enc\src4\s\-lang\scsharp\s\-k\s9.{0,1000}/ nocase ascii wide
+        $string2 = /\.bin\s\-enc\src4\s\-lang\scsharp\s\-k\s9/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string3 = /.{0,1000}\.bin\s\-enc\srot\s\-lang\scsharp\s\-k\s2\s\-d.{0,1000}/ nocase ascii wide
+        $string3 = /\.bin\s\-enc\srot\s\-lang\scsharp\s\-k\s2\s\-d/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string4 = /.{0,1000}\.bin\s\-enc\srot\s\-lang\srust\s\-k\s7.{0,1000}/ nocase ascii wide
+        $string4 = /\.bin\s\-enc\srot\s\-lang\srust\s\-k\s7/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string5 = /.{0,1000}\.bin\s\-enc\sxor\s\-lang\scsharp\s\-k\s2\s\-v\snickvourd.{0,1000}/ nocase ascii wide
+        $string5 = /\.bin\s\-enc\sxor\s\-lang\scsharp\s\-k\s2\s\-v\snickvourd/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string6 = /.{0,1000}\.bin\s\-enc\sxor\s\-lang\snim\s\-k\s4.{0,1000}/ nocase ascii wide
+        $string6 = /\.bin\s\-enc\sxor\s\-lang\snim\s\-k\s4/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string7 = /.{0,1000}\.exe\s.{0,1000}\.bin\s\-enc\saes\s\-lang\scsharp.{0,1000}/ nocase ascii wide
+        $string7 = /\.exe\s.{0,1000}\.bin\s\-enc\saes\s\-lang\scsharp/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string8 = /.{0,1000}\/Supernova\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /\/Supernova\.exe/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string9 = /.{0,1000}\/Supernova\.git.{0,1000}/ nocase ascii wide
+        $string9 = /\/Supernova\.git/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string10 = /.{0,1000}\[\+\]\sGenerated\sXOR\skey:\s.{0,1000}/ nocase ascii wide
+        $string10 = /\[\+\]\sGenerated\sXOR\skey:\s/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string11 = /.{0,1000}\[\+\]\sSave\sencrypted\sshellcode\sto\s.{0,1000}/ nocase ascii wide
+        $string11 = /\[\+\]\sSave\sencrypted\sshellcode\sto\s/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string12 = /.{0,1000}\[\+\]\sThe\sencrypted\spayload\swith\s.{0,1000}/ nocase ascii wide
+        $string12 = /\[\+\]\sThe\sencrypted\spayload\swith\s/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string13 = /.{0,1000}\\Supernova\.exe.{0,1000}/ nocase ascii wide
+        $string13 = /\\Supernova\.exe/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string14 = /.{0,1000}build\sSupernova\.go.{0,1000}/ nocase ascii wide
+        $string14 = /build\sSupernova\.go/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string15 = /.{0,1000}nickvourd\/Supernova.{0,1000}/ nocase ascii wide
+        $string15 = /nickvourd\/Supernova/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string16 = /.{0,1000}Supernova\.exe\s\-.{0,1000}/ nocase ascii wide
+        $string16 = /Supernova\.exe\s\-/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string17 = /.{0,1000}Supernova\-main\.zip.{0,1000}/ nocase ascii wide
+        $string17 = /Supernova\-main\.zip/ nocase ascii wide
 
     condition:
         any of them

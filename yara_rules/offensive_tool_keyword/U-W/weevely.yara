@@ -10,7 +10,7 @@ rule weevely
     strings:
         // Description: weevely php web shell
         // Reference: https://github.com/sunge/Weevely
-        $string1 = /.{0,1000}\/Weevely.{0,1000}/ nocase ascii wide
+        $string1 = /\/Weevely/ nocase ascii wide
 
     condition:
         any of them

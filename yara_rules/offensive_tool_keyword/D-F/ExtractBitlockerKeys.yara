@@ -10,25 +10,25 @@ rule ExtractBitlockerKeys
     strings:
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string1 = /.{0,1000}\.ps1\s\-dcip\s.{0,1000}\s\-Username\s.{0,1000}\s\-Password.{0,1000}\s\-ExportToCSV\s.{0,1000}\.csv\s\-ExportToJSON\s.{0,1000}\.json.{0,1000}/ nocase ascii wide
+        $string1 = /\.ps1\s\-dcip\s.{0,1000}\s\-Username\s.{0,1000}\s\-Password.{0,1000}\s\-ExportToCSV\s.{0,1000}\.csv\s\-ExportToJSON\s.{0,1000}\.json/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string2 = /.{0,1000}\/ExtractBitlockerKeys\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/ExtractBitlockerKeys\.git/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string3 = /.{0,1000}ExtractBitLockerKeys.{0,1000}\@podalirius_.{0,1000}/ nocase ascii wide
+        $string3 = /ExtractBitLockerKeys.{0,1000}\@podalirius_/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string4 = /.{0,1000}ExtractBitlockerKeys\.ps1.{0,1000}/ nocase ascii wide
+        $string4 = /ExtractBitlockerKeys\.ps1/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string5 = /.{0,1000}ExtractBitlockerKeys\.py.{0,1000}/ nocase ascii wide
+        $string5 = /ExtractBitlockerKeys\.py/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string6 = /.{0,1000}ExtractBitlockerKeys\-main.{0,1000}/ nocase ascii wide
+        $string6 = /ExtractBitlockerKeys\-main/ nocase ascii wide
         // Description: A system administration or post-exploitation script to automatically extract the bitlocker recovery keys from a domain.
         // Reference: https://github.com/p0dalirius/ExtractBitlockerKeys
-        $string7 = /.{0,1000}p0dalirius\/ExtractBitlockerKeys.{0,1000}/ nocase ascii wide
+        $string7 = /p0dalirius\/ExtractBitlockerKeys/ nocase ascii wide
 
     condition:
         any of them

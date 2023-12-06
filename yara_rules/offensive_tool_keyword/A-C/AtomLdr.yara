@@ -10,25 +10,25 @@ rule AtomLdr
     strings:
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string1 = /.{0,1000}\/AtomLdr\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/AtomLdr\.git/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string2 = /.{0,1000}\\AtomLdr\\x64.{0,1000}/ nocase ascii wide
+        $string2 = /\\AtomLdr\\x64/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string3 = /.{0,1000}AtomLdr\.dll.{0,1000}/ nocase ascii wide
+        $string3 = /AtomLdr\.dll/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string4 = /.{0,1000}AtomLdr\.sln.{0,1000}/ nocase ascii wide
+        $string4 = /AtomLdr\.sln/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string5 = /.{0,1000}AtomLdr\.vcxproj.{0,1000}/ nocase ascii wide
+        $string5 = /AtomLdr\.vcxproj/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string6 = /.{0,1000}AtomLdr\-main\.zip.{0,1000}/ nocase ascii wide
+        $string6 = /AtomLdr\-main\.zip/ nocase ascii wide
         // Description: A DLL loader with advanced evasive features
         // Reference: https://github.com/NUL0x4C/AtomLdr
-        $string7 = /.{0,1000}NUL0x4C\/AtomLdr.{0,1000}/ nocase ascii wide
+        $string7 = /NUL0x4C\/AtomLdr/ nocase ascii wide
 
     condition:
         any of them

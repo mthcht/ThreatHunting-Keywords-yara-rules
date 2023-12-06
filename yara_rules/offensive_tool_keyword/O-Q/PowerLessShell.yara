@@ -10,16 +10,16 @@ rule PowerLessShell
     strings:
         // Description: PowerLessShell rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. You can also execute raw shellcode using the same approach.
         // Reference: https://github.com/Mr-Un1k0d3r/PowerLessShell
-        $string1 = /.{0,1000}malicious\.csproj.{0,1000}/ nocase ascii wide
+        $string1 = /malicious\.csproj/ nocase ascii wide
         // Description: PowerLessShell rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. You can also execute raw shellcode using the same approach.
         // Reference: https://github.com/Mr-Un1k0d3r/PowerLessShell
-        $string2 = /.{0,1000}PowerLessShell.{0,1000}/ nocase ascii wide
+        $string2 = /PowerLessShell/ nocase ascii wide
         // Description: PowerLessShell rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. You can also execute raw shellcode using the same approach.
         // Reference: https://github.com/Mr-Un1k0d3r/PowerLessShell
-        $string3 = /.{0,1000}PowerLessShell\.py.{0,1000}/ nocase ascii wide
+        $string3 = /PowerLessShell\.py/ nocase ascii wide
         // Description: PowerLessShell rely on MSBuild.exe to remotely execute PowerShell scripts and commands without spawning powershell.exe. You can also execute raw shellcode using the same approach.
         // Reference: https://github.com/Mr-Un1k0d3r/PowerLessShell
-        $string4 = /.{0,1000}shellcode_inject\.csproj.{0,1000}/ nocase ascii wide
+        $string4 = /shellcode_inject\.csproj/ nocase ascii wide
 
     condition:
         any of them

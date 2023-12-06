@@ -10,16 +10,16 @@ rule hypobrychium
     strings:
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
-        $string1 = /.{0,1000}\/hypobrychium\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/hypobrychium\.git/ nocase ascii wide
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
-        $string2 = /.{0,1000}foxlox\/hypobrychium.{0,1000}/ nocase ascii wide
+        $string2 = /foxlox\/hypobrychium/ nocase ascii wide
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
-        $string3 = /.{0,1000}hypobrychium\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /hypobrychium\.exe/ nocase ascii wide
         // Description: hypobrychium AV/EDR Bypass
         // Reference: https://github.com/foxlox/hypobrychium
-        $string4 = /.{0,1000}hypobrychium\-main.{0,1000}/ nocase ascii wide
+        $string4 = /hypobrychium\-main/ nocase ascii wide
 
     condition:
         any of them

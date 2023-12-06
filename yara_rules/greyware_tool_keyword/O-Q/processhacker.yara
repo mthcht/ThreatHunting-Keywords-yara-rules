@@ -10,28 +10,28 @@ rule processhacker
     strings:
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string1 = /.{0,1000}\/processhacker\-.{0,1000}\-bin\.zip.{0,1000}/ nocase ascii wide
+        $string1 = /\/processhacker\-.{0,1000}\-bin\.zip/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string2 = /.{0,1000}\/processhacker\/files\/latest\/download.{0,1000}/ nocase ascii wide
+        $string2 = /\/processhacker\/files\/latest\/download/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string3 = /.{0,1000}\\Process\sHacker\s2\\.{0,1000}/ nocase ascii wide
+        $string3 = /\\Process\sHacker\s2\\/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string4 = /.{0,1000}processhacker\-.{0,1000}\-sdk\.zip.{0,1000}/ nocase ascii wide
+        $string4 = /processhacker\-.{0,1000}\-sdk\.zip/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string5 = /.{0,1000}processhacker\-.{0,1000}\-setup\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /processhacker\-.{0,1000}\-setup\.exe/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string6 = /.{0,1000}processhacker\-.{0,1000}\-src\.zip.{0,1000}/ nocase ascii wide
+        $string6 = /processhacker\-.{0,1000}\-src\.zip/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string7 = /.{0,1000}ProcessHacker\.exe.{0,1000}/ nocase ascii wide
+        $string7 = /ProcessHacker\.exe/ nocase ascii wide
         // Description: Interactions with a objects present in windows such as threads stack - handles - gpu - services ? can be used by attackers to dump process - create services  and process injection
         // Reference: https://processhacker.sourceforge.io/
-        $string8 = /.{0,1000}ProcessHacker\.sln.{0,1000}/ nocase ascii wide
+        $string8 = /ProcessHacker\.sln/ nocase ascii wide
 
     condition:
         any of them

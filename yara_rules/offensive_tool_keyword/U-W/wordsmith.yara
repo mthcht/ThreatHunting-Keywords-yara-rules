@@ -10,7 +10,7 @@ rule wordsmith
     strings:
         // Description: The aim of Wordsmith is to assist with creating tailored wordlists and usernames that are primarilly based on geolocation.
         // Reference: https://github.com/skahwah/wordsmith
-        $string1 = /.{0,1000}skahwah.{0,1000}wordsmith.{0,1000}/ nocase ascii wide
+        $string1 = /skahwah.{0,1000}wordsmith/ nocase ascii wide
 
     condition:
         any of them

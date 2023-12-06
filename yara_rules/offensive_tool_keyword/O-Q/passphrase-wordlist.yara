@@ -10,7 +10,7 @@ rule passphrase_wordlist
     strings:
         // Description: This project includes a massive wordlist of phrases (over 20 million) and two hashcat rule files for GPU-based cracking. The rules will create over 1.000 permutations of each phase.
         // Reference: https://github.com/initstring/passphrase-wordlist
-        $string1 = /.{0,1000}passphrase\-wordlist.{0,1000}/ nocase ascii wide
+        $string1 = /passphrase\-wordlist/ nocase ascii wide
 
     condition:
         any of them

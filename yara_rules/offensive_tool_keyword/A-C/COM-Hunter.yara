@@ -10,49 +10,49 @@ rule COM_Hunter
     strings:
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string1 = /.{0,1000}\sPersist\sGeneral\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
+        $string1 = /\sPersist\sGeneral\s.{0,1000}\.dll/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string2 = /.{0,1000}\sPersist\sTasksch\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
+        $string2 = /\sPersist\sTasksch\s.{0,1000}\.dll/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string3 = /.{0,1000}\sPersist\sTreatAs\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
+        $string3 = /\sPersist\sTreatAs\s.{0,1000}\.dll/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string4 = /.{0,1000}\.exe\sSearch\sFind\-Persist.{0,1000}/ nocase ascii wide
+        $string4 = /\.exe\sSearch\sFind\-Persist/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string5 = /.{0,1000}\/COM\-Hunter\.csproj.{0,1000}/ nocase ascii wide
+        $string5 = /\/COM\-Hunter\.csproj/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string6 = /.{0,1000}\/COM\-Hunter\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /\/COM\-Hunter\.exe/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string7 = /.{0,1000}\/COM\-Hunter\.git.{0,1000}/ nocase ascii wide
+        $string7 = /\/COM\-Hunter\.git/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string8 = /.{0,1000}\/COM\-Hunter\.sln.{0,1000}/ nocase ascii wide
+        $string8 = /\/COM\-Hunter\.sln/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string9 = /.{0,1000}\\COM\-Hunter\.csproj.{0,1000}/ nocase ascii wide
+        $string9 = /\\COM\-Hunter\.csproj/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string10 = /.{0,1000}\\COM\-Hunter\.exe.{0,1000}/ nocase ascii wide
+        $string10 = /\\COM\-Hunter\.exe/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string11 = /.{0,1000}\\COM\-Hunter\.sln.{0,1000}/ nocase ascii wide
+        $string11 = /\\COM\-Hunter\.sln/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string12 = /.{0,1000}09323E4D\-BE0F\-452A\-9CA8\-B07D2CFA9804.{0,1000}/ nocase ascii wide
+        $string12 = /09323E4D\-BE0F\-452A\-9CA8\-B07D2CFA9804/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string13 = /.{0,1000}COM\-Hunter_v.{0,1000}\.zip.{0,1000}/ nocase ascii wide
+        $string13 = /COM\-Hunter_v.{0,1000}\.zip/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string14 = /.{0,1000}COM\-Hunter\-main.{0,1000}/ nocase ascii wide
+        $string14 = /COM\-Hunter\-main/ nocase ascii wide
         // Description: COM-hunter is a COM Hijacking persistnce tool written in C#
         // Reference: https://github.com/nickvourd/COM-Hunter
-        $string15 = /.{0,1000}nickvourd\/COM\-Hunter.{0,1000}/ nocase ascii wide
+        $string15 = /nickvourd\/COM\-Hunter/ nocase ascii wide
 
     condition:
         any of them

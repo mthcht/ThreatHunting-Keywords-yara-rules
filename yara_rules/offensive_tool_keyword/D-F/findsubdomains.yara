@@ -10,7 +10,7 @@ rule findsubdomains
     strings:
         // Description: A subdomains discovery tool that collects all possible subdomains from open source internet and validates them through various tools to provide accurate results.
         // Reference: https://findsubdomains.com/
-        $string1 = /.{0,1000}Findsubdomains.{0,1000}/ nocase ascii wide
+        $string1 = /Findsubdomains/ nocase ascii wide
 
     condition:
         any of them

@@ -10,34 +10,34 @@ rule msi_search
     strings:
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string1 = /.{0,1000}\/msi_search\.ps1.{0,1000}/ nocase ascii wide
+        $string1 = /\/msi_search\.ps1/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string2 = /.{0,1000}\/msi\-search\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/msi\-search\.git/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string3 = /.{0,1000}\\msi_search\.c.{0,1000}/ nocase ascii wide
+        $string3 = /\\msi_search\.c/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string4 = /.{0,1000}\\msi_search\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /\\msi_search\.exe/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string5 = /.{0,1000}\\msi_search\.ps1.{0,1000}/ nocase ascii wide
+        $string5 = /\\msi_search\.ps1/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string6 = /.{0,1000}\\msi_search\.x64\.o.{0,1000}/ nocase ascii wide
+        $string6 = /\\msi_search\.x64\.o/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string7 = /.{0,1000}\\msi_search\.x86\.o.{0,1000}/ nocase ascii wide
+        $string7 = /\\msi_search\.x86\.o/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string8 = /.{0,1000}mandiant\/msi\-search.{0,1000}/ nocase ascii wide
+        $string8 = /mandiant\/msi\-search/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string9 = /.{0,1000}msi\-search\-main\.zip.{0,1000}/ nocase ascii wide
+        $string9 = /msi\-search\-main\.zip/ nocase ascii wide
         // Description: This tool simplifies the task for red team operators and security teams to identify which MSI files correspond to which software and enables them to download the relevant file to investigate local privilege escalation vulnerabilities through MSI repairs
         // Reference: https://github.com/mandiant/msi-search
-        $string10 = /.{0,1000}Search\scached\sMSI\sfiles\sin\sC:\/Windows\/Installer\/.{0,1000}/ nocase ascii wide
+        $string10 = /Search\scached\sMSI\sfiles\sin\sC:\/Windows\/Installer\// nocase ascii wide
 
     condition:
         any of them

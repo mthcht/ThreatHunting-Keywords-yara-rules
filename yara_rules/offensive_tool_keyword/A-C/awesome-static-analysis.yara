@@ -10,7 +10,7 @@ rule awesome_static_analysis
     strings:
         // Description: This is a collection of static analysis tools and code quality checkers
         // Reference: https://github.com/codefactor-io/awesome-static-analysis
-        $string1 = /.{0,1000}awesome\-static\-analysis.{0,1000}/ nocase ascii wide
+        $string1 = /awesome\-static\-analysis/ nocase ascii wide
 
     condition:
         any of them

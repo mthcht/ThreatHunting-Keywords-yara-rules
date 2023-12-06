@@ -10,7 +10,7 @@ rule conhost_exe
     strings:
         // Description: conhost in headless mode - no visible window will pop up on the victim machine
         // Reference: https://x.com/TheDFIRReport/status/1721521617908473907?s=20
-        $string1 = /.{0,1000}conhost\.exe\s.{0,1000}\s\-\-headless.{0,1000}/ nocase ascii wide
+        $string1 = /conhost\.exe\s.{0,1000}\s\-\-headless/ nocase ascii wide
 
     condition:
         any of them

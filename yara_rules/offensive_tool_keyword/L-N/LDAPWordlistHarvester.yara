@@ -10,22 +10,22 @@ rule LDAPWordlistHarvester
     strings:
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string1 = /.{0,1000}\/LDAPWordlistHarvester\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/LDAPWordlistHarvester\.git/ nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string2 = /.{0,1000}LDAPWordlistHarvester\.ps1.{0,1000}/ nocase ascii wide
+        $string2 = /LDAPWordlistHarvester\.ps1/ nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string3 = /.{0,1000}LDAPWordlistHarvester\.py.{0,1000}/ nocase ascii wide
+        $string3 = /LDAPWordlistHarvester\.py/ nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string4 = /.{0,1000}LDAPWordlistHarvester\-main.{0,1000}/ nocase ascii wide
+        $string4 = /LDAPWordlistHarvester\-main/ nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string5 = /.{0,1000}p0dalirius\/LDAPWordlistHarvester.{0,1000}/ nocase ascii wide
+        $string5 = /p0dalirius\/LDAPWordlistHarvester/ nocase ascii wide
         // Description: A tool to generate a wordlist from the information present in LDAP in order to crack passwords of domain accounts.
         // Reference: https://github.com/p0dalirius/LDAPWordlistHarvester
-        $string6 = /.{0,1000}Powershell\sLDAPWordlistHarvester.{0,1000}/ nocase ascii wide
+        $string6 = /Powershell\sLDAPWordlistHarvester/ nocase ascii wide
 
     condition:
         any of them

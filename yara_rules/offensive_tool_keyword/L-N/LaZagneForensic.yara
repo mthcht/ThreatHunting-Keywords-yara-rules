@@ -10,7 +10,7 @@ rule LaZagneForensic
     strings:
         // Description: Windows passwords decryption from dump files
         // Reference: https://github.com/AlessandroZ/LaZagneForensic
-        $string1 = /.{0,1000}LaZagneForensic.{0,1000}/ nocase ascii wide
+        $string1 = /LaZagneForensic/ nocase ascii wide
 
     condition:
         any of them

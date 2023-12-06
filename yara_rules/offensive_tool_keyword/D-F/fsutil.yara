@@ -10,7 +10,7 @@ rule fsutil
     strings:
         // Description: Disables antivirus filtering on the developer drive
         // Reference: https://x.com/0gtweet/status/1720532496847167784
-        $string1 = /.{0,1000}fsutil\sdevdrv\senable\s\/disallowAv.{0,1000}/ nocase ascii wide
+        $string1 = /fsutil\sdevdrv\senable\s\/disallowAv/ nocase ascii wide
 
     condition:
         any of them

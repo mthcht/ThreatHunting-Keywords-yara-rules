@@ -10,7 +10,7 @@ rule Winpayloads
     strings:
         // Description: Undetectable Windows Payload Generation with extras Running on Python2.7
         // Reference: https://github.com/nccgroup/Winpayloads
-        $string1 = /.{0,1000}Winpayloads.{0,1000}/ nocase ascii wide
+        $string1 = /Winpayloads/ nocase ascii wide
 
     condition:
         any of them

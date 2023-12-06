@@ -10,7 +10,7 @@ rule ShellPop
     strings:
         // Description: Shellpop is all about popping shells. With this tool you can generate easy and sophisticated reverse or bind shell commands to help you during penetration tests.
         // Reference: https://github.com/0x00-0x00/ShellPop
-        $string1 = /.{0,1000}\/ShellPop.{0,1000}/ nocase ascii wide
+        $string1 = /\/ShellPop/ nocase ascii wide
 
     condition:
         any of them

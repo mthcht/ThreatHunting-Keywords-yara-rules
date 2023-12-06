@@ -10,7 +10,7 @@ rule samdump
     strings:
         // Description: Dumping sam
         // Reference: https://github.com/nyxgeek/classic_hacking_tools
-        $string1 = /.{0,1000}samdump\.zip.{0,1000}/ nocase ascii wide
+        $string1 = /samdump\.zip/ nocase ascii wide
 
     condition:
         any of them

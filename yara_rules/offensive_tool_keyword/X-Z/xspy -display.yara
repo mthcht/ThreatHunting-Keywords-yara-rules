@@ -10,7 +10,7 @@ rule xspy__display
     strings:
         // Description: Keylogger Monitors keystrokes even the keyboard is grabbed.
         // Reference: https://github.com/mnp/xspy/blob/master/xspy.c
-        $string1 = /.{0,1000}xspy\s\-display.{0,1000}/ nocase ascii wide
+        $string1 = /xspy\s\-display/ nocase ascii wide
 
     condition:
         any of them

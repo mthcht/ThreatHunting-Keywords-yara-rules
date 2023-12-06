@@ -10,16 +10,16 @@ rule DNSExfiltrator
     strings:
         // Description: DNSExfiltrator allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel.
         // Reference: https://github.com/Arno0x/DNSExfiltrator
-        $string1 = /.{0,1000}\/DNSExfiltrator.{0,1000}/ nocase ascii wide
+        $string1 = /\/DNSExfiltrator/ nocase ascii wide
         // Description: DNSExfiltrator allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel.
         // Reference: https://github.com/Arno0x/DNSExfiltrator
-        $string2 = /.{0,1000}dnsexfiltrator\..{0,1000}/ nocase ascii wide
+        $string2 = /dnsexfiltrator\./ nocase ascii wide
         // Description: DNSExfiltrator allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel.
         // Reference: https://github.com/Arno0x/DNSExfiltrator
-        $string3 = /.{0,1000}DNSExfiltratorLib.{0,1000}/ nocase ascii wide
+        $string3 = /DNSExfiltratorLib/ nocase ascii wide
         // Description: DNSExfiltrator allows for transfering (exfiltrate) a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel.
         // Reference: https://github.com/Arno0x/DNSExfiltrator
-        $string4 = /.{0,1000}Invoke\-DNSExfiltrator.{0,1000}/ nocase ascii wide
+        $string4 = /Invoke\-DNSExfiltrator/ nocase ascii wide
 
     condition:
         any of them

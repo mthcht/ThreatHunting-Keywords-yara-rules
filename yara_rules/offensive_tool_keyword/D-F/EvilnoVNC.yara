@@ -10,61 +10,61 @@ rule EvilnoVNC
     strings:
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string1 = /.{0,1000}\sEvilnoVNC.{0,1000}/ nocase ascii wide
+        $string1 = /\sEvilnoVNC/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string2 = /.{0,1000}\/bin\/bash\s\-c\s\"php\s\-q\s\-S\s0\.0\.0\.0:80\s\&\"\s\>\s\/dev\/null\s2\>\&1.{0,1000}/ nocase ascii wide
+        $string2 = /\/bin\/bash\s\-c\s\"php\s\-q\s\-S\s0\.0\.0\.0:80\s\&\"\s\>\s\/dev\/null\s2\>\&1/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string3 = /.{0,1000}\/EvilnoVNC\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/EvilnoVNC\.git/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string4 = /.{0,1000}\/EvilnoVNC\.git.{0,1000}/ nocase ascii wide
+        $string4 = /\/EvilnoVNC\.git/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string5 = /.{0,1000}\/start\.sh\sdynamic\s.{0,1000}/ nocase ascii wide
+        $string5 = /\/start\.sh\sdynamic\s/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string6 = /.{0,1000}\/tmp\/resolution\.txt.{0,1000}server\.sh.{0,1000}/ nocase ascii wide
+        $string6 = /\/tmp\/resolution\.txt.{0,1000}server\.sh/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string7 = /.{0,1000}\\EvilnoVNC.{0,1000}/ nocase ascii wide
+        $string7 = /\\EvilnoVNC/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string8 = /.{0,1000}\\EvilnoVNC\\.{0,1000}/ nocase ascii wide
+        $string8 = /\\EvilnoVNC\\/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string9 = /.{0,1000}\\Keylogger\.txt.{0,1000}/ nocase ascii wide
+        $string9 = /\\Keylogger\.txt/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string10 = /.{0,1000}EvilnoVNC\sby\s\@JoelGMSec.{0,1000}/ nocase ascii wide
+        $string10 = /EvilnoVNC\sby\s\@JoelGMSec/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string11 = /.{0,1000}EvilnoVNC\sServer.{0,1000}/ nocase ascii wide
+        $string11 = /EvilnoVNC\sServer/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string12 = /.{0,1000}EvilnoVNC\-main.{0,1000}/ nocase ascii wide
+        $string12 = /EvilnoVNC\-main/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string13 = /.{0,1000}EvilnoVNC\-main.{0,1000}/ nocase ascii wide
+        $string13 = /EvilnoVNC\-main/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string14 = /.{0,1000}Import\sstealed\ssession\sto\sChromium\.\..{0,1000}/ nocase ascii wide
+        $string14 = /Import\sstealed\ssession\sto\sChromium\.\./ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string15 = /.{0,1000}JoelGMSec\/EvilnoVNC.{0,1000}/ nocase ascii wide
+        $string15 = /JoelGMSec\/EvilnoVNC/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string16 = /.{0,1000}JoelGMSec\/EvilnoVNC.{0,1000}/ nocase ascii wide
+        $string16 = /JoelGMSec\/EvilnoVNC/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string17 = /.{0,1000}keylogger\.py.{0,1000}/ nocase ascii wide
+        $string17 = /keylogger\.py/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string18 = /.{0,1000}kiosk\.sh.{0,1000}startVNC\.sh.{0,1000}/ nocase ascii wide
+        $string18 = /kiosk\.sh.{0,1000}startVNC\.sh/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string19 = /.{0,1000}nandydark\/Linux\-keylogger.{0,1000}/ nocase ascii wide
+        $string19 = /nandydark\/Linux\-keylogger/ nocase ascii wide
 
     condition:
         any of them

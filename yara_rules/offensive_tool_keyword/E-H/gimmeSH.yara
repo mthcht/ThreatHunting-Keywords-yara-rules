@@ -10,13 +10,13 @@ rule gimmeSH
     strings:
         // Description: gimmeSH. is a tool that generates a custom cheatsheet for Reverse Shell. File Transfer and Msfvenom within your terminal. you just need to provide the platform. your Internet protocol address and your port number.
         // Reference: https://github.com/A3h1nt/gimmeSH
-        $string1 = /.{0,1000}\.\/gimmeSH.{0,1000}/ nocase ascii wide
+        $string1 = /\.\/gimmeSH/ nocase ascii wide
         // Description: gimmeSH. is a tool that generates a custom cheatsheet for Reverse Shell. File Transfer and Msfvenom within your terminal. you just need to provide the platform. your Internet protocol address and your port number.
         // Reference: https://github.com/A3h1nt/gimmeSH
-        $string2 = /.{0,1000}\/gimmeSH\.sh.{0,1000}/ nocase ascii wide
+        $string2 = /\/gimmeSH\.sh/ nocase ascii wide
         // Description: gimmeSH. is a tool that generates a custom cheatsheet for Reverse Shell. File Transfer and Msfvenom within your terminal. you just need to provide the platform. your Internet protocol address and your port number.
         // Reference: https://github.com/A3h1nt/gimmeSH
-        $string3 = /.{0,1000}A3h1nt\/gimmeSH.{0,1000}/ nocase ascii wide
+        $string3 = /A3h1nt\/gimmeSH/ nocase ascii wide
 
     condition:
         any of them

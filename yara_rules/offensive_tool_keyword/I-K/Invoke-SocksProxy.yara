@@ -10,22 +10,22 @@ rule Invoke_SocksProxy
     strings:
         // Description: Socks proxy -  and reverse socks server using powershell.
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string1 = /.{0,1000}Invoke\-ReverseSocksProxy.{0,1000}/ nocase ascii wide
+        $string1 = /Invoke\-ReverseSocksProxy/ nocase ascii wide
         // Description: Socks proxy -  and reverse socks server using powershell.
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string2 = /.{0,1000}Invoke\-SocksProxy\s.{0,1000}/ nocase ascii wide
+        $string2 = /Invoke\-SocksProxy\s/ nocase ascii wide
         // Description: Creates a local or reverse Socks proxy using powershell
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string3 = /.{0,1000}Invoke\-SocksProxy.{0,1000}/ nocase ascii wide
+        $string3 = /Invoke\-SocksProxy/ nocase ascii wide
         // Description: Socks proxy -  and reverse socks server using powershell.
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string4 = /.{0,1000}Invoke\-SocksProxy\..{0,1000}/ nocase ascii wide
+        $string4 = /Invoke\-SocksProxy\./ nocase ascii wide
         // Description: Socks proxy -  and reverse socks server using powershell.
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string5 = /.{0,1000}ReverseSocksProxyHandler\..{0,1000}/ nocase ascii wide
+        $string5 = /ReverseSocksProxyHandler\./ nocase ascii wide
         // Description: Socks proxy -  and reverse socks server using powershell.
         // Reference: https://github.com/p3nt4/Invoke-SocksProxy
-        $string6 = /.{0,1000}ReverseSocksProxyHandler\.py.{0,1000}/ nocase ascii wide
+        $string6 = /ReverseSocksProxyHandler\.py/ nocase ascii wide
 
     condition:
         any of them

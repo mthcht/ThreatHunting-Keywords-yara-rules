@@ -10,7 +10,7 @@ rule Cain_and_Abel
     strings:
         // Description: Cain & Able exploitation tool file 
         // Reference: https://github.com/undergroundwires/CEH-in-bullet-points/blob/master/chapters/08-sniffing/sniffing-tools.md
-        $string1 = /.{0,1000}\/cain\.html.{0,1000}/ nocase ascii wide
+        $string1 = /\/cain\.html/ nocase ascii wide
 
     condition:
         any of them

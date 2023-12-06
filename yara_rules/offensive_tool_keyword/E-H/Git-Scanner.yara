@@ -10,7 +10,7 @@ rule Git_Scanner
     strings:
         // Description: A tool for bug hunting or pentesting for targeting websites that have open .git repositories available in public
         // Reference: https://github.com/HightechSec/git-scanner
-        $string1 = /.{0,1000}Git\-Scanner.{0,1000}/ nocase ascii wide
+        $string1 = /Git\-Scanner/ nocase ascii wide
 
     condition:
         any of them

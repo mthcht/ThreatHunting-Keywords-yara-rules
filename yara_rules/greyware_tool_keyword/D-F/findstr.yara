@@ -10,13 +10,13 @@ rule findstr
     strings:
         // Description: linux commands abused by attackers - gpp finder
         // Reference: N/A
-        $string1 = /.{0,1000}findstr\s.{0,1000}cpassword\s.{0,1000}\\sysvol\\.{0,1000}\.xml.{0,1000}/ nocase ascii wide
+        $string1 = /findstr\s.{0,1000}cpassword\s.{0,1000}\\sysvol\\.{0,1000}\.xml/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2 = /.{0,1000}findstr\s.{0,1000}vnc\.ini.{0,1000}/ nocase ascii wide
+        $string2 = /findstr\s.{0,1000}vnc\.ini/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string3 = /.{0,1000}findstr\s\/si\ssecret\s.{0,1000}\.docx.{0,1000}/ nocase ascii wide
+        $string3 = /findstr\s\/si\ssecret\s.{0,1000}\.docx/ nocase ascii wide
 
     condition:
         any of them

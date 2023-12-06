@@ -10,25 +10,25 @@ rule SMShell
     strings:
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string1 = /.{0,1000}\/SMShell\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/SMShell\.git/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string2 = /.{0,1000}\/SMShell\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/SMShell\// nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string3 = /.{0,1000}\-\-mifi\-username\s.{0,1000}\s\-\-mifi\-password\s.{0,1000}\s\-\-number\s\+.{0,1000}/ nocase ascii wide
+        $string3 = /\-\-mifi\-username\s.{0,1000}\s\-\-mifi\-password\s.{0,1000}\s\-\-number\s\+/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string4 = /.{0,1000}persistent\-security\/SMShell.{0,1000}/ nocase ascii wide
+        $string4 = /persistent\-security\/SMShell/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string5 = /.{0,1000}server\-console\.exe\s\+.{0,1000}/ nocase ascii wide
+        $string5 = /server\-console\.exe\s\+/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string6 = /.{0,1000}server\-console\.py\s\-\-mifi\-ip\s.{0,1000}/ nocase ascii wide
+        $string6 = /server\-console\.py\s\-\-mifi\-ip\s/ nocase ascii wide
         // Description: PoC for a SMS-based shell. Send commands and receive responses over SMS from mobile broadband capable computers
         // Reference: https://github.com/persistent-security/SMShell
-        $string7 = /.{0,1000}SMShell\.sln.{0,1000}/ nocase ascii wide
+        $string7 = /SMShell\.sln/ nocase ascii wide
 
     condition:
         any of them

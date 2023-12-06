@@ -10,7 +10,7 @@ rule dos_over_tor
     strings:
         // Description: Proof of concept denial of service over TOR stress test tool. Is multi-threaded and supports multiple attack vectors.
         // Reference: https://github.com/skizap/dos-over-tor
-        $string1 = /.{0,1000}dos\-over\-tor.{0,1000}/ nocase ascii wide
+        $string1 = /dos\-over\-tor/ nocase ascii wide
 
     condition:
         any of them

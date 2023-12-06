@@ -10,25 +10,25 @@ rule onesixtyone
     strings:
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string1 = /.{0,1000}\s\-i\ssnmp\-ips\.txt\s\-c\scommunity\.txt.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-i\ssnmp\-ips\.txt\s\-c\scommunity\.txt/ nocase ascii wide
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string2 = /.{0,1000}\sonesixtyone\.c.{0,1000}/ nocase ascii wide
+        $string2 = /\sonesixtyone\.c/ nocase ascii wide
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string3 = /.{0,1000}\/onesixtyone\/dict\.txt.{0,1000}/ nocase ascii wide
+        $string3 = /\/onesixtyone\/dict\.txt/ nocase ascii wide
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string4 = /.{0,1000}onesixtyone\s\-i\s.{0,1000}\s\-c.{0,1000}/ nocase ascii wide
+        $string4 = /onesixtyone\s\-i\s.{0,1000}\s\-c/ nocase ascii wide
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string5 = /.{0,1000}onesixtyone\.1.{0,1000}/ nocase ascii wide
+        $string5 = /onesixtyone\.1/ nocase ascii wide
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string6 = /.{0,1000}onesixtyone\.git.{0,1000}/ nocase ascii wide
+        $string6 = /onesixtyone\.git/ nocase ascii wide
         // Description: Fast SNMP scanner. onesixtyone takes a different approach to SNMP scanning. It takes advantage of the fact that SNMP is a connectionless protocol and sends all SNMP requests as fast as it can. Then the scanner waits for responses to come back and logs them in a fashion similar to Nmap ping sweeps
         // Reference: https://github.com/trailofbits/onesixtyone
-        $string7 = /.{0,1000}trailofbits\/onesixtyone.{0,1000}/ nocase ascii wide
+        $string7 = /trailofbits\/onesixtyone/ nocase ascii wide
 
     condition:
         any of them

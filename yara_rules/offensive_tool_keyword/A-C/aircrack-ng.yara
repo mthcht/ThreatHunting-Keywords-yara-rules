@@ -10,7 +10,7 @@ rule aircrack_ng
     strings:
         // Description: WiFi security auditing tools suite.
         // Reference: https://github.com/aircrack-ng/aircrack-ng
-        $string1 = /.{0,1000}Aircrack\-ng.{0,1000}/ nocase ascii wide
+        $string1 = /Aircrack\-ng/ nocase ascii wide
 
     condition:
         any of them

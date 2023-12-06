@@ -10,7 +10,7 @@ rule ss
     strings:
         // Description: replace netstat command - service listening
         // Reference: N/A
-        $string1 = /ss\s\-lntp.{0,1000}/ nocase ascii wide
+        $string1 = /ss\s\-lntp/ nocase ascii wide
 
     condition:
         any of them

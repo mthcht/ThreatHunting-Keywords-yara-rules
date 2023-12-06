@@ -10,22 +10,22 @@ rule SamDumpCable
     strings:
         // Description: Dump users sam and system hive and exfiltrate them
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SamDumpCable
-        $string1 = /.{0,1000}1337OMGsam.{0,1000}/ nocase ascii wide
+        $string1 = /1337OMGsam/ nocase ascii wide
         // Description: Dump users sam and system hive and exfiltrate them
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SamDumpCable
-        $string2 = /.{0,1000}1337OMGsys.{0,1000}/ nocase ascii wide
+        $string2 = /1337OMGsys/ nocase ascii wide
         // Description: Dump users sam and system hive and exfiltrate them
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SamDumpCable
-        $string3 = /.{0,1000}cgBlAGcAIABzAGEAdgBlACAAaABrAGwAbQBcAHMAYQBtACAAMQ.{0,1000}/ nocase ascii wide
+        $string3 = /cgBlAGcAIABzAGEAdgBlACAAaABrAGwAbQBcAHMAYQBtACAAMQ/ nocase ascii wide
         // Description: Dump users sam and system hive and exfiltrate them
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SamDumpCable
-        $string4 = /.{0,1000}OMGdump\.zip.{0,1000}/ nocase ascii wide
+        $string4 = /OMGdump\.zip/ nocase ascii wide
         // Description: Dump users sam and system hive and exfiltrate them
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SamDumpCable
-        $string5 = /.{0,1000}reg\ssave\shklm\\sam\s1337.{0,1000}/ nocase ascii wide
+        $string5 = /reg\ssave\shklm\\sam\s1337/ nocase ascii wide
         // Description: Dump users sam and system hive and exfiltrate them
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/SamDumpCable
-        $string6 = /.{0,1000}reg\ssave\shklm\\system\s1337.{0,1000}/ nocase ascii wide
+        $string6 = /reg\ssave\shklm\\system\s1337/ nocase ascii wide
 
     condition:
         any of them

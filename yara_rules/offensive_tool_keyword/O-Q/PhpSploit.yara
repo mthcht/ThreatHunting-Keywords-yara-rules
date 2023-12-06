@@ -10,7 +10,7 @@ rule PhpSploit
     strings:
         // Description: Full-featured C2 framework which silently persists on webserver via evil PHP oneliner
         // Reference: https://github.com/nil0x42/phpsploit
-        $string1 = /.{0,1000}PhpSploit.{0,1000}/ nocase ascii wide
+        $string1 = /PhpSploit/ nocase ascii wide
 
     condition:
         any of them

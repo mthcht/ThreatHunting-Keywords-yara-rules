@@ -10,295 +10,295 @@ rule bruteratel
     strings:
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string1 = /.{0,1000}\sgetprivs\.c\s.{0,1000}/ nocase ascii wide
+        $string1 = /\sgetprivs\.c\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string2 = /.{0,1000}\sgetprivs\.o\s.{0,1000}/ nocase ascii wide
+        $string2 = /\sgetprivs\.o\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string3 = /.{0,1000}\s\-ratel\s.{0,1000}/ nocase ascii wide
+        $string3 = /\s\-ratel\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string4 = /.{0,1000}\.BruteRatel.{0,1000}/ nocase ascii wide
+        $string4 = /\.BruteRatel/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string5 = /.{0,1000}\/BRC4_rar/ nocase ascii wide
+        $string5 = /\/BRC4_rar/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string6 = /.{0,1000}\/bruteratel.{0,1000}/ nocase ascii wide
+        $string6 = /\/bruteratel/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string7 = /.{0,1000}\/Process\-Instrumentation\-Syscall\-Hook.{0,1000}/ nocase ascii wide
+        $string7 = /\/Process\-Instrumentation\-Syscall\-Hook/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string8 = /.{0,1000}\/vainject\.c.{0,1000}/ nocase ascii wide
+        $string8 = /\/vainject\.c/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string9 = /.{0,1000}\\brc\.zip.{0,1000}/ nocase ascii wide
+        $string9 = /\\brc\.zip/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string10 = /.{0,1000}\\pipe\\brutepipe.{0,1000}/ nocase ascii wide
+        $string10 = /\\pipe\\brutepipe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string11 = /.{0,1000}1a279f5df4103743b823ec2a6a08436fdf63fe30.{0,1000}/ nocase ascii wide
+        $string11 = /1a279f5df4103743b823ec2a6a08436fdf63fe30/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string12 = /.{0,1000}3fd21b20d00000021c43d21b21b43de0a012c76cf078b8d06f4620c2286f5e.{0,1000}/ nocase ascii wide
+        $string12 = /3fd21b20d00000021c43d21b21b43de0a012c76cf078b8d06f4620c2286f5e/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string13 = /.{0,1000}addpriv\sSeloadDrivePrivilege.{0,1000}/ nocase ascii wide
+        $string13 = /addpriv\sSeloadDrivePrivilege/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string14 = /.{0,1000}addresshunter\.h.{0,1000}/ nocase ascii wide
+        $string14 = /addresshunter\.h/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string15 = /.{0,1000}badger_exports\.h.{0,1000}/ nocase ascii wide
+        $string15 = /badger_exports\.h/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string16 = /.{0,1000}badger_svc\.exe.{0,1000}/ nocase ascii wide
+        $string16 = /badger_svc\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string17 = /.{0,1000}badger_template\.ps1.{0,1000}/ nocase ascii wide
+        $string17 = /badger_template\.ps1/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string18 = /.{0,1000}badger_x64\.exe.{0,1000}/ nocase ascii wide
+        $string18 = /badger_x64\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string19 = /.{0,1000}badger_x64_.{0,1000}\.bin.{0,1000}/ nocase ascii wide
+        $string19 = /badger_x64_.{0,1000}\.bin/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string20 = /.{0,1000}badger_x64_aws\.exe.{0,1000}/ nocase ascii wide
+        $string20 = /badger_x64_aws\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string21 = /.{0,1000}BadgerAtoi.{0,1000}/ nocase ascii wide
+        $string21 = /BadgerAtoi/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string22 = /.{0,1000}BadgerDispatch.{0,1000}/ nocase ascii wide
+        $string22 = /BadgerDispatch/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string23 = /.{0,1000}BadgerDispatchW.{0,1000}/ nocase ascii wide
+        $string23 = /BadgerDispatchW/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string24 = /.{0,1000}BadgerMemcpy.{0,1000}/ nocase ascii wide
+        $string24 = /BadgerMemcpy/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string25 = /.{0,1000}BadgerMemset.{0,1000}/ nocase ascii wide
+        $string25 = /BadgerMemset/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string26 = /.{0,1000}BadgerStrcmp.{0,1000}/ nocase ascii wide
+        $string26 = /BadgerStrcmp/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string27 = /.{0,1000}BadgerStrlen.{0,1000}/ nocase ascii wide
+        $string27 = /BadgerStrlen/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string28 = /.{0,1000}BadgerWcscmp.{0,1000}/ nocase ascii wide
+        $string28 = /BadgerWcscmp/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string29 = /.{0,1000}BadgerWcslen.{0,1000}/ nocase ascii wide
+        $string29 = /BadgerWcslen/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string30 = /.{0,1000}bc3023b36063a7681db24681472b54fa11f0d4ec.{0,1000}/ nocase ascii wide
+        $string30 = /bc3023b36063a7681db24681472b54fa11f0d4ec/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string31 = /.{0,1000}bhttp_x64\.dll.{0,1000}/ nocase ascii wide
+        $string31 = /bhttp_x64\.dll/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string32 = /.{0,1000}Brc4ConfigExtractor\.exe.{0,1000}/ nocase ascii wide
+        $string32 = /Brc4ConfigExtractor\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string33 = /.{0,1000}Brc4DecodeString.{0,1000}/ nocase ascii wide
+        $string33 = /Brc4DecodeString/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string34 = /.{0,1000}bruteloader.{0,1000}/ nocase ascii wide
+        $string34 = /bruteloader/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string35 = /.{0,1000}brute\-ratel\-.{0,1000}/ nocase ascii wide
+        $string35 = /brute\-ratel\-/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string36 = /.{0,1000}BruteRatel.{0,1000}\.tar\.gz.{0,1000}/ nocase ascii wide
+        $string36 = /BruteRatel.{0,1000}\.tar\.gz/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string37 = /.{0,1000}BruteRatel.{0,1000}\.zip.{0,1000}/ nocase ascii wide
+        $string37 = /BruteRatel.{0,1000}\.zip/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string38 = /.{0,1000}bruteratel\.com\/.{0,1000}/ nocase ascii wide
+        $string38 = /bruteratel\.com\// nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string39 = /.{0,1000}bruteratel\/.{0,1000}/ nocase ascii wide
+        $string39 = /bruteratel\// nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string40 = /.{0,1000}Brute\-Ratel\-C4.{0,1000}/ nocase ascii wide
+        $string40 = /Brute\-Ratel\-C4/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string41 = /.{0,1000}coffexec\s.{0,1000}\.o\s.{0,1000}/ nocase ascii wide
+        $string41 = /coffexec\s.{0,1000}\.o\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string42 = /.{0,1000}contact_harvester.{0,1000}/ nocase ascii wide
+        $string42 = /contact_harvester/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string43 = /.{0,1000}crisis_monitor\sstart.{0,1000}/ nocase ascii wide
+        $string43 = /crisis_monitor\sstart/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string44 = /.{0,1000}crisis_monitor\sstop.{0,1000}/ nocase ascii wide
+        $string44 = /crisis_monitor\sstop/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string45 = /.{0,1000}cryptvortex\s.{0,1000}/ nocase ascii wide
+        $string45 = /cryptvortex\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string46 = /.{0,1000}dcsync_inject.{0,1000}/ nocase ascii wide
+        $string46 = /dcsync_inject/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string47 = /.{0,1000}detect\sntdll\.dll.{0,1000}/ nocase ascii wide
+        $string47 = /detect\sntdll\.dll/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string48 = /.{0,1000}etwti\-hook\..{0,1000}/ nocase ascii wide
+        $string48 = /etwti\-hook\./ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string49 = /.{0,1000}getprivs\.bin.{0,1000}/ nocase ascii wide
+        $string49 = /getprivs\.bin/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string50 = /.{0,1000}getprivs\.exe.{0,1000}/ nocase ascii wide
+        $string50 = /getprivs\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string51 = /.{0,1000}imp_Badger.{0,1000}/ nocase ascii wide
+        $string51 = /imp_Badger/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string52 = /.{0,1000}krb5decoder.{0,1000}/ nocase ascii wide
+        $string52 = /krb5decoder/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string53 = /.{0,1000}ldapsentinel\s.{0,1000}\sraw\s.{0,1000}/ nocase ascii wide
+        $string53 = /ldapsentinel\s.{0,1000}\sraw\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string54 = /.{0,1000}ldapsentinel\sforest\suser.{0,1000}/ nocase ascii wide
+        $string54 = /ldapsentinel\sforest\suser/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string55 = /.{0,1000}list_tcppivot.{0,1000}/ nocase ascii wide
+        $string55 = /list_tcppivot/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string56 = /.{0,1000}loaddll64\.exe.{0,1000}/ nocase ascii wide
+        $string56 = /loaddll64\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string57 = /.{0,1000}LocateBrc4Config.{0,1000}/ nocase ascii wide
+        $string57 = /LocateBrc4Config/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string58 = /.{0,1000}o_getprivs.{0,1000}/ nocase ascii wide
+        $string58 = /o_getprivs/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string59 = /.{0,1000}objexec\s.{0,1000}\.o.{0,1000}/ nocase ascii wide
+        $string59 = /objexec\s.{0,1000}\.o/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string60 = /.{0,1000}phantom_thread\s.{0,1000}\sshc\s.{0,1000}/ nocase ascii wide
+        $string60 = /phantom_thread\s.{0,1000}\sshc\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string61 = /.{0,1000}PIC\-Get\-Privileges.{0,1000}/ nocase ascii wide
+        $string61 = /PIC\-Get\-Privileges/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string62 = /.{0,1000}pivot_smb\s\\.{0,1000}/ nocase ascii wide
+        $string62 = /pivot_smb\s\\/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string63 = /.{0,1000}pivot_winrm\s.{0,1000}/ nocase ascii wide
+        $string63 = /pivot_winrm\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string64 = /.{0,1000}Proxy\-DLL\-Loads.{0,1000}/ nocase ascii wide
+        $string64 = /Proxy\-DLL\-Loads/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string65 = /.{0,1000}proxyDllLoads\.c.{0,1000}/ nocase ascii wide
+        $string65 = /proxyDllLoads\.c/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string66 = /.{0,1000}proxyDllLoads\.exe.{0,1000}/ nocase ascii wide
+        $string66 = /proxyDllLoads\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string67 = /.{0,1000}psreflect\s.{0,1000}/ nocase ascii wide
+        $string67 = /psreflect\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string68 = /.{0,1000}runshellcode\.asm.{0,1000}/ nocase ascii wide
+        $string68 = /runshellcode\.asm/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string69 = /.{0,1000}runshellcode\.exe.{0,1000}/ nocase ascii wide
+        $string69 = /runshellcode\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string70 = /.{0,1000}runshellcode\.o.{0,1000}/ nocase ascii wide
+        $string70 = /runshellcode\.o/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string71 = /.{0,1000}ScanProcessForBadgerConfig.{0,1000}/ nocase ascii wide
+        $string71 = /ScanProcessForBadgerConfig/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string72 = /.{0,1000}scdivert\slocalhost\s.{0,1000}/ nocase ascii wide
+        $string72 = /scdivert\slocalhost\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string73 = /.{0,1000}schtquery\s.{0,1000}\sfull.{0,1000}/ nocase ascii wide
+        $string73 = /schtquery\s.{0,1000}\sfull/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string74 = /.{0,1000}set_child\swerfault\.exe.{0,1000}/ nocase ascii wide
+        $string74 = /set_child\swerfault\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string75 = /.{0,1000}set_objectpipe\s\\\\.{0,1000}/ nocase ascii wide
+        $string75 = /set_objectpipe\s\\\\/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string76 = /.{0,1000}set_wmiconfig\s\\.{0,1000}/ nocase ascii wide
+        $string76 = /set_wmiconfig\s\\/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string77 = /.{0,1000}shadowclock.{0,1000}/ nocase ascii wide
+        $string77 = /shadowclock/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string78 = /.{0,1000}shadowclone\s.{0,1000}/ nocase ascii wide
+        $string78 = /shadowclone\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string79 = /.{0,1000}sharpinline\s.{0,1000}/ nocase ascii wide
+        $string79 = /sharpinline\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string80 = /.{0,1000}Sharpreflect\s.{0,1000}/ nocase ascii wide
+        $string80 = /Sharpreflect\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string81 = /.{0,1000}shinject_ex\s.{0,1000}/ nocase ascii wide
+        $string81 = /shinject_ex\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string82 = /.{0,1000}StrongLoader_x64\.exe.{0,1000}/ nocase ascii wide
+        $string82 = /StrongLoader_x64\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string83 = /.{0,1000}suspended_run\s.{0,1000}/ nocase ascii wide
+        $string83 = /suspended_run\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string84 = /.{0,1000}threads\sall\salertable.{0,1000}/ nocase ascii wide
+        $string84 = /threads\sall\salertable/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string85 = /.{0,1000}wmiexec\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string85 = /wmiexec\s.{0,1000}\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string86 = /.{0,1000}wmispawn\sselect.{0,1000}/ nocase ascii wide
+        $string86 = /wmispawn\sselect/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string87 = /grab_token\s.{0,1000}/ nocase ascii wide
+        $string87 = /grab_token\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string88 = /impersonate\s.{0,1000}\\.{0,1000}/ nocase ascii wide
+        $string88 = /impersonate\s.{0,1000}\\/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string89 = /kerberoast\s.{0,1000}/ nocase ascii wide
+        $string89 = /kerberoast\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string90 = /list_exports\s.{0,1000}\.dll.{0,1000}/ nocase ascii wide
+        $string90 = /list_exports\s.{0,1000}\.dll/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string91 = /make_token\s.{0,1000}/ nocase ascii wide
+        $string91 = /make_token\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string92 = /memdump\s.{0,1000}/ nocase ascii wide
+        $string92 = /memdump\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string93 = /memex\s\/.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string93 = /memex\s\/.{0,1000}\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string94 = /memhunt\s.{0,1000}/ nocase ascii wide
+        $string94 = /memhunt\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string95 = /ps_ex\s.{0,1000}/ nocase ascii wide
+        $string95 = /ps_ex\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string96 = /psgrep\s.{0,1000}/ nocase ascii wide
+        $string96 = /psgrep\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string97 = /samdump\s.{0,1000}/ nocase ascii wide
+        $string97 = /samdump\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
         $string98 = /set_child\s.{0,1000}\.exe/ nocase ascii wide

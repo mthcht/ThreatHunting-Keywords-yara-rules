@@ -10,7 +10,7 @@ rule lsass
     strings:
         // Description: Dump LSASS memory through a process snapshot (-r) avoiding interacting with it directly
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string1 = /.{0,1000}lsass\.dmp.{0,1000}/ nocase ascii wide
+        $string1 = /lsass\.dmp/ nocase ascii wide
 
     condition:
         any of them

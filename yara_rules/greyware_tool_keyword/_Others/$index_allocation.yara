@@ -10,13 +10,13 @@ rule index_allocation
     strings:
         // Description: creation of hidden folders (and file) via ...$.......::$index_allocation
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string1 = /.{0,1000}\.\.\.::\$index_allocation.{0,1000}/ nocase ascii wide
+        $string1 = /\.\.\.::\$index_allocation/ nocase ascii wide
         // Description: creation of hidden folders (and file) via ...$.......::$index_allocation
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string2 = /.{0,1000}cd\s.{0,1000}\.::\$index_allocation.{0,1000}/ nocase ascii wide
+        $string2 = /cd\s.{0,1000}\.::\$index_allocation/ nocase ascii wide
         // Description: creation of hidden folders (and file) via ...$.......::$index_allocation
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string3 = /.{0,1000}md\s.{0,1000}\.::\$index_allocation.{0,1000}/ nocase ascii wide
+        $string3 = /md\s.{0,1000}\.::\$index_allocation/ nocase ascii wide
 
     condition:
         any of them

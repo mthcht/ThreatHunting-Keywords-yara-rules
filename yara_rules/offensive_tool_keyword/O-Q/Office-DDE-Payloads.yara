@@ -10,7 +10,7 @@ rule Office_DDE_Payloads
     strings:
         // Description: Collection of scripts and templates to generate Word and Excel documents embedded with the DDE. macro-less command execution technique described by @_staaldraad and @0x5A1F (blog post link in References section below). Intended for use during sanctioned red team engagements and/or phishing campaigns.
         // Reference: https://github.com/0xdeadbeefJERKY/Office-DDE-Payloads
-        $string1 = /.{0,1000}Office\-DDE\-Payloads.{0,1000}/ nocase ascii wide
+        $string1 = /Office\-DDE\-Payloads/ nocase ascii wide
 
     condition:
         any of them

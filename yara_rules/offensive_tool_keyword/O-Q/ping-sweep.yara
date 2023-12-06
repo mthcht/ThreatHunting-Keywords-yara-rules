@@ -10,7 +10,7 @@ rule ping_sweep
     strings:
         // Description: Wrapper around the ping utility included by the OS. used for recon actiivities
         // Reference: https://github.com/libresec/ping-sweep
-        $string1 = /.{0,1000}ping\-sweep.{0,1000}/ nocase ascii wide
+        $string1 = /ping\-sweep/ nocase ascii wide
 
     condition:
         any of them

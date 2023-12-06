@@ -10,7 +10,7 @@ rule infernal_twin
     strings:
         // Description: This tool is created to aid the penetration testers in assessing wireless security.
         // Reference: https://github.com/entropy1337/infernal-twin
-        $string1 = /.{0,1000}1337.{0,1000}infernal\-twin.{0,1000}/ nocase ascii wide
+        $string1 = /1337.{0,1000}infernal\-twin/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule o365recon
     strings:
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string1 = /.{0,1000}\/o365recon.{0,1000}/ nocase ascii wide
+        $string1 = /\/o365recon/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string2 = /.{0,1000}\\.{0,1000}\.O365\.GroupMembership_AdminGroups\.txt.{0,1000}/ nocase ascii wide
+        $string2 = /\\.{0,1000}\.O365\.GroupMembership_AdminGroups\.txt/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string3 = /.{0,1000}\\.{0,1000}\.O365\.GroupMembership_VPNGroups\.txt.{0,1000}/ nocase ascii wide
+        $string3 = /\\.{0,1000}\.O365\.GroupMembership_VPNGroups\.txt/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string4 = /.{0,1000}\\.{0,1000}\.O365\.Roles_Admins\.txt.{0,1000}/ nocase ascii wide
+        $string4 = /\\.{0,1000}\.O365\.Roles_Admins\.txt/ nocase ascii wide
         // Description: script to retrieve information via O365 with a valid cred
         // Reference: https://github.com/nyxgeek/o365recon
-        $string5 = /.{0,1000}o365recon.{0,1000}/ nocase ascii wide
+        $string5 = /o365recon/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string6 = /.{0,1000}o365recon\.git.{0,1000}/ nocase ascii wide
+        $string6 = /o365recon\.git/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string7 = /.{0,1000}o365recon\.ps1.{0,1000}/ nocase ascii wide
+        $string7 = /o365recon\.ps1/ nocase ascii wide
         // Description: script to retrieve information via O365 and AzureAD with a valid cred 
         // Reference: https://github.com/nyxgeek/o365recon
-        $string8 = /.{0,1000}o365recon\-master.{0,1000}/ nocase ascii wide
+        $string8 = /o365recon\-master/ nocase ascii wide
 
     condition:
         any of them

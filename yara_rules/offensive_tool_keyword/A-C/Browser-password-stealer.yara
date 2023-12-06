@@ -10,70 +10,70 @@ rule Browser_password_stealer
     strings:
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string1 = /.{0,1000}\schromium_based_browsers\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\schromium_based_browsers\.py/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string2 = /.{0,1000}\/chromium_based_browsers\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\/chromium_based_browsers\.py/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string3 = /.{0,1000}\\chromium_based_browsers\.py.{0,1000}/ nocase ascii wide
+        $string3 = /\\chromium_based_browsers\.py/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string4 = /.{0,1000}Browser\-password\-stealer\.git.{0,1000}/ nocase ascii wide
+        $string4 = /Browser\-password\-stealer\.git/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string5 = /.{0,1000}Browser\-password\-stealer\-master.{0,1000}/ nocase ascii wide
+        $string5 = /Browser\-password\-stealer\-master/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string6 = /.{0,1000}google\-chrome\/cookies\.txt.{0,1000}/ nocase ascii wide
+        $string6 = /google\-chrome\/cookies\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string7 = /.{0,1000}google\-chrome\/credit_cards\.txt.{0,1000}/ nocase ascii wide
+        $string7 = /google\-chrome\/credit_cards\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string8 = /.{0,1000}google\-chrome\/history\.txt.{0,1000}/ nocase ascii wide
+        $string8 = /google\-chrome\/history\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string9 = /.{0,1000}google\-chrome\/login_data\.txt.{0,1000}/ nocase ascii wide
+        $string9 = /google\-chrome\/login_data\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string10 = /.{0,1000}google\-chrome\\cookies\.txt.{0,1000}/ nocase ascii wide
+        $string10 = /google\-chrome\\cookies\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string11 = /.{0,1000}google\-chrome\\credit_cards\.txt.{0,1000}/ nocase ascii wide
+        $string11 = /google\-chrome\\credit_cards\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string12 = /.{0,1000}google\-chrome\\history\.txt.{0,1000}/ nocase ascii wide
+        $string12 = /google\-chrome\\history\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string13 = /.{0,1000}google\-chrome\\login_data\.txt.{0,1000}/ nocase ascii wide
+        $string13 = /google\-chrome\\login_data\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string14 = /.{0,1000}henry\-richard7\/Browser\-password\-stealer.{0,1000}/ nocase ascii wide
+        $string14 = /henry\-richard7\/Browser\-password\-stealer/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string15 = /.{0,1000}microsoft\-edge\/cookies\.txt.{0,1000}/ nocase ascii wide
+        $string15 = /microsoft\-edge\/cookies\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string16 = /.{0,1000}microsoft\-edge\/credit_cards\.txt.{0,1000}/ nocase ascii wide
+        $string16 = /microsoft\-edge\/credit_cards\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string17 = /.{0,1000}microsoft\-edge\/history\.txt.{0,1000}/ nocase ascii wide
+        $string17 = /microsoft\-edge\/history\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string18 = /.{0,1000}microsoft\-edge\/login_data\.txt.{0,1000}/ nocase ascii wide
+        $string18 = /microsoft\-edge\/login_data\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string19 = /.{0,1000}microsoft\-edge\\cookies\.txt.{0,1000}/ nocase ascii wide
+        $string19 = /microsoft\-edge\\cookies\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string20 = /.{0,1000}microsoft\-edge\\credit_cards\.txt.{0,1000}/ nocase ascii wide
+        $string20 = /microsoft\-edge\\credit_cards\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string21 = /.{0,1000}microsoft\-edge\\history\.txt.{0,1000}/ nocase ascii wide
+        $string21 = /microsoft\-edge\\history\.txt/ nocase ascii wide
         // Description: This python program gets all the saved passwords + credit cards and bookmarks from chromium based browsers supports chromium 80 and above!
         // Reference: https://github.com/henry-richard7/Browser-password-stealer
-        $string22 = /.{0,1000}microsoft\-edge\\login_data\.txt.{0,1000}/ nocase ascii wide
+        $string22 = /microsoft\-edge\\login_data\.txt/ nocase ascii wide
 
     condition:
         any of them

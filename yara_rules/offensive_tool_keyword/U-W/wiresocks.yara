@@ -10,37 +10,37 @@ rule wiresocks
     strings:
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string1 = /.{0,1000}\sredsocks\.sh.{0,1000}/ nocase ascii wide
+        $string1 = /\sredsocks\.sh/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string2 = /.{0,1000}\/redsocks\.sh.{0,1000}/ nocase ascii wide
+        $string2 = /\/redsocks\.sh/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string3 = /.{0,1000}\/redsocks\-fw\.sh.{0,1000}/ nocase ascii wide
+        $string3 = /\/redsocks\-fw\.sh/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string4 = /.{0,1000}\/wiresocks\.git.{0,1000}/ nocase ascii wide
+        $string4 = /\/wiresocks\.git/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string5 = /.{0,1000}\-c\s\/tmp\/redsocks\.conf.{0,1000}/ nocase ascii wide
+        $string5 = /\-c\s\/tmp\/redsocks\.conf/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string6 = /.{0,1000}docker\-compose\slogs\swiresocks.{0,1000}/ nocase ascii wide
+        $string6 = /docker\-compose\slogs\swiresocks/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string7 = /.{0,1000}iptables\s\-t\snat\s\-A\sREDSOCKS.{0,1000}/ nocase ascii wide
+        $string7 = /iptables\s\-t\snat\s\-A\sREDSOCKS/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string8 = /.{0,1000}redsocks\-fw\.sh\sstop.{0,1000}/ nocase ascii wide
+        $string8 = /redsocks\-fw\.sh\sstop/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string9 = /.{0,1000}sensepost\/wiresocks.{0,1000}/ nocase ascii wide
+        $string9 = /sensepost\/wiresocks/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string10 = /.{0,1000}wiresocks\-main.{0,1000}/ nocase ascii wide
+        $string10 = /wiresocks\-main/ nocase ascii wide
         // Description: Docker-compose and Dockerfile to setup a wireguard VPN connection forcing specific TCP traffic through a socks proxy.
         // Reference: https://github.com/sensepost/wiresocks
-        $string11 = /.{0,1000}wiresocks\-redsocks.{0,1000}/ nocase ascii wide
+        $string11 = /wiresocks\-redsocks/ nocase ascii wide
 
     condition:
         any of them

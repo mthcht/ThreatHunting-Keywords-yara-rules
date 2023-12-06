@@ -10,22 +10,22 @@ rule ntlmscan
     strings:
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string1 = /.{0,1000}\s\-\-script\=http\-ntlm\-info\s\-\-script\-args\=http\-ntlm\-info\.root\=.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-script\=http\-ntlm\-info\s\-\-script\-args\=http\-ntlm\-info\.root\=/ nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string2 = /.{0,1000}\/ntlmscan\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/ntlmscan\.git/ nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string3 = /.{0,1000}\/ntlmscan\/.{0,1000}/ nocase ascii wide
+        $string3 = /\/ntlmscan\// nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string4 = /.{0,1000}ntlmscan\.py.{0,1000}/ nocase ascii wide
+        $string4 = /ntlmscan\.py/ nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string5 = /.{0,1000}ntlmscan\-master\.zip.{0,1000}/ nocase ascii wide
+        $string5 = /ntlmscan\-master\.zip/ nocase ascii wide
         // Description: scan for NTLM directories
         // Reference: https://github.com/nyxgeek/ntlmscan
-        $string6 = /.{0,1000}nyxgeek\/ntlmscan.{0,1000}/ nocase ascii wide
+        $string6 = /nyxgeek\/ntlmscan/ nocase ascii wide
 
     condition:
         any of them

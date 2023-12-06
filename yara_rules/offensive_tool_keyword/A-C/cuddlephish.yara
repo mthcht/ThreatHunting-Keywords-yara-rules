@@ -10,40 +10,40 @@ rule cuddlephish
     strings:
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string1 = /.{0,1000}\/cuddlephish\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/cuddlephish\.git/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string2 = /.{0,1000}\/cuddlephish\.html.{0,1000}/ nocase ascii wide
+        $string2 = /\/cuddlephish\.html/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string3 = /.{0,1000}\/user_data\/.{0,1000}\/keylog\.txt.{0,1000}/ nocase ascii wide
+        $string3 = /\/user_data\/.{0,1000}\/keylog\.txt/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string4 = /.{0,1000}AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP39.{0,1000}/ nocase ascii wide
+        $string4 = /AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP39/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string5 = /.{0,1000}browser\.keylog_file\.write.{0,1000}/ nocase ascii wide
+        $string5 = /browser\.keylog_file\.write/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string6 = /.{0,1000}cuddlephish.{0,1000}stealer\.js/ nocase ascii wide
+        $string6 = /cuddlephish.{0,1000}stealer\.js/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string7 = /.{0,1000}cuddlephish\-main.{0,1000}/ nocase ascii wide
+        $string7 = /cuddlephish\-main/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string8 = /.{0,1000}fkasler\/cuddlephish.{0,1000}/ nocase ascii wide
+        $string8 = /fkasler\/cuddlephish/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string9 = /.{0,1000}http:\/\/localhost:58082\/broadcast\?id\=.{0,1000}/ nocase ascii wide
+        $string9 = /http:\/\/localhost:58082\/broadcast\?id\=/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string10 = /.{0,1000}listen\(58082.{0,1000}\s\'0\.0\.0\.0\'.{0,1000}/ nocase ascii wide
+        $string10 = /listen\(58082.{0,1000}\s\'0\.0\.0\.0\'/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string11 = /.{0,1000}node\sstealer\.js\s.{0,1000}/ nocase ascii wide
+        $string11 = /node\sstealer\.js\s/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string12 = /.{0,1000}ws:\/\/localhost:58082.{0,1000}/ nocase ascii wide
+        $string12 = /ws:\/\/localhost:58082/ nocase ascii wide
 
     condition:
         any of them

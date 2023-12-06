@@ -10,7 +10,7 @@ rule net
     strings:
         // Description: Conti Ransomware Proxyshell PowerShell command #9
         // Reference: https://news.sophos.com/en-us/2021/09/03/conti-affiliates-use-proxyshell-exchange-exploit-in-ransomware-attacks/
-        $string1 = /.{0,1000}net\sgroup\s.{0,1000}domain\sadmins.{0,1000}\s\/domain.{0,1000}/ nocase ascii wide
+        $string1 = /net\sgroup\s.{0,1000}domain\sadmins.{0,1000}\s\/domain/ nocase ascii wide
 
     condition:
         any of them

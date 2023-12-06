@@ -10,7 +10,7 @@ rule Droopscan
     strings:
         // Description: A plugin-based scanner to identify issues with several CMSs mainly Drupal & Silverstripe.
         // Reference: https://github.com/droope/droopescan
-        $string1 = /.{0,1000}Droopscan.{0,1000}/ nocase ascii wide
+        $string1 = /Droopscan/ nocase ascii wide
 
     condition:
         any of them

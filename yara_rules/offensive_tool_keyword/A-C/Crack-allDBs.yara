@@ -10,19 +10,19 @@ rule Crack_allDBs
     strings:
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string1 = /.{0,1000}Crack\-allDBs\.git.{0,1000}/ nocase ascii wide
+        $string1 = /Crack\-allDBs\.git/ nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string2 = /.{0,1000}Crack\-allDBs\-main.{0,1000}/ nocase ascii wide
+        $string2 = /Crack\-allDBs\-main/ nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string3 = /.{0,1000}crack\-allDBs\-v1\.py.{0,1000}/ nocase ascii wide
+        $string3 = /crack\-allDBs\-v1\.py/ nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string4 = /.{0,1000}crack\-allDBs\-v2\.py.{0,1000}/ nocase ascii wide
+        $string4 = /crack\-allDBs\-v2\.py/ nocase ascii wide
         // Description: bruteforce script for various DB
         // Reference: https://github.com/d3ckx1/Crack-allDBs
-        $string5 = /.{0,1000}d3ckx1\/Crack\-allDBs.{0,1000}/ nocase ascii wide
+        $string5 = /d3ckx1\/Crack\-allDBs/ nocase ascii wide
 
     condition:
         any of them

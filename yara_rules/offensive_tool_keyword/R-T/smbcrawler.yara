@@ -10,10 +10,10 @@ rule smbcrawler
     strings:
         // Description: SmbCrawler is a tool that takes credentials and a list of hosts and crawls through those shares
         // Reference: https://github.com/SySS-Research/smbcrawler
-        $string1 = /.{0,1000}impacket\.smbconnection.{0,1000}/ nocase ascii wide
+        $string1 = /impacket\.smbconnection/ nocase ascii wide
         // Description: SmbCrawler is a tool that takes credentials and a list of hosts and crawls through those shares
         // Reference: https://github.com/SySS-Research/smbcrawler
-        $string2 = /.{0,1000}smbcrawler.{0,1000}/ nocase ascii wide
+        $string2 = /smbcrawler/ nocase ascii wide
 
     condition:
         any of them

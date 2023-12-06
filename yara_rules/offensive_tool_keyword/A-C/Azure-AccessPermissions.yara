@@ -10,67 +10,67 @@ rule Azure_AccessPermissions
     strings:
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string1 = /.{0,1000}\/Azure\-AccessPermissions\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/Azure\-AccessPermissions\.git/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string2 = /.{0,1000}AAP\-AddToHighPrivilegePrincipalMap.{0,1000}/ nocase ascii wide
+        $string2 = /AAP\-AddToHighPrivilegePrincipalMap/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string3 = /.{0,1000}AAP\-CheckIfMemberOfPrivilegedDirectoryRole.{0,1000}/ nocase ascii wide
+        $string3 = /AAP\-CheckIfMemberOfPrivilegedDirectoryRole/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string4 = /.{0,1000}AAP\-DisplayApplicableMFAConditionalAccessPolicyForUserID.{0,1000}/ nocase ascii wide
+        $string4 = /AAP\-DisplayApplicableMFAConditionalAccessPolicyForUserID/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string5 = /.{0,1000}AAP\-DisplayHighPrivilegePrincipalMap.{0,1000}/ nocase ascii wide
+        $string5 = /AAP\-DisplayHighPrivilegePrincipalMap/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string6 = /.{0,1000}AAP\-DisplayNonHighPrivilegedRoleAssignments.{0,1000}/ nocase ascii wide
+        $string6 = /AAP\-DisplayNonHighPrivilegedRoleAssignments/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string7 = /.{0,1000}AAP\-GetHighPrivilegedDirectoryRoleTemplateMap.{0,1000}/ nocase ascii wide
+        $string7 = /AAP\-GetHighPrivilegedDirectoryRoleTemplateMap/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string8 = /.{0,1000}Azure\-AccessPermissions\.ps1.{0,1000}/ nocase ascii wide
+        $string8 = /Azure\-AccessPermissions\.ps1/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string9 = /.{0,1000}Azure\-AccessPermissions\-master.{0,1000}/ nocase ascii wide
+        $string9 = /Azure\-AccessPermissions\-master/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string10 = /.{0,1000}csandker\/Azure\-AccessPermissions.{0,1000}/ nocase ascii wide
+        $string10 = /csandker\/Azure\-AccessPermissions/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string11 = /.{0,1000}Enumerate\-AllHighPrivilegePrincipals.{0,1000}/ nocase ascii wide
+        $string11 = /Enumerate\-AllHighPrivilegePrincipals/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string12 = /.{0,1000}Enumerate\-MFAStatusOfHighPrivilegePrincipals.{0,1000}/ nocase ascii wide
+        $string12 = /Enumerate\-MFAStatusOfHighPrivilegePrincipals/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string13 = /.{0,1000}Invoke\-AccessCheckForAllGroups.{0,1000}/ nocase ascii wide
+        $string13 = /Invoke\-AccessCheckForAllGroups/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string14 = /.{0,1000}Invoke\-AccessCheckForAllServicePrincipals.{0,1000}/ nocase ascii wide
+        $string14 = /Invoke\-AccessCheckForAllServicePrincipals/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string15 = /.{0,1000}Invoke\-AccessCheckForAllUsers.{0,1000}/ nocase ascii wide
+        $string15 = /Invoke\-AccessCheckForAllUsers/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string16 = /.{0,1000}Invoke\-AccessCheckForCurrentUser.{0,1000}/ nocase ascii wide
+        $string16 = /Invoke\-AccessCheckForCurrentUser/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string17 = /.{0,1000}Invoke\-AccessCheckForCurrentUser.{0,1000}/ nocase ascii wide
+        $string17 = /Invoke\-AccessCheckForCurrentUser/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string18 = /.{0,1000}Invoke\-AccessCheckForGroup.{0,1000}/ nocase ascii wide
+        $string18 = /Invoke\-AccessCheckForGroup/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string19 = /.{0,1000}Invoke\-AccessCheckForServicePrincipal.{0,1000}/ nocase ascii wide
+        $string19 = /Invoke\-AccessCheckForServicePrincipal/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string20 = /.{0,1000}Invoke\-AccessCheckForUser.{0,1000}/ nocase ascii wide
+        $string20 = /Invoke\-AccessCheckForUser/ nocase ascii wide
         // Description: Easy to use PowerShell script to enumerate access permissions in an Azure Active Directory environment.
         // Reference: https://github.com/csandker/Azure-AccessPermissions
-        $string21 = /.{0,1000}Invoke\-AllAccessChecks.{0,1000}/ nocase ascii wide
+        $string21 = /Invoke\-AllAccessChecks/ nocase ascii wide
 
     condition:
         any of them

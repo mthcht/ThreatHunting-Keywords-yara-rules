@@ -10,7 +10,7 @@ rule betterdefaultpasslist
     strings:
         // Description: list includes default credentials from various manufacturers for their products like NAS. ERP. ICS etc.. that are used for standard products like mssql. vnc. oracle and so on useful for network bruteforcing
         // Reference: https://github.com/govolution/betterdefaultpasslist
-        $string1 = /.{0,1000}betterdefaultpasslist.{0,1000}/ nocase ascii wide
+        $string1 = /betterdefaultpasslist/ nocase ascii wide
 
     condition:
         any of them

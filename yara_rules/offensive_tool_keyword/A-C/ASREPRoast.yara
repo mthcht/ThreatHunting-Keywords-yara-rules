@@ -10,19 +10,19 @@ rule ASREPRoast
     strings:
         // Description: Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled. 
         // Reference: https://github.com/HarmJ0y/ASREPRoast
-        $string1 = /.{0,1000}\/ASREPRoast.{0,1000}/ nocase ascii wide
+        $string1 = /\/ASREPRoast/ nocase ascii wide
         // Description: Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled. 
         // Reference: https://github.com/HarmJ0y/ASREPRoast
-        $string2 = /.{0,1000}ASREPRoast\.ps1.{0,1000}/ nocase ascii wide
+        $string2 = /ASREPRoast\.ps1/ nocase ascii wide
         // Description: Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled. 
         // Reference: https://github.com/HarmJ0y/ASREPRoast
-        $string3 = /.{0,1000}crackTGS.{0,1000}/ nocase ascii wide
+        $string3 = /crackTGS/ nocase ascii wide
         // Description: Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled. 
         // Reference: https://github.com/HarmJ0y/ASREPRoast
-        $string4 = /.{0,1000}Invoke\-ASREPRoast.{0,1000}/ nocase ascii wide
+        $string4 = /Invoke\-ASREPRoast/ nocase ascii wide
         // Description: Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled. 
         // Reference: https://github.com/HarmJ0y/ASREPRoast
-        $string5 = /.{0,1000}tgscrack\.go.{0,1000}/ nocase ascii wide
+        $string5 = /tgscrack\.go/ nocase ascii wide
 
     condition:
         any of them

@@ -10,49 +10,49 @@ rule Jomungand
     strings:
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string1 = /.{0,1000}\-\-\-\-\-\sLOADLIBRARYA\sHOOK\s\-\-\-\-\-.{0,1000}/ nocase ascii wide
+        $string1 = /\-\-\-\-\-\sLOADLIBRARYA\sHOOK\s\-\-\-\-\-/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string2 = /.{0,1000}\-\-\-\-\-\sSLEEP\sHOOK\s\-\-\-\-\-.{0,1000}/ nocase ascii wide
+        $string2 = /\-\-\-\-\-\sSLEEP\sHOOK\s\-\-\-\-\-/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string3 = /.{0,1000}\-\-\-\-\-\sVIRTUALALLOC\sHOOK\s\-\-\-\-\-.{0,1000}/ nocase ascii wide
+        $string3 = /\-\-\-\-\-\sVIRTUALALLOC\sHOOK\s\-\-\-\-\-/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string4 = /.{0,1000}\/Jomungand\.git.{0,1000}/ nocase ascii wide
+        $string4 = /\/Jomungand\.git/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string5 = /.{0,1000}\/Jormungand\.sln.{0,1000}/ nocase ascii wide
+        $string5 = /\/Jormungand\.sln/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string6 = /.{0,1000}\[\!\]\sCan\'t\sremove\sthe\sHWBP\-Hook\sfor\sVirtualAlloc\s\!.{0,1000}/ nocase ascii wide
+        $string6 = /\[\!\]\sCan\'t\sremove\sthe\sHWBP\-Hook\sfor\sVirtualAlloc\s\!/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string7 = /.{0,1000}\\Jormungand\.sln.{0,1000}/ nocase ascii wide
+        $string7 = /\\Jormungand\.sln/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string8 = /.{0,1000}88B40068\-B3DB\-4C2F\-86F9\-8EADC52CFE58.{0,1000}/ nocase ascii wide
+        $string8 = /88B40068\-B3DB\-4C2F\-86F9\-8EADC52CFE58/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string9 = /.{0,1000}Jomungand\\vstudio\-project.{0,1000}/ nocase ascii wide
+        $string9 = /Jomungand\\vstudio\-project/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string10 = /.{0,1000}Jomungand\-main.{0,1000}/ nocase ascii wide
+        $string10 = /Jomungand\-main/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string11 = /.{0,1000}Jormungand\.exe.{0,1000}/ nocase ascii wide
+        $string11 = /Jormungand\.exe/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string12 = /.{0,1000}Jormungand\.vcxproj.{0,1000}/ nocase ascii wide
+        $string12 = /Jormungand\.vcxproj/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string13 = /.{0,1000}Redirect\sLoadLibraryA\sto\sLdrLoadDll\swith\sspoofed\sret\saddr\s\!.{0,1000}/ nocase ascii wide
+        $string13 = /Redirect\sLoadLibraryA\sto\sLdrLoadDll\swith\sspoofed\sret\saddr\s\!/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string14 = /.{0,1000}RtlDallas\/Jomungand.{0,1000}/ nocase ascii wide
+        $string14 = /RtlDallas\/Jomungand/ nocase ascii wide
         // Description: Shellcode Loader with memory evasion
         // Reference: https://github.com/RtlDallas/Jomungand
-        $string15 = /.{0,1000}Sleep\sfor\s.{0,1000}\sms.{0,1000}\sredirect\sto\sKrakenMask\s\!.{0,1000}/ nocase ascii wide
+        $string15 = /Sleep\sfor\s.{0,1000}\sms.{0,1000}\sredirect\sto\sKrakenMask\s\!/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule spring_core_rce
     strings:
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string1 = /.{0,1000}\/spring\-core\-rce.{0,1000}/ nocase ascii wide
+        $string1 = /\/spring\-core\-rce/ nocase ascii wide
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string2 = /.{0,1000}cat\s\.\/apache\-tomcat\-8\.5\.77\/webapps\/ROOT\/tomcatwar\.jsp/ nocase ascii wide
+        $string2 = /cat\s\.\/apache\-tomcat\-8\.5\.77\/webapps\/ROOT\/tomcatwar\.jsp/ nocase ascii wide
         // Description: github user infosec hosting exploitation tools
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string3 = /.{0,1000}github.{0,1000}\/Mr\-xn\/.{0,1000}/ nocase ascii wide
+        $string3 = /github.{0,1000}\/Mr\-xn\// nocase ascii wide
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string4 = /.{0,1000}spring\-core\-rce.{0,1000}ROOT\.war.{0,1000}/ nocase ascii wide
+        $string4 = /spring\-core\-rce.{0,1000}ROOT\.war/ nocase ascii wide
         // Description: CVE-2022-22965 : about spring core rce
         // Reference: https://github.com/Mr-xn/spring-core-rce
-        $string5 = /.{0,1000}target\/tomcatwar\.jsp\?pwd\=j\&cmd\=.{0,1000}/ nocase ascii wide
+        $string5 = /target\/tomcatwar\.jsp\?pwd\=j\&cmd\=/ nocase ascii wide
 
     condition:
         any of them

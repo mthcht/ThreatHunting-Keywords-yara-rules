@@ -10,43 +10,43 @@ rule undertheradar
     strings:
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string1 = /.{0,1000}\.\\dumpy\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\.\\dumpy\.py/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string2 = /.{0,1000}\/undertheradar\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/undertheradar\.git/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string3 = /.{0,1000}\\public\\klogging\.log.{0,1000}/ nocase ascii wide
+        $string3 = /\\public\\klogging\.log/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string4 = /.{0,1000}\\users\\public\\sam\.save.{0,1000}/ nocase ascii wide
+        $string4 = /\\users\\public\\sam\.save/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string5 = /.{0,1000}\\users\\public\\system\.save.{0,1000}/ nocase ascii wide
+        $string5 = /\\users\\public\\system\.save/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string6 = /.{0,1000}c:\/users\/public\/creds\.log.{0,1000}/ nocase ascii wide
+        $string6 = /c:\/users\/public\/creds\.log/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string7 = /.{0,1000}c:\\users\\public\\creds\.log.{0,1000}/ nocase ascii wide
+        $string7 = /c:\\users\\public\\creds\.log/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string8 = /.{0,1000}c:\\users\\public\\output\.txt.{0,1000}/ nocase ascii wide
+        $string8 = /c:\\users\\public\\output\.txt/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string9 = /.{0,1000}g3tsyst3m\/undertheradar.{0,1000}/ nocase ascii wide
+        $string9 = /g3tsyst3m\/undertheradar/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string10 = /.{0,1000}simplekeylogger\..{0,1000}/ nocase ascii wide
+        $string10 = /simplekeylogger\./ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string11 = /.{0,1000}Successfully\sdumped\sSAM\sand\sSYSTEM.{0,1000}/ nocase ascii wide
+        $string11 = /Successfully\sdumped\sSAM\sand\sSYSTEM/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string12 = /.{0,1000}undertheradar\-main.{0,1000}/ nocase ascii wide
+        $string12 = /undertheradar\-main/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string13 = /.{0,1000}users\/public\/troubleshooting_log\.log.{0,1000}/ nocase ascii wide
+        $string13 = /users\/public\/troubleshooting_log\.log/ nocase ascii wide
 
     condition:
         any of them

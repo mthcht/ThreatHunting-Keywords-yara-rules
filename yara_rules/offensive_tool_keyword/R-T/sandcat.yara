@@ -10,16 +10,16 @@ rule sandcat
     strings:
         // Description: An open-source pentest oriented web browser
         // Reference: https://github.com/syhunt/sandcat
-        $string1 = /.{0,1000}\/sandcat\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/sandcat\.git/ nocase ascii wide
         // Description: An open-source pentest oriented web browser
         // Reference: https://github.com/syhunt/sandcat
-        $string2 = /.{0,1000}syhunt\.com\/sandcat\/.{0,1000}/ nocase ascii wide
+        $string2 = /syhunt\.com\/sandcat\// nocase ascii wide
         // Description: An open-source pentest oriented web browser
         // Reference: https://github.com/syhunt/sandcat
-        $string3 = /.{0,1000}syhunt\/sandcat.{0,1000}/ nocase ascii wide
+        $string3 = /syhunt\/sandcat/ nocase ascii wide
         // Description: An open-source pentest oriented web browser
         // Reference: https://github.com/syhunt/sandcat
-        $string4 = /.{0,1000}syhunt\-sandcat\-.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /syhunt\-sandcat\-.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them

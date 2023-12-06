@@ -10,7 +10,7 @@ rule PowerStager
     strings:
         // Description: PowerStager: This script creates an executable stager that downloads a selected powershell payload.
         // Reference: https://github.com/z0noxz/powerstager
-        $string1 = /.{0,1000}powerstager.{0,1000}/ nocase ascii wide
+        $string1 = /powerstager/ nocase ascii wide
 
     condition:
         any of them

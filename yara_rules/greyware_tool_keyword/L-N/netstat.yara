@@ -10,13 +10,13 @@ rule netstat
     strings:
         // Description: Adversaries may attempt to execute recon commands
         // Reference: N/A
-        $string1 = /.{0,1000}netstat\s\-ano.{0,1000}/ nocase ascii wide
+        $string1 = /netstat\s\-ano/ nocase ascii wide
         // Description: View all active TCP connections and the TCP and UDP ports the host is listening on.
         // Reference: N/A
-        $string2 = /.{0,1000}netstat\s\-ant.{0,1000}/ nocase ascii wide
+        $string2 = /netstat\s\-ant/ nocase ascii wide
         // Description: Adversaries may attempt to execute recon commands
         // Reference: N/A
-        $string3 = /.{0,1000}NETSTAT\.EXE.{0,1000}\s\-ano.{0,1000}/ nocase ascii wide
+        $string3 = /NETSTAT\.EXE.{0,1000}\s\-ano/ nocase ascii wide
 
     condition:
         any of them

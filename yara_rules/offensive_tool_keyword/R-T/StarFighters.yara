@@ -10,7 +10,7 @@ rule StarFighters
     strings:
         // Description: A JavaScript and VBScript Based Empire Launcher - by Cn33liz 2017
         // Reference: https://github.com/Cn33liz/StarFighters
-        $string1 = /.{0,1000}StarFighters.{0,1000}/ nocase ascii wide
+        $string1 = /StarFighters/ nocase ascii wide
 
     condition:
         any of them

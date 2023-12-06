@@ -10,19 +10,19 @@ rule ThisIsNotRat
     strings:
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string1 = /.{0,1000}\/ThisIsNotRat\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/ThisIsNotRat\.git/ nocase ascii wide
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string2 = /.{0,1000}\/tinar\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\/tinar\.py/ nocase ascii wide
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string3 = /.{0,1000}python\stinar\.py.{0,1000}/ nocase ascii wide
+        $string3 = /python\stinar\.py/ nocase ascii wide
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string4 = /.{0,1000}RealBey\/ThisIsNotRat.{0,1000}/ nocase ascii wide
+        $string4 = /RealBey\/ThisIsNotRat/ nocase ascii wide
         // Description: control windows computeur from telegram
         // Reference: https://github.com/RealBey/ThisIsNotRat
-        $string5 = /.{0,1000}ThisIsNotRat\-main.{0,1000}/ nocase ascii wide
+        $string5 = /ThisIsNotRat\-main/ nocase ascii wide
 
     condition:
         any of them

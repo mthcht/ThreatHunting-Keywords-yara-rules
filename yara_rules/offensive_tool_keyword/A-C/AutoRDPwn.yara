@@ -10,238 +10,238 @@ rule AutoRDPwn
     strings:
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string1 = /.{0,1000}\s\-Reverse\s\-IPAddress\s.{0,1000}\s\-Port\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-Reverse\s\-IPAddress\s.{0,1000}\s\-Port\s/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string2 = /.{0,1000}\/AutoBypass\.ps1.{0,1000}/ nocase ascii wide
+        $string2 = /\/AutoBypass\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string3 = /.{0,1000}Add\-ServiceDacl.{0,1000}/ nocase ascii wide
+        $string3 = /Add\-ServiceDacl/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string4 = /.{0,1000}AutoBypass\.ps1.{0,1000}/ nocase ascii wide
+        $string4 = /AutoBypass\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string5 = /.{0,1000}AutoRDPwn.{0,1000}/ nocase ascii wide
+        $string5 = /AutoRDPwn/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string6 = /.{0,1000}Bypass\-UAC.{0,1000}/ nocase ascii wide
+        $string6 = /Bypass\-UAC/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string7 = /.{0,1000}Chachi\-Enumerator\.ps1.{0,1000}/ nocase ascii wide
+        $string7 = /Chachi\-Enumerator\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string8 = /.{0,1000}Chachi\-Enumerator\.ps1.{0,1000}/ nocase ascii wide
+        $string8 = /Chachi\-Enumerator\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string9 = /.{0,1000}Check\-LocalAdminHash\.ps1.{0,1000}/ nocase ascii wide
+        $string9 = /Check\-LocalAdminHash\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string10 = /.{0,1000}DownloadAndExtractFromRemoteRegistry.{0,1000}/ nocase ascii wide
+        $string10 = /DownloadAndExtractFromRemoteRegistry/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string11 = /.{0,1000}Get\-CredPersist.{0,1000}/ nocase ascii wide
+        $string11 = /Get\-CredPersist/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string12 = /.{0,1000}Get\-DecodedPassword.{0,1000}/ nocase ascii wide
+        $string12 = /Get\-DecodedPassword/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string13 = /.{0,1000}Get\-DecryptedCpassword.{0,1000}/ nocase ascii wide
+        $string13 = /Get\-DecryptedCpassword/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string14 = /.{0,1000}Get\-DecryptedPassword.{0,1000}/ nocase ascii wide
+        $string14 = /Get\-DecryptedPassword/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string15 = /.{0,1000}Get\-DiscosdurosGet\-PSDrive.{0,1000}/ nocase ascii wide
+        $string15 = /Get\-DiscosdurosGet\-PSDrive/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string16 = /.{0,1000}Get\-LsaRunAsPPLStatus.{0,1000}/ nocase ascii wide
+        $string16 = /Get\-LsaRunAsPPLStatus/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string17 = /.{0,1000}Get\-NTLM\.ps1.{0,1000}/ nocase ascii wide
+        $string17 = /Get\-NTLM\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string18 = /.{0,1000}Get\-UnattendSensitiveData.{0,1000}/ nocase ascii wide
+        $string18 = /Get\-UnattendSensitiveData/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string19 = /.{0,1000}Get\-UserPrivileges.{0,1000}/ nocase ascii wide
+        $string19 = /Get\-UserPrivileges/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string20 = /.{0,1000}Get\-Wlan\-Keys.{0,1000}/ nocase ascii wide
+        $string20 = /Get\-Wlan\-Keys/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string21 = /.{0,1000}Invoke\-ApplicationsOnStartupCheck.{0,1000}/ nocase ascii wide
+        $string21 = /Invoke\-ApplicationsOnStartupCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string22 = /.{0,1000}Invoke\-CredentialFilesCheck.{0,1000}/ nocase ascii wide
+        $string22 = /Invoke\-CredentialFilesCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string23 = /.{0,1000}Invoke\-DllHijackingCheck.{0,1000}/ nocase ascii wide
+        $string23 = /Invoke\-DllHijackingCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string24 = /.{0,1000}Invoke\-GPPPasswordCheck.{0,1000}/ nocase ascii wide
+        $string24 = /Invoke\-GPPPasswordCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string25 = /.{0,1000}Invoke\-HijackableDllsCheck.{0,1000}/ nocase ascii wide
+        $string25 = /Invoke\-HijackableDllsCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string26 = /.{0,1000}Invoke\-InstalledServicesCheck.{0,1000}/ nocase ascii wide
+        $string26 = /Invoke\-InstalledServicesCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string27 = /.{0,1000}Invoke\-Keylogger\.ps1.{0,1000}/ nocase ascii wide
+        $string27 = /Invoke\-Keylogger\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string28 = /.{0,1000}Invoke\-LapsCheck.{0,1000}/ nocase ascii wide
+        $string28 = /Invoke\-LapsCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string29 = /.{0,1000}Invoke\-LocalAdminGroupCheck.{0,1000}/ nocase ascii wide
+        $string29 = /Invoke\-LocalAdminGroupCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string30 = /.{0,1000}Invoke\-LsaProtectionsCheck.{0,1000}/ nocase ascii wide
+        $string30 = /Invoke\-LsaProtectionsCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string31 = /.{0,1000}Invoke\-Mimikatz\.ps1.{0,1000}/ nocase ascii wide
+        $string31 = /Invoke\-Mimikatz\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string32 = /.{0,1000}Invoke\-Phant0m.{0,1000}/ nocase ascii wide
+        $string32 = /Invoke\-Phant0m/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string33 = /.{0,1000}Invoke\-Phant0m\.ps1.{0,1000}/ nocase ascii wide
+        $string33 = /Invoke\-Phant0m\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string34 = /.{0,1000}Invoke\-PipeShell\.ps1.{0,1000}/ nocase ascii wide
+        $string34 = /Invoke\-PipeShell\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string35 = /.{0,1000}Invoke\-Portscan.{0,1000}/ nocase ascii wide
+        $string35 = /Invoke\-Portscan/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string36 = /.{0,1000}Invoke\-Portscan\.ps1.{0,1000}/ nocase ascii wide
+        $string36 = /Invoke\-Portscan\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string37 = /.{0,1000}Invoke\-PowerShellTcp.{0,1000}/ nocase ascii wide
+        $string37 = /Invoke\-PowerShellTcp/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string38 = /.{0,1000}Invoke\-PowerShellTcp\.ps1.{0,1000}/ nocase ascii wide
+        $string38 = /Invoke\-PowerShellTcp\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string39 = /.{0,1000}Invoke\-PrivescCheck.{0,1000}/ nocase ascii wide
+        $string39 = /Invoke\-PrivescCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string40 = /.{0,1000}Invoke\-PrivescCheck\.ps1.{0,1000}/ nocase ascii wide
+        $string40 = /Invoke\-PrivescCheck\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string41 = /.{0,1000}Invoke\-PSexec\.ps1.{0,1000}/ nocase ascii wide
+        $string41 = /Invoke\-PSexec\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string42 = /.{0,1000}Invoke\-RDPwrap\.ps1.{0,1000}/ nocase ascii wide
+        $string42 = /Invoke\-RDPwrap\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string43 = /.{0,1000}Invoke\-RegistryAlwaysInstallElevatedCheck.{0,1000}/ nocase ascii wide
+        $string43 = /Invoke\-RegistryAlwaysInstallElevatedCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string44 = /.{0,1000}Invoke\-RevShellServer\.ps1.{0,1000}/ nocase ascii wide
+        $string44 = /Invoke\-RevShellServer\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string45 = /.{0,1000}Invoke\-RunAs\.ps1.{0,1000}/ nocase ascii wide
+        $string45 = /Invoke\-RunAs\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string46 = /.{0,1000}Invoke\-SamBackupFilesCheck.{0,1000}/ nocase ascii wide
+        $string46 = /Invoke\-SamBackupFilesCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string47 = /.{0,1000}Invoke\-ScheduledTasksCheck.{0,1000}/ nocase ascii wide
+        $string47 = /Invoke\-ScheduledTasksCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string48 = /.{0,1000}Invoke\-ServicesImagePermissionsCheck.{0,1000}/ nocase ascii wide
+        $string48 = /Invoke\-ServicesImagePermissionsCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string49 = /.{0,1000}Invoke\-ServicesPermissionsCheck.{0,1000}/ nocase ascii wide
+        $string49 = /Invoke\-ServicesPermissionsCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string50 = /.{0,1000}Invoke\-ServicesPermissionsRegistryCheck.{0,1000}/ nocase ascii wide
+        $string50 = /Invoke\-ServicesPermissionsRegistryCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string51 = /.{0,1000}Invoke\-ServicesUnquotedPathCheck.{0,1000}/ nocase ascii wide
+        $string51 = /Invoke\-ServicesUnquotedPathCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string52 = /.{0,1000}Invoke\-SessionGopher.{0,1000}/ nocase ascii wide
+        $string52 = /Invoke\-SessionGopher/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string53 = /.{0,1000}Invoke\-SharpRDP\.ps1.{0,1000}/ nocase ascii wide
+        $string53 = /Invoke\-SharpRDP\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string54 = /.{0,1000}Invoke\-SharpWeb\.ps1.{0,1000}/ nocase ascii wide
+        $string54 = /Invoke\-SharpWeb\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string55 = /.{0,1000}Invoke\-SMBExec.{0,1000}/ nocase ascii wide
+        $string55 = /Invoke\-SMBExec/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string56 = /.{0,1000}Invoke\-SMBExec\.ps1.{0,1000}/ nocase ascii wide
+        $string56 = /Invoke\-SMBExec\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string57 = /.{0,1000}Invoke\-SystemStartupHistoryCheck.{0,1000}/ nocase ascii wide
+        $string57 = /Invoke\-SystemStartupHistoryCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string58 = /.{0,1000}Invoke\-UacCheck.{0,1000}/ nocase ascii wide
+        $string58 = /Invoke\-UacCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string59 = /.{0,1000}Invoke\-UnattendFilesCheck.{0,1000}/ nocase ascii wide
+        $string59 = /Invoke\-UnattendFilesCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string60 = /.{0,1000}Invoke\-UserPrivilegesCheck.{0,1000}/ nocase ascii wide
+        $string60 = /Invoke\-UserPrivilegesCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string61 = /.{0,1000}Invoke\-VaultCredCheck.{0,1000}/ nocase ascii wide
+        $string61 = /Invoke\-VaultCredCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string62 = /.{0,1000}Invoke\-VNCServer\.ps1.{0,1000}/ nocase ascii wide
+        $string62 = /Invoke\-VNCServer\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string63 = /.{0,1000}Invoke\-VNCViewer\.ps1.{0,1000}/ nocase ascii wide
+        $string63 = /Invoke\-VNCViewer\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string64 = /.{0,1000}Invoke\-WebRev\.ps1.{0,1000}/ nocase ascii wide
+        $string64 = /Invoke\-WebRev\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string65 = /.{0,1000}Invoke\-WinlogonCheck.{0,1000}/ nocase ascii wide
+        $string65 = /Invoke\-WinlogonCheck/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string66 = /.{0,1000}Invoke\-WMIExec.{0,1000}/ nocase ascii wide
+        $string66 = /Invoke\-WMIExec/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string67 = /.{0,1000}ListAllUsers\.ps1.{0,1000}/ nocase ascii wide
+        $string67 = /ListAllUsers\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string68 = /.{0,1000}PortScan\-Alive.{0,1000}/ nocase ascii wide
+        $string68 = /PortScan\-Alive/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string69 = /.{0,1000}Portscan\-Port.{0,1000}/ nocase ascii wide
+        $string69 = /Portscan\-Port/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string70 = /.{0,1000}RDP\-Caching\.ps1.{0,1000}/ nocase ascii wide
+        $string70 = /RDP\-Caching\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string71 = /.{0,1000}Resources\/Design\/NinjaStyle\.ps1.{0,1000}/ nocase ascii wide
+        $string71 = /Resources\/Design\/NinjaStyle\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string72 = /.{0,1000}Search\-cpassword.{0,1000}/ nocase ascii wide
+        $string72 = /Search\-cpassword/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string73 = /.{0,1000}SessionGopher\.ps1.{0,1000}/ nocase ascii wide
+        $string73 = /SessionGopher\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string74 = /.{0,1000}Sherlock\.ps1.{0,1000}/ nocase ascii wide
+        $string74 = /Sherlock\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string75 = /.{0,1000}Start\-WebServer\.ps1.{0,1000}/ nocase ascii wide
+        $string75 = /Start\-WebServer\.ps1/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string76 = /.{0,1000}Test\-DllExists.{0,1000}/ nocase ascii wide
+        $string76 = /Test\-DllExists/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string77 = /.{0,1000}Test\-ServiceDaclPermission.{0,1000}/ nocase ascii wide
+        $string77 = /Test\-ServiceDaclPermission/ nocase ascii wide
         // Description: AutoRDPwn is a post-exploitation framework created in Powershell designed primarily to automate the Shadow attack on Microsoft Windows computers
         // Reference: https://github.com/JoelGMSec/AutoRDPwn
-        $string78 = /.{0,1000}Write\-PortscanOut.{0,1000}/ nocase ascii wide
+        $string78 = /Write\-PortscanOut/ nocase ascii wide
 
     condition:
         any of them

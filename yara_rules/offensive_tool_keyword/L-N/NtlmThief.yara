@@ -10,28 +10,28 @@ rule NtlmThief
     strings:
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string1 = /.{0,1000}\/NtlmThief\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/NtlmThief\.git/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string2 = /.{0,1000}\\NtlmThief\\.{0,1000}/ nocase ascii wide
+        $string2 = /\\NtlmThief\\/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string3 = /.{0,1000}CD517B47\-6CA1\-4AC3\-BC37\-D8A27F2F03A0.{0,1000}/ nocase ascii wide
+        $string3 = /CD517B47\-6CA1\-4AC3\-BC37\-D8A27F2F03A0/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string4 = /.{0,1000}MzHmO\/NtlmThief.{0,1000}/ nocase ascii wide
+        $string4 = /MzHmO\/NtlmThief/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string5 = /.{0,1000}NtlmThief\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /NtlmThief\.exe/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string6 = /.{0,1000}NtlmThief\.sln.{0,1000}/ nocase ascii wide
+        $string6 = /NtlmThief\.sln/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string7 = /.{0,1000}NtlmThief\.vcxproj.{0,1000}/ nocase ascii wide
+        $string7 = /NtlmThief\.vcxproj/ nocase ascii wide
         // Description: Extracting NetNTLM without touching lsass.exe
         // Reference: https://github.com/MzHmO/NtlmThief
-        $string8 = /.{0,1000}NtlmThief\-main.{0,1000}/ nocase ascii wide
+        $string8 = /NtlmThief\-main/ nocase ascii wide
 
     condition:
         any of them

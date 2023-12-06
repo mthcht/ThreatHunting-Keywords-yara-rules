@@ -10,34 +10,34 @@ rule KRBUACBypass
     strings:
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string1 = /.{0,1000}\sKRBUACBypass.{0,1000}/ nocase ascii wide
+        $string1 = /\sKRBUACBypass/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string2 = /.{0,1000}\/KRBUACBypass.{0,1000}/ nocase ascii wide
+        $string2 = /\/KRBUACBypass/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string3 = /.{0,1000}\\KRBUACBypass.{0,1000}/ nocase ascii wide
+        $string3 = /\\KRBUACBypass/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string4 = /.{0,1000}881D4D67\-46DD\-4F40\-A813\-C9D3C8BE0965.{0,1000}/ nocase ascii wide
+        $string4 = /881D4D67\-46DD\-4F40\-A813\-C9D3C8BE0965/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string5 = /.{0,1000}Copyright\s\(c\)\s2023\swhoamianony\.top.{0,1000}/ nocase ascii wide
+        $string5 = /Copyright\s\(c\)\s2023\swhoamianony\.top/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string6 = /.{0,1000}KRBUACBypass\s1.{0,1000}/ nocase ascii wide
+        $string6 = /KRBUACBypass\s1/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string7 = /.{0,1000}KRBUACBypass\.csproj.{0,1000}/ nocase ascii wide
+        $string7 = /KRBUACBypass\.csproj/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string8 = /.{0,1000}KRBUACBypass\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /KRBUACBypass\.exe/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string9 = /.{0,1000}KRBUACBypass\.sln.{0,1000}/ nocase ascii wide
+        $string9 = /KRBUACBypass\.sln/ nocase ascii wide
         // Description: UAC Bypass By Abusing Kerberos Tickets
         // Reference: https://github.com/wh0amitz/KRBUACBypass
-        $string10 = /.{0,1000}lib\/Bruteforcer\.cs.{0,1000}/ nocase ascii wide
+        $string10 = /lib\/Bruteforcer\.cs/ nocase ascii wide
 
     condition:
         any of them

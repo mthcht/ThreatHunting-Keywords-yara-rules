@@ -10,13 +10,13 @@ rule StayKit
     strings:
         // Description: StayKit - Cobalt Strike persistence kit - StayKit is an extension for Cobalt Strike persistence by leveraging the execute_assembly function with the SharpStay .NET assembly. The aggressor script handles payload creation by reading the template files for a specific execution type.
         // Reference: https://github.com/0xthirteen/StayKit
-        $string1 = /.{0,1000}\/0xthirteen\/StayKit.{0,1000}/ nocase ascii wide
+        $string1 = /\/0xthirteen\/StayKit/ nocase ascii wide
         // Description: StayKit - Cobalt Strike persistence kit - StayKit is an extension for Cobalt Strike persistence by leveraging the execute_assembly function with the SharpStay .NET assembly. The aggressor script handles payload creation by reading the template files for a specific execution type.
         // Reference: https://github.com/0xthirteen/StayKit
-        $string2 = /.{0,1000}BackdoorLNK.{0,1000}/ nocase ascii wide
+        $string2 = /BackdoorLNK/ nocase ascii wide
         // Description: StayKit - Cobalt Strike persistence kit - StayKit is an extension for Cobalt Strike persistence by leveraging the execute_assembly function with the SharpStay .NET assembly. The aggressor script handles payload creation by reading the template files for a specific execution type.
         // Reference: https://github.com/0xthirteen/StayKit
-        $string3 = /.{0,1000}StayKit\.cna.{0,1000}/ nocase ascii wide
+        $string3 = /StayKit\.cna/ nocase ascii wide
 
     condition:
         any of them

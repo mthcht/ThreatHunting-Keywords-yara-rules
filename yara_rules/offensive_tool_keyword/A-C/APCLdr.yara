@@ -10,13 +10,13 @@ rule APCLdr
     strings:
         // Description: APCLdr: Payload Loader With Evasion Features
         // Reference: https://github.com/NUL0x4C/APCLdr
-        $string1 = /.{0,1000}\/APCLdr\..{0,1000}/ nocase ascii wide
+        $string1 = /\/APCLdr\./ nocase ascii wide
         // Description: APCLdr: Payload Loader With Evasion Features
         // Reference: https://github.com/NUL0x4C/APCLdr
-        $string2 = /.{0,1000}\\APCLdr\..{0,1000}/ nocase ascii wide
+        $string2 = /\\APCLdr\./ nocase ascii wide
         // Description: APCLdr: Payload Loader With Evasion Features
         // Reference: https://github.com/NUL0x4C/APCLdr
-        $string3 = /.{0,1000}NUL0x4C\/APCLdr.{0,1000}/ nocase ascii wide
+        $string3 = /NUL0x4C\/APCLdr/ nocase ascii wide
 
     condition:
         any of them

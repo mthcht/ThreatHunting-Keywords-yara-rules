@@ -10,85 +10,85 @@ rule DcRat
     strings:
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string1 = /.{0,1000}\/DcRat\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/DcRat\.git/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string2 = /.{0,1000}\/DcRat\.sln.{0,1000}/ nocase ascii wide
+        $string2 = /\/DcRat\.sln/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string3 = /.{0,1000}\/Ransomware\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\/Ransomware\.exe/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string4 = /.{0,1000}\\Ransomware\.exe/ nocase ascii wide
+        $string4 = /\\Ransomware\.exe/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string5 = /.{0,1000}\\RemoteCamera\.dll.{0,1000}/ nocase ascii wide
+        $string5 = /\\RemoteCamera\.dll/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string6 = /.{0,1000}119\.45\.104\.153:8848.{0,1000}/ nocase ascii wide
+        $string6 = /119\.45\.104\.153:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string7 = /.{0,1000}127\.0\.0\.1:8848.{0,1000}/ nocase ascii wide
+        $string7 = /127\.0\.0\.1:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string8 = /.{0,1000}AsyncRAT\/DCRat.{0,1000}/ nocase ascii wide
+        $string8 = /AsyncRAT\/DCRat/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string9 = /.{0,1000}CN\=DcRat\sServer.{0,1000}OU\=qwqdanchun.{0,1000}O\=DcRat\sBy\sqwqdanchun.{0,1000}/ nocase ascii wide
+        $string9 = /CN\=DcRat\sServer.{0,1000}OU\=qwqdanchun.{0,1000}O\=DcRat\sBy\sqwqdanchun/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string10 = /.{0,1000}DcRat\s\s1\.0\.7.{0,1000}/ nocase ascii wide
+        $string10 = /DcRat\s\s1\.0\.7/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string11 = /.{0,1000}DcRat\.7z.{0,1000}/ nocase ascii wide
+        $string11 = /DcRat\.7z/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string12 = /.{0,1000}DcRat\.exe.{0,1000}/ nocase ascii wide
+        $string12 = /DcRat\.exe/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string13 = /.{0,1000}DcRat\.zip.{0,1000}/ nocase ascii wide
+        $string13 = /DcRat\.zip/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string14 = /.{0,1000}DcRat_png\.png.{0,1000}/ nocase ascii wide
+        $string14 = /DcRat_png\.png/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string15 = /.{0,1000}DcRat\-main\.zip.{0,1000}/ nocase ascii wide
+        $string15 = /DcRat\-main\.zip/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string16 = /.{0,1000}https:\/\/pastebin\.com\/raw\/fevFJe98.{0,1000}/ nocase ascii wide
+        $string16 = /https:\/\/pastebin\.com\/raw\/fevFJe98/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string17 = /.{0,1000}Keylogger\.exe.{0,1000}/ nocase ascii wide
+        $string17 = /Keylogger\.exe/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string18 = /.{0,1000}Keylogger\.pdb.{0,1000}/ nocase ascii wide
+        $string18 = /Keylogger\.pdb/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string19 = /.{0,1000}localhost:8848.{0,1000}/ nocase ascii wide
+        $string19 = /localhost:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string20 = /.{0,1000}Plugins\\SendFile\.dll.{0,1000}/ nocase ascii wide
+        $string20 = /Plugins\\SendFile\.dll/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string21 = /.{0,1000}Plugins\\SendMemory\.dll.{0,1000}/ nocase ascii wide
+        $string21 = /Plugins\\SendMemory\.dll/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string22 = /.{0,1000}qwqdanchun.{0,1000}/ nocase ascii wide
+        $string22 = /qwqdanchun/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string23 = /.{0,1000}qwqdanchun\/DcRat.{0,1000}/ nocase ascii wide
+        $string23 = /qwqdanchun\/DcRat/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string24 = /.{0,1000}Ransomware\.dll.{0,1000}/ nocase ascii wide
+        $string24 = /Ransomware\.dll/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string25 = /.{0,1000}Ransomware\.pdb.{0,1000}/ nocase ascii wide
+        $string25 = /Ransomware\.pdb/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string26 = /.{0,1000}Resources\\donut\.exe.{0,1000}/ nocase ascii wide
+        $string26 = /Resources\\donut\.exe/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string27 = /.{0,1000}ReverseProxy\.dll.{0,1000}/ nocase ascii wide
+        $string27 = /ReverseProxy\.dll/ nocase ascii wide
 
     condition:
         any of them

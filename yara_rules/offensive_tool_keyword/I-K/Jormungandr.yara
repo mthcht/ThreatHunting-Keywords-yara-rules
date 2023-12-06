@@ -10,28 +10,28 @@ rule Jormungandr
     strings:
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string1 = /.{0,1000}\/Jormungandr\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/Jormungandr\.git/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string2 = /.{0,1000}\\\\\?\?\\\\Jormungandr.{0,1000}/ nocase ascii wide
+        $string2 = /\\\\\?\?\\\\Jormungandr/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string3 = /.{0,1000}COFFLdr\.cpp.{0,1000}/ nocase ascii wide
+        $string3 = /COFFLdr\.cpp/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string4 = /.{0,1000}COFFLdr\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /COFFLdr\.exe/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string5 = /.{0,1000}Idov31\/Jormungandr.{0,1000}/ nocase ascii wide
+        $string5 = /Idov31\/Jormungandr/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string6 = /.{0,1000}Jormungandr\.cpp.{0,1000}/ nocase ascii wide
+        $string6 = /Jormungandr\.cpp/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string7 = /.{0,1000}Jormungandr\.exe.{0,1000}/ nocase ascii wide
+        $string7 = /Jormungandr\.exe/ nocase ascii wide
         // Description: Jormungandr is a kernel implementation of a COFF loader allowing kernel developers to load and execute their COFFs in the kernel
         // Reference: https://github.com/Idov31/Jormungandr
-        $string8 = /.{0,1000}Jormungandr\-master.{0,1000}/ nocase ascii wide
+        $string8 = /Jormungandr\-master/ nocase ascii wide
 
     condition:
         any of them

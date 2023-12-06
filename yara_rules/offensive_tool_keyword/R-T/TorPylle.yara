@@ -10,7 +10,7 @@ rule TorPylle
     strings:
         // Description: A Python / Scapy implementation of the OR (TOR) protocol.
         // Reference: https://github.com/cea-sec/TorPylle
-        $string1 = /.{0,1000}TorPylle.{0,1000}/ nocase ascii wide
+        $string1 = /TorPylle/ nocase ascii wide
 
     condition:
         any of them

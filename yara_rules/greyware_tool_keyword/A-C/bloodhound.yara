@@ -10,7 +10,7 @@ rule bloodhound
     strings:
         // Description: he neo4j console command is used to start the Neo4j server in console mode. While it is not directly associated with a specific attack technique - it is often used in combination with tools like BloodHound to analyze and visualize data collected from Active Directory environments.
         // Reference: https://github.com/fox-it/BloodHound.py
-        $string1 = /.{0,1000}neo4j\sconsole.{0,1000}/ nocase ascii wide
+        $string1 = /neo4j\sconsole/ nocase ascii wide
 
     condition:
         any of them

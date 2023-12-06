@@ -10,25 +10,25 @@ rule invoke_piper
     strings:
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string1 = /.{0,1000}\s\-bindPipe\s.{0,1000}\s\-destHost\s.{0,1000}\s\-destPort\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-bindPipe\s.{0,1000}\s\-destHost\s.{0,1000}\s\-destPort\s/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string2 = /.{0,1000}\s\-remote\s\-bindPipe\s.{0,1000}\s\s\-bindPort\s.{0,1000}\s\-security.{0,1000}/ nocase ascii wide
+        $string2 = /\s\-remote\s\-bindPipe\s.{0,1000}\s\s\-bindPort\s.{0,1000}\s\-security/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string3 = /.{0,1000}\-destPipe\s.{0,1000}\s\-pipeHost\s.{0,1000}\s\-bindPort\s.{0,1000}/ nocase ascii wide
+        $string3 = /\-destPipe\s.{0,1000}\s\-pipeHost\s.{0,1000}\s\-bindPort\s/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string4 = /.{0,1000}Invoke\-Piper.{0,1000}/ nocase ascii wide
+        $string4 = /Invoke\-Piper/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string5 = /.{0,1000}Invoke\-PiperClient.{0,1000}/ nocase ascii wide
+        $string5 = /Invoke\-PiperClient/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string6 = /.{0,1000}Invoke\-PiperServer.{0,1000}/ nocase ascii wide
+        $string6 = /Invoke\-PiperServer/ nocase ascii wide
         // Description: Forward local or remote tcp ports through SMB pipes.
         // Reference: https://github.com/p3nt4/Invoke-Piper
-        $string7 = /.{0,1000}\-remote\s\-destPipe\s.{0,1000}\s\-pipeHost\s.{0,1000}\s\-destHost\s.{0,1000}/ nocase ascii wide
+        $string7 = /\-remote\s\-destPipe\s.{0,1000}\s\-pipeHost\s.{0,1000}\s\-destHost\s/ nocase ascii wide
 
     condition:
         any of them

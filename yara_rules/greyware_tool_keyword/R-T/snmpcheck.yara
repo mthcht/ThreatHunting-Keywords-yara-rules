@@ -10,10 +10,10 @@ rule snmpcheck
     strings:
         // Description: automate the process of gathering information of any devices with SNMP protocol support. like snmpwalk - snmpcheck allows you to enumerate the SNMP devices and places the output in a very human readable friendly format. It could be useful for penetration testing or systems monitoring
         // Reference: http://www.nothink.org/codes/snmpcheck/index.php
-        $string1 = /.{0,1000}install\ssnmpcheck.{0,1000}/ nocase ascii wide
+        $string1 = /install\ssnmpcheck/ nocase ascii wide
         // Description: automate the process of gathering information of any devices with SNMP protocol support. like snmpwalk - snmpcheck allows you to enumerate the SNMP devices and places the output in a very human readable friendly format. It could be useful for penetration testing or systems monitoring
         // Reference: http://www.nothink.org/codes/snmpcheck/index.php
-        $string2 = /.{0,1000}snmp\-check\s.{0,1000}\s\-c\spublic.{0,1000}/ nocase ascii wide
+        $string2 = /snmp\-check\s.{0,1000}\s\-c\spublic/ nocase ascii wide
 
     condition:
         any of them

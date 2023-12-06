@@ -10,13 +10,13 @@ rule Ghostpack_CompiledBinaries
     strings:
         // Description: Compiled Binaries for Ghostpack
         // Reference: https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
-        $string1 = /.{0,1000}Ghostpack\-CompiledBinaries.{0,1000}/ nocase ascii wide
+        $string1 = /Ghostpack\-CompiledBinaries/ nocase ascii wide
         // Description: Compiled Binaries for Ghostpack
         // Reference: https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
-        $string2 = /.{0,1000}RestrictedAdmin\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /RestrictedAdmin\.exe/ nocase ascii wide
         // Description: Compiled Binaries for Ghostpack
         // Reference: https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
-        $string3 = /.{0,1000}SharpRoast\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /SharpRoast\.exe/ nocase ascii wide
 
     condition:
         any of them

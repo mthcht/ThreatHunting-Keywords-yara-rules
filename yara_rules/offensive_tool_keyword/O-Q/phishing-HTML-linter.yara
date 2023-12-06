@@ -10,34 +10,34 @@ rule phishing_HTML_linter
     strings:
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string1 = /.{0,1000}\/VisualBasicObfuscator.{0,1000}/ nocase ascii wide
+        $string1 = /\/VisualBasicObfuscator/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string2 = /.{0,1000}DancingRightToLeft\.py.{0,1000}/ nocase ascii wide
+        $string2 = /DancingRightToLeft\.py/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string3 = /.{0,1000}gophish\-send\-mail\.py.{0,1000}/ nocase ascii wide
+        $string3 = /gophish\-send\-mail\.py/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string4 = /.{0,1000}MacroDetectSandbox\.vbs.{0,1000}/ nocase ascii wide
+        $string4 = /MacroDetectSandbox\.vbs/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string5 = /.{0,1000}Phish\-Creds\.ps1.{0,1000}/ nocase ascii wide
+        $string5 = /Phish\-Creds\.ps1/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string6 = /.{0,1000}phishing\-HTML\-linter\..{0,1000}/ nocase ascii wide
+        $string6 = /phishing\-HTML\-linter\./ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string7 = /.{0,1000}RobustPentestMacro.{0,1000}/ nocase ascii wide
+        $string7 = /RobustPentestMacro/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string8 = /.{0,1000}vba\-macro\-mac\-persistence\.vbs.{0,1000}/ nocase ascii wide
+        $string8 = /vba\-macro\-mac\-persistence\.vbs/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string9 = /.{0,1000}vba\-windows\-persistence\.vbs.{0,1000}/ nocase ascii wide
+        $string9 = /vba\-windows\-persistence\.vbs/ nocase ascii wide
         // Description: Phishing and Social-Engineering related scripts
         // Reference: https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/phishing
-        $string10 = /.{0,1000}WMIPersistence\.vbs.{0,1000}/ nocase ascii wide
+        $string10 = /WMIPersistence\.vbs/ nocase ascii wide
 
     condition:
         any of them

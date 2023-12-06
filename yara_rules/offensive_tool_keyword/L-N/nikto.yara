@@ -10,40 +10,40 @@ rule nikto
     strings:
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string1 = /.{0,1000}\sinstall\snikto.{0,1000}/ nocase ascii wide
+        $string1 = /\sinstall\snikto/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string2 = /.{0,1000}\snikto\.pl\s.{0,1000}/ nocase ascii wide
+        $string2 = /\snikto\.pl\s/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string3 = /.{0,1000}\/nikto\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/nikto\.git/ nocase ascii wide
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string4 = /.{0,1000}\/nikto\.pl.{0,1000}/ nocase ascii wide
+        $string4 = /\/nikto\.pl/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string5 = /.{0,1000}\/nikto\.pl.{0,1000}/ nocase ascii wide
+        $string5 = /\/nikto\.pl/ nocase ascii wide
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string6 = /.{0,1000}\/sullo\/nikto.{0,1000}/ nocase ascii wide
+        $string6 = /\/sullo\/nikto/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string7 = /.{0,1000}nikto\s\-C\sall\s.{0,1000}/ nocase ascii wide
+        $string7 = /nikto\s\-C\sall\s/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string8 = /.{0,1000}nikto\/program.{0,1000}/ nocase ascii wide
+        $string8 = /nikto\/program/ nocase ascii wide
         // Description: Nikto web scanner tool
         // Reference: https://github.com/sullo/nikto
-        $string9 = /.{0,1000}perl\snikto\.pl\s\-h.{0,1000}/ nocase ascii wide
+        $string9 = /perl\snikto\.pl\s\-h/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string10 = /.{0,1000}program\/replay\.pl.{0,1000}/ nocase ascii wide
+        $string10 = /program\/replay\.pl/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string11 = /.{0,1000}sullo\/nikto.{0,1000}/ nocase ascii wide
+        $string11 = /sullo\/nikto/ nocase ascii wide
         // Description: Nikto web server scanner
         // Reference: https://github.com/sullo/nikto
-        $string12 = /nikto\s\-.{0,1000}/ nocase ascii wide
+        $string12 = /nikto\s\-/ nocase ascii wide
 
     condition:
         any of them

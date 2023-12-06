@@ -10,7 +10,7 @@ rule email_format
     strings:
         // Description: used by attackers to find informations about a company users
         // Reference: https://www.email-format.com
-        $string1 = /.{0,1000}https:\/\/www\.email\-format\.com\/d\/.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/www\.email\-format\.com\/d\// nocase ascii wide
 
     condition:
         any of them

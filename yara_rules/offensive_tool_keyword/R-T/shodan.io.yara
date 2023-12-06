@@ -10,7 +10,7 @@ rule shodan_io
     strings:
         // Description: Shodan is the worlds first search engine for Internet-connected devices.
         // Reference: https://www.shodan.io/
-        $string1 = /.{0,1000}Shodan\.io.{0,1000}/ nocase ascii wide
+        $string1 = /Shodan\.io/ nocase ascii wide
 
     condition:
         any of them

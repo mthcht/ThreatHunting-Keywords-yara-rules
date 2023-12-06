@@ -10,31 +10,31 @@ rule impersonate_rs
     strings:
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string1 = /.{0,1000}\sexec\s.{0,1000}\s\-p\s.{0,1000}\s\-c\s.{0,1000}/ nocase ascii wide
+        $string1 = /\sexec\s.{0,1000}\s\-p\s.{0,1000}\s\-c\s/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string2 = /.{0,1000}\sexec\s.{0,1000}\s\-\-pid\s.{0,1000}\s\-\-command\s.{0,1000}/ nocase ascii wide
+        $string2 = /\sexec\s.{0,1000}\s\-\-pid\s.{0,1000}\s\-\-command\s/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string3 = /.{0,1000}\/impersonate\-rs.{0,1000}/ nocase ascii wide
+        $string3 = /\/impersonate\-rs/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string4 = /.{0,1000}\/irs\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /\/irs\.exe/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string5 = /.{0,1000}\\irs\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /\\irs\.exe/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string6 = /.{0,1000}irs\.exe\s\-.{0,1000}/ nocase ascii wide
+        $string6 = /irs\.exe\s\-/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string7 = /.{0,1000}irs\.exe\sexec.{0,1000}/ nocase ascii wide
+        $string7 = /irs\.exe\sexec/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string8 = /.{0,1000}irs\.exe\slist.{0,1000}/ nocase ascii wide
+        $string8 = /irs\.exe\slist/ nocase ascii wide
         // Description: Reimplementation of Defte Impersonate in plain Rust allow you to impersonate any user on the target computer as long as you have administrator privileges (No NT SYSTEM needed) and is usable with and without GUI
         // Reference: https://github.com/zblurx/impersonate-rs
-        $string9 = /.{0,1000}irs\.exe\slist.{0,1000}/ nocase ascii wide
+        $string9 = /irs\.exe\slist/ nocase ascii wide
 
     condition:
         any of them

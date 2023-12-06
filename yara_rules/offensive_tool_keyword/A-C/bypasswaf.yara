@@ -10,13 +10,13 @@ rule bypasswaf
     strings:
         // Description: Add headers to all Burp requests to bypass some WAF products
         // Reference: https://github.com/codewatchorg/bypasswaf
-        $string1 = /.{0,1000}bypasswaf\.jar.{0,1000}/ nocase ascii wide
+        $string1 = /bypasswaf\.jar/ nocase ascii wide
         // Description: Add headers to all Burp requests to bypass some WAF products
         // Reference: https://github.com/codewatchorg/bypasswaf
-        $string2 = /.{0,1000}bypasswaf\.py.{0,1000}/ nocase ascii wide
+        $string2 = /bypasswaf\.py/ nocase ascii wide
         // Description: Add headers to all Burp requests to bypass some WAF products
         // Reference: https://github.com/codewatchorg/bypasswaf
-        $string3 = /.{0,1000}codewatchorg\/bypasswaf.{0,1000}/ nocase ascii wide
+        $string3 = /codewatchorg\/bypasswaf/ nocase ascii wide
 
     condition:
         any of them

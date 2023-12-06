@@ -10,7 +10,7 @@ rule datasploit
     strings:
         // Description: Performs OSINT on a domain / email / username / phone and find out information from different sources
         // Reference: https://github.com/dvopsway/datasploit
-        $string1 = /.{0,1000}DataSploit.{0,1000}/ nocase ascii wide
+        $string1 = /DataSploit/ nocase ascii wide
 
     condition:
         any of them

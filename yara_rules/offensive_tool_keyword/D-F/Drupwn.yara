@@ -10,7 +10,7 @@ rule Drupwn
     strings:
         // Description: Drupal Security Scanner to perform enumerations on Drupal-based web applications.
         // Reference: https://github.com/immunIT/drupwn
-        $string1 = /.{0,1000}Drupwn.{0,1000}/ nocase ascii wide
+        $string1 = /Drupwn/ nocase ascii wide
 
     condition:
         any of them

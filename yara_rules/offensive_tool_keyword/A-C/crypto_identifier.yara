@@ -10,7 +10,7 @@ rule crypto_identifier
     strings:
         // Description: Crypto tool for pentest and ctf : try to uncipher data using multiple algorithms and block chaining modes. Usefull for a quick check on unknown cipher text and key dictionary
         // Reference: https://github.com/Acceis/crypto_identifier
-        $string1 = /.{0,1000}crypto_identifier.{0,1000}/ nocase ascii wide
+        $string1 = /crypto_identifier/ nocase ascii wide
 
     condition:
         any of them

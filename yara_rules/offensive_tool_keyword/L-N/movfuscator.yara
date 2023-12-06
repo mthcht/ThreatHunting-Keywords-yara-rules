@@ -10,7 +10,7 @@ rule movfuscator
     strings:
         // Description: The M/o/Vfuscator (short 'o. sounds like mobfuscator) compiles programs into mov instructions. and only mov instructions. Arithmetic. comparisons. jumps. function calls. and everything else a program needs are all performed through mov operations. there is no self-modifying code. no transport-triggered calculation. and no other form of non-mov cheating
         // Reference: https://github.com/xoreaxeaxeax/movfuscator
-        $string1 = /.{0,1000}movfuscator.{0,1000}/ nocase ascii wide
+        $string1 = /movfuscator/ nocase ascii wide
 
     condition:
         any of them

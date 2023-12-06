@@ -10,7 +10,7 @@ rule WMIPersistence
     strings:
         // Description: An example of how to perform WMI Event Subscription persistence using C#
         // Reference: https://github.com/mdsecactivebreach/WMIPersistence
-        $string1 = /.{0,1000}WMIPersist\..{0,1000}/ nocase ascii wide
+        $string1 = /WMIPersist\./ nocase ascii wide
 
     condition:
         any of them

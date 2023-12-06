@@ -10,7 +10,7 @@ rule textbin_net
     strings:
         // Description: textbin.net raw access content - abused by malwares to retrieve payloads
         // Reference: textbin.net
-        $string1 = /.{0,1000}https:\/\/textbin\.net\/raw\/.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/textbin\.net\/raw\// nocase ascii wide
 
     condition:
         any of them

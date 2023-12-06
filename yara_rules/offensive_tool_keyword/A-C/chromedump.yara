@@ -10,19 +10,19 @@ rule chromedump
     strings:
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string1 = /.{0,1000}\/ChromeDump\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/ChromeDump\// nocase ascii wide
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string2 = /.{0,1000}\/dumpweb\.log.{0,1000}/ nocase ascii wide
+        $string2 = /\/dumpweb\.log/ nocase ascii wide
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string3 = /.{0,1000}ChromeDump\.git.{0,1000}/ nocase ascii wide
+        $string3 = /ChromeDump\.git/ nocase ascii wide
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string4 = /.{0,1000}chromedump\.py.{0,1000}/ nocase ascii wide
+        $string4 = /chromedump\.py/ nocase ascii wide
         // Description: ChromeDump is a small tool to dump all JavaScript and other ressources going through the browser
         // Reference: https://github.com/g4l4drim/ChromeDump
-        $string5 = /.{0,1000}ChromeDump\-main\.zip.{0,1000}/ nocase ascii wide
+        $string5 = /ChromeDump\-main\.zip/ nocase ascii wide
 
     condition:
         any of them

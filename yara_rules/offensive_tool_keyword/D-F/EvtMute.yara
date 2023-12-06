@@ -10,73 +10,73 @@ rule EvtMute
     strings:
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string1 = /.{0,1000}\.exe.{0,1000}\s\-\-Filter\s.{0,1000}rule\sdisable\s{\scondition:\strue\s}.{0,1000}/ nocase ascii wide
+        $string1 = /\.exe.{0,1000}\s\-\-Filter\s.{0,1000}rule\sdisable\s{\scondition:\strue\s}/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string2 = /.{0,1000}\/EvtMute\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/EvtMute\.git/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string3 = /.{0,1000}bats3c\/EvtMute.{0,1000}/ nocase ascii wide
+        $string3 = /bats3c\/EvtMute/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string4 = /.{0,1000}ConvertToShellcode\.py.{0,1000}/ nocase ascii wide
+        $string4 = /ConvertToShellcode\.py/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string5 = /.{0,1000}DQoNCiAgICwuICAgKCAgIC4gICAgICApICAgICAgICAgICAgICAgIiAgICAgICAgICAgICwuICAgKCAgI.{0,1000}/ nocase ascii wide
+        $string5 = /DQoNCiAgICwuICAgKCAgIC4gICAgICApICAgICAgICAgICAgICAgIiAgICAgICAgICAgICwuICAgKCAgI/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string6 = /.{0,1000}EvtMuteHook\.dll.{0,1000}/ nocase ascii wide
+        $string6 = /EvtMuteHook\.dll/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string7 = /.{0,1000}EvtMuteHook\.dll.{0,1000}/ nocase ascii wide
+        $string7 = /EvtMuteHook\.dll/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string8 = /.{0,1000}EvtMuteHook\.iobj.{0,1000}/ nocase ascii wide
+        $string8 = /EvtMuteHook\.iobj/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string9 = /.{0,1000}EvtMuteHook\.ipdb.{0,1000}/ nocase ascii wide
+        $string9 = /EvtMuteHook\.ipdb/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string10 = /.{0,1000}EvtMuteHook\.pdb.{0,1000}/ nocase ascii wide
+        $string10 = /EvtMuteHook\.pdb/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string11 = /.{0,1000}EvtMuteHook\.sln.{0,1000}/ nocase ascii wide
+        $string11 = /EvtMuteHook\.sln/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string12 = /.{0,1000}EvtMute\-master.{0,1000}/ nocase ascii wide
+        $string12 = /EvtMute\-master/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string13 = /.{0,1000}JG1lbnUgPSAiIgppZiAoJGZ1bmNpb25lc19wcmV2aWFzLmNvdW50IC1sZSAxKSB.{0,1000}/ nocase ascii wide
+        $string13 = /JG1lbnUgPSAiIgppZiAoJGZ1bmNpb25lc19wcmV2aWFzLmNvdW50IC1sZSAxKSB/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string14 = /.{0,1000}JGNvZGUgPSBAIgp1c2luZyBTeXN0ZW07CnVzaW5nIFN5c3RlbS5SdW50aW1lLkludGVyb3BTZXJ2aWNlczsKcHVibGl.{0,1000}/ nocase ascii wide
+        $string14 = /JGNvZGUgPSBAIgp1c2luZyBTeXN0ZW07CnVzaW5nIFN5c3RlbS5SdW50aW1lLkludGVyb3BTZXJ2aWNlczsKcHVibGl/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string15 = /.{0,1000}SharpEvtMute\.cs.{0,1000}/ nocase ascii wide
+        $string15 = /SharpEvtMute\.cs/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string16 = /.{0,1000}SharpEvtMute\.exe.{0,1000}/ nocase ascii wide
+        $string16 = /SharpEvtMute\.exe/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string17 = /.{0,1000}SharpEvtMute\.pdb.{0,1000}/ nocase ascii wide
+        $string17 = /SharpEvtMute\.pdb/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string18 = /.{0,1000}SharpEvtMute\.sln.{0,1000}/ nocase ascii wide
+        $string18 = /SharpEvtMute\.sln/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string19 = /.{0,1000}ShellcodeRDI\.py.{0,1000}/ nocase ascii wide
+        $string19 = /ShellcodeRDI\.py/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string20 = /.{0,1000}YaraFilters.{0,1000}lsassdump\.yar.{0,1000}/ nocase ascii wide
+        $string20 = /YaraFilters.{0,1000}lsassdump\.yar/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string21 = /.{0,1000}ZnVuY3Rpb24gRG9udXQtTG9hZGVyIHtwYXJhbSgkcHJvY2Vzc19pZCwkZG9udXRmaWx.{0,1000}/ nocase ascii wide
+        $string21 = /ZnVuY3Rpb24gRG9udXQtTG9hZGVyIHtwYXJhbSgkcHJvY2Vzc19pZCwkZG9udXRmaWx/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string22 = /.{0,1000}ZnVuY3Rpb24gRGxsLUxvYWRlciB7CiAgICBwYXJhbShbc3dpdGNoXSRzbWIsIFtzd2l0Y.{0,1000}/ nocase ascii wide
+        $string22 = /ZnVuY3Rpb24gRGxsLUxvYWRlciB7CiAgICBwYXJhbShbc3dpdGNoXSRzbWIsIFtzd2l0Y/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string23 = /.{0,1000}ZnVuY3Rpb24gSW52b2tlLUJpbmFyeSB7cGFyYW0oJGFyZykKICAgICRoZWxwPUAi.{0,1000}/ nocase ascii wide
+        $string23 = /ZnVuY3Rpb24gSW52b2tlLUJpbmFyeSB7cGFyYW0oJGFyZykKICAgICRoZWxwPUAi/ nocase ascii wide
 
     condition:
         any of them

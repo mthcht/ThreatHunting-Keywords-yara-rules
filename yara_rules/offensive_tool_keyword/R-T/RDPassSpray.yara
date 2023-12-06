@@ -10,25 +10,25 @@ rule RDPassSpray
     strings:
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string1 = /.{0,1000}\/RDPassSpray\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/RDPassSpray\.git/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string2 = /.{0,1000}RDPassSpray\..{0,1000}\.log.{0,1000}/ nocase ascii wide
+        $string2 = /RDPassSpray\..{0,1000}\.log/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string3 = /.{0,1000}RDPassSpray\.csv.{0,1000}/ nocase ascii wide
+        $string3 = /RDPassSpray\.csv/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string4 = /.{0,1000}RDPassSpray\.py.{0,1000}/ nocase ascii wide
+        $string4 = /RDPassSpray\.py/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string5 = /.{0,1000}RDPassSpray\-master.{0,1000}/ nocase ascii wide
+        $string5 = /RDPassSpray\-master/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string6 = /.{0,1000}xFreed0m\/RDPassSpray.{0,1000}/ nocase ascii wide
+        $string6 = /xFreed0m\/RDPassSpray/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string7 = /.{0,1000}xfreerdp\s\/v.{0,1000}SOCtest.{0,1000}AllLegitHere.{0,1000}/ nocase ascii wide
+        $string7 = /xfreerdp\s\/v.{0,1000}SOCtest.{0,1000}AllLegitHere/ nocase ascii wide
 
     condition:
         any of them

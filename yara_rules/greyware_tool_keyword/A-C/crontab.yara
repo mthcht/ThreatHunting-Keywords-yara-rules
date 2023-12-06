@@ -10,7 +10,7 @@ rule crontab
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1 = /.{0,1000}crontab.{0,1000}\ssleep\s.{0,1000}ncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}crontab.{0,1000}/ nocase ascii wide
+        $string1 = /crontab.{0,1000}\ssleep\s.{0,1000}ncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}crontab/ nocase ascii wide
 
     condition:
         any of them

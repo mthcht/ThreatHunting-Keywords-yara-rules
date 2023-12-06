@@ -10,19 +10,19 @@ rule PowerBruteLogon
     strings:
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/PowerBruteLogon
-        $string1 = /.{0,1000}\/PowerBruteLogon.{0,1000}/ nocase ascii wide
+        $string1 = /\/PowerBruteLogon/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/PowerBruteLogon
-        $string2 = /.{0,1000}Invoke\-BruteAvailableLogons.{0,1000}/ nocase ascii wide
+        $string2 = /Invoke\-BruteAvailableLogons/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/PowerBruteLogon
-        $string3 = /.{0,1000}Invoke\-BruteLogonAccount.{0,1000}/ nocase ascii wide
+        $string3 = /Invoke\-BruteLogonAccount/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/PowerBruteLogon
-        $string4 = /.{0,1000}Invoke\-BruteLogonList.{0,1000}/ nocase ascii wide
+        $string4 = /Invoke\-BruteLogonList/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/PowerBruteLogon
-        $string5 = /.{0,1000}PowerBruteLogon\..{0,1000}/ nocase ascii wide
+        $string5 = /PowerBruteLogon\./ nocase ascii wide
 
     condition:
         any of them

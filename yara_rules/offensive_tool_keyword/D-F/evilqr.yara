@@ -10,22 +10,22 @@ rule evilqr
     strings:
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string1 = /.{0,1000}\/evilqr\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/evilqr\.git/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string2 = /.{0,1000}evilqr\-main.{0,1000}/ nocase ascii wide
+        $string2 = /evilqr\-main/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string3 = /.{0,1000}evilqr\-phishing.{0,1000}/ nocase ascii wide
+        $string3 = /evilqr\-phishing/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string4 = /.{0,1000}evilqr\-server.{0,1000}/ nocase ascii wide
+        $string4 = /evilqr\-server/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string5 = /.{0,1000}http:\/\/127\.0\.0\.1:35000.{0,1000}/ nocase ascii wide
+        $string5 = /http:\/\/127\.0\.0\.1:35000/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string6 = /.{0,1000}kgretzky\/evilqr.{0,1000}/ nocase ascii wide
+        $string6 = /kgretzky\/evilqr/ nocase ascii wide
 
     condition:
         any of them

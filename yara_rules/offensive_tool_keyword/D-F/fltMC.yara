@@ -10,7 +10,7 @@ rule fltMC
     strings:
         // Description: Unload Sysmon driver. allow the attacker to bypass sysmon detections (most of it. network monitoring will still be effective)
         // Reference: https://github.com/mthcht/Purpleteam/blob/main/Simulation/Windows/System/unload_sysmon_driver_with_fltmc.ps1
-        $string1 = /.{0,1000}fltMC.{0,1000}\sunload\sSysmonDrv.{0,1000}/ nocase ascii wide
+        $string1 = /fltMC.{0,1000}\sunload\sSysmonDrv/ nocase ascii wide
 
     condition:
         any of them

@@ -10,28 +10,28 @@ rule SharPersist
     strings:
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string1 = /.{0,1000}\s\-t\sschtaskbackdoor\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-t\sschtaskbackdoor\s/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string2 = /.{0,1000}\.exe\s\-t\skeepass\s\-f\s.{0,1000}/ nocase ascii wide
+        $string2 = /\.exe\s\-t\skeepass\s\-f\s/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string3 = /.{0,1000}\.exe\s\-t\sstartupfolder\s\-c\s.{0,1000}\s\-a\s.{0,1000}\s\-f.{0,1000}/ nocase ascii wide
+        $string3 = /\.exe\s\-t\sstartupfolder\s\-c\s.{0,1000}\s\-a\s.{0,1000}\s\-f/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string4 = /.{0,1000}\.exe\s\-t\stortoisesvn\s\-c\s.{0,1000}\s\-a\s.{0,1000}\s\-m.{0,1000}/ nocase ascii wide
+        $string4 = /\.exe\s\-t\stortoisesvn\s\-c\s.{0,1000}\s\-a\s.{0,1000}\s\-m/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string5 = /.{0,1000}9D1B853E\-58F1\-4BA5\-AEFC\-5C221CA30E48.{0,1000}/ nocase ascii wide
+        $string5 = /9D1B853E\-58F1\-4BA5\-AEFC\-5C221CA30E48/ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string6 = /.{0,1000}KeePassBackdoor\..{0,1000}/ nocase ascii wide
+        $string6 = /KeePassBackdoor\./ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string7 = /.{0,1000}SchTaskBackdoor\..{0,1000}/ nocase ascii wide
+        $string7 = /SchTaskBackdoor\./ nocase ascii wide
         // Description: SharPersist Windows persistence toolkit written in C#.
         // Reference: https://github.com/fireeye/SharPersist
-        $string8 = /.{0,1000}SharPersist.{0,1000}/ nocase ascii wide
+        $string8 = /SharPersist/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule ctftool
     strings:
         // Description: This is ctftool. an interactive command line tool to experiment with CTF. a little-known protocol used on Windows to implement Text Services. This might be useful for studying Windows internals. debugging complex issues with Text Input Processors and analyzing Windows security.
         // Reference: https://github.com/taviso/ctftool
-        $string1 = /.{0,1000}ctftool.{0,1000}/ nocase ascii wide
+        $string1 = /ctftool/ nocase ascii wide
 
     condition:
         any of them

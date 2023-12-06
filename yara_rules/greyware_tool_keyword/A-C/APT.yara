@@ -10,7 +10,7 @@ rule APT
     strings:
         // Description: linux commands abused by attackers - backdoor apt execute a command when invoking apt
         // Reference: N/A
-        $string1 = /.{0,1000}APT::Update::Pre\-Invoke\s.{0,1000}}.{0,1000}/ nocase ascii wide
+        $string1 = /APT::Update::Pre\-Invoke\s.{0,1000}}/ nocase ascii wide
 
     condition:
         any of them

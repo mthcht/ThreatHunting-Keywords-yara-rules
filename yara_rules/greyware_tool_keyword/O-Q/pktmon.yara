@@ -10,7 +10,7 @@ rule pktmon
     strings:
         // Description: pktmon network diagnostics tool for Windows that can be used for packet capture - packet drop detection - packet filtering and counting.
         // Reference: https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon
-        $string1 = /.{0,1000}pktmon\sstart.{0,1000}/ nocase ascii wide
+        $string1 = /pktmon\sstart/ nocase ascii wide
 
     condition:
         any of them

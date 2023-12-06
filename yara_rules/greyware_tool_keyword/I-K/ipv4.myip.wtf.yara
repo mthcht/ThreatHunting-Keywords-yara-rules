@@ -10,7 +10,7 @@ rule ipv4_myip_wtf
     strings:
         // Description: get public ip address. Used by disctopia-c2
         // Reference: https://github.com/3ct0s/disctopia-c2/blob/main/libraries/disctopia.py
-        $string1 = /.{0,1000}https:\/\/ipv4\.myip\.wtf\/text.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/ipv4\.myip\.wtf\/text/ nocase ascii wide
 
     condition:
         any of them

@@ -10,61 +10,61 @@ rule lyncsmash
     strings:
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string1 = /.{0,1000}\.py\sdiscover\s\-H\sdomain_list\.txt.{0,1000}/ nocase ascii wide
+        $string1 = /\.py\sdiscover\s\-H\sdomain_list\.txt/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string2 = /.{0,1000}\.py\senum\s\-H\s.{0,1000}\s\-U\s.{0,1000}\.txt\s\-P\s.{0,1000}\.txt\s\-.{0,1000}\.txt.{0,1000}/ nocase ascii wide
+        $string2 = /\.py\senum\s\-H\s.{0,1000}\s\-U\s.{0,1000}\.txt\s\-P\s.{0,1000}\.txt\s\-.{0,1000}\.txt/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string3 = /.{0,1000}\.py\slock\s\-H\s.{0,1000}\s\-u\sadministrator\s\-d\s.{0,1000}/ nocase ascii wide
+        $string3 = /\.py\slock\s\-H\s.{0,1000}\s\-u\sadministrator\s\-d\s/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string4 = /.{0,1000}\/find_domain\.sh.{0,1000}/ nocase ascii wide
+        $string4 = /\/find_domain\.sh/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string5 = /.{0,1000}\/lyncsmash\/.{0,1000}/ nocase ascii wide
+        $string5 = /\/lyncsmash\// nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string6 = /.{0,1000}\/wordlists\/owa_directories\.txt.{0,1000}/ nocase ascii wide
+        $string6 = /\/wordlists\/owa_directories\.txt/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string7 = /.{0,1000}\/wordlists\/skype\-directories\.txt.{0,1000}/ nocase ascii wide
+        $string7 = /\/wordlists\/skype\-directories\.txt/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string8 = /.{0,1000}1_FindDomain\.sh.{0,1000}/ nocase ascii wide
+        $string8 = /1_FindDomain\.sh/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string9 = /.{0,1000}2_lyncbrute\.sh.{0,1000}/ nocase ascii wide
+        $string9 = /2_lyncbrute\.sh/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string10 = /.{0,1000}alexa\-top\-20000\-sites\.txt.{0,1000}/ nocase ascii wide
+        $string10 = /alexa\-top\-20000\-sites\.txt/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string11 = /.{0,1000}brute_force_ntlm\.sh.{0,1000}/ nocase ascii wide
+        $string11 = /brute_force_ntlm\.sh/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string12 = /.{0,1000}find_domain\.sh\s.{0,1000}/ nocase ascii wide
+        $string12 = /find_domain\.sh\s/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string13 = /.{0,1000}lyncsmash.{0,1000}/ nocase ascii wide
+        $string13 = /lyncsmash/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string14 = /.{0,1000}lyncsmash\.git.{0,1000}/ nocase ascii wide
+        $string14 = /lyncsmash\.git/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string15 = /.{0,1000}lyncsmash\.log.{0,1000}/ nocase ascii wide
+        $string15 = /lyncsmash\.log/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string16 = /.{0,1000}lyncsmash\.py.{0,1000}/ nocase ascii wide
+        $string16 = /lyncsmash\.py/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string17 = /.{0,1000}lyncsmash\-master.{0,1000}/ nocase ascii wide
+        $string17 = /lyncsmash\-master/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string18 = /.{0,1000}ntlm\-info\.py.{0,1000}/ nocase ascii wide
+        $string18 = /ntlm\-info\.py/ nocase ascii wide
         // Description: a collection of tools to enumerate and attack self-hosted Skype for Business and Microsoft Lync installations 
         // Reference: https://github.com/nyxgeek/lyncsmash
-        $string19 = /.{0,1000}nyxgeek\/lyncsmash.{0,1000}/ nocase ascii wide
+        $string19 = /nyxgeek\/lyncsmash/ nocase ascii wide
 
     condition:
         any of them

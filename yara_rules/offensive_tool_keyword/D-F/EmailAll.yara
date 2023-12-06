@@ -10,31 +10,31 @@ rule EmailAll
     strings:
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string1 = /.{0,1000}\s\-\-domains\s\.\/domains\.txt\srun.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-domains\s\.\/domains\.txt\srun/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string2 = /.{0,1000}\semailall\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\semailall\.py/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string3 = /.{0,1000}\/EmailAll\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/EmailAll\.git/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string4 = /.{0,1000}\/emailall\.py.{0,1000}/ nocase ascii wide
+        $string4 = /\/emailall\.py/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string5 = /.{0,1000}\\emailall\.py.{0,1000}/ nocase ascii wide
+        $string5 = /\\emailall\.py/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string6 = /.{0,1000}emailall\.py\s\-.{0,1000}/ nocase ascii wide
+        $string6 = /emailall\.py\s\-/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string7 = /.{0,1000}emailall\.py\scheck.{0,1000}/ nocase ascii wide
+        $string7 = /emailall\.py\scheck/ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string8 = /.{0,1000}EmailAll\-master\..{0,1000}/ nocase ascii wide
+        $string8 = /EmailAll\-master\./ nocase ascii wide
         // Description: EmailAll is a powerful Email Collect tool
         // Reference: https://github.com/Taonn/EmailAll
-        $string9 = /.{0,1000}Taonn\/EmailAll.{0,1000}/ nocase ascii wide
+        $string9 = /Taonn\/EmailAll/ nocase ascii wide
 
     condition:
         any of them

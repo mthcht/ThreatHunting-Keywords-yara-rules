@@ -10,46 +10,46 @@ rule litefuzz
     strings:
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string1 = /.{0,1000}\.\/litefuzz\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\.\/litefuzz\.py/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string2 = /.{0,1000}\/sec\-tools\/litefuzz.{0,1000}/ nocase ascii wide
+        $string2 = /\/sec\-tools\/litefuzz/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string3 = /.{0,1000}AcroRd32\.exe\sFUZZ.{0,1000}/ nocase ascii wide
+        $string3 = /AcroRd32\.exe\sFUZZ/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string4 = /.{0,1000}antiword\sFUZZ.{0,1000}/ nocase ascii wide
+        $string4 = /antiword\sFUZZ/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string5 = /.{0,1000}litefuzz\s\-lk\s\-c.{0,1000}/ nocase ascii wide
+        $string5 = /litefuzz\s\-lk\s\-c/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string6 = /.{0,1000}litefuzz\s\-s\s\-a\s.{0,1000}/ nocase ascii wide
+        $string6 = /litefuzz\s\-s\s\-a\s/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string7 = /.{0,1000}litefuzz.{0,1000}\s\-l\s\-c.{0,1000}/ nocase ascii wide
+        $string7 = /litefuzz.{0,1000}\s\-l\s\-c/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string8 = /.{0,1000}litefuzz\.py\s.{0,1000}/ nocase ascii wide
+        $string8 = /litefuzz\.py\s/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string9 = /.{0,1000}litefuzz\\fuzz\.py.{0,1000}/ nocase ascii wide
+        $string9 = /litefuzz\\fuzz\.py/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string10 = /.{0,1000}\-\-mutator\sN.{0,1000}/ nocase ascii wide
+        $string10 = /\-\-mutator\sN/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string11 = /.{0,1000}mutator\.py\s.{0,1000}/ nocase ascii wide
+        $string11 = /mutator\.py\s/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string12 = /.{0,1000}notepad\sFUZZ.{0,1000}/ nocase ascii wide
+        $string12 = /notepad\sFUZZ/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string13 = /.{0,1000}puttygen\.exe\sFUZZ.{0,1000}/ nocase ascii wide
+        $string13 = /puttygen\.exe\sFUZZ/ nocase ascii wide
         // Description: A multi-platform fuzzer for poking at userland binaries and servers
         // Reference: https://github.com/sec-tools/litefuzz
-        $string14 = /.{0,1000}test_litefuzz\.py.{0,1000}/ nocase ascii wide
+        $string14 = /test_litefuzz\.py/ nocase ascii wide
 
     condition:
         any of them

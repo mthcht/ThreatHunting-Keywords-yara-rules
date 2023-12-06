@@ -10,7 +10,7 @@ rule Aclpwn
     strings:
         // Description: Aclpwn.py is a tool that interacts with BloodHound to identify and exploit ACL based privilege escalation paths. It takes a starting and ending point and will use Neo4j pathfinding algorithms to find the most efficient ACL based privilege escalation path. Aclpwn.py is similar to the PowerShell based Invoke-Aclpwn
         // Reference: https://github.com/fox-it/aclpwn.py
-        $string1 = /.{0,1000}aclpwn\.py.{0,1000}/ nocase ascii wide
+        $string1 = /aclpwn\.py/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule yodo
     strings:
         // Description: This tool proves how easy it is to become root via limited sudo permissions. via dirty COW or using Pa(th)zuzu. 
         // Reference: https://github.com/b3rito/yodo
-        $string1 = /.{0,1000}b3rito.{0,1000}yodo.{0,1000}/ nocase ascii wide
+        $string1 = /b3rito.{0,1000}yodo/ nocase ascii wide
 
     condition:
         any of them

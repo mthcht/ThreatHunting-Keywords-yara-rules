@@ -10,34 +10,34 @@ rule pyrdp
     strings:
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string1 = /.{0,1000}\s\-\-nla\-redirection\-host\s.{0,1000}\s\-\-nla\-redirection\-port\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-nla\-redirection\-host\s.{0,1000}\s\-\-nla\-redirection\-port\s/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string2 = /.{0,1000}\/pyrdp\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/pyrdp\.git/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string3 = /.{0,1000}\/pyrdp:latest.{0,1000}/ nocase ascii wide
+        $string3 = /\/pyrdp:latest/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string4 = /.{0,1000}gosecure\/pyrdp.{0,1000}/ nocase ascii wide
+        $string4 = /gosecure\/pyrdp/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string5 = /.{0,1000}pyrdp_output\s\-.{0,1000}/ nocase ascii wide
+        $string5 = /pyrdp_output\s\-/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string6 = /.{0,1000}pyrdp\-clonecert\.py.{0,1000}/ nocase ascii wide
+        $string6 = /pyrdp\-clonecert\.py/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string7 = /.{0,1000}pyrdp\-convert\.py.{0,1000}/ nocase ascii wide
+        $string7 = /pyrdp\-convert\.py/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string8 = /.{0,1000}pyrdp\-mitm\.py.{0,1000}/ nocase ascii wide
+        $string8 = /pyrdp\-mitm\.py/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string9 = /.{0,1000}pyrdp\-player\.py.{0,1000}/ nocase ascii wide
+        $string9 = /pyrdp\-player\.py/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string10 = /.{0,1000}test_mitm_initialization\.py.{0,1000}/ nocase ascii wide
+        $string10 = /test_mitm_initialization\.py/ nocase ascii wide
 
     condition:
         any of them

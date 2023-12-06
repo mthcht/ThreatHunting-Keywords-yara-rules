@@ -10,7 +10,7 @@ rule Red_Teaming_Toolkit
     strings:
         // Description: A collection of open source and commercial tools that aid in red team operations. This repository will help you during red team engagement. If you want to contribute to this list send me a pull request
         // Reference: https://github.com/infosecn1nja/Red-Teaming-Toolkit
-        $string1 = /.{0,1000}Red\-Teaming\-Toolkit.{0,1000}/ nocase ascii wide
+        $string1 = /Red\-Teaming\-Toolkit/ nocase ascii wide
 
     condition:
         any of them

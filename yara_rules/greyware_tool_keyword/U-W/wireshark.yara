@@ -10,85 +10,85 @@ rule wireshark
     strings:
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string1 = /.{0,1000}dl\.wireshark\.org.{0,1000}/ nocase ascii wide
+        $string1 = /dl\.wireshark\.org/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string2 = /.{0,1000}dumpcap\s\-.{0,1000}/ nocase ascii wide
+        $string2 = /dumpcap\s\-/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string3 = /.{0,1000}install\stshark.{0,1000}/ nocase ascii wide
+        $string3 = /install\stshark/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string4 = /.{0,1000}libwireshark16.{0,1000}/ nocase ascii wide
+        $string4 = /libwireshark16/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string5 = /.{0,1000}libwireshark\-data.{0,1000}/ nocase ascii wide
+        $string5 = /libwireshark\-data/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string6 = /.{0,1000}libwireshark\-dev.{0,1000}/ nocase ascii wide
+        $string6 = /libwireshark\-dev/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string7 = /.{0,1000}libwiretap13.{0,1000}/ nocase ascii wide
+        $string7 = /libwiretap13/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string8 = /.{0,1000}\-\-no\-promiscuous\-mode.{0,1000}/ nocase ascii wide
+        $string8 = /\-\-no\-promiscuous\-mode/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string9 = /.{0,1000}sharkd\s\-a\stcp:.{0,1000}/ nocase ascii wide
+        $string9 = /sharkd\s\-a\stcp:/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string10 = /.{0,1000}tshark\s.{0,1000}\-i\s.{0,1000}/ nocase ascii wide
+        $string10 = /tshark\s.{0,1000}\-i\s/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string11 = /.{0,1000}tshark\s\-f\s.{0,1000}/ nocase ascii wide
+        $string11 = /tshark\s\-f\s/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string12 = /.{0,1000}tshark\s\-Q.{0,1000}/ nocase ascii wide
+        $string12 = /tshark\s\-Q/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string13 = /.{0,1000}tshark\s\-r\s.{0,1000}/ nocase ascii wide
+        $string13 = /tshark\s\-r\s/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string14 = /.{0,1000}tshark.{0,1000}\.deb.{0,1000}/ nocase ascii wide
+        $string14 = /tshark.{0,1000}\.deb/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string15 = /.{0,1000}Wireshark.{0,1000}/ nocase ascii wide
+        $string15 = /Wireshark/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string16 = /.{0,1000}wireshark.{0,1000}\.deb.{0,1000}/ nocase ascii wide
+        $string16 = /wireshark.{0,1000}\.deb/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string17 = /.{0,1000}Wireshark.{0,1000}\.dmg.{0,1000}/ nocase ascii wide
+        $string17 = /Wireshark.{0,1000}\.dmg/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string18 = /.{0,1000}wireshark\-.{0,1000}\.tar\.xz.{0,1000}/ nocase ascii wide
+        $string18 = /wireshark\-.{0,1000}\.tar\.xz/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string19 = /.{0,1000}wireshark\-common.{0,1000}/ nocase ascii wide
+        $string19 = /wireshark\-common/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string20 = /.{0,1000}wireshark\-dev.{0,1000}/ nocase ascii wide
+        $string20 = /wireshark\-dev/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string21 = /.{0,1000}wireshark\-gtk.{0,1000}/ nocase ascii wide
+        $string21 = /wireshark\-gtk/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string22 = /.{0,1000}WiresharkPortable64.{0,1000}/ nocase ascii wide
+        $string22 = /WiresharkPortable64/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string23 = /.{0,1000}wireshark\-qt.{0,1000}/ nocase ascii wide
+        $string23 = /wireshark\-qt/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string24 = /.{0,1000}Wireshark\-win.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string24 = /Wireshark\-win.{0,1000}\.exe/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string25 = /capinfos\s\-.{0,1000}/ nocase ascii wide
+        $string25 = /capinfos\s\-/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string26 = /captype\s\-.{0,1000}/ nocase ascii wide
+        $string26 = /captype\s\-/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string27 = /rawshark\s\-.{0,1000}/ nocase ascii wide
+        $string27 = /rawshark\s\-/ nocase ascii wide
 
     condition:
         any of them

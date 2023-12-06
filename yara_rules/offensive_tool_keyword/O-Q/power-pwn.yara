@@ -10,64 +10,64 @@ rule power_pwn
     strings:
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string1 = /.{0,1000}\/power\-pwn\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/power\-pwn\.git/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string2 = /.{0,1000}\\malware_runner\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\\malware_runner\.py/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string3 = /.{0,1000}\\power\-pwn\\.{0,1000}/ nocase ascii wide
+        $string3 = /\\power\-pwn\\/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string4 = /.{0,1000}Cleanup\-57BFF48E\-24FB\-48E9\-A390\-AC62ADF38B07\.json.{0,1000}/ nocase ascii wide
+        $string4 = /Cleanup\-57BFF48E\-24FB\-48E9\-A390\-AC62ADF38B07\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string5 = /.{0,1000}CodeExec\-D37DA402\-3829\-492F\-90D0\-8EC3909514EB\.json.{0,1000}/ nocase ascii wide
+        $string5 = /CodeExec\-D37DA402\-3829\-492F\-90D0\-8EC3909514EB\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string6 = /.{0,1000}Endpoint\-EE15B860\-9EEC\-EC11\-BB3D\-0022482CA4A7\.json.{0,1000}/ nocase ascii wide
+        $string6 = /Endpoint\-EE15B860\-9EEC\-EC11\-BB3D\-0022482CA4A7\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string7 = /.{0,1000}Exfil\-EC266392\-D6BC\-4F7B\-A4D1\-410166D30B55\.json.{0,1000}/ nocase ascii wide
+        $string7 = /Exfil\-EC266392\-D6BC\-4F7B\-A4D1\-410166D30B55\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string8 = /.{0,1000}mbrg\/power\-pwn.{0,1000}/ nocase ascii wide
+        $string8 = /mbrg\/power\-pwn/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string9 = /.{0,1000}powerpwn\.powerdump.{0,1000}/ nocase ascii wide
+        $string9 = /powerpwn\.powerdump/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string10 = /.{0,1000}powerpwn_tests.{0,1000}/ nocase ascii wide
+        $string10 = /powerpwn_tests/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string11 = /.{0,1000}power\-pwn\-main.{0,1000}/ nocase ascii wide
+        $string11 = /power\-pwn\-main/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string12 = /.{0,1000}Ransomware\-E20F7CED\-42AD\-485E\-BE4D\-DE21DCE58EC0\.json.{0,1000}/ nocase ascii wide
+        $string12 = /Ransomware\-E20F7CED\-42AD\-485E\-BE4D\-DE21DCE58EC0\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string13 = /.{0,1000}RunCleanup\-77740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json.{0,1000}/ nocase ascii wide
+        $string13 = /RunCleanup\-77740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string14 = /.{0,1000}RunCodeExec\-75740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json.{0,1000}/ nocase ascii wide
+        $string14 = /RunCodeExec\-75740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string15 = /.{0,1000}RunExfil\-78740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json.{0,1000}/ nocase ascii wide
+        $string15 = /RunExfil\-78740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string16 = /.{0,1000}RunRansomware\-76740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json.{0,1000}/ nocase ascii wide
+        $string16 = /RunRansomware\-76740706\-9DEC\-EC11\-BB3D\-0022482CA4A7\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string17 = /.{0,1000}RunStealCookie\-8B5C57DA\-F404\-ED11\-82E4\-0022481BF843\.json.{0,1000}/ nocase ascii wide
+        $string17 = /RunStealCookie\-8B5C57DA\-F404\-ED11\-82E4\-0022481BF843\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string18 = /.{0,1000}RunStealPowerAutomateToken\-8C5C57DA\-F404\-ED11\-82E4\-0022481BF843\.json.{0,1000}/ nocase ascii wide
+        $string18 = /RunStealPowerAutomateToken\-8C5C57DA\-F404\-ED11\-82E4\-0022481BF843\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string19 = /.{0,1000}StealCookie\-28050355\-D9DF\-4CE7\-BFBC\-4F7DDE890C2A\.json.{0,1000}/ nocase ascii wide
+        $string19 = /StealCookie\-28050355\-D9DF\-4CE7\-BFBC\-4F7DDE890C2A\.json/ nocase ascii wide
         // Description: An offensive and defensive security toolset for Microsoft 365 Power Platform
         // Reference: https://github.com/mbrg/power-pwn
-        $string20 = /.{0,1000}StealPowerAutomateToken\-C4E7B7DA\-54E4\-49AB\-B634\-FCCD77C65025\.json.{0,1000}/ nocase ascii wide
+        $string20 = /StealPowerAutomateToken\-C4E7B7DA\-54E4\-49AB\-B634\-FCCD77C65025\.json/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule FiercePhish
     strings:
         // Description: FiercePhish is a full-fledged phishing framework to manage all phishing engagements. It allows you to track separate phishing campaigns. schedule sending of emails. and much more. The features will continue to be expanded and will include website spoofing. click tracking. and extensive notification options. 
         // Reference: https://github.com/Raikia/FiercePhish
-        $string1 = /.{0,1000}FiercePhish.{0,1000}/ nocase ascii wide
+        $string1 = /FiercePhish/ nocase ascii wide
 
     condition:
         any of them

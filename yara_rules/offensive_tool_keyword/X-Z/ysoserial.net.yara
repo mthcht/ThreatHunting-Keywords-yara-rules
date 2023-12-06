@@ -10,106 +10,106 @@ rule ysoserial_net
     strings:
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string1 = /.{0,1000}\s\-c\s.{0,1000}ExploitClass\.cs.{0,1000}System\.dll.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-c\s.{0,1000}ExploitClass\.cs.{0,1000}System\.dll/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string2 = /.{0,1000}\s\-\-cve\=.{0,1000}\s\-\-command.{0,1000}/ nocase ascii wide
+        $string2 = /\s\-\-cve\=.{0,1000}\s\-\-command/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string3 = /.{0,1000}\s\-g\sActivitySurrogateSelector.{0,1000}/ nocase ascii wide
+        $string3 = /\s\-g\sActivitySurrogateSelector/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string4 = /.{0,1000}\s\-g\sClaimsPrincipal\s.{0,1000}/ nocase ascii wide
+        $string4 = /\s\-g\sClaimsPrincipal\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string5 = /.{0,1000}\s\-g\sPSObject\s.{0,1000}/ nocase ascii wide
+        $string5 = /\s\-g\sPSObject\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string6 = /.{0,1000}\s\-g\sTextFormattingRunProperties\s.{0,1000}/ nocase ascii wide
+        $string6 = /\s\-g\sTextFormattingRunProperties\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string7 = /.{0,1000}\s\-\-gadget\sActivitySurrogateSelector.{0,1000}/ nocase ascii wide
+        $string7 = /\s\-\-gadget\sActivitySurrogateSelector/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string8 = /.{0,1000}\s\-\-gadget\sClaimsPrincipal\s.{0,1000}/ nocase ascii wide
+        $string8 = /\s\-\-gadget\sClaimsPrincipal\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string9 = /.{0,1000}\s\-\-gadget\sPSObject\s.{0,1000}/ nocase ascii wide
+        $string9 = /\s\-\-gadget\sPSObject\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string10 = /.{0,1000}\s\-m\srun_command\s\-c\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string10 = /\s\-m\srun_command\s\-c\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string11 = /.{0,1000}\s\-p\sActivatorUrl.{0,1000}/ nocase ascii wide
+        $string11 = /\s\-p\sActivatorUrl/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string12 = /.{0,1000}\s\-p\sAltserialization.{0,1000}/ nocase ascii wide
+        $string12 = /\s\-p\sAltserialization/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string13 = /.{0,1000}\s\-p\sDotNetNuke.{0,1000}/ nocase ascii wide
+        $string13 = /\s\-p\sDotNetNuke/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string14 = /.{0,1000}\s\-p\sSessionSecurityTokenHandler.{0,1000}/ nocase ascii wide
+        $string14 = /\s\-p\sSessionSecurityTokenHandler/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string15 = /.{0,1000}\s\-p\sTransactionManagerReenlist.{0,1000}/ nocase ascii wide
+        $string15 = /\s\-p\sTransactionManagerReenlist/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string16 = /.{0,1000}\/ghostfile\.aspx.{0,1000}/ nocase ascii wide
+        $string16 = /\/ghostfile\.aspx/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string17 = /.{0,1000}\/ysoserial\/.{0,1000}/ nocase ascii wide
+        $string17 = /\/ysoserial\// nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string18 = /.{0,1000}\\windows\\temp\\ncat\.exe\s\-nv\s.{0,1000}/ nocase ascii wide
+        $string18 = /\\windows\\temp\\ncat\.exe\s\-nv\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string19 = /.{0,1000}\\ysoserial\\.{0,1000}/ nocase ascii wide
+        $string19 = /\\ysoserial\\/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string20 = /.{0,1000}echo\s123\s\>\sc:\\windows\\temp\\test\.txt.{0,1000}/ nocase ascii wide
+        $string20 = /echo\s123\s\>\sc:\\windows\\temp\\test\.txt/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string21 = /.{0,1000}\-f\sBinaryFormatter\s\-g\sPSObject\s\-o\sbase64\s\-c\s.{0,1000}/ nocase ascii wide
+        $string21 = /\-f\sBinaryFormatter\s\-g\sPSObject\s\-o\sbase64\s\-c\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string22 = /.{0,1000}\-f\sJson\.Net\s\-g\sObjectDataProvider\s\-o\sraw\s\-c\s.{0,1000}/ nocase ascii wide
+        $string22 = /\-f\sJson\.Net\s\-g\sObjectDataProvider\s\-o\sraw\s\-c\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string23 = /.{0,1000}fakepath31337.{0,1000}/ nocase ascii wide
+        $string23 = /fakepath31337/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string24 = /.{0,1000}GhostWebShell\.cs.{0,1000}/ nocase ascii wide
+        $string24 = /GhostWebShell\.cs/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string25 = /.{0,1000}MessageBox\.Show.{0,1000}Pwned.{0,1000}/ nocase ascii wide
+        $string25 = /MessageBox\.Show.{0,1000}Pwned/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string26 = /.{0,1000}ModifiedVulnerableBinaryFormatters\\info\.txt.{0,1000}/ nocase ascii wide
+        $string26 = /ModifiedVulnerableBinaryFormatters\\info\.txt/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string27 = /.{0,1000}PCVAIExhbmd1YWdlPSJDIyIlPgpUaGlzIGlzIHRoZSBhdHRhY2tlcidzIGZpbGUgPGJyLz4KUnVubmluZyBvbiB0aGUgc2VydmVyIGlmIGA8JT0xMzM4LTElPmAgaXMgMTMzNy4.{0,1000}/ nocase ascii wide
+        $string27 = /PCVAIExhbmd1YWdlPSJDIyIlPgpUaGlzIGlzIHRoZSBhdHRhY2tlcidzIGZpbGUgPGJyLz4KUnVubmluZyBvbiB0aGUgc2VydmVyIGlmIGA8JT0xMzM4LTElPmAgaXMgMTMzNy4/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string28 = /.{0,1000}TestConsoleApp_YSONET.{0,1000}/ nocase ascii wide
+        $string28 = /TestConsoleApp_YSONET/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string29 = /.{0,1000}X\-YSOSERIAL\-NET.{0,1000}/ nocase ascii wide
+        $string29 = /X\-YSOSERIAL\-NET/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string30 = /.{0,1000}ysoserial\s\-.{0,1000}/ nocase ascii wide
+        $string30 = /ysoserial\s\-/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string31 = /.{0,1000}ysoserial\-.{0,1000}\.zip/ nocase ascii wide
+        $string31 = /ysoserial\-.{0,1000}\.zip/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string32 = /.{0,1000}ysoserial\.exe\s.{0,1000}/ nocase ascii wide
+        $string32 = /ysoserial\.exe\s/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string33 = /.{0,1000}ysoserial\.net.{0,1000}/ nocase ascii wide
+        $string33 = /ysoserial\.net/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string34 = /.{0,1000}ysoserial\.sln.{0,1000}/ nocase ascii wide
+        $string34 = /ysoserial\.sln/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule rsg
     strings:
         // Description: A tool to generate various ways to do a reverse shell
         // Reference: https://github.com/mthbernardes/rsg
-        $string1 = /.{0,1000}mthbernardes.{0,1000}rsg.{0,1000}/ nocase ascii wide
+        $string1 = /mthbernardes.{0,1000}rsg/ nocase ascii wide
 
     condition:
         any of them

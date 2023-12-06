@@ -10,7 +10,7 @@ rule snallygaster
     strings:
         // Description: Finds file leaks and other security problems on HTTP servers.snallygaster is a tool that looks for files accessible on web servers that shouldn't be public and can pose a security risk.
         // Reference: https://github.com/hannob/snallygaster
-        $string1 = /.{0,1000}snallygaster.{0,1000}/ nocase ascii wide
+        $string1 = /snallygaster/ nocase ascii wide
 
     condition:
         any of them

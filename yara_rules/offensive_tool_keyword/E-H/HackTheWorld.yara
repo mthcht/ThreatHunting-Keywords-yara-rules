@@ -10,10 +10,10 @@ rule HackTheWorld
     strings:
         // Description: An Python Script For Generating Payloads that Bypasses All Antivirus so far.
         // Reference: https://github.com/stormshadow07/HackTheWorld
-        $string1 = /.{0,1000}HackTheWorld.{0,1000}/ nocase ascii wide
+        $string1 = /HackTheWorld/ nocase ascii wide
         // Description: An Python Script For Generating Payloads that Bypasses All Antivirus so far
         // Reference: https://github.com/stormshadow07/HackTheWorld
-        $string2 = /.{0,1000}stormshadow07.{0,1000}/ nocase ascii wide
+        $string2 = /stormshadow07/ nocase ascii wide
 
     condition:
         any of them

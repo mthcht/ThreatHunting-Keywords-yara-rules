@@ -10,7 +10,7 @@ rule SharpSploit
     strings:
         // Description: SharpSploitis a .NET post-exploitation library written in C# that aims to highlight the attack surface of .NET and make the use of offensive .NET easier for red teamers.
         // Reference: https://github.com/cobbr/SharpSploit
-        $string1 = /.{0,1000}SharpSploit.{0,1000}/ nocase ascii wide
+        $string1 = /SharpSploit/ nocase ascii wide
 
     condition:
         any of them

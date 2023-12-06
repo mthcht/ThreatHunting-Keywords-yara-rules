@@ -10,7 +10,7 @@ rule macchanger
     strings:
         // Description: changing mac address with macchanger
         // Reference: N/A
-        $string1 = /.{0,1000}macchanger\s\-r\s.{0,1000}/ nocase ascii wide
+        $string1 = /macchanger\s\-r\s/ nocase ascii wide
 
     condition:
         any of them

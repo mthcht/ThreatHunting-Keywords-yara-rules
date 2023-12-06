@@ -10,7 +10,7 @@ rule spraykatz
     strings:
         // Description: Spraykatz is a tool without any pretention able to retrieve credentials on Windows machines and large Active Directory environments.
         // Reference: https://github.com/aas-n/spraykatz
-        $string1 = /.{0,1000}spraykatz.{0,1000}/ nocase ascii wide
+        $string1 = /spraykatz/ nocase ascii wide
 
     condition:
         any of them

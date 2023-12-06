@@ -10,10 +10,10 @@ rule dnscmd
     strings:
         // Description: the actor gather information about the target environment
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string1 = /.{0,1000}dnscmd\s\.\s\/enumrecords\s\/zone\s.{0,1000}/ nocase ascii wide
+        $string1 = /dnscmd\s\.\s\/enumrecords\s\/zone\s/ nocase ascii wide
         // Description: the actor gather information about the target environment
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string2 = /.{0,1000}dnscmd\s\.\s\/enumzones.{0,1000}/ nocase ascii wide
+        $string2 = /dnscmd\s\.\s\/enumzones/ nocase ascii wide
 
     condition:
         any of them

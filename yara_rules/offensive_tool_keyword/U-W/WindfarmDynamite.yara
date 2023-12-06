@@ -10,16 +10,16 @@ rule WindfarmDynamite
     strings:
         // Description: WindfarmDynamite is a proof-of-concept for code injection using the Windows Notification Facility (WNF). Of interest here is that this avoids suspect thread orchestration APIs (like CreateRemoteThread)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/WindfarmDynamite
-        $string1 = /.{0,1000}WindfarmDynamite\.cdproj.{0,1000}/ nocase ascii wide
+        $string1 = /WindfarmDynamite\.cdproj/ nocase ascii wide
         // Description: WindfarmDynamite is a proof-of-concept for code injection using the Windows Notification Facility (WNF). Of interest here is that this avoids suspect thread orchestration APIs (like CreateRemoteThread)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/WindfarmDynamite
-        $string2 = /.{0,1000}WindfarmDynamite\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /WindfarmDynamite\.exe/ nocase ascii wide
         // Description: WindfarmDynamite is a proof-of-concept for code injection using the Windows Notification Facility (WNF). Of interest here is that this avoids suspect thread orchestration APIs (like CreateRemoteThread)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/WindfarmDynamite
-        $string3 = /.{0,1000}WindfarmDynamite\.sln.{0,1000}/ nocase ascii wide
+        $string3 = /WindfarmDynamite\.sln/ nocase ascii wide
         // Description: WindfarmDynamite is a proof-of-concept for code injection using the Windows Notification Facility (WNF). Of interest here is that this avoids suspect thread orchestration APIs (like CreateRemoteThread)
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite/tree/master/WindfarmDynamite
-        $string4 = /.{0,1000}WNFarmDynamite_h\.cs.{0,1000}/ nocase ascii wide
+        $string4 = /WNFarmDynamite_h\.cs/ nocase ascii wide
 
     condition:
         any of them

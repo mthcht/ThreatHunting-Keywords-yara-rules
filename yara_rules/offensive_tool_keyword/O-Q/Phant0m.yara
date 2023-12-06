@@ -10,43 +10,43 @@ rule Phant0m
     strings:
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string1 = /.{0,1000}\/Phant0m\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/Phant0m\.git/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string2 = /.{0,1000}\/phant0m\-exe.{0,1000}/ nocase ascii wide
+        $string2 = /\/phant0m\-exe/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string3 = /.{0,1000}\\wmi_1\.dll.{0,1000}/ nocase ascii wide
+        $string3 = /\\wmi_1\.dll/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string4 = /.{0,1000}\\wmi_2\.dll.{0,1000}/ nocase ascii wide
+        $string4 = /\\wmi_2\.dll/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string5 = /.{0,1000}hlldz\/Phant0m.{0,1000}/ nocase ascii wide
+        $string5 = /hlldz\/Phant0m/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string6 = /.{0,1000}Invoke\-Phant0m\.ps1.{0,1000}/ nocase ascii wide
+        $string6 = /Invoke\-Phant0m\.ps1/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string7 = /.{0,1000}Phant0m\sscm\s1.{0,1000}/ nocase ascii wide
+        $string7 = /Phant0m\sscm\s1/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string8 = /.{0,1000}Phant0m\sscm\s2.{0,1000}/ nocase ascii wide
+        $string8 = /Phant0m\sscm\s2/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string9 = /.{0,1000}Phant0m\swmi.{0,1000}/ nocase ascii wide
+        $string9 = /Phant0m\swmi/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string10 = /.{0,1000}phant0m\.cna.{0,1000}/ nocase ascii wide
+        $string10 = /phant0m\.cna/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string11 = /.{0,1000}phant0m\-exe\..{0,1000}/ nocase ascii wide
+        $string11 = /phant0m\-exe\./ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string12 = /.{0,1000}Phant0m\-master\.zip.{0,1000}/ nocase ascii wide
+        $string12 = /Phant0m\-master\.zip/ nocase ascii wide
         // Description: Windows Event Log Killer
         // Reference: https://github.com/hlldz/Phant0m
-        $string13 = /.{0,1000}phant0m\-rdll.{0,1000}/ nocase ascii wide
+        $string13 = /phant0m\-rdll/ nocase ascii wide
 
     condition:
         any of them

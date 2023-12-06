@@ -10,10 +10,10 @@ rule HostRecon
     strings:
         // Description: Invoke-HostRecon runs a number of checks on a system to help provide situational awareness to a penetration tester during the reconnaissance phase of an engagement. It gathers information about the local system. users. and domain information. It does not use any 'net. 'ipconfig. 'whoami. 'netstat. or other system commands to help avoid detection.
         // Reference: https://github.com/dafthack/HostRecon
-        $string1 = /.{0,1000}dafthack\/HostRecon.{0,1000}/ nocase ascii wide
+        $string1 = /dafthack\/HostRecon/ nocase ascii wide
         // Description: Invoke-HostRecon runs a number of checks on a system to help provide situational awareness to a penetration tester during the reconnaissance phase of an engagement. It gathers information about the local system. users. and domain information. It does not use any 'net. 'ipconfig. 'whoami. 'netstat. or other system commands to help avoid detection.
         // Reference: https://github.com/dafthack/HostRecon
-        $string2 = /.{0,1000}Invoke\-HostRecon.{0,1000}/ nocase ascii wide
+        $string2 = /Invoke\-HostRecon/ nocase ascii wide
 
     condition:
         any of them

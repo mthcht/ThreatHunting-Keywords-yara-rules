@@ -10,7 +10,7 @@ rule kwetza
     strings:
         // Description: Kwetza infects an existing Android application with either custom or default payload templates to avoid detection by antivirus. Kwetza allows you to infect Android applications using the target applications default permissions or inject additional permissions to gain additional functionality.
         // Reference: https://github.com/sensepost/kwetza
-        $string1 = /.{0,1000}kwetza.{0,1000}/ nocase ascii wide
+        $string1 = /kwetza/ nocase ascii wide
 
     condition:
         any of them

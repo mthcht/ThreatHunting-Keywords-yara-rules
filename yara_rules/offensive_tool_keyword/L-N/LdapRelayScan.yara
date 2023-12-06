@@ -10,25 +10,25 @@ rule LdapRelayScan
     strings:
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string1 = /.{0,1000}\s\-method\s.{0,1000}\s\-nthash\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-method\s.{0,1000}\s\-nthash\s/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string2 = /.{0,1000}\.py\s\-method\sBOTH\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
+        $string2 = /\.py\s\-method\sBOTH\s\-dc\-ip\s/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string3 = /.{0,1000}\.py\s\-method\sLDAPS\s\-dc\-ip\s.{0,1000}/ nocase ascii wide
+        $string3 = /\.py\s\-method\sLDAPS\s\-dc\-ip\s/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string4 = /.{0,1000}\/LdapRelayScan\.git.{0,1000}/ nocase ascii wide
+        $string4 = /\/LdapRelayScan\.git/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string5 = /.{0,1000}LdapRelayScan\.py.{0,1000}/ nocase ascii wide
+        $string5 = /LdapRelayScan\.py/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string6 = /.{0,1000}LdapRelayScan\-main.{0,1000}/ nocase ascii wide
+        $string6 = /LdapRelayScan\-main/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string7 = /.{0,1000}zyn3rgy\/LdapRelayScan.{0,1000}/ nocase ascii wide
+        $string7 = /zyn3rgy\/LdapRelayScan/ nocase ascii wide
 
     condition:
         any of them

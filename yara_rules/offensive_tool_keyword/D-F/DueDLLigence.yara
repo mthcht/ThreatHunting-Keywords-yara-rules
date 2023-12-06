@@ -10,25 +10,25 @@ rule DueDLLigence
     strings:
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string1 = /.{0,1000}\/DueDLLigence\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/DueDLLigence\.git/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string2 = /.{0,1000}\\duedlligence\.dll.{0,1000}/ nocase ascii wide
+        $string2 = /\\duedlligence\.dll/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string3 = /.{0,1000}73948912\-CEBD\-48ED\-85E2\-85FCD1D4F560.{0,1000}/ nocase ascii wide
+        $string3 = /73948912\-CEBD\-48ED\-85E2\-85FCD1D4F560/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string4 = /.{0,1000}DueDLLigence\.cs.{0,1000}/ nocase ascii wide
+        $string4 = /DueDLLigence\.cs/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string5 = /.{0,1000}DueDLLigence\.sln.{0,1000}/ nocase ascii wide
+        $string5 = /DueDLLigence\.sln/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string6 = /.{0,1000}DueDLLigence\-master.{0,1000}/ nocase ascii wide
+        $string6 = /DueDLLigence\-master/ nocase ascii wide
         // Description: Shellcode runner framework for application whitelisting bypasses and DLL side-loading
         // Reference: https://github.com/mandiant/DueDLLigence
-        $string7 = /.{0,1000}mandiant\/DueDLLigence.{0,1000}/ nocase ascii wide
+        $string7 = /mandiant\/DueDLLigence/ nocase ascii wide
 
     condition:
         any of them

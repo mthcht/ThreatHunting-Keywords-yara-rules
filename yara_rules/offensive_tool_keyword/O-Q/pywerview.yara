@@ -10,22 +10,22 @@ rule pywerview
     strings:
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string1 = /.{0,1000}\/pywerview.{0,1000}/ nocase ascii wide
+        $string1 = /\/pywerview/ nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string2 = /.{0,1000}invoke\-checklocaladminaccess.{0,1000}/ nocase ascii wide
+        $string2 = /invoke\-checklocaladminaccess/ nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string3 = /.{0,1000}invoke\-eventhunter.{0,1000}/ nocase ascii wide
+        $string3 = /invoke\-eventhunter/ nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string4 = /.{0,1000}invoke\-processhunter.{0,1000}/ nocase ascii wide
+        $string4 = /invoke\-processhunter/ nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string5 = /.{0,1000}invoke\-userhunter.{0,1000}/ nocase ascii wide
+        $string5 = /invoke\-userhunter/ nocase ascii wide
         // Description: A partial Python rewriting of PowerSploit PowerView
         // Reference: https://github.com/the-useless-one/pywerview
-        $string6 = /.{0,1000}pywerview\.py.{0,1000}/ nocase ascii wide
+        $string6 = /pywerview\.py/ nocase ascii wide
 
     condition:
         any of them

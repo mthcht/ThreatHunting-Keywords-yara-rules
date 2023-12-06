@@ -10,43 +10,43 @@ rule CMLoot
     strings:
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string1 = /.{0,1000}\sCMLoot\.ps1.{0,1000}/ nocase ascii wide
+        $string1 = /\sCMLoot\.ps1/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string2 = /.{0,1000}\s\-SCCMHost\s.{0,1000}\s\-Outfile\s.{0,1000}/ nocase ascii wide
+        $string2 = /\s\-SCCMHost\s.{0,1000}\s\-Outfile\s/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string3 = /.{0,1000}\/CMLoot\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/CMLoot\.git/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string4 = /.{0,1000}\/CMLoot\.ps1.{0,1000}/ nocase ascii wide
+        $string4 = /\/CMLoot\.ps1/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string5 = /.{0,1000}\\CMLoot\.ps1.{0,1000}/ nocase ascii wide
+        $string5 = /\\CMLoot\.ps1/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string6 = /.{0,1000}1njected\/CMLoot.{0,1000}/ nocase ascii wide
+        $string6 = /1njected\/CMLoot/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string7 = /.{0,1000}CMLoot\.psm1.{0,1000}/ nocase ascii wide
+        $string7 = /CMLoot\.psm1/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string8 = /.{0,1000}CMLoot\-main.{0,1000}/ nocase ascii wide
+        $string8 = /CMLoot\-main/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string9 = /.{0,1000}Invoke\-CMLootDownload.{0,1000}/ nocase ascii wide
+        $string9 = /Invoke\-CMLootDownload/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string10 = /.{0,1000}Invoke\-CMLootExtract.{0,1000}/ nocase ascii wide
+        $string10 = /Invoke\-CMLootExtract/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string11 = /.{0,1000}Invoke\-CMLootHunt\s.{0,1000}/ nocase ascii wide
+        $string11 = /Invoke\-CMLootHunt\s/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string12 = /.{0,1000}Invoke\-CMLootInventory.{0,1000}/ nocase ascii wide
+        $string12 = /Invoke\-CMLootInventory/ nocase ascii wide
         // Description: Find interesting files stored on (System Center) Configuration Manager (SCCM/CM) SMB shares
         // Reference: https://github.com/1njected/CMLoot
-        $string13 = /.{0,1000}src\\CMLootOut\\.{0,1000}/ nocase ascii wide
+        $string13 = /src\\CMLootOut\\/ nocase ascii wide
 
     condition:
         any of them

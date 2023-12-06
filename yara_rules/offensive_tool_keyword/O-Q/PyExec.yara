@@ -10,22 +10,22 @@ rule PyExec
     strings:
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string1 = /.{0,1000}\sadm2sys\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\sadm2sys\.py/ nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string2 = /.{0,1000}\/adm2sys\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\/adm2sys\.py/ nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string3 = /.{0,1000}\/PyExec\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/PyExec\.git/ nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string4 = /.{0,1000}\\adm2sys\.py.{0,1000}/ nocase ascii wide
+        $string4 = /\\adm2sys\.py/ nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string5 = /.{0,1000}OlivierLaflamme\/PyExec.{0,1000}/ nocase ascii wide
+        $string5 = /OlivierLaflamme\/PyExec/ nocase ascii wide
         // Description: This is a very simple privilege escalation technique from admin to System. This is the same technique PSExec uses.
         // Reference: https://github.com/OlivierLaflamme/PyExec
-        $string6 = /.{0,1000}PyExec\-main\..{0,1000}/ nocase ascii wide
+        $string6 = /PyExec\-main\./ nocase ascii wide
 
     condition:
         any of them

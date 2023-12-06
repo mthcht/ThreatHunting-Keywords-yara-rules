@@ -10,7 +10,7 @@ rule tcpdump
     strings:
         // Description: A powerful command-line packet analyzer.and libpcap. a portable C/C++ library for network traffic capture
         // Reference: http://www.tcpdump.org/
-        $string1 = /.{0,1000}tcpdump\s.{0,1000}/ nocase ascii wide
+        $string1 = /tcpdump\s/ nocase ascii wide
 
     condition:
         any of them

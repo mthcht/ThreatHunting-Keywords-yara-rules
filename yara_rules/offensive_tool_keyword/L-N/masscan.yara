@@ -10,28 +10,28 @@ rule masscan
     strings:
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string1 = /.{0,1000}\sinstall\s.{0,1000}masscan.{0,1000}/ nocase ascii wide
+        $string1 = /\sinstall\s.{0,1000}masscan/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string2 = /.{0,1000}bin\/masscan.{0,1000}/ nocase ascii wide
+        $string2 = /bin\/masscan/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string3 = /.{0,1000}masscan\s\-c\s.{0,1000}/ nocase ascii wide
+        $string3 = /masscan\s\-c\s/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string4 = /.{0,1000}masscan\s\-\-nmap.{0,1000}/ nocase ascii wide
+        $string4 = /masscan\s\-\-nmap/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string5 = /.{0,1000}masscan\s\-p.{0,1000}/ nocase ascii wide
+        $string5 = /masscan\s\-p/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string6 = /.{0,1000}masscan.{0,1000}\s\s\-p.{0,1000}/ nocase ascii wide
+        $string6 = /masscan.{0,1000}\s\s\-p/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string7 = /.{0,1000}robertdavidgraham\/masscan.{0,1000}/ nocase ascii wide
+        $string7 = /robertdavidgraham\/masscan/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string8 = /masscan\s.{0,1000}/ nocase ascii wide
+        $string8 = /masscan\s/ nocase ascii wide
 
     condition:
         any of them

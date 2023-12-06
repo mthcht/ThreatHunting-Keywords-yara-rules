@@ -10,7 +10,7 @@ rule linux
     strings:
         // Description: fork bomb linux - denial-of-service attack wherein a process continually replicates itself to deplete available system resources slowing down or crashing the system due to resource starvation
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string1 = /.{0,1000}:\(\){:I:\s\&I.{0,1000}/ nocase ascii wide
+        $string1 = /:\(\){:I:\s\&I/ nocase ascii wide
 
     condition:
         any of them

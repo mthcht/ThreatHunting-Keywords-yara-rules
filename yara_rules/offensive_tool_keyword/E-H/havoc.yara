@@ -10,310 +10,310 @@ rule havoc
     strings:
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string1 = /.{0,1000}\sdemon\.x64\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\sdemon\.x64\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string2 = /.{0,1000}\shavoc\-client.{0,1000}/ nocase ascii wide
+        $string2 = /\shavoc\-client/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string3 = /.{0,1000}\.\/donut\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\.\/donut\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string4 = /.{0,1000}\.\/Havoc/ nocase ascii wide
+        $string4 = /\.\/Havoc/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string5 = /.{0,1000}\.\/havoc\s.{0,1000}/ nocase ascii wide
+        $string5 = /\.\/havoc\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string6 = /.{0,1000}\/Cracked5pider\/.{0,1000}/ nocase ascii wide
+        $string6 = /\/Cracked5pider\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string7 = /.{0,1000}\/demon\.x64\.bin.{0,1000}/ nocase ascii wide
+        $string7 = /\/demon\.x64\.bin/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string8 = /.{0,1000}\/demon\.x64\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /\/demon\.x64\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string9 = /.{0,1000}\/demon1\.dll.{0,1000}/ nocase ascii wide
+        $string9 = /\/demon1\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string10 = /.{0,1000}\/demosyscalls\.exe.{0,1000}/ nocase ascii wide
+        $string10 = /\/demosyscalls\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string11 = /.{0,1000}\/Dialogs\/Payload\.hpp.{0,1000}/ nocase ascii wide
+        $string11 = /\/Dialogs\/Payload\.hpp/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string12 = /.{0,1000}\/Havoc\.cpp.{0,1000}/ nocase ascii wide
+        $string12 = /\/Havoc\.cpp/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string13 = /.{0,1000}\/Havoc\.qss.{0,1000}/ nocase ascii wide
+        $string13 = /\/Havoc\.qss/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string14 = /.{0,1000}\/Havoc\.rc.{0,1000}/ nocase ascii wide
+        $string14 = /\/Havoc\.rc/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string15 = /.{0,1000}\/Havoc\/data\/.{0,1000}/ nocase ascii wide
+        $string15 = /\/Havoc\/data\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string16 = /.{0,1000}\/Havoc\/main\/.{0,1000}/ nocase ascii wide
+        $string16 = /\/Havoc\/main\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string17 = /.{0,1000}\/HavocFramework\/.{0,1000}/ nocase ascii wide
+        $string17 = /\/HavocFramework\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string18 = /.{0,1000}\/HavocImages\/.{0,1000}/ nocase ascii wide
+        $string18 = /\/HavocImages\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string19 = /.{0,1000}\/havoc\-py\/.{0,1000}/ nocase ascii wide
+        $string19 = /\/havoc\-py\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string20 = /.{0,1000}\/implants\/.{0,1000}\/Syscalls\..{0,1000}/ nocase ascii wide
+        $string20 = /\/implants\/.{0,1000}\/Syscalls\./ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string21 = /.{0,1000}\/Jump\-exec\/Psexec.{0,1000}/ nocase ascii wide
+        $string21 = /\/Jump\-exec\/Psexec/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string22 = /.{0,1000}\/kerberoast\.c.{0,1000}/ nocase ascii wide
+        $string22 = /\/kerberoast\.c/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string23 = /.{0,1000}\/kerberoast\.h.{0,1000}/ nocase ascii wide
+        $string23 = /\/kerberoast\.h/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string24 = /.{0,1000}\/nanodump\..{0,1000}/ nocase ascii wide
+        $string24 = /\/nanodump\./ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string25 = /.{0,1000}\/payloads\/DllLdr\/.{0,1000}/ nocase ascii wide
+        $string25 = /\/payloads\/DllLdr\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string26 = /.{0,1000}\/RemoteOps\.py.{0,1000}/ nocase ascii wide
+        $string26 = /\/RemoteOps\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string27 = /.{0,1000}\/scshell\.py.{0,1000}/ nocase ascii wide
+        $string27 = /\/scshell\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string28 = /.{0,1000}\/Talon\.py.{0,1000}/ nocase ascii wide
+        $string28 = /\/Talon\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string29 = /.{0,1000}\/Talon\/.{0,1000}Agent\/Source.{0,1000}/ nocase ascii wide
+        $string29 = /\/Talon\/.{0,1000}Agent\/Source/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string30 = /.{0,1000}\/Widgets\/LootWidget\..{0,1000}/ nocase ascii wide
+        $string30 = /\/Widgets\/LootWidget\./ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string31 = /.{0,1000}\/WMI\/wmi\.py.{0,1000}/ nocase ascii wide
+        $string31 = /\/WMI\/wmi\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string32 = /.{0,1000}\\demon\.dll.{0,1000}/ nocase ascii wide
+        $string32 = /\\demon\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string33 = /.{0,1000}\\demon\.x64\.bin.{0,1000}/ nocase ascii wide
+        $string33 = /\\demon\.x64\.bin/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string34 = /.{0,1000}\\demon\.x64\.exe.{0,1000}/ nocase ascii wide
+        $string34 = /\\demon\.x64\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string35 = /.{0,1000}\\demon1\.dll.{0,1000}/ nocase ascii wide
+        $string35 = /\\demon1\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string36 = /.{0,1000}\\demosyscalls\.exe.{0,1000}/ nocase ascii wide
+        $string36 = /\\demosyscalls\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string37 = /.{0,1000}\\Ekko\.exe.{0,1000}/ nocase ascii wide
+        $string37 = /\\Ekko\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string38 = /.{0,1000}40056\/service\-endpoint.{0,1000}/ nocase ascii wide
+        $string38 = /40056\/service\-endpoint/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string39 = /.{0,1000}5spider:password1234.{0,1000}/ nocase ascii wide
+        $string39 = /5spider:password1234/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string40 = /.{0,1000}bin\/addusertogroup\.x64.{0,1000}/ nocase ascii wide
+        $string40 = /bin\/addusertogroup\.x64/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string41 = /.{0,1000}bin\/setuserpass\.x64.{0,1000}/ nocase ascii wide
+        $string41 = /bin\/setuserpass\.x64/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string42 = /.{0,1000}Delegation\/delegation\.py.{0,1000}/ nocase ascii wide
+        $string42 = /Delegation\/delegation\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string43 = /.{0,1000}DllLdr\.x64\.bin.{0,1000}/ nocase ascii wide
+        $string43 = /DllLdr\.x64\.bin/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string44 = /.{0,1000}Domaininfo\/Domaininfo\.py.{0,1000}/ nocase ascii wide
+        $string44 = /Domaininfo\/Domaininfo\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string45 = /.{0,1000}dotnet\sinline\-execute\s.{0,1000}/ nocase ascii wide
+        $string45 = /dotnet\sinline\-execute\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string46 = /.{0,1000}externalc2\.py.{0,1000}/ nocase ascii wide
+        $string46 = /externalc2\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string47 = /.{0,1000}f5a45c4aa478a7ba9b44654a929bddc2f6453cd8d6f37cd893dda47220ad9870.{0,1000}/ nocase ascii wide
+        $string47 = /f5a45c4aa478a7ba9b44654a929bddc2f6453cd8d6f37cd893dda47220ad9870/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string48 = /.{0,1000}havoc\sclient.{0,1000}/ nocase ascii wide
+        $string48 = /havoc\sclient/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string49 = /.{0,1000}havoc\sserver.{0,1000}/ nocase ascii wide
+        $string49 = /havoc\sserver/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string50 = /.{0,1000}havoc\.agent.{0,1000}/ nocase ascii wide
+        $string50 = /havoc\.agent/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string51 = /.{0,1000}Havoc\.git.{0,1000}/ nocase ascii wide
+        $string51 = /Havoc\.git/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string52 = /.{0,1000}Havoc\.hpp.{0,1000}/ nocase ascii wide
+        $string52 = /Havoc\.hpp/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string53 = /.{0,1000}havoc\.service.{0,1000}/ nocase ascii wide
+        $string53 = /havoc\.service/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string54 = /.{0,1000}havoc\.yaotl.{0,1000}/ nocase ascii wide
+        $string54 = /havoc\.yaotl/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string55 = /.{0,1000}Havoc\/Client.{0,1000}/ nocase ascii wide
+        $string55 = /Havoc\/Client/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string56 = /.{0,1000}Havoc\/cmd\/.{0,1000}/ nocase ascii wide
+        $string56 = /Havoc\/cmd\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string57 = /.{0,1000}Havoc\/payloads.{0,1000}/ nocase ascii wide
+        $string57 = /Havoc\/payloads/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string58 = /.{0,1000}Havoc\/pkg.{0,1000}/ nocase ascii wide
+        $string58 = /Havoc\/pkg/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string59 = /.{0,1000}Havoc\/Teamserver.{0,1000}/ nocase ascii wide
+        $string59 = /Havoc\/Teamserver/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string60 = /.{0,1000}havoc_agent\.py.{0,1000}/ nocase ascii wide
+        $string60 = /havoc_agent\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string61 = /.{0,1000}havoc_agent_talon\..{0,1000}/ nocase ascii wide
+        $string61 = /havoc_agent_talon\./ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string62 = /.{0,1000}havoc_default\.yaotl.{0,1000}/ nocase ascii wide
+        $string62 = /havoc_default\.yaotl/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string63 = /.{0,1000}havoc_externalc2.{0,1000}/ nocase ascii wide
+        $string63 = /havoc_externalc2/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string64 = /.{0,1000}havoc_service_connect.{0,1000}/ nocase ascii wide
+        $string64 = /havoc_service_connect/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string65 = /.{0,1000}havoc\-c2\-client.{0,1000}/ nocase ascii wide
+        $string65 = /havoc\-c2\-client/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string66 = /.{0,1000}havoc\-c2\-data.{0,1000}/ nocase ascii wide
+        $string66 = /havoc\-c2\-data/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string67 = /.{0,1000}havocframework\.com.{0,1000}/ nocase ascii wide
+        $string67 = /havocframework\.com/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string68 = /.{0,1000}HavocService.{0,1000}/ nocase ascii wide
+        $string68 = /HavocService/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string69 = /.{0,1000}HavocTalonInteract.{0,1000}/ nocase ascii wide
+        $string69 = /HavocTalonInteract/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string70 = /.{0,1000}HavocUi\.cpp.{0,1000}/ nocase ascii wide
+        $string70 = /HavocUi\.cpp/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string71 = /.{0,1000}HavocUi\.h.{0,1000}/ nocase ascii wide
+        $string71 = /HavocUi\.h/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string72 = /.{0,1000}HavocUI\.hpp.{0,1000}/ nocase ascii wide
+        $string72 = /HavocUI\.hpp/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string73 = /.{0,1000}http.{0,1000}\/demon\.dll/ nocase ascii wide
+        $string73 = /http.{0,1000}\/demon\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string74 = /.{0,1000}http.{0,1000}\/demon\.exe/ nocase ascii wide
+        $string74 = /http.{0,1000}\/demon\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string75 = /.{0,1000}implant\.sleep\-obf.{0,1000}/ nocase ascii wide
+        $string75 = /implant\.sleep\-obf/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string76 = /.{0,1000}Implant\\SleepMask.{0,1000}/ nocase ascii wide
+        $string76 = /Implant\\SleepMask/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string77 = /.{0,1000}inject\s1337\s\/.{0,1000}/ nocase ascii wide
+        $string77 = /inject\s1337\s\// nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string78 = /.{0,1000}inject\.spawn.{0,1000}/ nocase ascii wide
+        $string78 = /inject\.spawn/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string79 = /.{0,1000}inject\.spoofaddr.{0,1000}/ nocase ascii wide
+        $string79 = /inject\.spoofaddr/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string80 = /.{0,1000}Injection\\Spawn32.{0,1000}/ nocase ascii wide
+        $string80 = /Injection\\Spawn32/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string81 = /.{0,1000}Injection\\Spawn64.{0,1000}/ nocase ascii wide
+        $string81 = /Injection\\Spawn64/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string82 = /.{0,1000}InvokeAssembly\.x64\.dll.{0,1000}/ nocase ascii wide
+        $string82 = /InvokeAssembly\.x64\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string83 = /.{0,1000}jump\-exec\spsexec\s.{0,1000}/ nocase ascii wide
+        $string83 = /jump\-exec\spsexec\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string84 = /.{0,1000}nanodump_ppl\.x64\.dll.{0,1000}/ nocase ascii wide
+        $string84 = /nanodump_ppl\.x64\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string85 = /.{0,1000}nanodump_ssp\.x64\.dll.{0,1000}/ nocase ascii wide
+        $string85 = /nanodump_ssp\.x64\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string86 = /.{0,1000}nanorobeus\.py.{0,1000}/ nocase ascii wide
+        $string86 = /nanorobeus\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string87 = /.{0,1000}powerpick\.py.{0,1000}/ nocase ascii wide
+        $string87 = /powerpick\.py/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string88 = /.{0,1000}PowerPick\.x64\.dll.{0,1000}/ nocase ascii wide
+        $string88 = /PowerPick\.x64\.dll/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string89 = /.{0,1000}PowershellRunner\.h.{0,1000}/ nocase ascii wide
+        $string89 = /PowershellRunner\.h/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string90 = /.{0,1000}ServiceHavoc\.exe/ nocase ascii wide
+        $string90 = /ServiceHavoc\.exe/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string91 = /.{0,1000}set\shavoc\s.{0,1000}/ nocase ascii wide
+        $string91 = /set\shavoc\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string92 = /.{0,1000}shellcode\sinject\s.{0,1000}/ nocase ascii wide
+        $string92 = /shellcode\sinject\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string93 = /.{0,1000}shellcode\sspawn\s.{0,1000}/ nocase ascii wide
+        $string93 = /shellcode\sspawn\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string94 = /.{0,1000}Shellcode\.x64\.bin.{0,1000}/ nocase ascii wide
+        $string94 = /Shellcode\.x64\.bin/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string95 = /.{0,1000}token\sfind\-tokens.{0,1000}/ nocase ascii wide
+        $string95 = /token\sfind\-tokens/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string96 = /.{0,1000}token\simpersonate\s.{0,1000}/ nocase ascii wide
+        $string96 = /token\simpersonate\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string97 = /.{0,1000}token\sprivs\-get.{0,1000}/ nocase ascii wide
+        $string97 = /token\sprivs\-get/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string98 = /.{0,1000}token\sprivs\-list.{0,1000}/ nocase ascii wide
+        $string98 = /token\sprivs\-list/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string99 = /.{0,1000}token\ssteal\s.{0,1000}/ nocase ascii wide
+        $string99 = /token\ssteal\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string100 = /.{0,1000}x\-ishavocframework.{0,1000}/ nocase ascii wide
+        $string100 = /x\-ishavocframework/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string101 = /dcenum\s.{0,1000}/ nocase ascii wide
+        $string101 = /dcenum\s/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string102 = /powerpick\s.{0,1000}/ nocase ascii wide
+        $string102 = /powerpick\s/ nocase ascii wide
 
     condition:
         any of them

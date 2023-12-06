@@ -10,19 +10,19 @@ rule Sharp_Suite
     strings:
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
-        $string1 = /.{0,1000}FuzzySecurity\/Sharp\-Suite.{0,1000}/ nocase ascii wide
+        $string1 = /FuzzySecurity\/Sharp\-Suite/ nocase ascii wide
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
-        $string2 = /.{0,1000}Londor\.exe\s\-t\sCoverage.{0,1000}/ nocase ascii wide
+        $string2 = /Londor\.exe\s\-t\sCoverage/ nocase ascii wide
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
-        $string3 = /.{0,1000}Londor\.exe\s\-t\sScript.{0,1000}/ nocase ascii wide
+        $string3 = /Londor\.exe\s\-t\sScript/ nocase ascii wide
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
-        $string4 = /.{0,1000}Sharp\-Suite\.git.{0,1000}/ nocase ascii wide
+        $string4 = /Sharp\-Suite\.git/ nocase ascii wide
         // Description: C# offensive tools
         // Reference: https://github.com/FuzzySecurity/Sharp-Suite
-        $string5 = /.{0,1000}UrbanBishop\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /UrbanBishop\.exe/ nocase ascii wide
 
     condition:
         any of them

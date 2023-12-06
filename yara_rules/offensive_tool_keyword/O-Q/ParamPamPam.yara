@@ -10,7 +10,7 @@ rule ParamPamPam
     strings:
         // Description: This tool is used for brute discover GET and POST parameters.
         // Reference: https://github.com/Bo0oM/ParamPamPam
-        $string1 = /.{0,1000}ParamPamPam.{0,1000}/ nocase ascii wide
+        $string1 = /ParamPamPam/ nocase ascii wide
 
     condition:
         any of them

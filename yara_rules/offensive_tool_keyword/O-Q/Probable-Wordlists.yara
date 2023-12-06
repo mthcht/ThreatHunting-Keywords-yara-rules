@@ -10,40 +10,40 @@ rule Probable_Wordlists
     strings:
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string1 = /.{0,1000}Probable\-Wordlists.{0,1000}/ nocase ascii wide
+        $string1 = /Probable\-Wordlists/ nocase ascii wide
         // Description: real password lists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string2 = /.{0,1000}Probable\-Wordlists.{0,1000}/ nocase ascii wide
+        $string2 = /Probable\-Wordlists/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string3 = /.{0,1000}Real\-Passwords.{0,1000}/ nocase ascii wide
+        $string3 = /Real\-Passwords/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string4 = /.{0,1000}Top109Million\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string4 = /Top109Million\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string5 = /.{0,1000}Top12Thousand\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string5 = /Top12Thousand\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string6 = /.{0,1000}Top1575\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string6 = /Top1575\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string7 = /.{0,1000}Top1pt6Million\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string7 = /Top1pt6Million\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string8 = /.{0,1000}Top207\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string8 = /Top207\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string9 = /.{0,1000}Top29Million\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string9 = /Top29Million\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string10 = /.{0,1000}Top2Billion\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string10 = /Top2Billion\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string11 = /.{0,1000}Top304Thousand\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string11 = /Top304Thousand\-probable\-v2\.txt/ nocase ascii wide
         // Description: Password wordlists
         // Reference: https://github.com/berzerk0/Probable-Wordlists
-        $string12 = /.{0,1000}Top353Million\-probable\-v2\.txt.{0,1000}/ nocase ascii wide
+        $string12 = /Top353Million\-probable\-v2\.txt/ nocase ascii wide
 
     condition:
         any of them

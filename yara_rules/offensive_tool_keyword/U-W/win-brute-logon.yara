@@ -10,34 +10,34 @@ rule win_brute_logon
     strings:
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string1 = /.{0,1000}\sdarkcodersc\s.{0,1000}/ nocase ascii wide
+        $string1 = /\sdarkcodersc\s/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string2 = /.{0,1000}\/DarkCoderSc\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/DarkCoderSc\// nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string3 = /.{0,1000}\/WinBruteLogon.{0,1000}/ nocase ascii wide
+        $string3 = /\/WinBruteLogon/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string4 = /.{0,1000}\/win\-brute\-logon.{0,1000}/ nocase ascii wide
+        $string4 = /\/win\-brute\-logon/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string5 = /.{0,1000}net\suser\sHackMe\s.{0,1000}/ nocase ascii wide
+        $string5 = /net\suser\sHackMe\s/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string6 = /.{0,1000}WinBruteLogon.{0,1000}\s\-v\s\-u.{0,1000}/ nocase ascii wide
+        $string6 = /WinBruteLogon.{0,1000}\s\-v\s\-u/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string7 = /.{0,1000}WinBruteLogon\.dpr.{0,1000}/ nocase ascii wide
+        $string7 = /WinBruteLogon\.dpr/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string8 = /.{0,1000}WinBruteLogon\.dproj.{0,1000}/ nocase ascii wide
+        $string8 = /WinBruteLogon\.dproj/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string9 = /.{0,1000}WinBruteLogon\.exe.{0,1000}/ nocase ascii wide
+        $string9 = /WinBruteLogon\.exe/ nocase ascii wide
         // Description: Bruteforce cracking tool for windows users
         // Reference: https://github.com/DarkCoderSc/win-brute-logon
-        $string10 = /.{0,1000}WinBruteLogon\.res.{0,1000}/ nocase ascii wide
+        $string10 = /WinBruteLogon\.res/ nocase ascii wide
 
     condition:
         any of them

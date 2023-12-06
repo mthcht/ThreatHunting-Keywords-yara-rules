@@ -10,43 +10,43 @@ rule exe_to_dll
     strings:
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string1 = /.{0,1000}\/exe_to_dll\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/exe_to_dll\.git/ nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string2 = /.{0,1000}\/exe_to_dll\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/exe_to_dll\.git/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string3 = /.{0,1000}\/pe2shc\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\/pe2shc\.exe/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string4 = /.{0,1000}\\exe_to_dll\\.{0,1000}/ nocase ascii wide
+        $string4 = /\\exe_to_dll\\/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string5 = /.{0,1000}exe_to_dll\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /exe_to_dll\.exe/ nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string6 = /.{0,1000}exe_to_dll\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /exe_to_dll\.exe/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string7 = /.{0,1000}exe_to_dll_.{0,1000}\.zip.{0,1000}/ nocase ascii wide
+        $string7 = /exe_to_dll_.{0,1000}\.zip/ nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string8 = /.{0,1000}exe_to_dll_.{0,1000}_32bit\.zip.{0,1000}/ nocase ascii wide
+        $string8 = /exe_to_dll_.{0,1000}_32bit\.zip/ nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string9 = /.{0,1000}exe_to_dll_.{0,1000}_64bit\.zip.{0,1000}/ nocase ascii wide
+        $string9 = /exe_to_dll_.{0,1000}_64bit\.zip/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string10 = /.{0,1000}exe_to_dll\-master.{0,1000}/ nocase ascii wide
+        $string10 = /exe_to_dll\-master/ nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string11 = /.{0,1000}exe_to_dll\-master.{0,1000}/ nocase ascii wide
+        $string11 = /exe_to_dll\-master/ nocase ascii wide
         // Description: Converts a EXE into DLL
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string12 = /.{0,1000}hasherezade\/exe_to_dll.{0,1000}/ nocase ascii wide
+        $string12 = /hasherezade\/exe_to_dll/ nocase ascii wide
         // Description: Converts an EXE so that it can be loaded like a DLL.
         // Reference: https://github.com/hasherezade/exe_to_dll
-        $string13 = /.{0,1000}hasherezade\/exe_to_dll.{0,1000}/ nocase ascii wide
+        $string13 = /hasherezade\/exe_to_dll/ nocase ascii wide
 
     condition:
         any of them

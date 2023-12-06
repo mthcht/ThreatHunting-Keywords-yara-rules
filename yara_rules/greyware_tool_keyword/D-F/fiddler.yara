@@ -10,16 +10,16 @@ rule fiddler
     strings:
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string1 = /.{0,1000}\/download\/fiddler\/fiddler\-everywhere\-windows.{0,1000}/ nocase ascii wide
+        $string1 = /\/download\/fiddler\/fiddler\-everywhere\-windows/ nocase ascii wide
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string2 = /.{0,1000}\/Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /\/Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe/ nocase ascii wide
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string3 = /.{0,1000}\\Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\\Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe/ nocase ascii wide
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string4 = /.{0,1000}https:\/\/www\.telerik\.com\/download\/fiddler\/.{0,1000}/ nocase ascii wide
+        $string4 = /https:\/\/www\.telerik\.com\/download\/fiddler\// nocase ascii wide
 
     condition:
         any of them

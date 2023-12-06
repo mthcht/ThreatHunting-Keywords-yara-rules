@@ -10,7 +10,7 @@ rule hacktricks_xyz
     strings:
         // Description: site often consulted by pentester
         // Reference: https://hacktricks.xyz
-        $string1 = /.{0,1000}book\.hacktricks\.xyz\/.{0,1000}/ nocase ascii wide
+        $string1 = /book\.hacktricks\.xyz\// nocase ascii wide
 
     condition:
         any of them

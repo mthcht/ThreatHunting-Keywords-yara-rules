@@ -10,7 +10,7 @@ rule DBC2
     strings:
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string1 = /.{0,1000}https:\/\/api\.dropboxapi\.com\/.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/api\.dropboxapi\.com\// nocase ascii wide
 
     condition:
         any of them

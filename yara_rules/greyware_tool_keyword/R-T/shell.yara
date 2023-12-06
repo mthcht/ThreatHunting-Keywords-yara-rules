@@ -10,25 +10,25 @@ rule shell
     strings:
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string1 = /.{0,1000}\/bin\/sh\s\|\snc.{0,1000}/ nocase ascii wide
+        $string1 = /\/bin\/sh\s\|\snc/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string2 = /.{0,1000}\/bin\/sh\s\-i\s\<\&3\s\>\&3\s2\>\&3.{0,1000}/ nocase ascii wide
+        $string2 = /\/bin\/sh\s\-i\s\<\&3\s\>\&3\s2\>\&3/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string3 = /.{0,1000}rm\s\-f\sbackpipe.{0,1000}\smknod\s\/tmp\/backpipe\sp\s\&\&\snc\s.{0,1000}/ nocase ascii wide
+        $string3 = /rm\s\-f\sbackpipe.{0,1000}\smknod\s\/tmp\/backpipe\sp\s\&\&\snc\s/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string4 = /.{0,1000}sc\sconfig\sWinDefend\sstart\=\sdisabled.{0,1000}/ nocase ascii wide
+        $string4 = /sc\sconfig\sWinDefend\sstart\=\sdisabled/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string5 = /.{0,1000}socket\(S.{0,1000}PF_INET.{0,1000}SOCK_STREAM.{0,1000}getprotobyname\(.{0,1000}tcp.{0,1000}\)\).{0,1000}if\(connect\(S.{0,1000}sockaddr_in\(\$p.{0,1000}inet_aton\(\$i\)\)\)\).{0,1000}/ nocase ascii wide
+        $string5 = /socket\(S.{0,1000}PF_INET.{0,1000}SOCK_STREAM.{0,1000}getprotobyname\(.{0,1000}tcp.{0,1000}\)\).{0,1000}if\(connect\(S.{0,1000}sockaddr_in\(\$p.{0,1000}inet_aton\(\$i\)\)\)\)/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string6 = /.{0,1000}STDIN\-\>fdopen\(\$c.{0,1000}r\).{0,1000}\$~\-\>fdopen\(\$c.{0,1000}w\).{0,1000}system\$_\swhile\<\>.{0,1000}/ nocase ascii wide
+        $string6 = /STDIN\-\>fdopen\(\$c.{0,1000}r\).{0,1000}\$~\-\>fdopen\(\$c.{0,1000}w\).{0,1000}system\$_\swhile\<\>/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string7 = /.{0,1000}uname\s\-a.{0,1000}\sw.{0,1000}\sid.{0,1000}\s\/bin\/bash\s\-i.{0,1000}/ nocase ascii wide
+        $string7 = /uname\s\-a.{0,1000}\sw.{0,1000}\sid.{0,1000}\s\/bin\/bash\s\-i/ nocase ascii wide
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
         $string8 = /schkconfig\soff\scbdaemon/ nocase ascii wide

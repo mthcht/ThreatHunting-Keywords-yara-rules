@@ -10,22 +10,22 @@ rule SharpFtpC2
     strings:
         // Description: A Streamlined FTP-Driven Command and Control Conduit for Interconnecting Remote Systems.
         // Reference: https://github.com/DarkCoderSc/SharpFtpC2
-        $string1 = /.{0,1000}\/FtpC2\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/FtpC2\// nocase ascii wide
         // Description: A Streamlined FTP-Driven Command and Control Conduit for Interconnecting Remote Systems.
         // Reference: https://github.com/DarkCoderSc/SharpFtpC2
-        $string2 = /.{0,1000}\\FtpC2\\.{0,1000}/ nocase ascii wide
+        $string2 = /\\FtpC2\\/ nocase ascii wide
         // Description: A Streamlined FTP-Driven Command and Control Conduit for Interconnecting Remote Systems.
         // Reference: https://github.com/DarkCoderSc/SharpFtpC2
-        $string3 = /.{0,1000}\\net.{0,1000}\\ftpagent\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\\net.{0,1000}\\ftpagent\.exe/ nocase ascii wide
         // Description: A Streamlined FTP-Driven Command and Control Conduit for Interconnecting Remote Systems.
         // Reference: https://github.com/DarkCoderSc/SharpFtpC2
-        $string4 = /.{0,1000}FtpC2\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /FtpC2\.exe/ nocase ascii wide
         // Description: A Streamlined FTP-Driven Command and Control Conduit for Interconnecting Remote Systems.
         // Reference: https://github.com/DarkCoderSc/SharpFtpC2
-        $string5 = /.{0,1000}FtpC2\.Tasks.{0,1000}/ nocase ascii wide
+        $string5 = /FtpC2\.Tasks/ nocase ascii wide
         // Description: A Streamlined FTP-Driven Command and Control Conduit for Interconnecting Remote Systems.
         // Reference: https://github.com/DarkCoderSc/SharpFtpC2
-        $string6 = /.{0,1000}SharpFtpC2.{0,1000}/ nocase ascii wide
+        $string6 = /SharpFtpC2/ nocase ascii wide
 
     condition:
         any of them

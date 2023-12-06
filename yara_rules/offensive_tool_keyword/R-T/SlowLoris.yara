@@ -10,7 +10,7 @@ rule SlowLoris
     strings:
         // Description: Slowloris is basically an HTTP Denial of Service attack that affects threaded servers. It works like this
         // Reference: https://github.com/gkbrk/slowloris
-        $string1 = /.{0,1000}SlowLoris.{0,1000}/ nocase ascii wide
+        $string1 = /SlowLoris/ nocase ascii wide
 
     condition:
         any of them

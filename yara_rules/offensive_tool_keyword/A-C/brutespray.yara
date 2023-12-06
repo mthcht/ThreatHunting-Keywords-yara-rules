@@ -10,7 +10,7 @@ rule brutespray
     strings:
         // Description: BruteSpray takes nmap GNMAP/XML output or newline seperated JSONS and automatically brute-forces services with default credentials using Medusa. BruteSpray can even find non-standard ports by using the -sV inside Nmap.
         // Reference: https://github.com/x90skysn3k/brutespray
-        $string1 = /.{0,1000}brutespray.{0,1000}/ nocase ascii wide
+        $string1 = /brutespray/ nocase ascii wide
 
     condition:
         any of them

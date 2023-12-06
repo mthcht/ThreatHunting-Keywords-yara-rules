@@ -10,70 +10,70 @@ rule wmiexec_pro
     strings:
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string1 = /.{0,1000}\sexec\-command\s\-clear.{0,1000}/ nocase ascii wide
+        $string1 = /\sexec\-command\s\-clear/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string2 = /.{0,1000}\sexec\-command\s\-command\s.{0,1000}/ nocase ascii wide
+        $string2 = /\sexec\-command\s\-command\s/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string3 = /.{0,1000}\sexec\-command\s\-shell.{0,1000}/ nocase ascii wide
+        $string3 = /\sexec\-command\s\-shell/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string4 = /.{0,1000}\sfiletransfer\s\-download\s\-src\-file\s.{0,1000}\.exe.{0,1000}\/tmp.{0,1000}/ nocase ascii wide
+        $string4 = /\sfiletransfer\s\-download\s\-src\-file\s.{0,1000}\.exe.{0,1000}\/tmp/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string5 = /.{0,1000}\sfiletransfer\s\-upload\s\-src\-file\s.{0,1000}\.exe.{0,1000}\\temp.{0,1000}/ nocase ascii wide
+        $string5 = /\sfiletransfer\s\-upload\s\-src\-file\s.{0,1000}\.exe.{0,1000}\\temp/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string6 = /.{0,1000}\s\-no\-pass\srid\-hijack.{0,1000}/ nocase ascii wide
+        $string6 = /\s\-no\-pass\srid\-hijack/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string7 = /.{0,1000}\srid\-hijack\s\-.{0,1000}/ nocase ascii wide
+        $string7 = /\srid\-hijack\s\-/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string8 = /.{0,1000}\sservice\s\-dump\sall\-services\.json.{0,1000}/ nocase ascii wide
+        $string8 = /\sservice\s\-dump\sall\-services\.json/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string9 = /.{0,1000}\.py\s.{0,1000}\samsi\s\-disable.{0,1000}/ nocase ascii wide
+        $string9 = /\.py\s.{0,1000}\samsi\s\-disable/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string10 = /.{0,1000}\.py\s.{0,1000}\samsi\s\-enable.{0,1000}/ nocase ascii wide
+        $string10 = /\.py\s.{0,1000}\samsi\s\-enable/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string11 = /.{0,1000}\.py.{0,1000}\sservice\s\-action\screate\s\-service\-name\s.{0,1000}/ nocase ascii wide
+        $string11 = /\.py.{0,1000}\sservice\s\-action\screate\s\-service\-name\s/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string12 = /.{0,1000}\/wmiexec\-Pro.{0,1000}/ nocase ascii wide
+        $string12 = /\/wmiexec\-Pro/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string13 = /.{0,1000}C:\\aab\.txt.{0,1000}/ nocase ascii wide
+        $string13 = /C:\\aab\.txt/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string14 = /.{0,1000}ClearEventlog\.vbs.{0,1000}/ nocase ascii wide
+        $string14 = /ClearEventlog\.vbs/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string15 = /.{0,1000}eventlog\s\-risk\-i\-know.{0,1000}/ nocase ascii wide
+        $string15 = /eventlog\s\-risk\-i\-know/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string16 = /.{0,1000}eventlog_fucker\.py.{0,1000}/ nocase ascii wide
+        $string16 = /eventlog_fucker\.py/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string17 = /.{0,1000}Exec\-Command\-Silent\.vbs.{0,1000}/ nocase ascii wide
+        $string17 = /Exec\-Command\-Silent\.vbs/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string18 = /.{0,1000}GrantSamAccessPermission\.vbs.{0,1000}/ nocase ascii wide
+        $string18 = /GrantSamAccessPermission\.vbs/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string19 = /.{0,1000}modules\/enumrate\.py.{0,1000}/ nocase ascii wide
+        $string19 = /modules\/enumrate\.py/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string20 = /.{0,1000}rid_hijack\.py.{0,1000}/ nocase ascii wide
+        $string20 = /rid_hijack\.py/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string21 = /.{0,1000}wmiexec\-Pro\.git.{0,1000}/ nocase ascii wide
+        $string21 = /wmiexec\-Pro\.git/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string22 = /.{0,1000}wmiexec\-pro\.py.{0,1000}/ nocase ascii wide
+        $string22 = /wmiexec\-pro\.py/ nocase ascii wide
 
     condition:
         any of them

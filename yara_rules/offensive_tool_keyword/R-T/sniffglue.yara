@@ -10,7 +10,7 @@ rule sniffglue
     strings:
         // Description: Secure multithreaded packet sniffer
         // Reference: https://github.com/kpcyrd/sniffglue
-        $string1 = /.{0,1000}sniffglue.{0,1000}/ nocase ascii wide
+        $string1 = /sniffglue/ nocase ascii wide
 
     condition:
         any of them

@@ -10,22 +10,22 @@ rule apollon
     strings:
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string1 = /.{0,1000}\/apollon\-all\-x64.{0,1000}/ nocase ascii wide
+        $string1 = /\/apollon\-all\-x64/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string2 = /.{0,1000}\/apollon\-main\.zip.{0,1000}/ nocase ascii wide
+        $string2 = /\/apollon\-main\.zip/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string3 = /.{0,1000}\/apollon\-selective\-x64.{0,1000}/ nocase ascii wide
+        $string3 = /\/apollon\-selective\-x64/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string4 = /.{0,1000}\[\-\]\sSeems\slike\swe\skilled\sauditd\.\sOoopsie\s:D.{0,1000}/ nocase ascii wide
+        $string4 = /\[\-\]\sSeems\slike\swe\skilled\sauditd\.\sOoopsie\s:D/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string5 = /.{0,1000}\[\+\]\sauditd\spatched\ssuccessfully.{0,1000}/ nocase ascii wide
+        $string5 = /\[\+\]\sauditd\spatched\ssuccessfully/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string6 = /.{0,1000}codewhitesec\/apollon.{0,1000}/ nocase ascii wide
+        $string6 = /codewhitesec\/apollon/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule getsploit
     strings:
         // Description: Command line search and download tool for Vulners Database inspired by searchsploit. It allows you to search online for the exploits across all the most popular collections: Exploit-DB. Metasploit. Packetstorm and others. The most powerful feature is immediate exploit source download right in your working path.
         // Reference: https://github.com/vulnersCom/getsploit
-        $string1 = /.{0,1000}getsploit.{0,1000}/ nocase ascii wide
+        $string1 = /getsploit/ nocase ascii wide
 
     condition:
         any of them

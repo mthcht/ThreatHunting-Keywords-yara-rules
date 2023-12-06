@@ -10,34 +10,34 @@ rule red_python_scripts
     strings:
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string1 = /.{0,1000}arp_mitm\.py.{0,1000}/ nocase ascii wide
+        $string1 = /arp_mitm\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string2 = /.{0,1000}change\-windows10\-mac\-address\.py.{0,1000}/ nocase ascii wide
+        $string2 = /change\-windows10\-mac\-address\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string3 = /.{0,1000}lanscan_arp\.py.{0,1000}/ nocase ascii wide
+        $string3 = /lanscan_arp\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string4 = /.{0,1000}nmap_port_scanner\.py.{0,1000}/ nocase ascii wide
+        $string4 = /nmap_port_scanner\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string5 = /.{0,1000}nmap_port_scanner_ip_obj\.py.{0,1000}/ nocase ascii wide
+        $string5 = /nmap_port_scanner_ip_obj\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string6 = /.{0,1000}port_scanner_ip_obj\.py.{0,1000}/ nocase ascii wide
+        $string6 = /port_scanner_ip_obj\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string7 = /.{0,1000}port_scanner_regex\.py.{0,1000}/ nocase ascii wide
+        $string7 = /port_scanner_regex\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string8 = /.{0,1000}wifi_dos_own\.py.{0,1000}/ nocase ascii wide
+        $string8 = /wifi_dos_own\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string9 = /.{0,1000}wifi_dos3\.py.{0,1000}/ nocase ascii wide
+        $string9 = /wifi_dos3\.py/ nocase ascii wide
         // Description: random networking exploitation scirpts
         // Reference: https://github.com/davidbombal/red-python-scripts
-        $string10 = /.{0,1000}yeelight_discover\.py.{0,1000}/ nocase ascii wide
+        $string10 = /yeelight_discover\.py/ nocase ascii wide
 
     condition:
         any of them

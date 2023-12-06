@@ -10,16 +10,16 @@ rule firefox_decrypt
     strings:
         // Description: Firefox Decrypt is a tool to extract passwords from Mozilla
         // Reference: https://github.com/unode/firefox_decrypt
-        $string1 = /.{0,1000}\/firefox_decrypt\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/firefox_decrypt\.git/ nocase ascii wide
         // Description: Firefox Decrypt is a tool to extract passwords from Mozilla
         // Reference: https://github.com/unode/firefox_decrypt
-        $string2 = /.{0,1000}firefox_decrypt\.py.{0,1000}/ nocase ascii wide
+        $string2 = /firefox_decrypt\.py/ nocase ascii wide
         // Description: Firefox Decrypt is a tool to extract passwords from Mozilla
         // Reference: https://github.com/unode/firefox_decrypt
-        $string3 = /.{0,1000}firefox_decrypt\-main.{0,1000}/ nocase ascii wide
+        $string3 = /firefox_decrypt\-main/ nocase ascii wide
         // Description: Firefox Decrypt is a tool to extract passwords from Mozilla
         // Reference: https://github.com/unode/firefox_decrypt
-        $string4 = /.{0,1000}unode\/firefox_decrypt.{0,1000}/ nocase ascii wide
+        $string4 = /unode\/firefox_decrypt/ nocase ascii wide
 
     condition:
         any of them

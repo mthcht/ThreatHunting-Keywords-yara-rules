@@ -10,10 +10,10 @@ rule ncat
     strings:
         // Description: reverse shell persistence
         // Reference: N/A
-        $string1 = /.{0,1000}\sncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}\|crontab.{0,1000}/ nocase ascii wide
+        $string1 = /\sncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}\|crontab/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string2 = /.{0,1000}ncat\s.{0,1000}\s\-p\s4444.{0,1000}/ nocase ascii wide
+        $string2 = /ncat\s.{0,1000}\s\-p\s4444/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule AbandonedCOMKeys
     strings:
         // Description: Enumerates abandoned COM keys (specifically InprocServer32). Useful for persistence
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/AbandonedCOMKeys
-        $string1 = /.{0,1000}\/AbandonedCOMKeys\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/AbandonedCOMKeys\// nocase ascii wide
         // Description: Enumerates abandoned COM keys (specifically InprocServer32). Useful for persistence
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/AbandonedCOMKeys
-        $string2 = /.{0,1000}\\AbandonedCOMKeys\..{0,1000}/ nocase ascii wide
+        $string2 = /\\AbandonedCOMKeys\./ nocase ascii wide
 
     condition:
         any of them

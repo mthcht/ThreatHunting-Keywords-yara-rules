@@ -10,7 +10,7 @@ rule Bad_PDF
     strings:
         // Description: Bad-PDF create malicious PDF file to steal NTLM(NTLMv1/NTLMv2) Hashes from windows machines. it utilize vulnerability disclosed by checkpoint team to create the malicious PDF file. Bad-Pdf reads the NTLM hashes using Responder listener.
         // Reference: https://github.com/deepzec/Bad-Pdf
-        $string1 = /.{0,1000}Bad\-Pdf.{0,1000}/ nocase ascii wide
+        $string1 = /Bad\-Pdf/ nocase ascii wide
 
     condition:
         any of them

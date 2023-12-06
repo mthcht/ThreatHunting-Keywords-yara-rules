@@ -10,7 +10,7 @@ rule Getcap
     strings:
         // Description: Enumerating File Capabilities with Getcap
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /.{0,1000}getcap\s\-r\s\/\s2\>\/dev\/null.{0,1000}/ nocase ascii wide
+        $string1 = /getcap\s\-r\s\/\s2\>\/dev\/null/ nocase ascii wide
 
     condition:
         any of them

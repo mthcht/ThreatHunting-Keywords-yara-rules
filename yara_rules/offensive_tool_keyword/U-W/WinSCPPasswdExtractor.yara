@@ -10,7 +10,7 @@ rule WinSCPPasswdExtractor
     strings:
         // Description: Extract WinSCP Credentials from any Windows System or winscp config file
         // Reference: https://github.com/NeffIsBack/WinSCPPasswdExtractor
-        $string1 = /.{0,1000}WinSCPPasswdExtractor.{0,1000}/ nocase ascii wide
+        $string1 = /WinSCPPasswdExtractor/ nocase ascii wide
 
     condition:
         any of them

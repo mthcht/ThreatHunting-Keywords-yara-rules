@@ -10,10 +10,10 @@ rule mitmsocks4j
     strings:
         // Description: Man-in-the-middle SOCKS Proxy
         // Reference: https://github.com/Akdeniz/mitmsocks4j
-        $string1 = /.{0,1000}mitmsocks.{0,1000}/ nocase ascii wide
+        $string1 = /mitmsocks/ nocase ascii wide
         // Description: Man-in-the-middle SOCKS Proxy for Java
         // Reference: https://github.com/Akdeniz/mitmsocks4j
-        $string2 = /.{0,1000}mitmsocks4j.{0,1000}/ nocase ascii wide
+        $string2 = /mitmsocks4j/ nocase ascii wide
 
     condition:
         any of them

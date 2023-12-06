@@ -10,31 +10,31 @@ rule pyshell
     strings:
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string1 = /.{0,1000}\.\/PyShell\s.{0,1000}/ nocase ascii wide
+        $string1 = /\.\/PyShell\s/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string2 = /.{0,1000}\/JoelGMSec\/PyShell.{0,1000}/ nocase ascii wide
+        $string2 = /\/JoelGMSec\/PyShell/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string3 = /.{0,1000}\/Shells\/shell\.aspx.{0,1000}/ nocase ascii wide
+        $string3 = /\/Shells\/shell\.aspx/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string4 = /.{0,1000}\/Shells\/shell\.jsp.{0,1000}/ nocase ascii wide
+        $string4 = /\/Shells\/shell\.jsp/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string5 = /.{0,1000}\/Shells\/shell\.php.{0,1000}/ nocase ascii wide
+        $string5 = /\/Shells\/shell\.php/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string6 = /.{0,1000}\/Shells\/shell\.py.{0,1000}/ nocase ascii wide
+        $string6 = /\/Shells\/shell\.py/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string7 = /.{0,1000}\/Shells\/shell\.sh.{0,1000}/ nocase ascii wide
+        $string7 = /\/Shells\/shell\.sh/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string8 = /.{0,1000}\/Shells\/tomcat\.war.{0,1000}/ nocase ascii wide
+        $string8 = /\/Shells\/tomcat\.war/ nocase ascii wide
         // Description: PyShell is Multiplatform Python WebShell. This tool helps you to obtain a shell-like interface on a web server to be remotely accessed. Unlike other webshells the main goal of the tool is to use as little code as possible on the server side regardless of the language used or the operating system of the server.
         // Reference: https://github.com/JoelGMSec/PyShell
-        $string9 = /.{0,1000}\/Shells\/wordpress\.zip.{0,1000}/ nocase ascii wide
+        $string9 = /\/Shells\/wordpress\.zip/ nocase ascii wide
 
     condition:
         any of them

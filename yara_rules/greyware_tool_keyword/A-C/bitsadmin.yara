@@ -10,7 +10,7 @@ rule bitsadmin
     strings:
         // Description: bitsadmin suspicious transfer
         // Reference: N/A
-        $string1 = /.{0,1000}bitsadmin\s\/transfer\sdebjob\s\/download\s\/priority\snormal\s\\.{0,1000}\\C\$\\Windows\\.{0,1000}\.dll/ nocase ascii wide
+        $string1 = /bitsadmin\s\/transfer\sdebjob\s\/download\s\/priority\snormal\s\\.{0,1000}\\C\$\\Windows\\.{0,1000}\.dll/ nocase ascii wide
 
     condition:
         any of them

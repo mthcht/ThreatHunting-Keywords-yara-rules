@@ -10,19 +10,19 @@ rule ETWEventSubscription
     strings:
         // Description: Similar to WMI event subscriptions but leverages Event Tracing for Windows. When the event on the system occurs currently either when any user logs in or a specified process is started - the DoEvil() method is executed.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ETWEventSubscription
-        $string1 = /.{0,1000}DoEvil\(\).{0,1000}/ nocase ascii wide
+        $string1 = /DoEvil\(\)/ nocase ascii wide
         // Description: Similar to WMI event subscriptions but leverages Event Tracing for Windows. When the event on the system occurs currently either when any user logs in or a specified process is started - the DoEvil() method is executed.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ETWEventSubscription
-        $string2 = /.{0,1000}ETWEventSubscription.{0,1000}Program\.cs.{0,1000}/ nocase ascii wide
+        $string2 = /ETWEventSubscription.{0,1000}Program\.cs/ nocase ascii wide
         // Description: Similar to WMI event subscriptions but leverages Event Tracing for Windows. When the event on the system occurs currently either when any user logs in or a specified process is started - the DoEvil() method is executed.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ETWEventSubscription
-        $string3 = /.{0,1000}ETWEventSubscription\.exe.{0,1000}\s\-ProcStart\s.{0,1000}/ nocase ascii wide
+        $string3 = /ETWEventSubscription\.exe.{0,1000}\s\-ProcStart\s/ nocase ascii wide
         // Description: Similar to WMI event subscriptions but leverages Event Tracing for Windows. When the event on the system occurs currently either when any user logs in or a specified process is started - the DoEvil() method is executed.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ETWEventSubscription
-        $string4 = /.{0,1000}ETWEventSubscription\.exe.{0,1000}\s\-UserLogon.{0,1000}/ nocase ascii wide
+        $string4 = /ETWEventSubscription\.exe.{0,1000}\s\-UserLogon/ nocase ascii wide
         // Description: Similar to WMI event subscriptions but leverages Event Tracing for Windows. When the event on the system occurs currently either when any user logs in or a specified process is started - the DoEvil() method is executed.
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/ETWEventSubscription
-        $string5 = /.{0,1000}OffensiveCSharp.{0,1000}ETWEventSubscription.{0,1000}/ nocase ascii wide
+        $string5 = /OffensiveCSharp.{0,1000}ETWEventSubscription/ nocase ascii wide
 
     condition:
         any of them

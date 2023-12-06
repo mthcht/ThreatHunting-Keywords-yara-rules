@@ -10,16 +10,16 @@ rule GMSAPasswordReader
     strings:
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
-        $string1 = /.{0,1000}\/GMSAPasswordReader\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/GMSAPasswordReader\.git/ nocase ascii wide
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
-        $string2 = /.{0,1000}GMSAPasswordReader\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /GMSAPasswordReader\.exe/ nocase ascii wide
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
-        $string3 = /.{0,1000}GMSAPasswordReader\-master.{0,1000}/ nocase ascii wide
+        $string3 = /GMSAPasswordReader\-master/ nocase ascii wide
         // Description: Reads the password blob from a GMSA account using LDAP and parses the values into hashes for re-use.
         // Reference: https://github.com/rvazarkar/GMSAPasswordReader
-        $string4 = /.{0,1000}rvazarkar\/GMSAPasswordReader.{0,1000}/ nocase ascii wide
+        $string4 = /rvazarkar\/GMSAPasswordReader/ nocase ascii wide
 
     condition:
         any of them

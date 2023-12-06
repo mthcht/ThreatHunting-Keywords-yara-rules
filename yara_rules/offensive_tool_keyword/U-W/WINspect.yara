@@ -10,7 +10,7 @@ rule WINspect
     strings:
         // Description: WINspect is part of a larger project for auditing different areas of Windows environments.It focuses on enumerating different parts of a Windows machine to identify security weaknesses and point to components that need further hardening.can be used by attacker 
         // Reference: https://github.com/A-mIn3/WINspect
-        $string1 = /.{0,1000}WINspect\.ps1.{0,1000}/ nocase ascii wide
+        $string1 = /WINspect\.ps1/ nocase ascii wide
 
     condition:
         any of them

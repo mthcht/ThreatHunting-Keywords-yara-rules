@@ -10,7 +10,7 @@ rule DeathStar
     strings:
         // Description: DeathStar is a Python script that uses Empires RESTful API to automate gaining Domain and/or Enterprise Admin rights in Active Directory environments using some of the most common offensive TTPs.
         // Reference: https://github.com/byt3bl33d3r/DeathStar
-        $string1 = /.{0,1000}github.{0,1000}\/DeathStar.{0,1000}/ nocase ascii wide
+        $string1 = /github.{0,1000}\/DeathStar/ nocase ascii wide
 
     condition:
         any of them

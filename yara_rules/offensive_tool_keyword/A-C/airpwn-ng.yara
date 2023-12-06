@@ -10,7 +10,7 @@ rule airpwn_ng
     strings:
         // Description: We force the targets browser to do what we want
         // Reference: https://github.com/ICSec/airpwn-ng
-        $string1 = /.{0,1000}airpwn\-ng.{0,1000}/ nocase ascii wide
+        $string1 = /airpwn\-ng/ nocase ascii wide
 
     condition:
         any of them

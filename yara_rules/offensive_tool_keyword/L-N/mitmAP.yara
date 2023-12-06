@@ -10,7 +10,7 @@ rule mitmAP
     strings:
         // Description: A python program to create a fake AP and sniff data
         // Reference: https://github.com/xdavidhu/mitmAP
-        $string1 = /.{0,1000}\/mitmAP.{0,1000}/ nocase ascii wide
+        $string1 = /\/mitmAP/ nocase ascii wide
 
     condition:
         any of them

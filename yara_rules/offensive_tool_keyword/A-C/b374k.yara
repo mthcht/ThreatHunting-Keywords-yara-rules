@@ -10,13 +10,13 @@ rule b374k
     strings:
         // Description: This PHP Shell is a useful tool for system or web administrator to do remote management without using cpanel. connecting using ssh. ftp etc. All actions take place within a web browser
         // Reference: https://github.com/b374k/b374k
-        $string1 = /.{0,1000}\/B374K.{0,1000}/ nocase ascii wide
+        $string1 = /\/B374K/ nocase ascii wide
         // Description: This PHP Shell is a useful tool for system or web administrator to do remote management without using cpanel. connecting using ssh. ftp etc. All actions take place within a web browser
         // Reference: https://github.com/b374k/b374k
-        $string2 = /.{0,1000}B374K.{0,1000}index\.php.{0,1000}/ nocase ascii wide
+        $string2 = /B374K.{0,1000}index\.php/ nocase ascii wide
         // Description: This PHP Shell is a useful tool for system or web administrator to do remote management without using cpanel. connecting using ssh. ftp etc. All actions take place within a web browser
         // Reference: https://github.com/b374k/b374k
-        $string3 = /.{0,1000}php\s\-f\s.{0,1000}\.php\s\-\-\s\-o\smyShell\.php.{0,1000}/ nocase ascii wide
+        $string3 = /php\s\-f\s.{0,1000}\.php\s\-\-\s\-o\smyShell\.php/ nocase ascii wide
 
     condition:
         any of them

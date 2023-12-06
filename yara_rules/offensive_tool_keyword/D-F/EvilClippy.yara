@@ -10,28 +10,28 @@ rule EvilClippy
     strings:
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string1 = /.{0,1000}\/evilclippy\.cs.{0,1000}/ nocase ascii wide
+        $string1 = /\/evilclippy\.cs/ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string2 = /.{0,1000}\/EvilClippy\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/EvilClippy\.git/ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string3 = /.{0,1000}\\evilclippy\.cs.{0,1000}/ nocase ascii wide
+        $string3 = /\\evilclippy\.cs/ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string4 = /.{0,1000}_EvilClippy\..{0,1000}/ nocase ascii wide
+        $string4 = /_EvilClippy\./ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string5 = /.{0,1000}EvilClippy\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /EvilClippy\.exe/ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string6 = /.{0,1000}EvilClippy\-master.{0,1000}/ nocase ascii wide
+        $string6 = /EvilClippy\-master/ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string7 = /.{0,1000}eviloffice\.exe.{0,1000}/ nocase ascii wide
+        $string7 = /eviloffice\.exe/ nocase ascii wide
         // Description: A cross-platform assistant for creating malicious MS Office documents
         // Reference: https://github.com/outflanknl/EvilClippy
-        $string8 = /.{0,1000}outflanknl\/EvilClippy.{0,1000}/ nocase ascii wide
+        $string8 = /outflanknl\/EvilClippy/ nocase ascii wide
 
     condition:
         any of them

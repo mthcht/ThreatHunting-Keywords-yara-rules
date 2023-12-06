@@ -10,25 +10,25 @@ rule PE_Obfuscator
     strings:
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string1 = /.{0,1000}\/PE\-Obfuscator.{0,1000}/ nocase ascii wide
+        $string1 = /\/PE\-Obfuscator/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string2 = /.{0,1000}\\out_pe\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /\\out_pe\.exe/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string3 = /.{0,1000}PE\-Obfuscator\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /PE\-Obfuscator\.exe/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string4 = /.{0,1000}PE\-Obfuscator\.git.{0,1000}/ nocase ascii wide
+        $string4 = /PE\-Obfuscator\.git/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string5 = /.{0,1000}PE\-Obfuscator\-main.{0,1000}/ nocase ascii wide
+        $string5 = /PE\-Obfuscator\-main/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string6 = /.{0,1000}script\/xor\-bin\.py.{0,1000}/ nocase ascii wide
+        $string6 = /script\/xor\-bin\.py/ nocase ascii wide
         // Description: PE obfuscator with Evasion in mind
         // Reference: https://github.com/TheD1rkMtr/PE-Obfuscator
-        $string7 = /.{0,1000}xor\-bin\.py\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string7 = /xor\-bin\.py\s.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them

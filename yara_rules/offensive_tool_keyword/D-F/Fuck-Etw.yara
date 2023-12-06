@@ -10,43 +10,43 @@ rule Fuck_Etw
     strings:
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string1 = /.{0,1000}\/etw\-fuck\.cpp.{0,1000}/ nocase ascii wide
+        $string1 = /\/etw\-fuck\.cpp/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string2 = /.{0,1000}\/etw\-fuck\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /\/etw\-fuck\.exe/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string3 = /.{0,1000}\/Fuck\-Etw\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/Fuck\-Etw\.git/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string4 = /.{0,1000}\[\#\]\sReady\sFor\sETW\sPatch\..{0,1000}/ nocase ascii wide
+        $string4 = /\[\#\]\sReady\sFor\sETW\sPatch\./ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string5 = /.{0,1000}\[\+\]\sETW\sPatched.{0,1000}\sNo\sLogs\sNo\sCrime\s\!.{0,1000}/ nocase ascii wide
+        $string5 = /\[\+\]\sETW\sPatched.{0,1000}\sNo\sLogs\sNo\sCrime\s\!/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string6 = /.{0,1000}\[i\]\sHooked\sNtdll\sBase\sAddress\s:\s.{0,1000}/ nocase ascii wide
+        $string6 = /\[i\]\sHooked\sNtdll\sBase\sAddress\s:\s/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string7 = /.{0,1000}\[i\]\sUnhooked\sNtdll\sBase\sAddress:\s.{0,1000}/ nocase ascii wide
+        $string7 = /\[i\]\sUnhooked\sNtdll\sBase\sAddress:\s/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string8 = /.{0,1000}\\etw\-fuck\.cpp.{0,1000}/ nocase ascii wide
+        $string8 = /\\etw\-fuck\.cpp/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string9 = /.{0,1000}\\etw\-fuck\.exe.{0,1000}/ nocase ascii wide
+        $string9 = /\\etw\-fuck\.exe/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string10 = /.{0,1000}40E7714F\-460D\-4CA6\-9A5A\-FB32C6769BE4.{0,1000}/ nocase ascii wide
+        $string10 = /40E7714F\-460D\-4CA6\-9A5A\-FB32C6769BE4/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string11 = /.{0,1000}etw\-fuck\.exe\s.{0,1000}/ nocase ascii wide
+        $string11 = /etw\-fuck\.exe\s/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string12 = /.{0,1000}Fuck\-Etw\-main.{0,1000}/ nocase ascii wide
+        $string12 = /Fuck\-Etw\-main/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string13 = /.{0,1000}unkvolism\/Fuck\-Etw.{0,1000}/ nocase ascii wide
+        $string13 = /unkvolism\/Fuck\-Etw/ nocase ascii wide
 
     condition:
         any of them

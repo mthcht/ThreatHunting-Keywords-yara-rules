@@ -10,7 +10,7 @@ rule NoSQLMap
     strings:
         // Description: Automated NoSQL database enumeration and web application exploitation tool.
         // Reference: https://github.com/codingo/NoSQLMap
-        $string1 = /.{0,1000}NoSQLMap.{0,1000}/ nocase ascii wide
+        $string1 = /NoSQLMap/ nocase ascii wide
 
     condition:
         any of them

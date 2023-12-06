@@ -10,22 +10,22 @@ rule WebDavC2
     strings:
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string1 = /.{0,1000}\/WebDavC2\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/WebDavC2\.git/ nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string2 = /.{0,1000}Arno0x\/WebDavC2.{0,1000}/ nocase ascii wide
+        $string2 = /Arno0x\/WebDavC2/ nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string3 = /.{0,1000}WebDavC2.{0,1000}/ nocase ascii wide
+        $string3 = /WebDavC2/ nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string4 = /.{0,1000}webdavC2\.py.{0,1000}/ nocase ascii wide
+        $string4 = /webdavC2\.py/ nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string5 = /.{0,1000}WebDavC2\-master\.zip.{0,1000}/ nocase ascii wide
+        $string5 = /WebDavC2\-master\.zip/ nocase ascii wide
         // Description: WebDavC2 is a PoC of using the WebDAV protocol with PROPFIND only requests to serve as a C2 communication channel between an agent. running on the target system. and a controller acting as the actuel C2 server.
         // Reference: https://github.com/Arno0x/WebDavC2
-        $string6 = /.{0,1000}webdavC2server\.py.{0,1000}/ nocase ascii wide
+        $string6 = /webdavC2server\.py/ nocase ascii wide
 
     condition:
         any of them

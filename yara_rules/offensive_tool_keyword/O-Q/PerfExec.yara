@@ -10,22 +10,22 @@ rule PerfExec
     strings:
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string1 = /.{0,1000}\sdiagrun\=true\sservice\=DNS.{0,1000}\sdllpath\=.{0,1000}\.dll.{0,1000}\scomputername\=.{0,1000}/ nocase ascii wide
+        $string1 = /\sdiagrun\=true\sservice\=DNS.{0,1000}\sdllpath\=.{0,1000}\.dll.{0,1000}\scomputername\=/ nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string2 = /.{0,1000}\swmirun\=true\sdllpath\=.{0,1000}\.dll.{0,1000}\scomputername\=.{0,1000}/ nocase ascii wide
+        $string2 = /\swmirun\=true\sdllpath\=.{0,1000}\.dll.{0,1000}\scomputername\=/ nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string3 = /.{0,1000}\\PerfExec\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\\PerfExec\.exe/ nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string4 = /.{0,1000}0xthirteen\/PerfExec.{0,1000}/ nocase ascii wide
+        $string4 = /0xthirteen\/PerfExec/ nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string5 = /.{0,1000}PerfExec\.sln.{0,1000}/ nocase ascii wide
+        $string5 = /PerfExec\.sln/ nocase ascii wide
         // Description: PerfExec - an example performance dll that will run CMD.exe and a .NET assembly that will execute the DLL or gather performance data locally or remotely.
         // Reference: https://github.com/0xthirteen/PerfExec
-        $string6 = /.{0,1000}PerfExec\-main\.zip.{0,1000}/ nocase ascii wide
+        $string6 = /PerfExec\-main\.zip/ nocase ascii wide
 
     condition:
         any of them

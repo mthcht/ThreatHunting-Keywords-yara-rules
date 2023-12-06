@@ -10,7 +10,7 @@ rule usbmon
     strings:
         // Description: USB capture for Linux.
         // Reference: https://www.kernel.org/doc/Documentation/usb/usbmon.txt
-        $string1 = /.{0,1000}\\usbmon\.txt.{0,1000}/ nocase ascii wide
+        $string1 = /\\usbmon\.txt/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule ophcrack
     strings:
         // Description: Windows password cracker based on rainbow tables.
         // Reference: https://gitlab.com/objectifsecurite/ophcrack
-        $string1 = /.{0,1000}ophcrack.{0,1000}/ nocase ascii wide
+        $string1 = /ophcrack/ nocase ascii wide
 
     condition:
         any of them

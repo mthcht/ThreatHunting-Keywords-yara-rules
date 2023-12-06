@@ -10,28 +10,28 @@ rule POSTDump
     strings:
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string1 = /.{0,1000}\/PostDump\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\/PostDump\.exe/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string2 = /.{0,1000}\/POSTDump\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/POSTDump\.git/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string3 = /.{0,1000}\\lsass\.dmp.{0,1000}/ nocase ascii wide
+        $string3 = /\\lsass\.dmp/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string4 = /.{0,1000}\\PostDump\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /\\PostDump\.exe/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string5 = /.{0,1000}E54195F0\-060C\-4B24\-98F2\-AD9FB5351045.{0,1000}/ nocase ascii wide
+        $string5 = /E54195F0\-060C\-4B24\-98F2\-AD9FB5351045/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string6 = /.{0,1000}PostDump\.exe\s.{0,1000}/ nocase ascii wide
+        $string6 = /PostDump\.exe\s/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string7 = /.{0,1000}POSTDump\-main.{0,1000}/ nocase ascii wide
+        $string7 = /POSTDump\-main/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string8 = /.{0,1000}YOLOP0wn\/POSTDump.{0,1000}/ nocase ascii wide
+        $string8 = /YOLOP0wn\/POSTDump/ nocase ascii wide
 
     condition:
         any of them

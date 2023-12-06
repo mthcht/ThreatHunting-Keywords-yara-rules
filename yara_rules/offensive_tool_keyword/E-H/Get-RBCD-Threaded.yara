@@ -10,10 +10,10 @@ rule Get_RBCD_Threaded
     strings:
         // Description: Tool to discover Resource-Based Constrained Delegation attack paths in Active Directory Environments
         // Reference: https://github.com/FatRodzianko/Get-RBCD-Threaded
-        $string1 = /.{0,1000}\.exe\s.{0,1000}\-searchforest.{0,1000}\-pwdlastset.{0,1000}/ nocase ascii wide
+        $string1 = /\.exe\s.{0,1000}\-searchforest.{0,1000}\-pwdlastset/ nocase ascii wide
         // Description: Tool to discover Resource-Based Constrained Delegation attack paths in Active Directory Environments
         // Reference: https://github.com/FatRodzianko/Get-RBCD-Threaded
-        $string2 = /.{0,1000}Get\-RBCD\-Threaded.{0,1000}/ nocase ascii wide
+        $string2 = /Get\-RBCD\-Threaded/ nocase ascii wide
 
     condition:
         any of them

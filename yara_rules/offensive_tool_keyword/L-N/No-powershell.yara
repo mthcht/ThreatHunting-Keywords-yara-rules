@@ -10,22 +10,22 @@ rule No_powershell
     strings:
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string1 = /.{0,1000}\sNo\-PowerShell\.cs.{0,1000}/ nocase ascii wide
+        $string1 = /\sNo\-PowerShell\.cs/ nocase ascii wide
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string2 = /.{0,1000}\/No\-PowerShell\.cs.{0,1000}/ nocase ascii wide
+        $string2 = /\/No\-PowerShell\.cs/ nocase ascii wide
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string3 = /.{0,1000}\/No\-PowerShell\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\/No\-PowerShell\.exe/ nocase ascii wide
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string4 = /.{0,1000}\\No\-PowerShell\.cs.{0,1000}/ nocase ascii wide
+        $string4 = /\\No\-PowerShell\.cs/ nocase ascii wide
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string5 = /.{0,1000}\\No\-PowerShell\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /\\No\-PowerShell\.exe/ nocase ascii wide
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string6 = /.{0,1000}c:\\temp\\something\.ps1.{0,1000}/ nocase ascii wide
+        $string6 = /c:\\temp\\something\.ps1/ nocase ascii wide
 
     condition:
         any of them

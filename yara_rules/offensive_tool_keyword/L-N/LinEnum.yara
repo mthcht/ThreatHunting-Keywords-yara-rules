@@ -10,16 +10,16 @@ rule LinEnum
     strings:
         // Description: Scripted Local Linux Enumeration & Privilege Escalation Checks
         // Reference: https://github.com/rebootuser/LinEnum
-        $string1 = /.{0,1000}\/LinEnum\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/LinEnum\.git/ nocase ascii wide
         // Description: Scripted Local Linux Enumeration & Privilege Escalation Checks
         // Reference: https://github.com/rebootuser/LinEnum
-        $string2 = /.{0,1000}\/LinEnum\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/LinEnum\// nocase ascii wide
         // Description: Scripted Local Linux Enumeration & Privilege Escalation Checks
         // Reference: https://github.com/rebootuser/LinEnum
-        $string3 = /.{0,1000}LinEnum\.sh.{0,1000}/ nocase ascii wide
+        $string3 = /LinEnum\.sh/ nocase ascii wide
         // Description: Scripted Local Linux Enumeration & Privilege Escalation Checks
         // Reference: https://github.com/rebootuser/LinEnum
-        $string4 = /.{0,1000}LinEnum\-master\.ip.{0,1000}/ nocase ascii wide
+        $string4 = /LinEnum\-master\.ip/ nocase ascii wide
 
     condition:
         any of them

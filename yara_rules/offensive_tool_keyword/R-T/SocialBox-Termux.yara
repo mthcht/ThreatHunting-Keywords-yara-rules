@@ -10,88 +10,88 @@ rule SocialBox_Termux
     strings:
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string1 = /.{0,1000}\sinstabf\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\sinstabf\.py/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/umeshshinde19/instainsane
-        $string2 = /.{0,1000}\sinstainsane\.sh.{0,1000}/ nocase ascii wide
+        $string2 = /\sinstainsane\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string3 = /.{0,1000}\sinstall\-sb\.sh.{0,1000}/ nocase ascii wide
+        $string3 = /\sinstall\-sb\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string4 = /.{0,1000}\sinsTof\.py.{0,1000}/ nocase ascii wide
+        $string4 = /\sinsTof\.py/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string5 = /.{0,1000}\sSocialBox\.sh.{0,1000}/ nocase ascii wide
+        $string5 = /\sSocialBox\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string6 = /.{0,1000}\stweetshell\.sh.{0,1000}/ nocase ascii wide
+        $string6 = /\stweetshell\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string7 = /.{0,1000}\/fb\-brute\.pl.{0,1000}/ nocase ascii wide
+        $string7 = /\/fb\-brute\.pl/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/Ha3MrX/Gemail-Hack
-        $string8 = /.{0,1000}\/Gemail\-Hack\.git.{0,1000}/ nocase ascii wide
+        $string8 = /\/Gemail\-Hack\.git/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string9 = /.{0,1000}\/insta\-bf\.git.{0,1000}/ nocase ascii wide
+        $string9 = /\/insta\-bf\.git/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string10 = /.{0,1000}\/instabf\.py.{0,1000}/ nocase ascii wide
+        $string10 = /\/instabf\.py/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/umeshshinde19/instainsane
-        $string11 = /.{0,1000}\/instainsane\.git.{0,1000}/ nocase ascii wide
+        $string11 = /\/instainsane\.git/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/umeshshinde19/instainsane
-        $string12 = /.{0,1000}\/instainsane\.sh.{0,1000}/ nocase ascii wide
+        $string12 = /\/instainsane\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string13 = /.{0,1000}\/install\-sb\.sh.{0,1000}/ nocase ascii wide
+        $string13 = /\/install\-sb\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string14 = /.{0,1000}\/insTof\.py.{0,1000}/ nocase ascii wide
+        $string14 = /\/insTof\.py/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string15 = /.{0,1000}\/SocialBox\.sh.{0,1000}/ nocase ascii wide
+        $string15 = /\/SocialBox\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string16 = /.{0,1000}\/SocialBox\-Termux.{0,1000}/ nocase ascii wide
+        $string16 = /\/SocialBox\-Termux/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string17 = /.{0,1000}\/Sup3r\-Us3r\/scripts\/.{0,1000}/ nocase ascii wide
+        $string17 = /\/Sup3r\-Us3r\/scripts\// nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string18 = /.{0,1000}\/tweetshell\.sh.{0,1000}/ nocase ascii wide
+        $string18 = /\/tweetshell\.sh/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/umeshshinde19/instainsane
-        $string19 = /.{0,1000}\/umeshshinde19\/instainsane.{0,1000}/ nocase ascii wide
+        $string19 = /\/umeshshinde19\/instainsane/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string20 = /.{0,1000}apt\-get\s\-y\sinstall\stor\s.{0,1000}/ nocase ascii wide
+        $string20 = /apt\-get\s\-y\sinstall\stor\s/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string21 = /.{0,1000}Brute\-force\-Instagram\-.{0,1000}\.git.{0,1000}/ nocase ascii wide
+        $string21 = /Brute\-force\-Instagram\-.{0,1000}\.git/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string22 = /.{0,1000}datr\=80ZzUfKqDOjwL8pauwqMjHTa.{0,1000}/ nocase ascii wide
+        $string22 = /datr\=80ZzUfKqDOjwL8pauwqMjHTa/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/Ha3MrX/Gemail-Hack
-        $string23 = /.{0,1000}gemailhack\.py.{0,1000}/ nocase ascii wide
+        $string23 = /gemailhack\.py/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/Ha3MrX/Gemail-Hack
-        $string24 = /.{0,1000}Ha3MrX\/Gemail\-Hack.{0,1000}/ nocase ascii wide
+        $string24 = /Ha3MrX\/Gemail\-Hack/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string25 = /.{0,1000}Ox\-Bruter\.pl.{0,1000}/ nocase ascii wide
+        $string25 = /Ox\-Bruter\.pl/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/SocialBox-Termux
-        $string26 = /.{0,1000}thelinuxchoice\/tweetshell.{0,1000}/ nocase ascii wide
+        $string26 = /thelinuxchoice\/tweetshell/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-        $string27 = /.{0,1000}Yuuup\!\!\sPass\sCracked.{0,1000}/ nocase ascii wide
+        $string27 = /Yuuup\!\!\sPass\sCracked/ nocase ascii wide
         // Description: SocialBox is a Bruteforce Attack Framework Facebook - Gmail - Instagram - Twitter for termux on android
         // Reference: https://github.com/samsesh/insta-bf
-        $string28 = /.{0,1000}ZxKmz4hXp6XKmTPg9lzgYxXN4sFr2pzo.{0,1000}/ nocase ascii wide
+        $string28 = /ZxKmz4hXp6XKmTPg9lzgYxXN4sFr2pzo/ nocase ascii wide
 
     condition:
         any of them

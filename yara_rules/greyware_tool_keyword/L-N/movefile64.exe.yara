@@ -10,7 +10,7 @@ rule movefile64_exe
     strings:
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string1 = /.{0,1000}movefile64\.exe\s\/nobanner\s.{0,1000}\.dll\sC:\\Windows\\System32\\amsi\.dll.{0,1000}/ nocase ascii wide
+        $string1 = /movefile64\.exe\s\/nobanner\s.{0,1000}\.dll\sC:\\Windows\\System32\\amsi\.dll/ nocase ascii wide
 
     condition:
         any of them

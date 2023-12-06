@@ -10,55 +10,55 @@ rule C2_Tool_Collection
     strings:
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string1 = /.{0,1000}\/C2\-Tool\-Collection\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/C2\-Tool\-Collection\// nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string2 = /.{0,1000}\/SprayAD\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /\/SprayAD\.exe/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string3 = /.{0,1000}\\SprayAD\.cna.{0,1000}/ nocase ascii wide
+        $string3 = /\\SprayAD\.cna/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string4 = /.{0,1000}\\SprayAD\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /\\SprayAD\.exe/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string5 = /.{0,1000}Lapsdump\.cna.{0,1000}/ nocase ascii wide
+        $string5 = /Lapsdump\.cna/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string6 = /.{0,1000}Lapsdump\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /Lapsdump\.exe/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string7 = /.{0,1000}PetitPotam\.cna.{0,1000}/ nocase ascii wide
+        $string7 = /PetitPotam\.cna/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string8 = /.{0,1000}PetitPotam\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /PetitPotam\.exe/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string9 = /.{0,1000}PetitPotam\.ps1.{0,1000}/ nocase ascii wide
+        $string9 = /PetitPotam\.ps1/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string10 = /.{0,1000}PetitPotam\.sln.{0,1000}/ nocase ascii wide
+        $string10 = /PetitPotam\.sln/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string11 = /.{0,1000}PetitPotam\.vcxproj.{0,1000}/ nocase ascii wide
+        $string11 = /PetitPotam\.vcxproj/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string12 = /.{0,1000}ReflectiveDll\..{0,1000}/ nocase ascii wide
+        $string12 = /ReflectiveDll\./ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string13 = /.{0,1000}ReflectiveDLLInjection\..{0,1000}/ nocase ascii wide
+        $string13 = /ReflectiveDLLInjection\./ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string14 = /.{0,1000}ReflectiveLoader\..{0,1000}/ nocase ascii wide
+        $string14 = /ReflectiveLoader\./ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string15 = /.{0,1000}SprayAD\.exe\s.{0,1000}/ nocase ascii wide
+        $string15 = /SprayAD\.exe\s/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string16 = /.{0,1000}TicketToHashcat\.py.{0,1000}/ nocase ascii wide
+        $string16 = /TicketToHashcat\.py/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
-        $string17 = /Lapsdump\s.{0,1000}/ nocase ascii wide
+        $string17 = /Lapsdump\s/ nocase ascii wide
         // Description: A collection of tools which integrate with Cobalt Strike (and possibly other C2 frameworks) through BOF and reflective DLL loading techniques
         // Reference: https://github.com/outflanknl/C2-Tool-Collection
         $string18 = /SprayAD\s.{0,1000}\s.{0,1000}\s/ nocase ascii wide

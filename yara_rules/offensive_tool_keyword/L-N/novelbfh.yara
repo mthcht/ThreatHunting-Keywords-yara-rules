@@ -10,7 +10,7 @@ rule novelbfh
     strings:
         // Description: Brute force Novell hacking tool -- Circa 1993
         // Reference: https://github.com/nyxgeek/classic_hacking_tools
-        $string1 = /.{0,1000}novelbfh\.zip.{0,1000}/ nocase ascii wide
+        $string1 = /novelbfh\.zip/ nocase ascii wide
 
     condition:
         any of them

@@ -10,10 +10,10 @@ rule webBrowserPassView
     strings:
         // Description: WebBrowserPassView is a password recovery tool that reveals the passwords stored by the following Web browsers: Internet Explorer (Version 4.0 - 11.0). Mozilla Firefox (All Versions). Google Chrome. Safari. and Opera. This tool can be used to recover your lost/forgotten password of any Website. including popular Web sites. like Facebook. Yahoo. Google. and GMail. as long as the password is stored by your Web Browser.
         // Reference: https://www.nirsoft.net/utils/web_browser_password.html
-        $string1 = /.{0,1000}WebBrowserPassView\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /WebBrowserPassView\.exe/ nocase ascii wide
         // Description: WebBrowserPassView is a password recovery tool that reveals the passwords stored by the following Web browsers: Internet Explorer (Version 4.0 - 11.0). Mozilla Firefox (All Versions). Google Chrome. Safari. and Opera. This tool can be used to recover your lost/forgotten password of any Website. including popular Web sites. like Facebook. Yahoo. Google. and GMail. as long as the password is stored by your Web Browser.
         // Reference: https://www.nirsoft.net/utils/web_browser_password.html
-        $string2 = /.{0,1000}WebBrowserPassView\.zip.{0,1000}/ nocase ascii wide
+        $string2 = /WebBrowserPassView\.zip/ nocase ascii wide
 
     condition:
         any of them

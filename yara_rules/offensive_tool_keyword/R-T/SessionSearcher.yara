@@ -10,13 +10,13 @@ rule SessionSearcher
     strings:
         // Description: Searches all connected drives for PuTTY private keys and RDP connection files and parses them for relevant details
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/SessionSearcher
-        $string1 = /.{0,1000}\/SessionSearcher\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\/SessionSearcher\.exe/ nocase ascii wide
         // Description: Searches all connected drives for PuTTY private keys and RDP connection files and parses them for relevant details
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/SessionSearcher
-        $string2 = /.{0,1000}\\SessionSearcher\.csproj.{0,1000}/ nocase ascii wide
+        $string2 = /\\SessionSearcher\.csproj/ nocase ascii wide
         // Description: Searches all connected drives for PuTTY private keys and RDP connection files and parses them for relevant details
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/SessionSearcher
-        $string3 = /.{0,1000}\\SessionSearcher\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\\SessionSearcher\.exe/ nocase ascii wide
 
     condition:
         any of them

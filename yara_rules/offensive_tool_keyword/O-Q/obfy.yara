@@ -10,10 +10,10 @@ rule obfy
     strings:
         // Description: A tiny C++ obfuscation framework
         // Reference: https://github.com/fritzone/obfy
-        $string1 = /.{0,1000}\/fritzone\/obfy.{0,1000}/ nocase ascii wide
+        $string1 = /\/fritzone\/obfy/ nocase ascii wide
         // Description: A tiny C++ obfuscation framework
         // Reference: https://github.com/fritzone/obfy
-        $string2 = /.{0,1000}\\obfy\-1\.0\.zip.{0,1000}/ nocase ascii wide
+        $string2 = /\\obfy\-1\.0\.zip/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule anymailfinder
     strings:
         // Description: used by attackers to find informations about a company users
         // Reference: https://anymailfinder.com
-        $string1 = /.{0,1000}https:\/\/anymailfinder\.com\/search\/.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/anymailfinder\.com\/search\// nocase ascii wide
 
     condition:
         any of them

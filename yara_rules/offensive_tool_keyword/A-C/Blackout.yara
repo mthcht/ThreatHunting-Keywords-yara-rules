@@ -10,49 +10,49 @@ rule Blackout
     strings:
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string1 = /.{0,1000}\sBlackout\.cpp.{0,1000}/ nocase ascii wide
+        $string1 = /\sBlackout\.cpp/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string2 = /.{0,1000}\sBlackout\.sln.{0,1000}/ nocase ascii wide
+        $string2 = /\sBlackout\.sln/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string3 = /.{0,1000}\sBlackout\.sys.{0,1000}/ nocase ascii wide
+        $string3 = /\sBlackout\.sys/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string4 = /.{0,1000}\/Blackout\.cpp.{0,1000}/ nocase ascii wide
+        $string4 = /\/Blackout\.cpp/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string5 = /.{0,1000}\/Blackout\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /\/Blackout\.exe/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string6 = /.{0,1000}\/Blackout\.git.{0,1000}/ nocase ascii wide
+        $string6 = /\/Blackout\.git/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string7 = /.{0,1000}\/Blackout\.sln.{0,1000}/ nocase ascii wide
+        $string7 = /\/Blackout\.sln/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string8 = /.{0,1000}\/Blackout\.sys.{0,1000}/ nocase ascii wide
+        $string8 = /\/Blackout\.sys/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string9 = /.{0,1000}\\Blackout\.cpp.{0,1000}/ nocase ascii wide
+        $string9 = /\\Blackout\.cpp/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string10 = /.{0,1000}\\Blackout\.exe.{0,1000}/ nocase ascii wide
+        $string10 = /\\Blackout\.exe/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string11 = /.{0,1000}\\Blackout\.sln.{0,1000}/ nocase ascii wide
+        $string11 = /\\Blackout\.sln/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string12 = /.{0,1000}\\Blackout\.sys.{0,1000}/ nocase ascii wide
+        $string12 = /\\Blackout\.sys/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string13 = /.{0,1000}\\Blackout\.vcxproj.{0,1000}/ nocase ascii wide
+        $string13 = /\\Blackout\.vcxproj/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string14 = /.{0,1000}Blackout\.exe\s.{0,1000}/ nocase ascii wide
+        $string14 = /Blackout\.exe\s/ nocase ascii wide
         // Description: kill anti-malware protected processes using BYOVD
         // Reference: https://github.com/ZeroMemoryEx/Blackout
-        $string15 = /.{0,1000}ZeroMemoryEx\/Blackout.{0,1000}/ nocase ascii wide
+        $string15 = /ZeroMemoryEx\/Blackout/ nocase ascii wide
 
     condition:
         any of them

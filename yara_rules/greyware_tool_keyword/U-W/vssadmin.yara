@@ -10,16 +10,16 @@ rule vssadmin
     strings:
         // Description: the command is used to create a new Volume Shadow Copy for a specific volume which can be utilized by an attacker to collect data from the local system
         // Reference: N/A
-        $string1 = /.{0,1000}vssadmin\screate\sshadow\s\/for\=C:.{0,1000}/ nocase ascii wide
+        $string1 = /vssadmin\screate\sshadow\s\/for\=C:/ nocase ascii wide
         // Description: the actor creating a Shadow Copy and then extracting a copy of the ntds.dit file from it.
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string2 = /.{0,1000}vssadmin\screate\sshadow\s\/for\=C:.{0,1000}\s\\Temp\\.{0,1000}\.tmp.{0,1000}/ nocase ascii wide
+        $string2 = /vssadmin\screate\sshadow\s\/for\=C:.{0,1000}\s\\Temp\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: List shadow copies using vssadmin
         // Reference: N/A
-        $string3 = /.{0,1000}vssadmin\slist\sshadows.{0,1000}/ nocase ascii wide
+        $string3 = /vssadmin\slist\sshadows/ nocase ascii wide
         // Description: Deletes all Volume Shadow Copies from the system quietly (without prompts).
         // Reference: N/A
-        $string4 = /.{0,1000}vssadmin.{0,1000}\sDelete\sShadows\s\/All\s\/Quiet.{0,1000}/ nocase ascii wide
+        $string4 = /vssadmin.{0,1000}\sDelete\sShadows\s\/All\s\/Quiet/ nocase ascii wide
 
     condition:
         any of them

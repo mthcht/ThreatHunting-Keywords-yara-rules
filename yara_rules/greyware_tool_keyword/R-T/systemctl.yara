@@ -10,16 +10,16 @@ rule systemctl
     strings:
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
-        $string1 = /.{0,1000}systemctl\sdisable\scbdaemon.{0,1000}/ nocase ascii wide
+        $string1 = /systemctl\sdisable\scbdaemon/ nocase ascii wide
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
-        $string2 = /.{0,1000}systemctl\sdisable\sfalcon\-sensor\.service.{0,1000}/ nocase ascii wide
+        $string2 = /systemctl\sdisable\sfalcon\-sensor\.service/ nocase ascii wide
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
-        $string3 = /.{0,1000}systemctl\sstop\scbdaemon.{0,1000}/ nocase ascii wide
+        $string3 = /systemctl\sstop\scbdaemon/ nocase ascii wide
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
-        $string4 = /.{0,1000}systemctl\sstop\sfalcon\-sensor\.service.{0,1000}/ nocase ascii wide
+        $string4 = /systemctl\sstop\sfalcon\-sensor\.service/ nocase ascii wide
 
     condition:
         any of them

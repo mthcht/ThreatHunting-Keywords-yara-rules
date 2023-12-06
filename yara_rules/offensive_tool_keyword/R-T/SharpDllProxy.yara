@@ -10,10 +10,10 @@ rule SharpDllProxy
     strings:
         // Description: Retrieves exported functions from a legitimate DLL and generates a proxy DLL source code/template for DLL proxy loading or sideloading
         // Reference: https://github.com/Flangvik/SharpDllProxy
-        $string1 = /.{0,1000}\s\-\-dll\s.{0,1000}\s\-\-payload\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-dll\s.{0,1000}\s\-\-payload\s/ nocase ascii wide
         // Description: Retrieves exported functions from a legitimate DLL and generates a proxy DLL source code/template for DLL proxy loading or sideloading
         // Reference: https://github.com/Flangvik/SharpDllProxy
-        $string2 = /.{0,1000}SharpDllProxy.{0,1000}/ nocase ascii wide
+        $string2 = /SharpDllProxy/ nocase ascii wide
 
     condition:
         any of them

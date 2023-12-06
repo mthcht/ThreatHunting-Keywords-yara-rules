@@ -10,7 +10,7 @@ rule fuzzdb
     strings:
         // Description: FuzzDB was created to increase the likelihood of finding application security vulnerabilities through dynamic application security testing. Its the first and most comprehensive open dictionary of fault injection patterns. predictable resource locations. and regex for matching server responses.
         // Reference: https://github.com/fuzzdb-project/fuzzdb
-        $string1 = /.{0,1000}fuzzdb.{0,1000}/ nocase ascii wide
+        $string1 = /fuzzdb/ nocase ascii wide
 
     condition:
         any of them

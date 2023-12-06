@@ -10,7 +10,7 @@ rule Eggshell
     strings:
         // Description: EggShell is a post exploitation surveillance tool written in Python. It gives you a command line session with extra functionality between you and a target machine. EggShell gives you the power and convenience of uploading/downloading files. tab completion. taking pictures. location tracking. shell command execution. persistence. escalating privileges. password retrieval. and much more. This is project is a proof of concept. intended for use on machines you own
         // Reference: https://github.com/neoneggplant/EggShell
-        $string1 = /.{0,1000}EggShell\.py.{0,1000}/ nocase ascii wide
+        $string1 = /EggShell\.py/ nocase ascii wide
 
     condition:
         any of them

@@ -10,52 +10,52 @@ rule ruler
     strings:
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string1 = /.{0,1000}\sBruteForce\(.{0,1000}/ nocase ascii wide
+        $string1 = /\sBruteForce\(/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string2 = /.{0,1000}\sropbuffers\.go.{0,1000}/ nocase ascii wide
+        $string2 = /\sropbuffers\.go/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string3 = /.{0,1000}\sruler\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\sruler\.exe/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string4 = /.{0,1000}\/http\-ntlm\/ntlmtransport.{0,1000}/ nocase ascii wide
+        $string4 = /\/http\-ntlm\/ntlmtransport/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string5 = /.{0,1000}\/ntlmtransport\.go.{0,1000}/ nocase ascii wide
+        $string5 = /\/ntlmtransport\.go/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string6 = /.{0,1000}\/ropbuffers\.go.{0,1000}/ nocase ascii wide
+        $string6 = /\/ropbuffers\.go/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string7 = /.{0,1000}\/rulerforms\.go.{0,1000}/ nocase ascii wide
+        $string7 = /\/rulerforms\.go/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string8 = /.{0,1000}\\ruler\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /\\ruler\.exe/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string9 = /.{0,1000}autodiscover\/brute\.go.{0,1000}/ nocase ascii wide
+        $string9 = /autodiscover\/brute\.go/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string10 = /.{0,1000}ruler\-linux64.{0,1000}/ nocase ascii wide
+        $string10 = /ruler\-linux64/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string11 = /.{0,1000}ruler\-linux86.{0,1000}/ nocase ascii wide
+        $string11 = /ruler\-linux86/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string12 = /.{0,1000}ruler\-osx64.{0,1000}/ nocase ascii wide
+        $string12 = /ruler\-osx64/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string13 = /.{0,1000}ruler\-win64\.exe.{0,1000}/ nocase ascii wide
+        $string13 = /ruler\-win64\.exe/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string14 = /.{0,1000}ruler\-win86\.exe.{0,1000}/ nocase ascii wide
+        $string14 = /ruler\-win86\.exe/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string15 = /.{0,1000}sensepost\/ruler.{0,1000}/ nocase ascii wide
+        $string15 = /sensepost\/ruler/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string16 = /.{0,1000}UserPassBruteForce.{0,1000}/ nocase ascii wide
+        $string16 = /UserPassBruteForce/ nocase ascii wide
 
     condition:
         any of them

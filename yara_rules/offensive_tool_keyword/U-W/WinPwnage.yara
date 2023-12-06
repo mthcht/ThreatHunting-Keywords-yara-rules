@@ -10,7 +10,7 @@ rule WinPwnage
     strings:
         // Description: various exploitation tools for windows 
         // Reference: https://github.com/rootm0s/WinPwnage
-        $string1 = /.{0,1000}WinPwnage.{0,1000}/ nocase ascii wide
+        $string1 = /WinPwnage/ nocase ascii wide
 
     condition:
         any of them

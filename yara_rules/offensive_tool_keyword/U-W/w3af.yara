@@ -10,7 +10,7 @@ rule w3af
     strings:
         // Description: w3af is a Web Application Attack and Audit Framework. The projects goal is to create a framework to help you secure your web applications by finding and exploiting all web application vulnerabilities.
         // Reference: https://w3af.org/
-        $string1 = /.{0,1000}w3af_gui.{0,1000}/ nocase ascii wide
+        $string1 = /w3af_gui/ nocase ascii wide
 
     condition:
         any of them

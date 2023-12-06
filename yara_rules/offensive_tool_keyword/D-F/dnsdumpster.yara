@@ -10,7 +10,7 @@ rule dnsdumpster
     strings:
         // Description: dns recon & research - find & lookup dns records
         // Reference: https://dnsdumpster.com/
-        $string1 = /.{0,1000}https:\/\/dnsdumpster\.com\/.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/dnsdumpster\.com\// nocase ascii wide
 
     condition:
         any of them

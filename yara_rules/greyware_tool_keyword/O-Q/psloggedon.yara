@@ -10,10 +10,10 @@ rule psloggedon
     strings:
         // Description: PsLoggedOn is an applet that displays both the locally logged on users and users logged on via resources for either the local computer. or a remote one
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/psloggedon
-        $string1 = /.{0,1000}PsLoggedon\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /PsLoggedon\.exe/ nocase ascii wide
         // Description: PsLoggedOn is an applet that displays both the locally logged on users and users logged on via resources for either the local computer. or a remote one
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/psloggedon
-        $string2 = /.{0,1000}PsLoggedon64\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /PsLoggedon64\.exe/ nocase ascii wide
 
     condition:
         any of them

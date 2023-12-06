@@ -10,7 +10,7 @@ rule rdpscraper
     strings:
         // Description: rdpscraper - Enumerates users based off RDP Screenshots
         // Reference: https://github.com/x90skysn3k/rdpscraper
-        $string1 = /.{0,1000}rdpscraper.{0,1000}/ nocase ascii wide
+        $string1 = /rdpscraper/ nocase ascii wide
 
     condition:
         any of them

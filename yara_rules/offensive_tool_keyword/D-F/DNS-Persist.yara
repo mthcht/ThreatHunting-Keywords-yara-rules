@@ -10,58 +10,58 @@ rule DNS_Persist
     strings:
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string1 = /.{0,1000}\/DNS\-Persist\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/DNS\-Persist\// nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string2 = /.{0,1000}0x09AL\/DNS\-Persist.{0,1000}/ nocase ascii wide
+        $string2 = /0x09AL\/DNS\-Persist/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string3 = /.{0,1000}agent.{0,1000}DNSCommunication\.cpp.{0,1000}/ nocase ascii wide
+        $string3 = /agent.{0,1000}DNSCommunication\.cpp/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string4 = /.{0,1000}DNS\-C2\s\#\>.{0,1000}/ nocase ascii wide
+        $string4 = /DNS\-C2\s\#\>/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string5 = /.{0,1000}DNSListener\.py.{0,1000}/ nocase ascii wide
+        $string5 = /DNSListener\.py/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string6 = /.{0,1000}DNS\-Persist\.git.{0,1000}/ nocase ascii wide
+        $string6 = /DNS\-Persist\.git/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string7 = /.{0,1000}do_bypassuac.{0,1000}/ nocase ascii wide
+        $string7 = /do_bypassuac/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string8 = /.{0,1000}execute_shellcode\s.{0,1000}/ nocase ascii wide
+        $string8 = /execute_shellcode\s/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string9 = /.{0,1000}import\sDNSListener.{0,1000}/ nocase ascii wide
+        $string9 = /import\sDNSListener/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string10 = /.{0,1000}keylog_dump.{0,1000}/ nocase ascii wide
+        $string10 = /keylog_dump/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string11 = /.{0,1000}keylog_start.{0,1000}/ nocase ascii wide
+        $string11 = /keylog_start/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string12 = /.{0,1000}keylog_stop.{0,1000}/ nocase ascii wide
+        $string12 = /keylog_stop/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string13 = /.{0,1000}persist\sexceladdin.{0,1000}/ nocase ascii wide
+        $string13 = /persist\sexceladdin/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string14 = /.{0,1000}persist\slogonscript.{0,1000}/ nocase ascii wide
+        $string14 = /persist\slogonscript/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string15 = /.{0,1000}persist\srunkey.{0,1000}/ nocase ascii wide
+        $string15 = /persist\srunkey/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string16 = /.{0,1000}Persistence\.cpp.{0,1000}/ nocase ascii wide
+        $string16 = /Persistence\.cpp/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string17 = /.{0,1000}Persistence\.exe.{0,1000}/ nocase ascii wide
+        $string17 = /Persistence\.exe/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string18 = /.{0,1000}Shellcode\sInjected\sSuccessfully.{0,1000}/ nocase ascii wide
+        $string18 = /Shellcode\sInjected\sSuccessfully/ nocase ascii wide
 
     condition:
         any of them

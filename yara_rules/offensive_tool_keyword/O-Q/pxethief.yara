@@ -10,19 +10,19 @@ rule pxethief
     strings:
         // Description: PXEThief is a set of tooling that can extract passwords from the Operating System Deployment functionality in Microsoft Endpoint Configuration Manager
         // Reference: https://github.com/MWR-CyberSec/PXEThief
-        $string1 = /.{0,1000}\/PXEThief.{0,1000}/ nocase ascii wide
+        $string1 = /\/PXEThief/ nocase ascii wide
         // Description: PXEThief is a set of tooling that can extract passwords from the Operating System Deployment functionality in Microsoft Endpoint Configuration Manager
         // Reference: https://github.com/MWR-CyberSec/PXEThief
-        $string2 = /.{0,1000}auto_exploit_blank_password.{0,1000}/ nocase ascii wide
+        $string2 = /auto_exploit_blank_password/ nocase ascii wide
         // Description: PXEThief is a set of tooling that can extract passwords from the Operating System Deployment functionality in Microsoft Endpoint Configuration Manager
         // Reference: https://github.com/MWR-CyberSec/PXEThief
-        $string3 = /.{0,1000}media_variable_file_cryptography\.py.{0,1000}/ nocase ascii wide
+        $string3 = /media_variable_file_cryptography\.py/ nocase ascii wide
         // Description: PXEThief is a set of tooling that can extract passwords from the Operating System Deployment functionality in Microsoft Endpoint Configuration Manager
         // Reference: https://github.com/MWR-CyberSec/PXEThief
-        $string4 = /.{0,1000}pxethief\s.{0,1000}/ nocase ascii wide
+        $string4 = /pxethief\s/ nocase ascii wide
         // Description: PXEThief is a set of tooling that can extract passwords from the Operating System Deployment functionality in Microsoft Endpoint Configuration Manager
         // Reference: https://github.com/MWR-CyberSec/PXEThief
-        $string5 = /.{0,1000}pxethief\.py.{0,1000}/ nocase ascii wide
+        $string5 = /pxethief\.py/ nocase ascii wide
 
     condition:
         any of them

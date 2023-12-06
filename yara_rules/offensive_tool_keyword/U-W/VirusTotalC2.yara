@@ -10,13 +10,13 @@ rule VirusTotalC2
     strings:
         // Description: Abusing VirusTotal API to host our C2 traffic. usefull for bypassing blocking firewall rules if VirusTotal is in the target white list and in case you don't have C2 infrastructure. now you have a free one
         // Reference: https://github.com/RATandC2/VirusTotalC2
-        $string1 = /.{0,1000}\/VirusTotalC2\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/VirusTotalC2\// nocase ascii wide
         // Description: Abusing VirusTotal API to host our C2 traffic. usefull for bypassing blocking firewall rules if VirusTotal is in the target white list and in case you don't have C2 infrastructure. now you have a free one
         // Reference: https://github.com/RATandC2/VirusTotalC2
-        $string2 = /.{0,1000}Implant.{0,1000}TeamServer\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /Implant.{0,1000}TeamServer\.exe/ nocase ascii wide
         // Description: Abusing VirusTotal API to host our C2 traffic. usefull for bypassing blocking firewall rules if VirusTotal is in the target white list and in case you don't have C2 infrastructure. now you have a free one
         // Reference: https://github.com/RATandC2/VirusTotalC2
-        $string3 = /.{0,1000}VirusTotalC2\..{0,1000}/ nocase ascii wide
+        $string3 = /VirusTotalC2\./ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule SMBetray
     strings:
         // Description: PoC to demonstrate the ability of an attacker to intercept and modify insecure SMB connections. as well as compromise some secured SMB connections if credentials are known.
         // Reference: https://github.com/quickbreach/SMBetray
-        $string1 = /.{0,1000}SMBetray.{0,1000}/ nocase ascii wide
+        $string1 = /SMBetray/ nocase ascii wide
 
     condition:
         any of them

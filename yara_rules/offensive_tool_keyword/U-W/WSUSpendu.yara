@@ -10,7 +10,7 @@ rule WSUSpendu
     strings:
         // Description: At BlackHat USA 2015. the WSUSpect attack scenario has been released.Approximately at the same time. some french engineers have been wondering if it would be possible to use a compromised WSUS server to extend the compromise to its clients. similarly to this WSUSpect attack. After letting this topic rest for almost two years. we've been able. at Alsid and ANSSI. to demonstrate this attack.
         // Reference: https://github.com/AlsidOfficial/WSUSpendu
-        $string1 = /.{0,1000}WSUSpendu.{0,1000}/ nocase ascii wide
+        $string1 = /WSUSpendu/ nocase ascii wide
 
     condition:
         any of them

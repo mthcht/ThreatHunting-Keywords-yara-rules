@@ -10,7 +10,7 @@ rule redis_rce
     strings:
         // Description: A exploit for Redis 4.x/5.x RCE. inspired by Redis post-exploitation.
         // Reference: https://github.com/Ridter/redis-rce
-        $string1 = /.{0,1000}redis\-rce.{0,1000}/ nocase ascii wide
+        $string1 = /redis\-rce/ nocase ascii wide
 
     condition:
         any of them

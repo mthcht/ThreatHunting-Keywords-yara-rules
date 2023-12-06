@@ -10,7 +10,7 @@ rule dirbuster
     strings:
         // Description: Dirbuster plugin for Burp Suite
         // Reference: https://github.com/vulnersCom/burp-Dirbuster
-        $string1 = /.{0,1000}\/burp\-Dirbuster.{0,1000}/ nocase ascii wide
+        $string1 = /\/burp\-Dirbuster/ nocase ascii wide
 
     condition:
         any of them

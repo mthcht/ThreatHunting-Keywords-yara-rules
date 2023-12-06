@@ -10,25 +10,25 @@ rule unshackle
     strings:
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string1 = /.{0,1000}\/bin\/unshackle.{0,1000}/ nocase ascii wide
+        $string1 = /\/bin\/unshackle/ nocase ascii wide
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string2 = /.{0,1000}\/unshackle\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/unshackle\.git/ nocase ascii wide
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string3 = /.{0,1000}\/unshackle\.modules.{0,1000}/ nocase ascii wide
+        $string3 = /\/unshackle\.modules/ nocase ascii wide
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string4 = /.{0,1000}Fadi002\/unshackle.{0,1000}/ nocase ascii wide
+        $string4 = /Fadi002\/unshackle/ nocase ascii wide
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string5 = /.{0,1000}unshackle\s\-\-.{0,1000}/ nocase ascii wide
+        $string5 = /unshackle\s\-\-/ nocase ascii wide
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string6 = /.{0,1000}unshackle\-main.{0,1000}/ nocase ascii wide
+        $string6 = /unshackle\-main/ nocase ascii wide
         // Description: Unshackle is an open-source tool to bypass Windows and Linux user passwords from a bootable USB based on Linux
         // Reference: https://github.com/Fadi002/unshackle
-        $string7 = /.{0,1000}unshackle\-v1\.0\.iso.{0,1000}/ nocase ascii wide
+        $string7 = /unshackle\-v1\.0\.iso/ nocase ascii wide
 
     condition:
         any of them

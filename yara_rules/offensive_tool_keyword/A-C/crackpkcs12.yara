@@ -10,7 +10,7 @@ rule crackpkcs12
     strings:
         // Description: A multithreaded program to crack PKCS#12 files (p12 and pfx extensions) by Aestu
         // Reference: https://github.com/crackpkcs12/crackpkcs12
-        $string1 = /.{0,1000}crackpkcs12.{0,1000}/ nocase ascii wide
+        $string1 = /crackpkcs12/ nocase ascii wide
 
     condition:
         any of them

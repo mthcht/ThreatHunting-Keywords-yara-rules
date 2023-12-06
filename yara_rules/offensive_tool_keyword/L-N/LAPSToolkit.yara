@@ -10,7 +10,7 @@ rule LAPSToolkit
     strings:
         // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
         // Reference: https://github.com/leoloobeek/LAPSToolkit
-        $string1 = /.{0,1000}LAPSToolkit.{0,1000}/ nocase ascii wide
+        $string1 = /LAPSToolkit/ nocase ascii wide
 
     condition:
         any of them

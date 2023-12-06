@@ -10,46 +10,46 @@ rule py2exe
     strings:
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string1 = /.{0,1000}\spy2exe.{0,1000}/ nocase ascii wide
+        $string1 = /\spy2exe/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string2 = /.{0,1000}\/py2exe\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/py2exe\// nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string3 = /.{0,1000}\\py2exe.{0,1000}/ nocase ascii wide
+        $string3 = /\\py2exe/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string4 = /.{0,1000}py2exe\s.{0,1000}/ nocase ascii wide
+        $string4 = /py2exe\s/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string5 = /.{0,1000}py2exe.{0,1000}\.exe\s.{0,1000}/ nocase ascii wide
+        $string5 = /py2exe.{0,1000}\.exe\s/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string6 = /.{0,1000}py2exe.{0,1000}\.msi\s.{0,1000}/ nocase ascii wide
+        $string6 = /py2exe.{0,1000}\.msi\s/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string7 = /.{0,1000}py2exe.{0,1000}\.py.{0,1000}/ nocase ascii wide
+        $string7 = /py2exe.{0,1000}\.py/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string8 = /.{0,1000}py2exe\-.{0,1000}\.tar\.gz.{0,1000}/ nocase ascii wide
+        $string8 = /py2exe\-.{0,1000}\.tar\.gz/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string9 = /.{0,1000}py2exe\-.{0,1000}\.whl.{0,1000}/ nocase ascii wide
+        $string9 = /py2exe\-.{0,1000}\.whl/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string10 = /.{0,1000}py2exe\.build_exe.{0,1000}/ nocase ascii wide
+        $string10 = /py2exe\.build_exe/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string11 = /.{0,1000}py2exe\.freeze.{0,1000}/ nocase ascii wide
+        $string11 = /py2exe\.freeze/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string12 = /.{0,1000}py2exe\.git.{0,1000}/ nocase ascii wide
+        $string12 = /py2exe\.git/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string13 = /.{0,1000}py2exe_setuptools\.py.{0,1000}/ nocase ascii wide
+        $string13 = /py2exe_setuptools\.py/ nocase ascii wide
         // Description: py2exe allows you to convert Python scripts into standalone executable files for Windows othen used by attacker
         // Reference: https://github.com/py2exe/py2exe
-        $string14 = /.{0,1000}py2exe\-master\.zip.{0,1000}/ nocase ascii wide
+        $string14 = /py2exe\-master\.zip/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule Priv2Admin
     strings:
         // Description: Exploitation paths allowing you to (mis)use the Windows Privileges to elevate your rights within the OS.
         // Reference: https://github.com/gtworek/Priv2Admin
-        $string1 = /.{0,1000}\/NtQuerySystemInformation\.md.{0,1000}/ nocase ascii wide
+        $string1 = /\/NtQuerySystemInformation\.md/ nocase ascii wide
         // Description: Exploitation paths allowing you to (mis)use the Windows Privileges to elevate your rights within the OS.
         // Reference: https://github.com/gtworek/Priv2Admin
-        $string2 = /.{0,1000}\/NtSetSystemInformation\.md.{0,1000}/ nocase ascii wide
+        $string2 = /\/NtSetSystemInformation\.md/ nocase ascii wide
         // Description: Exploitation paths allowing you to (mis)use the Windows Privileges to elevate your rights within the OS.
         // Reference: https://github.com/gtworek/Priv2Admin
-        $string3 = /.{0,1000}\/SeBackupPrivilege\.md.{0,1000}/ nocase ascii wide
+        $string3 = /\/SeBackupPrivilege\.md/ nocase ascii wide
         // Description: Exploitation paths allowing you to (mis)use the Windows Privileges to elevate your rights within the OS.
         // Reference: https://github.com/gtworek/Priv2Admin
-        $string4 = /.{0,1000}gtworek\/Priv2Admin.{0,1000}/ nocase ascii wide
+        $string4 = /gtworek\/Priv2Admin/ nocase ascii wide
 
     condition:
         any of them

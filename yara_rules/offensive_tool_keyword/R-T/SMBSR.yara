@@ -10,25 +10,25 @@ rule SMBSR
     strings:
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string1 = /.{0,1000}\ssmbsr\.db.{0,1000}/ nocase ascii wide
+        $string1 = /\ssmbsr\.db/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string2 = /.{0,1000}\ssmbsr\.log.{0,1000}/ nocase ascii wide
+        $string2 = /\ssmbsr\.log/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string3 = /.{0,1000}\s\-word\-list\-path\s.{0,1000}\s\-file\-extensions\s.{0,1000}/ nocase ascii wide
+        $string3 = /\s\-word\-list\-path\s.{0,1000}\s\-file\-extensions\s/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string4 = /.{0,1000}\/smbsr\.db.{0,1000}/ nocase ascii wide
+        $string4 = /\/smbsr\.db/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string5 = /.{0,1000}\/SMBSR\.git.{0,1000}/ nocase ascii wide
+        $string5 = /\/SMBSR\.git/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string6 = /.{0,1000}\/smbsr\.log.{0,1000}/ nocase ascii wide
+        $string6 = /\/smbsr\.log/ nocase ascii wide
         // Description: Lookup for interesting stuff in SMB shares
         // Reference: https://github.com/oldboy21/SMBSR
-        $string7 = /.{0,1000}smbsr\.py.{0,1000}/ nocase ascii wide
+        $string7 = /smbsr\.py/ nocase ascii wide
 
     condition:
         any of them

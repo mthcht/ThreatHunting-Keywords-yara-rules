@@ -10,40 +10,40 @@ rule BesoToken
     strings:
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string1 = /.{0,1000}\.exe\sexec\s.{0,1000}\scmd\sinteractive.{0,1000}/ nocase ascii wide
+        $string1 = /\.exe\sexec\s.{0,1000}\scmd\sinteractive/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string2 = /.{0,1000}\/BesoToken\.cpp.{0,1000}/ nocase ascii wide
+        $string2 = /\/BesoToken\.cpp/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string3 = /.{0,1000}\/BesoToken\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\/BesoToken\.exe/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string4 = /.{0,1000}\/BesoToken\.git.{0,1000}/ nocase ascii wide
+        $string4 = /\/BesoToken\.git/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string5 = /.{0,1000}\[\+\]\sOpened\sProcess\sToken\sSucessufully\!.{0,1000}/ nocase ascii wide
+        $string5 = /\[\+\]\sOpened\sProcess\sToken\sSucessufully\!/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string6 = /.{0,1000}\\BesoToken\.cpp.{0,1000}/ nocase ascii wide
+        $string6 = /\\BesoToken\.cpp/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string7 = /.{0,1000}\\BesoToken\.exe.{0,1000}/ nocase ascii wide
+        $string7 = /\\BesoToken\.exe/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string8 = /.{0,1000}\\BesoToken\.vcxproj.{0,1000}/ nocase ascii wide
+        $string8 = /\\BesoToken\.vcxproj/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string9 = /.{0,1000}55A48A19\-1A5C\-4E0D\-A46A\-5DB04C1D8B03.{0,1000}/ nocase ascii wide
+        $string9 = /55A48A19\-1A5C\-4E0D\-A46A\-5DB04C1D8B03/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string10 = /.{0,1000}BesoToken\.exe\slist.{0,1000}/ nocase ascii wide
+        $string10 = /BesoToken\.exe\slist/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string11 = /.{0,1000}BesoToken\-master.{0,1000}/ nocase ascii wide
+        $string11 = /BesoToken\-master/ nocase ascii wide
         // Description: A tool to Impersonate logged on users without touching LSASS (Including non-Interactive sessions).
         // Reference: https://github.com/OmriBaso/BesoToken
-        $string12 = /.{0,1000}OmriBaso\/BesoToken.{0,1000}/ nocase ascii wide
+        $string12 = /OmriBaso\/BesoToken/ nocase ascii wide
 
     condition:
         any of them

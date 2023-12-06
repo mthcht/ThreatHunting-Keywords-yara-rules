@@ -10,28 +10,28 @@ rule FilelessPELoader
     strings:
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string1 = /.{0,1000}\/FilelessPELoader.{0,1000}/ nocase ascii wide
+        $string1 = /\/FilelessPELoader/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string2 = /.{0,1000}82277B35\-D159\-4B44\-8D54\-FB66EDD58D5C.{0,1000}/ nocase ascii wide
+        $string2 = /82277B35\-D159\-4B44\-8D54\-FB66EDD58D5C/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string3 = /.{0,1000}AES_cryptor\.py\s.{0,1000}/ nocase ascii wide
+        $string3 = /AES_cryptor\.py\s/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string4 = /.{0,1000}FilelessPELoader\.cpp.{0,1000}/ nocase ascii wide
+        $string4 = /FilelessPELoader\.cpp/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string5 = /.{0,1000}FilelessPELoader\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /FilelessPELoader\.exe/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string6 = /.{0,1000}FilelessPELoader\.vcxproj.{0,1000}/ nocase ascii wide
+        $string6 = /FilelessPELoader\.vcxproj/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string7 = /.{0,1000}FilelessPELoader\-main.{0,1000}/ nocase ascii wide
+        $string7 = /FilelessPELoader\-main/ nocase ascii wide
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
-        $string8 = /.{0,1000}mimikatz\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /mimikatz\.exe/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule celerystalk
     strings:
         // Description: celerystalk helps you automate your network scanning/enumeration process with asynchronous jobs (aka tasks) while retaining full control of which tools you want to run.
         // Reference: https://github.com/sethsec/celerystalk
-        $string1 = /.{0,1000}celerystalk.{0,1000}/ nocase ascii wide
+        $string1 = /celerystalk/ nocase ascii wide
 
     condition:
         any of them

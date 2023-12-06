@@ -10,31 +10,31 @@ rule Earth_Lusca_Operations_Tools_
     strings:
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/BeichenDream/BadPotato
-        $string1 = /.{0,1000}BadPotato\.cs.{0,1000}/ nocase ascii wide
+        $string1 = /BadPotato\.cs/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/BeichenDream/BadPotato
-        $string2 = /.{0,1000}badpotato\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /badpotato\.exe/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1
-        $string3 = /.{0,1000}fodhelperUACBypass.{0,1000}/ nocase ascii wide
+        $string3 = /fodhelperUACBypass/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/RickGeex/ProxyLogon
-        $string4 = /.{0,1000}proxyLogon\.py.{0,1000}/ nocase ascii wide
+        $string4 = /proxyLogon\.py/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/dmaasland/proxyshell-poc
-        $string5 = /.{0,1000}proxyshell\.py.{0,1000}/ nocase ascii wide
+        $string5 = /proxyshell\.py/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/dmaasland/proxyshell-poc
-        $string6 = /.{0,1000}proxyshell_rce\.py.{0,1000}/ nocase ascii wide
+        $string6 = /proxyshell_rce\.py/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/dmaasland/proxyshell-poc
-        $string7 = /.{0,1000}proxyshell\-enumerate\.py.{0,1000}/ nocase ascii wide
+        $string7 = /proxyshell\-enumerate\.py/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/dmaasland/proxyshell-poc
-        $string8 = /.{0,1000}proxyshell\-poc.{0,1000}/ nocase ascii wide
+        $string8 = /proxyshell\-poc/ nocase ascii wide
         // Description: Earth Lusca Operations Tools and commands
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/a/earth-lusca-employs-sophisticated-infrastructure-varied-tools-and-techniques/technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1
-        $string9 = /.{0,1000}UAC\-bypass.{0,1000}/ nocase ascii wide
+        $string9 = /UAC\-bypass/ nocase ascii wide
 
     condition:
         any of them

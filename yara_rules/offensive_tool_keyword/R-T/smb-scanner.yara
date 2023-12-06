@@ -10,10 +10,10 @@ rule smb_scanner
     strings:
         // Description: SMB Scanner tool
         // Reference: https://github.com/TechnicalMujeeb/smb-scanner
-        $string1 = /.{0,1000}smbscan.{0,1000}/ nocase ascii wide
+        $string1 = /smbscan/ nocase ascii wide
         // Description: SMB Scanner tool
         // Reference: https://github.com/TechnicalMujeeb/smb-scanner
-        $string2 = /.{0,1000}smb\-scanner.{0,1000}/ nocase ascii wide
+        $string2 = /smb\-scanner/ nocase ascii wide
 
     condition:
         any of them

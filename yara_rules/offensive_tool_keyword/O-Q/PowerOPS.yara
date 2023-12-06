@@ -10,7 +10,7 @@ rule PowerOPS
     strings:
         // Description: PowerOPS is an application written in C# that does not rely on powershell.exe but runs PowerShell commands and functions within a powershell runspace environment (.NET). It intends to include multiple offensive PowerShell modules to make the process of Post Exploitation easier.
         // Reference: https://github.com/fdiskyou/PowerOPS
-        $string1 = /.{0,1000}PowerOPS.{0,1000}/ nocase ascii wide
+        $string1 = /PowerOPS/ nocase ascii wide
 
     condition:
         any of them

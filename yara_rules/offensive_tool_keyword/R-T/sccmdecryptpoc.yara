@@ -10,7 +10,7 @@ rule sccmdecryptpoc
     strings:
         // Description: SCCM Account Password Decryption POC
         // Reference: https://gist.github.com/xpn/5f497d2725a041922c427c3aaa3b37d1
-        $string1 = /.{0,1000}sccmdecryptpoc\..{0,1000}/ nocase ascii wide
+        $string1 = /sccmdecryptpoc\./ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule dir
     strings:
         // Description: threat actors searched for Active Directory related DLLs in directories
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string1 = /.{0,1000}\sdir\s\/s\s.{0,1000}\/\sMicrosoft\.ActiveDirectory\.Management\.dll.{0,1000}/ nocase ascii wide
+        $string1 = /\sdir\s\/s\s.{0,1000}\/\sMicrosoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
 
     condition:
         any of them

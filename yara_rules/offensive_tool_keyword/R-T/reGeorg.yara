@@ -10,16 +10,16 @@ rule reGeorg
     strings:
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string1 = /.{0,1000}\/reGeorg\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/reGeorg\.git/ nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string2 = /.{0,1000}reGeorg\-master.{0,1000}/ nocase ascii wide
+        $string2 = /reGeorg\-master/ nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string3 = /.{0,1000}reGeorgSocksProxy\.py.{0,1000}/ nocase ascii wide
+        $string3 = /reGeorgSocksProxy\.py/ nocase ascii wide
         // Description: The successor to reDuh - pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn.
         // Reference: https://github.com/sensepost/reGeorg
-        $string4 = /.{0,1000}sensepost\/reGeorg.{0,1000}/ nocase ascii wide
+        $string4 = /sensepost\/reGeorg/ nocase ascii wide
 
     condition:
         any of them

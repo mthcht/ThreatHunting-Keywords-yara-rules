@@ -10,28 +10,28 @@ rule fgdump
     strings:
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string1 = /.{0,1000}cachedump\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /cachedump\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string2 = /.{0,1000}cachedump64\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /cachedump64\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string3 = /.{0,1000}fgdump\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /fgdump\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string4 = /.{0,1000}fgexec\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /fgexec\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string5 = /.{0,1000}pstgdump\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /pstgdump\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string6 = /.{0,1000}pwdump\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /pwdump\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string7 = /.{0,1000}servpw\.exe.{0,1000}/ nocase ascii wide
+        $string7 = /servpw\.exe/ nocase ascii wide
         // Description: A utility for dumping passwords on Windows NT/2000/XP/2003 machines
         // Reference: https://gitlab.com/kalilinux/packages/windows-binaries/-/tree/kali/master/fgdump
-        $string8 = /.{0,1000}servpw64\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /servpw64\.exe/ nocase ascii wide
 
     condition:
         any of them

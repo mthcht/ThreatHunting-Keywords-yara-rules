@@ -10,7 +10,7 @@ rule WAF_bypass_Cheat_Sheet
     strings:
         // Description: WAF/IPS/DLP bypass Cheat Sheet
         // Reference: https://github.com/Bo0oM/WAF-bypass-Cheat-Sheet
-        $string1 = /.{0,1000}WAF\-bypass\-Cheat\-Sheet.{0,1000}/ nocase ascii wide
+        $string1 = /WAF\-bypass\-Cheat\-Sheet/ nocase ascii wide
 
     condition:
         any of them

@@ -10,22 +10,22 @@ rule Mshikaki
     strings:
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string1 = /.{0,1000}\sMshikaki\.cpp.{0,1000}/ nocase ascii wide
+        $string1 = /\sMshikaki\.cpp/ nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string2 = /.{0,1000}\/Mshikaki\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/Mshikaki\.git/ nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string3 = /.{0,1000}\\Mshikaki\.cpp.{0,1000}/ nocase ascii wide
+        $string3 = /\\Mshikaki\.cpp/ nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string4 = /.{0,1000}Mshikaki\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /Mshikaki\.exe/ nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string5 = /.{0,1000}Mshikaki\-main.{0,1000}/ nocase ascii wide
+        $string5 = /Mshikaki\-main/ nocase ascii wide
         // Description: A shellcode injection tool capable of bypassing AMSI. Features the QueueUserAPC() injection technique and supports XOR encryption
         // Reference: https://github.com/trevorsaudi/Mshikaki
-        $string6 = /.{0,1000}trevorsaudi\/Mshikaki.{0,1000}/ nocase ascii wide
+        $string6 = /trevorsaudi\/Mshikaki/ nocase ascii wide
 
     condition:
         any of them

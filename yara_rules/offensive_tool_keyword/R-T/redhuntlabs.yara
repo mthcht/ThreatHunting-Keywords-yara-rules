@@ -10,7 +10,7 @@ rule redhuntlabs
     strings:
         // Description: documentation for offensive operation
         // Reference: https://github.com/redhuntlabs
-        $string1 = /.{0,1000}redhuntlabs.{0,1000}/ nocase ascii wide
+        $string1 = /redhuntlabs/ nocase ascii wide
 
     condition:
         any of them

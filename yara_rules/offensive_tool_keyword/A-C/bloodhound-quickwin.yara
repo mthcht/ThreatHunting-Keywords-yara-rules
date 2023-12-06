@@ -10,19 +10,19 @@ rule bloodhound_quickwin
     strings:
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string1 = /.{0,1000}\sbhqc\.py\s\-.{0,1000}/ nocase ascii wide
+        $string1 = /\sbhqc\.py\s\-/ nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string2 = /.{0,1000}\/bhqc\.py\s\-.{0,1000}/ nocase ascii wide
+        $string2 = /\/bhqc\.py\s\-/ nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string3 = /.{0,1000}\/bloodhound\-quickwin\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/bloodhound\-quickwin\.git/ nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string4 = /.{0,1000}bloodhound\-quickwin\-main.{0,1000}/ nocase ascii wide
+        $string4 = /bloodhound\-quickwin\-main/ nocase ascii wide
         // Description: Simple script to extract useful informations from the combo BloodHound + Neo4j
         // Reference: https://github.com/kaluche/bloodhound-quickwin
-        $string5 = /.{0,1000}kaluche\/bloodhound\-quickwin.{0,1000}/ nocase ascii wide
+        $string5 = /kaluche\/bloodhound\-quickwin/ nocase ascii wide
 
     condition:
         any of them

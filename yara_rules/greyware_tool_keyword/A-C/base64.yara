@@ -10,10 +10,10 @@ rule _base64
     strings:
         // Description: suspicious base64 commands used by the offensive tool traitor and other tools
         // Reference: N/A
-        $string1 = /.{0,1000}\|\sbase64\s\-d\s.{0,1000}/ nocase ascii wide
+        $string1 = /\|\sbase64\s\-d\s/ nocase ascii wide
         // Description: suspicious base64 commands used by the offensive tool traitor and other tools
         // Reference: N/A
-        $string2 = /.{0,1000}base64\s\-d\s\/tmp\/.{0,1000}/ nocase ascii wide
+        $string2 = /base64\s\-d\s\/tmp\// nocase ascii wide
 
     condition:
         any of them

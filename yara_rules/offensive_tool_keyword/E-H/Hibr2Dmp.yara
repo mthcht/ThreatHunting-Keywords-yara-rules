@@ -10,7 +10,7 @@ rule Hibr2Dmp
     strings:
         // Description: Convert hiberfil.sys to a dump file with hibr2dmp (can be used with windbg to exploit lsass dump)
         // Reference: https://github.com/mthcht/Purpleteam/blob/main/Simulation/Windows/System/dump_lsass_by_converting_hiberfil_to_dmp.ps1
-        $string1 = /.{0,1000}Hibr2Dmp\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /Hibr2Dmp\.exe/ nocase ascii wide
 
     condition:
         any of them

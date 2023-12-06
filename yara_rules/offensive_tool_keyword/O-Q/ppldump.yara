@@ -10,22 +10,22 @@ rule ppldump
     strings:
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string1 = /.{0,1000}dllexploit\..{0,1000}/ nocase ascii wide
+        $string1 = /dllexploit\./ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string2 = /.{0,1000}lsass\.exe.{0,1000}\.dmp.{0,1000}/ nocase ascii wide
+        $string2 = /lsass\.exe.{0,1000}\.dmp/ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string3 = /.{0,1000}PPLdump.{0,1000}/ nocase ascii wide
+        $string3 = /PPLdump/ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string4 = /.{0,1000}PPLdump\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /PPLdump\.exe/ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string5 = /.{0,1000}PPLdump64\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /PPLdump64\.exe/ nocase ascii wide
         // Description: Dump the memory of a PPL with a userland exploit
         // Reference: https://github.com/itm4n/PPLdump
-        $string6 = /.{0,1000}PPLdumpDll.{0,1000}/ nocase ascii wide
+        $string6 = /PPLdumpDll/ nocase ascii wide
 
     condition:
         any of them

@@ -10,16 +10,16 @@ rule gMSADumper
     strings:
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
-        $string1 = /.{0,1000}\s\-\-domain\s.{0,1000}\s\-\-kerberos.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-domain\s.{0,1000}\s\-\-kerberos/ nocase ascii wide
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
-        $string2 = /.{0,1000}\/gMSADumper.{0,1000}/ nocase ascii wide
+        $string2 = /\/gMSADumper/ nocase ascii wide
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
-        $string3 = /.{0,1000}gMSADumper\.py.{0,1000}/ nocase ascii wide
+        $string3 = /gMSADumper\.py/ nocase ascii wide
         // Description: Lists who can read any gMSA password blobs and parses them if the current user has access.
         // Reference: https://github.com/micahvandeusen/gMSADumper
-        $string4 = /.{0,1000}micahvandeusen\/gMSADumper.{0,1000}/ nocase ascii wide
+        $string4 = /micahvandeusen\/gMSADumper/ nocase ascii wide
 
     condition:
         any of them

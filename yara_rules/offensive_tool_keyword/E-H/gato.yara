@@ -10,25 +10,25 @@ rule gato
     strings:
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string1 = /.{0,1000}\/enumerate\/enumerate\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\/enumerate\/enumerate\.py/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string2 = /.{0,1000}\/gato\/.{0,1000}attack\.py.{0,1000}/ nocase ascii wide
+        $string2 = /\/gato\/.{0,1000}attack\.py/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string3 = /.{0,1000}gato\s.{0,1000}\sattack.{0,1000}/ nocase ascii wide
+        $string3 = /gato\s.{0,1000}\sattack/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string4 = /.{0,1000}gato\s.{0,1000}\senumerate.{0,1000}/ nocase ascii wide
+        $string4 = /gato\s.{0,1000}\senumerate/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string5 = /.{0,1000}gato\s.{0,1000}\s\-\-http\-proxy.{0,1000}/ nocase ascii wide
+        $string5 = /gato\s.{0,1000}\s\-\-http\-proxy/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string6 = /.{0,1000}gato\s.{0,1000}\s\-\-socks\-proxy.{0,1000}/ nocase ascii wide
+        $string6 = /gato\s.{0,1000}\s\-\-socks\-proxy/ nocase ascii wide
         // Description: GitHub Self-Hosted Runner Enumeration and Attack Tool
         // Reference: https://github.com/praetorian-inc/gato
-        $string7 = /.{0,1000}praetorian\-inc\/gato.{0,1000}/ nocase ascii wide
+        $string7 = /praetorian\-inc\/gato/ nocase ascii wide
 
     condition:
         any of them

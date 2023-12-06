@@ -10,22 +10,22 @@ rule KillDefenderBOF
     strings:
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string1 = /.{0,1000}\/KillDefenderBOF.{0,1000}/ nocase ascii wide
+        $string1 = /\/KillDefenderBOF/ nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string2 = /.{0,1000}\\KillDefender\.c.{0,1000}/ nocase ascii wide
+        $string2 = /\\KillDefender\.c/ nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string3 = /.{0,1000}\\KillDefender\.o.{0,1000}/ nocase ascii wide
+        $string3 = /\\KillDefender\.o/ nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string4 = /.{0,1000}KillDefender\.h.{0,1000}/ nocase ascii wide
+        $string4 = /KillDefender\.h/ nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string5 = /.{0,1000}KillDefenderBOF\-main.{0,1000}/ nocase ascii wide
+        $string5 = /KillDefenderBOF\-main/ nocase ascii wide
         // Description: KillDefenderBOF is a Beacon Object File PoC implementation of pwn1sher/KillDefender - kill defender
         // Reference: https://github.com/Cerbersec/KillDefenderBOF
-        $string6 = /.{0,1000}temp.{0,1000}KillDefender.{0,1000}/ nocase ascii wide
+        $string6 = /temp.{0,1000}KillDefender/ nocase ascii wide
 
     condition:
         any of them

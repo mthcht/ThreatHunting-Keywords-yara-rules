@@ -10,31 +10,31 @@ rule ncrack
     strings:
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string1 = /.{0,1000}\/ncrack\-.{0,1000}/ nocase ascii wide
+        $string1 = /\/ncrack\-/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string2 = /.{0,1000}\/ncrack\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/ncrack\.git/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string3 = /.{0,1000}ncrack\-.{0,1000}\.dmg.{0,1000}/ nocase ascii wide
+        $string3 = /ncrack\-.{0,1000}\.dmg/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string4 = /.{0,1000}ncrack\-.{0,1000}\-setup\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /ncrack\-.{0,1000}\-setup\.exe/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string5 = /.{0,1000}ncrack\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /ncrack\.exe/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string6 = /.{0,1000}NcrackInstaller\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /NcrackInstaller\.exe/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string7 = /.{0,1000}ncrack\-master\.zip.{0,1000}/ nocase ascii wide
+        $string7 = /ncrack\-master\.zip/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string8 = /.{0,1000}ncrack\-services.{0,1000}/ nocase ascii wide
+        $string8 = /ncrack\-services/ nocase ascii wide
         // Description: High-speed network authentication cracking tool.
         // Reference: https://github.com/nmap/ncrack
-        $string9 = /.{0,1000}nmap\/ncrack.{0,1000}/ nocase ascii wide
+        $string9 = /nmap\/ncrack/ nocase ascii wide
 
     condition:
         any of them

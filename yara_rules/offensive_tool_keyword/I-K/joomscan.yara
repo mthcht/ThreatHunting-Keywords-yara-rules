@@ -10,7 +10,7 @@ rule joomscan
     strings:
         // Description: Joomla Vulnerability Scanner.
         // Reference: https://github.com/rezasp/joomscan
-        $string1 = /.{0,1000}joomscan.{0,1000}/ nocase ascii wide
+        $string1 = /joomscan/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule ICMP_TransferTools
     strings:
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
-        $string1 = /.{0,1000}ICMP\-ReceiveFile\.py.{0,1000}/ nocase ascii wide
+        $string1 = /ICMP\-ReceiveFile\.py/ nocase ascii wide
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
-        $string2 = /.{0,1000}ICMP\-SendFile\.py.{0,1000}/ nocase ascii wide
+        $string2 = /ICMP\-SendFile\.py/ nocase ascii wide
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
-        $string3 = /.{0,1000}Invoke\-IcmpDownload.{0,1000}/ nocase ascii wide
+        $string3 = /Invoke\-IcmpDownload/ nocase ascii wide
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
-        $string4 = /.{0,1000}Invoke\-IcmpDownload\.ps1.{0,1000}/ nocase ascii wide
+        $string4 = /Invoke\-IcmpDownload\.ps1/ nocase ascii wide
         // Description: Transfer files to and from a Windows host via ICMP in restricted network environments.
         // Reference: https://github.com/icyguider/ICMP-TransferTools
-        $string5 = /.{0,1000}Invoke\-IcmpUpload\.ps1.{0,1000}/ nocase ascii wide
+        $string5 = /Invoke\-IcmpUpload\.ps1/ nocase ascii wide
 
     condition:
         any of them

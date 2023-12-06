@@ -10,7 +10,7 @@ rule amass
     strings:
         // Description: The OWASP Amass Project performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques.
         // Reference: https://github.com/caffix/amass
-        $string1 = /.{0,1000}OWASP.{0,1000}Amass.{0,1000}/ nocase ascii wide
+        $string1 = /OWASP.{0,1000}Amass/ nocase ascii wide
 
     condition:
         any of them

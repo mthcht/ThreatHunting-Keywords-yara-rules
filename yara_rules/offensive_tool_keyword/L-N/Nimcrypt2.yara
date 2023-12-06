@@ -10,25 +10,25 @@ rule Nimcrypt2
     strings:
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string1 = /.{0,1000}\s\-\-get\-syscallstub\s.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-\-get\-syscallstub\s/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string2 = /.{0,1000}\s\-\-llvm\-obfuscator\s.{0,1000}\s/ nocase ascii wide
+        $string2 = /\s\-\-llvm\-obfuscator\s.{0,1000}\s/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string3 = /.{0,1000}\/Nimcrypt2.{0,1000}/ nocase ascii wide
+        $string3 = /\/Nimcrypt2/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string4 = /.{0,1000}GetSyscallStub\.nim.{0,1000}/ nocase ascii wide
+        $string4 = /GetSyscallStub\.nim/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string5 = /.{0,1000}nimcrypt\s\-.{0,1000}/ nocase ascii wide
+        $string5 = /nimcrypt\s\-/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string6 = /.{0,1000}nimcrypt\.nim.{0,1000}/ nocase ascii wide
+        $string6 = /nimcrypt\.nim/ nocase ascii wide
         // Description: .NET PE & Raw Shellcode Packer/Loader Written in Nim
         // Reference: https://github.com/icyguider/Nimcrypt2
-        $string7 = /.{0,1000}syscalls\.nim.{0,1000}/ nocase ascii wide
+        $string7 = /syscalls\.nim/ nocase ascii wide
 
     condition:
         any of them

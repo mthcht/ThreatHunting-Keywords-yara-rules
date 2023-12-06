@@ -10,10 +10,10 @@ rule username_anarchy
     strings:
         // Description: Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
         // Reference: https://github.com/urbanadventurer/username-anarchy
-        $string1 = /.{0,1000}\/username\-anarchy.{0,1000}/ nocase ascii wide
+        $string1 = /\/username\-anarchy/ nocase ascii wide
         // Description: Tools for generating usernames when penetration testing. Usernames are half the password brute force problem.
         // Reference: https://github.com/urbanadventurer/username-anarchy
-        $string2 = /.{0,1000}username\-anarchy\s.{0,1000}/ nocase ascii wide
+        $string2 = /username\-anarchy\s/ nocase ascii wide
 
     condition:
         any of them

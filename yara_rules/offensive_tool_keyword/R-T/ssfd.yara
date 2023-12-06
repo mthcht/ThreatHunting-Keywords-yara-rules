@@ -10,10 +10,10 @@ rule ssfd
     strings:
         // Description: sets up a communication channel possibly for command and control (C2) or exfiltration purposes
         // Reference: https://github.com/securesocketfunneling/ssf
-        $string1 = /.{0,1000}ssf\.exe\s\-D\s.{0,1000}\s\-p\s.{0,1000}\s127\.0\.0\.1.{0,1000}/ nocase ascii wide
+        $string1 = /ssf\.exe\s\-D\s.{0,1000}\s\-p\s.{0,1000}\s127\.0\.0\.1/ nocase ascii wide
         // Description: sets up a communication channel possibly for command and control (C2) or exfiltration purposes
         // Reference: https://github.com/securesocketfunneling/ssf
-        $string2 = /.{0,1000}ssfd\.exe\s\-p\s.{0,1000}/ nocase ascii wide
+        $string2 = /ssfd\.exe\s\-p\s/ nocase ascii wide
 
     condition:
         any of them

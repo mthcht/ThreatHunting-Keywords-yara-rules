@@ -10,16 +10,16 @@ rule GetLoggedOnUsersRegistry
     strings:
         // Description: PoC To enumerate logged on users on a remote system using the winreg named pipe
         // Reference: https://gist.github.com/RalphDesmangles/22f580655f479f189c1de9e7720776f1
-        $string1 = /.{0,1000}\]\sAttempting\sto\senumerate\slogged\son\susers\son\s.{0,1000}/ nocase ascii wide
+        $string1 = /\]\sAttempting\sto\senumerate\slogged\son\susers\son\s/ nocase ascii wide
         // Description: PoC To enumerate logged on users on a remote system using the winreg named pipe
         // Reference: https://gist.github.com/RalphDesmangles/22f580655f479f189c1de9e7720776f1
-        $string2 = /.{0,1000}GetLoggedOnUsersRegistry\.cs.{0,1000}/ nocase ascii wide
+        $string2 = /GetLoggedOnUsersRegistry\.cs/ nocase ascii wide
         // Description: PoC To enumerate logged on users on a remote system using the winreg named pipe
         // Reference: https://gist.github.com/RalphDesmangles/22f580655f479f189c1de9e7720776f1
-        $string3 = /.{0,1000}PoC\sTo\senumerate\slogged\son\susers\son\sa\sremote\ssystem\susing\sthe\swinreg\snamed\spipe.{0,1000}/ nocase ascii wide
+        $string3 = /PoC\sTo\senumerate\slogged\son\susers\son\sa\sremote\ssystem\susing\sthe\swinreg\snamed\spipe/ nocase ascii wide
         // Description: PoC To enumerate logged on users on a remote system using the winreg named pipe
         // Reference: https://gist.github.com/RalphDesmangles/22f580655f479f189c1de9e7720776f1
-        $string4 = /.{0,1000}RalphDesmangles\/22f580655f479f189c1de9e7720776f1.{0,1000}/ nocase ascii wide
+        $string4 = /RalphDesmangles\/22f580655f479f189c1de9e7720776f1/ nocase ascii wide
 
     condition:
         any of them

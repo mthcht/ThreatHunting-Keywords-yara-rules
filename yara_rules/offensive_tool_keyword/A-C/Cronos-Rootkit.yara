@@ -10,19 +10,19 @@ rule Cronos_Rootkit
     strings:
         // Description: Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes. protect and elevate them with token manipulation.
         // Reference: https://github.com/XaFF-XaFF/Cronos-Rootkit
-        $string1 = /.{0,1000}\/Cronos\-Rootkit.{0,1000}/ nocase ascii wide
+        $string1 = /\/Cronos\-Rootkit/ nocase ascii wide
         // Description: Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes. protect and elevate them with token manipulation.
         // Reference: https://github.com/XaFF-XaFF/Cronos-Rootkit
-        $string2 = /.{0,1000}Cronos\sRootkit\..{0,1000}/ nocase ascii wide
+        $string2 = /Cronos\sRootkit\./ nocase ascii wide
         // Description: Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes. protect and elevate them with token manipulation.
         // Reference: https://github.com/XaFF-XaFF/Cronos-Rootkit
-        $string3 = /.{0,1000}CronosDebugger\..{0,1000}/ nocase ascii wide
+        $string3 = /CronosDebugger\./ nocase ascii wide
         // Description: Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes. protect and elevate them with token manipulation.
         // Reference: https://github.com/XaFF-XaFF/Cronos-Rootkit
-        $string4 = /.{0,1000}CronosRootkit\..{0,1000}/ nocase ascii wide
+        $string4 = /CronosRootkit\./ nocase ascii wide
         // Description: Cronos is Windows 10/11 x64 ring 0 rootkit. Cronos is able to hide processes. protect and elevate them with token manipulation.
         // Reference: https://github.com/XaFF-XaFF/Cronos-Rootkit
-        $string5 = /.{0,1000}Rootkit\.cpp.{0,1000}/ nocase ascii wide
+        $string5 = /Rootkit\.cpp/ nocase ascii wide
 
     condition:
         any of them

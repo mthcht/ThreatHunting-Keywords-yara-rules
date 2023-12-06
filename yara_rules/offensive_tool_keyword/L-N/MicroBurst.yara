@@ -10,100 +10,100 @@ rule MicroBurst
     strings:
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string1 = /.{0,1000}\/MicroBurst\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/MicroBurst\.git/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string2 = /.{0,1000}\\Files\\ContainersFileUrls\.txt.{0,1000}/ nocase ascii wide
+        $string2 = /\\Files\\ContainersFileUrls\.txt/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string3 = /.{0,1000}\\MSOL\\DomainCompanyInfo\.txt.{0,1000}/ nocase ascii wide
+        $string3 = /\\MSOL\\DomainCompanyInfo\.txt/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string4 = /.{0,1000}\\Resources\\Disks\-NoEncryption\.txt.{0,1000}/ nocase ascii wide
+        $string4 = /\\Resources\\Disks\-NoEncryption\.txt/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string5 = /.{0,1000}C:\\dsc_hello\.txt.{0,1000}/ nocase ascii wide
+        $string5 = /C:\\dsc_hello\.txt/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string6 = /.{0,1000}Get\-AzAutomationAccountCredsREST\.ps1.{0,1000}/ nocase ascii wide
+        $string6 = /Get\-AzAutomationAccountCredsREST\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string7 = /.{0,1000}Get\-AzDomainInfo.{0,1000}/ nocase ascii wide
+        $string7 = /Get\-AzDomainInfo/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string8 = /.{0,1000}Get\-AzDomainInfoREST\.ps1.{0,1000}/ nocase ascii wide
+        $string8 = /Get\-AzDomainInfoREST\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string9 = /.{0,1000}Get\-AzKeyVaultKeysREST\.ps1.{0,1000}/ nocase ascii wide
+        $string9 = /Get\-AzKeyVaultKeysREST\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string10 = /.{0,1000}Get\-AzKeyVaultSecretsREST\.ps1.{0,1000}/ nocase ascii wide
+        $string10 = /Get\-AzKeyVaultSecretsREST\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string11 = /.{0,1000}Get\-AzPasswords.{0,1000}/ nocase ascii wide
+        $string11 = /Get\-AzPasswords/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string12 = /.{0,1000}Get\-AZStorageKeysREST\.ps1.{0,1000}/ nocase ascii wide
+        $string12 = /Get\-AZStorageKeysREST\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string13 = /.{0,1000}Get\-AzureADDomainInfo.{0,1000}/ nocase ascii wide
+        $string13 = /Get\-AzureADDomainInfo/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string14 = /.{0,1000}Get\-AzureADDomainInfo\.ps1.{0,1000}/ nocase ascii wide
+        $string14 = /Get\-AzureADDomainInfo\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string15 = /.{0,1000}Get\-AzurePasswords.{0,1000}/ nocase ascii wide
+        $string15 = /Get\-AzurePasswords/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string16 = /.{0,1000}Get\-AzUserAssignedIdentity.{0,1000}/ nocase ascii wide
+        $string16 = /Get\-AzUserAssignedIdentity/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string17 = /.{0,1000}Invoke\-APIConnectionHijack\.ps1.{0,1000}/ nocase ascii wide
+        $string17 = /Invoke\-APIConnectionHijack\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string18 = /.{0,1000}Invoke\-AzElevatedAccessToggle.{0,1000}/ nocase ascii wide
+        $string18 = /Invoke\-AzElevatedAccessToggle/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string19 = /.{0,1000}Invoke\-AzRESTBastionShareableLink.{0,1000}/ nocase ascii wide
+        $string19 = /Invoke\-AzRESTBastionShareableLink/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string20 = /.{0,1000}Invoke\-AzureRmVMBulkCMD\.ps1.{0,1000}/ nocase ascii wide
+        $string20 = /Invoke\-AzureRmVMBulkCMD\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string21 = /.{0,1000}Invoke\-AzVMBulkCMD\.ps1.{0,1000}/ nocase ascii wide
+        $string21 = /Invoke\-AzVMBulkCMD\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string22 = /.{0,1000}Invoke\-EnumerateAzureBlobs\.ps1.{0,1000}/ nocase ascii wide
+        $string22 = /Invoke\-EnumerateAzureBlobs\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string23 = /.{0,1000}Invoke\-EnumerateAzureSubDomains\.ps1.{0,1000}/ nocase ascii wide
+        $string23 = /Invoke\-EnumerateAzureSubDomains\.ps1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string24 = /.{0,1000}MicroBurst\.psm1.{0,1000}/ nocase ascii wide
+        $string24 = /MicroBurst\.psm1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string25 = /.{0,1000}MicroBurst\-Az\.psm1.{0,1000}/ nocase ascii wide
+        $string25 = /MicroBurst\-Az\.psm1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string26 = /.{0,1000}MicroBurst\-AzureAD.{0,1000}/ nocase ascii wide
+        $string26 = /MicroBurst\-AzureAD/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string27 = /.{0,1000}MicroBurst\-AzureREST.{0,1000}/ nocase ascii wide
+        $string27 = /MicroBurst\-AzureREST/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string28 = /.{0,1000}MicroBurst\-AzureRM.{0,1000}/ nocase ascii wide
+        $string28 = /MicroBurst\-AzureRM/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string29 = /.{0,1000}MicroBurst\-master.{0,1000}/ nocase ascii wide
+        $string29 = /MicroBurst\-master/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string30 = /.{0,1000}MicroBurst\-Misc\.psm1.{0,1000}/ nocase ascii wide
+        $string30 = /MicroBurst\-Misc\.psm1/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string31 = /.{0,1000}MicroBurst\-MSOL.{0,1000}/ nocase ascii wide
+        $string31 = /MicroBurst\-MSOL/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string32 = /.{0,1000}OwnerPersist\-POST\..{0,1000}/ nocase ascii wide
+        $string32 = /OwnerPersist\-POST\./ nocase ascii wide
 
     condition:
         any of them

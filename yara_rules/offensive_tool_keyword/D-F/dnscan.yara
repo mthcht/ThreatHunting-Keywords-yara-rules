@@ -10,43 +10,43 @@ rule dnscan
     strings:
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string1 = /.{0,1000}\sdnscan\.py.{0,1000}/ nocase ascii wide
+        $string1 = /\sdnscan\.py/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string2 = /.{0,1000}\/dnscan\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/dnscan\.git/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string3 = /.{0,1000}\/dnscan\.py.{0,1000}/ nocase ascii wide
+        $string3 = /\/dnscan\.py/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string4 = /.{0,1000}\/subdomains\.txt.{0,1000}/ nocase ascii wide
+        $string4 = /\/subdomains\.txt/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string5 = /.{0,1000}\\dnscan\.py.{0,1000}/ nocase ascii wide
+        $string5 = /\\dnscan\.py/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string6 = /.{0,1000}dnscan\-master.{0,1000}/ nocase ascii wide
+        $string6 = /dnscan\-master/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string7 = /.{0,1000}rbsec\/dnscan.{0,1000}/ nocase ascii wide
+        $string7 = /rbsec\/dnscan/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string8 = /.{0,1000}subdomains\-100\.txt.{0,1000}/ nocase ascii wide
+        $string8 = /subdomains\-100\.txt/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string9 = /.{0,1000}subdomains\-1000\.txt.{0,1000}/ nocase ascii wide
+        $string9 = /subdomains\-1000\.txt/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string10 = /.{0,1000}subdomains\-10000\.txt.{0,1000}/ nocase ascii wide
+        $string10 = /subdomains\-10000\.txt/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string11 = /.{0,1000}subdomains\-500\.txt.{0,1000}/ nocase ascii wide
+        $string11 = /subdomains\-500\.txt/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string12 = /.{0,1000}subdomains\-uk\-1000\.txt.{0,1000}/ nocase ascii wide
+        $string12 = /subdomains\-uk\-1000\.txt/ nocase ascii wide
         // Description: dnscan is a python wordlist-based DNS subdomain scanner.
         // Reference: https://github.com/rbsec/dnscan
-        $string13 = /.{0,1000}subdomains\-uk\-500\.txt.{0,1000}/ nocase ascii wide
+        $string13 = /subdomains\-uk\-500\.txt/ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule Xerror
     strings:
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
-        $string1 = /.{0,1000}Chudry\/Xerror.{0,1000}/ nocase ascii wide
+        $string1 = /Chudry\/Xerror/ nocase ascii wide
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
-        $string2 = /.{0,1000}cve_2_MSF_exploit_Mapping.{0,1000}/ nocase ascii wide
+        $string2 = /cve_2_MSF_exploit_Mapping/ nocase ascii wide
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
-        $string3 = /.{0,1000}mapper_cve_exploit\.py.{0,1000}/ nocase ascii wide
+        $string3 = /mapper_cve_exploit\.py/ nocase ascii wide
         // Description: fully automated pentesting tool
         // Reference: https://github.com/Chudry/Xerror
-        $string4 = /.{0,1000}msf_cve_extracter\.py.{0,1000}/ nocase ascii wide
+        $string4 = /msf_cve_extracter\.py/ nocase ascii wide
         // Description: A BurpSuite plugin intended to help with nuclei template generation.
         // Reference: https://github.com/projectdiscovery/nuclei-burp-plugin
-        $string5 = /.{0,1000}nuclei\-burp\-plugin.{0,1000}/ nocase ascii wide
+        $string5 = /nuclei\-burp\-plugin/ nocase ascii wide
 
     condition:
         any of them

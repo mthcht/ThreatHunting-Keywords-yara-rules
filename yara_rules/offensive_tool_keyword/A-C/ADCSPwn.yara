@@ -10,28 +10,28 @@ rule ADCSPwn
     strings:
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string1 = /.{0,1000}\.exe\s\-\-adcs\s.{0,1000}\s\-\-remote\s.{0,1000}/ nocase ascii wide
+        $string1 = /\.exe\s\-\-adcs\s.{0,1000}\s\-\-remote\s/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string2 = /.{0,1000}\/ADCSPwn\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/ADCSPwn\.git/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string3 = /.{0,1000}\\ADCSPwn.{0,1000}/ nocase ascii wide
+        $string3 = /\\ADCSPwn/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string4 = /.{0,1000}ADCSPwn\.csproj.{0,1000}/ nocase ascii wide
+        $string4 = /ADCSPwn\.csproj/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string5 = /.{0,1000}ADCSPwn\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /ADCSPwn\.exe/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string6 = /.{0,1000}ADCSPwn\.sln.{0,1000}/ nocase ascii wide
+        $string6 = /ADCSPwn\.sln/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string7 = /.{0,1000}ADCSPwn\-master.{0,1000}/ nocase ascii wide
+        $string7 = /ADCSPwn\-master/ nocase ascii wide
         // Description: A tool to escalate privileges in an active directory network by coercing authenticate from machine accounts and relaying to the certificate service
         // Reference: https://github.com/bats3c/ADCSPwn
-        $string8 = /.{0,1000}bats3c\/ADCSPwn.{0,1000}/ nocase ascii wide
+        $string8 = /bats3c\/ADCSPwn/ nocase ascii wide
 
     condition:
         any of them

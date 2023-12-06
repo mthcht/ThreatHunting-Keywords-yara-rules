@@ -10,232 +10,232 @@ rule _
     strings:
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string1 = /.{0,1000}\.doc\.bat.{0,1000}/ nocase ascii wide
+        $string1 = /\.doc\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string2 = /.{0,1000}\.doc\.dll.{0,1000}/ nocase ascii wide
+        $string2 = /\.doc\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string3 = /.{0,1000}\.doc\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\.doc\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string4 = /.{0,1000}\.doc\.htm.{0,1000}/ nocase ascii wide
+        $string4 = /\.doc\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string5 = /.{0,1000}\.doc\.jar.{0,1000}/ nocase ascii wide
+        $string5 = /\.doc\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string6 = /.{0,1000}\.doc\.js.{0,1000}/ nocase ascii wide
+        $string6 = /\.doc\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string7 = /.{0,1000}\.doc\.sfx.{0,1000}/ nocase ascii wide
+        $string7 = /\.doc\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string8 = /.{0,1000}\.doc\.vbs.{0,1000}/ nocase ascii wide
+        $string8 = /\.doc\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string9 = /.{0,1000}\.docx\.bat.{0,1000}/ nocase ascii wide
+        $string9 = /\.docx\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string10 = /.{0,1000}\.docx\.dll.{0,1000}/ nocase ascii wide
+        $string10 = /\.docx\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string11 = /.{0,1000}\.docx\.exe.{0,1000}/ nocase ascii wide
+        $string11 = /\.docx\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string12 = /.{0,1000}\.docx\.htm.{0,1000}/ nocase ascii wide
+        $string12 = /\.docx\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string13 = /.{0,1000}\.docx\.jar.{0,1000}/ nocase ascii wide
+        $string13 = /\.docx\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string14 = /.{0,1000}\.docx\.js.{0,1000}/ nocase ascii wide
+        $string14 = /\.docx\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string15 = /.{0,1000}\.docx\.sfx.{0,1000}/ nocase ascii wide
+        $string15 = /\.docx\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string16 = /.{0,1000}\.docx\.vbs.{0,1000}/ nocase ascii wide
+        $string16 = /\.docx\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string17 = /.{0,1000}\.pdf\.bat.{0,1000}/ nocase ascii wide
+        $string17 = /\.pdf\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string18 = /.{0,1000}\.pdf\.dll.{0,1000}/ nocase ascii wide
+        $string18 = /\.pdf\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string19 = /.{0,1000}\.pdf\.exe.{0,1000}/ nocase ascii wide
+        $string19 = /\.pdf\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string20 = /.{0,1000}\.pdf\.htm.{0,1000}/ nocase ascii wide
+        $string20 = /\.pdf\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string21 = /.{0,1000}\.pdf\.jar.{0,1000}/ nocase ascii wide
+        $string21 = /\.pdf\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string22 = /.{0,1000}\.pdf\.js.{0,1000}/ nocase ascii wide
+        $string22 = /\.pdf\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string23 = /.{0,1000}\.pdf\.sfx.{0,1000}/ nocase ascii wide
+        $string23 = /\.pdf\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string24 = /.{0,1000}\.pdf\.vbs.{0,1000}/ nocase ascii wide
+        $string24 = /\.pdf\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string25 = /.{0,1000}\.ppt\.bat.{0,1000}/ nocase ascii wide
+        $string25 = /\.ppt\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string26 = /.{0,1000}\.ppt\.dll.{0,1000}/ nocase ascii wide
+        $string26 = /\.ppt\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string27 = /.{0,1000}\.ppt\.exe.{0,1000}/ nocase ascii wide
+        $string27 = /\.ppt\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string28 = /.{0,1000}\.ppt\.htm.{0,1000}/ nocase ascii wide
+        $string28 = /\.ppt\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string29 = /.{0,1000}\.ppt\.jar.{0,1000}/ nocase ascii wide
+        $string29 = /\.ppt\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string30 = /.{0,1000}\.ppt\.js.{0,1000}/ nocase ascii wide
+        $string30 = /\.ppt\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string31 = /.{0,1000}\.ppt\.sfx.{0,1000}/ nocase ascii wide
+        $string31 = /\.ppt\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string32 = /.{0,1000}\.ppt\.vbs.{0,1000}/ nocase ascii wide
+        $string32 = /\.ppt\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string33 = /.{0,1000}\.pptx\.bat.{0,1000}/ nocase ascii wide
+        $string33 = /\.pptx\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string34 = /.{0,1000}\.pptx\.dll.{0,1000}/ nocase ascii wide
+        $string34 = /\.pptx\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string35 = /.{0,1000}\.pptx\.exe.{0,1000}/ nocase ascii wide
+        $string35 = /\.pptx\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string36 = /.{0,1000}\.pptx\.htm.{0,1000}/ nocase ascii wide
+        $string36 = /\.pptx\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string37 = /.{0,1000}\.pptx\.jar.{0,1000}/ nocase ascii wide
+        $string37 = /\.pptx\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string38 = /.{0,1000}\.pptx\.js.{0,1000}/ nocase ascii wide
+        $string38 = /\.pptx\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string39 = /.{0,1000}\.pptx\.sfx.{0,1000}/ nocase ascii wide
+        $string39 = /\.pptx\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string40 = /.{0,1000}\.pptx\.vbs.{0,1000}/ nocase ascii wide
+        $string40 = /\.pptx\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string41 = /.{0,1000}\.rtf\.bat.{0,1000}/ nocase ascii wide
+        $string41 = /\.rtf\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string42 = /.{0,1000}\.rtf\.dll.{0,1000}/ nocase ascii wide
+        $string42 = /\.rtf\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string43 = /.{0,1000}\.rtf\.exe.{0,1000}/ nocase ascii wide
+        $string43 = /\.rtf\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string44 = /.{0,1000}\.rtf\.htm.{0,1000}/ nocase ascii wide
+        $string44 = /\.rtf\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string45 = /.{0,1000}\.rtf\.jar.{0,1000}/ nocase ascii wide
+        $string45 = /\.rtf\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string46 = /.{0,1000}\.rtf\.js.{0,1000}/ nocase ascii wide
+        $string46 = /\.rtf\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string47 = /.{0,1000}\.rtf\.sfx.{0,1000}/ nocase ascii wide
+        $string47 = /\.rtf\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string48 = /.{0,1000}\.rtf\.vbs.{0,1000}/ nocase ascii wide
+        $string48 = /\.rtf\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string49 = /.{0,1000}\.txt\.bat.{0,1000}/ nocase ascii wide
+        $string49 = /\.txt\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string50 = /.{0,1000}\.txt\.dll.{0,1000}/ nocase ascii wide
+        $string50 = /\.txt\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string51 = /.{0,1000}\.txt\.exe.{0,1000}/ nocase ascii wide
+        $string51 = /\.txt\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string52 = /.{0,1000}\.txt\.htm.{0,1000}/ nocase ascii wide
+        $string52 = /\.txt\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string53 = /.{0,1000}\.txt\.jar.{0,1000}/ nocase ascii wide
+        $string53 = /\.txt\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string54 = /.{0,1000}\.txt\.js.{0,1000}/ nocase ascii wide
+        $string54 = /\.txt\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string55 = /.{0,1000}\.txt\.sfx.{0,1000}/ nocase ascii wide
+        $string55 = /\.txt\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string56 = /.{0,1000}\.txt\.vbs.{0,1000}/ nocase ascii wide
+        $string56 = /\.txt\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string57 = /.{0,1000}\.xls\.bat.{0,1000}/ nocase ascii wide
+        $string57 = /\.xls\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string58 = /.{0,1000}\.xls\.dll.{0,1000}/ nocase ascii wide
+        $string58 = /\.xls\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string59 = /.{0,1000}\.xls\.exe.{0,1000}/ nocase ascii wide
+        $string59 = /\.xls\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string60 = /.{0,1000}\.xls\.htm.{0,1000}/ nocase ascii wide
+        $string60 = /\.xls\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string61 = /.{0,1000}\.xls\.jar.{0,1000}/ nocase ascii wide
+        $string61 = /\.xls\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string62 = /.{0,1000}\.xls\.js.{0,1000}/ nocase ascii wide
+        $string62 = /\.xls\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string63 = /.{0,1000}\.xls\.sfx.{0,1000}/ nocase ascii wide
+        $string63 = /\.xls\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string64 = /.{0,1000}\.xls\.vbs.{0,1000}/ nocase ascii wide
+        $string64 = /\.xls\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string65 = /.{0,1000}\.xlsx\.bat.{0,1000}/ nocase ascii wide
+        $string65 = /\.xlsx\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string66 = /.{0,1000}\.xlsx\.dll.{0,1000}/ nocase ascii wide
+        $string66 = /\.xlsx\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string67 = /.{0,1000}\.xlsx\.exe.{0,1000}/ nocase ascii wide
+        $string67 = /\.xlsx\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string68 = /.{0,1000}\.xlsx\.htm.{0,1000}/ nocase ascii wide
+        $string68 = /\.xlsx\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string69 = /.{0,1000}\.xlsx\.jar.{0,1000}/ nocase ascii wide
+        $string69 = /\.xlsx\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string70 = /.{0,1000}\.xlsx\.js.{0,1000}/ nocase ascii wide
+        $string70 = /\.xlsx\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string71 = /.{0,1000}\.xlsx\.sfx.{0,1000}/ nocase ascii wide
+        $string71 = /\.xlsx\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string72 = /.{0,1000}\.xlsx\.vbs.{0,1000}/ nocase ascii wide
+        $string72 = /\.xlsx\.vbs/ nocase ascii wide
         // Description: keyword observed in multiple backdoor tools
         // Reference: N/A
-        $string73 = /.{0,1000}\/BackDoor.{0,1000}/ nocase ascii wide
+        $string73 = /\/BackDoor/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string74 = /.{0,1000}\/pentest.{0,1000}/ nocase ascii wide
+        $string74 = /\/pentest/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string75 = /.{0,1000}\-pentest.{0,1000}/ nocase ascii wide
+        $string75 = /\-pentest/ nocase ascii wide
         // Description: windows exploit keyword often used in poc exploit github repo or could be a file name or folder
         // Reference: N/A
-        $string76 = /.{0,1000}Windows\sExploit.{0,1000}/ nocase ascii wide
+        $string76 = /Windows\sExploit/ nocase ascii wide
 
     condition:
         any of them

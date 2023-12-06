@@ -10,19 +10,19 @@ rule DefaultCreds_cheat_sheet
     strings:
         // Description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         // Reference: https://github.com/ihebski/DefaultCreds-cheat-sheet
-        $string1 = /.{0,1000}\/creds\-.{0,1000}\/creds\.zip.{0,1000}/ nocase ascii wide
+        $string1 = /\/creds\-.{0,1000}\/creds\.zip/ nocase ascii wide
         // Description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         // Reference: https://github.com/ihebski/DefaultCreds-cheat-sheet
-        $string2 = /.{0,1000}\/DefaultCreds_db\.json.{0,1000}/ nocase ascii wide
+        $string2 = /\/DefaultCreds_db\.json/ nocase ascii wide
         // Description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         // Reference: https://github.com/ihebski/DefaultCreds-cheat-sheet
-        $string3 = /.{0,1000}\/tmp\/.{0,1000}\-passwords\.txt.{0,1000}/ nocase ascii wide
+        $string3 = /\/tmp\/.{0,1000}\-passwords\.txt/ nocase ascii wide
         // Description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         // Reference: https://github.com/ihebski/DefaultCreds-cheat-sheet
-        $string4 = /.{0,1000}\/tmp\/.{0,1000}\-usernames\.txt.{0,1000}/ nocase ascii wide
+        $string4 = /\/tmp\/.{0,1000}\-usernames\.txt/ nocase ascii wide
         // Description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         // Reference: https://github.com/ihebski/DefaultCreds-cheat-sheet
-        $string5 = /.{0,1000}DefaultCreds\-cheat\-sheet.{0,1000}/ nocase ascii wide
+        $string5 = /DefaultCreds\-cheat\-sheet/ nocase ascii wide
 
     condition:
         any of them

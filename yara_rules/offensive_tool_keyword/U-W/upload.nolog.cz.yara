@@ -10,7 +10,7 @@ rule upload_nolog_cz
     strings:
         // Description: sharing platform
         // Reference: https://upload.nolog.cz/
-        $string1 = /.{0,1000}upload\.nolog\.cz.{0,1000}/ nocase ascii wide
+        $string1 = /upload\.nolog\.cz/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule P4wnP1
     strings:
         // Description: P4wnP1 is a highly customizable USB attack platform. based on a low cost Raspberry Pi Zero or Raspberry Pi Zero W (required for HID backdoor).
         // Reference: https://github.com/RoganDawes/P4wnP1
-        $string1 = /.{0,1000}P4wnP1.{0,1000}/ nocase ascii wide
+        $string1 = /P4wnP1/ nocase ascii wide
 
     condition:
         any of them

@@ -10,25 +10,25 @@ rule hyperion
     strings:
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string1 = /.{0,1000}\/hyperion\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\/hyperion\.exe/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string2 = /.{0,1000}\/windows\-resources\/hyperion.{0,1000}/ nocase ascii wide
+        $string2 = /\/windows\-resources\/hyperion/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string3 = /.{0,1000}\\hyperion\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\\hyperion\.exe/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string4 = /.{0,1000}apt\sinstall\shyperion.{0,1000}/ nocase ascii wide
+        $string4 = /apt\sinstall\shyperion/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string5 = /.{0,1000}Hyperion\sPE\-Crypter.{0,1000}/ nocase ascii wide
+        $string5 = /Hyperion\sPE\-Crypter/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string6 = /.{0,1000}hyperion\.exe\s.{0,1000}/ nocase ascii wide
+        $string6 = /hyperion\.exe\s/ nocase ascii wide
         // Description: A runtime PE-Crypter - The crypter is started via the command line and encrypts an input executable with AES-128. The encrypted file decrypts itself on startup (bruteforcing the AES key which may take a few seconds)
         // Reference: https://www.kali.org/tools/hyperion/
-        $string7 = /.{0,1000}hyperion_2\.0\.orig\.tar\.gz.{0,1000}/ nocase ascii wide
+        $string7 = /hyperion_2\.0\.orig\.tar\.gz/ nocase ascii wide
 
     condition:
         any of them

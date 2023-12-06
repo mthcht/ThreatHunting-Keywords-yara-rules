@@ -10,7 +10,7 @@ rule mousejack
     strings:
         // Description: MouseJack device discovery and research tools
         // Reference: https://github.com/BastilleResearch/mousejack
-        $string1 = /.{0,1000}mousejack.{0,1000}/ nocase ascii wide
+        $string1 = /mousejack/ nocase ascii wide
 
     condition:
         any of them

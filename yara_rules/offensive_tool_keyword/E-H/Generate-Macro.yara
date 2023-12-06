@@ -10,7 +10,7 @@ rule Generate_Macro
     strings:
         // Description: Generate-Macro is a standalone PowerShell script that will generate a malicious Microsoft Office document with a specified payload and persistence method.
         // Reference: https://github.com/enigma0x3/Generate-Macro
-        $string1 = /.{0,1000}Generate\-Macro\.ps1.{0,1000}/ nocase ascii wide
+        $string1 = /Generate\-Macro\.ps1/ nocase ascii wide
 
     condition:
         any of them

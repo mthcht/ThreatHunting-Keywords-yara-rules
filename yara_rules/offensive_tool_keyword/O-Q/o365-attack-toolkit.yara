@@ -10,10 +10,10 @@ rule o365_attack_toolkit
     strings:
         // Description: A toolkit to attack Office365
         // Reference: https://github.com/mdsecactivebreach/o365-attack-toolkit
-        $string1 = /.{0,1000}http:\/\/localhost:30662.{0,1000}/ nocase ascii wide
+        $string1 = /http:\/\/localhost:30662/ nocase ascii wide
         // Description: A toolkit to attack Office365
         // Reference: https://github.com/mdsecactivebreach/o365-attack-toolkit
-        $string2 = /.{0,1000}o365\-attack\-toolkit.{0,1000}/ nocase ascii wide
+        $string2 = /o365\-attack\-toolkit/ nocase ascii wide
 
     condition:
         any of them

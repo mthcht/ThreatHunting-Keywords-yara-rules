@@ -10,7 +10,7 @@ rule XXEinjector
     strings:
         // Description: XXEinjector automates retrieving files using direct and out of band methods. Directory listing only works in Java applications. Bruteforcing method needs to be used for other applications.
         // Reference: https://github.com/enjoiz/XXEinjector
-        $string1 = /.{0,1000}XXEinjector.{0,1000}/ nocase ascii wide
+        $string1 = /XXEinjector/ nocase ascii wide
 
     condition:
         any of them

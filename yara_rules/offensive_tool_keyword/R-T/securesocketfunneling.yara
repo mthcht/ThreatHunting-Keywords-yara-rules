@@ -10,7 +10,7 @@ rule securesocketfunneling
     strings:
         // Description: Secure Socket Funneling (SSF) is a network tool and toolkit It provides simple and efficient ways to forward data from multiple sockets (TCP or UDP) through a single secure TLS link to a remote computer
         // Reference: https://securesocketfunneling.github.io/ssf/#home
-        $string1 = /.{0,1000}securesocketfunneling.{0,1000}/ nocase ascii wide
+        $string1 = /securesocketfunneling/ nocase ascii wide
 
     condition:
         any of them

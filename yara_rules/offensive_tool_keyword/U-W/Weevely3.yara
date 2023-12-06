@@ -10,7 +10,7 @@ rule Weevely3
     strings:
         // Description: Webponized web shell
         // Reference: https://github.com/epinna/weevely3
-        $string1 = /.{0,1000}\/Weevely3.{0,1000}/ nocase ascii wide
+        $string1 = /\/Weevely3/ nocase ascii wide
 
     condition:
         any of them

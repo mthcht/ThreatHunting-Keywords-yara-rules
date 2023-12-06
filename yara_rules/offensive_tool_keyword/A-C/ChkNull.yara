@@ -10,7 +10,7 @@ rule ChkNull
     strings:
         // Description: Checks for Users with No passwords
         // Reference: https://github.com/nyxgeek/classic_hacking_tools
-        $string1 = /.{0,1000}chknull\.zip.{0,1000}/ nocase ascii wide
+        $string1 = /chknull\.zip/ nocase ascii wide
 
     condition:
         any of them

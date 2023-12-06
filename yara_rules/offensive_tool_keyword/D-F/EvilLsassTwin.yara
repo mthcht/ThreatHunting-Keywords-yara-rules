@@ -10,28 +10,28 @@ rule EvilLsassTwin
     strings:
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string1 = /.{0,1000}\sEvilTwinServer\s.{0,1000}/ nocase ascii wide
+        $string1 = /\sEvilTwinServer\s/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string2 = /.{0,1000}\/EvilLsassTwin\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/EvilLsassTwin\// nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string3 = /.{0,1000}\/EvilTwinServer.{0,1000}/ nocase ascii wide
+        $string3 = /\/EvilTwinServer/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string4 = /.{0,1000}EvilLsassTwin\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /EvilLsassTwin\.exe/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string5 = /.{0,1000}EvilLsassTwin\.nim.{0,1000}/ nocase ascii wide
+        $string5 = /EvilLsassTwin\.nim/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string6 = /.{0,1000}EvilTwin\.dmp.{0,1000}/ nocase ascii wide
+        $string6 = /EvilTwin\.dmp/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string7 = /.{0,1000}EvilTwinServer\.nim.{0,1000}/ nocase ascii wide
+        $string7 = /EvilTwinServer\.nim/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string8 = /.{0,1000}Lsass\sDump\sFile\sCreated.{0,1000}/ nocase ascii wide
+        $string8 = /Lsass\sDump\sFile\sCreated/ nocase ascii wide
 
     condition:
         any of them

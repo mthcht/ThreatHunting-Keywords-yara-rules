@@ -10,16 +10,16 @@ rule omg_payloads
     strings:
         // Description: Official payload library for the O.MG line of products from Mischief Gadgets
         // Reference: https://github.com/hak5/omg-payloads
-        $string1 = /.{0,1000}\/omg\-payloads\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/omg\-payloads\.git/ nocase ascii wide
         // Description: Official payload library for the O.MG line of products from Mischief Gadgets
         // Reference: https://github.com/hak5/omg-payloads
-        $string2 = /.{0,1000}hak5\/omg\-payloads.{0,1000}/ nocase ascii wide
+        $string2 = /hak5\/omg\-payloads/ nocase ascii wide
         // Description: Official payload library for the O.MG line of products from Mischief Gadgets
         // Reference: https://github.com/hak5/omg-payloads
-        $string3 = /.{0,1000}omg\-payloads.{0,1000}\/payloads\/.{0,1000}/ nocase ascii wide
+        $string3 = /omg\-payloads.{0,1000}\/payloads\// nocase ascii wide
         // Description: Official payload library for the O.MG line of products from Mischief Gadgets
         // Reference: https://github.com/hak5/omg-payloads
-        $string4 = /.{0,1000}omg\-payloads\-master.{0,1000}/ nocase ascii wide
+        $string4 = /omg\-payloads\-master/ nocase ascii wide
 
     condition:
         any of them

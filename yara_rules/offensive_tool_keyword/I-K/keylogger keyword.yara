@@ -10,7 +10,7 @@ rule keylogger_keyword
     strings:
         // Description: keylogger keyword. could be related to keylooger tools 
         // Reference: N/A
-        $string1 = /.{0,1000}Keylogger.{0,1000}/ nocase ascii wide
+        $string1 = /Keylogger/ nocase ascii wide
 
     condition:
         any of them

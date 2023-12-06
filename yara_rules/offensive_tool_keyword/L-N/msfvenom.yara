@@ -10,22 +10,22 @@ rule msfvenom
     strings:
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
-        $string1 = /.{0,1000}\swindows\/shell\/bind_tcp\s.{0,1000}/ nocase ascii wide
+        $string1 = /\swindows\/shell\/bind_tcp\s/ nocase ascii wide
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
-        $string2 = /.{0,1000}\/msfvenom\/.{0,1000}/ nocase ascii wide
+        $string2 = /\/msfvenom\// nocase ascii wide
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
-        $string3 = /.{0,1000}exec\sCMD\=\/bin\/sh\s\-f\self\s\-o\s.{0,1000}\.elf.{0,1000}/ nocase ascii wide
+        $string3 = /exec\sCMD\=\/bin\/sh\s\-f\self\s\-o\s.{0,1000}\.elf/ nocase ascii wide
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
-        $string4 = /.{0,1000}msfencode.{0,1000}/ nocase ascii wide
+        $string4 = /msfencode/ nocase ascii wide
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
-        $string5 = /.{0,1000}msfpayload.{0,1000}/ nocase ascii wide
+        $string5 = /msfpayload/ nocase ascii wide
         // Description: Msfvenom is the combination of payload generation and encoding. It replaced msfpayload and msfencode on June 8th 2015.
         // Reference: https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
-        $string6 = /.{0,1000}msfvenom\s\-.{0,1000}/ nocase ascii wide
+        $string6 = /msfvenom\s\-/ nocase ascii wide
 
     condition:
         any of them

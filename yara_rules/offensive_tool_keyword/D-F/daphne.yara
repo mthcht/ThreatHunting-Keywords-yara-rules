@@ -10,19 +10,19 @@ rule daphne
     strings:
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string1 = /.{0,1000}\/daphne\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/daphne\.git/ nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string2 = /.{0,1000}\/daphne\-x64.{0,1000}/ nocase ascii wide
+        $string2 = /\/daphne\-x64/ nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string3 = /.{0,1000}codewhitesec\/daphne.{0,1000}/ nocase ascii wide
+        $string3 = /codewhitesec\/daphne/ nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string4 = /.{0,1000}daphne\-main\.zip.{0,1000}/ nocase ascii wide
+        $string4 = /daphne\-main\.zip/ nocase ascii wide
         // Description: evade auditd by tampering via ptrace
         // Reference: https://github.com/codewhitesec/daphne
-        $string5 = /.{0,1000}daphne\-x64\s.{0,1000}\spid\=.{0,1000}/ nocase ascii wide
+        $string5 = /daphne\-x64\s.{0,1000}\spid\=/ nocase ascii wide
 
     condition:
         any of them

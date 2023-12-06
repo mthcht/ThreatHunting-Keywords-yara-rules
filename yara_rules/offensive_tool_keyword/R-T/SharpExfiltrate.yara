@@ -10,46 +10,46 @@ rule SharpExfiltrate
     strings:
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string1 = /.{0,1000}\.exe\sAzureStorage\s\-\-connectionstring\s.{0,1000}\s\-\-filepath\s.{0,1000}\s\-\-extensions\s.{0,1000}/ nocase ascii wide
+        $string1 = /\.exe\sAzureStorage\s\-\-connectionstring\s.{0,1000}\s\-\-filepath\s.{0,1000}\s\-\-extensions\s/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string2 = /.{0,1000}\.exe\sGoogleDrive\s\-\-appname\s.{0,1000}\s\-\-accesstoken\s.{0,1000}\s\-\-filepath\s.{0,1000}\s\-\-extensions\s.{0,1000}\s\-\-memoryonly.{0,1000}/ nocase ascii wide
+        $string2 = /\.exe\sGoogleDrive\s\-\-appname\s.{0,1000}\s\-\-accesstoken\s.{0,1000}\s\-\-filepath\s.{0,1000}\s\-\-extensions\s.{0,1000}\s\-\-memoryonly/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string3 = /.{0,1000}\.exe\sOneDrive\s\-\-username\s.{0,1000}\s\-\-password\s.{0,1000}\s\-\-filepath\s.{0,1000}\\.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string3 = /\.exe\sOneDrive\s\-\-username\s.{0,1000}\s\-\-password\s.{0,1000}\s\-\-filepath\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string4 = /.{0,1000}\/SharpExfiltrate\.git.{0,1000}/ nocase ascii wide
+        $string4 = /\/SharpExfiltrate\.git/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string5 = /.{0,1000}\/SharpExfiltrate\/.{0,1000}/ nocase ascii wide
+        $string5 = /\/SharpExfiltrate\// nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string6 = /.{0,1000}\\SharpExfiltrate\\.{0,1000}/ nocase ascii wide
+        $string6 = /\\SharpExfiltrate\\/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string7 = /.{0,1000}3bb553cd\-0a48\-402d\-9812\-8daff60ac628.{0,1000}/ nocase ascii wide
+        $string7 = /3bb553cd\-0a48\-402d\-9812\-8daff60ac628/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string8 = /.{0,1000}Flangvik\/SharpExfiltrate.{0,1000}/ nocase ascii wide
+        $string8 = /Flangvik\/SharpExfiltrate/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string9 = /.{0,1000}SharpExfiltrate\.csproj.{0,1000}/ nocase ascii wide
+        $string9 = /SharpExfiltrate\.csproj/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string10 = /.{0,1000}SharpExfiltrate\.exe.{0,1000}/ nocase ascii wide
+        $string10 = /SharpExfiltrate\.exe/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string11 = /.{0,1000}SharpExfiltrate\.sln.{0,1000}/ nocase ascii wide
+        $string11 = /SharpExfiltrate\.sln/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string12 = /.{0,1000}SharpExfiltrateLootCache.{0,1000}/ nocase ascii wide
+        $string12 = /SharpExfiltrateLootCache/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string13 = /.{0,1000}SharpExfiltrate\-main.{0,1000}/ nocase ascii wide
+        $string13 = /SharpExfiltrate\-main/ nocase ascii wide
         // Description: Modular C# framework to exfiltrate loot over secure and trusted channels.
         // Reference: https://github.com/Flangvik/SharpExfiltrate
-        $string14 = /.{0,1000}using\sSharpExfiltrate.{0,1000}/ nocase ascii wide
+        $string14 = /using\sSharpExfiltrate/ nocase ascii wide
 
     condition:
         any of them

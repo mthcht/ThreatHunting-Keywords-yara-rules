@@ -10,7 +10,7 @@ rule TelegramRAT
     strings:
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string1 = /.{0,1000}https:\/\/api\.telegram\.org\/bot.{0,1000}\/sendMessage.{0,1000}/ nocase ascii wide
+        $string1 = /https:\/\/api\.telegram\.org\/bot.{0,1000}\/sendMessage/ nocase ascii wide
 
     condition:
         any of them

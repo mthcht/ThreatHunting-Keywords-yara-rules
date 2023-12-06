@@ -10,7 +10,7 @@ rule anydesk
     strings:
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string1 = /.{0,1000}anydesk\.exe\s\-\-set\-password.{0,1000}/ nocase ascii wide
+        $string1 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule bittorent
     strings:
         // Description: popular BitTorrent client used for downloading files over the BitTorrent network. a peer-to-peer file sharing protocol. Can be used for collection and exfiltration. Not something we want to see installed in a enterprise network
         // Reference: https[://]www[.]bittorrent.com/fr/
-        $string1 = /.{0,1000}\\BitTorrent\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\\BitTorrent\.exe/ nocase ascii wide
 
     condition:
         any of them

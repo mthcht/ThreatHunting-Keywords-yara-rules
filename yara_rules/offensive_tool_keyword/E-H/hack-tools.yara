@@ -10,25 +10,25 @@ rule hack_tools
     strings:
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string1 = /.{0,1000}\/Hack\-Tools\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/Hack\-Tools\.git/ nocase ascii wide
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string2 = /.{0,1000}cmbndhnoonmghfofefkcccljbkdpamhi_14678\.crx.{0,1000}/ nocase ascii wide
+        $string2 = /cmbndhnoonmghfofefkcccljbkdpamhi_14678\.crx/ nocase ascii wide
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string3 = /.{0,1000}hacktools\-.{0,1000}\.xpi.{0,1000}/ nocase ascii wide
+        $string3 = /hacktools\-.{0,1000}\.xpi/ nocase ascii wide
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string4 = /.{0,1000}hack\-tools\/cmbndhnoonmghfofefkcccljbkdpamhi.{0,1000}/ nocase ascii wide
+        $string4 = /hack\-tools\/cmbndhnoonmghfofefkcccljbkdpamhi/ nocase ascii wide
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string5 = /.{0,1000}Hack\-Tools\-master.{0,1000}/ nocase ascii wide
+        $string5 = /Hack\-Tools\-master/ nocase ascii wide
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string6 = /.{0,1000}https:\/\/crackstation\.net\/.{0,1000}/ nocase ascii wide
+        $string6 = /https:\/\/crackstation\.net\// nocase ascii wide
         // Description: The all-in-one Red Team browser extension for Web Pentester
         // Reference: https://github.com/LasCC/Hack-Tools
-        $string7 = /.{0,1000}LasCC\/Hack\-Tools.{0,1000}/ nocase ascii wide
+        $string7 = /LasCC\/Hack\-Tools/ nocase ascii wide
 
     condition:
         any of them

@@ -10,94 +10,94 @@ rule EQGRP_tools
     strings:
         // Description: Equation Group hack tool leaked by ShadowBrokers- file emptybowl.py RCE for MailCenter Gateway (mcgate) - an application that comes with Asia Info Message Center mailserver  buffer overflow allows a string passed to popen() call to be controlled by an attacker  arbitraty cmd execute known to work only for AIMC Version 2.9.5.1
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/emptybowl.py
-        $string1 = /.{0,1000}\<\s\/dev\/console\s\|\suudecode\s\&\&\suncompress.{0,1000}/ nocase ascii wide
+        $string1 = /\<\s\/dev\/console\s\|\suudecode\s\&\&\suncompress/ nocase ascii wide
         // Description: Equation Group hack tool leaked note defense evasion
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/Auditcleaner
-        $string2 = /.{0,1000}\>\s\/var\/log\/audit\/audit\.log.{0,1000}\srm\s\-f\s\..{0,1000}/ nocase ascii wide
+        $string2 = /\>\s\/var\/log\/audit\/audit\.log.{0,1000}\srm\s\-f\s\./ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string3 = /.{0,1000}127\.0\.0\.1\sis\snot\sadvisable\sas\sa\ssource\.\sUse\s\-l\s127\.0\.0\.1\sto\soverride\sthis\swarning.{0,1000}/ nocase ascii wide
+        $string3 = /127\.0\.0\.1\sis\snot\sadvisable\sas\sa\ssource\.\sUse\s\-l\s127\.0\.0\.1\sto\soverride\sthis\swarning/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string4 = /.{0,1000}Attempting\sconnection\sfrom\s0\.0\.0\.0:.{0,1000}/ nocase ascii wide
+        $string4 = /Attempting\sconnection\sfrom\s0\.0\.0\.0:/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers anti forensic - cleans up audit.log
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/Auditcleaner
-        $string5 = /.{0,1000}Auditcleaner\..{0,1000}/ nocase ascii wide
+        $string5 = /Auditcleaner\./ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file ELATEDMONKEY is a local privelege escalation exploit against systems running the cPanel Remote Management Web Interface 
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/user.tool.elatedmonkey
-        $string6 = /.{0,1000}cat\s\>\s\/dev\/tcp\/127\.0\.0\.1.{0,1000}\<\<END.{0,1000}/ nocase ascii wide
+        $string6 = /cat\s\>\s\/dev\/tcp\/127\.0\.0\.1.{0,1000}\<\<END/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string7 = /.{0,1000}chmod\s666\s\/var\/run\/utmp~.{0,1000}/ nocase ascii wide
+        $string7 = /chmod\s666\s\/var\/run\/utmp~/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers - EncTelnet/Poptop To use Nopen over an existing connection
         // Reference: https://github.com/thePevertedSpartan/EQ1/blob/0c2354ff1073099b2aa417030b3167ec29d7279c/Linux/doc/old/etc/user.tool.poptop.COMMON
-        $string8 = /.{0,1000}chmod\s700\snscd\scrond.{0,1000}/ nocase ascii wide
+        $string8 = /chmod\s700\snscd\scrond/ nocase ascii wide
         // Description: Equation Group hack tool leaked note defense evasion
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/Auditcleaner
-        $string9 = /.{0,1000}cp\s\/var\/log\/audit\/audit\.log\s\.tmp.{0,1000}/ nocase ascii wide
+        $string9 = /cp\s\/var\/log\/audit\/audit\.log\s\.tmp/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string10 = /.{0,1000}dubmoat.{0,1000}/ nocase ascii wide
+        $string10 = /dubmoat/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string11 = /.{0,1000}Dubmoat_ExtractData.{0,1000}/ nocase ascii wide
+        $string11 = /Dubmoat_ExtractData/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string12 = /.{0,1000}Dubmoat_PrintFilename.{0,1000}/ nocase ascii wide
+        $string12 = /Dubmoat_PrintFilename/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string13 = /.{0,1000}Dubmoat_TruncateFile.{0,1000}/ nocase ascii wide
+        $string13 = /Dubmoat_TruncateFile/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file echowrecker. samba 2.2 and 3.0.2a - 3.0.12-5 RCE (with DWARF symbols)  for FreeBSD  OpenBSD 3.1  OpenBSD 3.2 (with a non-executable stack  zomg)  and Linux. Likely CVE-2003-0201. There is also a Solaris version
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/echowrecker
-        $string14 = /.{0,1000}echowrecker.{0,1000}/ nocase ascii wide
+        $string14 = /echowrecker/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file emptybowl.py RCE for MailCenter Gateway (mcgate) - an application that comes with Asia Info Message Center mailserver  buffer overflow allows a string passed to popen() call to be controlled by an attacker  arbitraty cmd execute known to work only for AIMC Version 2.9.5.1
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/emptybowl.py
-        $string15 = /.{0,1000}emptybowl\.py.{0,1000}/ nocase ascii wide
+        $string15 = /emptybowl\.py/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file ewok (snmpwalk like)
         // Reference: https://github.com/wolf-project/NSA-TOOLS-SHADOW-BROKERS
-        $string16 = /.{0,1000}ewok\s\-t\s.{0,1000}/ nocase ascii wide
+        $string16 = /ewok\s\-t\s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string17 = /.{0,1000}ftshell\s\-.{0,1000}/ nocase ascii wide
+        $string17 = /ftshell\s\-/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string18 = /.{0,1000}ftshell\.v3.{0,1000}/ nocase ascii wide
+        $string18 = /ftshell\.v3/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  ghost:statmon/tooltalk privesc
         // Reference: https://github.com/x0rz/EQGRP/tree/master/Linux/bin
-        $string19 = /.{0,1000}ghost_.{0,1000}\s\-v.{0,1000}/ nocase ascii wide
+        $string19 = /ghost_.{0,1000}\s\-v/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  ghost:statmon/tooltalk privesc
         // Reference: https://github.com/x0rz/EQGRP/tree/master/Linux/bin
-        $string20 = /.{0,1000}ghost_sparc.{0,1000}/ nocase ascii wide
+        $string20 = /ghost_sparc/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  ghost:statmon/tooltalk privesc
         // Reference: https://github.com/x0rz/EQGRP/tree/master/Linux/bin
-        $string21 = /.{0,1000}ghost_x86.{0,1000}/ nocase ascii wide
+        $string21 = /ghost_x86/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string22 = /.{0,1000}iptables\s\-\%c\sOUTPUT\s\-p\stcp\s\-d\s127\.0\.0\.1\s\-\-tcp\-flags\sRST\sRST\s\-j\sDROP\s.{0,1000}/ nocase ascii wide
+        $string22 = /iptables\s\-\%c\sOUTPUT\s\-p\stcp\s\-d\s127\.0\.0\.1\s\-\-tcp\-flags\sRST\sRST\s\-j\sDROP\s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string23 = /.{0,1000}noclient:\sfailed\sto\sexecute\s\%s:\s\%s.{0,1000}/ nocase ascii wide
+        $string23 = /noclient:\sfailed\sto\sexecute\s\%s:\s\%s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string24 = /.{0,1000}ourtn\-ftshell\-upcommand.{0,1000}/ nocase ascii wide
+        $string24 = /ourtn\-ftshell\-upcommand/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string25 = /.{0,1000}send\s\\.{0,1000}\\\[\s\\\\.{0,1000}\\\$BASH\\\\.{0,1000}\s\=\s\\\\.{0,1000}\/bin\/bash\\\\.{0,1000}\s\-o\s\\\\.{0,1000}\\\$SHELL\\\\.{0,1000}\s\=\s\\\\.{0,1000}\/bin\/bash\\\\.{0,1000}\s\\\].{0,1000}/ nocase ascii wide
+        $string25 = /send\s\\.{0,1000}\\\[\s\\\\.{0,1000}\\\$BASH\\\\.{0,1000}\s\=\s\\\\.{0,1000}\/bin\/bash\\\\.{0,1000}\s\-o\s\\\\.{0,1000}\\\$SHELL\\\\.{0,1000}\s\=\s\\\\.{0,1000}\/bin\/bash\\\\.{0,1000}\s\\\]/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file emptybowl.py RCE for MailCenter Gateway (mcgate) - an application that comes with Asia Info Message Center mailserver  buffer overflow allows a string passed to popen() call to be controlled by an attacker  arbitraty cmd execute known to work only for AIMC Version 2.9.5.1
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/emptybowl.py
-        $string26 = /.{0,1000}sendmail\s\-osendmail\schmod\s\+x\ssendmail.{0,1000}/ nocase ascii wide
+        $string26 = /sendmail\s\-osendmail\schmod\s\+x\ssendmail/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string27 = /.{0,1000}sh\s\-c\s.{0,1000}ping\s\-c\s2\s\%s\s\sgrep\s\%s\s\/proc\/net\/arp\s\>\/tmp\/gx\s.{0,1000}/ nocase ascii wide
+        $string27 = /sh\s\-c\s.{0,1000}ping\s\-c\s2\s\%s\s\sgrep\s\%s\s\/proc\/net\/arp\s\>\/tmp\/gx\s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
-        $string28 = /.{0,1000}system\srm\s\-f\s\/current\/tmp\/ftshell\.latest.{0,1000}/ nocase ascii wide
+        $string28 = /system\srm\s\-f\s\/current\/tmp\/ftshell\.latest/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file echowrecker. samba 2.2 and 3.0.2a - 3.0.12-5 RCE (with DWARF symbols)  for FreeBSD  OpenBSD 3.1  OpenBSD 3.2 (with a non-executable stack  zomg)  and Linux. Likely CVE-2003-0201. There is also a Solaris version
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/echowrecker
-        $string29 = /.{0,1000}usr\/bin\/wget\s\-O\s\/tmp\/a\shttp.{0,1000}\schmod\s755\s\/tmp\/cron.{0,1000}/ nocase ascii wide
+        $string29 = /usr\/bin\/wget\s\-O\s\/tmp\/a\shttp.{0,1000}\schmod\s755\s\/tmp\/cron/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string30 = /noclient\-3\..{0,1000}/ nocase ascii wide
+        $string30 = /noclient\-3\./ nocase ascii wide
 
     condition:
         any of them

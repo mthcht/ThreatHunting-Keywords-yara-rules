@@ -10,7 +10,7 @@ rule Anevicon
     strings:
         // Description: Attack simulation: Anevicon is a high-performance traffic generator. designed to be as convenient and reliable as it is possible. It sends numerous UDP-packets to a victim. thereby simulating an activity that can be produced by your end users or a group of hackers.
         // Reference: https://github.com/rozgo/anevicon
-        $string1 = /.{0,1000}Anevicon.{0,1000}/ nocase ascii wide
+        $string1 = /Anevicon/ nocase ascii wide
 
     condition:
         any of them

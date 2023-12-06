@@ -10,10 +10,10 @@ rule LoGiC_NET
     strings:
         // Description: A more advanced free and open .NET obfuscator using dnlib
         // Reference: https://github.com/AnErrupTion/LoGiC.NET
-        $string1 = /.{0,1000}AnErrupTion\/LoGiC\.NET.{0,1000}/ nocase ascii wide
+        $string1 = /AnErrupTion\/LoGiC\.NET/ nocase ascii wide
         // Description: A more advanced free and open .NET obfuscator using dnlib
         // Reference: https://github.com/AnErrupTion/LoGiC.NET
-        $string2 = /.{0,1000}LoGiC\.NET\.exe.{0,1000}/ nocase ascii wide
+        $string2 = /LoGiC\.NET\.exe/ nocase ascii wide
 
     condition:
         any of them

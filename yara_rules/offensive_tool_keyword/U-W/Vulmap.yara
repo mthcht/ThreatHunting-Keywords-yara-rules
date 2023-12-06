@@ -10,7 +10,7 @@ rule Vulmap
     strings:
         // Description: Vulmap is an open-source online local vulnerability scanner project. It consists of online local vulnerability scanning programs for Windows and Linux operating systems. These scripts can be used for defensive and offensive purposes. It is possible to make vulnerability assessments using these scripts. Also. they can be used for privilege escalation by pentesters/red teamers.
         // Reference: https://github.com/vulmon/Vulmap
-        $string1 = /.{0,1000}vulmon.{0,1000}Vulmap.{0,1000}/ nocase ascii wide
+        $string1 = /vulmon.{0,1000}Vulmap/ nocase ascii wide
 
     condition:
         any of them

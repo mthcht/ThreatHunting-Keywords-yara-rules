@@ -10,7 +10,7 @@ rule VoidCrypt
     strings:
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string1 = /.{0,1000}fuckyoufuckyoufuckyoufuckyoufuckyou.{0,1000}/ nocase ascii wide
+        $string1 = /fuckyoufuckyoufuckyoufuckyoufuckyou/ nocase ascii wide
 
     condition:
         any of them

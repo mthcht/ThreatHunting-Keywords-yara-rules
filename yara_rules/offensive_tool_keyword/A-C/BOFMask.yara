@@ -10,19 +10,19 @@ rule BOFMask
     strings:
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string1 = /.{0,1000}\/BOFMask\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/BOFMask\.git/ nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string2 = /.{0,1000}\/bofmask\.h.{0,1000}/ nocase ascii wide
+        $string2 = /\/bofmask\.h/ nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string3 = /.{0,1000}BOFMask\-main.{0,1000}/ nocase ascii wide
+        $string3 = /BOFMask\-main/ nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string4 = /.{0,1000}include.{0,1000}bofmask\.h.{0,1000}/ nocase ascii wide
+        $string4 = /include.{0,1000}bofmask\.h/ nocase ascii wide
         // Description: BOFMask is a proof-of-concept for masking Cobalt Strike's Beacon payload while executing a Beacon Object File (BOF)
         // Reference: https://github.com/passthehashbrowns/BOFMask
-        $string5 = /.{0,1000}passthehashbrowns\/BOFMask.{0,1000}/ nocase ascii wide
+        $string5 = /passthehashbrowns\/BOFMask/ nocase ascii wide
 
     condition:
         any of them

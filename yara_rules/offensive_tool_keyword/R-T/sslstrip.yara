@@ -10,7 +10,7 @@ rule sslstrip
     strings:
         // Description: sslstrip is a MITM tool that implements Moxie Marlinspikes SSL stripping attacks.
         // Reference: https://github.com/moxie0/sslstrip
-        $string1 = /.{0,1000}sslstrip.{0,1000}/ nocase ascii wide
+        $string1 = /sslstrip/ nocase ascii wide
 
     condition:
         any of them

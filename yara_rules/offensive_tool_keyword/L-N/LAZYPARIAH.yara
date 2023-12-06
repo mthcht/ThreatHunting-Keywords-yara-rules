@@ -10,16 +10,16 @@ rule LAZYPARIAH
     strings:
         // Description: LAZYPARIAH - A Tool For Generating Reverse Shell Payloads On The Fly
         // Reference: https://github.com/octetsplicer/LAZYPARIAH
-        $string1 = /.{0,1000}\slazypariah.{0,1000}/ nocase ascii wide
+        $string1 = /\slazypariah/ nocase ascii wide
         // Description: LAZYPARIAH - A Tool For Generating Reverse Shell Payloads On The Fly
         // Reference: https://github.com/octetsplicer/LAZYPARIAH
-        $string2 = /.{0,1000}lazypariah\s.{0,1000}/ nocase ascii wide
+        $string2 = /lazypariah\s/ nocase ascii wide
         // Description: LAZYPARIAH - A Tool For Generating Reverse Shell Payloads On The Fly
         // Reference: https://github.com/octetsplicer/LAZYPARIAH
-        $string3 = /.{0,1000}lazypariah\.svg.{0,1000}/ nocase ascii wide
+        $string3 = /lazypariah\.svg/ nocase ascii wide
         // Description: LAZYPARIAH - A Tool For Generating Reverse Shell Payloads On The Fly
         // Reference: https://github.com/octetsplicer/LAZYPARIAH
-        $string4 = /.{0,1000}octetsplicer\/LAZYPARIAH.{0,1000}/ nocase ascii wide
+        $string4 = /octetsplicer\/LAZYPARIAH/ nocase ascii wide
 
     condition:
         any of them

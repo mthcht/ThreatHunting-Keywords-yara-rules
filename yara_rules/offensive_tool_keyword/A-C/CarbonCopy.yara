@@ -10,7 +10,7 @@ rule CarbonCopy
     strings:
         // Description: A tool which creates a spoofed certificate of any online website and signs an Executable for AV Evasion. Works for both Windows and Linux
         // Reference: https://github.com/paranoidninja/CarbonCopy
-        $string1 = /.{0,1000}CarbonCopy.{0,1000}/ nocase ascii wide
+        $string1 = /CarbonCopy/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule passwd
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1 = /.{0,1000}passwd.{0,1000}john.{0,1000}/ nocase ascii wide
+        $string1 = /passwd.{0,1000}john/ nocase ascii wide
 
     condition:
         any of them

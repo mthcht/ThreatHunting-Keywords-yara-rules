@@ -10,7 +10,7 @@ rule icmptunnel
     strings:
         // Description: icmptunnel works by encapsulating your IP traffic in ICMP echo packets and sending them to your own proxy server. The proxy server decapsulates the packet and forwards the IP traffic. The incoming IP packets which are destined for the client are again encapsulated in ICMP reply packets and sent back to the client. The IP traffic is sent in the 'data' field of ICMP packets.
         // Reference: https://github.com/s-h-3-l-l/katoolin3
-        $string1 = /.{0,1000}icmptunnel.{0,1000}/ nocase ascii wide
+        $string1 = /icmptunnel/ nocase ascii wide
 
     condition:
         any of them

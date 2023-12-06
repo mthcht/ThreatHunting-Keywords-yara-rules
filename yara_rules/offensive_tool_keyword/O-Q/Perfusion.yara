@@ -10,67 +10,67 @@ rule Perfusion
     strings:
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string1 = /.{0,1000}\/Perfusion\.exe.{0,1000}/ nocase ascii wide
+        $string1 = /\/Perfusion\.exe/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string2 = /.{0,1000}\/Perfusion\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/Perfusion\.git/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string3 = /.{0,1000}\/PerfusionDll\.dll.{0,1000}/ nocase ascii wide
+        $string3 = /\/PerfusionDll\.dll/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string4 = /.{0,1000}\[\!\]\sFailed\sto\sdelete\sPerformance\sregistry\skey\..{0,1000}/ nocase ascii wide
+        $string4 = /\[\!\]\sFailed\sto\sdelete\sPerformance\sregistry\skey\./ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string5 = /.{0,1000}\[\-\]\sFailed\sto\sdelete\sPerformance\sDLL.{0,1000}/ nocase ascii wide
+        $string5 = /\[\-\]\sFailed\sto\sdelete\sPerformance\sDLL/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string6 = /.{0,1000}\[\+\]\sExploit\scompleted\.\sGot\sa\sSYSTEM\stoken\!\s:\).{0,1000}/ nocase ascii wide
+        $string6 = /\[\+\]\sExploit\scompleted\.\sGot\sa\sSYSTEM\stoken\!\s:\)/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string7 = /.{0,1000}\\Perfusion\.cpp.{0,1000}/ nocase ascii wide
+        $string7 = /\\Perfusion\.cpp/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string8 = /.{0,1000}\\Perfusion\.exe.{0,1000}/ nocase ascii wide
+        $string8 = /\\Perfusion\.exe/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string9 = /.{0,1000}\\Perfusion\.sln.{0,1000}/ nocase ascii wide
+        $string9 = /\\Perfusion\.sln/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string10 = /.{0,1000}\\PerfusionDll\.cpp.{0,1000}/ nocase ascii wide
+        $string10 = /\\PerfusionDll\.cpp/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string11 = /.{0,1000}\\PerfusionDll\.dll.{0,1000}/ nocase ascii wide
+        $string11 = /\\PerfusionDll\.dll/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string12 = /.{0,1000}\\PerfusionDll\.log.{0,1000}/ nocase ascii wide
+        $string12 = /\\PerfusionDll\.log/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string13 = /.{0,1000}1B1F64B3\-B8A4\-4BBB\-BB66\-F020E2D4F288.{0,1000}/ nocase ascii wide
+        $string13 = /1B1F64B3\-B8A4\-4BBB\-BB66\-F020E2D4F288/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string14 = /.{0,1000}A7397316\-0AEF\-4379\-B285\-C276DE02BDE1.{0,1000}/ nocase ascii wide
+        $string14 = /A7397316\-0AEF\-4379\-B285\-C276DE02BDE1/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string15 = /.{0,1000}C:\\Users\\.{0,1000}\\AppData\\Local\\Temp\\performance_636_3000_1\.dll.{0,1000}/ nocase ascii wide
+        $string15 = /C:\\Users\\.{0,1000}\\AppData\\Local\\Temp\\performance_636_3000_1\.dll/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string16 = /.{0,1000}https:\/\/itm4n\.github\.io\/windows\-registry\-rpceptmapper\-eop\/.{0,1000}/ nocase ascii wide
+        $string16 = /https:\/\/itm4n\.github\.io\/windows\-registry\-rpceptmapper\-eop\// nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string17 = /.{0,1000}itm4n\/Perfusion.{0,1000}/ nocase ascii wide
+        $string17 = /itm4n\/Perfusion/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string18 = /.{0,1000}Perfusion\.exe\s\-c.{0,1000}/ nocase ascii wide
+        $string18 = /Perfusion\.exe\s\-c/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string19 = /.{0,1000}Perfusion\\RegistryPatch\.ps1.{0,1000}/ nocase ascii wide
+        $string19 = /Perfusion\\RegistryPatch\.ps1/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string20 = /.{0,1000}Perfusion\-master\.zip.{0,1000}/ nocase ascii wide
+        $string20 = /Perfusion\-master\.zip/ nocase ascii wide
         // Description: Exploit for the RpcEptMapper registry key permissions vulnerability (Windows 7 / 2088R2 / 8 / 2012)
         // Reference: https://github.com/itm4n/Perfusion
-        $string21 = /.{0,1000}WritePayloadDll\(LPWSTR\spwszDllPath\).{0,1000}/ nocase ascii wide
+        $string21 = /WritePayloadDll\(LPWSTR\spwszDllPath\)/ nocase ascii wide
 
     condition:
         any of them

@@ -10,34 +10,34 @@ rule hackingtool
     strings:
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string1 = /.{0,1000}\/hackingtool\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/hackingtool\.git/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string2 = /.{0,1000}anonsurf\.py.{0,1000}/ nocase ascii wide
+        $string2 = /anonsurf\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string3 = /.{0,1000}exploit_frameworks\.py.{0,1000}/ nocase ascii wide
+        $string3 = /exploit_frameworks\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string4 = /.{0,1000}hackingtool\.py.{0,1000}/ nocase ascii wide
+        $string4 = /hackingtool\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string5 = /.{0,1000}information_gathering_tools\.py.{0,1000}/ nocase ascii wide
+        $string5 = /information_gathering_tools\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string6 = /.{0,1000}payload_creator\.py.{0,1000}/ nocase ascii wide
+        $string6 = /payload_creator\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string7 = /.{0,1000}phising_attack\.py.{0,1000}/ nocase ascii wide
+        $string7 = /phising_attack\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string8 = /.{0,1000}post_exploitation\.py.{0,1000}/ nocase ascii wide
+        $string8 = /post_exploitation\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string9 = /.{0,1000}wireless_attack_tools\.py.{0,1000}/ nocase ascii wide
+        $string9 = /wireless_attack_tools\.py/ nocase ascii wide
         // Description: ALL IN ONE Hacking Tool For Hackers
         // Reference: https://github.com/Z4nzu/hackingtool
-        $string10 = /.{0,1000}Z4nzu\/hackingtool.{0,1000}/ nocase ascii wide
+        $string10 = /Z4nzu\/hackingtool/ nocase ascii wide
 
     condition:
         any of them

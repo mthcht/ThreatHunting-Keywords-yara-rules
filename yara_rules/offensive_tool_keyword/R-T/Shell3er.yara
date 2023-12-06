@@ -10,16 +10,16 @@ rule Shell3er
     strings:
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string1 = /.{0,1000}\/Shell3er\/.{0,1000}/ nocase ascii wide
+        $string1 = /\/Shell3er\// nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string2 = /.{0,1000}cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA.{0,1000}/ nocase ascii wide
+        $string2 = /cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA/ nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string3 = /.{0,1000}nc\s\-nlvp\s4444.{0,1000}/ nocase ascii wide
+        $string3 = /nc\s\-nlvp\s4444/ nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
-        $string4 = /.{0,1000}Shell3er\.ps1.{0,1000}/ nocase ascii wide
+        $string4 = /Shell3er\.ps1/ nocase ascii wide
 
     condition:
         any of them

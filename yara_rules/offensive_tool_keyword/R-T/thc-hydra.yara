@@ -10,94 +10,94 @@ rule thc_hydra
     strings:
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string1 = /.{0,1000}\sdefault_logins\.txt.{0,1000}/ nocase ascii wide
+        $string1 = /\sdefault_logins\.txt/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string2 = /.{0,1000}\sthc\-hidra.{0,1000}/ nocase ascii wide
+        $string2 = /\sthc\-hidra/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string3 = /.{0,1000}\.\/hydra\s.{0,1000}/ nocase ascii wide
+        $string3 = /\.\/hydra\s/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string4 = /.{0,1000}\.\/xhydra.{0,1000}/ nocase ascii wide
+        $string4 = /\.\/xhydra/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string5 = /.{0,1000}\/thc\-hydra\/.{0,1000}/ nocase ascii wide
+        $string5 = /\/thc\-hydra\// nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string6 = /.{0,1000}common_passwords\.txt.{0,1000}/ nocase ascii wide
+        $string6 = /common_passwords\.txt/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string7 = /.{0,1000}dpl4hydra\s.{0,1000}/ nocase ascii wide
+        $string7 = /dpl4hydra\s/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string8 = /.{0,1000}dpl4hydra\.sh.{0,1000}/ nocase ascii wide
+        $string8 = /dpl4hydra\.sh/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string9 = /.{0,1000}dpl4hydra_.{0,1000}\.csv.{0,1000}/ nocase ascii wide
+        $string9 = /dpl4hydra_.{0,1000}\.csv/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string10 = /.{0,1000}dpl4hydra_.{0,1000}\.tmp.{0,1000}/ nocase ascii wide
+        $string10 = /dpl4hydra_.{0,1000}\.tmp/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string11 = /.{0,1000}dpl4hydra_linksys.{0,1000}/ nocase ascii wide
+        $string11 = /dpl4hydra_linksys/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string12 = /.{0,1000}hydra\s\-.{0,1000}/ nocase ascii wide
+        $string12 = /hydra\s\-/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string13 = /.{0,1000}hydra\s.{0,1000}\sftp:\/\/.{0,1000}/ nocase ascii wide
+        $string13 = /hydra\s.{0,1000}\sftp:\/\// nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string14 = /.{0,1000}hydra\s.{0,1000}\shttp\-post\-form\s.{0,1000}/ nocase ascii wide
+        $string14 = /hydra\s.{0,1000}\shttp\-post\-form\s/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string15 = /.{0,1000}hydra\s.{0,1000}\smysql:\/\/.{0,1000}/ nocase ascii wide
+        $string15 = /hydra\s.{0,1000}\smysql:\/\// nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string16 = /.{0,1000}hydra\s.{0,1000}\sssh:\/\/.{0,1000}/ nocase ascii wide
+        $string16 = /hydra\s.{0,1000}\sssh:\/\// nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string17 = /.{0,1000}hydra\s.{0,1000}\stelnet:\/\/.{0,1000}/ nocase ascii wide
+        $string17 = /hydra\s.{0,1000}\stelnet:\/\// nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string18 = /.{0,1000}hydra\ssmtp\-enum.{0,1000}/ nocase ascii wide
+        $string18 = /hydra\ssmtp\-enum/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string19 = /.{0,1000}hydra\.c.{0,1000}/ nocase ascii wide
+        $string19 = /hydra\.c/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string20 = /.{0,1000}hydra:x:10001:.{0,1000}/ nocase ascii wide
+        $string20 = /hydra:x:10001:/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string21 = /.{0,1000}HYDRA_PROXY_HTTP.{0,1000}/ nocase ascii wide
+        $string21 = /HYDRA_PROXY_HTTP/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string22 = /.{0,1000}hydra\-cobaltstrike.{0,1000}/ nocase ascii wide
+        $string22 = /hydra\-cobaltstrike/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string23 = /.{0,1000}install\shydra\-gtk.{0,1000}/ nocase ascii wide
+        $string23 = /install\shydra\-gtk/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string24 = /.{0,1000}pw\-inspector\s\-.{0,1000}/ nocase ascii wide
+        $string24 = /pw\-inspector\s\-/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string25 = /.{0,1000}pw\-inspector\..{0,1000}/ nocase ascii wide
+        $string25 = /pw\-inspector\./ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string26 = /.{0,1000}thc\-hydra.{0,1000}/ nocase ascii wide
+        $string26 = /thc\-hydra/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string27 = /.{0,1000}thc\-hydra\.git.{0,1000}/ nocase ascii wide
+        $string27 = /thc\-hydra\.git/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string28 = /.{0,1000}thc\-hydra\.git.{0,1000}/ nocase ascii wide
+        $string28 = /thc\-hydra\.git/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string29 = /.{0,1000}vanhauser\-thc\/thc\-hydra.{0,1000}/ nocase ascii wide
+        $string29 = /vanhauser\-thc\/thc\-hydra/ nocase ascii wide
         // Description: Parallelized login cracker which supports numerous protocols to attack.
         // Reference: https://github.com/vanhauser-thc/thc-hydra
-        $string30 = /hydra\s\-.{0,1000}/ nocase ascii wide
+        $string30 = /hydra\s\-/ nocase ascii wide
 
     condition:
         any of them

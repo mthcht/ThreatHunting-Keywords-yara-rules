@@ -10,52 +10,52 @@ rule EternalHushFramework
     strings:
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string1 = /.{0,1000}\sEternalHushCore\s.{0,1000}/ nocase ascii wide
+        $string1 = /\sEternalHushCore\s/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string2 = /.{0,1000}\/EternalHushCore\.dll.{0,1000}/ nocase ascii wide
+        $string2 = /\/EternalHushCore\.dll/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string3 = /.{0,1000}\/EternalHushFramework\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/EternalHushFramework\.git/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string4 = /.{0,1000}\\EternalHushCore\.dll.{0,1000}/ nocase ascii wide
+        $string4 = /\\EternalHushCore\.dll/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string5 = /.{0,1000}\\EternalHushCore\\.{0,1000}/ nocase ascii wide
+        $string5 = /\\EternalHushCore\\/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string6 = /.{0,1000}APT64\/EternalHushFramework.{0,1000}/ nocase ascii wide
+        $string6 = /APT64\/EternalHushFramework/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string7 = /.{0,1000}EternalHushFramework\-.{0,1000}\-SNAPSHOT\.jar.{0,1000}/ nocase ascii wide
+        $string7 = /EternalHushFramework\-.{0,1000}\-SNAPSHOT\.jar/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string8 = /.{0,1000}EternalHushFramework\-main.{0,1000}/ nocase ascii wide
+        $string8 = /EternalHushFramework\-main/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string9 = /.{0,1000}EternalHushMain\.java.{0,1000}/ nocase ascii wide
+        $string9 = /EternalHushMain\.java/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string10 = /.{0,1000}EternalHushWindow\.java.{0,1000}/ nocase ascii wide
+        $string10 = /EternalHushWindow\.java/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string11 = /.{0,1000}import\s_eternalhush.{0,1000}/ nocase ascii wide
+        $string11 = /import\s_eternalhush/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string12 = /.{0,1000}import\seternalhush\..{0,1000}/ nocase ascii wide
+        $string12 = /import\seternalhush\./ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string13 = /.{0,1000}SELECT\s.{0,1000}\sFROM\sEvilSignature.{0,1000}/ nocase ascii wide
+        $string13 = /SELECT\s.{0,1000}\sFROM\sEvilSignature/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string14 = /.{0,1000}W2F1dG9ydW5dDQpzaGVsbGV4ZWN1dGU9eTMyNHNlZHguZXhlDQppY29uPSVTeXN0ZW1Sb290JVxzeXN0ZW0zMlxTSEVMTDMyLmRsbCw0DQphY3Rpb249T3BlbiBmb2xkZXIgdG8gdmlldyBmaWxlcw0Kc2hlbGxcZGVmYXVsdD1PcGVuDQpzaGVsbFxkZWZhdWx0XGNvbW1hbmQ9eTMyNHNlZHguZXhlDQpzaGVsbD1kZWZhdWx0.{0,1000}/ nocase ascii wide
+        $string14 = /W2F1dG9ydW5dDQpzaGVsbGV4ZWN1dGU9eTMyNHNlZHguZXhlDQppY29uPSVTeXN0ZW1Sb290JVxzeXN0ZW0zMlxTSEVMTDMyLmRsbCw0DQphY3Rpb249T3BlbiBmb2xkZXIgdG8gdmlldyBmaWxlcw0Kc2hlbGxcZGVmYXVsdD1PcGVuDQpzaGVsbFxkZWZhdWx0XGNvbW1hbmQ9eTMyNHNlZHguZXhlDQpzaGVsbD1kZWZhdWx0/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string15 = /.{0,1000}X32_ClSp_Tcp_Exe\.exe.{0,1000}/ nocase ascii wide
+        $string15 = /X32_ClSp_Tcp_Exe\.exe/ nocase ascii wide
         // Description: EternalHush Framework is a new open source project that is an advanced C&C framework. Designed specifically for Windows operating systems
         // Reference: https://github.com/APT64/EternalHushFramework
-        $string16 = /.{0,1000}X64_ClSp_Tcp_Exe\.exe.{0,1000}/ nocase ascii wide
+        $string16 = /X64_ClSp_Tcp_Exe\.exe/ nocase ascii wide
 
     condition:
         any of them

@@ -10,31 +10,31 @@ rule RagingRotator
     strings:
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string1 = /.{0,1000}\sRagingRotator\.go.{0,1000}/ nocase ascii wide
+        $string1 = /\sRagingRotator\.go/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string2 = /.{0,1000}\s\-userpassfile\s\.\/userpass_file\.txt.{0,1000}/ nocase ascii wide
+        $string2 = /\s\-userpassfile\s\.\/userpass_file\.txt/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string3 = /.{0,1000}\/RagingRotator\.git.{0,1000}/ nocase ascii wide
+        $string3 = /\/RagingRotator\.git/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string4 = /.{0,1000}\/RagingRotator\.go.{0,1000}/ nocase ascii wide
+        $string4 = /\/RagingRotator\.go/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string5 = /.{0,1000}\[\!\]\sValid\slogin,\sexpired\spassword:\s.{0,1000}/ nocase ascii wide
+        $string5 = /\[\!\]\sValid\slogin.{0,1000}\sexpired\spassword:\s/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string6 = /.{0,1000}\[\+\]\sValid\slogin,\suser\smust\senroll\sin\sMFA\..{0,1000}/ nocase ascii wide
+        $string6 = /\[\+\]\sValid\slogin.{0,1000}\suser\smust\senroll\sin\sMFA\./ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string7 = /.{0,1000}\\RagingRotator\.go.{0,1000}/ nocase ascii wide
+        $string7 = /\\RagingRotator\.go/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string8 = /.{0,1000}nickzer0\/RagingRotator.{0,1000}/ nocase ascii wide
+        $string8 = /nickzer0\/RagingRotator/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string9 = /.{0,1000}RagingRotator\-main\..{0,1000}/ nocase ascii wide
+        $string9 = /RagingRotator\-main\./ nocase ascii wide
 
     condition:
         any of them

@@ -10,19 +10,19 @@ rule ScheduleRunner
     strings:
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
-        $string1 = /.{0,1000}\.exe\s\/method:create\s\/taskname:.{0,1000}\s\/trigger:.{0,1000}\s\/modifier:.{0,1000}\s\/program:.{0,1000}\s\/argument:.{0,1000}\.dll\s\/remoteserver:.{0,1000}/ nocase ascii wide
+        $string1 = /\.exe\s\/method:create\s\/taskname:.{0,1000}\s\/trigger:.{0,1000}\s\/modifier:.{0,1000}\s\/program:.{0,1000}\s\/argument:.{0,1000}\.dll\s\/remoteserver:/ nocase ascii wide
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
-        $string2 = /.{0,1000}netero1010\/ScheduleRunner.{0,1000}/ nocase ascii wide
+        $string2 = /netero1010\/ScheduleRunner/ nocase ascii wide
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
-        $string3 = /.{0,1000}ScheduleRunner\.csproj.{0,1000}/ nocase ascii wide
+        $string3 = /ScheduleRunner\.csproj/ nocase ascii wide
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
-        $string4 = /.{0,1000}ScheduleRunner\.exe.{0,1000}/ nocase ascii wide
+        $string4 = /ScheduleRunner\.exe/ nocase ascii wide
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
-        $string5 = /.{0,1000}ScheduleRunner\.sln.{0,1000}/ nocase ascii wide
+        $string5 = /ScheduleRunner\.sln/ nocase ascii wide
 
     condition:
         any of them

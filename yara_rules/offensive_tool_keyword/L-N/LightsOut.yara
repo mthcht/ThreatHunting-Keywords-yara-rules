@@ -10,16 +10,16 @@ rule LightsOut
     strings:
         // Description: Generate an obfuscated DLL that will disable AMSI & ETW
         // Reference: https://github.com/icyguider/LightsOut
-        $string1 = /.{0,1000}\/LightsOut\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/LightsOut\.git/ nocase ascii wide
         // Description: Generate an obfuscated DLL that will disable AMSI & ETW
         // Reference: https://github.com/icyguider/LightsOut
-        $string2 = /.{0,1000}icyguider\/LightsOut.{0,1000}/ nocase ascii wide
+        $string2 = /icyguider\/LightsOut/ nocase ascii wide
         // Description: Generate an obfuscated DLL that will disable AMSI & ETW
         // Reference: https://github.com/icyguider/LightsOut
-        $string3 = /.{0,1000}lightsout\.py.{0,1000}/ nocase ascii wide
+        $string3 = /lightsout\.py/ nocase ascii wide
         // Description: Generate an obfuscated DLL that will disable AMSI & ETW
         // Reference: https://github.com/icyguider/LightsOut
-        $string4 = /.{0,1000}LightsOut\-master\.zip.{0,1000}/ nocase ascii wide
+        $string4 = /LightsOut\-master\.zip/ nocase ascii wide
 
     condition:
         any of them

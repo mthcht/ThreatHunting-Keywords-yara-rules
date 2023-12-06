@@ -10,7 +10,7 @@ rule SharpShooter
     strings:
         // Description: Payload Generation Framework
         // Reference: https://github.com/mdsecactivebreach/SharpShooter
-        $string1 = /.{0,1000}SharpShooter.{0,1000}/ nocase ascii wide
+        $string1 = /SharpShooter/ nocase ascii wide
 
     condition:
         any of them

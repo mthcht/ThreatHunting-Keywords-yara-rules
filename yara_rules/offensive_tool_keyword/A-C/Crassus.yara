@@ -10,28 +10,28 @@ rule Crassus
     strings:
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string1 = /.{0,1000}\/Crassus\.git.{0,1000}/ nocase ascii wide
+        $string1 = /\/Crassus\.git/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string2 = /.{0,1000}\/Crassus\-main.{0,1000}/ nocase ascii wide
+        $string2 = /\/Crassus\-main/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string3 = /.{0,1000}\\Crassus\-main.{0,1000}/ nocase ascii wide
+        $string3 = /\\Crassus\-main/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string4 = /.{0,1000}7E9729AA\-4CF2\-4D0A\-8183\-7FB7CE7A5B1A.{0,1000}/ nocase ascii wide
+        $string4 = /7E9729AA\-4CF2\-4D0A\-8183\-7FB7CE7A5B1A/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string5 = /.{0,1000}Crassus\.csproj.{0,1000}/ nocase ascii wide
+        $string5 = /Crassus\.csproj/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string6 = /.{0,1000}Crassus\.exe.{0,1000}/ nocase ascii wide
+        $string6 = /Crassus\.exe/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string7 = /.{0,1000}Crassus\.sln.{0,1000}/ nocase ascii wide
+        $string7 = /Crassus\.sln/ nocase ascii wide
         // Description: Crassus Windows privilege escalation discovery tool
         // Reference: https://github.com/vu-ls/Crassus
-        $string8 = /.{0,1000}vu\-ls\/Crassus.{0,1000}/ nocase ascii wide
+        $string8 = /vu\-ls\/Crassus/ nocase ascii wide
 
     condition:
         any of them

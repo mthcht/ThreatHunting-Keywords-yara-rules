@@ -10,13 +10,13 @@ rule RadareEye
     strings:
         // Description: Tool for especially scanning nearby devices and execute a given command on its own system while the target device comes in range.
         // Reference: https://github.com/souravbaghz/RadareEye
-        $string1 = /.{0,1000}\sradare\s.{0,1000}:.{0,1000}\s\-ble.{0,1000}/ nocase ascii wide
+        $string1 = /\sradare\s.{0,1000}:.{0,1000}\s\-ble/ nocase ascii wide
         // Description: Tool for especially scanning nearby devices and execute a given command on its own system while the target device comes in range.
         // Reference: https://github.com/souravbaghz/RadareEye
-        $string2 = /.{0,1000}souravbaghz\/RadareEye.{0,1000}/ nocase ascii wide
+        $string2 = /souravbaghz\/RadareEye/ nocase ascii wide
         // Description: Tool for especially scanning nearby devices and execute a given command on its own system while the target device comes in range.
         // Reference: https://github.com/souravbaghz/RadareEye
-        $string3 = /\.\/radare\s.{0,1000}/ nocase ascii wide
+        $string3 = /\.\/radare\s/ nocase ascii wide
 
     condition:
         any of them

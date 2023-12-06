@@ -10,94 +10,94 @@ rule AutoC2
     strings:
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string1 = /.{0,1000}\sCred_Dump\.sh.{0,1000}/ nocase ascii wide
+        $string1 = /\sCred_Dump\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string2 = /.{0,1000}\sDefense_Evasion\.sh.{0,1000}/ nocase ascii wide
+        $string2 = /\sDefense_Evasion\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string3 = /.{0,1000}\sExfil\.sh.{0,1000}/ nocase ascii wide
+        $string3 = /\sExfil\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string4 = /.{0,1000}\sHak5\.sh.{0,1000}/ nocase ascii wide
+        $string4 = /\sHak5\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string5 = /.{0,1000}\sPersistence\.sh.{0,1000}/ nocase ascii wide
+        $string5 = /\sPersistence\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string6 = /.{0,1000}\sPriv_Esc\.sh.{0,1000}/ nocase ascii wide
+        $string6 = /\sPriv_Esc\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string7 = /.{0,1000}\.\/Exfil\.sh.{0,1000}/ nocase ascii wide
+        $string7 = /\.\/Exfil\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string8 = /.{0,1000}\.\/Phishing\.sh.{0,1000}/ nocase ascii wide
+        $string8 = /\.\/Phishing\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string9 = /.{0,1000}\/Cred_Dump\.sh.{0,1000}/ nocase ascii wide
+        $string9 = /\/Cred_Dump\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string10 = /.{0,1000}\/Defense_Evasion\.sh.{0,1000}/ nocase ascii wide
+        $string10 = /\/Defense_Evasion\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string11 = /.{0,1000}\/Hak5\.sh.{0,1000}/ nocase ascii wide
+        $string11 = /\/Hak5\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string12 = /.{0,1000}\/opt\/Password_Cracking\/.{0,1000}/ nocase ascii wide
+        $string12 = /\/opt\/Password_Cracking\// nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string13 = /.{0,1000}\/Persistence\.sh.{0,1000}/ nocase ascii wide
+        $string13 = /\/Persistence\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string14 = /.{0,1000}\/Phishing\.sh.{0,1000}/ nocase ascii wide
+        $string14 = /\/Phishing\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string15 = /.{0,1000}\/Priv_Esc\.sh.{0,1000}/ nocase ascii wide
+        $string15 = /\/Priv_Esc\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string16 = /.{0,1000}AutoC2\.sh.{0,1000}/ nocase ascii wide
+        $string16 = /AutoC2\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string17 = /.{0,1000}AutoC2\/All\.sh.{0,1000}/ nocase ascii wide
+        $string17 = /AutoC2\/All\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string18 = /.{0,1000}AutoC2\/C2.{0,1000}/ nocase ascii wide
+        $string18 = /AutoC2\/C2/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string19 = /.{0,1000}AutoC2\/Dependencies.{0,1000}/ nocase ascii wide
+        $string19 = /AutoC2\/Dependencies/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string20 = /.{0,1000}AutoC2\/Initial_Access.{0,1000}/ nocase ascii wide
+        $string20 = /AutoC2\/Initial_Access/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string21 = /.{0,1000}AutoC2\/Lateral\.sh.{0,1000}/ nocase ascii wide
+        $string21 = /AutoC2\/Lateral\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string22 = /.{0,1000}AutoC2\/Payload_Development.{0,1000}/ nocase ascii wide
+        $string22 = /AutoC2\/Payload_Development/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string23 = /.{0,1000}AutoC2\/Recon.{0,1000}/ nocase ascii wide
+        $string23 = /AutoC2\/Recon/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string24 = /.{0,1000}AutoC2\/Situational_Awareness.{0,1000}/ nocase ascii wide
+        $string24 = /AutoC2\/Situational_Awareness/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string25 = /.{0,1000}AutoC2\/Social\.sh.{0,1000}/ nocase ascii wide
+        $string25 = /AutoC2\/Social\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string26 = /.{0,1000}AutoC2\/Staging.{0,1000}/ nocase ascii wide
+        $string26 = /AutoC2\/Staging/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string27 = /.{0,1000}AutoC2\/Web\.sh.{0,1000}/ nocase ascii wide
+        $string27 = /AutoC2\/Web\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string28 = /.{0,1000}AutoC2\/Wireless\.sh.{0,1000}/ nocase ascii wide
+        $string28 = /AutoC2\/Wireless\.sh/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string29 = /.{0,1000}AutoC2\/Wordlists.{0,1000}/ nocase ascii wide
+        $string29 = /AutoC2\/Wordlists/ nocase ascii wide
         // Description: AutoC2 is a bash script written to install all of the red team tools that you know and love
         // Reference: https://github.com/assume-breach/Home-Grown-Red-Team/tree/main/AutoC2
-        $string30 = /.{0,1000}Password_Cracking\.sh.{0,1000}/ nocase ascii wide
+        $string30 = /Password_Cracking\.sh/ nocase ascii wide
 
     condition:
         any of them

@@ -10,22 +10,22 @@ rule GIUDA
     strings:
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string1 = /.{0,1000}\s\-runaslsass.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-runaslsass/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string2 = /.{0,1000}\.exe\s\-gettgs\s\-luid:.{0,1000}/ nocase ascii wide
+        $string2 = /\.exe\s\-gettgs\s\-luid:/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string3 = /.{0,1000}\.exe\s\-ptt\sticket:.{0,1000}\.kirbi.{0,1000}/ nocase ascii wide
+        $string3 = /\.exe\s\-ptt\sticket:.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string4 = /.{0,1000}GIUDA.{0,1000}\s\-askluids.{0,1000}/ nocase ascii wide
+        $string4 = /GIUDA.{0,1000}\s\-askluids/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string5 = /.{0,1000}GIUDA\-main\.zip.{0,1000}/ nocase ascii wide
+        $string5 = /GIUDA\-main\.zip/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string6 = /.{0,1000}guida\.exe\s\-.{0,1000}/ nocase ascii wide
+        $string6 = /guida\.exe\s\-/ nocase ascii wide
 
     condition:
         any of them

@@ -10,7 +10,7 @@ rule xss_labs
     strings:
         // Description: small set of PHP scripts to practice exploiting XSS and CSRF injection vulns
         // Reference: https://github.com/paralax/xss-labs
-        $string1 = /.{0,1000}XSS\-labs.{0,1000}/ nocase ascii wide
+        $string1 = /XSS\-labs/ nocase ascii wide
 
     condition:
         any of them

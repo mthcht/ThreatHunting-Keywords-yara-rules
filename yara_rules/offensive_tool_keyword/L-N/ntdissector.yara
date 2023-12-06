@@ -10,40 +10,40 @@ rule ntdissector
     strings:
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string1 = /.{0,1000}\s\-ntds\sNTDS\.dit\s\s\-filters.{0,1000}/ nocase ascii wide
+        $string1 = /\s\-ntds\sNTDS\.dit\s\s\-filters/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string2 = /.{0,1000}\s\-ntds\sNTDS\.dit\s\-system\sSYSTEM\s\-outputdir\s\/.{0,1000}/ nocase ascii wide
+        $string2 = /\s\-ntds\sNTDS\.dit\s\-system\sSYSTEM\s\-outputdir\s\// nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string3 = /.{0,1000}\.\/ntdissector.{0,1000}/ nocase ascii wide
+        $string3 = /\.\/ntdissector/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string4 = /.{0,1000}\/\.ntdissector.{0,1000}/ nocase ascii wide
+        $string4 = /\/\.ntdissector/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string5 = /.{0,1000}\/ntdissector\.git.{0,1000}/ nocase ascii wide
+        $string5 = /\/ntdissector\.git/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string6 = /.{0,1000}\/ntdissector\/.{0,1000}/ nocase ascii wide
+        $string6 = /\/ntdissector\// nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string7 = /.{0,1000}dBCSPwd.{0,1000}aad3b435b51404eeaad3b435b51404ee.{0,1000}/ nocase ascii wide
+        $string7 = /dBCSPwd.{0,1000}aad3b435b51404eeaad3b435b51404ee/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string8 = /.{0,1000}ntdissector\s\-.{0,1000}/ nocase ascii wide
+        $string8 = /ntdissector\s\-/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string9 = /.{0,1000}ntdissector\-main.{0,1000}/ nocase ascii wide
+        $string9 = /ntdissector\-main/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string10 = /.{0,1000}ntds\/ntds\.py.{0,1000}/ nocase ascii wide
+        $string10 = /ntds\/ntds\.py/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string11 = /.{0,1000}synacktiv\/ntdissector.{0,1000}/ nocase ascii wide
+        $string11 = /synacktiv\/ntdissector/ nocase ascii wide
         // Description: Ntdissector is a tool for parsing records of an NTDS database. Records are dumped in JSON format and can be filtered by object class.
         // Reference: https://github.com/synacktiv/ntdissector
-        $string12 = /.{0,1000}user_to_secretsdump\.py.{0,1000}/ nocase ascii wide
+        $string12 = /user_to_secretsdump\.py/ nocase ascii wide
 
     condition:
         any of them

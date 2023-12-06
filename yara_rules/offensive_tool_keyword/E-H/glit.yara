@@ -10,61 +10,61 @@ rule glit
     strings:
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string1 = /.{0,1000}\srepo\s\-u\shttps:\/\/github\.com\/.{0,1000}/ nocase ascii wide
+        $string1 = /\srepo\s\-u\shttps:\/\/github\.com\// nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string2 = /.{0,1000}\/glit\.git.{0,1000}/ nocase ascii wide
+        $string2 = /\/glit\.git/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string3 = /.{0,1000}\/glit\-cli.{0,1000}/ nocase ascii wide
+        $string3 = /\/glit\-cli/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string4 = /.{0,1000}\/glit\-core.{0,1000}/ nocase ascii wide
+        $string4 = /\/glit\-core/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string5 = /.{0,1000}\\glit\.exe.{0,1000}/ nocase ascii wide
+        $string5 = /\\glit\.exe/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string6 = /.{0,1000}\\glit\-cli.{0,1000}/ nocase ascii wide
+        $string6 = /\\glit\-cli/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string7 = /.{0,1000}cargo\sinstall\sglit.{0,1000}/ nocase ascii wide
+        $string7 = /cargo\sinstall\sglit/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string8 = /.{0,1000}glit\sorg\s\-.{0,1000}/ nocase ascii wide
+        $string8 = /glit\sorg\s\-/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string9 = /.{0,1000}glit\srepo\s.{0,1000}/ nocase ascii wide
+        $string9 = /glit\srepo\s/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string10 = /.{0,1000}glit\suser\s.{0,1000}/ nocase ascii wide
+        $string10 = /glit\suser\s/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string11 = /.{0,1000}glit\.exe\sorg.{0,1000}/ nocase ascii wide
+        $string11 = /glit\.exe\sorg/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string12 = /.{0,1000}glit\.exe\srepo.{0,1000}/ nocase ascii wide
+        $string12 = /glit\.exe\srepo/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string13 = /.{0,1000}glit\.exe\suser.{0,1000}/ nocase ascii wide
+        $string13 = /glit\.exe\suser/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string14 = /.{0,1000}glit\-i686\-pc\-windows\-msvc.{0,1000}/ nocase ascii wide
+        $string14 = /glit\-i686\-pc\-windows\-msvc/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string15 = /.{0,1000}glit\-main\.zip.{0,1000}/ nocase ascii wide
+        $string15 = /glit\-main\.zip/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string16 = /.{0,1000}glit\-x86_64\-apple\-darwin.{0,1000}/ nocase ascii wide
+        $string16 = /glit\-x86_64\-apple\-darwin/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string17 = /.{0,1000}glit\-x86_64\-pc\-windows\-msvc.{0,1000}/ nocase ascii wide
+        $string17 = /glit\-x86_64\-pc\-windows\-msvc/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string18 = /.{0,1000}glit\-x86_64\-unknown\-linux\-gnu.{0,1000}/ nocase ascii wide
+        $string18 = /glit\-x86_64\-unknown\-linux\-gnu/ nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string19 = /.{0,1000}shadawck\/glit.{0,1000}/ nocase ascii wide
+        $string19 = /shadawck\/glit/ nocase ascii wide
 
     condition:
         any of them

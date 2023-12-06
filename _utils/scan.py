@@ -85,7 +85,8 @@ def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
                                 'offset': string_match[0],
                                 'string_id': string_match[1],
                                 'string_pattern': string_pattern,
-                                'matched_string': string_match[2].decode('utf-8', 'ignore')
+                                'matched_string_UTF8': string_match[2].decode('utf-8', 'ignore'),
+                                'matched_string_UTF16':  string_match[2].decode('utf-16')
                             }
                             results.append(result_dict)
 

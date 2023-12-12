@@ -47,21 +47,27 @@ rule cat
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string13 = /cat\s.{0,1000}bash\-history/ nocase ascii wide
+        // Description: deleting bash history
+        // Reference: N/A
+        $string14 = /cat\s\/dev\/null\s\>\s\$HISTFILE/ nocase ascii wide
+        // Description: deleting log files
+        // Reference: N/A
+        $string15 = /cat\s\/dev\/null\s\>\s\/var\/log\/.{0,1000}\.log/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string14 = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/ nocase ascii wide
+        $string16 = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string15 = /cat\s\/dev\/null\s\>\s~\/\.bash_history/ nocase ascii wide
+        $string17 = /cat\s\/dev\/null\s\>\s~\/\.bash_history/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string16 = /cat\s\/etc\/passwd/ nocase ascii wide
+        $string18 = /cat\s\/etc\/passwd/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string17 = /cat\s\/etc\/shadow/ nocase ascii wide
+        $string19 = /cat\s\/etc\/shadow/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string18 = /cat\s\/etc\/sudoers/ nocase ascii wide
+        $string20 = /cat\s\/etc\/sudoers/ nocase ascii wide
 
     condition:
         any of them

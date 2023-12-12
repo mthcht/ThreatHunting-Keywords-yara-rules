@@ -29,6 +29,12 @@ rule netsh
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string7 = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
+        // Reference: N/A
+        $string8 = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
+        // Reference: N/A
+        $string9 = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
 
     condition:
         any of them

@@ -43,13 +43,31 @@ rule RustHound
         $string11 = /rusthound.{0,1000}\s\-\-adcs\s\-\-dc\-only/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
-        $string12 = /rusthound\.exe\s/ nocase ascii wide
+        $string12 = /rusthound\.exe/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
         $string13 = /RustHound\-main/ nocase ascii wide
         // Description: Active Directory data collector for BloodHound written in Rust
         // Reference: https://github.com/OPENCYBER-FR/RustHound
         $string14 = /usr\/src\/rusthound\srusthound\s/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string15 = /rusthound\srusthound\slinux/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string16 = /rusthound\srusthound\swindows/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string17 = /\-\-collectionmethod\sDCOnly/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string18 = /\s\-c\sDCOnly\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s.{0,1000}\s\-o\s\/tmp/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string19 = /rusthound\s\-c\s/ nocase ascii wide
+        // Description: Active Directory data collector for BloodHound written in Rust
+        // Reference: https://github.com/OPENCYBER-FR/RustHound
+        $string20 = /sharphound\.exe/ nocase ascii wide
 
     condition:
         any of them

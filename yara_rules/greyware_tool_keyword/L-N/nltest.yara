@@ -12,11 +12,14 @@ rule nltest
         // Reference: N/A
         $string1 = /nltest\s\/all_trusts/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
-        // Reference: N/A
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string2 = /nltest\s\/dclist/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string3 = /nltest\s\-dsgetdc/ nocase ascii wide
+        // Description: enumerate domain trusts with nltest
         // Reference: N/A
-        $string3 = /nltest\s\/domain_trusts/ nocase ascii wide
+        $string4 = /nltest\s\/domain_trusts/ nocase ascii wide
 
     condition:
         any of them

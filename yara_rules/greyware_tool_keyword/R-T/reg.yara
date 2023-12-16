@@ -103,19 +103,31 @@ rule reg
         $string31 = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string32 = /reg\ssave\sHKLM\\SAM\sc:/ nocase ascii wide
+        $string32 = /reg\ssave\sHKLM\\SAM\s.{0,1000}c:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string33 = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\system to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string34 = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
+        // Description: saves a copy of the registry hive hklm\security to a .dat file
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string35 = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string35 = /reg\ssave\sHKLM\\SYSTEM\sc:/ nocase ascii wide
+        $string36 = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string36 = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+        $string37 = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+        // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for lateral movement and privilege escalation
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string38 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for lateral movement and privilege escalation
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string39 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        // Description: This particular change is associated with the handling of LAN Manager (LM) hash storage which can affect the security of password storage on the system. This command can be used as part of credential access or defense evasion techniques
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string40 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
 
     condition:
         any of them

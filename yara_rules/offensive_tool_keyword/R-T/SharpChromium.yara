@@ -26,6 +26,12 @@ rule SharpChromium
         // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
         // Reference: https://github.com/djhohnstein/SharpChromium
         $string6 = /SharpChromium\-master/ nocase ascii wide
+        // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
+        // Reference: https://github.com/djhohnstein/SharpChromium
+        $string7 = /\\SharpChromium\\/ nocase ascii wide
+        // Description: .NET 4.0 CLR Project to retrieve Chromium data such as cookies - history and saved logins.
+        // Reference: https://github.com/djhohnstein/SharpChromium
+        $string8 = /F1653F20\-D47D\-4F29\-8C55\-3C835542AF5F/ nocase ascii wide
 
     condition:
         any of them

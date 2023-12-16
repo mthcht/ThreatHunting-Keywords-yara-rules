@@ -71,21 +71,24 @@ rule wmic
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
         $string21 = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        // Description: list all running processes and their command lines on a Windows system
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string22 = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string22 = /wmic.{0,1000}\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string23 = /wmic.{0,1000}\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string23 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt:.{0,1000}\.exe/ nocase ascii wide
+        $string24 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt:.{0,1000}\.exe/ nocase ascii wide
         // Description: call cmd.exe with wmic
         // Reference: N/A
-        $string24 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
+        $string25 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string25 = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string26 = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string26 = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+        $string27 = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
 
     condition:
         any of them

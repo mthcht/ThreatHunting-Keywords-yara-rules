@@ -53,6 +53,21 @@ rule Atera
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
         $string15 = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string16 = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string17 = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string18 = /AteraSetupLog\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string19 = /\\Program\sFiles\\Atera\sNetworks/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string20 = /\\Program\sFiles\s\(x86\)\\Atera\sNetworks/ nocase ascii wide
 
     condition:
         any of them

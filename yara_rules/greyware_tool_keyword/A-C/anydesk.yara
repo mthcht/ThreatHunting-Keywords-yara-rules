@@ -56,6 +56,9 @@ rule anydesk
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
         $string16 = /\\adprinterpipe/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string17 = /boot\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them

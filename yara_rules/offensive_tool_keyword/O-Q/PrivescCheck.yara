@@ -236,6 +236,48 @@ rule PrivescCheck
         // Description: Privilege Escalation Enumeration Script for Windows
         // Reference: https://github.com/itm4n/PrivescCheck
         $string76 = /Test\-HijackableDll/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string77 = /PointAndPrint\.ps1/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string78 = /\\src\\check\\Credentials\.ps1/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string79 = /Get\-LolDrivers\s/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string80 = /Password.{0,1000}S3cr3tS3rvic3/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string81 = /Password.{0,1000}S0urce0fThePr0blem/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string82 = /\$LolDriversVulnerable/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string83 = /Invoke\-CcmNaaCredentialsCheck/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string84 = /MISC_HIJACKABLE_DLL/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string85 = /Invoke\-RegistryAlwaysInstallElevatedCheck/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string86 = /Invoke\-AirstrikeAttackCheck/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string87 = /\sGet\-ServiceFromRegistry\s\-Name\sSpooler/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string88 = /\\PrivescCheck_/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string89 = /\s\-Report\sPrivescCheck_/ nocase ascii wide
+        // Description: Privilege Escalation Enumeration Script for Windows
+        // Reference: https://github.com/itm4n/PrivescCheck
+        $string90 = /Microsoft\\Windows\\Recent\\PrivescCheck/ nocase ascii wide
 
     condition:
         any of them

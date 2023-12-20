@@ -229,46 +229,55 @@ rule Antivirus_Signature
         $string73 = /TrojanSpy:MSIL\/JSSLoader/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string74 = /VirTool:MSIL/ nocase ascii wide
+        $string74 = /VirTool.{0,1000}RemoteExec/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string75 = /VirTool:PowerShell\/Dipadz\./ nocase ascii wide
+        $string75 = /impacket/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string76 = /VirTool:Win32/ nocase ascii wide
+        $string76 = /MSFPsExeCommand/ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string77 = /VirTool:MSIL/ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string78 = /VirTool:PowerShell\/Dipadz\./ nocase ascii wide
+        // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string79 = /VirTool:Win32/ nocase ascii wide
         // Description: AV signature often associated with C2 communications (cobaltstrike for example)
         // Reference: N/A
-        $string77 = /VirTool:Win32\/RemoteExec/ nocase ascii wide
+        $string80 = /VirTool:Win32\/RemoteExec/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string78 = /Win32\.Trojan/ nocase ascii wide
+        $string81 = /Win32\.Trojan/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string79 = /Win32\/Goodkit/ nocase ascii wide
+        $string82 = /Win32\/Goodkit/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string80 = /Win32\/IceId/ nocase ascii wide
+        $string83 = /Win32\/IceId/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string81 = /Win32\/Mikatz/ nocase ascii wide
+        $string84 = /Win32\/Mikatz/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string82 = /Win32\/Trickbot/ nocase ascii wide
+        $string85 = /Win32\/Trickbot/ nocase ascii wide
         // Description: windows defender antivirus signature for UAC bypass
         // Reference: N/A
-        $string83 = /Win32\/UACBypass/ nocase ascii wide
+        $string86 = /Win32\/UACBypass/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string84 = /Win32:Trojan/ nocase ascii wide
+        $string87 = /Win32:Trojan/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string85 = /Win64\/IceId/ nocase ascii wide
+        $string88 = /Win64\/IceId/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string86 = /Win64\/Mikatz/ nocase ascii wide
+        $string89 = /Win64\/Mikatz/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string87 = /Windows\.Hacktool\./ nocase ascii wide
+        $string90 = /Windows\.Hacktool\./ nocase ascii wide
 
     condition:
         any of them

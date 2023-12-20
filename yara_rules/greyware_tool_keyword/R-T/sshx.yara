@@ -44,6 +44,9 @@ rule sshx
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
         $string12 = /\.vm\.sshx\.internal:8051/ nocase ascii wide
+        // Description: Fast collaborative live terminal sharing over the web
+        // Reference: https://github.com/ekzhang/sshx
+        $string13 = /https:\/\/sshx\.io\/s\// nocase ascii wide
 
     condition:
         any of them

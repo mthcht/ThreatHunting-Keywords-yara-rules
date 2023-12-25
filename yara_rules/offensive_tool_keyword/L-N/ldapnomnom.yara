@@ -16,37 +16,37 @@ rule ldapnomnom
         $string2 = /\s\-\-output\srootDSEs\.json\s\-\-dump/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string3 = /ldapnomnom\s\-\-input/ nocase ascii wide
+        $string3 = /\/10m_usernames\.txt/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string4 = /ldapnomnom\s/ nocase ascii wide
+        $string4 = /\/ldapnomnom\@latest/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string5 = /ldapnomnom\-darwin\-/ nocase ascii wide
+        $string5 = /\\10m_usernames\.txt/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string6 = /ldapnomnom\-linux\-/ nocase ascii wide
+        $string6 = /ldapnomnom\s/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string7 = /ldapnomnom\-main/ nocase ascii wide
+        $string7 = /ldapnomnom\s\-\-input/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string8 = /ldapnomnom\-windows\-386\.exe/ nocase ascii wide
+        $string8 = /ldapnomnom\-darwin\-/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string9 = /ldapnomnom\-windows\-amd64\.exe/ nocase ascii wide
+        $string9 = /ldapnomnom\-linux\-/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string10 = /ldapnomnom\-windows\-arm64\.exe/ nocase ascii wide
+        $string10 = /ldapnomnom\-main/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string11 = /\/ldapnomnom\@latest/ nocase ascii wide
+        $string11 = /ldapnomnom\-windows\-386\.exe/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string12 = /\\10m_usernames\.txt/ nocase ascii wide
+        $string12 = /ldapnomnom\-windows\-amd64\.exe/ nocase ascii wide
         // Description: Anonymously bruteforce Active Directory usernames from Domain Controllers by abusing LDAP Ping requests (cLDAP)
         // Reference: https://github.com/lkarlslund/ldapnomnom
-        $string13 = /\/10m_usernames\.txt/ nocase ascii wide
+        $string13 = /ldapnomnom\-windows\-arm64\.exe/ nocase ascii wide
 
     condition:
         any of them

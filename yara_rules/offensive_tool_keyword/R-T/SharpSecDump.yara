@@ -10,31 +10,31 @@ rule SharpSecDump
     strings:
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string1 = /G0ldenGunSec\/SharpSecDump/ nocase ascii wide
+        $string1 = /\/SharpSecDump\.git/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string2 = /\/SharpSecDump\.git/ nocase ascii wide
+        $string2 = /E2FDD6CC\-9886\-456C\-9021\-EE2C47CF67B7/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string3 = /SharpSecDump\-master/ nocase ascii wide
+        $string3 = /G0ldenGunSec\/SharpSecDump/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string4 = /SharpSecDump\.sln/ nocase ascii wide
+        $string4 = /secretsdump\.py/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string5 = /E2FDD6CC\-9886\-456C\-9021\-EE2C47CF67B7/ nocase ascii wide
+        $string5 = /SharpSecDump\sInfo/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string6 = /SharpSecDump\.exe/ nocase ascii wide
+        $string6 = /SharpSecDump\.csproj/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string7 = /SharpSecDump\.csproj/ nocase ascii wide
+        $string7 = /SharpSecDump\.exe/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string8 = /secretsdump\.py/ nocase ascii wide
+        $string8 = /SharpSecDump\.sln/ nocase ascii wide
         // Description: .Net port of the remote SAM + LSA Secrets dumping functionality of impacket's secretsdump.py
         // Reference: https://github.com/G0ldenGunSec/SharpSecDump
-        $string9 = /SharpSecDump\sInfo/ nocase ascii wide
+        $string9 = /SharpSecDump\-master/ nocase ascii wide
 
     condition:
         any of them

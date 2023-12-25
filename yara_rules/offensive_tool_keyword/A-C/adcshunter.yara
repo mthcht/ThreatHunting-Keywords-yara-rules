@@ -10,22 +10,22 @@ rule adcshunter
     strings:
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string1 = /danti1988\/adcshunter/ nocase ascii wide
+        $string1 = /\/adcshunter\.git/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string2 = /\/adcshunter\.git/ nocase ascii wide
+        $string2 = /ADCS\sServer\slocation\sidentified\son\sIP\s/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
         $string3 = /adcshunter\.py/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string4 = /impacket\-rpcdump/ nocase ascii wide
+        $string4 = /danti1988\/adcshunter/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string5 = /rpcdump\.py/ nocase ascii wide
+        $string5 = /impacket\-rpcdump/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string6 = /ADCS\sServer\slocation\sidentified\son\sIP\s/ nocase ascii wide
+        $string6 = /rpcdump\.py/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
         $string7 = /Vulnerable\sWeb\sEnrollment\sendpoint\sidentified:\shttp:\/\/.{0,1000}\/certsrv\/certsnsh\.asp/ nocase ascii wide

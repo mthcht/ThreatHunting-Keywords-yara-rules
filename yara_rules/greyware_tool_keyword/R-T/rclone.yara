@@ -16,19 +16,22 @@ rule rclone
         $string2 = /\/rclone\.exe/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string3 = /\\rclone\.exe/ nocase ascii wide
+        $string3 = /\\AppData\\Roaming\\rclone\\rclone\.conf/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string4 = /rclone\scopy\s.{0,1000}:/ nocase ascii wide
+        $string4 = /\\rclone\.exe/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string5 = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
+        $string5 = /rclone\scopy\s.{0,1000}:/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string6 = /rclone\.exe.{0,1000}\scopy\s.{0,1000}:/ nocase ascii wide
+        $string6 = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string7 = /rclone\.exe.{0,1000}\s\-l\s.{0,1000}\s.{0,1000}:/ nocase ascii wide
+        $string7 = /rclone\.exe.{0,1000}\scopy\s.{0,1000}:/ nocase ascii wide
+        // Description: rclone abused by threat actors for data exfiltration
+        // Reference: https://github.com/rclone/rclone
+        $string8 = /rclone\.exe.{0,1000}\s\-l\s.{0,1000}\s.{0,1000}:/ nocase ascii wide
 
     condition:
         any of them

@@ -10,31 +10,31 @@ rule rsockstun
     strings:
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string1 = /llkat\/rsockstun/ nocase ascii wide
+        $string1 = /\s\-listen\s:.{0,1000}\s\-socks\s.{0,1000}\s\-cert\s.{0,1000}\s\-agentpassword\s/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string2 = /\/rsockstun\.git/ nocase ascii wide
+        $string2 = /\.\/rsockstun/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string3 = /rsockstun\-master/ nocase ascii wide
+        $string3 = /\/rsockstun\s/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string4 = /\/rsockstun\s/ nocase ascii wide
+        $string4 = /\/rsockstun\.git/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string5 = /\.\/rsockstun/ nocase ascii wide
+        $string5 = /llkat\/rsockstun/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string6 = /rsockstun\s\-/ nocase ascii wide
+        $string6 = /RocksDefaultRequestRocksDefaultRequestRocksDefaultRequestRocks/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string7 = /\s\-listen\s:.{0,1000}\s\-socks\s.{0,1000}\s\-cert\s.{0,1000}\s\-agentpassword\s/ nocase ascii wide
+        $string7 = /rsockstun\s\-/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string8 = /RocksDefaultRequestRocksDefaultRequestRocksDefaultRequestRocks/ nocase ascii wide
+        $string8 = /rsockstun\-1\.1\.zip/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string9 = /rsockstun\-1\.1\.zip/ nocase ascii wide
+        $string9 = /rsockstun\-master/ nocase ascii wide
 
     condition:
         any of them

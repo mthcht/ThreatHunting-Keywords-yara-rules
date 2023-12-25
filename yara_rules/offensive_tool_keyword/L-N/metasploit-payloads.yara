@@ -10,79 +10,79 @@ rule metasploit_payloads
     strings:
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string1 = /metterpreter/ nocase ascii wide
+        $string1 = /\/credentials\/enum_cred_store/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string2 = /gather\/enum_ad_to_wordlist/ nocase ascii wide
+        $string2 = /\/credentials\/enum_laps/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string3 = /gather\/enum_ad_bitlocker/ nocase ascii wide
+        $string3 = /\/gather\/phish_windows_credentials/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string4 = /gather\/enum_ad_computers/ nocase ascii wide
+        $string4 = /\/local_exploit_suggester/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string5 = /gather\/enum_ad_groups/ nocase ascii wide
+        $string5 = /capture\/lockout_keylogger/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string6 = /gather\/enum_ad_managedby_groups/ nocase ascii wide
+        $string6 = /enum_ad_service_principal_names\s/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string7 = /enum_ad_service_principal_names\s/ nocase ascii wide
+        $string7 = /escalate\/golden_ticket/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string8 = /gather\/enum_ad_user_comments/ nocase ascii wide
+        $string8 = /escalate\/unmarshal_cmd_exec/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string9 = /\/credentials\/enum_laps/ nocase ascii wide
+        $string9 = /gather\/credentials\/rdc_manager_creds/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string10 = /windows\/gather\/hashdump/ nocase ascii wide
+        $string10 = /gather\/credentials\/teamviewer_passwords/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string11 = /\/local_exploit_suggester/ nocase ascii wide
+        $string11 = /gather\/credentials\/windows_autologin/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string12 = /capture\/lockout_keylogger/ nocase ascii wide
+        $string12 = /gather\/enum_ad_bitlocker/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string13 = /windows\/gather\/cachedump/ nocase ascii wide
+        $string13 = /gather\/enum_ad_computers/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string14 = /\/credentials\/enum_cred_store/ nocase ascii wide
+        $string14 = /gather\/enum_ad_groups/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string15 = /gather\/credentials\/rdc_manager_creds/ nocase ascii wide
+        $string15 = /gather\/enum_ad_managedby_groups/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string16 = /gather\/credentials\/windows_autologin/ nocase ascii wide
+        $string16 = /gather\/enum_ad_to_wordlist/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string17 = /\/gather\/phish_windows_credentials/ nocase ascii wide
+        $string17 = /gather\/enum_ad_user_comments/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string18 = /gather\/enum_putty_saved_sessions/ nocase ascii wide
+        $string18 = /gather\/enum_logged_on_users/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string19 = /gather\/credentials\/teamviewer_passwords/ nocase ascii wide
+        $string19 = /gather\/enum_logged_on_users/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string20 = /gather\/enum_logged_on_users/ nocase ascii wide
+        $string20 = /gather\/enum_putty_saved_sessions/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string21 = /gather\/enum_logged_on_users/ nocase ascii wide
+        $string21 = /manage\/reflective_dll_inject/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string22 = /escalate\/unmarshal_cmd_exec/ nocase ascii wide
+        $string22 = /metterpreter/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string23 = /escalate\/golden_ticket/ nocase ascii wide
+        $string23 = /sniffer_dump\s.{0,1000}\/tmp\/.{0,1000}\.pcap/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string24 = /manage\/reflective_dll_inject/ nocase ascii wide
+        $string24 = /windows\/gather\/cachedump/ nocase ascii wide
         // Description: shell payload
         // Reference: https://github.com/rapid7/metasploit-payloads
-        $string25 = /sniffer_dump\s.{0,1000}\/tmp\/.{0,1000}\.pcap/ nocase ascii wide
+        $string25 = /windows\/gather\/hashdump/ nocase ascii wide
 
     condition:
         any of them

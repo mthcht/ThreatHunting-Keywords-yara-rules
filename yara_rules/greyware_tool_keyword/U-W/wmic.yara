@@ -56,24 +56,24 @@ rule wmic
         // Description: The actor has executed WMIC commands [T1047] to create a copy of the ntds.dit file and SYSTEM registry hive using ntdsutil.exe
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string16 = /wmic\sprocess\scall\screate.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\sifm.{0,1000}create\sfull/ nocase ascii wide
-        // Description: wmic discovery commands abused by attackers
-        // Reference: N/A
-        $string17 = /wmic\sservice\sbrief/ nocase ascii wide
-        // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
-        // Reference: N/A
-        $string18 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
-        // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
-        // Reference: N/A
-        $string19 = /wmic\sshadowcopy\sdelete/ nocase ascii wide
-        // Description: User Enumeration
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string20 = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
-        // Description: wmic discovery commands abused by attackers
-        // Reference: N/A
-        $string21 = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list all running processes and their command lines on a Windows system
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string22 = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
+        $string17 = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
+        // Description: wmic discovery commands abused by attackers
+        // Reference: N/A
+        $string18 = /wmic\sservice\sbrief/ nocase ascii wide
+        // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
+        // Reference: N/A
+        $string19 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
+        // Reference: N/A
+        $string20 = /wmic\sshadowcopy\sdelete/ nocase ascii wide
+        // Description: User Enumeration
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
+        $string21 = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
+        // Description: wmic discovery commands abused by attackers
+        // Reference: N/A
+        $string22 = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
         $string23 = /wmic.{0,1000}\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide

@@ -16,7 +16,16 @@ rule wevtutil
         $string2 = /wevtutil\scl\s/ nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string3 = /wevtutil\.exe\scl\s/ nocase ascii wide
+        $string3 = /wevtutil\sclear\-log/ nocase ascii wide
+        // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
+        // Reference: N/A
+        $string4 = /wevtutil\.exe\scl\s/ nocase ascii wide
+        // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
+        // Reference: N/A
+        $string5 = /wevtutil\.exe\sclear\-log/ nocase ascii wide
+        // Description: disable a specific eventlog
+        // Reference: N/A
+        $string6 = /wevtutil\.exe\ssl\s.{0,1000}\s\/e:false/ nocase ascii wide
 
     condition:
         any of them

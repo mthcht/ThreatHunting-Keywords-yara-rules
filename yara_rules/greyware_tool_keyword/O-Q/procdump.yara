@@ -11,6 +11,12 @@ rule Procdump
         // Description: dump lsass process with procdump
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
         $string1 = /procdump.{0,1000}lsass/ nocase ascii wide
+        // Description: dump lsass process with procdump
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+        $string2 = /procdump.{0,1000}lsass/ nocase ascii wide
+        // Description: dump lsass process with procdump
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+        $string3 = /procdump64.{0,1000}lsass/ nocase ascii wide
 
     condition:
         any of them

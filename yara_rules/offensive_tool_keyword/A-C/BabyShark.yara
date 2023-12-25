@@ -10,28 +10,28 @@ rule BabyShark
     strings:
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string1 = /UnkL4b\/BabyShark/ nocase ascii wide
+        $string1 = /\/BabyShark\.git/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string2 = /\/BabyShark\.git/ nocase ascii wide
+        $string2 = /\/home\/daddyShark\/BabySh4rk\// nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string3 = /\\BabyShark\-master\.zip/ nocase ascii wide
+        $string3 = /\/momyshark\.html/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string4 = /password\s\=\s\'b4bysh4rk\'/ nocase ascii wide
+        $string4 = /\\BabyShark\-master\.zip/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string5 = /\/momyshark\.html/ nocase ascii wide
+        $string5 = /\\sharklog\.log/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string6 = /\\sharklog\.log/ nocase ascii wide
+        $string6 = /database\/c2\.db/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string7 = /database\/c2\.db/ nocase ascii wide
+        $string7 = /password\s\=\s\'b4bysh4rk\'/ nocase ascii wide
         // Description: This is a basic C2 generic server written in Python and Flask.
         // Reference: https://github.com/UnkL4b/BabyShark
-        $string8 = /\/home\/daddyShark\/BabySh4rk\// nocase ascii wide
+        $string8 = /UnkL4b\/BabyShark/ nocase ascii wide
 
     condition:
         any of them

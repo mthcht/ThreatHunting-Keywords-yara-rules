@@ -10,25 +10,25 @@ rule UnlinkDLL
     strings:
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string1 = /MaliciousInjectedDll\.dll/ nocase ascii wide
+        $string1 = /\/UnlinkDLL\.git/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string2 = /UnlinkDLL\\Main\.nim/ nocase ascii wide
+        $string2 = /frkngksl\/UnlinkDLL/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string3 = /UnlinkDLL\\Structs\.nim/ nocase ascii wide
+        $string3 = /listdlls64\.exe/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string4 = /UnlinkDLL\.exe/ nocase ascii wide
+        $string4 = /MaliciousInjectedDll\.dll/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string5 = /listdlls64\.exe/ nocase ascii wide
+        $string5 = /UnlinkDLL\.exe/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string6 = /\/UnlinkDLL\.git/ nocase ascii wide
+        $string6 = /UnlinkDLL\\Main\.nim/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
-        $string7 = /frkngksl\/UnlinkDLL/ nocase ascii wide
+        $string7 = /UnlinkDLL\\Structs\.nim/ nocase ascii wide
         // Description: DLL Unlinking from InLoadOrderModuleList - InMemoryOrderModuleList - InInitializationOrderModuleList and LdrpHashTable
         // Reference: https://github.com/frkngksl/UnlinkDLL
         $string8 = /UnlinkDLL\-main/ nocase ascii wide

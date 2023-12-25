@@ -230,15 +230,15 @@ rule _
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
         $string74 = /\/pentest/ nocase ascii wide
-        // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
-        // Reference: N/A
-        $string75 = /\-pentest/ nocase ascii wide
-        // Description: windows exploit keyword often used in poc exploit github repo or could be a file name or folder
-        // Reference: N/A
-        $string76 = /Windows\sExploit/ nocase ascii wide
         // Description: dll file in public user folder
         // Reference: https://detect.fyi/rhysida-ransomware-and-the-detection-opportunities-3599e9a02bb2
-        $string77 = /c:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
+        $string75 = /c:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
+        // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
+        // Reference: N/A
+        $string76 = /\-pentest/ nocase ascii wide
+        // Description: windows exploit keyword often used in poc exploit github repo or could be a file name or folder
+        // Reference: N/A
+        $string77 = /Windows\sExploit/ nocase ascii wide
 
     condition:
         any of them

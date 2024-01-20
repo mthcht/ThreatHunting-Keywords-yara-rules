@@ -79,6 +79,11 @@ def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
                         for string_match in match.strings:  # Loop through each string match inside the match object
                             string_pattern = patterns.get(string_match[1], 'unknown (error)')
                             rule_name = str(yara_rule_file)
+                            try:
+                                matched_string_UTF16 = string_match[2].decode('utf-16')
+                            except UnicodeDecodeError:
+                                matched_string_UTF16 = "<Undecodable data>"
+
                             result_dict = {
                                 'rule_name': rule_name,
                                 'file_path': str(file_path),
@@ -86,7 +91,7 @@ def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
                                 'string_id': string_match[1],
                                 'string_pattern': string_pattern,
                                 'matched_string_UTF8': string_match[2].decode('utf-8', 'ignore'),
-                                'matched_string_UTF16':  string_match[2].decode('utf-16')
+                                'matched_string_UTF16': matched_string_UTF16
                             }
                             results.append(result_dict)
 

@@ -25,31 +25,45 @@ def modify_rule_strings(rule_content, rule_suffix):
         modified_content = re.sub(rf'\${string_id}\b', f'${unique_id}', modified_content)
     return modified_content
 
-def combine_yara_rules(root_directory, output_file):
+
+def combine_yara_rules(root_directory, output_file, sub_directory=None):
     all_rules = []  # List to store all combined rules
 
     for subdir, dirs, files in os.walk(root_directory):
-        for file in files:
-            if file.endswith('.yara'):
-                parent_dirs = subdir.replace(root_directory, '').split(os.sep)[:1]
-                with open(os.path.join(subdir, file), 'r') as infile:
-                    rule = infile.read()
-                    # Extract rule name and make it unique
-                    rule_name = re.search(r'rule\s+(\w+)', rule).group(1)
-                    unique_rule_name = safe_rule_name(rule_name, parent_dirs)
-                    rule_suffix = unique_rule_name.replace('rule_', '')  # Suffix for string IDs
-                    # Replace original rule name with the unique one
-                    rule = rule.replace(f"rule {rule_name}", f"rule {unique_rule_name}", 1)
-                    # Modify string identifiers within the rule
-                    rule = modify_rule_strings(rule, rule_suffix)
-                    all_rules.append(rule)
+        if sub_directory and not sub_directory in subdir:
+            continue  # Skip directories not matching the target
 
-    # Writing all rules to all.yara
+        for file in files:
+            if file not in ("all.yara","offensive_tools.yara","greyware_tools.yara"):
+                if file.endswith('.yara'):
+                    parent_dirs = subdir.replace(root_directory, '').split(os.sep)[:1]
+                    with open(os.path.join(subdir, file), 'r') as infile:
+                        rule = infile.read()
+                        rule_name_search = re.search(r'rule\s+(\w+)', rule)
+                        if rule_name_search:
+                            rule_name = rule_name_search.group(1)
+                            unique_rule_name = safe_rule_name(rule_name, parent_dirs)
+                            rule_suffix = unique_rule_name.replace('rule_', '')  # Suffix for string IDs
+                            rule = rule.replace(f"rule {rule_name}", f"rule {unique_rule_name}", 1)
+                            rule = modify_rule_strings(rule, rule_suffix)
+                            all_rules.append(rule)
+
+    # Writing all rules to the output file
     with open(output_file, 'w') as outfile:
         for rule in all_rules:
             outfile.write(rule + "\n\n")
 
 if __name__ == "__main__":
     root_directory = '../yara_rules/'  # Replace with your directory path
-    output_file = os.path.join(root_directory, 'all.yara')
-    combine_yara_rules(root_directory, output_file)
+
+    # All YARA rules
+    output_file_all = os.path.join(root_directory, 'all.yara')
+    combine_yara_rules(root_directory, output_file_all)
+
+    # Offensive tools
+    output_file_offensive = os.path.join(root_directory, 'offensive_tools.yara')
+    combine_yara_rules(root_directory, output_file_offensive, 'offensive_tool_keyword')
+
+    # Greyware tools
+    output_file_greyware = os.path.join(root_directory, 'greyware_tools.yara')
+    combine_yara_rules(root_directory, output_file_greyware, 'greyware_tool_keyword')

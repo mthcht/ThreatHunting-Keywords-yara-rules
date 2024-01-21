@@ -41,24 +41,27 @@ rule anydesk
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
         $string11 = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string12 = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string12 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string13 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string13 = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string14 = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string14 = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string15 = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string15 = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string16 = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string16 = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string17 = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string17 = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string18 = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them

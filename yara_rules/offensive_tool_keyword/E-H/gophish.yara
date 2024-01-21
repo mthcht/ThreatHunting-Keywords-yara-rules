@@ -56,6 +56,9 @@ rule gophish
         // Description: Hiding GoPhish from the boys in blue
         // Reference: https://github.com/puzzlepeaches/sneaky_gophish/
         $string16 = /sneaky_gophish/ nocase ascii wide
+        // Description: Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
+        // Reference: https://github.com/gophish/gophish
+        $string17 = /X\-Gophish\-Contact/ nocase ascii wide
 
     condition:
         any of them

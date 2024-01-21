@@ -8,9 +8,12 @@ rule _base64
         rule_category = "offensive_tool_keyword"
 
     strings:
+        // Description: AMSI Bypass AmsiScanBuffer in base64
+        // Reference: N/A
+        $string1 = /QW1zaVNjYW5CdWZmZXI\=/ nocase ascii wide
         // Description: start of an executable payload in base64
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/MockDirUACBypass
-        $string1 = /TVqQAAMAAAAEAAAA/ nocase ascii wide
+        $string2 = /TVqQAAMAAAAEAAAA/ nocase ascii wide
 
     condition:
         any of them

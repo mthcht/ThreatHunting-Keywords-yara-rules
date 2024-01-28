@@ -420,58 +420,73 @@ rule aeroadmin_greyware_tool_keyword
         $string2_aeroadmin_greyware_tool_keyword = /\/aeroadmin\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string3_aeroadmin_greyware_tool_keyword = /\\aeroadmin\.exe/ nocase ascii wide
+        $string3_aeroadmin_greyware_tool_keyword = /\\AeroAdmin\s.{0,1000}_Portable\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string4_aeroadmin_greyware_tool_keyword = /\\Aeroadmin\.lnk/ nocase ascii wide
+        $string4_aeroadmin_greyware_tool_keyword = /\\aeroadmin\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string5_aeroadmin_greyware_tool_keyword = /\\Aeroadmin\\black\.bmp/ nocase ascii wide
+        $string5_aeroadmin_greyware_tool_keyword = /\\Aeroadmin\.lnk/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string6_aeroadmin_greyware_tool_keyword = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\AeroadminService/ nocase ascii wide
+        $string6_aeroadmin_greyware_tool_keyword = /\\Aeroadmin\\black\.bmp/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string7_aeroadmin_greyware_tool_keyword = /\\CurrentControlSet\\Services\\AeroadminService/ nocase ascii wide
+        $string7_aeroadmin_greyware_tool_keyword = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\AeroadminService/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string8_aeroadmin_greyware_tool_keyword = /\\InventoryApplicationFile\\aeroadmin/ nocase ascii wide
+        $string8_aeroadmin_greyware_tool_keyword = /\\CurrentControlSet\\Services\\AeroadminService/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string9_aeroadmin_greyware_tool_keyword = /\\ProgramData\\Aeroadmin\\/ nocase ascii wide
+        $string9_aeroadmin_greyware_tool_keyword = /\\InventoryApplicationFile\\aeroadmin/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string10_aeroadmin_greyware_tool_keyword = /2ef8a13faa44755fab1ac6fb3665cc78f7e7b451/ nocase ascii wide
+        $string10_aeroadmin_greyware_tool_keyword = /\\ProgramData\\Aeroadmin\\/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string11_aeroadmin_greyware_tool_keyword = /Aeroadmin\sLLC/ nocase ascii wide
+        $string11_aeroadmin_greyware_tool_keyword = /2ef8a13faa44755fab1ac6fb3665cc78f7e7b451/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string12_aeroadmin_greyware_tool_keyword = /AeroAdmin\sv4\..{0,1000}\s\(/ nocase ascii wide
+        $string12_aeroadmin_greyware_tool_keyword = /Aeroadmin\sLLC/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string13_aeroadmin_greyware_tool_keyword = /AeroAdmin\.cpp/ nocase ascii wide
+        $string13_aeroadmin_greyware_tool_keyword = /AeroAdmin\sPRO\s\-\sremote\sdesktop\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string14_aeroadmin_greyware_tool_keyword = /AEROADMIN\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string14_aeroadmin_greyware_tool_keyword = /AeroAdmin\sPRO\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string15_aeroadmin_greyware_tool_keyword = /Aeroadmin\\Screenshots/ nocase ascii wide
+        $string15_aeroadmin_greyware_tool_keyword = /AeroAdmin\sv4\..{0,1000}\s\(/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string16_aeroadmin_greyware_tool_keyword = /AeroadminService/ nocase ascii wide
+        $string16_aeroadmin_greyware_tool_keyword = /AeroAdmin\.cpp/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string17_aeroadmin_greyware_tool_keyword = /auth11\.aeroadmin\.com/ nocase ascii wide
+        $string17_aeroadmin_greyware_tool_keyword = /AEROADMIN\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string18_aeroadmin_greyware_tool_keyword = /DEFAULT\\Software\\AeroAdmin/ nocase ascii wide
+        $string18_aeroadmin_greyware_tool_keyword = /Aeroadmin\\Screenshots/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string19_aeroadmin_greyware_tool_keyword = /EE54577067550559C4711C9E5E10435807F9DEEE9A5ADB4409CB60A6B0108700/ nocase ascii wide
+        $string19_aeroadmin_greyware_tool_keyword = /AeroAdmin_2\.exe/ nocase ascii wide
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
-        $string20_aeroadmin_greyware_tool_keyword = /ulm\.aeroadmin\.com\// nocase ascii wide
+        $string20_aeroadmin_greyware_tool_keyword = /AeroadminService/ nocase ascii wide
+        // Description: RMM software - full remote control / file transfer
+        // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
+        $string21_aeroadmin_greyware_tool_keyword = /auth.{0,1000}\.aeroadmin\.com/ nocase ascii wide
+        // Description: RMM software - full remote control / file transfer
+        // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
+        $string22_aeroadmin_greyware_tool_keyword = /auth11\.aeroadmin\.com/ nocase ascii wide
+        // Description: RMM software - full remote control / file transfer
+        // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
+        $string23_aeroadmin_greyware_tool_keyword = /DEFAULT\\Software\\AeroAdmin/ nocase ascii wide
+        // Description: RMM software - full remote control / file transfer
+        // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
+        $string24_aeroadmin_greyware_tool_keyword = /EE54577067550559C4711C9E5E10435807F9DEEE9A5ADB4409CB60A6B0108700/ nocase ascii wide
+        // Description: RMM software - full remote control / file transfer
+        // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
+        $string25_aeroadmin_greyware_tool_keyword = /ulm\.aeroadmin\.com\// nocase ascii wide
 
     condition:
         any of them
@@ -494,6 +509,70 @@ rule AlanFramework_greyware_tool_keyword
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string2_AlanFramework_greyware_tool_keyword = /http.{0,1000}:\/\/localhost:8081/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Ammyy_Admin_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Ammyy Admin' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Ammyy Admin"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string1_Ammyy_Admin_greyware_tool_keyword = /\\aa_nts\.dll/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string2_Ammyy_Admin_greyware_tool_keyword = /\\AA_v3\.exe/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string3_Ammyy_Admin_greyware_tool_keyword = /\\AA_v3\.log/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string4_Ammyy_Admin_greyware_tool_keyword = /\\AMMYY\\access\.log/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string5_Ammyy_Admin_greyware_tool_keyword = /\\ControlSet001\\Control\\SafeBoot\\Network\\AmmyyAdmin_/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string6_Ammyy_Admin_greyware_tool_keyword = /\\ProgramData\\AMMYY\\/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string7_Ammyy_Admin_greyware_tool_keyword = /\\SOFTWARE\\Ammyy\\Admin/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string8_Ammyy_Admin_greyware_tool_keyword = /AA_v3\.exe.{0,1000}\s\-elevated/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string9_Ammyy_Admin_greyware_tool_keyword = /AA_v3\.exe.{0,1000}\s\-service\s\-lunch/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string10_Ammyy_Admin_greyware_tool_keyword = /Ammyy\sAdmin/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string11_Ammyy_Admin_greyware_tool_keyword = /Ammyy\sLLC/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string12_Ammyy_Admin_greyware_tool_keyword = /PUA:Win32\/AmmyyAdmin/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string13_Ammyy_Admin_greyware_tool_keyword = /rl\.ammyy\.com\// nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string14_Ammyy_Admin_greyware_tool_keyword = /SPR\/Ammyy\.R/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string15_Ammyy_Admin_greyware_tool_keyword = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
+        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
+        // Reference: https://www.ammyy.com
+        $string16_Ammyy_Admin_greyware_tool_keyword = /www\.ammyy\.com\/files\/v/ nocase ascii wide
 
     condition:
         any of them
@@ -754,49 +833,52 @@ rule Atera_greyware_tool_keyword
         $string5_Atera_greyware_tool_keyword = /\\AlphaControlAgent\\obj\\Release\\AteraAgent\.pdb/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string6_Atera_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Atera\sNetworks/ nocase ascii wide
+        $string6_Atera_greyware_tool_keyword = /\\atera_agent\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string7_Atera_greyware_tool_keyword = /\\Program\sFiles\\Atera\sNetworks/ nocase ascii wide
+        $string7_Atera_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Atera\sNetworks/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string8_Atera_greyware_tool_keyword = /\\TEMP\\AteraUpgradeAgentPackage\\/ nocase ascii wide
+        $string8_Atera_greyware_tool_keyword = /\\Program\sFiles\\Atera\sNetworks/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string9_Atera_greyware_tool_keyword = /acontrol\.atera\.com/ nocase ascii wide
+        $string9_Atera_greyware_tool_keyword = /\\TEMP\\AteraUpgradeAgentPackage\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string10_Atera_greyware_tool_keyword = /agent\-api\.atera\.com/ nocase ascii wide
+        $string10_Atera_greyware_tool_keyword = /acontrol\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string11_Atera_greyware_tool_keyword = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
+        $string11_Atera_greyware_tool_keyword = /agent\-api\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string12_Atera_greyware_tool_keyword = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
+        $string12_Atera_greyware_tool_keyword = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string13_Atera_greyware_tool_keyword = /AlphaControlAgent\.CloudLogsManager\+\<\>/ nocase ascii wide
+        $string13_Atera_greyware_tool_keyword = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string14_Atera_greyware_tool_keyword = /atera_del\.bat/ nocase ascii wide
+        $string14_Atera_greyware_tool_keyword = /AlphaControlAgent\.CloudLogsManager\+\<\>/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string15_Atera_greyware_tool_keyword = /atera_del2\.bat/ nocase ascii wide
+        $string15_Atera_greyware_tool_keyword = /atera_del\.bat/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string16_Atera_greyware_tool_keyword = /atera_del2\.bat/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string16_Atera_greyware_tool_keyword = /AteraAgent.{0,1000}AgentPackageRunCommandInteractive\.exe/ nocase ascii wide
+        $string17_Atera_greyware_tool_keyword = /AteraAgent.{0,1000}AgentPackageRunCommandInteractive\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string17_Atera_greyware_tool_keyword = /AteraSetupLog\.txt/ nocase ascii wide
+        $string18_Atera_greyware_tool_keyword = /AteraSetupLog\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string18_Atera_greyware_tool_keyword = /http.{0,1000}\/agent\-api\-.{0,1000}\.atera\.com/ nocase ascii wide
+        $string19_Atera_greyware_tool_keyword = /http.{0,1000}\/agent\-api\-.{0,1000}\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string19_Atera_greyware_tool_keyword = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
+        $string20_Atera_greyware_tool_keyword = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string20_Atera_greyware_tool_keyword = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
+        $string21_Atera_greyware_tool_keyword = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
 
     condition:
         any of them
@@ -4085,139 +4167,157 @@ rule GoToMyPC_greyware_tool_keyword
         $string8_GoToMyPC_greyware_tool_keyword = /\\Citrix\\GoToMyPc\\GuestInvite/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string9_GoToMyPC_greyware_tool_keyword = /\\goLoader\.exe/ nocase ascii wide
+        $string9_GoToMyPC_greyware_tool_keyword = /\\g2comm\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string10_GoToMyPC_greyware_tool_keyword = /\\gosetup\[1\]\.exe/ nocase ascii wide
+        $string10_GoToMyPC_greyware_tool_keyword = /\\g2fileh\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string11_GoToMyPC_greyware_tool_keyword = /\\GoTo\sOpener\.exe/ nocase ascii wide
+        $string11_GoToMyPC_greyware_tool_keyword = /\\g2host\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string12_GoToMyPC_greyware_tool_keyword = /\\GoTo\\Logs\\goto\.log/ nocase ascii wide
+        $string12_GoToMyPC_greyware_tool_keyword = /\\g2mainh\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string13_GoToMyPC_greyware_tool_keyword = /\\gotomon\.dll/ nocase ascii wide
+        $string13_GoToMyPC_greyware_tool_keyword = /\\g2printh\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string14_GoToMyPC_greyware_tool_keyword = /\\gotomon_x64\.dll/ nocase ascii wide
+        $string14_GoToMyPC_greyware_tool_keyword = /\\g2svc\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string15_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\.cab/ nocase ascii wide
+        $string15_GoToMyPC_greyware_tool_keyword = /\\goLoader\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string16_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\\.{0,1000}\\.{0,1000}\\g2ldr\.log/ nocase ascii wide
+        $string16_GoToMyPC_greyware_tool_keyword = /\\gosetup\[1\]\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string17_GoToMyPC_greyware_tool_keyword = /\\gotomypc\\g2pre\.exe/ nocase ascii wide
+        $string17_GoToMyPC_greyware_tool_keyword = /\\GoTo\sOpener\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string18_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\\g2svc\.exe/ nocase ascii wide
+        $string18_GoToMyPC_greyware_tool_keyword = /\\GoTo\\Logs\\goto\.log/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string19_GoToMyPC_greyware_tool_keyword = /\\gotomypc_3944\.exe/ nocase ascii wide
+        $string19_GoToMyPC_greyware_tool_keyword = /\\gotomon\.dll/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string20_GoToMyPC_greyware_tool_keyword = /\\GoToMyPCCrashHandler\.exe/ nocase ascii wide
+        $string20_GoToMyPC_greyware_tool_keyword = /\\gotomon_x64\.dll/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string21_GoToMyPC_greyware_tool_keyword = /\\GoToOpener\.log/ nocase ascii wide
+        $string21_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\.cab/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string22_GoToMyPC_greyware_tool_keyword = /\\GoToOpener\[1\]\.msi/ nocase ascii wide
+        $string22_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\\.{0,1000}\\.{0,1000}\\g2ldr\.log/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string23_GoToMyPC_greyware_tool_keyword = /\\ICON_ID_GOTOMYPC/ nocase ascii wide
+        $string23_GoToMyPC_greyware_tool_keyword = /\\gotomypc\\g2pre\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string24_GoToMyPC_greyware_tool_keyword = /\\Local\\Temp\\LogMeInLogs\\GoToOpenerMsi\\/ nocase ascii wide
+        $string24_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\\g2svc\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string25_GoToMyPC_greyware_tool_keyword = /\\LogMeInLogs\\GoToOpenerMsi/ nocase ascii wide
+        $string25_GoToMyPC_greyware_tool_keyword = /\\gotomypc_3944\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string26_GoToMyPC_greyware_tool_keyword = /\\novaPDF11OEM\(x64\)\.msi/ nocase ascii wide
+        $string26_GoToMyPC_greyware_tool_keyword = /\\GoToMyPCCrashHandler\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string27_GoToMyPC_greyware_tool_keyword = /\\program\sfiles\s\(x86\)\\gotomypc\\g2tray\.exe/ nocase ascii wide
+        $string27_GoToMyPC_greyware_tool_keyword = /\\GoToOpener\.log/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string28_GoToMyPC_greyware_tool_keyword = /\\Programs\\GoToMyPC\.lnk/ nocase ascii wide
+        $string28_GoToMyPC_greyware_tool_keyword = /\\GoToOpener\[1\]\.msi/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string29_GoToMyPC_greyware_tool_keyword = /\\WOW6432Node\\Citrix\\GoToMyPc/ nocase ascii wide
+        $string29_GoToMyPC_greyware_tool_keyword = /\\ICON_ID_GOTOMYPC/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string30_GoToMyPC_greyware_tool_keyword = /\\x64\\monblanking\.sys/ nocase ascii wide
+        $string30_GoToMyPC_greyware_tool_keyword = /\\Local\\Temp\\LogMeInLogs\\GoToOpenerMsi\\/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string31_GoToMyPC_greyware_tool_keyword = /\<Data\>Installed\sGoToMyPC\<\/Data\>/ nocase ascii wide
+        $string31_GoToMyPC_greyware_tool_keyword = /\\LogMeInLogs\\GoToOpenerMsi/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string32_GoToMyPC_greyware_tool_keyword = /\=http:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
+        $string32_GoToMyPC_greyware_tool_keyword = /\\novaPDF11OEM\(x64\)\.msi/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string33_GoToMyPC_greyware_tool_keyword = /api\-telemetry\.servers\.getgo\.com/ nocase ascii wide
+        $string33_GoToMyPC_greyware_tool_keyword = /\\program\sfiles\s\(x86\)\\gotomypc\\g2tray\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string34_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoTo\sOpener/ nocase ascii wide
+        $string34_GoToMyPC_greyware_tool_keyword = /\\Programs\\GoToMyPC\.lnk/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string35_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sCommunications/ nocase ascii wide
+        $string35_GoToMyPC_greyware_tool_keyword = /\\WOW6432Node\\Citrix\\GoToMyPc/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string36_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sHost\sLauncher/ nocase ascii wide
+        $string36_GoToMyPC_greyware_tool_keyword = /\\x64\\monblanking\.sys/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string37_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sViewer/ nocase ascii wide
+        $string37_GoToMyPC_greyware_tool_keyword = /\<Data\>Installed\sGoToMyPC\<\/Data\>/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string38_GoToMyPC_greyware_tool_keyword = /cf3de8f800852490f39fdacbe74627564494235f/ nocase ascii wide
+        $string38_GoToMyPC_greyware_tool_keyword = /\=http:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string39_GoToMyPC_greyware_tool_keyword = /G2MScrUtil64\.exe.{0,1000}\/cr/ nocase ascii wide
+        $string39_GoToMyPC_greyware_tool_keyword = /api\-telemetry\.servers\.getgo\.com/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string40_GoToMyPC_greyware_tool_keyword = /g2mui\.exe.{0,1000}\/cr/ nocase ascii wide
+        $string40_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoTo\sOpener/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string41_GoToMyPC_greyware_tool_keyword = /GoTo\sMyPC\sInstaller\.exe/ nocase ascii wide
+        $string41_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sCommunications/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string42_GoToMyPC_greyware_tool_keyword = /GOTO\sMYPC\sINSTALLER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string42_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sHost\sLauncher/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string43_GoToMyPC_greyware_tool_keyword = /GoTo\sOpener\.exe\s/ nocase ascii wide
+        $string43_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sViewer/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string44_GoToMyPC_greyware_tool_keyword = /GOTO\sOPENER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string44_GoToMyPC_greyware_tool_keyword = /cf3de8f800852490f39fdacbe74627564494235f/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string45_GoToMyPC_greyware_tool_keyword = /Goto\.exe.{0,1000}\?type\=crashpad\-handler/ nocase ascii wide
+        $string45_GoToMyPC_greyware_tool_keyword = /G2MScrUtil64\.exe.{0,1000}\/cr/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string46_GoToMyPC_greyware_tool_keyword = /GoToMyPC_Installation\.log/ nocase ascii wide
+        $string46_GoToMyPC_greyware_tool_keyword = /g2mui\.exe.{0,1000}\/cr/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string47_GoToMyPC_greyware_tool_keyword = /GoToMyPC_Setup\.log/ nocase ascii wide
+        $string47_GoToMyPC_greyware_tool_keyword = /GoTo\sMyPC\sInstaller\.exe/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string48_GoToMyPC_greyware_tool_keyword = /GoToMyPCSetup_x64\.msi/ nocase ascii wide
+        $string48_GoToMyPC_greyware_tool_keyword = /GOTO\sMYPC\sINSTALLER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string49_GoToMyPC_greyware_tool_keyword = /GoToScrUtils\.exe.{0,1000}\/cr/ nocase ascii wide
+        $string49_GoToMyPC_greyware_tool_keyword = /GoTo\sOpener\.exe\s/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string50_GoToMyPC_greyware_tool_keyword = /launcher\-rest\-new\.live\.corecollab\.ucc\-prod\.eva\.goto\.com/ nocase ascii wide
+        $string50_GoToMyPC_greyware_tool_keyword = /GOTO\sOPENER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string51_GoToMyPC_greyware_tool_keyword = /novaPDF11PrinterDriver\(x64\)\.msi/ nocase ascii wide
+        $string51_GoToMyPC_greyware_tool_keyword = /Goto\.exe.{0,1000}\?type\=crashpad\-handler/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string52_GoToMyPC_greyware_tool_keyword = /PollServer\spoll\.gotomypc\.com/ nocase ascii wide
+        $string52_GoToMyPC_greyware_tool_keyword = /GoToMyPC_Installation\.log/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string53_GoToMyPC_greyware_tool_keyword = /ServiceName\'\>GoToMyPC/ nocase ascii wide
+        $string53_GoToMyPC_greyware_tool_keyword = /GoToMyPC_Setup\.log/ nocase ascii wide
+        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
+        // Reference: https://www.gotomypc.com/
+        $string54_GoToMyPC_greyware_tool_keyword = /GoToMyPCSetup_x64\.msi/ nocase ascii wide
+        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
+        // Reference: https://www.gotomypc.com/
+        $string55_GoToMyPC_greyware_tool_keyword = /GoToScrUtils\.exe.{0,1000}\/cr/ nocase ascii wide
+        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
+        // Reference: https://www.gotomypc.com/
+        $string56_GoToMyPC_greyware_tool_keyword = /launcher\-rest\-new\.live\.corecollab\.ucc\-prod\.eva\.goto\.com/ nocase ascii wide
+        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
+        // Reference: https://www.gotomypc.com/
+        $string57_GoToMyPC_greyware_tool_keyword = /novaPDF11PrinterDriver\(x64\)\.msi/ nocase ascii wide
+        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
+        // Reference: https://www.gotomypc.com/
+        $string58_GoToMyPC_greyware_tool_keyword = /PollServer\spoll\.gotomypc\.com/ nocase ascii wide
+        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
+        // Reference: https://www.gotomypc.com/
+        $string59_GoToMyPC_greyware_tool_keyword = /ServiceName\'\>GoToMyPC/ nocase ascii wide
 
     condition:
         any of them
@@ -6084,6 +6184,52 @@ rule NordVPN_greyware_tool_keyword
 }
 
 
+rule Nsight_RMM_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Nsight RMM' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Nsight RMM"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string1_Nsight_RMM_greyware_tool_keyword = /\supload.{0,1000}\.systemmonitor\.eu\.com.{0,1000}\/command\/agentprocessor/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string2_Nsight_RMM_greyware_tool_keyword = /\\Advanced\sMonitoring\sAgent\\debug\.log/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string3_Nsight_RMM_greyware_tool_keyword = /\\Advanced\sMonitoring\sAgent\\staging/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string4_Nsight_RMM_greyware_tool_keyword = /\\Advanced\sMonitoring\sAgent\\task_start\.js/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string5_Nsight_RMM_greyware_tool_keyword = /\\Advanced\sMonitoring\sAgent\\unzip\.exe/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string6_Nsight_RMM_greyware_tool_keyword = /\\Advanced\sMonitoring\sAgent\\winagent\.exe/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string7_Nsight_RMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Advanced\sMonitoring\sAgent\\/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string8_Nsight_RMM_greyware_tool_keyword = /\\Program\sFiles\\Advanced\sMonitoring\sAgent\\/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string9_Nsight_RMM_greyware_tool_keyword = /\\Start\sMenu\\Programs\\Advanced\sMonitoring\sAgent\.lnk/ nocase ascii wide
+        // Description: Nsight RMM usage
+        // Reference: https://www.n-able.com/products/n-sight-rmm
+        $string10_Nsight_RMM_greyware_tool_keyword = /Advanced\sMonitoring\sAgent\sHTTP\sRetriever\s1\.1/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule ntdsutil_greyware_tool_keyword
 {
     meta:
@@ -6995,6 +7141,46 @@ rule pyinstaller_greyware_tool_keyword
 }
 
 
+rule pyshark_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'pyshark' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "pyshark"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string1_pyshark_greyware_tool_keyword = /\/pyshark\.git/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string2_pyshark_greyware_tool_keyword = /\\pyshark\\src\\/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string3_pyshark_greyware_tool_keyword = /import\spyshark/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string4_pyshark_greyware_tool_keyword = /KimiNewt\/pyshark/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string5_pyshark_greyware_tool_keyword = /pip\sinstall\spyshark/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string6_pyshark_greyware_tool_keyword = /pyshark\.FileCapture\(/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string7_pyshark_greyware_tool_keyword = /pyshark\.LiveCapture\(/ nocase ascii wide
+        // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
+        // Reference: https://github.com/KimiNewt/pyshark
+        $string8_pyshark_greyware_tool_keyword = /pyshark\.RemoteCapture\(/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule QuasarRAT_greyware_tool_keyword
 {
     meta:
@@ -7482,6 +7668,28 @@ rule ren_greyware_tool_keyword
 }
 
 
+rule requests_ntlm_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'requests-ntlm' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "requests-ntlm"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: HTTP NTLM Authentication for Requests Library
+        // Reference: https://pypi.org/project/requests-ntlm/
+        $string1_requests_ntlm_greyware_tool_keyword = /\sinstall\srequests_ntlm/ nocase ascii wide
+        // Description: HTTP NTLM Authentication for Requests Library
+        // Reference: https://pypi.org/project/requests-ntlm/
+        $string2_requests_ntlm_greyware_tool_keyword = /from\srequests_ntlm\simport\sHttpNtlmAuth/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rm_greyware_tool_keyword
 {
     meta:
@@ -7941,33 +8149,153 @@ rule ScreenConnect_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string1_ScreenConnect_greyware_tool_keyword = /:8040\/SetupWizard\.aspx/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string2_ScreenConnect_greyware_tool_keyword = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\ScreenConnect\sClient\s\(/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string3_ScreenConnect_greyware_tool_keyword = /\\CurrentControlSet\\Services\\ScreenConnect\s/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string4_ScreenConnect_greyware_tool_keyword = /\\Documents\\ConnectWiseControl\\Files/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string5_ScreenConnect_greyware_tool_keyword = /\\InventoryApplicationFile\\screenconnect\.cl/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string6_ScreenConnect_greyware_tool_keyword = /\\InventoryApplicationFile\\screenconnect\.wi/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string7_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\sClient\s\(/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string1_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.Client\.exe/ nocase ascii wide
+        $string8_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.Client\.exe/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string2_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.ClientService\.exe/ nocase ascii wide
+        $string9_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.ClientService\.exe/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string3_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.ClientSetup\.exe/ nocase ascii wide
+        $string10_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.ClientSetup\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string11_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.Core\.dll/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string12_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.InstallerActions\.dll/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string13_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.Windows\.dll/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string4_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
+        $string14_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string5_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
+        $string15_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string16_ScreenConnect_greyware_tool_keyword = /\\ScreenConnect\\Bin\\/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string6_ScreenConnect_greyware_tool_keyword = /\\TEMP\\ScreenConnect\\.{0,1000}\.ps1/ nocase ascii wide
+        $string17_ScreenConnect_greyware_tool_keyword = /\\TEMP\\ScreenConnect\\.{0,1000}\.ps1/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string18_ScreenConnect_greyware_tool_keyword = /\\Temp\\ScreenConnect\\.{0,1000}\\setup\.msi/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string19_ScreenConnect_greyware_tool_keyword = /\\Windows\\Temp\\ScreenConnect\\.{0,1000}\.cmd/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string20_ScreenConnect_greyware_tool_keyword = /\\Windows\\Temp\\ScreenConnect\\.{0,1000}\.ps1/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string21_ScreenConnect_greyware_tool_keyword = /\<Data\>ScreenConnect\sSoftware\<\/Data\>/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string22_ScreenConnect_greyware_tool_keyword = /\<Provider\sName\=\'ScreenConnect\sSecurity\sManager\'\/\>/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string23_ScreenConnect_greyware_tool_keyword = /\<Provider\sName\=\'ScreenConnect\sWeb\sServer\'\/\>/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string7_ScreenConnect_greyware_tool_keyword = /cmd\.exe.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.cmd/ nocase ascii wide
+        $string24_ScreenConnect_greyware_tool_keyword = /cmd\.exe.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.cmd/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string8_ScreenConnect_greyware_tool_keyword = /https:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe/ nocase ascii wide
+        $string25_ScreenConnect_greyware_tool_keyword = /https:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string26_ScreenConnect_greyware_tool_keyword = /https:\/\/.{0,1000}\.screenconnect\.com\/Host/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string27_ScreenConnect_greyware_tool_keyword = /https:\/\/cloud\.screenconnect\.com\/\#\/trialtoinstance\?cookieValue\=/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string28_ScreenConnect_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\ScreenConnect\sClient/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string29_ScreenConnect_greyware_tool_keyword = /\-relay\.screenconnect\.com/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string30_ScreenConnect_greyware_tool_keyword = /ScreenConnect\sSoftware/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string31_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.Client\.dll/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string32_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.Client\.exe\.jar/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string33_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.ClientService\.dll/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string34_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.ClientService\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string35_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.ClientSetup\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string36_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.CLIENTSETUP\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string37_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.ClientUninstall\.vbs/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string38_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.Core\.pdb/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string39_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.Server\.dll/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string40_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string41_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string42_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.WINDOWSCLIENT\..{0,1000}\.pf/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string43_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string44_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsInstaller\.dll/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string45_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.msi/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string46_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.tar\.gz/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string47_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.zip/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string9_ScreenConnect_greyware_tool_keyword = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
+        $string48_ScreenConnect_greyware_tool_keyword = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string49_ScreenConnect_greyware_tool_keyword = /\-web\.screenconnect\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -8523,59 +8851,65 @@ rule Splashtop_greyware_tool_keyword
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
         $string1_Splashtop_greyware_tool_keyword = /\.api\.splashtop\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
-        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string2_Splashtop_greyware_tool_keyword = /\/Library\/Logs\/SPLog\.txt/ nocase ascii wide
+        // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
+        $string2_Splashtop_greyware_tool_keyword = /\.relay\.splashtop\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string3_Splashtop_greyware_tool_keyword = /\/SplashtopStreamer\/SPLog\.txt/ nocase ascii wide
+        $string3_Splashtop_greyware_tool_keyword = /\/Library\/Logs\/SPLog\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
+        $string4_Splashtop_greyware_tool_keyword = /\/SplashtopStreamer\/SPLog\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string4_Splashtop_greyware_tool_keyword = /\\slave\\workspace\\GIT_WIN_SRS_Formal\\Source\\irisserver\\/ nocase ascii wide
+        $string5_Splashtop_greyware_tool_keyword = /\\slave\\workspace\\GIT_WIN_SRS_Formal\\Source\\irisserver\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string5_Splashtop_greyware_tool_keyword = /\\Splashtop\\Temp\\/ nocase ascii wide
+        $string6_Splashtop_greyware_tool_keyword = /\\Splashtop\\Temp\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string6_Splashtop_greyware_tool_keyword = /\\Splashtop\\Temp\\log\\FTCLog\.txt/ nocase ascii wide
-        // Description: control remote machines- abused by threat actors
-        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string7_Splashtop_greyware_tool_keyword = /\\WOW6432Node\\Splashtop\sInc\.\\Splashtop\sRemote\sServer/ nocase ascii wide
+        $string7_Splashtop_greyware_tool_keyword = /\\Splashtop\\Temp\\log\\FTCLog\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string8_Splashtop_greyware_tool_keyword = /CurrentVersion\\Uninstall\\Splashtop\sInc\.\\/ nocase ascii wide
+        $string8_Splashtop_greyware_tool_keyword = /\\strwinclt\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string9_Splashtop_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Splashtop/ nocase ascii wide
+        $string9_Splashtop_greyware_tool_keyword = /\\WOW6432Node\\Splashtop\sInc\.\\Splashtop\sRemote\sServer/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string10_Splashtop_greyware_tool_keyword = /Software\\Splashtop\sInc\.\\Splashtop/ nocase ascii wide
+        $string10_Splashtop_greyware_tool_keyword = /CurrentVersion\\Uninstall\\Splashtop\sInc\.\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string11_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\agent_log\.txt/ nocase ascii wide
-        // Description: control remote machines- abused by threat actors
-        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string12_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\SPLog\.txt/ nocase ascii wide
-        // Description: control remote machines- abused by threat actors
-        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string13_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\svcinfo\.txt/ nocase ascii wide
-        // Description: control remote machines- abused by threat actors
-        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string14_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\sysinfo\.txt/ nocase ascii wide
+        $string11_Splashtop_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Splashtop/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string15_Splashtop_greyware_tool_keyword = /Splashtop_Streamer_Windows_.{0,1000}\.exe/ nocase ascii wide
-        // Description: control remote machines- abused by threat actors
-        // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string16_Splashtop_greyware_tool_keyword = /Splashtop\-Splashtop\sStreamer\-/ nocase ascii wide
+        $string12_Splashtop_greyware_tool_keyword = /Software\\Splashtop\sInc\.\\Splashtop/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
-        $string17_Splashtop_greyware_tool_keyword = /SplashtopStreamer\..{0,1000}\.exe/ nocase ascii wide
+        $string13_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\agent_log\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
+        $string14_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\SPLog\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
+        $string15_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\svcinfo\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
+        $string16_Splashtop_greyware_tool_keyword = /Splashtop\sRemote\\Server\\log\\sysinfo\.txt/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
+        $string17_Splashtop_greyware_tool_keyword = /Splashtop_Streamer_Windows_.{0,1000}\.exe/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
+        $string18_Splashtop_greyware_tool_keyword = /Splashtop\-Splashtop\sStreamer\-/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: https://ruler-project.github.io/ruler-project/RULER/remote/Splashtop/
+        $string19_Splashtop_greyware_tool_keyword = /SplashtopStreamer\..{0,1000}\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string18_Splashtop_greyware_tool_keyword = /SplashtopStreamer3500\.exe.{0,1000}\sprevercheck\s/ nocase ascii wide
+        $string20_Splashtop_greyware_tool_keyword = /SplashtopStreamer3500\.exe.{0,1000}\sprevercheck\s/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://hybrid-analysis.com/sample/18c10b0235bd341e065ac5c53ca04b68eaeacd98a120e043fb4883628baf644e/6267eb693836e7217b1a3c72
-        $string19_Splashtop_greyware_tool_keyword = /www\.splashtop\.com\/remotecaRemoveVRootsISCHECKFORPRODUCTUPDATES/ nocase ascii wide
+        $string21_Splashtop_greyware_tool_keyword = /www\.splashtop\.com\/remotecaRemoveVRootsISCHECKFORPRODUCTUPDATES/ nocase ascii wide
 
     condition:
         any of them
@@ -8799,6 +9133,118 @@ rule supershell_greyware_tool_keyword
 }
 
 
+rule Supremo_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Supremo' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Supremo"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string1_Supremo_greyware_tool_keyword = /\sstart\sSupremoService/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string2_Supremo_greyware_tool_keyword = /\sSupremo\.exe/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string3_Supremo_greyware_tool_keyword = /\/Supremo\.exe/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string4_Supremo_greyware_tool_keyword = /\\\\\.\\pipe\\Supremo/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string5_Supremo_greyware_tool_keyword = /\\Control\\SafeBoot\\Network\\SupremoService/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string6_Supremo_greyware_tool_keyword = /\\CurrentControlSet\\Services\\SupremoService/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string7_Supremo_greyware_tool_keyword = /\\Program\sFiles\\Supremo\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string8_Supremo_greyware_tool_keyword = /\\ProgramData\\SupremoRemoteDesktop/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string9_Supremo_greyware_tool_keyword = /\\SOFTWARE\\Supremo\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string10_Supremo_greyware_tool_keyword = /\\Software\\Supremo\\Printer\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string11_Supremo_greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\Supremo\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string12_Supremo_greyware_tool_keyword = /\\Supremo\sRemote\sPrinter\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string13_Supremo_greyware_tool_keyword = /\\Supremo\.exe/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string14_Supremo_greyware_tool_keyword = /\\SUPREMO\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string15_Supremo_greyware_tool_keyword = /\\Supremo_Client_2/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string16_Supremo_greyware_tool_keyword = /\\Supremo_Helper_2/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string17_Supremo_greyware_tool_keyword = /\\Supremo_Service/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string18_Supremo_greyware_tool_keyword = /\\SupremoHelper\.exe/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string19_Supremo_greyware_tool_keyword = /\\SupremoRemoteDesktop\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string20_Supremo_greyware_tool_keyword = /\\Temp\\SupremoRemoteDesktop/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string21_Supremo_greyware_tool_keyword = /application\/x\-supremo/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string22_Supremo_greyware_tool_keyword = /HKCR\\supremo\\shell\\/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string23_Supremo_greyware_tool_keyword = /supremo\sremote\scontrol/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string24_Supremo_greyware_tool_keyword = /Supremo\.00\.Client\.log/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string25_Supremo_greyware_tool_keyword = /Supremo\.00\.FileTransfer\.log/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string26_Supremo_greyware_tool_keyword = /Supremo\.exe\s/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string27_Supremo_greyware_tool_keyword = /supremogw.{0,1000}\.nanosystems\.it/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string28_Supremo_greyware_tool_keyword = /supremohelper\.exe/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string29_Supremo_greyware_tool_keyword = /SupremoRemoteDesktop\\History\.txt/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string30_Supremo_greyware_tool_keyword = /SupremoService\.00\.Service\.log/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string31_Supremo_greyware_tool_keyword = /SupremoService\.exe/ nocase ascii wide
+        // Description: Supremo - Remote access software
+        // Reference: 	https://www.supremocontrol.com
+        $string32_Supremo_greyware_tool_keyword = /SupremoSystem\.exe/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Surf_VPN_greyware_tool_keyword
 {
     meta:
@@ -8878,6 +9324,130 @@ rule systemctl_greyware_tool_keyword
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
         $string4_systemctl_greyware_tool_keyword = /systemctl\sstop\sfalcon\-sensor\.service/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule tacticalrmm_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tacticalrmm' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tacticalrmm"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string1_tacticalrmm_greyware_tool_keyword = /\srmm\-installer\.ps1/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string2_tacticalrmm_greyware_tool_keyword = /\stacticalrmm\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string3_tacticalrmm_greyware_tool_keyword = /\/amidaware\/rmmagent\/releases\/download\// nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string4_tacticalrmm_greyware_tool_keyword = /\/nats\-rmm\.conf/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string5_tacticalrmm_greyware_tool_keyword = /\/rmm\/api\/tacticalrmm\// nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string6_tacticalrmm_greyware_tool_keyword = /\/rmm\-installer\.ps1/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string7_tacticalrmm_greyware_tool_keyword = /\/tacticalagent\.log/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string8_tacticalrmm_greyware_tool_keyword = /\/tacticalagent\-v.{0,1000}\-.{0,1000}\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string9_tacticalrmm_greyware_tool_keyword = /\/tacticalagent\-v.{0,1000}\-linux\-arm\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string10_tacticalrmm_greyware_tool_keyword = /\/tacticalagent\-v.{0,1000}\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string11_tacticalrmm_greyware_tool_keyword = /\/tacticalrmm\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string12_tacticalrmm_greyware_tool_keyword = /\/tacticalrmm\.git/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string13_tacticalrmm_greyware_tool_keyword = /\/tacticalrmm\/master\/install\.sh/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string14_tacticalrmm_greyware_tool_keyword = /\/tacticalrmm\/releases\/latest/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string15_tacticalrmm_greyware_tool_keyword = /\/tacticalrmm\-web\.git/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string16_tacticalrmm_greyware_tool_keyword = /\\InventoryApplicationFile\\tacticalagent\-v2/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string17_tacticalrmm_greyware_tool_keyword = /\\Program\sFiles\\TacticalAgent\\/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string18_tacticalrmm_greyware_tool_keyword = /\\ProgramData\\TacticalRMM\\/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string19_tacticalrmm_greyware_tool_keyword = /\\rmm\-client\-site\-server\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string20_tacticalrmm_greyware_tool_keyword = /\\rmm\-client\-site\-server\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string21_tacticalrmm_greyware_tool_keyword = /\\rmm\-installer\.ps1/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string22_tacticalrmm_greyware_tool_keyword = /\\tacticalagent\-v.{0,1000}\-linux\-arm\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string23_tacticalrmm_greyware_tool_keyword = /\\tacticalagent\-v.{0,1000}\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string24_tacticalrmm_greyware_tool_keyword = /\\tacticalrmm\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string25_tacticalrmm_greyware_tool_keyword = /\\tacticalrmm\\/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string26_tacticalrmm_greyware_tool_keyword = /amidaware\/tacticalrmm/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string27_tacticalrmm_greyware_tool_keyword = /https:\/\/.{0,1000}\.tacticalrmm\.com\// nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string28_tacticalrmm_greyware_tool_keyword = /net\sstop\stacticalrmm/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string29_tacticalrmm_greyware_tool_keyword = /RMM\.WebRemote\.exe/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string30_tacticalrmm_greyware_tool_keyword = /SOFTWARE\\TacticalRMM/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string31_tacticalrmm_greyware_tool_keyword = /su\s\-\stactical/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string32_tacticalrmm_greyware_tool_keyword = /sudo\s\-s\s\/bin\/bash\stactical/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string33_tacticalrmm_greyware_tool_keyword = /systemctl\s.{0,1000}\srmm\.service/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string34_tacticalrmm_greyware_tool_keyword = /Tactical\sRMM\sAgent/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string35_tacticalrmm_greyware_tool_keyword = /tacticalrmm\.utils/ nocase ascii wide
+        // Description: A remote monitoring & management tool
+        // Reference: https://github.com/amidaware/tacticalrmm
+        $string36_tacticalrmm_greyware_tool_keyword = /tacticalrmm\-develop/ nocase ascii wide
 
     condition:
         any of them
@@ -9248,40 +9818,40 @@ rule teamviewer_greyware_tool_keyword
         $string1_teamviewer_greyware_tool_keyword = /\.router\.teamviewer\.com/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string2_teamviewer_greyware_tool_keyword = /\\AppData\\Roaming\\TeamViewer/ nocase ascii wide
+        $string2_teamviewer_greyware_tool_keyword = /\/Create\s\/TN\sTVInstallRestore\s\/TR\s/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string3_teamviewer_greyware_tool_keyword = /\\CurrentControlSet\\Services\\TeamViewer/ nocase ascii wide
+        $string3_teamviewer_greyware_tool_keyword = /\\AppData\\Roaming\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string4_teamviewer_greyware_tool_keyword = /\\Program\sFiles\\TeamViewer/ nocase ascii wide
+        $string4_teamviewer_greyware_tool_keyword = /\\CurrentControlSet\\Services\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string5_teamviewer_greyware_tool_keyword = /\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
+        $string5_teamviewer_greyware_tool_keyword = /\\Program\sFiles\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string6_teamviewer_greyware_tool_keyword = /\\Software\\TeamViewer\\Temp/ nocase ascii wide
+        $string6_teamviewer_greyware_tool_keyword = /\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string7_teamviewer_greyware_tool_keyword = /\\TeamViewer\.exe/ nocase ascii wide
+        $string7_teamviewer_greyware_tool_keyword = /\\Software\\TeamViewer\\Temp/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string8_teamviewer_greyware_tool_keyword = /\\TeamViewer\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string9_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections\.txt/ nocase ascii wide
+        $string9_teamviewer_greyware_tool_keyword = /\\TeamViewer\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string10_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections_incoming\.txt/ nocase ascii wide
+        $string10_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections\.txt/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string11_teamviewer_greyware_tool_keyword = /\\TeamViewer_\.ex/ nocase ascii wide
+        $string11_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections_incoming\.txt/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string12_teamviewer_greyware_tool_keyword = /\\teamviewer_note\.exe/ nocase ascii wide
+        $string12_teamviewer_greyware_tool_keyword = /\\TeamViewer_\.ex/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string13_teamviewer_greyware_tool_keyword = /\\TeamViewer_Service\.exe/ nocase ascii wide
+        $string13_teamviewer_greyware_tool_keyword = /\\teamviewer_note\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string14_teamviewer_greyware_tool_keyword = /\\TeamViewerSession\\shell\\open/ nocase ascii wide
@@ -9362,37 +9932,40 @@ rule teamviewer_greyware_tool_keyword
         $string39_teamviewer_greyware_tool_keyword = /TeamViewer_Hooks\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string40_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string40_teamviewer_greyware_tool_keyword = /TeamViewer_Service\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string41_teamviewer_greyware_tool_keyword = /TeamViewer_Setup_x64\.exe/ nocase ascii wide
+        $string41_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string42_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SETUP_X64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string42_teamviewer_greyware_tool_keyword = /TeamViewer_Setup_x64\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string43_teamviewer_greyware_tool_keyword = /TeamViewer_VirtualDeviceDriver/ nocase ascii wide
+        $string43_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SETUP_X64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string44_teamviewer_greyware_tool_keyword = /TeamViewer_XPSDriverFilter/ nocase ascii wide
+        $string44_teamviewer_greyware_tool_keyword = /TeamViewer_VirtualDeviceDriver/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string45_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
+        $string45_teamviewer_greyware_tool_keyword = /TeamViewer_XPSDriverFilter/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string46_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string47_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
+        $string47_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string48_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
+        $string48_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string49_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        $string49_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string50_teamviewer_greyware_tool_keyword = /teamviewervpn\.sys/ nocase ascii wide
+        $string50_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
+        // Reference: https://www.teamviewer.com/
+        $string51_teamviewer_greyware_tool_keyword = /teamviewervpn\.sys/ nocase ascii wide
 
     condition:
         any of them
@@ -9787,6 +10360,178 @@ rule Ultrareach_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Ultrareach_VPN_greyware_tool_keyword = /mjnbclmflcpookeapghfhapeffmpodij/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule UltraVNC_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'UltraVNC' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "UltraVNC"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string1_UltraVNC_greyware_tool_keyword = /\sstart\suvnc_service/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string2_UltraVNC_greyware_tool_keyword = /\sstop\suvnc_service/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string3_UltraVNC_greyware_tool_keyword = /\sultravnc\.ini\s/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string4_UltraVNC_greyware_tool_keyword = /\svnc\.ini\s/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string5_UltraVNC_greyware_tool_keyword = /\"publisher\":\"uvnc\sbvba/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string6_UltraVNC_greyware_tool_keyword = /\/downloads\/ultravnc\.html/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string7_UltraVNC_greyware_tool_keyword = /\\127\.0\.0\.1\-5900\.vnc/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string8_UltraVNC_greyware_tool_keyword = /\\AppData\\Roaming\\.{0,1000}\-5900\.vnc/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string9_UltraVNC_greyware_tool_keyword = /\\AppData\\Roaming\\UltraVNC\\/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string10_UltraVNC_greyware_tool_keyword = /\\createpassword\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string11_UltraVNC_greyware_tool_keyword = /\\CurrentVersion\\Uninstall\\Ultravnc2_is1\\/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string12_UltraVNC_greyware_tool_keyword = /\\InventoryApplicationFile\\ultravnc_/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string13_UltraVNC_greyware_tool_keyword = /\\options\.vnc/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string14_UltraVNC_greyware_tool_keyword = /\\Services\\EventLog\\Application\\UltraVNC\\/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string15_UltraVNC_greyware_tool_keyword = /\\SOFTWARE\\ORL\\VNCHooks\\Application_Prefs\\WinVNC/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string16_UltraVNC_greyware_tool_keyword = /\\ultravnc\.cer/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string17_UltraVNC_greyware_tool_keyword = /\\UltraVNC\.ini/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string18_UltraVNC_greyware_tool_keyword = /\\uvnc\sbvba\\UltraVNC\\/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string19_UltraVNC_greyware_tool_keyword = /\\uvnc_launch\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string20_UltraVNC_greyware_tool_keyword = /\\uvnc_settings\.ex/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string21_UltraVNC_greyware_tool_keyword = /\\uvnc_settings\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string22_UltraVNC_greyware_tool_keyword = /\\uvnckeyboardhelper\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string23_UltraVNC_greyware_tool_keyword = /\\vncviewer\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string24_UltraVNC_greyware_tool_keyword = /\\winvnc\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string25_UltraVNC_greyware_tool_keyword = /\\winvncsc\.exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string26_UltraVNC_greyware_tool_keyword = /\\winwvc\.exe	/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string27_UltraVNC_greyware_tool_keyword = /bvba_UltraVNC_.{0,1000}_exe/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string28_UltraVNC_greyware_tool_keyword = /certutil\.exe.{0,1000}\s\-addstore\s\"TrustedPublisher\".{0,1000}ultravnc\.cer/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string29_UltraVNC_greyware_tool_keyword = /\'Company\'\>UltraVNC\<\/Data\>/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string30_UltraVNC_greyware_tool_keyword = /\'Description\'\>VNC\sserver\<\/Data\>/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string31_UltraVNC_greyware_tool_keyword = /firewall\sadd\sallowedprogram\s.{0,1000}vncviewer\.exe.{0,1000}\sENABLE\sALL/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string32_UltraVNC_greyware_tool_keyword = /firewall\sadd\sallowedprogram\s.{0,1000}winvnc\.exe.{0,1000}\sENABLE\sALL/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string33_UltraVNC_greyware_tool_keyword = /firewall\sadd\sportopening\sTCP\s5800\svnc5800/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string34_UltraVNC_greyware_tool_keyword = /firewall\sadd\sportopening\sTCP\s5900\svnc5900/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string35_UltraVNC_greyware_tool_keyword = /HKCR\\\.vnc/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string36_UltraVNC_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\uvnc\sbvba\\/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string37_UltraVNC_greyware_tool_keyword = /UltraVNC\sLauncher\.lnk/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string38_UltraVNC_greyware_tool_keyword = /ultravnc\smslogonacl/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string39_UltraVNC_greyware_tool_keyword = /UltraVNC\sRepeater\.lnk/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string40_UltraVNC_greyware_tool_keyword = /UltraVNC\sServer\sSettings\.lnk/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string41_UltraVNC_greyware_tool_keyword = /UltraVNC\sServer\.lnk/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string42_UltraVNC_greyware_tool_keyword = /ultravnc\stestauth/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string43_UltraVNC_greyware_tool_keyword = /UltraVNC\sViewer\.lnk/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string44_UltraVNC_greyware_tool_keyword = /UltraVNC_.{0,1000}_X86_Setup/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string45_UltraVNC_greyware_tool_keyword = /ULTRAVNC_1.{0,1000}_X86_SETUP\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string46_UltraVNC_greyware_tool_keyword = /ultravnc_repeater/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string47_UltraVNC_greyware_tool_keyword = /ultravnc_server/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string48_UltraVNC_greyware_tool_keyword = /ultravnc_viewer/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string49_UltraVNC_greyware_tool_keyword = /VNCviewer\sConfig\sFile/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string50_UltraVNC_greyware_tool_keyword = /VncViewer\.Config/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string51_UltraVNC_greyware_tool_keyword = /VNCVIEWER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: UltraVNC remote access software usage
+        // Reference: https://uvnc.com/downloads/ultravnc.html
+        $string52_UltraVNC_greyware_tool_keyword = /WinVNC\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -10401,12 +11146,15 @@ rule wbadmin_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: hinder recovery efforts with wbadmin
+        // Reference: N/A
+        $string1_wbadmin_greyware_tool_keyword = /wbadmin\sdelete\sbackup/ nocase ascii wide
         // Description: Wbadmin allows administrators to manage and automate backup and recovery operations in Windows systems. Adversaries may abuse wbadmin to manipulate backups and restore points as part of their evasion tactics. This can include deleting backup files. disabling backup tasks. or tampering with backup configurations to hinder recovery efforts and potentially erase traces of their malicious activities. By interfering with backups. adversaries can make it more challenging for defenders to restore systems and detect their presence.
         // Reference: N/A
-        $string1_wbadmin_greyware_tool_keyword = /wbadmin\sDELETE\sSYSTEMSTATEBACKUP\s\-deleteOldest/ nocase ascii wide
+        $string2_wbadmin_greyware_tool_keyword = /wbadmin\sDELETE\sSYSTEMSTATEBACKUP\s\-deleteOldest/ nocase ascii wide
         // Description: Wbadmin allows administrators to manage and automate backup and recovery operations in Windows systems. Adversaries may abuse wbadmin to manipulate backups and restore points as part of their evasion tactics. This can include deleting backup files. disabling backup tasks. or tampering with backup configurations to hinder recovery efforts and potentially erase traces of their malicious activities. By interfering with backups. adversaries can make it more challenging for defenders to restore systems and detect their presence.
         // Reference: N/A
-        $string2_wbadmin_greyware_tool_keyword = /wbadmin\sDELETE\sSYSTEMSTATEBACKUP/ nocase ascii wide
+        $string3_wbadmin_greyware_tool_keyword = /wbadmin\sDELETE\sSYSTEMSTATEBACKUP/ nocase ascii wide
 
     condition:
         any of them
@@ -10776,60 +11524,63 @@ rule wmic_greyware_tool_keyword
         // Description: WMIC suspicious transfer 
         // Reference: N/A
         $string10_wmic_greyware_tool_keyword = /start\swmic\s\/node:\@C:\\.{0,1000}\.txt\s\/user:.{0,1000}\/password:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
+        // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
+        // Reference: N/A
+        $string11_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s{\$__wmic_greyware_tool_keyword\.Delete\(\)\;/ nocase ascii wide
         // Description: Lateral Movement with wmic
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string11_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
+        $string12_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
         // Description: Execute file hosted over SMB on remote system with specified credential
         // Reference: N/A
-        $string12_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\s\/user:.{0,1000}\s\/password:.{0,1000}\sprocess\scall\screate\s\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string13_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\s\/user:.{0,1000}\s\/password:.{0,1000}\sprocess\scall\screate\s\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Remotely start RDP with wmic
         // Reference: N/A
-        $string13_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
+        $string14_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
         // Description: get the currently logged user with wmic
         // Reference: N/A
-        $string14_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
+        $string15_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
         // Description: get the currently logged user with wmic
         // Reference: N/A
-        $string15_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
+        $string16_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
         // Description: get domain name with wmic
         // Reference: N/A
-        $string16_wmic_greyware_tool_keyword = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
+        $string17_wmic_greyware_tool_keyword = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
         // Description: The actor has executed WMIC commands [T1047] to create a copy of the ntds.dit file and SYSTEM registry hive using ntdsutil.exe
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string17_wmic_greyware_tool_keyword = /wmic\sprocess\scall\screate.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\sifm.{0,1000}create\sfull/ nocase ascii wide
+        $string18_wmic_greyware_tool_keyword = /wmic\sprocess\scall\screate.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\sifm.{0,1000}create\sfull/ nocase ascii wide
         // Description: list all running processes and their command lines on a Windows system
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string18_wmic_greyware_tool_keyword = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
+        $string19_wmic_greyware_tool_keyword = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string19_wmic_greyware_tool_keyword = /wmic\sservice\sbrief/ nocase ascii wide
+        $string20_wmic_greyware_tool_keyword = /wmic\sservice\sbrief/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string20_wmic_greyware_tool_keyword = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string21_wmic_greyware_tool_keyword = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string21_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
+        $string22_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string22_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
+        $string23_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string23_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        $string24_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string24_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string25_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string25_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt:.{0,1000}\.exe/ nocase ascii wide
+        $string26_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt:.{0,1000}\.exe/ nocase ascii wide
         // Description: call cmd.exe with wmic
         // Reference: N/A
-        $string26_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
+        $string27_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string27_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string28_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string28_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+        $string29_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
 
     condition:
         any of them

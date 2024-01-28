@@ -10,7 +10,7 @@ rule dnsenum
     strings:
         // Description: multithreaded perl script to enumerate DNS information of a domain and to discover non-contiguous ip blocks.
         // Reference: https://github.com/fwaeytens/dnsenum
-        $string1 = /dnsenum/ nocase ascii wide
+        $string1 = /dnsenum\.pl/ nocase ascii wide
 
     condition:
         any of them

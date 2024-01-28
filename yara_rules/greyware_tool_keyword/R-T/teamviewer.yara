@@ -13,40 +13,40 @@ rule teamviewer
         $string1 = /\.router\.teamviewer\.com/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string2 = /\\AppData\\Roaming\\TeamViewer/ nocase ascii wide
+        $string2 = /\/Create\s\/TN\sTVInstallRestore\s\/TR\s/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string3 = /\\CurrentControlSet\\Services\\TeamViewer/ nocase ascii wide
+        $string3 = /\\AppData\\Roaming\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string4 = /\\Program\sFiles\\TeamViewer/ nocase ascii wide
+        $string4 = /\\CurrentControlSet\\Services\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string5 = /\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
+        $string5 = /\\Program\sFiles\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string6 = /\\Software\\TeamViewer\\Temp/ nocase ascii wide
+        $string6 = /\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string7 = /\\TeamViewer\.exe/ nocase ascii wide
+        $string7 = /\\Software\\TeamViewer\\Temp/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string8 = /\\TeamViewer\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string9 = /\\TeamViewer\\Connections\.txt/ nocase ascii wide
+        $string9 = /\\TeamViewer\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string10 = /\\TeamViewer\\Connections_incoming\.txt/ nocase ascii wide
+        $string10 = /\\TeamViewer\\Connections\.txt/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string11 = /\\TeamViewer_\.ex/ nocase ascii wide
+        $string11 = /\\TeamViewer\\Connections_incoming\.txt/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string12 = /\\teamviewer_note\.exe/ nocase ascii wide
+        $string12 = /\\TeamViewer_\.ex/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string13 = /\\TeamViewer_Service\.exe/ nocase ascii wide
+        $string13 = /\\teamviewer_note\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string14 = /\\TeamViewerSession\\shell\\open/ nocase ascii wide
@@ -127,37 +127,40 @@ rule teamviewer
         $string39 = /TeamViewer_Hooks\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string40 = /TEAMVIEWER_SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string40 = /TeamViewer_Service\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string41 = /TeamViewer_Setup_x64\.exe/ nocase ascii wide
+        $string41 = /TEAMVIEWER_SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string42 = /TEAMVIEWER_SETUP_X64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string42 = /TeamViewer_Setup_x64\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string43 = /TeamViewer_VirtualDeviceDriver/ nocase ascii wide
+        $string43 = /TEAMVIEWER_SETUP_X64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string44 = /TeamViewer_XPSDriverFilter/ nocase ascii wide
+        $string44 = /TeamViewer_VirtualDeviceDriver/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string45 = /TeamViewer15_Logfile\.log/ nocase ascii wide
+        $string45 = /TeamViewer_XPSDriverFilter/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string46 = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string47 = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
+        $string47 = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string48 = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
+        $string48 = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string49 = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        $string49 = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string50 = /teamviewervpn\.sys/ nocase ascii wide
+        $string50 = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
+        // Reference: https://www.teamviewer.com/
+        $string51 = /teamviewervpn\.sys/ nocase ascii wide
 
     condition:
         any of them

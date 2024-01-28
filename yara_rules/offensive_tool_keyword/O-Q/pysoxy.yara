@@ -10,13 +10,19 @@ rule pysoxy
     strings:
         // Description: A small Socks5 Proxy Server in Python
         // Reference: https://github.com/MisterDaneel/pysoxy
-        $string1 = /\/pysoxy\.py/ nocase ascii wide
+        $string1 = /\/pysoxy\.git/ nocase ascii wide
         // Description: A small Socks5 Proxy Server in Python
         // Reference: https://github.com/MisterDaneel/pysoxy
-        $string2 = /\\pysoxy\.py/ nocase ascii wide
+        $string2 = /\/pysoxy\.py/ nocase ascii wide
         // Description: A small Socks5 Proxy Server in Python
         // Reference: https://github.com/MisterDaneel/pysoxy
-        $string3 = /MisterDaneel\/pysoxy/ nocase ascii wide
+        $string3 = /\\pysoxy\.py/ nocase ascii wide
+        // Description: A small Socks5 Proxy Server in Python
+        // Reference: https://github.com/MisterDaneel/pysoxy
+        $string4 = /MisterDaneel\/pysoxy/ nocase ascii wide
+        // Description: A small Socks5 Proxy Server in Python
+        // Reference: https://github.com/MisterDaneel/pysoxy
+        $string5 = /pysoxy\-master/ nocase ascii wide
 
     condition:
         any of them

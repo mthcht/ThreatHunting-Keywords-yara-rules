@@ -22,13 +22,13 @@ rule BeRoot
         $string4 = /\/gtfobins\.py/ nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string5 = /AlessandroZ\/BeRoot/ nocase ascii wide
-        // Description: Privilege Escalation Project - Windows / Linux / Mac 
-        // Reference: https://github.com/AlessandroZ/BeRoot
-        $string6 = /AlessandroZ\/BeRoot/ nocase ascii wide
+        $string5 = /\\BeRoot/ nocase ascii wide
         // Description: BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege.
         // Reference: https://github.com/AlessandroZ/BeRoot
-        $string7 = /BeRoot/ nocase ascii wide
+        $string6 = /AlessandroZ\/BeRoot/ nocase ascii wide
+        // Description: Privilege Escalation Project - Windows / Linux / Mac 
+        // Reference: https://github.com/AlessandroZ/BeRoot
+        $string7 = /AlessandroZ\/BeRoot/ nocase ascii wide
         // Description: Privilege Escalation Project - Windows / Linux / Mac 
         // Reference: https://github.com/AlessandroZ/BeRoot
         $string8 = /beRoot\.exe/ nocase ascii wide

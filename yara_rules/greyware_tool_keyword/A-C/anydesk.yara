@@ -41,27 +41,36 @@ rule anydesk
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
         $string11 = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string12 = /0DBF152DEAF0B981A8A938D53F769DB8/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string13 = /9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string14 = /9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string12 = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
+        $string15 = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string13 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string16 = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string14 = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string17 = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string15 = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string18 = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string16 = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string19 = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string17 = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string20 = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string18 = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string21 = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them

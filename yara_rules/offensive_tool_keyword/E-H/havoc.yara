@@ -311,9 +311,6 @@ rule havoc
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
         $string101 = /dcenum\s/ nocase ascii wide
-        // Description: Havoc is a modern and malleable post-exploitation command and control framework
-        // Reference: https://github.com/HavocFramework/Havoc
-        $string102 = /powerpick\s/ nocase ascii wide
 
     condition:
         any of them

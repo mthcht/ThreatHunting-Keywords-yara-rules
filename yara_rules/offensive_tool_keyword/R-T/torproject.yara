@@ -71,36 +71,54 @@ rule torproject
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string21 = /dnf\sinstall\stor\s\-y/ nocase ascii wide
+        // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
+        // Reference: torproject.org
+        $string22 = /http:\/\/.{0,1000}\.onion/ nocase ascii wide
+        // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
+        // Reference: torproject.org
+        $string23 = /http:\/\/.{0,1000}\.tor2web/ nocase ascii wide
+        // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
+        // Reference: torproject.org
+        $string24 = /http:\/\/.{0,1000}\.torlink/ nocase ascii wide
+        // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
+        // Reference: torproject.org
+        $string25 = /https:\/\/.{0,1000}\.onion/ nocase ascii wide
+        // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
+        // Reference: torproject.org
+        $string26 = /https:\/\/.{0,1000}\.tor2web/ nocase ascii wide
+        // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
+        // Reference: torproject.org
+        $string27 = /https:\/\/.{0,1000}\.torlink/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string22 = /install\stor\sdeb\.torproject\.org\-keyring/ nocase ascii wide
+        $string28 = /install\stor\sdeb\.torproject\.org\-keyring/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string23 = /rpm\.torproject\.org\/.{0,1000}public_gpg\.key/ nocase ascii wide
+        $string29 = /rpm\.torproject\.org\/.{0,1000}public_gpg\.key/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string24 = /taskkill\s\/IM\stor\.exe\s\/F/ nocase ascii wide
+        $string30 = /taskkill\s\/IM\stor\.exe\s\/F/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string25 = /tor\s\-\-DataDirectory\s/ nocase ascii wide
+        $string31 = /tor\s\-\-DataDirectory\s/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string26 = /TorBrowser\-.{0,1000}macos_ALL\.dmg/ nocase ascii wide
+        $string32 = /TorBrowser\-.{0,1000}macos_ALL\.dmg/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string27 = /torbrowser\-install\-.{0,1000}_ALL\.exe/ nocase ascii wide
+        $string33 = /torbrowser\-install\-.{0,1000}_ALL\.exe/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string28 = /torbrowser\-install\-win.{0,1000}\.exe/ nocase ascii wide
+        $string34 = /torbrowser\-install\-win.{0,1000}\.exe/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string29 = /tor\-browser\-linux.{0,1000}_ALL\.tar\.xz/ nocase ascii wide
+        $string35 = /tor\-browser\-linux.{0,1000}_ALL\.tar\.xz/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string30 = /torproject/ nocase ascii wide
+        $string36 = /torproject/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
-        $string31 = /torproject\.org\/dist\/torbrowser\/.{0,1000}\./ nocase ascii wide
+        $string37 = /torproject\.org\/dist\/torbrowser\/.{0,1000}\./ nocase ascii wide
 
     condition:
         any of them

@@ -663,27 +663,36 @@ rule anydesk_greyware_tool_keyword
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
         $string11_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string12_anydesk_greyware_tool_keyword = /0DBF152DEAF0B981A8A938D53F769DB8/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string13_anydesk_greyware_tool_keyword = /9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string14_anydesk_greyware_tool_keyword = /9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string12_anydesk_greyware_tool_keyword = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
+        $string15_anydesk_greyware_tool_keyword = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string13_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string16_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string14_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string17_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string15_anydesk_greyware_tool_keyword = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string18_anydesk_greyware_tool_keyword = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string16_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string19_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string17_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string20_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string18_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string21_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -1532,6 +1541,25 @@ rule cat_greyware_tool_keyword
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
         $string20_cat_greyware_tool_keyword = /cat\s\/etc\/sudoers/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule catbox_moe_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'catbox.moe' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "catbox.moe"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: The cutest free file host you've ever seen - abused by threat actors
+        // Reference: https://files[.]catbox.moe
+        $string1_catbox_moe_greyware_tool_keyword = /https:\/\/files\.catbox\.moe\// nocase ascii wide
 
     condition:
         any of them
@@ -7181,6 +7209,25 @@ rule pyshark_greyware_tool_keyword
 }
 
 
+rule qu_ax_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'qu.ax' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "qu.ax"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: qu.ax is a quick and private file hosting service - abused by threat actors
+        // Reference: https://qu[.]ax/
+        $string1_qu_ax_greyware_tool_keyword = /https:\/\/qu\.ax\/.{0,1000}\./ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule QuasarRAT_greyware_tool_keyword
 {
     meta:
@@ -12028,6 +12075,9 @@ rule __greyware_tool_keyword
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
         $string30___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
+        // Description: Suspicious tlds with suspicious file types
+        // Reference: N/A
+        $string31___greyware_tool_keyword = /https:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

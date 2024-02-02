@@ -10,10 +10,10 @@ rule RandomPS_Scripts
     strings:
         // Description: PowerShell wrapper for a Cylance Bypass
         // Reference: https://github.com/xorrior/RandomPS-Scripts
-        $string1 = /DisableCylance\.ps1/ nocase ascii wide
+        $string1 = /\?function\sInvoke\-CylanceDisarm/ nocase ascii wide
         // Description: PowerShell wrapper for a Cylance Bypass
         // Reference: https://github.com/xorrior/RandomPS-Scripts
-        $string2 = /\?function\sInvoke\-CylanceDisarm/ nocase ascii wide
+        $string2 = /DisableCylance\.ps1/ nocase ascii wide
         // Description: PowerShell wrapper for a Cylance Bypass
         // Reference: https://github.com/xorrior/RandomPS-Scripts
         $string3 = /Invoke\-CylanceDisarm\s\-ProcessID\s.{0,1000}\s\-DisableMemDef/ nocase ascii wide

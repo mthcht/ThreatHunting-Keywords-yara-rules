@@ -100,12 +100,13 @@ def generate_yara_rules(output_directory):
                 keyword = re.sub(r'^\*','', keyword)
                 keyword = re.sub(r'\*$','', keyword)
                 escaped_keyword = keyword.replace("\\", "\\\\").replace("\"", "\\\"")\
-                .replace(".", "\\.").replace("*", ".{0,1000}").replace(" ", "\\s")\
-                .replace("|", "\\|").replace("/", "\\/").replace("(", "\\(").replace(")", "\\)")\
-                .replace('+','\+').replace("&","\\&").replace('?','\?').replace('[','\[')\
-                .replace(']','\]').replace("'","\\'").replace('-','\-').replace('!','\!').replace('#','\#')\
-                .replace('"','\"').replace('^','\^').replace('%','\%').replace('=','\=').replace('$','\$')\
-                .replace(';','\;').replace('<','\<').replace('>','\>').replace('@','\@')
+                .replace(".", "\\.").replace(" ", "\\s").replace("|", "\\|").replace("/", "\\/")\
+                .replace("(", "\\(").replace(")", "\\)").replace('+','\+').replace("&","\\&")\
+                .replace('?','\?').replace('[','\[').replace(']','\]').replace("'","\\'").replace('-','\-')\
+                .replace('!','\!').replace('#','\#').replace('"','\"').replace('^','\^').replace('%','\%')\
+                .replace('=','\=').replace('$','\$').replace(';','\;').replace('<','\<').replace('>','\>')\
+                .replace('@','\@').replace('}','\}').replace('{','\{').replace(',','\,').replace('`','\`')\
+                .replace('~','\~').replace(':','\:').replace("*", ".{0,1000}")
                 escaped_keyword = re.sub(r'^\.\*|\.\*$', '', escaped_keyword) # avoiding greedy regex for performance
                 description_sanitized = description.replace("\n", " ")
                 outfile.write(f"        // Description: {description_sanitized}\n")
@@ -119,3 +120,5 @@ def generate_yara_rules(output_directory):
 if __name__ == "__main__":
     output_directory = os.path.join('..', 'yara_rules')
     generate_yara_rules(output_directory)
+
+

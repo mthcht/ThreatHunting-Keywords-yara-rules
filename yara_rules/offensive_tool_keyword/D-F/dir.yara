@@ -10,7 +10,7 @@ rule dir
     strings:
         // Description: Find the IDs of protected secrets for a specific user
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string1 = /dir\sC:\\Users\\.{0,1000}\\AppData\\Local\\Microsoft\\Credentials/ nocase ascii wide
+        $string1 = /dir\sC\:\\Users\\.{0,1000}\\AppData\\Local\\Microsoft\\Credentials/ nocase ascii wide
 
     condition:
         any of them

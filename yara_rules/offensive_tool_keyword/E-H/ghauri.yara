@@ -97,10 +97,10 @@ rule ghauri
         $string29 = /ghauri\-main\.zip/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string30 = /http:\/\/www\.site\.com\/article\.php\?id\=1/ nocase ascii wide
+        $string30 = /http\:\/\/www\.site\.com\/article\.php\?id\=1/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
-        $string31 = /http:\/\/www\.site\.com\/vuln\.php\?id\=1\s\-\-dbs/ nocase ascii wide
+        $string31 = /http\:\/\/www\.site\.com\/vuln\.php\?id\=1\s\-\-dbs/ nocase ascii wide
         // Description: A cross-platform python based advanced sql injections detection & exploitation tool
         // Reference: https://github.com/r0oth3x49/ghauri
         $string32 = /Nasir\sKhan\s\(r0ot\sh3x49\)/ nocase ascii wide

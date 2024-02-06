@@ -13,10 +13,10 @@ rule dsquery
         $string1 = /dsquery\s.{0,1000}\s\-filter\s.{0,1000}\(objectClass\=trustedDomain\).{0,1000}\s\-attr\s/ nocase ascii wide
         // Description: Finding users Not Required to Have a Password
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
-        $string2 = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl:1\.2\.840\.113556\.1\.4\.803:\=32/ nocase ascii wide
+        $string2 = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32/ nocase ascii wide
         // Description: Finding accounts with Kerberos Pre-Authentication Disabled
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
-        $string3 = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl:1\.2\.840\.113556\.1\.4\.803:\=4194304/ nocase ascii wide
+        $string3 = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=4194304/ nocase ascii wide
         // Description: Finding accounts with constrained delegation
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
         $string4 = /\-filter\s.{0,1000}\(\&\(objectClass\=User\)\(msDS\-AllowedToDelegateTo\=/ nocase ascii wide
@@ -28,7 +28,7 @@ rule dsquery
         $string6 = /\-filter\s.{0,1000}\(\&\(objectClass\=User\)\(serviceprincipalname\=.{0,1000}\)\(samaccountname\=.{0,1000}\s\-limit\s0\s\-attr\ssamaccountname\sserviceprincipalname/ nocase ascii wide
         // Description: Finding accounts with unconstrained delegation
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
-        $string7 = /\-filter\s.{0,1000}\(userAccountControl:1\.2\.840\.113556\.1\.4\.803:\=524288\)/ nocase ascii wide
+        $string7 = /\-filter\s.{0,1000}\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)/ nocase ascii wide
 
     condition:
         any of them

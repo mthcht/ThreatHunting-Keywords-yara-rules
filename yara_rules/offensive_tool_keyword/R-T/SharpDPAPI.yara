@@ -10,37 +10,37 @@ rule SharpDPAPI
     strings:
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string1 = /\sbackupkey.{0,1000}\s\/server:.{0,1000}\s\/file.{0,1000}\.pvk/ nocase ascii wide
+        $string1 = /\sbackupkey.{0,1000}\s\/server\:.{0,1000}\s\/file.{0,1000}\.pvk/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string2 = /\sblob\s\/target:.{0,1000}\.bin.{0,1000}\s\/pvk:/ nocase ascii wide
+        $string2 = /\sblob\s\/target\:.{0,1000}\.bin.{0,1000}\s\/pvk\:/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string3 = /\sblob\s\/target:.{0,1000}\.bin.{0,1000}\s\/unprotect/ nocase ascii wide
+        $string3 = /\sblob\s\/target\:.{0,1000}\.bin.{0,1000}\s\/unprotect/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string4 = /\scredentials\s\/pvk:/ nocase ascii wide
+        $string4 = /\scredentials\s\/pvk\:/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string5 = /\skeepass\s\/unprotect/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string6 = /\sps\s\/target:.{0,1000}\.xml\s\/unprotect/ nocase ascii wide
+        $string6 = /\sps\s\/target\:.{0,1000}\.xml\s\/unprotect/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string7 = /\svaults\s\/target:.{0,1000}\s\/pvk:/ nocase ascii wide
+        $string7 = /\svaults\s\/target\:.{0,1000}\s\/pvk\:/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string8 = /\.exe\s\scertificates\s\/pvk:.{0,1000}\.pvk/ nocase ascii wide
+        $string8 = /\.exe\s\scertificates\s\/pvk\:.{0,1000}\.pvk/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string9 = /\.exe\sbackupkey\s\/nowrap\s.{0,1000}\.pvk/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string10 = /\.exe\scertificates\s\/mkfile:.{0,1000}\.txt/ nocase ascii wide
+        $string10 = /\.exe\scertificates\s\/mkfile\:.{0,1000}\.txt/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string11 = /\.exe\scredentials\s\/pvk:.{0,1000}\.pvk/ nocase ascii wide
+        $string11 = /\.exe\scredentials\s\/pvk\:.{0,1000}\.pvk/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string12 = /\.exe\smachinetriage/ nocase ascii wide
@@ -52,7 +52,7 @@ rule SharpDPAPI
         $string14 = /\.exe\smasterkeys\s\/hashes/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
-        $string15 = /\.exe\striage\s\/password:/ nocase ascii wide
+        $string15 = /\.exe\striage\s\/password\:/ nocase ascii wide
         // Description: SharpDPAPI is a C# port of some Mimikatz DPAPI functionality.
         // Reference: https://github.com/GhostPack/SharpDPAPI
         $string16 = /\/SharpDPAPI\.git/ nocase ascii wide

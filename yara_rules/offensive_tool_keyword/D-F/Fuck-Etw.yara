@@ -25,10 +25,10 @@ rule Fuck_Etw
         $string5 = /\[\+\]\sETW\sPatched.{0,1000}\sNo\sLogs\sNo\sCrime\s\!/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string6 = /\[i\]\sHooked\sNtdll\sBase\sAddress\s:\s/ nocase ascii wide
+        $string6 = /\[i\]\sHooked\sNtdll\sBase\sAddress\s\:\s/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
-        $string7 = /\[i\]\sUnhooked\sNtdll\sBase\sAddress:\s/ nocase ascii wide
+        $string7 = /\[i\]\sUnhooked\sNtdll\sBase\sAddress\:\s/ nocase ascii wide
         // Description: Bypass the Event Trace Windows(ETW) and unhook ntdll.
         // Reference: https://github.com/unkvolism/Fuck-Etw
         $string8 = /\\etw\-fuck\.cpp/ nocase ascii wide

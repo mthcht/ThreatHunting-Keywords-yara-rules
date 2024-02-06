@@ -94,16 +94,16 @@ rule GraphRunner
         $string28 = /DON\'T\sRUN\sTHIS\sIN\sYOUR\sWEB\sROOT\sAS\sIT\sWILL\sOUTPUT\sACCESS\sTOKENS/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string29 = /filetype:credentials.{0,1000}\sAND\s\(\(client_id\sOR\sclientID\)\sAND\s\(tenant\)\sAND\s\(secret\)\)/ nocase ascii wide
+        $string29 = /filetype\:credentials.{0,1000}\sAND\s\(\(client_id\sOR\sclientID\)\sAND\s\(tenant\)\sAND\s\(secret\)\)/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string30 = /filetype:credentials.{0,1000}\sAND\s\(\\\"AWS_ACCESS_KEY_ID\\\"\sOR\s\\\"AWS_SECRET_ACCESS_KEY\\\"/ nocase ascii wide
+        $string30 = /filetype\:credentials.{0,1000}\sAND\s\(\\\"AWS_ACCESS_KEY_ID\\\"\sOR\s\\\"AWS_SECRET_ACCESS_KEY\\\"/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string31 = /filetype:credentials.{0,1000}\sAND\s\(begin\sNEAR\(n\=1\)\s\(RSA\sOR\sOPENSSH\sOR\sDSA\sOR\sEC\sOR\sPGP\)\sNEAR\(n\=1\)\sKEY\)/ nocase ascii wide
+        $string31 = /filetype\:credentials.{0,1000}\sAND\s\(begin\sNEAR\(n\=1\)\s\(RSA\sOR\sOPENSSH\sOR\sDSA\sOR\sEC\sOR\sPGP\)\sNEAR\(n\=1\)\sKEY\)/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string32 = /filetype:pem.{0,1000}AND\s\(\\\"BEGIN\sRSA\sPRIVATE\sKEY\\\"\sOR\s\\\"BEGIN\sDSA\sPRIVATE\sKEY\\\"\sOR\s\\\"BEGIN\sEC\sPRIVATE\sKEY\\/ nocase ascii wide
+        $string32 = /filetype\:pem.{0,1000}AND\s\(\\\"BEGIN\sRSA\sPRIVATE\sKEY\\\"\sOR\s\\\"BEGIN\sDSA\sPRIVATE\sKEY\\\"\sOR\s\\\"BEGIN\sEC\sPRIVATE\sKEY\\/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
         $string33 = /Get\-AzureADUsers\s/ nocase ascii wide
@@ -136,13 +136,13 @@ rule GraphRunner
         $string42 = /GraphRunnerGUI\.html/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string43 = /Guest\sUser\sPolicy:\sGuest\susers\shave\sthe\ssame\saccess\sas\smembers\s\(most\sinclusive\)/ nocase ascii wide
+        $string43 = /Guest\sUser\sPolicy\:\sGuest\susers\shave\sthe\ssame\saccess\sas\smembers\s\(most\sinclusive\)/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string44 = /http:\/\/localhost:8000\/emailviewer\.html/ nocase ascii wide
+        $string44 = /http\:\/\/localhost\:8000\/emailviewer\.html/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string45 = /https:\/\/YOURREDIRECTWEBSERVER\.azurewebsites\.net/ nocase ascii wide
+        $string45 = /https\:\/\/YOURREDIRECTWEBSERVER\.azurewebsites\.net/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
         $string46 = /iamlordvoldemort\@31337schoolofhackingandwizardry\.com/ nocase ascii wide
@@ -238,7 +238,7 @@ rule GraphRunner
         $string76 = /Invoke\-SecurityGroupCloner/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string77 = /Listening\sfor\sincoming\srequests\son\shttp:\/\/localhost:\$port\// nocase ascii wide
+        $string77 = /Listening\sfor\sincoming\srequests\son\shttp\:\/\/localhost\:\$port\// nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
         $string78 = /List\-GraphRunnerModules/ nocase ascii wide
@@ -247,7 +247,7 @@ rule GraphRunner
         $string79 = /PHPRedirector.{0,1000}AutoOAuthFlow\.py/ nocase ascii wide
         // Description: A Post-exploitation Toolset for Interacting with the Microsoft Graph API
         // Reference: https://github.com/dafthack/GraphRunner
-        $string80 = /v\-Q8Q~fEXAMPLEEXAMPLEDsmKpQw_Wwd57\-albMZ/ nocase ascii wide
+        $string80 = /v\-Q8Q\~fEXAMPLEEXAMPLEDsmKpQw_Wwd57\-albMZ/ nocase ascii wide
 
     condition:
         any of them

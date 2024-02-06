@@ -13,7 +13,7 @@ rule RDPCredentialStealer
         $string1 = /\/RDPCredentialStealer\.git/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
-        $string2 = /:\\Users\\Public\\Music\\.{0,1000}\.dll/ nocase ascii wide
+        $string2 = /\:\\Users\\Public\\Music\\.{0,1000}\.dll/ nocase ascii wide
         // Description: RDPCredentialStealer it's a malware that steal credentials provided by users in RDP using API Hooking with Detours in C++
         // Reference: https://github.com/S12cybersecurity/RDPCredentialStealer
         $string3 = /\\Public\\Music\\RDPCreds\.txt/ nocase ascii wide

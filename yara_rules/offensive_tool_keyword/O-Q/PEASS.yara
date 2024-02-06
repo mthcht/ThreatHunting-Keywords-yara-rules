@@ -13,7 +13,7 @@ rule PEASS
         $string1 = /\slinpeas\.sh\s/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
-        $string2 = /\s\-linpeas\=http:\/\/127\.0\.0\.1\/linpeas\.sh/ nocase ascii wide
+        $string2 = /\s\-linpeas\=http\:\/\/127\.0\.0\.1\/linpeas\.sh/ nocase ascii wide
         // Description: PEASS - Privilege Escalation Awesome Scripts SUITE
         // Reference: https://github.com/carlospolop/PEASS-ng
         $string3 = /\/linpeas\.sh/ nocase ascii wide

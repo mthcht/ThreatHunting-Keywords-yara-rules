@@ -106,7 +106,7 @@ rule RDE1
         $string32 = /crde\shttps\s\-/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string33 = /crde::utils::checker/ nocase ascii wide
+        $string33 = /crde\:\:utils\:\:checker/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
         $string34 = /crde_x64\.exe\sdns\s\-f\s/ nocase ascii wide
@@ -130,13 +130,13 @@ rule RDE1
         $string40 = /g0h4n\/RDE1/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string41 = /methods::dns::dns_exfiltrator/ nocase ascii wide
+        $string41 = /methods\:\:dns\:\:dns_exfiltrator/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string42 = /methods::https::https_exfiltrator/ nocase ascii wide
+        $string42 = /methods\:\:https\:\:https_exfiltrator/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
-        $string43 = /methods::icmp::icmp_exfiltrator/ nocase ascii wide
+        $string43 = /methods\:\:icmp\:\:icmp_exfiltrator/ nocase ascii wide
         // Description: RDE1 (Rusty Data Exfiltrator) is client and server tool allowing auditor to extract files from DNS and HTTPS protocols written in Rust
         // Reference: https://github.com/g0h4n/RDE1
         $string44 = /RDE1\-main\.zip/ nocase ascii wide

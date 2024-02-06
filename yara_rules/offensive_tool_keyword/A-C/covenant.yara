@@ -178,16 +178,16 @@ rule covenant
         $string56 = /GruntStager\.exe/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string57 = /http.{0,1000}127\.0\.0\.1:57230/ nocase ascii wide
+        $string57 = /http.{0,1000}127\.0\.0\.1\:57230/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string58 = /http.{0,1000}localhost:57230/ nocase ascii wide
+        $string58 = /http.{0,1000}localhost\:57230/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string59 = /https:\/\/127\.0\.0\.1:7443/ nocase ascii wide
+        $string59 = /https\:\/\/127\.0\.0\.1\:7443/ nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
-        $string60 = /https:\/\/localhost:7443\// nocase ascii wide
+        $string60 = /https\:\/\/localhost\:7443\// nocase ascii wide
         // Description: Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
         $string61 = /obfuscate\.py\sgrunt/ nocase ascii wide

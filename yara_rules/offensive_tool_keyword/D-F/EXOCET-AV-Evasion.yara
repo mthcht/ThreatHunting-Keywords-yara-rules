@@ -46,7 +46,7 @@ rule EXOCET_AV_Evasion
         $string12 = /meterpreter\-in\-go\.exe/ nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
-        $string13 = /Output\smalware\ssample\sselected:\s/ nocase ascii wide
+        $string13 = /Output\smalware\ssample\sselected\:\s/ nocase ascii wide
         // Description: EXOCET - AV-evading undetectable payload delivery tool
         // Reference: https://github.com/tanc7/EXOCET-AV-Evasion
         $string14 = /tanc7\/EXOCET\-AV\-Evasion/ nocase ascii wide

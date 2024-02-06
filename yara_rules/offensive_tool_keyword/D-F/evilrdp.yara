@@ -73,13 +73,13 @@ rule evilrdp
         $string21 = /pscmd\\serverscript\.ps1/ nocase ascii wide
         // Description: Th evil twin of aardwolfgui using the aardwolf RDP client library that gives you extended control over the target and additional scripting capabilities from the command line.
         // Reference: https://github.com/skelsec/evilrdp
-        $string22 = /rdp\+kerberos\-password:\/\/.{0,1000}\?dc\=.{0,1000}proxytype.{0,1000}proxyhost/ nocase ascii wide
+        $string22 = /rdp\+kerberos\-password\:\/\/.{0,1000}\?dc\=.{0,1000}proxytype.{0,1000}proxyhost/ nocase ascii wide
         // Description: Th evil twin of aardwolfgui using the aardwolf RDP client library that gives you extended control over the target and additional scripting capabilities from the command line.
         // Reference: https://github.com/skelsec/evilrdp
-        $string23 = /rdp\+ntlm\-password:\/\/.{0,1000}\@/ nocase ascii wide
+        $string23 = /rdp\+ntlm\-password\:\/\/.{0,1000}\@/ nocase ascii wide
         // Description: Th evil twin of aardwolfgui using the aardwolf RDP client library that gives you extended control over the target and additional scripting capabilities from the command line.
         // Reference: https://github.com/skelsec/evilrdp
-        $string24 = /sendcmd\(.{0,1000}cmd:PSCMDMessage/ nocase ascii wide
+        $string24 = /sendcmd\(.{0,1000}cmd\:PSCMDMessage/ nocase ascii wide
         // Description: Th evil twin of aardwolfgui using the aardwolf RDP client library that gives you extended control over the target and additional scripting capabilities from the command line.
         // Reference: https://github.com/skelsec/evilrdp
         $string25 = /Set\sthe\scorrect\schannel\sname\susing\s\"\"pscmdchannel\"\"\scommand/ nocase ascii wide

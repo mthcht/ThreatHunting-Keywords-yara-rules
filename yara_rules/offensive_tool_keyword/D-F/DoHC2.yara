@@ -43,10 +43,10 @@ rule DoHC2
         $string11 = /\\ExternalC2\\/ nocase ascii wide
         // Description: DoHC2 allows the ExternalC2 library from Ryan Hanson (https://github.com/ryhanson/ExternalC2) to be leveraged for command and control (C2) via DNS over HTTPS (DoH). This is built for the popular Adversary Simulation and Red Team Operations Software Cobalt Strike
         // Reference: https://github.com/SpiderLabs/DoHC2
-        $string12 = /0\.0\.0\.0:2222/ nocase ascii wide
+        $string12 = /0\.0\.0\.0\:2222/ nocase ascii wide
         // Description: DoHC2 allows the ExternalC2 library from Ryan Hanson (https://github.com/ryhanson/ExternalC2) to be leveraged for command and control (C2) via DNS over HTTPS (DoH). This is built for the popular Adversary Simulation and Red Team Operations Software Cobalt Strike
         // Reference: https://github.com/SpiderLabs/DoHC2
-        $string13 = /127\.0\.0\.1:2222/ nocase ascii wide
+        $string13 = /127\.0\.0\.1\:2222/ nocase ascii wide
         // Description: DoHC2 allows the ExternalC2 library from Ryan Hanson (https://github.com/ryhanson/ExternalC2) to be leveraged for command and control (C2) via DNS over HTTPS (DoH). This is built for the popular Adversary Simulation and Red Team Operations Software Cobalt Strike
         // Reference: https://github.com/SpiderLabs/DoHC2
         $string14 = /C2WebSocketHandler\./ nocase ascii wide

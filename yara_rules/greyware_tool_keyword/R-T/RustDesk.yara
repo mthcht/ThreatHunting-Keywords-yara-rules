@@ -13,7 +13,7 @@ rule RustDesk
         $string1 = /\sRustDesk\.exe/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string2 = /\sstart\srustdesk:\/\// nocase ascii wide
+        $string2 = /\sstart\srustdesk\:\/\// nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string3 = /\/home\/user\/rustdesk/ nocase ascii wide

@@ -22,7 +22,7 @@ rule RagingRotator
         $string4 = /\/RagingRotator\.go/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
-        $string5 = /\[\!\]\sValid\slogin.{0,1000}\sexpired\spassword:\s/ nocase ascii wide
+        $string5 = /\[\!\]\sValid\slogin.{0,1000}\sexpired\spassword\:\s/ nocase ascii wide
         // Description: A tool for carrying out brute force attacks against Office 365 with built in IP rotation use AWS gateways.
         // Reference: https://github.com/nickzer0/RagingRotator
         $string6 = /\[\+\]\sValid\slogin.{0,1000}\suser\smust\senroll\sin\sMFA\./ nocase ascii wide

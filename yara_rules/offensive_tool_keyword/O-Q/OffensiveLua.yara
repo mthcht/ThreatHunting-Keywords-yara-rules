@@ -10,7 +10,7 @@ rule OffensiveLua
     strings:
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
-        $string1 = /\sc:\\\\Temp\\\\lua\.log/ nocase ascii wide
+        $string1 = /\sc\:\\\\Temp\\\\lua\.log/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
         $string2 = /\/bin2hex\.lua/ nocase ascii wide
@@ -79,7 +79,7 @@ rule OffensiveLua
         $string23 = /\\x4d\\x5a\\x90\\x00\\x03\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\xff\\xff\\x00\\x00\\xb8\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x40\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf8\\x00\\x00\\x00\\x0e\\x1f\\xba\\x0e\\x00\\xb4\\x09\\xcd\\x21\\xb8\\x01\\x4c\\xcd\\x21\\x54\\x68\\x69\\x73\\x20\\x70\\x72/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
-        $string24 = /C:\\\\temp\\\\test\.txt/ nocase ascii wide
+        $string24 = /C\:\\\\temp\\\\test\.txt/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
         $string25 = /ComputerDefaultsUACBypass\.lua/ nocase ascii wide
@@ -94,7 +94,7 @@ rule OffensiveLua
         $string28 = /hackerhouse\-opensource\/OffensiveLua/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
-        $string29 = /http:\/\/127\.0\.0\.1\/Renge_x64\.exe/ nocase ascii wide
+        $string29 = /http\:\/\/127\.0\.0\.1\/Renge_x64\.exe/ nocase ascii wide
         // Description: Offensive Lua is a collection of offensive security scripts written in Lua with FFI
         // Reference: https://github.com/hackerhouse-opensource/OffensiveLua
         $string30 = /OffensiveLua\-main/ nocase ascii wide

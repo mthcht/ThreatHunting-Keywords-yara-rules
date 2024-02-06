@@ -10,7 +10,7 @@ rule ntlm_pw
     strings:
         // Description: Database of NTLM hashes
         // Reference: https://ntlm.pw
-        $string1 = /https:\/\/ntlm\.pw/ nocase ascii wide
+        $string1 = /https\:\/\/ntlm\.pw/ nocase ascii wide
 
     condition:
         any of them

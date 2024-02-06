@@ -34,10 +34,10 @@ rule bash
         $string8 = /echo\s.{0,1000}\s\/root\/\.bash_history/ nocase ascii wide
         // Description: add a passwordless user 
         // Reference: N/A
-        $string9 = /echo\s.{0,1000}::0:0::\/root:\/bin\/bash.{0,1000}\s\>\>\/etc\/passwd/ nocase ascii wide
+        $string9 = /echo\s.{0,1000}\:\:0\:0\:\:\/root\:\/bin\/bash.{0,1000}\s\>\>\/etc\/passwd/ nocase ascii wide
         // Description: Backdooring APT
         // Reference: N/A
-        $string10 = /echo\s.{0,1000}APT::Update::Pre\-Invoke\s.{0,1000}nohup\sncat\s\-lvp\s.{0,1000}\s\-e\s\/bin\/bash\s.{0,1000}\s\>\s\/etc\/apt\/apt\.conf\.d\// nocase ascii wide
+        $string10 = /echo\s.{0,1000}APT\:\:Update\:\:Pre\-Invoke\s.{0,1000}nohup\sncat\s\-lvp\s.{0,1000}\s\-e\s\/bin\/bash\s.{0,1000}\s\>\s\/etc\/apt\/apt\.conf\.d\// nocase ascii wide
         // Description: Backdooring Message of the Day
         // Reference: N/A
         $string11 = /echo\s.{0,1000}bash\s\-c\s.{0,1000}bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s\>\>\s\/etc\/update\-motd\.d\/00\-header/ nocase ascii wide
@@ -58,7 +58,7 @@ rule bash
         $string16 = /export\sHISTFILESIZE\=0/ nocase ascii wide
         // Description: use a space in front of your bash command and it won't be logged with the following option
         // Reference: N/A
-        $string17 = /HISTCONTROL\=ignoredups:ignorespace/ nocase ascii wide
+        $string17 = /HISTCONTROL\=ignoredups\:ignorespace/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
         $string18 = /history\s\-c/ nocase ascii wide

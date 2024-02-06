@@ -109,7 +109,7 @@ rule DBC2
         $string33 = /PowerView\.ps1/ nocase ascii wide
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string34 = /regsvr32\.exe\s\/s\s\/n\s\/u\s\/i:\s.{0,1000}\sscrobj\.dll/ nocase ascii wide
+        $string34 = /regsvr32\.exe\s\/s\s\/n\s\/u\s\/i\:\s.{0,1000}\sscrobj\.dll/ nocase ascii wide
 
     condition:
         any of them

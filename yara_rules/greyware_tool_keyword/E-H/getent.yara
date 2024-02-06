@@ -10,7 +10,7 @@ rule getent
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1 = /getent\spasswd\s\|\scut\s\-d:\s\-f1/ nocase ascii wide
+        $string1 = /getent\spasswd\s\|\scut\s\-d\:\s\-f1/ nocase ascii wide
 
     condition:
         any of them

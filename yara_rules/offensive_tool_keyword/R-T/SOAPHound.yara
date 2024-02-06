@@ -91,7 +91,7 @@ rule SOAPHound
         $string27 = /Specify\sdomain\sfor\senumeration/ nocase ascii wide
         // Description: enumerate Active Directory environments via the Active Directory Web Services (ADWS)
         // Reference: https://github.com/FalconForceTeam/SOAPHound
-        $string28 = /Username\sto\suse\sfor\sADWS\sConnection\.\sFormat:\sdomain\\\\user\sor\suser\@domain/ nocase ascii wide
+        $string28 = /Username\sto\suse\sfor\sADWS\sConnection\.\sFormat\:\sdomain\\\\user\sor\suser\@domain/ nocase ascii wide
 
     condition:
         any of them

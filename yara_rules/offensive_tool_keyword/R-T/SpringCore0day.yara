@@ -16,7 +16,7 @@ rule SpringCore0day
         $string2 = /curl\s\-\-output\s.{0,1000}http.{0,1000}\/tomcatwar\.jsp\?/ nocase ascii wide
         // Description: SpringCore0day from share.vx-underground.org & some additional links
         // Reference: https://github.com/craig/SpringCore0day
-        $string3 = /python3\s\.\/exp\.py\s\-\-url\shttp:\/\// nocase ascii wide
+        $string3 = /python3\s\.\/exp\.py\s\-\-url\shttp\:\/\// nocase ascii wide
         // Description: SpringCore0day from share.vx-underground.org & some additional links
         // Reference: https://github.com/craig/SpringCore0day
         $string4 = /vulfocus\/spring\-core\-rce\-/ nocase ascii wide

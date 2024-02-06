@@ -37,7 +37,7 @@ rule GPOddity
         $string9 = /\/GPOddity\// nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string10 = /\[\!\]\sFailed\sto\sdownload\slegitimate\sGPO\sfrom\sSYSVOL\s\(dc_ip:/ nocase ascii wide
+        $string10 = /\[\!\]\sFailed\sto\sdownload\slegitimate\sGPO\sfrom\sSYSVOL\s\(dc_ip\:/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string11 = /\[\!\]\sFailed\sto\swrite\smalicious\sscheduled\stask\sto\sdownloaded\sGPO\.\sExiting/ nocase ascii wide
@@ -70,7 +70,7 @@ rule GPOddity
         $string20 = /Could\snot\swrite\sNTLM\sHashes\sto\sthe\sspecified\sJTR_Dump_Path\s/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
-        $string21 = /Couldn\'t\sclone\sGPO\s{}\s\(maybe\sit\sdoes\snot\sexist\?/ nocase ascii wide
+        $string21 = /Couldn\'t\sclone\sGPO\s\{\}\s\(maybe\sit\sdoes\snot\sexist\?/ nocase ascii wide
         // Description: GPO attack vectors through NTLM relaying
         // Reference: https://github.com/synacktiv/GPOddity
         $string22 = /from\shelpers\..{0,1000}_smbserver\s.{0,1000}\simport\sSimpleSMBServer/ nocase ascii wide

@@ -400,7 +400,7 @@ rule WinPwn
         $string130 = /WCMCredentials\.txt/ nocase ascii wide
         // Description: Automation for internal Windows Penetrationtest AD-Security
         // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
-        $string131 = /whoami\s\/priv\s\|\sfindstr\s\/i\s\/C:.{0,1000}SeImpersonatePrivilege/ nocase ascii wide
+        $string131 = /whoami\s\/priv\s\|\sfindstr\s\/i\s\/C\:.{0,1000}SeImpersonatePrivilege/ nocase ascii wide
         // Description: Automation for internal Windows Penetrationtest AD-Security
         // Reference: https://github.com/S3cur3Th1sSh1t/WinPwn
         $string132 = /WinCreds\.exe/ nocase ascii wide

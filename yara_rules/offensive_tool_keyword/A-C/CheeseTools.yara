@@ -40,10 +40,10 @@ rule CheeseTools
         $string10 = /as\s\'Owner\sthat\scan\sbe\simpersonated\'/ nocase ascii wide
         // Description: tools for Lateral Movement/Code Execution
         // Reference: https://github.com/klezVirus/CheeseTools
-        $string11 = /C:\\Users\\Public\\perm\.txt/ nocase ascii wide
+        $string11 = /C\:\\Users\\Public\\perm\.txt/ nocase ascii wide
         // Description: tools for Lateral Movement/Code Execution
         // Reference: https://github.com/klezVirus/CheeseTools
-        $string12 = /C:\\Users\\Public\\test\.txt/ nocase ascii wide
+        $string12 = /C\:\\Users\\Public\\test\.txt/ nocase ascii wide
         // Description: tools for Lateral Movement/Code Execution
         // Reference: https://github.com/klezVirus/CheeseTools
         $string13 = /C526B877\-6AFF\-413C\-BC03\-1837FB63BC22/ nocase ascii wide

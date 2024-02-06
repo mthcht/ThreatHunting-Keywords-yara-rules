@@ -70,7 +70,7 @@ rule KeePwn
         $string20 = /KeePwn\sv.{0,1000}\s\-\sby\sJulien\sBEDEL/ nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
-        $string21 = /keepwn\.__main__:main/ nocase ascii wide
+        $string21 = /keepwn\.__main__\:main/ nocase ascii wide
         // Description: A python tool to automate KeePass discovery and secret extraction
         // Reference: https://github.com/Orange-Cyberdefense/KeePwn
         $string22 = /keepwn\.core\.parse_dump/ nocase ascii wide

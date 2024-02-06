@@ -13,10 +13,10 @@ rule GIUDA
         $string1 = /\s\-runaslsass/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string2 = /\.exe\s\-gettgs\s\-luid:/ nocase ascii wide
+        $string2 = /\.exe\s\-gettgs\s\-luid\:/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
-        $string3 = /\.exe\s\-ptt\sticket:.{0,1000}\.kirbi/ nocase ascii wide
+        $string3 = /\.exe\s\-ptt\sticket\:.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Ask a TGS on behalf of another user without password
         // Reference: https://github.com/foxlox/GIUDA
         $string4 = /GIUDA.{0,1000}\s\-askluids/ nocase ascii wide

@@ -10,7 +10,7 @@ rule advanced_ip_scanner
     strings:
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string1 = /\.exe\s\/s:ip_ranges\.txt\s\/f:scan_results\.txt/ nocase ascii wide
+        $string1 = /\.exe\s\/s\:ip_ranges\.txt\s\/f\:scan_results\.txt/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
         $string2 = /\\Local\\Temp\\Advanced\sIP\sScanner\s2\\/ nocase ascii wide
@@ -34,7 +34,7 @@ rule advanced_ip_scanner
         $string8 = /advanced_ip_scanner_console\.exe/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string9 = /https:\/\/download\.advanced\-ip\-scanner\.com\/download\/files\/.{0,1000}\.exe/ nocase ascii wide
+        $string9 = /https\:\/\/download\.advanced\-ip\-scanner\.com\/download\/files\/.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them

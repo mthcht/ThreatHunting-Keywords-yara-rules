@@ -10,10 +10,10 @@ rule JuicyPotatoNG
     strings:
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string1 = /\.exe\s\-l\s.{0,1000}\s\-c\s{B91D5831\-B1BD\-4608\-8198\-D72E155020F7}/ nocase ascii wide
+        $string1 = /\.exe\s\-l\s.{0,1000}\s\-c\s\{B91D5831\-B1BD\-4608\-8198\-D72E155020F7\}/ nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
-        $string2 = /\.exe\s\-l\s.{0,1000}\s\-c\s{F7FD3FD6\-9994\-452D\-8DA7\-9A8FD87AEEF4}\s\-a/ nocase ascii wide
+        $string2 = /\.exe\s\-l\s.{0,1000}\s\-c\s\{F7FD3FD6\-9994\-452D\-8DA7\-9A8FD87AEEF4\}\s\-a/ nocase ascii wide
         // Description: Another Windows Local Privilege Escalation from Service Account to System
         // Reference: https://github.com/antonioCoco/JuicyPotatoNG
         $string3 = /\/JuicyPotatoNG\.git/ nocase ascii wide

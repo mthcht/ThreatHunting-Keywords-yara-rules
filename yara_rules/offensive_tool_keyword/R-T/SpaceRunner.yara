@@ -22,13 +22,13 @@ rule SpaceRunner
         $string4 = /\s\-f\sInvoke\-Inveigh/ nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
-        $string5 = /\/out:spacerunner\.exe/ nocase ascii wide
+        $string5 = /\/out\:spacerunner\.exe/ nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
         $string6 = /\/SpaceRunner\.git/ nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
-        $string7 = /\/target:exe\sspacerunner\.cs/ nocase ascii wide
+        $string7 = /\/target\:exe\sspacerunner\.cs/ nocase ascii wide
         // Description: enables the compilation of a C# program that will execute arbitrary PowerShell code without launching PowerShell processes through the use of runspace.
         // Reference: https://github.com/Mr-B0b/SpaceRunner
         $string8 = /\[\+\]\sGenerating\sbase64\sencoded\sPowerShell\sscript/ nocase ascii wide

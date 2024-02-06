@@ -10,7 +10,7 @@ rule ScreenConnect
     strings:
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string1 = /:8040\/SetupWizard\.aspx/ nocase ascii wide
+        $string1 = /\:8040\/SetupWizard\.aspx/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
         $string2 = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\ScreenConnect\sClient\s\(/ nocase ascii wide
@@ -82,13 +82,13 @@ rule ScreenConnect
         $string24 = /cmd\.exe.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.cmd/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string25 = /https:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe/ nocase ascii wide
+        $string25 = /https\:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string26 = /https:\/\/.{0,1000}\.screenconnect\.com\/Host/ nocase ascii wide
+        $string26 = /https\:\/\/.{0,1000}\.screenconnect\.com\/Host/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string27 = /https:\/\/cloud\.screenconnect\.com\/\#\/trialtoinstance\?cookieValue\=/ nocase ascii wide
+        $string27 = /https\:\/\/cloud\.screenconnect\.com\/\#\/trialtoinstance\?cookieValue\=/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
         $string28 = /Program\sFiles\s\(x86\)\\ScreenConnect\sClient/ nocase ascii wide

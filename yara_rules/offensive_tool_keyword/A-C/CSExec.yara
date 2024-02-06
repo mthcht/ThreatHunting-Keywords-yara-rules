@@ -70,10 +70,10 @@ rule CSExec
         $string20 = /\/CSExec\.py\.git/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string21 = /~\/\.csexec/ nocase ascii wide
+        $string21 = /\~\/\.csexec/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string22 = /Attempted\sto\sspawn\sa\ssocks\sproxy\sserver\sat\s0\.0\.0\.0:/ nocase ascii wide
+        $string22 = /Attempted\sto\sspawn\sa\ssocks\sproxy\sserver\sat\s0\.0\.0\.0\:/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
         $string23 = /beacon_generate\.py/ nocase ascii wide
@@ -85,7 +85,7 @@ rule CSExec
         $string25 = /csexec\/csexec_history/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string26 = /dinjector\s\/i:.{0,1000}\s\/p:/ nocase ascii wide
+        $string26 = /dinjector\s\/i\:.{0,1000}\s\/p\:/ nocase ascii wide
         // Description: An alternative to *exec.py from impacket with some builtin tricks
         // Reference: https://github.com/Metro-Holografix/CSExec.py
         $string27 = /dll_generator\.py/ nocase ascii wide

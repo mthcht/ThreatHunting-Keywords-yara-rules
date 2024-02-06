@@ -16,7 +16,7 @@ rule Dinjector
         $string2 = /\/DInjector\.git/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string3 = /\/pid:1337\s.{0,1000}\/dll:/ nocase ascii wide
+        $string3 = /\/pid\:1337\s.{0,1000}\/dll\:/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
         $string4 = /\\cradle\.ps1/ nocase ascii wide
@@ -58,7 +58,7 @@ rule Dinjector
         $string16 = /\-\-entrypoint\sDinjector/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
-        $string17 = /http:\/\/10\.10\.13\.37/ nocase ascii wide
+        $string17 = /http\:\/\/10\.10\.13\.37/ nocase ascii wide
         // Description: Collection of shellcode injection techniques packed in a D/Invoke weaponized DLL
         // Reference: https://github.com/Metro-Holografix/DInjector
         $string18 = /KeeFarceReborn\./ nocase ascii wide

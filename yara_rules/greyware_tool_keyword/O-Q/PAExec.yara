@@ -10,7 +10,7 @@ rule PAExec
     strings:
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string1 = /\s\-csrc\sC:\\\\Windows\\\\notepad\.exe\s\-c\scmd\.exe/ nocase ascii wide
+        $string1 = /\s\-csrc\sC\:\\\\Windows\\\\notepad\.exe\s\-c\scmd\.exe/ nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
         $string2 = /\%SYSTEMROOT\%\\PAExec\-/ nocase ascii wide

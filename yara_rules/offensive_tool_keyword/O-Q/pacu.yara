@@ -88,13 +88,13 @@ rule pacu
         $string26 = /\/waf__enum\/main\.py/ nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string27 = /\=MSEXCEL.{0,1000}regsvr32\s\/s\s\/n\s\/u\s\/i:http.{0,1000}\/SCTLauncher\.sct\sscrobj\.dll/ nocase ascii wide
+        $string27 = /\=MSEXCEL.{0,1000}regsvr32\s\/s\s\/n\s\/u\s\/i\:http.{0,1000}\/SCTLauncher\.sct\sscrobj\.dll/ nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string28 = /cloudtrail__csv_injection/ nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
-        $string29 = /docker\srun\s.{0,1000}\/pacu:latest/ nocase ascii wide
+        $string29 = /docker\srun\s.{0,1000}\/pacu\:latest/ nocase ascii wide
         // Description: The AWS exploitation framework designed for testing the security of Amazon Web Services environments.
         // Reference: https://github.com/RhinoSecurityLabs/pacu
         $string30 = /ecs_task_def_data\/all_task_def\.txt/ nocase ascii wide

@@ -34,7 +34,7 @@ rule rsocx
         $string8 = /rsocx\s\-l\s0\.0\.0\.0/ nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
-        $string9 = /rsocx\s\-r\s.{0,1000}:/ nocase ascii wide
+        $string9 = /rsocx\s\-r\s.{0,1000}\:/ nocase ascii wide
         // Description: A bind/reverse Socks5 proxy server.
         // Reference: https://github.com/b23r0/rsocx
         $string10 = /rsocx\s\-t\s0\.0\.0\.0/ nocase ascii wide

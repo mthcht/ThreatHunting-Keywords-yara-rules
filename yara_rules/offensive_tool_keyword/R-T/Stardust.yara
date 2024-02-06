@@ -40,7 +40,7 @@ rule Stardust
         $string10 = /bin\/stardust\.x64\.bin/ nocase ascii wide
         // Description: An modern 64-bit position independent implant template
         // Reference: https://github.com/Cracked5pider/Stardust
-        $string11 = /https:\/\/5pider\.net\/blog\/2024\/01\/27\/modern\-shellcode\-implant\-design/ nocase ascii wide
+        $string11 = /https\:\/\/5pider\.net\/blog\/2024\/01\/27\/modern\-shellcode\-implant\-design/ nocase ascii wide
         // Description: An modern 64-bit position independent implant template
         // Reference: https://github.com/Cracked5pider/Stardust
         $string12 = /loader\.x64\.exe\.exe/ nocase ascii wide

@@ -10,13 +10,13 @@ rule conti
     strings:
         // Description: Conti is a Ransomware-as-a-Service (RaaS) that was first observed in December 2019. Conti has been deployed via TrickBot and used against major corporations and government agencies particularly those in North America. As with other ransomware families - actors using Conti steal sensitive files and information from compromised networks and threaten to publish this data unless the ransom is paid
         // Reference: https://www.securonix.com/blog/on-conti-ransomware-tradecraft-detection/
-        $string1 = /\sC:\\ProgramData\\sh\.txt/ nocase ascii wide
+        $string1 = /\sC\:\\ProgramData\\sh\.txt/ nocase ascii wide
         // Description: Conti is a Ransomware-as-a-Service (RaaS) that was first observed in December 2019. Conti has been deployed via TrickBot and used against major corporations and government agencies particularly those in North America. As with other ransomware families - actors using Conti steal sensitive files and information from compromised networks and threaten to publish this data unless the ransom is paid
         // Reference: https://www.securonix.com/blog/on-conti-ransomware-tradecraft-detection/
         $string2 = /\sDriverName\s.{0,1000}Xeroxxx/ nocase ascii wide
         // Description: Conti is a Ransomware-as-a-Service (RaaS) that was first observed in December 2019. Conti has been deployed via TrickBot and used against major corporations and government agencies particularly those in North America. As with other ransomware families - actors using Conti steal sensitive files and information from compromised networks and threaten to publish this data unless the ransom is paid
         // Reference: https://www.securonix.com/blog/on-conti-ransomware-tradecraft-detection/
-        $string3 = /\/outfile:C:\\ProgramData\\hashes\.txt/ nocase ascii wide
+        $string3 = /\/outfile\:C\:\\ProgramData\\hashes\.txt/ nocase ascii wide
         // Description: Conti is a Ransomware-as-a-Service (RaaS) that was first observed in December 2019. Conti has been deployed via TrickBot and used against major corporations and government agencies particularly those in North America. As with other ransomware families - actors using Conti steal sensitive files and information from compromised networks and threaten to publish this data unless the ransom is paid
         // Reference: https://www.securonix.com/blog/on-conti-ransomware-tradecraft-detection/
         $string4 = /\\ProgramData\\asrephashes\.txt/ nocase ascii wide
@@ -46,7 +46,7 @@ rule conti
         $string12 = /Invoke\-SMBAutoBrute/ nocase ascii wide
         // Description: Conti is a Ransomware-as-a-Service (RaaS) that was first observed in December 2019. Conti has been deployed via TrickBot and used against major corporations and government agencies particularly those in North America. As with other ransomware families - actors using Conti steal sensitive files and information from compromised networks and threaten to publish this data unless the ransom is paid
         // Reference: https://www.securonix.com/blog/on-conti-ransomware-tradecraft-detection/
-        $string13 = /ldapfilter:.{0,1000}admincount\=1.{0,1000}\s\/format:hashcat/ nocase ascii wide
+        $string13 = /ldapfilter\:.{0,1000}admincount\=1.{0,1000}\s\/format\:hashcat/ nocase ascii wide
         // Description: Conti is a Ransomware-as-a-Service (RaaS) that was first observed in December 2019. Conti has been deployed via TrickBot and used against major corporations and government agencies particularly those in North America. As with other ransomware families - actors using Conti steal sensitive files and information from compromised networks and threaten to publish this data unless the ransom is paid
         // Reference: https://www.securonix.com/blog/on-conti-ransomware-tradecraft-detection/
         $string14 = /net\sdomain_controllers/ nocase ascii wide

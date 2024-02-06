@@ -10,7 +10,7 @@ rule EQGR
     strings:
         // Description: Equation Group hack tool leaked by ShadowBrokers- file elgingamble Local exploit for the public prctl core dump vulnerability in recent Linux kernels
         // Reference: https://fdik.org/EQGRP/Linux/doc/old/etc/user.tool.elgingamble.COMMON
-        $string1 = /\[\-\]\sfailed\sto\sspawn\sshell:\s\%s/ nocase ascii wide
+        $string1 = /\[\-\]\sfailed\sto\sspawn\sshell\:\s\%s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file elgingamble Local exploit for the public prctl core dump vulnerability in recent Linux kernels.
         // Reference: https://fdik.org/EQGRP/Linux/doc/old/etc/user.tool.elgingamble.COMMON
         $string2 = /\[\-\]\skernel\snot\svulnerable/ nocase ascii wide

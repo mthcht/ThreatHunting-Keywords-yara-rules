@@ -31,7 +31,7 @@ rule PickleC2
         $string7 = /Find\-ProcessDLLHijack/ nocase ascii wide
         // Description: PickleC2 is a post-exploitation and lateral movements framework
         // Reference: https://github.com/xRET2pwn/PickleC2
-        $string8 = /http:\/\/.{0,1000}:.{0,1000}\/down\/.{0,1000}\/host\.ps1/ nocase ascii wide
+        $string8 = /http\:\/\/.{0,1000}\:.{0,1000}\/down\/.{0,1000}\/host\.ps1/ nocase ascii wide
         // Description: PickleC2 is a post-exploitation and lateral movements framework
         // Reference: https://github.com/xRET2pwn/PickleC2
         $string9 = /IgBJAHMAIABFAGwAZQB2AGEAdABlAGQAOgAgACQAKAAoAFsAUwBlAGMAdQByAGkAdAB5AC4AUAByAGkAbgBjAGkAcABhAGwALgBXAGkAbgBkAG8AdwBzAFAAcgBpAG4AYwBpAHAAYQBsAF0AWwBTAGUAYwB1AHIAaQB0AHkALgBQAHIAaQBuAGMAaQBwAGEAbAAuAFcAaQBuAGQAbwB3AHMASQBkAGUAbgB0AGkAdAB5AF0AOgA6AEcAZQB0AEMAdQByAHIAZQBuAHQAKAApACkALgBJAHMASQBuAFIAbwBsAGUAKABbAFMAZQBjAHUAcgBpAHQAeQAuAFAAcgBpAG4AYwBpAHAAYQBsAC4AVwBpAG4AZABvAHcAcwBCAHUAaQBsAHQASQBuAFIAbwBsAGUAXQAnAEEAZABtAGkAbgBpAHMAdAByAGEAdABvAHIAJwApACkAIAAtACAAJAAoAEcAZQB0AC0ARABhAHQAZQApACIAIAB8ACAATwB1AHQALQBGAGkAbABlACAAQwA6AFwAVQBBAEMAQgB5AHAAYQBzAHMAVABlAHMAdAAuAHQAeAB0ACAALQBBAHAAcABlAG4AZAA\=/ nocase ascii wide

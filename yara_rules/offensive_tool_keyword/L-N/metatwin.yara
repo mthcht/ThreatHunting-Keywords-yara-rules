@@ -10,10 +10,10 @@ rule metatwin
     strings:
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string1 = /\s\-Source\sc:\\windows\\.{0,1000}\.exe\s\-Target\s.{0,1000}\.exe\s\-Sign/ nocase ascii wide
+        $string1 = /\s\-Source\sc\:\\windows\\.{0,1000}\.exe\s\-Target\s.{0,1000}\.exe\s\-Sign/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
-        $string2 = /\s\-Source\sc:\\windows\\system32\\.{0,1000}\.dll\s\-Target\s.{0,1000}\.exe\s\-Sign/ nocase ascii wide
+        $string2 = /\s\-Source\sc\:\\windows\\system32\\.{0,1000}\.dll\s\-Target\s.{0,1000}\.exe\s\-Sign/ nocase ascii wide
         // Description: The project is designed as a file resource cloner. Metadata including digital signature is extracted from one file and injected into another
         // Reference: https://github.com/threatexpress/metatwin
         $string3 = /\/metatwin\.git/ nocase ascii wide

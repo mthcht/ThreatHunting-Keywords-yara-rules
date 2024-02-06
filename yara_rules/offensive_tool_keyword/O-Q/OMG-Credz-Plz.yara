@@ -16,7 +16,7 @@ rule OMG_Credz_Plz
         $string2 = /Credz\-Plz\-Execute\.txt/ nocase ascii wide
         // Description: A script used to prompt the target to enter their creds to later be exfiltrated with dropbox.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string3 = /Invoke\-RestMethod\s\-Uri\shttps:\/\/content\.dropboxapi\.com\/2\/files\/upload\s\-Method\sPost\s\s\-InFile\s.{0,1000}\s\s\-Headers\s/ nocase ascii wide
+        $string3 = /Invoke\-RestMethod\s\-Uri\shttps\:\/\/content\.dropboxapi\.com\/2\/files\/upload\s\-Method\sPost\s\s\-InFile\s.{0,1000}\s\s\-Headers\s/ nocase ascii wide
         // Description: A script used to prompt the target to enter their creds to later be exfiltrated with dropbox.
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
         $string4 = /\-OMG\-Credz\-Plz/ nocase ascii wide

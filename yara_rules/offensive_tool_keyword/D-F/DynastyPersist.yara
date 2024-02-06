@@ -46,7 +46,7 @@ rule DynastyPersist
         $string12 = /\[\+\]\s\-\sBashrc\spersistence\sadded\!/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
-        $string13 = /\[\+\]\s\-\sConfiguring\s~\/\.bashrc\sfor\spersistence\s\.\.\.\s/ nocase ascii wide
+        $string13 = /\[\+\]\s\-\sConfiguring\s\~\/\.bashrc\sfor\spersistence\s\.\.\.\s/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
         $string14 = /\[\+\]\s\-\sLinux\sheader\s\/\sMessage\sOf\sThe\sDay\sPersistence/ nocase ascii wide
@@ -94,19 +94,19 @@ rule DynastyPersist
         $string28 = /ExecStartPre\spresent\!\sExecStartPre\swas\smodified\!/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
-        $string29 = /https:\/\/github\.com\/m0nad\/Diamorphine/ nocase ascii wide
+        $string29 = /https\:\/\/github\.com\/m0nad\/Diamorphine/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
         $string30 = /LDPreloadPrivesc/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
-        $string31 = /Made\sby:\s\@Trevohack\s\|\s\@opabravo\s\|\s\@matheuz/ nocase ascii wide
+        $string31 = /Made\sby\:\s\@Trevohack\s\|\s\@opabravo\s\|\s\@matheuz/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
-        $string32 = /Modified\sby:\sTrevohack\saka\s.{0,1000}SpaceShuttleIO/ nocase ascii wide
+        $string32 = /Modified\sby\:\sTrevohack\saka\s.{0,1000}SpaceShuttleIO/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
-        $string33 = /php\s\-S\s0\.0\.0\.0:9056\s\&/ nocase ascii wide
+        $string33 = /php\s\-S\s0\.0\.0\.0\:9056\s\&/ nocase ascii wide
         // Description: Linux persistence tool with features like SSH Key Generation -  Cronjob Persistence -  Custom User with Root -  RCE Persistence -  LKM/Rootkit-  Bashrc Persistence -  Systemd Service for Root -  LD_PRELOAD Privilege Escalation Config -  Backdooring Message of the Day / Header   and Modifying an Existing Systemd Service
         // Reference: https://github.com/Trevohack/DynastyPersist
         $string34 = /pty\.spawn\(\"\/bin\/sh\".{0,1000}\s\>\>\s\/etc\/update\-motd\.d\/00\-header/ nocase ascii wide

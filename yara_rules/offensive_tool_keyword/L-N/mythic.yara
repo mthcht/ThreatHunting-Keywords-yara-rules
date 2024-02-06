@@ -409,10 +409,10 @@ rule mythic
         $string133 = /golden_ticket\.py/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string134 = /http:\/\/127\.0\.0\.1:7444/ nocase ascii wide
+        $string134 = /http\:\/\/127\.0\.0\.1\:7444/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string135 = /https:\/\/127\.0\.0\.1:7443/ nocase ascii wide
+        $string135 = /https\:\/\/127\.0\.0\.1\:7443/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
         $string136 = /import\smythic/ nocase ascii wide

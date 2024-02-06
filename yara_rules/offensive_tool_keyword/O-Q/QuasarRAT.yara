@@ -28,7 +28,7 @@ rule QuasarRAT
         $string6 = /CFCD0759E20F29C399C9D4210BE614E4E020BEE8/ nocase ascii wide
         // Description: Free. Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#. The usage ranges from user support through day-to-day administrative work to employee monitoring. Providing high stability and an easy-to-use user interface. Quasar is the perfect remote administration solution for you.
         // Reference: https://github.com/quasar/Quasar
-        $string7 = /localhost:4782/ nocase ascii wide
+        $string7 = /localhost\:4782/ nocase ascii wide
         // Description: Free. Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#. The usage ranges from user support through day-to-day administrative work to employee monitoring. Providing high stability and an easy-to-use user interface. Quasar is the perfect remote administration solution for you.
         // Reference: https://github.com/quasar/Quasar
         $string8 = /Quasar\.Client\./ nocase ascii wide

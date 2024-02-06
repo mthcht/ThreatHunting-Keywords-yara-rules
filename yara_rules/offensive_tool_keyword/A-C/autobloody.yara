@@ -31,7 +31,7 @@ rule autobloody
         $string7 = /autobloody\-main/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
-        $string8 = /bolt:\/\/localhost:7687/ nocase ascii wide
+        $string8 = /bolt\:\/\/localhost\:7687/ nocase ascii wide
         // Description: Tool to automatically exploit Active Directory privilege escalation paths shown by BloodHound
         // Reference: https://github.com/CravateRouge/autobloody
         $string9 = /CravateRouge\/autobloody/ nocase ascii wide

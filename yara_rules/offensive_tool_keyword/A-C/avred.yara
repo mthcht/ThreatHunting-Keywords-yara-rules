@@ -43,7 +43,7 @@ rule avred
         $string11 = /avred\-main\.zip/ nocase ascii wide
         // Description: Avred is being used to identify which parts of a file are identified by a Antivirus and tries to show as much possible information and context about each match.
         // Reference: https://github.com/dobin/avred
-        $string12 = /https:\/\/avred\.r00ted\.ch\/upload/ nocase ascii wide
+        $string12 = /https\:\/\/avred\.r00ted\.ch\/upload/ nocase ascii wide
         // Description: Avred is being used to identify which parts of a file are identified by a Antivirus and tries to show as much possible information and context about each match.
         // Reference: https://github.com/dobin/avred
         $string13 = /podman\srun\s.{0,1000}\s\-\-name\savred\s\-d\savred/ nocase ascii wide

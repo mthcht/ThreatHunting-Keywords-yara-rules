@@ -274,13 +274,13 @@ rule _
         $string88 = /\/pentest/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string89 = /:\\users\\public\\.{0,1000}\.bat/ nocase ascii wide
+        $string89 = /\:\\users\\public\\.{0,1000}\.bat/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string90 = /:\\users\\public\\.{0,1000}\.ps1/ nocase ascii wide
+        $string90 = /\:\\users\\public\\.{0,1000}\.ps1/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string91 = /:\\users\\public\\.{0,1000}\.vbs/ nocase ascii wide
+        $string91 = /\:\\users\\public\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
         $string92 = /\\Appdata\\.{0,1000}\\aloy64\.exe/ nocase ascii wide
@@ -298,7 +298,7 @@ rule _
         $string96 = /\\Appdata\\.{0,1000}\\kitty\.exe/ nocase ascii wide
         // Description: dll file in public user folder
         // Reference: https://detect.fyi/rhysida-ransomware-and-the-detection-opportunities-3599e9a02bb2
-        $string97 = /c:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
+        $string97 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
         $string98 = /\-pentest/ nocase ascii wide

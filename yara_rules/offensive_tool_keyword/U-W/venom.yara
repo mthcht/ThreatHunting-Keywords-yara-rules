@@ -193,7 +193,7 @@ rule venom
         $string61 = /hta\-to\-javascript\-crypter/ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
-        $string62 = /http:\/\/LhOsT\/FiLNaMe\./ nocase ascii wide
+        $string62 = /http\:\/\/LhOsT\/FiLNaMe\./ nocase ascii wide
         // Description: venom - C2 shellcode generator/compiler/handler
         // Reference: https://github.com/r00t-3xp10it/venom
         $string63 = /import\sImpactDecoder/ nocase ascii wide

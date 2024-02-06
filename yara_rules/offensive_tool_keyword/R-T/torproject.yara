@@ -73,22 +73,22 @@ rule torproject
         $string21 = /dnf\sinstall\stor\s\-y/ nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
-        $string22 = /http:\/\/.{0,1000}\.onion/ nocase ascii wide
+        $string22 = /http\:\/\/.{0,1000}\.onion/ nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
-        $string23 = /http:\/\/.{0,1000}\.tor2web/ nocase ascii wide
+        $string23 = /http\:\/\/.{0,1000}\.tor2web/ nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
-        $string24 = /http:\/\/.{0,1000}\.torlink/ nocase ascii wide
+        $string24 = /http\:\/\/.{0,1000}\.torlink/ nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
-        $string25 = /https:\/\/.{0,1000}\.onion/ nocase ascii wide
+        $string25 = /https\:\/\/.{0,1000}\.onion/ nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
-        $string26 = /https:\/\/.{0,1000}\.tor2web/ nocase ascii wide
+        $string26 = /https\:\/\/.{0,1000}\.tor2web/ nocase ascii wide
         // Description: Detects suspicious TOR usage which anonymizes user's web traffic through a relay network
         // Reference: torproject.org
-        $string27 = /https:\/\/.{0,1000}\.torlink/ nocase ascii wide
+        $string27 = /https\:\/\/.{0,1000}\.torlink/ nocase ascii wide
         // Description: Browse Privately. Explore Freely. Defend yourself against tracking and surveillance. Circumvent censorship.
         // Reference: torproject.org
         $string28 = /install\stor\sdeb\.torproject\.org\-keyring/ nocase ascii wide

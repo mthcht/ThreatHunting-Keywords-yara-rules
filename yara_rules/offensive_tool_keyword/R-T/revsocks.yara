@@ -13,7 +13,7 @@ rule revsocks
         $string1 = /\/kost\/revsocks\/releases/ nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
-        $string2 = /\/out:revsocks\.exe/ nocase ascii wide
+        $string2 = /\/out\:revsocks\.exe/ nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
         $string3 = /\/revsocks\.exe/ nocase ascii wide
@@ -121,7 +121,7 @@ rule revsocks
         $string37 = /revsocksserver\.h/ nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
-        $string38 = /starting\sRevSocksServer:\s/ nocase ascii wide
+        $string38 = /starting\sRevSocksServer\:\s/ nocase ascii wide
 
     condition:
         any of them

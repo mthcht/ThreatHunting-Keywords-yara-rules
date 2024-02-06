@@ -79,7 +79,7 @@ rule exegol
         $string23 = /netdiscover\s\-i\s.{0,1000}\s\-r\s.{0,1000}\/24/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string24 = /ngrok\sauthtoken\sAUTHTOKEN:::https:\/\/dashboard\.ngrok\.com\/get\-started\/your\-authtoken/ nocase ascii wide
+        $string24 = /ngrok\sauthtoken\sAUTHTOKEN\:\:\:https\:\/\/dashboard\.ngrok\.com\/get\-started\/your\-authtoken/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string25 = /nmap\s\-Pn\s\-v\s\-sS\s\-F/ nocase ascii wide

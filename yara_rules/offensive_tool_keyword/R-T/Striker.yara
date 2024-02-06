@@ -46,7 +46,7 @@ rule Striker
         $string12 = /c2\.striker\./ nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
-        $string13 = /localhost:3000.{0,1000}striker/ nocase ascii wide
+        $string13 = /localhost\:3000.{0,1000}striker/ nocase ascii wide
         // Description: Striker is a simple Command and Control (C2) program.
         // Reference: https://github.com/4g3nt47/Striker
         $string14 = /nginx\/striker\.log/ nocase ascii wide

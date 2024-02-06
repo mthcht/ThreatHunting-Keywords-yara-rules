@@ -25,7 +25,7 @@ rule echo
         $string5 = /cmd\.exe\s\/c\secho\s.{0,1000}\s\>\s\\\\\.\\pipe\\/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
-        $string6 = /echo\s\'\'\s\>\s~\/\.bash_history/ nocase ascii wide
+        $string6 = /echo\s\'\'\s\>\s\~\/\.bash_history/ nocase ascii wide
         // Description: This command disables kprobes by writing '0' to the enabled file. Kprobes are dynamic breakpoints in the Linux kernel that can be used to intercept functions and gather information for debugging or monitoring.
         // Reference: N/A
         $string7 = /echo\s0\s\>\s\/sys\/kernel\/debug\/kprobes\/enabled/ nocase ascii wide

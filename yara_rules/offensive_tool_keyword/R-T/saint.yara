@@ -19,7 +19,7 @@ rule saint
         $string3 = /\/sAINT\-master\.zip/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
-        $string4 = /::\sRemove\s\(s\)AINT\sfolder/ nocase ascii wide
+        $string4 = /\:\:\sRemove\s\(s\)AINT\sfolder/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
         $string5 = /\\\(s\)AINT\\Cam/ nocase ascii wide
@@ -43,10 +43,10 @@ rule saint
         $string11 = /\\sAINT\-master\.zip/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
-        $string12 = /\]\sEnable\sPersistence\s\(Y\/n\):\s/ nocase ascii wide
+        $string12 = /\]\sEnable\sPersistence\s\(Y\/n\)\:\s/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
-        $string13 = /\]\sYou\swould\slike\sto\sgenerate\s\.EXE\susing\slauch4j\?\s\(y\/n\):/ nocase ascii wide
+        $string13 = /\]\sYou\swould\slike\sto\sgenerate\s\.EXE\susing\slauch4j\?\s\(y\/n\)\:/ nocase ascii wide
         // Description: (s)AINT is a Spyware Generator for Windows systems written in Java
         // Reference: https://github.com/tiagorlampert/sAINT
         $string14 = /AppData\\Roaming\\\(s\)AINT/ nocase ascii wide

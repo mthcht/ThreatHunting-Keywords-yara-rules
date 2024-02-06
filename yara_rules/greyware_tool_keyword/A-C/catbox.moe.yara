@@ -10,7 +10,7 @@ rule catbox_moe
     strings:
         // Description: The cutest free file host you've ever seen - abused by threat actors
         // Reference: https://files[.]catbox.moe
-        $string1 = /https:\/\/files\.catbox\.moe\// nocase ascii wide
+        $string1 = /https\:\/\/files\.catbox\.moe\// nocase ascii wide
 
     condition:
         any of them

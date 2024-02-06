@@ -22,7 +22,7 @@ rule ptunnel_ng
         $string4 = /nc\s127\.0\.0\.1\s4000/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
-        $string5 = /new\ssession\sto\s127\.0\.0\.1:3000/ nocase ascii wide
+        $string5 = /new\ssession\sto\s127\.0\.0\.1\:3000/ nocase ascii wide
         // Description: Tunnel TCP connections through ICMP.
         // Reference: https://github.com/utoni/ptunnel-ng
         $string6 = /ptunnel\-client\.log/ nocase ascii wide

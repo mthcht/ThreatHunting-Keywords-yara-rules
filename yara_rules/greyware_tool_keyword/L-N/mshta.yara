@@ -13,22 +13,22 @@ rule mshta
         $string1 = /mshta\shttp.{0,1000}\.hta/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string2 = /mshta\sjavascript:.{0,1000}script:https:/ nocase ascii wide
+        $string2 = /mshta\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string3 = /mshta\svbscript:Close\(Execute\(.{0,1000}script:https:\/\/.{0,1000}\.sct/ nocase ascii wide
+        $string3 = /mshta\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string4 = /mshta\.exe.{0,1000}\shttp:\/\// nocase ascii wide
+        $string4 = /mshta\.exe.{0,1000}\shttp\:\/\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string5 = /mshta\.exe.{0,1000}\shttps:\/\// nocase ascii wide
+        $string5 = /mshta\.exe.{0,1000}\shttps\:\/\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string6 = /mshta\.exe.{0,1000}\sjavascript:.{0,1000}script:https:/ nocase ascii wide
+        $string6 = /mshta\.exe.{0,1000}\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string7 = /mshta\.exe.{0,1000}\svbscript:Close\(Execute\(.{0,1000}script:https:\/\/.{0,1000}\.sct/ nocase ascii wide
+        $string7 = /mshta\.exe.{0,1000}\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
 
     condition:
         any of them

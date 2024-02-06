@@ -70,7 +70,7 @@ rule POSTDump
         $string20 = /ASR_bypass_to_dump_LSASS\.cs/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
         // Reference: https://github.com/S3cur3Th1sSh1t/PowerSharpPack
-        $string21 = /copy\s.{0,1000}PROCEXP\.sys.{0,1000}C:\\Windows\\System32\\WindowsPowershell\\/ nocase ascii wide
+        $string21 = /copy\s.{0,1000}PROCEXP\.sys.{0,1000}C\:\\Windows\\System32\\WindowsPowershell\\/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string22 = /Done\!\sCheck\sfor\sexisting\slsass\.dmp\sfile\sinto\scurrent\sfolder/ nocase ascii wide

@@ -10,7 +10,7 @@ rule SharPyShell
     strings:
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
-        $string1 = /\sinteract\s\-u\shttp.{0,1000}:\/\/.{0,1000}\/.{0,1000}\.aspx\s\-p\s/ nocase ascii wide
+        $string1 = /\sinteract\s\-u\shttp.{0,1000}\:\/\/.{0,1000}\/.{0,1000}\.aspx\s\-p\s/ nocase ascii wide
         // Description: SharPyShell - tiny and obfuscated ASP.NET webshell for C# web
         // Reference: https://github.com/antonioCoco/SharPyShell
         $string2 = /\/SharPyShell/ nocase ascii wide

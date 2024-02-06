@@ -64,19 +64,19 @@ rule PoolParty
         $string18 = /\\PoolParty\-PoolParty\\/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
-        $string19 = /\\x24\\xC3\\C:\\\\Windows\\\\System32\\\\calc\.exe\\x00/ nocase ascii wide
+        $string19 = /\\x24\\xC3\\C\:\\\\Windows\\\\System32\\\\calc\.exe\\x00/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
         $string20 = /45D59D79\-EF51\-4A93\-AAFA\-2879FFC3A62C/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
-        $string21 = /Allocated\sshellcode\smemory\sin\sthe\starget\sprocess:\s/ nocase ascii wide
+        $string21 = /Allocated\sshellcode\smemory\sin\sthe\starget\sprocess\:\s/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
-        $string22 = /Hijacked\stimer\squeue\shandle\sfrom\sthe\starget\sprocess:\s/ nocase ascii wide
+        $string22 = /Hijacked\stimer\squeue\shandle\sfrom\sthe\starget\sprocess\:\s/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
-        $string23 = /Hijacked\sworker\sfactory\shandle\sfrom\sthe\starget\sprocess:\s/ nocase ascii wide
+        $string23 = /Hijacked\sworker\sfactory\shandle\sfrom\sthe\starget\sprocess\:\s/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
         $string24 = /PoolParty\sattack\scompleted\ssuccessfully/ nocase ascii wide
@@ -94,7 +94,7 @@ rule PoolParty
         $string28 = /SafeBreach\-Labs\/PoolParty/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/SafeBreach-Labs/PoolParty
-        $string29 = /Starting\sPoolParty\sattack\sagainst\sprocess\sid:\s/ nocase ascii wide
+        $string29 = /Starting\sPoolParty\sattack\sagainst\sprocess\sid\:\s/ nocase ascii wide
 
     condition:
         any of them

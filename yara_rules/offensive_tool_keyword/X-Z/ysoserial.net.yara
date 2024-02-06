@@ -67,7 +67,7 @@ rule ysoserial_net
         $string19 = /\\ysoserial\\/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string20 = /echo\s123\s\>\sc:\\windows\\temp\\test\.txt/ nocase ascii wide
+        $string20 = /echo\s123\s\>\sc\:\\windows\\temp\\test\.txt/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
         $string21 = /\-f\sBinaryFormatter\s\-g\sPSObject\s\-o\sbase64\s\-c\s/ nocase ascii wide

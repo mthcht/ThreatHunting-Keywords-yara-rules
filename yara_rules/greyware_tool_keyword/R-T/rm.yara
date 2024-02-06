@@ -19,13 +19,13 @@ rule rm
         $string3 = /rm\s\/var\/log\/.{0,1000}\.log/ nocase ascii wide
         // Description: deleting bash history
         // Reference: N/A
-        $string4 = /rm\s~\/\.bash_history/ nocase ascii wide
+        $string4 = /rm\s\~\/\.bash_history/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
         $string5 = /rm\s\-rf\s\.bash_history/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
-        $string6 = /rm\s\-rf\s~\/\.bash_history/ nocase ascii wide
+        $string6 = /rm\s\-rf\s\~\/\.bash_history/ nocase ascii wide
 
     condition:
         any of them

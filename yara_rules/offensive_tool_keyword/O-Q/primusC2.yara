@@ -19,13 +19,13 @@ rule primusC2
         $string3 = /\/PrimusC2\.git/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string4 = /:8999\/Payloads\// nocase ascii wide
+        $string4 = /\:8999\/Payloads\// nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string5 = /127\.0\.0\.1:4567/ nocase ascii wide
+        $string5 = /127\.0\.0\.1\:4567/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string6 = /localhost:4567/ nocase ascii wide
+        $string6 = /localhost\:4567/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
         $string7 = /PrimusC2\-main\.zip/ nocase ascii wide
@@ -34,7 +34,7 @@ rule primusC2
         $string8 = /SELECT\sdisplayName\sFROM\sAntiVirusProduct/ nocase ascii wide
         // Description: another C2 framework
         // Reference: https://github.com/Primusinterp/PrimusC2
-        $string9 = /ssh\s\-N\s\-R\s4567:localhost:.{0,1000}root/ nocase ascii wide
+        $string9 = /ssh\s\-N\s\-R\s4567\:localhost\:.{0,1000}root/ nocase ascii wide
 
     condition:
         any of them

@@ -712,7 +712,7 @@ rule NetExec
         $string234 = /nxc.{0,1000}nxcdb\.py/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string235 = /nxc\.netexec:main/ nocase ascii wide
+        $string235 = /nxc\.netexec\:main/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string236 = /nxc\.protocols\.smb/ nocase ascii wide
@@ -760,7 +760,7 @@ rule NetExec
         $string250 = /veeam_dump_postgresql\.ps1/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string251 = /WMIEXEC:\sCould\snot\sretrieve\soutput\sfile/ nocase ascii wide
+        $string251 = /WMIEXEC\:\sCould\snot\sretrieve\soutput\sfile/ nocase ascii wide
 
     condition:
         any of them

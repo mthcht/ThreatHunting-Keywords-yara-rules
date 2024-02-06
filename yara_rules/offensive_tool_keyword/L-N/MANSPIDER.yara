@@ -49,7 +49,7 @@ rule MANSPIDER
         $string13 = /blacklanternsecurity\/MANSPIDER/ nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
-        $string14 = /man_spider\.manspider:main/ nocase ascii wide
+        $string14 = /man_spider\.manspider\:main/ nocase ascii wide
         // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
         // Reference: https://github.com/blacklanternsecurity/MANSPIDER
         $string15 = /manspider\s.{0,1000}\s\-d\s.{0,1000}\s\-u\s.{0,1000}\s\-p\s/ nocase ascii wide

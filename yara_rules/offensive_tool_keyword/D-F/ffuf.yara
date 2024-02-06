@@ -67,10 +67,10 @@ rule ffuf
         $string19 = /fuff\s.{0,1000}\-scrapers/ nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string20 = /https:\/\/ffuf\.io\.fi/ nocase ascii wide
+        $string20 = /https\:\/\/ffuf\.io\.fi/ nocase ascii wide
         // Description: Fast web fuzzer written in Go
         // Reference: https://github.com/ffuf/ffuf
-        $string21 = /https:\/\/ffuf\.io\/FUZZ/ nocase ascii wide
+        $string21 = /https\:\/\/ffuf\.io\/FUZZ/ nocase ascii wide
 
     condition:
         any of them

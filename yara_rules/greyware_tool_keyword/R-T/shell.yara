@@ -25,7 +25,7 @@ rule shell
         $string5 = /socket\(S.{0,1000}PF_INET.{0,1000}SOCK_STREAM.{0,1000}getprotobyname\(.{0,1000}tcp.{0,1000}\)\).{0,1000}if\(connect\(S.{0,1000}sockaddr_in\(\$p.{0,1000}inet_aton\(\$i\)\)\)\)/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string6 = /STDIN\-\>fdopen\(\$c.{0,1000}r\).{0,1000}\$~\-\>fdopen\(\$c.{0,1000}w\).{0,1000}system\$_\swhile\<\>/ nocase ascii wide
+        $string6 = /STDIN\-\>fdopen\(\$c.{0,1000}r\).{0,1000}\$\~\-\>fdopen\(\$c.{0,1000}w\).{0,1000}system\$_\swhile\<\>/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
         $string7 = /uname\s\-a.{0,1000}\sw.{0,1000}\sid.{0,1000}\s\/bin\/bash\s\-i/ nocase ascii wide

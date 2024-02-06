@@ -40,7 +40,7 @@ rule sshimpanzee
         $string10 = /sshimpanzee\s\-\-/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
-        $string11 = /sshimpanzee:127\.0\.0\.1:/ nocase ascii wide
+        $string11 = /sshimpanzee\:127\.0\.0\.1\:/ nocase ascii wide
         // Description: SSHD Based implant supporting tunneling mecanisms to reach the C2 (DNS - ICMP - HTTP Encapsulation - HTTP/Socks Proxies - UDP
         // Reference: https://github.com/lexfo/sshimpanzee
         $string12 = /sshimpanzee\-1\.1\-exp/ nocase ascii wide

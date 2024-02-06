@@ -10,7 +10,7 @@ rule mkdir
     strings:
         // Description: delete bash history
         // Reference: N/A
-        $string1 = /mkdir\s~\/\.bash_history/ nocase ascii wide
+        $string1 = /mkdir\s\~\/\.bash_history/ nocase ascii wide
 
     condition:
         any of them

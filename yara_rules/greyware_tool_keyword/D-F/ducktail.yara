@@ -10,7 +10,7 @@ rule ducktail
     strings:
         // Description: infostealer command to retrieve public ip address
         // Reference: https://www.trendmicro.com/en_be/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html
-        $string1 = /\-\-headless\s\-\-disable\-gpu\s\-\-disable\-logging\s\-\-dump\-dom\shttps:\/\/getip\.pro/ nocase ascii wide
+        $string1 = /\-\-headless\s\-\-disable\-gpu\s\-\-disable\-logging\s\-\-dump\-dom\shttps\:\/\/getip\.pro/ nocase ascii wide
 
     condition:
         any of them

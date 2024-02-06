@@ -10,46 +10,46 @@ rule Rubeus
     strings:
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string1 = /\s\/altservice:ldap\s/ nocase ascii wide
+        $string1 = /\s\/altservice\:ldap\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string2 = /\s\/asrepkey/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string3 = /\s\/createnetonly:.{0,1000}cmd\.exe/ nocase ascii wide
+        $string3 = /\s\/createnetonly\:.{0,1000}cmd\.exe/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string4 = /\s\/createnetonly:.{0,1000}cmd\.exe/ nocase ascii wide
+        $string4 = /\s\/createnetonly\:.{0,1000}cmd\.exe/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string5 = /\s\/credpassword/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string6 = /\s\/creduser:.{0,1000}\s\/credpassword:/ nocase ascii wide
+        $string6 = /\s\/creduser\:.{0,1000}\s\/credpassword\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string7 = /\s\/impersonateuser:.{0,1000}\s\/msdsspn:.{0,1000}\s\/ptt/ nocase ascii wide
+        $string7 = /\s\/impersonateuser\:.{0,1000}\s\/msdsspn\:.{0,1000}\s\/ptt/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string8 = /\s\/ldap\s.{0,1000}\s\/printcmd/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string9 = /\s\/ldapfilter:\'admincount\=1\'/ nocase ascii wide
+        $string9 = /\s\/ldapfilter\:\'admincount\=1\'/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string10 = /\s\/nofullpacsig\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string11 = /\s\/outfile:.{0,1000}\s\/spn:/ nocase ascii wide
+        $string11 = /\s\/outfile\:.{0,1000}\s\/spn\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string12 = /\s\/outfile:.{0,1000}\s\/spns:/ nocase ascii wide
+        $string12 = /\s\/outfile\:.{0,1000}\s\/spns\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string13 = /\s\/pwdsetafter:/ nocase ascii wide
+        $string13 = /\s\/pwdsetafter\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string14 = /\s\/pwdsetbefore:/ nocase ascii wide
+        $string14 = /\s\/pwdsetbefore\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string15 = /\s\/rc4opsec\s/ nocase ascii wide
@@ -61,7 +61,7 @@ rule Rubeus
         $string17 = /\s\/s4utransitedservices/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string18 = /\s\/service:krbtgt\s/ nocase ascii wide
+        $string18 = /\s\/service\:krbtgt\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string19 = /\s\/simple\s.{0,1000}\s\/spn/ nocase ascii wide
@@ -70,31 +70,31 @@ rule Rubeus
         $string20 = /\s\/ticket\s.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string21 = /\s\/ticket:.{0,1000}\s\/autoenterprise\s/ nocase ascii wide
+        $string21 = /\s\/ticket\:.{0,1000}\s\/autoenterprise\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string22 = /\s\/ticket:.{0,1000}\.kirbi/ nocase ascii wide
+        $string22 = /\s\/ticket\:.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string23 = /\s\/usetgtdeleg\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string24 = /\sasktgs\s.{0,1000}\s\/ticket:/ nocase ascii wide
+        $string24 = /\sasktgs\s.{0,1000}\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string25 = /\sasktgs\s.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string26 = /\sasktgs\s\/ticket:/ nocase ascii wide
+        $string26 = /\sasktgs\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string27 = /\sasktgt\s.{0,1000}\s\/service:/ nocase ascii wide
+        $string27 = /\sasktgt\s.{0,1000}\s\/service\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string28 = /\sasktgt\s\/user\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string29 = /\sasktht\s\/user:/ nocase ascii wide
+        $string29 = /\sasktht\s\/user\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string30 = /\sasreproast\s/ nocase ascii wide
@@ -103,19 +103,19 @@ rule Rubeus
         $string31 = /\sbrute\s.{0,1000}\s\/password/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string32 = /\schangepw\s.{0,1000}\s\/ticket:/ nocase ascii wide
+        $string32 = /\schangepw\s.{0,1000}\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string33 = /\sdiamond\s.{0,1000}\s\s\/certificate:/ nocase ascii wide
+        $string33 = /\sdiamond\s.{0,1000}\s\s\/certificate\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string34 = /\sdiamond\s\/tgtdeleg\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string35 = /\sdiamond\s\/user:/ nocase ascii wide
+        $string35 = /\sdiamond\s\/user\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string36 = /\sdump\s.{0,1000}\s\/service:/ nocase ascii wide
+        $string36 = /\sdump\s.{0,1000}\s\/service\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string37 = /\sgolden\s.{0,1000}\s\/badpwdcount/ nocase ascii wide
@@ -124,10 +124,10 @@ rule Rubeus
         $string38 = /\sgolden\s.{0,1000}\s\/ldap\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string39 = /\sgolden\s.{0,1000}\s\/user:/ nocase ascii wide
+        $string39 = /\sgolden\s.{0,1000}\s\/user\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string40 = /\sharvest\s.{0,1000}\s\/monitorinterval:/ nocase ascii wide
+        $string40 = /\sharvest\s.{0,1000}\s\/monitorinterval\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string41 = /\skerberoast\s/ nocase ascii wide
@@ -136,22 +136,22 @@ rule Rubeus
         $string42 = /\skerberoast\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string43 = /\sklist\s.{0,1000}\s\/service:/ nocase ascii wide
+        $string43 = /\sklist\s.{0,1000}\s\/service\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string44 = /\smonitor\s\/interval:.{0,1000}\s\/filteruser:/ nocase ascii wide
+        $string44 = /\smonitor\s\/interval\:.{0,1000}\s\/filteruser\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string45 = /\spreauthscan\s\/users:/ nocase ascii wide
+        $string45 = /\spreauthscan\s\/users\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string46 = /\sptt\s\/ticket:/ nocase ascii wide
+        $string46 = /\sptt\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string47 = /\srenew\s.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string48 = /\srenew\s.{0,1000}\/ticket:/ nocase ascii wide
+        $string48 = /\srenew\s.{0,1000}\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string49 = /\ss4u\s.{0,1000}\s\/bronzebit/ nocase ascii wide
@@ -160,13 +160,13 @@ rule Rubeus
         $string50 = /\ss4u\s.{0,1000}\s\/nopac/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string51 = /\ss4u\s.{0,1000}\s\/ticket:/ nocase ascii wide
+        $string51 = /\ss4u\s.{0,1000}\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string52 = /\ss4u\s.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string53 = /\ss4u\s.{0,1000}\/rc4:.{0,1000}\s/ nocase ascii wide
+        $string53 = /\ss4u\s.{0,1000}\/rc4\:.{0,1000}\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string54 = /\ssilver\s.{0,1000}\s\/domain/ nocase ascii wide
@@ -178,28 +178,28 @@ rule Rubeus
         $string56 = /\ssilver\s.{0,1000}\s\/passlastset\s/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string57 = /\ssilver\s.{0,1000}\s\/service:/ nocase ascii wide
+        $string57 = /\ssilver\s.{0,1000}\s\/service\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string58 = /\stgssub\s.{0,1000}\s\/ticket:/ nocase ascii wide
+        $string58 = /\stgssub\s.{0,1000}\s\/ticket\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string59 = /\stgtdeleg\s\/nowrap/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string60 = /\stgtdeleg\s\/target:/ nocase ascii wide
+        $string60 = /\stgtdeleg\s\/target\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string61 = /\.exe\shash\s\/password:/ nocase ascii wide
+        $string61 = /\.exe\shash\s\/password\:/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string62 = /\.exe\sptt\s\/ticket:.{0,1000}\.kirbi/ nocase ascii wide
+        $string62 = /\.exe\sptt\s\/ticket\:.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string63 = /\/Bruteforcer\./ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
-        $string64 = /\/format:hashcat/ nocase ascii wide
+        $string64 = /\/format\:hashcat/ nocase ascii wide
         // Description: Rubeus is a C# toolset for raw Kerberos interaction and abuses. It is heavily adapted from Benjamin Delpys Kekeo project (CC BY-NC-SA 4.0 license) and Vincent LE TOUXs MakeMeEnterpriseAdmin project (GPL v3.0 license). Full credit goes to Benjamin and Vincent for working out the hard components of weaponization- without their prior work this project would not exist.
         // Reference: https://github.com/GhostPack/Rubeus
         $string65 = /\/Rubeus/ nocase ascii wide

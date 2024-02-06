@@ -145,13 +145,13 @@ rule dnscrypt
         $string45 = /dnsproxy\sstart\sscripts/ nocase ascii wide
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string46 = /https:\/\/127\.0\.0\.1\/dns\-query/ nocase ascii wide
+        $string46 = /https\:\/\/127\.0\.0\.1\/dns\-query/ nocase ascii wide
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
         $string47 = /Thank\syou\sfor\susing\sDNSCrypt\-Proxy\!/ nocase ascii wide
         // Description: A flexible DNS proxy with support for modern encrypted DNS protocols such as DNSCrypt v2 - DNS-over-HTTPS - Anonymized DNSCrypt and ODoH (Oblivious DoH).
         // Reference: https://github.com/DNSCrypt/dnscrypt-proxy
-        $string48 = /ubuntu:dnscrypt\-msi/ nocase ascii wide
+        $string48 = /ubuntu\:dnscrypt\-msi/ nocase ascii wide
 
     condition:
         any of them

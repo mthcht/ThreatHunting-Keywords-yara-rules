@@ -13,7 +13,7 @@ rule PhantomService
         $string1 = /\/master\/PhantomService\// nocase ascii wide
         // Description: Searches for and removes non-ASCII services that can't be easily removed by built-in Windows tools
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/PhantomService
-        $string2 = /\]\sFound\snon\-ASCII\sservice:\s/ nocase ascii wide
+        $string2 = /\]\sFound\snon\-ASCII\sservice\:\s/ nocase ascii wide
         // Description: Searches for and removes non-ASCII services that can't be easily removed by built-in Windows tools
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/PhantomService
         $string3 = /PhantomService\.csproj/ nocase ascii wide

@@ -61,7 +61,7 @@ rule KittyStager
         $string17 = /\\KittyStager/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string18 = /127\.0\.0\.1:1337/ nocase ascii wide
+        $string18 = /127\.0\.0\.1\:1337/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
         $string19 = /505152535657556A605A6863616C6354594883EC2865488B32488B7618488B761048AD488B30488B7E3003573C8B5C17288B741F204801FE8B541F240FB72C178D5202AD813C0757696E4575EF8B741F1C4801FE8B34AE4801F799FFD74883C4305D5F5E5B5A5958C3/ nocase ascii wide
@@ -76,10 +76,10 @@ rule KittyStager
         $string22 = /Enelg52\/KittyStager/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string23 = /http:\/\/127\.0\.0\.1:8080/ nocase ascii wide
+        $string23 = /http\:\/\/127\.0\.0\.1\:8080/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string24 = /http:\/\/localhost:8080/ nocase ascii wide
+        $string24 = /http\:\/\/localhost\:8080/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
         $string25 = /Invoke\-EDRChecker\.ps1/ nocase ascii wide
@@ -118,7 +118,7 @@ rule KittyStager
         $string36 = /KittyStager\/kitten/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string37 = /localhost:1337/ nocase ascii wide
+        $string37 = /localhost\:1337/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
         $string38 = /malware\.NewConfig/ nocase ascii wide

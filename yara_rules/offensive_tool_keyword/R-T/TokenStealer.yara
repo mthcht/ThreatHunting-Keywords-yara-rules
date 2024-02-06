@@ -22,10 +22,10 @@ rule TokenStealer
         $string4 = /\[\+\]\sv1\.0\s\@decoder_it\s2023/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string5 = /\]\sToken\sdoes\sNOT\shave\sSE_ASSIGN_PRIMARY_NAME.{0,1000}\susing\sCreateProcessAsWithToken\(\)\sfor\slaunching:/ nocase ascii wide
+        $string5 = /\]\sToken\sdoes\sNOT\shave\sSE_ASSIGN_PRIMARY_NAME.{0,1000}\susing\sCreateProcessAsWithToken\(\)\sfor\slaunching\:/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string6 = /\<SessionId\>:\slist\/steal\stoken\sfrom\sspecific\ssession/ nocase ascii wide
+        $string6 = /\<SessionId\>\:\slist\/steal\stoken\sfrom\sspecific\ssession/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
         $string7 = /ABC32DBD\-B697\-482D\-A763\-7BA82FE9CEA2/ nocase ascii wide
@@ -37,7 +37,7 @@ rule TokenStealer
         $string9 = /list\/steal\stoken\sof\suser\s\<user\>.{0,1000}default\sNT\sAUTHORITY\\\\SYSTEM\sfor\scomamnd\sexecution/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
-        $string10 = /\-t:\sforce\suse\sof\sImpersonation\sPrivilege/ nocase ascii wide
+        $string10 = /\-t\:\sforce\suse\sof\sImpersonation\sPrivilege/ nocase ascii wide
         // Description: stealing Windows tokens
         // Reference: https://github.com/decoder-it/TokenStealer
         $string11 = /TokenStealer\.cpp/ nocase ascii wide

@@ -112,19 +112,19 @@ rule reg
         $string34 = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string35 = /reg\ssave\sHKLM\\SAM\s.{0,1000}c:/ nocase ascii wide
+        $string35 = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string36 = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\security to a .dat file
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string37 = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c:/ nocase ascii wide
+        $string37 = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c\:/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\system to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string38 = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string39 = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c:/ nocase ascii wide
+        $string39 = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string40 = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide

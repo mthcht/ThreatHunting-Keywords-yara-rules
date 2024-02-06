@@ -22,7 +22,7 @@ rule SharpTerminator
         $string4 = /\\SharpTerminator\.csproj/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
-        $string5 = /http.{0,1000}:\/\/.{0,1000}\/Terminator\.sys/ nocase ascii wide
+        $string5 = /http.{0,1000}\:\/\/.{0,1000}\/Terminator\.sys/ nocase ascii wide
         // Description: Terminate AV/EDR Processes using kernel driver
         // Reference: https://github.com/mertdas/SharpTerminator
         $string6 = /mertdas\/SharpTerminator/ nocase ascii wide

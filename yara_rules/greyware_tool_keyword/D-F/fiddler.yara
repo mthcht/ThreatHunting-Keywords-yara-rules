@@ -19,7 +19,7 @@ rule fiddler
         $string3 = /\\Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe/ nocase ascii wide
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string4 = /https:\/\/www\.telerik\.com\/download\/fiddler\// nocase ascii wide
+        $string4 = /https\:\/\/www\.telerik\.com\/download\/fiddler\// nocase ascii wide
 
     condition:
         any of them

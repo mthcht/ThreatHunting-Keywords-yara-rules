@@ -43,7 +43,7 @@ rule D3m0n1z3dShell
         $string11 = /\/tmp\/tmpfolder\/pingoor\.h/ nocase ascii wide
         // Description: Demonized Shell is an Advanced Tool for persistence in linux
         // Reference: https://github.com/MatheuZSecurity/D3m0n1z3dShell
-        $string12 = /\[D3m0niz3d\]~\#/ nocase ascii wide
+        $string12 = /\[D3m0niz3d\]\~\#/ nocase ascii wide
         // Description: Demonized Shell is an Advanced Tool for persistence in linux
         // Reference: https://github.com/MatheuZSecurity/D3m0n1z3dShell
         $string13 = /\\chisel_x32/ nocase ascii wide

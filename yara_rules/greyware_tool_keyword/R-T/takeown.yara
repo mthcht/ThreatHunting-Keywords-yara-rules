@@ -10,10 +10,10 @@ rule takeown
     strings:
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string1 = /takeown\s\/f\s\"C:\\windows\\system32\\config\\SAM\"/ nocase ascii wide
+        $string1 = /takeown\s\/f\s\"C\:\\windows\\system32\\config\\SAM\"/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string2 = /takeown\s\/f\sC:\\Windows\\System32\\amsi\.dll\s\/a/ nocase ascii wide
+        $string2 = /takeown\s\/f\sC\:\\Windows\\System32\\amsi\.dll\s\/a/ nocase ascii wide
 
     condition:
         any of them

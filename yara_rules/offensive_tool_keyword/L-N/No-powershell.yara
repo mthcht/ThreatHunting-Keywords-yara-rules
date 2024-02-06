@@ -25,7 +25,7 @@ rule No_powershell
         $string5 = /\\No\-PowerShell\.exe/ nocase ascii wide
         // Description: powershell script to C# (no-powershell)
         // Reference: https://github.com/gtworek/PSBits/blob/master/Misc/No-PowerShell.cs
-        $string6 = /c:\\temp\\something\.ps1/ nocase ascii wide
+        $string6 = /c\:\\temp\\something\.ps1/ nocase ascii wide
 
     condition:
         any of them

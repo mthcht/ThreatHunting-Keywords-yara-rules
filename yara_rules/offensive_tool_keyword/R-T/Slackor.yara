@@ -10,13 +10,13 @@ rule Slackor
     strings:
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string1 = /\sC:\\Users\\Public\\build\.bat/ nocase ascii wide
+        $string1 = /\sC\:\\Users\\Public\\build\.bat/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string2 = /\sC:\\Users\\Public\\build\.vbs/ nocase ascii wide
+        $string2 = /\sC\:\\Users\\Public\\build\.vbs/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string3 = /\sC:\\Users\\Public\\DtcInstall\.txt/ nocase ascii wide
+        $string3 = /\sC\:\\Users\\Public\\DtcInstall\.txt/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
         $string4 = /\sSet\-MpPreference\s\-DisableIOAVProtection\s/ nocase ascii wide
@@ -46,19 +46,19 @@ rule Slackor
         $string12 = /\/SpookFlare\.git/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string13 = /4\.5\.6\.7:1337/ nocase ascii wide
+        $string13 = /4\.5\.6\.7\:1337/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string14 = /appdata.{0,1000}\\Windows:svchost\.exe/ nocase ascii wide
+        $string14 = /appdata.{0,1000}\\Windows\:svchost\.exe/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string15 = /appdata.{0,1000}\\Windows:winrm\.vbs/ nocase ascii wide
+        $string15 = /appdata.{0,1000}\\Windows\:winrm\.vbs/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
         $string16 = /bypassuac\sfodhelper/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string17 = /C:\\Users\\Public\\.{0,1000}\.dmp/ nocase ascii wide
+        $string17 = /C\:\\Users\\Public\\.{0,1000}\.dmp/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
         $string18 = /Coalfire\-Research\/Slackor/ nocase ascii wide
@@ -100,7 +100,7 @@ rule Slackor
         $string30 = /n00py\/Slackor/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
-        $string31 = /powershell\s.{0,1000}C:\\Users\\Public\\.{0,1000}\.exe.{0,1000}\sforfiles\.exe\s\/p\s.{0,1000}\\system32\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
+        $string31 = /powershell\s.{0,1000}C\:\\Users\\Public\\.{0,1000}\.exe.{0,1000}\sforfiles\.exe\s\/p\s.{0,1000}\\system32\s.{0,1000}\.exe.{0,1000}/ nocase ascii wide
         // Description: A Golang implant that uses Slack as a command and control server
         // Reference: https://github.com/Coalfire-Research/Slackor
         $string32 = /pypykatzClass/ nocase ascii wide

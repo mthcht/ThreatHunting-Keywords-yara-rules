@@ -19,7 +19,7 @@ rule grep
         $string3 = /grep\s.{0,1000}password\..{0,1000}\s\/etc\/.{0,1000}\.conf/ nocase ascii wide
         // Description: Look for users with a UID of 0
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4 = /grep\s:0:\s\/etc\/passwd/ nocase ascii wide
+        $string4 = /grep\s\:0\:\s\/etc\/passwd/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
         $string5 = /grep\s\-i\spass\s/ nocase ascii wide

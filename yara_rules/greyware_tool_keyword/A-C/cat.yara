@@ -58,7 +58,7 @@ rule cat
         $string16 = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string17 = /cat\s\/dev\/null\s\>\s~\/\.bash_history/ nocase ascii wide
+        $string17 = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
         $string18 = /cat\s\/etc\/passwd/ nocase ascii wide

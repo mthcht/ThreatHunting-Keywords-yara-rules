@@ -13,7 +13,7 @@ rule HackBrowserData
         $string1 = /\sHackBrowserData/ nocase ascii wide
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
-        $string2 = /\.exe\s\-b\s.{0,1000}\s\-p\s\'C:\\Users\\User\\AppData\\Local\\Microsoft\\Edge\\User\sData\\Default\'/ nocase ascii wide
+        $string2 = /\.exe\s\-b\s.{0,1000}\s\-p\s\'C\:\\Users\\User\\AppData\\Local\\Microsoft\\Edge\\User\sData\\Default\'/ nocase ascii wide
         // Description: Decrypt passwords/cookies/history/bookmarks from the browser
         // Reference: https://github.com/moonD4rk/HackBrowserData
         $string3 = /\.exe\s\-b\sall\s\-f\sjson\s\-\-dir\sresults\s\-cc/ nocase ascii wide

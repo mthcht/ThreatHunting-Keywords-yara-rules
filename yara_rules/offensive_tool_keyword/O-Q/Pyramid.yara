@@ -70,7 +70,7 @@ rule Pyramid
         $string20 = /\[\+\]\sMIND\sYOUR\sOPSEC\!\sServing\sPyramid\sfiles\sfrom\sfolder\s/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string21 = /\[\+\]\sprinting\sb64encoded\(zipped\(cradle\.py\)\)\sfor\sscriptless\sexecution\son\sterminal:/ nocase ascii wide
+        $string21 = /\[\+\]\sprinting\sb64encoded\(zipped\(cradle\.py\)\)\sfor\sscriptless\sexecution\son\sterminal\:/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
         $string22 = /\[\+\]\sPyramid\sHTTP\sServer\slistening\son\sport\s/ nocase ascii wide

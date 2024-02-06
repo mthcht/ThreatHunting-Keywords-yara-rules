@@ -28,16 +28,16 @@ rule KaynLdr
         $string6 = /\[\+\]\sInjected\sthe\s.{0,1000}\sDLL\sinto\sprocess\s/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string7 = /\[\+\]\sSuccessful\sallocated\sremote\smemory:\slpRemoteLibraryBuffer:\[/ nocase ascii wide
+        $string7 = /\[\+\]\sSuccessful\sallocated\sremote\smemory\:\slpRemoteLibraryBuffer\:\[/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string8 = /\[\+\]\sSuccessful\schange\sprotection:\sRW\s\-\>\sRX/ nocase ascii wide
+        $string8 = /\[\+\]\sSuccessful\schange\sprotection\:\sRW\s\-\>\sRX/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
         $string9 = /\[\+\]\sSuccessful\scopied\sdll\sbuffer/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
-        $string10 = /\[\+\]\sSuccessful\sinjected\sDLL:\shThread:/ nocase ascii wide
+        $string10 = /\[\+\]\sSuccessful\sinjected\sDLL\:\shThread\:/ nocase ascii wide
         // Description: KaynLdr is a Reflective Loader written in C/ASM
         // Reference: https://github.com/Cracked5pider/KaynLdr
         $string11 = /\\KaynInject\.h/ nocase ascii wide

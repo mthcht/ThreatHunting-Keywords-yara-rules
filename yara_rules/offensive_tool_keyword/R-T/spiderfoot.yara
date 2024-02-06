@@ -10,7 +10,7 @@ rule spiderfoot
     strings:
         // Description: The OSINT Platform for Security Assessments
         // Reference: https://www.spiderfoot.net/
-        $string1 = /\s\.\/sf\.py\s\-l\s127\.0\.0\.1:5001/ nocase ascii wide
+        $string1 = /\s\.\/sf\.py\s\-l\s127\.0\.0\.1\:5001/ nocase ascii wide
         // Description: The OSINT Platform for Security Assessments
         // Reference: https://www.spiderfoot.net/
         $string2 = /\/sfp_openphish\.py/ nocase ascii wide

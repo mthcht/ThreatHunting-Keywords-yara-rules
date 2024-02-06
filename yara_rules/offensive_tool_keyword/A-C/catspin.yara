@@ -13,7 +13,7 @@ rule catspin
         $string1 = /\scatspin\.sh\s/ nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
-        $string2 = /\sfile:\/\/catspin\.yaml\s/ nocase ascii wide
+        $string2 = /\sfile\:\/\/catspin\.yaml\s/ nocase ascii wide
         // Description: Catspin rotates the IP address of HTTP requests making IP based blocks or slowdown measures ineffective. It is based on AWS API Gateway and deployed via AWS Cloudformation.
         // Reference: https://github.com/rootcathacking/catspin
         $string3 = /\s\-\-stack\-name\scatspin\s/ nocase ascii wide

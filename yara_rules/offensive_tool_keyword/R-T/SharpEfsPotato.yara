@@ -10,7 +10,7 @@ rule SharpEfsPotato
     strings:
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string1 = /\sC:\\temp\\w\.log/ nocase ascii wide
+        $string1 = /\sC\:\\temp\\w\.log/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
         $string2 = /\sSharpEfsPotato/ nocase ascii wide

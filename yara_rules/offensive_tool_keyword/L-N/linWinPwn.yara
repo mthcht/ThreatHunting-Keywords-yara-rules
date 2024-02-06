@@ -526,7 +526,7 @@ rule linWinPwn
         $string172 = /ridbrute_attack/ nocase ascii wide
         // Description: linWinPwn is a bash script that automates a number of Active Directory Enumeration and Vulnerability checks
         // Reference: https://github.com/lefayjey/linWinPwn
-        $string173 = /rpc:\/\/.{0,1000}\s\-rpc\-mode\sICPR\s\-icpr\-ca\-name\s/ nocase ascii wide
+        $string173 = /rpc\:\/\/.{0,1000}\s\-rpc\-mode\sICPR\s\-icpr\-ca\-name\s/ nocase ascii wide
         // Description: linWinPwn is a bash script that automates a number of Active Directory Enumeration and Vulnerability checks
         // Reference: https://github.com/lefayjey/linWinPwn
         $string174 = /rpcdump_check/ nocase ascii wide

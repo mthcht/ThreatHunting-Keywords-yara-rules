@@ -10,7 +10,7 @@ rule Inc
     strings:
         // Description: Inc ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string1 = /\sdelete\sshadow\scopies\sfrom\s.{0,1000}c:\/\s/ nocase ascii wide
+        $string1 = /\sdelete\sshadow\scopies\sfrom\s.{0,1000}c\:\/\s/ nocase ascii wide
         // Description: Inc ransomware
         // Reference: https://github.com/rivitna/Malware
         $string2 = /\[.{0,1000}\]\sStarting\sfull\sencryption\sin\s5s/ nocase ascii wide

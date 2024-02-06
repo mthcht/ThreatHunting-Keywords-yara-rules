@@ -10,7 +10,7 @@ rule GhostTask
     strings:
         // Description: Creates scheduled tasks with a restrictive security descriptor -  making them invisible to all users. - Establishes scheduled tasks directly via the registry -  bypassing the generation of standard Windows event logs. - Provides support to modify existing scheduled tasks without generating Windows event logs. - Supports remote scheduled task creation (by using specially crafted Silver Ticket). - Supports to run in C2 with in-memory PE execution module (e.g. -  BruteRatel's memexec)
         // Reference: https://github.com/netero1010/GhostTask
-        $string1 = /\s\-\sdelete:\sDelete\sa\sscheduled\stask\.\sRequires\srestarting\sthe\s/ nocase ascii wide
+        $string1 = /\s\-\sdelete\:\sDelete\sa\sscheduled\stask\.\sRequires\srestarting\sthe\s/ nocase ascii wide
         // Description: Creates scheduled tasks with a restrictive security descriptor -  making them invisible to all users. - Establishes scheduled tasks directly via the registry -  bypassing the generation of standard Windows event logs. - Provides support to modify existing scheduled tasks without generating Windows event logs. - Supports remote scheduled task creation (by using specially crafted Silver Ticket). - Supports to run in C2 with in-memory PE execution module (e.g. -  BruteRatel's memexec)
         // Reference: https://github.com/netero1010/GhostTask
         $string2 = /\sadd\s.{0,1000}\sdemon\.x64\.exe/ nocase ascii wide

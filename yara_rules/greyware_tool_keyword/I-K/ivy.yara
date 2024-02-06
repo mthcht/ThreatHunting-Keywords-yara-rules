@@ -13,7 +13,7 @@ rule ivy
         $string1 = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sInject\s\-O\s.{0,1000}\.png\s\-stageless/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string2 = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.hta\s\-url\shttp:.{0,1000}\s\-delivery\shta\s\-stageless/ nocase ascii wide
+        $string2 = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.hta\s\-url\shttp\:.{0,1000}\s\-delivery\shta\s\-stageless/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
         $string3 = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.js\s\-url\shttp.{0,1000}\s\-delivery\sbits\s\-stageless/ nocase ascii wide

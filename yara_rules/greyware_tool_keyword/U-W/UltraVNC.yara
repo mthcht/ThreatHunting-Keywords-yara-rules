@@ -22,7 +22,7 @@ rule UltraVNC
         $string4 = /\svnc\.ini\s/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string5 = /\"publisher\":\"uvnc\sbvba/ nocase ascii wide
+        $string5 = /\"publisher\"\:\"uvnc\sbvba/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string6 = /\/downloads\/ultravnc\.html/ nocase ascii wide

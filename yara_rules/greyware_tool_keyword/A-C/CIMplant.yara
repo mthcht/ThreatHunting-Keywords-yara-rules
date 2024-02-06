@@ -13,7 +13,7 @@ rule CIMplant
         $string1 = /\%SystemRoot\%\\\\MEMORY\.DMP/ nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string2 = /C:\\Windows\\MEMORY\.DMP/ nocase ascii wide
+        $string2 = /C\:\\Windows\\MEMORY\.DMP/ nocase ascii wide
 
     condition:
         any of them

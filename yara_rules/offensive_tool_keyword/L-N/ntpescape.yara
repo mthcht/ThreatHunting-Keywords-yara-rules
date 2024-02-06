@@ -10,13 +10,13 @@ rule ntpescape
     strings:
         // Description: ntpescape is a tool that can stealthily (but slowly) exfiltrate data from a computer using the Network Time Protocol (NTP).
         // Reference: https://github.com/evallen/ntpescape
-        $string1 = /\s\|\s\.\/send\s\-d\s.{0,1000}:123\s\-tM\s0\s\-tm\s0/ nocase ascii wide
+        $string1 = /\s\|\s\.\/send\s\-d\s.{0,1000}\:123\s\-tM\s0\s\-tm\s0/ nocase ascii wide
         // Description: ntpescape is a tool that can stealthily (but slowly) exfiltrate data from a computer using the Network Time Protocol (NTP).
         // Reference: https://github.com/evallen/ntpescape
-        $string2 = /\.\/recv\s\-d\s:50001/ nocase ascii wide
+        $string2 = /\.\/recv\s\-d\s\:50001/ nocase ascii wide
         // Description: ntpescape is a tool that can stealthily (but slowly) exfiltrate data from a computer using the Network Time Protocol (NTP).
         // Reference: https://github.com/evallen/ntpescape
-        $string3 = /\.\/send\s\-d\s.{0,1000}:123\s\-f\s/ nocase ascii wide
+        $string3 = /\.\/send\s\-d\s.{0,1000}\:123\s\-f\s/ nocase ascii wide
         // Description: ntpescape is a tool that can stealthily (but slowly) exfiltrate data from a computer using the Network Time Protocol (NTP).
         // Reference: https://github.com/evallen/ntpescape
         $string4 = /\/ntpescape\.git/ nocase ascii wide

@@ -43,7 +43,7 @@ rule o365enum
         $string11 = /o365enum\-master/ nocase ascii wide
         // Description: Enumerate valid usernames from Office 365 using ActiveSync - Autodiscover v1 or office.com login page.
         // Reference: https://github.com/gremwell/o365enum
-        $string12 = /valid_user\@contoso\.com:Password1/ nocase ascii wide
+        $string12 = /valid_user\@contoso\.com\:Password1/ nocase ascii wide
 
     condition:
         any of them

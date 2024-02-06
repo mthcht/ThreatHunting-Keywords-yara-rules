@@ -16,7 +16,7 @@ rule IDiagnosticProfileUAC
         $string2 = /\\IDiagnosticProfileUAC/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
-        $string3 = /C:\\Uac\\results\.cab/ nocase ascii wide
+        $string3 = /C\:\\Uac\\results\.cab/ nocase ascii wide
         // Description: UAC bypass using auto-elevated COM object Virtual Factory for DiagCpl
         // Reference: https://github.com/Wh04m1001/IDiagnosticProfileUAC
         $string4 = /IDiagnosticProfileUAC\.git/ nocase ascii wide

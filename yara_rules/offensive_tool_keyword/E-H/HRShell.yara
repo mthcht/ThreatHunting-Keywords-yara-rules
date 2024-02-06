@@ -10,7 +10,7 @@ rule HRShell
     strings:
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
-        $string1 = /\sclient\.py\s\-s\shttp.{0,1000}:5000\s\-\-cert\s\/.{0,1000}\.pem/ nocase ascii wide
+        $string1 = /\sclient\.py\s\-s\shttp.{0,1000}\:5000\s\-\-cert\s\/.{0,1000}\.pem/ nocase ascii wide
         // Description: HRShell is an HTTPS/HTTP reverse shell built with flask. It is an advanced C2 server with many features & capabilities.
         // Reference: https://github.com/chrispetrou/HRShell
         $string2 = /\sserver\.py\s\-s\stornado\s\-\-cert\s\/.{0,1000}pem\s\-\-key\s\/.{0,1000}\.pem/ nocase ascii wide

@@ -10,10 +10,10 @@ rule sendspace_com
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1 = /\shttps:\/\/www\.sendspace\.com\/file\// nocase ascii wide
+        $string1 = /\shttps\:\/\/www\.sendspace\.com\/file\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2 = /https:\/\/.{0,1000}\.sendspace\.com\/upload/ nocase ascii wide
+        $string2 = /https\:\/\/.{0,1000}\.sendspace\.com\/upload/ nocase ascii wide
 
     condition:
         any of them

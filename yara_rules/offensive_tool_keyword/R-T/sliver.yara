@@ -247,7 +247,7 @@ rule sliver
         $string79 = /sliver\/\.sliver/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string80 = /sliver:sliver/ nocase ascii wide
+        $string80 = /sliver\:sliver/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
         $string81 = /sliver_pcap_parser\.py/ nocase ascii wide

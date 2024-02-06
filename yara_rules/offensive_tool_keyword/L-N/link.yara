@@ -49,10 +49,10 @@ rule link
         $string13 = /Out\-Minidump\.ps1/ nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string14 = /output:\slink\.bin/ nocase ascii wide
+        $string14 = /output\:\slink\.bin/ nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
-        $string15 = /output:\slink\.dll/ nocase ascii wide
+        $string15 = /output\:\slink\.dll/ nocase ascii wide
         // Description: link is a command and control framework written in rust
         // Reference: https://github.com/postrequest/link
         $string16 = /pip3\sinstall\spypykatz/ nocase ascii wide

@@ -10,7 +10,7 @@ rule pyGPOAbuse
     strings:
         // Description: python implementation of SharpGPOAbuse
         // Reference: https://github.com/Hackndo/pyGPOAbuse
-        $string1 = /\s\-hashes\slm:nt\s\-gpo\-id\s.{0,1000}\s\-powershell\s/ nocase ascii wide
+        $string1 = /\s\-hashes\slm\:nt\s\-gpo\-id\s.{0,1000}\s\-powershell\s/ nocase ascii wide
         // Description: python implementation of SharpGPOAbuse
         // Reference: https://github.com/Hackndo/pyGPOAbuse
         $string2 = /pygpoabuse\.py/ nocase ascii wide

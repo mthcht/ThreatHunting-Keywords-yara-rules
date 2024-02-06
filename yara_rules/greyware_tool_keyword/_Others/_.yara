@@ -100,7 +100,7 @@ rule _
         $string30 = /\\keygen\.exe/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string31 = /https:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string31 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

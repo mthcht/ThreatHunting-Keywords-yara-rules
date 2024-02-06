@@ -502,7 +502,7 @@ rule poshc2
         $string164 = /sweetpotato\s\-p/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string165 = /timestomp\sc:/ nocase ascii wide
+        $string165 = /timestomp\sc\:/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string166 = /unhide\-implant/ nocase ascii wide

@@ -34,7 +34,7 @@ rule NetNTLMtoSilverTicket
         $string8 = /NetNTLMtoSilverTicket\-master/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
-        $string9 = /ntlmv1\.py\s\-\-ntlmv1\s.{0,1000}::/ nocase ascii wide
+        $string9 = /ntlmv1\.py\s\-\-ntlmv1\s.{0,1000}\:\:/ nocase ascii wide
         // Description: Obtaining NetNTLMv1 Challenge/Response authentication - cracking those to NTLM Hashes and using that NTLM Hash to sign a Kerberos Silver ticket.
         // Reference: https://github.com/NotMedic/NetNTLMtoSilverTicket
         $string10 = /rpcdump\.py\s.{0,1000}\s\|\sgrep\sMS\-RPRN/ nocase ascii wide

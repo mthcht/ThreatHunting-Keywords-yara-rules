@@ -76,10 +76,10 @@ rule action1_greyware_tool_keyword
         $string22_action1_greyware_tool_keyword = /action1_update\.exe/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string23_action1_greyware_tool_keyword = /C:\\Windows\\Action1\\/ nocase ascii wide
+        $string23_action1_greyware_tool_keyword = /C\:\\Windows\\Action1\\/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string24_action1_greyware_tool_keyword = /C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Action1/ nocase ascii wide
+        $string24_action1_greyware_tool_keyword = /C\:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Action1/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string25_action1_greyware_tool_keyword = /\'Company\'\>Action1\sCorporation/ nocase ascii wide
@@ -88,7 +88,7 @@ rule action1_greyware_tool_keyword
         $string26_action1_greyware_tool_keyword = /CurrentControlSet\\Services\\A1Agent/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string27_action1_greyware_tool_keyword = /https:\/\/app\.action1\.com\/agent\/.{0,1000}\/Windows\/.{0,1000}\.msi/ nocase ascii wide
+        $string27_action1_greyware_tool_keyword = /https\:\/\/app\.action1\.com\/agent\/.{0,1000}\/Windows\/.{0,1000}\.msi/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string28_action1_greyware_tool_keyword = /InventoryApplicationFile\\action1_agent\.ex/ nocase ascii wide
@@ -352,7 +352,7 @@ rule advanced_ip_scanner_greyware_tool_keyword
     strings:
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string1_advanced_ip_scanner_greyware_tool_keyword = /\.exe\s\/s:ip_ranges\.txt\s\/f:scan_results\.txt/ nocase ascii wide
+        $string1_advanced_ip_scanner_greyware_tool_keyword = /\.exe\s\/s\:ip_ranges\.txt\s\/f\:scan_results\.txt/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
         $string2_advanced_ip_scanner_greyware_tool_keyword = /\\Local\\Temp\\Advanced\sIP\sScanner\s2\\/ nocase ascii wide
@@ -376,7 +376,7 @@ rule advanced_ip_scanner_greyware_tool_keyword
         $string8_advanced_ip_scanner_greyware_tool_keyword = /advanced_ip_scanner_console\.exe/ nocase ascii wide
         // Description: The program shows all network devices. gives you access to shared folders. provides remote control of computers (via RDP and Radmin) and can even remotely switch computers off. It is easy to use and runs as a portable edition (abused by TA)
         // Reference: https://www.huntandhackett.com/blog/advanced-ip-scanner-the-preferred-scanner-in-the-apt-toolbox
-        $string9_advanced_ip_scanner_greyware_tool_keyword = /https:\/\/download\.advanced\-ip\-scanner\.com\/download\/files\/.{0,1000}\.exe/ nocase ascii wide
+        $string9_advanced_ip_scanner_greyware_tool_keyword = /https\:\/\/download\.advanced\-ip\-scanner\.com\/download\/files\/.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -505,10 +505,10 @@ rule AlanFramework_greyware_tool_keyword
     strings:
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string1_AlanFramework_greyware_tool_keyword = /http.{0,1000}:\/\/127\.0\.0\.1:8081/ nocase ascii wide
+        $string1_AlanFramework_greyware_tool_keyword = /http.{0,1000}\:\/\/127\.0\.0\.1\:8081/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string2_AlanFramework_greyware_tool_keyword = /http.{0,1000}:\/\/localhost:8081/ nocase ascii wide
+        $string2_AlanFramework_greyware_tool_keyword = /http.{0,1000}\:\/\/localhost\:8081/ nocase ascii wide
 
     condition:
         any of them
@@ -560,7 +560,7 @@ rule Ammyy_Admin_greyware_tool_keyword
         $string11_Ammyy_Admin_greyware_tool_keyword = /Ammyy\sLLC/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string12_Ammyy_Admin_greyware_tool_keyword = /PUA:Win32\/AmmyyAdmin/ nocase ascii wide
+        $string12_Ammyy_Admin_greyware_tool_keyword = /PUA\:Win32\/AmmyyAdmin/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
         $string13_Ammyy_Admin_greyware_tool_keyword = /rl\.ammyy\.com\// nocase ascii wide
@@ -591,10 +591,10 @@ rule anonfiles_com_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_anonfiles_com_greyware_tool_keyword = /https:\/\/anonfiles\.com\/.{0,1000}\// nocase ascii wide
+        $string1_anonfiles_com_greyware_tool_keyword = /https\:\/\/anonfiles\.com\/.{0,1000}\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_anonfiles_com_greyware_tool_keyword = /https:\/\/api\.anonfiles\.com\/upload/ nocase ascii wide
+        $string2_anonfiles_com_greyware_tool_keyword = /https\:\/\/api\.anonfiles\.com\/upload/ nocase ascii wide
 
     condition:
         any of them
@@ -631,68 +631,122 @@ rule anydesk_greyware_tool_keyword
 
     strings:
         // Description: Anydesk RMM usage
-        // Reference: https://anydesk.com/
-        $string1_anydesk_greyware_tool_keyword = /\\adprinterpipe/ nocase ascii wide
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string1_anydesk_greyware_tool_keyword = /\/\.anydesk\/\.anydesk\.trace/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string2_anydesk_greyware_tool_keyword = /\/\.anydesk\/service\.conf/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string3_anydesk_greyware_tool_keyword = /\/\.anydesk\/system\.conf/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string4_anydesk_greyware_tool_keyword = /\/\.anydesk\/user\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string2_anydesk_greyware_tool_keyword = /\\AnyDesk\s\(1\)\.exe/ nocase ascii wide
+        $string5_anydesk_greyware_tool_keyword = /\/Anydesk\.exe/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string6_anydesk_greyware_tool_keyword = /\/Applications\/Anydesk\.app\// nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string7_anydesk_greyware_tool_keyword = /\/etc\/systemd\/system\/anydesk\.service/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string8_anydesk_greyware_tool_keyword = /\/home\/.{0,1000}\/\.anydesk\// nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string9_anydesk_greyware_tool_keyword = /\/log\/anydesk\.trace/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string10_anydesk_greyware_tool_keyword = /\/usr\/bin\/anydesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string11_anydesk_greyware_tool_keyword = /\/usr\/lib64\/anydesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string12_anydesk_greyware_tool_keyword = /\/usr\/libexec\/anydesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string3_anydesk_greyware_tool_keyword = /\\AnyDesk\.exe/ nocase ascii wide
+        $string13_anydesk_greyware_tool_keyword = /\\adprinterpipe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string4_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
+        $string14_anydesk_greyware_tool_keyword = /\\AnyDesk\s\(1\)\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string5_anydesk_greyware_tool_keyword = /\\anydesk\\printer_driver/ nocase ascii wide
+        $string15_anydesk_greyware_tool_keyword = /\\AnyDesk\.exe/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string6_anydesk_greyware_tool_keyword = /\\AnyDesk\\service\.conf/ nocase ascii wide
+        $string16_anydesk_greyware_tool_keyword = /\\AnyDesk\.lnk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string17_anydesk_greyware_tool_keyword = /\\AnyDesk\\ad\.trace/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string18_anydesk_greyware_tool_keyword = /\\AnyDesk\\ad_svc\.trace/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string19_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string7_anydesk_greyware_tool_keyword = /\\AnyDeskPrintDriver\.cat/ nocase ascii wide
+        $string20_anydesk_greyware_tool_keyword = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string8_anydesk_greyware_tool_keyword = /\\anydeskprintdriver\.inf/ nocase ascii wide
+        $string21_anydesk_greyware_tool_keyword = /\\anydesk\\printer_driver/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string9_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
+        $string22_anydesk_greyware_tool_keyword = /\\AnyDesk\\service\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string10_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
+        $string23_anydesk_greyware_tool_keyword = /\\AnyDeskPrintDriver\.cat/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string11_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
-        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
-        // Reference: https://anydesk.com/
-        $string12_anydesk_greyware_tool_keyword = /0DBF152DEAF0B981A8A938D53F769DB8/ nocase ascii wide
-        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
-        // Reference: https://anydesk.com/
-        $string13_anydesk_greyware_tool_keyword = /9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE/ nocase ascii wide
-        // Description: Anydesk RMM usage - compromised certificate (rumor) - https://anydesk.com/en/changelog/windows
-        // Reference: https://anydesk.com/
-        $string14_anydesk_greyware_tool_keyword = /9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF/ nocase ascii wide
+        $string24_anydesk_greyware_tool_keyword = /\\anydeskprintdriver\.inf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string15_anydesk_greyware_tool_keyword = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
+        $string25_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string26_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string27_anydesk_greyware_tool_keyword = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string28_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string29_anydesk_greyware_tool_keyword = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string30_anydesk_greyware_tool_keyword = /0DBF152DEAF0B981A8A938D53F769DB8/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string31_anydesk_greyware_tool_keyword = /9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string32_anydesk_greyware_tool_keyword = /9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string33_anydesk_greyware_tool_keyword = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string16_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string34_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string17_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string35_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string18_anydesk_greyware_tool_keyword = /C:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string36_anydesk_greyware_tool_keyword = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string19_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string37_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string20_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string38_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string21_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string39_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -711,7 +765,7 @@ rule anymailfinder_greyware_tool_keyword
     strings:
         // Description: used by attackers to find informations about a company users
         // Reference: https://anymailfinder.com
-        $string1_anymailfinder_greyware_tool_keyword = /https:\/\/anymailfinder\.com\/search\// nocase ascii wide
+        $string1_anymailfinder_greyware_tool_keyword = /https\:\/\/anymailfinder\.com\/search\// nocase ascii wide
 
     condition:
         any of them
@@ -749,7 +803,7 @@ rule APT_greyware_tool_keyword
     strings:
         // Description: linux commands abused by attackers - backdoor apt execute a command when invoking apt
         // Reference: N/A
-        $string1_APT_greyware_tool_keyword = /APT::Update::Pre\-Invoke\s.{0,1000}}/ nocase ascii wide
+        $string1_APT_greyware_tool_keyword = /APT\:\:Update\:\:Pre\-Invoke\s.{0,1000}\}/ nocase ascii wide
 
     condition:
         any of them
@@ -958,7 +1012,7 @@ rule AutoSUID_greyware_tool_keyword
         $string8_AutoSUID_greyware_tool_keyword = /\.\/nice\s\/bin\/sh\s\-p/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string9_AutoSUID_greyware_tool_keyword = /\.\/rview\s\-c\s\':py3\simport\sos.{0,1000}os\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
+        $string9_AutoSUID_greyware_tool_keyword = /\.\/rview\s\-c\s\'\:py3\simport\sos.{0,1000}os\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string10_AutoSUID_greyware_tool_keyword = /\/ld\.so\s\/bin\/sh\s\-p/ nocase ascii wide
@@ -973,7 +1027,7 @@ rule AutoSUID_greyware_tool_keyword
         $string13_AutoSUID_greyware_tool_keyword = /\/pwn_tclsh\.me/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string14_AutoSUID_greyware_tool_keyword = /\/rvim\s\-c\s\':py3\simport\sos.{0,1000}os\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
+        $string14_AutoSUID_greyware_tool_keyword = /\/rvim\s\-c\s\'\:py3\simport\sos.{0,1000}os\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string15_AutoSUID_greyware_tool_keyword = /\/sshpass\s\/bin\/sh\s\-p/ nocase ascii wide
@@ -985,7 +1039,7 @@ rule AutoSUID_greyware_tool_keyword
         $string17_AutoSUID_greyware_tool_keyword = /\/unshare\s\-r\s\/bin\/sh/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string18_AutoSUID_greyware_tool_keyword = /\/view\s\-c\s\':py3\simport\sos.{0,1000}os\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
+        $string18_AutoSUID_greyware_tool_keyword = /\/view\s\-c\s\'\:py3\simport\sos.{0,1000}os\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string19_AutoSUID_greyware_tool_keyword = /\/watch\s\-x\ssh\s\-c\s\'reset.{0,1000}\sexec\ssh\s1\>\&0\s2\>\&0/ nocase ascii wide
@@ -1000,7 +1054,7 @@ rule AutoSUID_greyware_tool_keyword
         $string22_AutoSUID_greyware_tool_keyword = /dmsetup\screate\sbase\s\<\<EOF.{0,1000}0\s3534848\slinear\s\/dev\/loop0\s94208.{0,1000}\sEOF.{0,1000}\.\/dmsetup\sls\s\-\-exec\s\'\/bin\/sh\s\-p\s\-s/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string23_AutoSUID_greyware_tool_keyword = /docker\srun\s\-v\s\/:\/mnt\s\-\-rm\s\-it\salpine\schroot\s\/mnt\ssh/ nocase ascii wide
+        $string23_AutoSUID_greyware_tool_keyword = /docker\srun\s\-v\s\/\:\/mnt\s\-\-rm\s\-it\salpine\schroot\s\/mnt\ssh/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string24_AutoSUID_greyware_tool_keyword = /emacs\s\-Q\s\-nw\s\-\-eval\s\'\(term\s\\\"\/bin\/sh\s\-p\\\"\)/ nocase ascii wide
@@ -1036,7 +1090,7 @@ rule AutoSUID_greyware_tool_keyword
         $string34_AutoSUID_greyware_tool_keyword = /php\s\-r\s\\\"pcntl_exec\(\'\/bin\/sh\'/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string35_AutoSUID_greyware_tool_keyword = /rsync\s\-e\s\'sh\s\-p\s\-c\s.{0,1000}sh\s0\<\&2\s1\>\&2.{0,1000}127\.0\.0\.1:\/dev\/null/ nocase ascii wide
+        $string35_AutoSUID_greyware_tool_keyword = /rsync\s\-e\s\'sh\s\-p\s\-c\s.{0,1000}sh\s0\<\&2\s1\>\&2.{0,1000}127\.0\.0\.1\:\/dev\/null/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string36_AutoSUID_greyware_tool_keyword = /strace\s\-o\s\/dev\/null\s\/bin\/sh\s\-p/ nocase ascii wide
@@ -1045,10 +1099,10 @@ rule AutoSUID_greyware_tool_keyword
         $string37_AutoSUID_greyware_tool_keyword = /taskset\s1\s\/bin\/sh\s\-p/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string38_AutoSUID_greyware_tool_keyword = /vim\s\-c\s\':py3\simport\sos.{0,1000}\sos\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
+        $string38_AutoSUID_greyware_tool_keyword = /vim\s\-c\s\'\:py3\simport\sos.{0,1000}\sos\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string39_AutoSUID_greyware_tool_keyword = /vimdiff\s\-c\s\':py3\simport\sos.{0,1000}\sos\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
+        $string39_AutoSUID_greyware_tool_keyword = /vimdiff\s\-c\s\'\:py3\simport\sos.{0,1000}\sos\.execl\(\\\"\/bin\/sh\\/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string40_AutoSUID_greyware_tool_keyword = /xargs\s\-a\s\/dev\/null\ssh\s\-p/ nocase ascii wide
@@ -1111,7 +1165,7 @@ rule bash_keylogger_greyware_tool_keyword
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1_bash_keylogger_greyware_tool_keyword = /history\s\-a.{0,1000}\stail\s\-n1\s~\/\.bash_history\s\>\s\/dev\/tcp\/.{0,1000}\// nocase ascii wide
+        $string1_bash_keylogger_greyware_tool_keyword = /history\s\-a.{0,1000}\stail\s\-n1\s\~\/\.bash_history\s\>\s\/dev\/tcp\/.{0,1000}\// nocase ascii wide
 
     condition:
         any of them
@@ -1130,7 +1184,7 @@ rule bash_port_scan_greyware_tool_keyword
     strings:
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string1_bash_port_scan_greyware_tool_keyword = /for\si\sin\s{1\.\.65535}/ nocase ascii wide
+        $string1_bash_port_scan_greyware_tool_keyword = /for\si\sin\s\{1\.\.65535\}/ nocase ascii wide
 
     condition:
         any of them
@@ -1173,10 +1227,10 @@ rule bash_greyware_tool_keyword
         $string8_bash_greyware_tool_keyword = /echo\s.{0,1000}\s\/root\/\.bash_history/ nocase ascii wide
         // Description: add a passwordless user 
         // Reference: N/A
-        $string9_bash_greyware_tool_keyword = /echo\s.{0,1000}::0:0::\/root:\/bin\/bash.{0,1000}\s\>\>\/etc\/passwd/ nocase ascii wide
+        $string9_bash_greyware_tool_keyword = /echo\s.{0,1000}\:\:0\:0\:\:\/root\:\/bin\/bash.{0,1000}\s\>\>\/etc\/passwd/ nocase ascii wide
         // Description: Backdooring APT
         // Reference: N/A
-        $string10_bash_greyware_tool_keyword = /echo\s.{0,1000}APT::Update::Pre\-Invoke\s.{0,1000}nohup\sncat\s\-lvp\s.{0,1000}\s\-e\s\/bin\/bash\s.{0,1000}\s\>\s\/etc\/apt\/apt\.conf\.d\// nocase ascii wide
+        $string10_bash_greyware_tool_keyword = /echo\s.{0,1000}APT\:\:Update\:\:Pre\-Invoke\s.{0,1000}nohup\sncat\s\-lvp\s.{0,1000}\s\-e\s\/bin\/bash\s.{0,1000}\s\>\s\/etc\/apt\/apt\.conf\.d\// nocase ascii wide
         // Description: Backdooring Message of the Day
         // Reference: N/A
         $string11_bash_greyware_tool_keyword = /echo\s.{0,1000}bash\s\-c\s.{0,1000}bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s\>\>\s\/etc\/update\-motd\.d\/00\-header/ nocase ascii wide
@@ -1197,7 +1251,7 @@ rule bash_greyware_tool_keyword
         $string16_bash_greyware_tool_keyword = /export\sHISTFILESIZE\=0/ nocase ascii wide
         // Description: use a space in front of your bash command and it won't be logged with the following option
         // Reference: N/A
-        $string17_bash_greyware_tool_keyword = /HISTCONTROL\=ignoredups:ignorespace/ nocase ascii wide
+        $string17_bash_greyware_tool_keyword = /HISTCONTROL\=ignoredups\:ignorespace/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
         $string18_bash_greyware_tool_keyword = /history\s\-c/ nocase ascii wide
@@ -1252,7 +1306,7 @@ rule bashupload_com_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_bashupload_com_greyware_tool_keyword = /https:\/\/bashupload\.com/ nocase ascii wide
+        $string1_bashupload_com_greyware_tool_keyword = /https\:\/\/bashupload\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -1271,10 +1325,10 @@ rule bcdedit_greyware_tool_keyword
     strings:
         // Description: Bcdedit is a command-line tool that enables users to view and make changes to boot configuration data (BCD) settings in Windows systems. Adversaries may leverage bcdedit to modify boot settings. such as enabling debug mode or disabling code integrity checks. as a means to bypass security mechanisms and gain persistence on the compromised system. By modifying the boot configuration. adversaries can evade detection and potentially maintain access to the system even after reboots.
         // Reference: N/A
-        $string1_bcdedit_greyware_tool_keyword = /bcdedit.{0,1000}\s\/set\s{default}\sbootstatuspolicy\signoreallfailures/ nocase ascii wide
+        $string1_bcdedit_greyware_tool_keyword = /bcdedit.{0,1000}\s\/set\s\{default\}\sbootstatuspolicy\signoreallfailures/ nocase ascii wide
         // Description: Bcdedit is a command-line tool that enables users to view and make changes to boot configuration data (BCD) settings in Windows systems. Adversaries may leverage bcdedit to modify boot settings. such as enabling debug mode or disabling code integrity checks. as a means to bypass security mechanisms and gain persistence on the compromised system. By modifying the boot configuration. adversaries can evade detection and potentially maintain access to the system even after reboots.
         // Reference: N/A
-        $string2_bcdedit_greyware_tool_keyword = /bcdedit.{0,1000}\s\/set\s{default}\srecoveryenabled\sNo/ nocase ascii wide
+        $string2_bcdedit_greyware_tool_keyword = /bcdedit.{0,1000}\s\/set\s\{default\}\srecoveryenabled\sNo/ nocase ascii wide
 
     condition:
         any of them
@@ -1445,7 +1499,7 @@ rule Browser_C2_greyware_tool_keyword
     strings:
         // Description: Post Exploitation agent which uses a browser to do C2 operations.
         // Reference: https://github.com/0x09AL/Browser-C2
-        $string1_Browser_C2_greyware_tool_keyword = /http:\/\/127\.0\.0\.1:8081/ nocase ascii wide
+        $string1_Browser_C2_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:8081/ nocase ascii wide
 
     condition:
         any of them
@@ -1531,7 +1585,7 @@ rule cat_greyware_tool_keyword
         $string16_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\/var\/log\/auth\.log/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string17_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s~\/\.bash_history/ nocase ascii wide
+        $string17_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\~\/\.bash_history/ nocase ascii wide
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
         $string18_cat_greyware_tool_keyword = /cat\s\/etc\/passwd/ nocase ascii wide
@@ -1559,7 +1613,7 @@ rule catbox_moe_greyware_tool_keyword
     strings:
         // Description: The cutest free file host you've ever seen - abused by threat actors
         // Reference: https://files[.]catbox.moe
-        $string1_catbox_moe_greyware_tool_keyword = /https:\/\/files\.catbox\.moe\// nocase ascii wide
+        $string1_catbox_moe_greyware_tool_keyword = /https\:\/\/files\.catbox\.moe\// nocase ascii wide
 
     condition:
         any of them
@@ -1671,7 +1725,7 @@ rule CIMplant_greyware_tool_keyword
         $string1_CIMplant_greyware_tool_keyword = /\%SystemRoot\%\\\\MEMORY\.DMP/ nocase ascii wide
         // Description: C# port of WMImplant which uses either CIM or WMI to query remote systems
         // Reference: https://github.com/RedSiege/CIMplant
-        $string2_CIMplant_greyware_tool_keyword = /C:\\Windows\\MEMORY\.DMP/ nocase ascii wide
+        $string2_CIMplant_greyware_tool_keyword = /C\:\\Windows\\MEMORY\.DMP/ nocase ascii wide
 
     condition:
         any of them
@@ -1915,13 +1969,13 @@ rule Compress_Archive_greyware_tool_keyword
     strings:
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string1_Compress_Archive_greyware_tool_keyword = /:\\programdata\\cloud\.exe/ nocase ascii wide
+        $string1_Compress_Archive_greyware_tool_keyword = /\:\\programdata\\cloud\.exe/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string2_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath\s\$env_Compress_Archive_greyware_tool_keyword:TEMP/ nocase ascii wide
+        $string2_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath\s\$env_Compress_Archive_greyware_tool_keyword\:TEMP/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string3_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}:\\Windows\\Temp\\/ nocase ascii wide
+        $string3_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}\:\\Windows\\Temp\\/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string4_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}\\AppData\\Local\\Temp\\\'/ nocase ascii wide
@@ -2047,7 +2101,7 @@ rule cut_greyware_tool_keyword
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1_cut_greyware_tool_keyword = /cut\s\-d:\s\-f1\s\/etc\/passwd/ nocase ascii wide
+        $string1_cut_greyware_tool_keyword = /cut\s\-d\:\s\-f1\s\/etc\/passwd/ nocase ascii wide
 
     condition:
         any of them
@@ -2132,7 +2186,7 @@ rule DBC2_greyware_tool_keyword
     strings:
         // Description: DBC2 (DropboxC2) is a modular post-exploitation tool composed of an agent running on the victim's machine - a controler running on any machine - powershell modules and Dropbox servers as a means of communication.
         // Reference: https://github.com/Arno0x/DBC2
-        $string1_DBC2_greyware_tool_keyword = /https:\/\/api\.dropboxapi\.com\// nocase ascii wide
+        $string1_DBC2_greyware_tool_keyword = /https\:\/\/api\.dropboxapi\.com\// nocase ascii wide
 
     condition:
         any of them
@@ -2259,19 +2313,19 @@ rule dev_tunnels_greyware_tool_keyword
         $string16_dev_tunnels_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string17_dev_tunnels_greyware_tool_keyword = /https:\/\/.{0,1000}\..{0,1000}\.devtunnels\.ms/ nocase ascii wide
+        $string17_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\..{0,1000}\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string18_dev_tunnels_greyware_tool_keyword = /https:\/\/.{0,1000}\.brs\.devtunnels\.ms\// nocase ascii wide
+        $string18_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.brs\.devtunnels\.ms\// nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string19_dev_tunnels_greyware_tool_keyword = /https:\/\/.{0,1000}\.euw\.devtunnels\.ms/ nocase ascii wide
+        $string19_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.euw\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string20_dev_tunnels_greyware_tool_keyword = /https:\/\/.{0,1000}\.use\.devtunnels\.ms/ nocase ascii wide
+        $string20_dev_tunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.use\.devtunnels\.ms/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string21_dev_tunnels_greyware_tool_keyword = /https:\/\/aka\.ms\/DevTunnelCliInstall/ nocase ascii wide
+        $string21_dev_tunnels_greyware_tool_keyword = /https\:\/\/aka\.ms\/DevTunnelCliInstall/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
         $string22_dev_tunnels_greyware_tool_keyword = /inc1\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
@@ -2313,7 +2367,7 @@ rule dev_tunnels_greyware_tool_keyword
         $string34_dev_tunnels_greyware_tool_keyword = /usw3\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: Dev tunnels allow developers to securely share local web services across the internet. Enabling you to connect your local development environment with cloud services and share work in progress with colleagues or aid in building webhooks
         // Reference: https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
-        $string35_dev_tunnels_greyware_tool_keyword = /wss:\/\/.{0,1000}\.tunnels\.api\.visualstudio\.com\/api\/v1\/Connect\// nocase ascii wide
+        $string35_dev_tunnels_greyware_tool_keyword = /wss\:\/\/.{0,1000}\.tunnels\.api\.visualstudio\.com\/api\/v1\/Connect\// nocase ascii wide
 
     condition:
         any of them
@@ -2483,10 +2537,10 @@ rule dsquery_greyware_tool_keyword
         $string1_dsquery_greyware_tool_keyword = /dsquery\s.{0,1000}\s\-filter\s.{0,1000}\(objectClass\=trustedDomain\).{0,1000}\s\-attr\s/ nocase ascii wide
         // Description: Finding users Not Required to Have a Password
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
-        $string2_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl:1\.2\.840\.113556\.1\.4\.803:\=32/ nocase ascii wide
+        $string2_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32/ nocase ascii wide
         // Description: Finding accounts with Kerberos Pre-Authentication Disabled
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
-        $string3_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl:1\.2\.840\.113556\.1\.4\.803:\=4194304/ nocase ascii wide
+        $string3_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=4194304/ nocase ascii wide
         // Description: Finding accounts with constrained delegation
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
         $string4_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(\&\(objectClass\=User\)\(msDS\-AllowedToDelegateTo\=/ nocase ascii wide
@@ -2498,7 +2552,7 @@ rule dsquery_greyware_tool_keyword
         $string6_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(\&\(objectClass\=User\)\(serviceprincipalname\=.{0,1000}\)\(samaccountname\=.{0,1000}\s\-limit\s0\s\-attr\ssamaccountname\sserviceprincipalname/ nocase ascii wide
         // Description: Finding accounts with unconstrained delegation
         // Reference: https://www.politoinc.com/post/ldap-queries-for-offensive-and-defensive-operations
-        $string7_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(userAccountControl:1\.2\.840\.113556\.1\.4\.803:\=524288\)/ nocase ascii wide
+        $string7_dsquery_greyware_tool_keyword = /\-filter\s.{0,1000}\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)/ nocase ascii wide
 
     condition:
         any of them
@@ -2517,7 +2571,7 @@ rule ducktail_greyware_tool_keyword
     strings:
         // Description: infostealer command to retrieve public ip address
         // Reference: https://www.trendmicro.com/en_be/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html
-        $string1_ducktail_greyware_tool_keyword = /\-\-headless\s\-\-disable\-gpu\s\-\-disable\-logging\s\-\-dump\-dom\shttps:\/\/getip\.pro/ nocase ascii wide
+        $string1_ducktail_greyware_tool_keyword = /\-\-headless\s\-\-disable\-gpu\s\-\-disable\-logging\s\-\-dump\-dom\shttps\:\/\/getip\.pro/ nocase ascii wide
 
     condition:
         any of them
@@ -2570,7 +2624,7 @@ rule echo_greyware_tool_keyword
         $string5_echo_greyware_tool_keyword = /cmd\.exe\s\/c\secho\s.{0,1000}\s\>\s\\\\\.\\pipe\\/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
-        $string6_echo_greyware_tool_keyword = /echo\s\'\'\s\>\s~\/\.bash_history/ nocase ascii wide
+        $string6_echo_greyware_tool_keyword = /echo\s\'\'\s\>\s\~\/\.bash_history/ nocase ascii wide
         // Description: This command disables kprobes by writing '0' to the enabled file. Kprobes are dynamic breakpoints in the Linux kernel that can be used to intercept functions and gather information for debugging or monitoring.
         // Reference: N/A
         $string7_echo_greyware_tool_keyword = /echo\s0\s\>\s\/sys\/kernel\/debug\/kprobes\/enabled/ nocase ascii wide
@@ -2617,7 +2671,7 @@ rule email_format_greyware_tool_keyword
     strings:
         // Description: used by attackers to find informations about a company users
         // Reference: https://www.email-format.com
-        $string1_email_format_greyware_tool_keyword = /https:\/\/www\.email\-format\.com\/d\// nocase ascii wide
+        $string1_email_format_greyware_tool_keyword = /https\:\/\/www\.email\-format\.com\/d\// nocase ascii wide
 
     condition:
         any of them
@@ -2749,7 +2803,7 @@ rule exegol_greyware_tool_keyword
         $string23_exegol_greyware_tool_keyword = /netdiscover\s\-i\s.{0,1000}\s\-r\s.{0,1000}\/24/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
-        $string24_exegol_greyware_tool_keyword = /ngrok\sauthtoken\sAUTHTOKEN:::https:\/\/dashboard\.ngrok\.com\/get\-started\/your\-authtoken/ nocase ascii wide
+        $string24_exegol_greyware_tool_keyword = /ngrok\sauthtoken\sAUTHTOKEN\:\:\:https\:\/\/dashboard\.ngrok\.com\/get\-started\/your\-authtoken/ nocase ascii wide
         // Description: Fully featured and community-driven hacking environment with hundreds of offensive tools
         // Reference: https://github.com/ThePorgs/Exegol
         $string25_exegol_greyware_tool_keyword = /nmap\s\-Pn\s\-v\s\-sS\s\-F/ nocase ascii wide
@@ -2895,7 +2949,7 @@ rule fiddler_greyware_tool_keyword
         $string3_fiddler_greyware_tool_keyword = /\\Fiddler\sEverywhere\s.{0,1000}\..{0,1000}\..{0,1000}\.exe/ nocase ascii wide
         // Description: fiddler - capture https requests
         // Reference: https://www.telerik.com/
-        $string4_fiddler_greyware_tool_keyword = /https:\/\/www\.telerik\.com\/download\/fiddler\// nocase ascii wide
+        $string4_fiddler_greyware_tool_keyword = /https\:\/\/www\.telerik\.com\/download\/fiddler\// nocase ascii wide
 
     condition:
         any of them
@@ -2914,10 +2968,10 @@ rule file_io_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_file_io_greyware_tool_keyword = /https:\/\/file\.io\// nocase ascii wide
+        $string1_file_io_greyware_tool_keyword = /https\:\/\/file\.io\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_file_io_greyware_tool_keyword = /https:\/\/file\.io\/\?title\=/ nocase ascii wide
+        $string2_file_io_greyware_tool_keyword = /https\:\/\/file\.io\/\?title\=/ nocase ascii wide
 
     condition:
         any of them
@@ -2936,10 +2990,10 @@ rule find_greyware_tool_keyword
     strings:
         // Description: truncate every file under /var/log to size 0 - no log content = no forensic.
         // Reference: N/A
-        $string1_find_greyware_tool_keyword = /\/\?\?\?\/\?\?\?\/f\?n\?\s\/var\/log\s\-type\sf\s\-exec\s\/\?\?\?\/\?\?\?\/tr\?\?\?\?\?e\s\-s\s0\s{}\s\\/ nocase ascii wide
+        $string1_find_greyware_tool_keyword = /\/\?\?\?\/\?\?\?\/f\?n\?\s\/var\/log\s\-type\sf\s\-exec\s\/\?\?\?\/\?\?\?\/tr\?\?\?\?\?e\s\-s\s0\s\{\}\s\\/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string2_find_greyware_tool_keyword = /dir\s\/a\sC:\\pagefile\.sys\s\|\sfindstr\s\/R\s/ nocase ascii wide
+        $string2_find_greyware_tool_keyword = /dir\s\/a\sC\:\\pagefile\.sys\s\|\sfindstr\s\/R\s/ nocase ascii wide
         // Description: It can be used to break out from restricted environments by spawning an interactive system shell.
         // Reference: N/A
         $string3_find_greyware_tool_keyword = /find\s\.\s\-exec\s\/bin\/sh\s\\\;\s\-quit/ nocase ascii wide
@@ -2999,7 +3053,7 @@ rule find_greyware_tool_keyword
         $string21_find_greyware_tool_keyword = /find\s\/.{0,1000}\s\-perm\s\-u\=s\s\-type\sf\s2\>/ nocase ascii wide
         // Description: truncate every file under /var/log to size 0 - no log content = no forensic.
         // Reference: N/A
-        $string22_find_greyware_tool_keyword = /find\s\/var\/log\s\-type\sf\s\-exec\struncate\s\-s\s0\s{}\s\\/ nocase ascii wide
+        $string22_find_greyware_tool_keyword = /find\s\/var\/log\s\-type\sf\s\-exec\struncate\s\-s\s0\s\{\}\s\\/ nocase ascii wide
 
     condition:
         any of them
@@ -3434,10 +3488,10 @@ rule FudgeC2_greyware_tool_keyword
     strings:
         // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
         // Reference: https://github.com/Ziconius/FudgeC2
-        $string1_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/127\.0\.0\.1:5001/ nocase ascii wide
+        $string1_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/127\.0\.0\.1\:5001/ nocase ascii wide
         // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
         // Reference: https://github.com/Ziconius/FudgeC2
-        $string2_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/localhost:5001/ nocase ascii wide
+        $string2_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/localhost\:5001/ nocase ascii wide
 
     condition:
         any of them
@@ -3519,7 +3573,7 @@ rule getent_greyware_tool_keyword
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1_getent_greyware_tool_keyword = /getent\spasswd\s\|\scut\s\-d:\s\-f1/ nocase ascii wide
+        $string1_getent_greyware_tool_keyword = /getent\spasswd\s\|\scut\s\-d\:\s\-f1/ nocase ascii wide
 
     condition:
         any of them
@@ -4052,7 +4106,7 @@ rule golang_c2_greyware_tool_keyword
     strings:
         // Description: C2 written in Go for red teams aka gorfice2k
         // Reference: https://github.com/m00zh33/golang_c2
-        $string1_golang_c2_greyware_tool_keyword = /http:\/\/127\.0\.0\.1:8000\/gate\.html/ nocase ascii wide
+        $string1_golang_c2_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:8000\/gate\.html/ nocase ascii wide
 
     condition:
         any of them
@@ -4090,7 +4144,7 @@ rule goMatrixC2_greyware_tool_keyword
     strings:
         // Description: C2 leveraging Matrix/Element Messaging Platform as Backend to control Implants in goLang.
         // Reference: https://github.com/n1k7l4i/goMatrixC2
-        $string1_goMatrixC2_greyware_tool_keyword = /https:\/\/matrix\.org\/_matrix\/client\/r0\/rooms\/.{0,1000}\/send\/m\.room\.message/ nocase ascii wide
+        $string1_goMatrixC2_greyware_tool_keyword = /https\:\/\/matrix\.org\/_matrix\/client\/r0\/rooms\/.{0,1000}\/send\/m\.room\.message/ nocase ascii wide
 
     condition:
         any of them
@@ -4124,10 +4178,10 @@ rule Goodsync_greyware_tool_keyword
         $string5_Goodsync_greyware_tool_keyword = /\\Users\\.{0,1000}\\AppData\\Local\\GoodSync/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string6_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}gdrive:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
+        $string6_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}gdrive\:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string7_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}sftp:\/\// nocase ascii wide
+        $string7_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}sftp\:\/\// nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
         $string8_Goodsync_greyware_tool_keyword = /GoodSync\sServer/ nocase ascii wide
@@ -4152,7 +4206,7 @@ rule googleweblight_com_greyware_tool_keyword
     strings:
         // Description: Open Redirect vulnerability being exploited by threat actors in Google Web Light
         // Reference: https://x.com/1ZRR4H/status/1723062039680000255
-        $string1_googleweblight_com_greyware_tool_keyword = /https:\/\/googleweblight\.com\/i\?u\=.{0,1000}ipfs\..{0,1000}\.html/ nocase ascii wide
+        $string1_googleweblight_com_greyware_tool_keyword = /https\:\/\/googleweblight\.com\/i\?u\=.{0,1000}ipfs\..{0,1000}\.html/ nocase ascii wide
 
     condition:
         any of them
@@ -4171,10 +4225,10 @@ rule GoToMyPC_greyware_tool_keyword
     strings:
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string1_GoToMyPC_greyware_tool_keyword = /\sDownloadServer\=https:\/\/www\.gotomypc\.com\s/ nocase ascii wide
+        $string1_GoToMyPC_greyware_tool_keyword = /\sDownloadServer\=https\:\/\/www\.gotomypc\.com\s/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string2_GoToMyPC_greyware_tool_keyword = /\sgotoopener:\/\/launch\.getgo\.com\// nocase ascii wide
+        $string2_GoToMyPC_greyware_tool_keyword = /\sgotoopener\:\/\/launch\.getgo\.com\// nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
         $string3_GoToMyPC_greyware_tool_keyword = /\sLoggingServer\=logging\.getgo\.com\sProxyHost\=/ nocase ascii wide
@@ -4282,7 +4336,7 @@ rule GoToMyPC_greyware_tool_keyword
         $string37_GoToMyPC_greyware_tool_keyword = /\<Data\>Installed\sGoToMyPC\<\/Data\>/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string38_GoToMyPC_greyware_tool_keyword = /\=http:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
+        $string38_GoToMyPC_greyware_tool_keyword = /\=http\:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
         $string39_GoToMyPC_greyware_tool_keyword = /api\-telemetry\.servers\.getgo\.com/ nocase ascii wide
@@ -4392,7 +4446,7 @@ rule grep_greyware_tool_keyword
         $string3_grep_greyware_tool_keyword = /grep\s.{0,1000}password\..{0,1000}\s\/etc\/.{0,1000}\.conf/ nocase ascii wide
         // Description: Look for users with a UID of 0
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4_grep_greyware_tool_keyword = /grep\s:0:\s\/etc\/passwd/ nocase ascii wide
+        $string4_grep_greyware_tool_keyword = /grep\s\:0\:\s\/etc\/passwd/ nocase ascii wide
         // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.
         // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
         $string5_grep_greyware_tool_keyword = /grep\s\-i\spass\s/ nocase ascii wide
@@ -4679,19 +4733,19 @@ rule Hunter_io_greyware_tool_keyword
     strings:
         // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
         // Reference: https://hunter.io/
-        $string1_Hunter_io_greyware_tool_keyword = /curl\shttps:\/\/api\.hunter\.io\/v2\/domain\-search\?domain\=/ nocase ascii wide
+        $string1_Hunter_io_greyware_tool_keyword = /curl\shttps\:\/\/api\.hunter\.io\/v2\/domain\-search\?domain\=/ nocase ascii wide
         // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
         // Reference: https://hunter.io/
-        $string2_Hunter_io_greyware_tool_keyword = /curl\shttps:\/\/api\.hunter\.io\/v2\/email\-finder\?domain\=/ nocase ascii wide
+        $string2_Hunter_io_greyware_tool_keyword = /curl\shttps\:\/\/api\.hunter\.io\/v2\/email\-finder\?domain\=/ nocase ascii wide
         // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
         // Reference: https://hunter.io/
-        $string3_Hunter_io_greyware_tool_keyword = /curl\shttps:\/\/api\.hunter\.io\/v2\/email\-verifier\?email\=/ nocase ascii wide
+        $string3_Hunter_io_greyware_tool_keyword = /curl\shttps\:\/\/api\.hunter\.io\/v2\/email\-verifier\?email\=/ nocase ascii wide
         // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
         // Reference: https://hunter.io/
-        $string4_Hunter_io_greyware_tool_keyword = /https:\/\/api\.hunter\.io\// nocase ascii wide
+        $string4_Hunter_io_greyware_tool_keyword = /https\:\/\/api\.hunter\.io\// nocase ascii wide
         // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
         // Reference: https://hunter.io/
-        $string5_Hunter_io_greyware_tool_keyword = /https:\/\/hunter\.io\// nocase ascii wide
+        $string5_Hunter_io_greyware_tool_keyword = /https\:\/\/hunter\.io\// nocase ascii wide
 
     condition:
         any of them
@@ -4710,10 +4764,10 @@ rule icalcs_greyware_tool_keyword
     strings:
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string1_icalcs_greyware_tool_keyword = /icacls\s\"C:\\windows\\system32\\config\\SAM\"\s\/grant/ nocase ascii wide
+        $string1_icalcs_greyware_tool_keyword = /icacls\s\"C\:\\windows\\system32\\config\\SAM\"\s\/grant/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string2_icalcs_greyware_tool_keyword = /icacls\.exe\sC:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators:F/ nocase ascii wide
+        $string2_icalcs_greyware_tool_keyword = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
 
     condition:
         any of them
@@ -4735,7 +4789,7 @@ rule ifconfig_greyware_tool_keyword
         $string1_ifconfig_greyware_tool_keyword = /ifconfig\s.{0,1000}\shw\sether\s/ nocase ascii wide
         // Description: changing mac address with ifconfig
         // Reference: N/A
-        $string2_ifconfig_greyware_tool_keyword = /ifconfig\s.{0,1000}\shw\sether\s.{0,1000}:.{0,1000}:/ nocase ascii wide
+        $string2_ifconfig_greyware_tool_keyword = /ifconfig\s.{0,1000}\shw\sether\s.{0,1000}\:.{0,1000}\:/ nocase ascii wide
 
     condition:
         any of them
@@ -4811,7 +4865,7 @@ rule ip_greyware_tool_keyword
     strings:
         // Description: changing mac address with ip
         // Reference: N/A
-        $string1_ip_greyware_tool_keyword = /ip\sl\sset\sdev\s.{0,1000}\saddress\s.{0,1000}:.{0,1000}:/ nocase ascii wide
+        $string1_ip_greyware_tool_keyword = /ip\sl\sset\sdev\s.{0,1000}\saddress\s.{0,1000}\:.{0,1000}\:/ nocase ascii wide
 
     condition:
         any of them
@@ -4944,7 +4998,7 @@ rule ipv4_myip_wtf_greyware_tool_keyword
     strings:
         // Description: get public ip address. Used by disctopia-c2
         // Reference: https://github.com/3ct0s/disctopia-c2/blob/main/libraries/disctopia.py
-        $string1_ipv4_myip_wtf_greyware_tool_keyword = /https:\/\/ipv4\.myip\.wtf\/text/ nocase ascii wide
+        $string1_ipv4_myip_wtf_greyware_tool_keyword = /https\:\/\/ipv4\.myip\.wtf\/text/ nocase ascii wide
 
     condition:
         any of them
@@ -4966,7 +5020,7 @@ rule ivy_greyware_tool_keyword
         $string1_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sInject\s\-O\s.{0,1000}\.png\s\-stageless/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
-        $string2_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.hta\s\-url\shttp:.{0,1000}\s\-delivery\shta\s\-stageless/ nocase ascii wide
+        $string2_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.hta\s\-url\shttp\:.{0,1000}\s\-delivery\shta\s\-stageless/ nocase ascii wide
         // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
         // Reference: https://github.com/optiv/Ivy
         $string3_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.js\s\-url\shttp.{0,1000}\s\-delivery\sbits\s\-stageless/ nocase ascii wide
@@ -5048,7 +5102,7 @@ rule ldapsearch_greyware_tool_keyword
     strings:
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
-        $string1_ldapsearch_greyware_tool_keyword = /ldapsearch\s.{0,1000}\sldap:\/\// nocase ascii wide
+        $string1_ldapsearch_greyware_tool_keyword = /ldapsearch\s.{0,1000}\sldap\:\/\// nocase ascii wide
         // Description: ldapsearch to enumerate ldap
         // Reference: https://man7.org/linux/man-pages/man1/ldapsearch.1.html
         $string2_ldapsearch_greyware_tool_keyword = /ldapsearch\s\-x\s\-h\s.{0,1000}\s\-s\sbase/ nocase ascii wide
@@ -5111,7 +5165,7 @@ rule linux_greyware_tool_keyword
     strings:
         // Description: fork bomb linux - denial-of-service attack wherein a process continually replicates itself to deplete available system resources slowing down or crashing the system due to resource starvation
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string1_linux_greyware_tool_keyword = /:\(\){:I:\s\&I/ nocase ascii wide
+        $string1_linux_greyware_tool_keyword = /\:\(\)\{\:I\:\s\&I/ nocase ascii wide
 
     condition:
         any of them
@@ -5259,7 +5313,7 @@ rule mkdir_greyware_tool_keyword
     strings:
         // Description: delete bash history
         // Reference: N/A
-        $string1_mkdir_greyware_tool_keyword = /mkdir\s~\/\.bash_history/ nocase ascii wide
+        $string1_mkdir_greyware_tool_keyword = /mkdir\s\~\/\.bash_history/ nocase ascii wide
 
     condition:
         any of them
@@ -5303,7 +5357,7 @@ rule movefile64_exe_greyware_tool_keyword
     strings:
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string1_movefile64_exe_greyware_tool_keyword = /movefile64\.exe\s\/nobanner\s.{0,1000}\.dll\sC:\\Windows\\System32\\amsi\.dll/ nocase ascii wide
+        $string1_movefile64_exe_greyware_tool_keyword = /movefile64\.exe\s\/nobanner\s.{0,1000}\.dll\sC\:\\Windows\\System32\\amsi\.dll/ nocase ascii wide
 
     condition:
         any of them
@@ -5347,22 +5401,22 @@ rule mshta_greyware_tool_keyword
         $string1_mshta_greyware_tool_keyword = /mshta\shttp.{0,1000}\.hta/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string2_mshta_greyware_tool_keyword = /mshta\sjavascript:.{0,1000}script:https:/ nocase ascii wide
+        $string2_mshta_greyware_tool_keyword = /mshta\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string3_mshta_greyware_tool_keyword = /mshta\svbscript:Close\(Execute\(.{0,1000}script:https:\/\/.{0,1000}\.sct/ nocase ascii wide
+        $string3_mshta_greyware_tool_keyword = /mshta\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string4_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttp:\/\// nocase ascii wide
+        $string4_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttp\:\/\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string5_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttps:\/\// nocase ascii wide
+        $string5_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttps\:\/\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string6_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\sjavascript:.{0,1000}script:https:/ nocase ascii wide
+        $string6_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string7_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\svbscript:Close\(Execute\(.{0,1000}script:https:\/\/.{0,1000}\.sct/ nocase ascii wide
+        $string7_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
 
     condition:
         any of them
@@ -5419,7 +5473,7 @@ rule my_ip_io_greyware_tool_keyword
     strings:
         // Description: abused by ransomwares
         // Reference: https://github.com/rivitna/Malware
-        $string1_my_ip_io_greyware_tool_keyword = /https:\/\/api\.my\-ip\.io\/ip/ nocase ascii wide
+        $string1_my_ip_io_greyware_tool_keyword = /https\:\/\/api\.my\-ip\.io\/ip/ nocase ascii wide
 
     condition:
         any of them
@@ -5438,7 +5492,7 @@ rule myexternalip_com_greyware_tool_keyword
     strings:
         // Description: return external ip address
         // Reference: https://myexternalip.com/raw
-        $string1_myexternalip_com_greyware_tool_keyword = /https:\/\/myexternalip\.com\/raw/ nocase ascii wide
+        $string1_myexternalip_com_greyware_tool_keyword = /https\:\/\/myexternalip\.com\/raw/ nocase ascii wide
 
     condition:
         any of them
@@ -5557,13 +5611,13 @@ rule Neo4j_greyware_tool_keyword
     strings:
         // Description: Neo4j queries - Computers in Unconstrained Delegations
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string1_Neo4j_greyware_tool_keyword = /MATCH\s\(c:Computer\s{unconsraineddelegation:true}\)\sRETURN\sc/ nocase ascii wide
+        $string1_Neo4j_greyware_tool_keyword = /MATCH\s\(c\:Computer\s\{unconsraineddelegation\:true\}\)\sRETURN\sc/ nocase ascii wide
         // Description: Neo4j queries - Computers AllowedToDelegate to other computers
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string2_Neo4j_greyware_tool_keyword = /MATCH\s\(c:Computer\).{0,1000}\(t:Computer\).{0,1000}\s.{0,1000}\-\[:AllowedToDelegate\].{0,1000}\sreturn\sp/ nocase ascii wide
+        $string2_Neo4j_greyware_tool_keyword = /MATCH\s\(c\:Computer\).{0,1000}\(t\:Computer\).{0,1000}\s.{0,1000}\-\[\:AllowedToDelegate\].{0,1000}\sreturn\sp/ nocase ascii wide
         // Description: Neo4j queries - Potential SQL Admins
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string3_Neo4j_greyware_tool_keyword = /MATCH\sp\=\(u:User\)\-\[:SQLAdmin\].{0,1000}\(c:Computer\)\sreturn\sp/ nocase ascii wide
+        $string3_Neo4j_greyware_tool_keyword = /MATCH\sp\=\(u\:User\)\-\[\:SQLAdmin\].{0,1000}\(c\:Computer\)\sreturn\sp/ nocase ascii wide
         // Description: Neo4j queries - Computers AllowedToDelegate to other computers
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string4_Neo4j_greyware_tool_keyword = /neo4j\sstart/ nocase ascii wide
@@ -5840,7 +5894,7 @@ rule netsh_greyware_tool_keyword
         $string2_netsh_greyware_tool_keyword = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: adding a executable in user appdata folder to the allowed programs
         // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
-        $string3_netsh_greyware_tool_keyword = /netsh\sfirewall\sadd\sallowedprogram\s\"C:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
+        $string3_netsh_greyware_tool_keyword = /netsh\sfirewall\sadd\sallowedprogram\s\"C\:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
         // Description: Disable Windows Firewall
         // Reference: N/A
         $string4_netsh_greyware_tool_keyword = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
@@ -5945,7 +5999,7 @@ rule ngrok_greyware_tool_keyword
         $string4_ngrok_greyware_tool_keyword = /ngrok\stcp\s/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string5_ngrok_greyware_tool_keyword = /tcp:\/\/0\.tcp\.ngrok\.io:/ nocase ascii wide
+        $string5_ngrok_greyware_tool_keyword = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
 
     condition:
         any of them
@@ -6016,19 +6070,19 @@ rule nirsoft_tools_greyware_tool_keyword
     strings:
         // Description: NirSoft is a legitimate software company that develops system utilities for Windows. Some of its tools can be used by malicious actors to recover passwords harvest sensitive information and conduct password attacks.
         // Reference: N/A
-        $string1_nirsoft_tools_greyware_tool_keyword = /https:\/\/www\.nirsoft\.net\/toolsdownload\// nocase ascii wide
+        $string1_nirsoft_tools_greyware_tool_keyword = /https\:\/\/www\.nirsoft\.net\/toolsdownload\// nocase ascii wide
         // Description: some of nirsoft tools can be abused by attackers to retrieve passwords 
         // Reference: nirsoft.net
-        $string2_nirsoft_tools_greyware_tool_keyword = /https:\/\/www\.nirsoft\.net\/toolsdownload\/.{0,1000}\.exe/ nocase ascii wide
+        $string2_nirsoft_tools_greyware_tool_keyword = /https\:\/\/www\.nirsoft\.net\/toolsdownload\/.{0,1000}\.exe/ nocase ascii wide
         // Description: some of nirsoft tools can be abused by attackers to retrieve passwords 
         // Reference: nirsoft.net
-        $string3_nirsoft_tools_greyware_tool_keyword = /https:\/\/www\.nirsoft\.net\/toolsdownload\/.{0,1000}\.zip/ nocase ascii wide
+        $string3_nirsoft_tools_greyware_tool_keyword = /https\:\/\/www\.nirsoft\.net\/toolsdownload\/.{0,1000}\.zip/ nocase ascii wide
         // Description: some of nirsoft tools can be abused by attackers to retrieve passwords 
         // Reference: nirsoft.net
-        $string4_nirsoft_tools_greyware_tool_keyword = /https:\/\/www\.nirsoft\.net\/utils\/.{0,1000}\.exe/ nocase ascii wide
+        $string4_nirsoft_tools_greyware_tool_keyword = /https\:\/\/www\.nirsoft\.net\/utils\/.{0,1000}\.exe/ nocase ascii wide
         // Description: some of nirsoft tools can be abused by attackers to retrieve passwords 
         // Reference: nirsoft.net
-        $string5_nirsoft_tools_greyware_tool_keyword = /https:\/\/www\.nirsoft\.net\/utils\/.{0,1000}\.zip/ nocase ascii wide
+        $string5_nirsoft_tools_greyware_tool_keyword = /https\:\/\/www\.nirsoft\.net\/utils\/.{0,1000}\.zip/ nocase ascii wide
 
     condition:
         any of them
@@ -6276,7 +6330,7 @@ rule ntdsutil_greyware_tool_keyword
         $string2_ntdsutil_greyware_tool_keyword = /ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}create\sfull.{0,1000}\\temp/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string3_ntdsutil_greyware_tool_keyword = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}c:\\ProgramData/ nocase ascii wide
+        $string3_ntdsutil_greyware_tool_keyword = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}c\:\\ProgramData/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
         $string4_ntdsutil_greyware_tool_keyword = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}users\\public/ nocase ascii wide
@@ -6339,7 +6393,7 @@ rule PAExec_greyware_tool_keyword
     strings:
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
-        $string1_PAExec_greyware_tool_keyword = /\s\-csrc\sC:\\\\Windows\\\\notepad\.exe\s\-c\scmd\.exe/ nocase ascii wide
+        $string1_PAExec_greyware_tool_keyword = /\s\-csrc\sC\:\\\\Windows\\\\notepad\.exe\s\-c\scmd\.exe/ nocase ascii wide
         // Description: PAExec is a freely-redistributable re-implementation of SysInternal/Microsoft's popular PsExec program
         // Reference: https://github.com/poweradminllc/PAExec
         $string2_PAExec_greyware_tool_keyword = /\%SYSTEMROOT\%\\PAExec\-/ nocase ascii wide
@@ -6535,7 +6589,7 @@ rule powershell_greyware_tool_keyword
     strings:
         // Description: alternativeto whoami
         // Reference: N/A
-        $string1_powershell_greyware_tool_keyword = /\[System\.Environment\]::GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
+        $string1_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
         $string2_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
@@ -6565,10 +6619,10 @@ rule powershell_greyware_tool_keyword
         $string10_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string11_powershell_greyware_tool_keyword = /gci\senv:USERNAME/ nocase ascii wide
+        $string11_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string12_powershell_greyware_tool_keyword = /gci\s\-h\sC:\\pagefile\.sys/ nocase ascii wide
+        $string12_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string13_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
@@ -6601,22 +6655,22 @@ rule powershell_greyware_tool_keyword
         $string22_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string23_powershell_greyware_tool_keyword = /ls\senv:USERNAME/ nocase ascii wide
+        $string23_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
         $string24_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string25_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t:/ nocase ascii wide
+        $string25_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string26_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string26_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
         $string27_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string28_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string28_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
         $string29_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
@@ -6643,28 +6697,28 @@ rule powershell_greyware_tool_keyword
         $string36_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string37_powershell_greyware_tool_keyword = /\[Environment\]::UserName/ nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string38_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string39_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword}/ nocase ascii wide
+        $string39_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string40_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string41_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string42_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string43_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string44_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword}/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string45_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
@@ -7221,7 +7275,7 @@ rule qu_ax_greyware_tool_keyword
     strings:
         // Description: qu.ax is a quick and private file hosting service - abused by threat actors
         // Reference: https://qu[.]ax/
-        $string1_qu_ax_greyware_tool_keyword = /https:\/\/qu\.ax\/.{0,1000}\./ nocase ascii wide
+        $string1_qu_ax_greyware_tool_keyword = /https\:\/\/qu\.ax\/.{0,1000}\./ nocase ascii wide
 
     condition:
         any of them
@@ -7259,7 +7313,7 @@ rule qwinsta_greyware_tool_keyword
     strings:
         // Description: enumerate rdp session on a remote server
         // Reference: N/A
-        $string1_qwinsta_greyware_tool_keyword = /qwinsta\s\/server:/ nocase ascii wide
+        $string1_qwinsta_greyware_tool_keyword = /qwinsta\s\/server\:/ nocase ascii wide
 
     condition:
         any of them
@@ -7341,7 +7395,7 @@ rule Radmin_greyware_tool_keyword
         $string21_Radmin_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Radmin\sViewer\s3\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string22_Radmin_greyware_tool_keyword = /radmin\s\/connect:/ nocase ascii wide
+        $string22_Radmin_greyware_tool_keyword = /radmin\s\/connect\:/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string23_Radmin_greyware_tool_keyword = /Radmin\sServer\sV3/ nocase ascii wide
@@ -7353,7 +7407,7 @@ rule Radmin_greyware_tool_keyword
         $string25_Radmin_greyware_tool_keyword = /Radmin\sViewer\s3\\rchatx\.dll/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string26_Radmin_greyware_tool_keyword = /radmin\.exe.{0,1000}\s\/connect:/ nocase ascii wide
+        $string26_Radmin_greyware_tool_keyword = /radmin\.exe.{0,1000}\s\/connect\:/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string27_Radmin_greyware_tool_keyword = /rserver3\s\/start/ nocase ascii wide
@@ -7390,7 +7444,7 @@ rule ratchatpt_greyware_tool_keyword
     strings:
         // Description: C2 using openAI API
         // Reference: https://github.com/spartan-conseil/ratchatpt
-        $string1_ratchatpt_greyware_tool_keyword = /https:\/\/api\.openai\.com\/v1\/files/ nocase ascii wide
+        $string1_ratchatpt_greyware_tool_keyword = /https\:\/\/api\.openai\.com\/v1\/files/ nocase ascii wide
 
     condition:
         any of them
@@ -7421,16 +7475,16 @@ rule rclone_greyware_tool_keyword
         $string4_rclone_greyware_tool_keyword = /\\rclone\.exe/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string5_rclone_greyware_tool_keyword = /rclone\scopy\s.{0,1000}:/ nocase ascii wide
+        $string5_rclone_greyware_tool_keyword = /rclone\scopy\s.{0,1000}\:/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
         $string6_rclone_greyware_tool_keyword = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string7_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\scopy\s.{0,1000}:/ nocase ascii wide
+        $string7_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\scopy\s.{0,1000}\:/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string8_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\s\-l\s.{0,1000}\s.{0,1000}:/ nocase ascii wide
+        $string8_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\s\-l\s.{0,1000}\s.{0,1000}\:/ nocase ascii wide
 
     condition:
         any of them
@@ -7674,19 +7728,19 @@ rule reg_greyware_tool_keyword
         $string34_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string35_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SAM\s.{0,1000}c:/ nocase ascii wide
+        $string35_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string36_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\security to a .dat file
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string37_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c:/ nocase ascii wide
+        $string37_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c\:/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\system to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string38_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string39_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c:/ nocase ascii wide
+        $string39_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string40_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
@@ -7708,7 +7762,7 @@ rule ren_greyware_tool_keyword
     strings:
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string1_ren_greyware_tool_keyword = /ren\sC:\\Windows\\System32\\amsi\.dll\s.{0,1000}\.dll/ nocase ascii wide
+        $string1_ren_greyware_tool_keyword = /ren\sC\:\\Windows\\System32\\amsi\.dll\s.{0,1000}\.dll/ nocase ascii wide
 
     condition:
         any of them
@@ -7758,13 +7812,13 @@ rule rm_greyware_tool_keyword
         $string3_rm_greyware_tool_keyword = /rm\s\/var\/log\/.{0,1000}\.log/ nocase ascii wide
         // Description: deleting bash history
         // Reference: N/A
-        $string4_rm_greyware_tool_keyword = /rm\s~\/\.bash_history/ nocase ascii wide
+        $string4_rm_greyware_tool_keyword = /rm\s\~\/\.bash_history/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
         $string5_rm_greyware_tool_keyword = /rm\s\-rf\s\.bash_history/ nocase ascii wide
         // Description: delete bash history
         // Reference: N/A
-        $string6_rm_greyware_tool_keyword = /rm\s\-rf\s~\/\.bash_history/ nocase ascii wide
+        $string6_rm_greyware_tool_keyword = /rm\s\-rf\s\~\/\.bash_history/ nocase ascii wide
 
     condition:
         any of them
@@ -7846,10 +7900,10 @@ rule rsync_greyware_tool_keyword
     strings:
         // Description: Detects the use of tools that copy files from or to remote systems
         // Reference: https://attack.mitre.org/techniques/T1105/
-        $string1_rsync_greyware_tool_keyword = /rsync\s\-r\s.{0,1000}\s.{0,1000}\@.{0,1000}:/ nocase ascii wide
+        $string1_rsync_greyware_tool_keyword = /rsync\s\-r\s.{0,1000}\s.{0,1000}\@.{0,1000}\:/ nocase ascii wide
         // Description: Detects the use of tools that copy files from or to remote systems
         // Reference: https://attack.mitre.org/techniques/T1105/
-        $string2_rsync_greyware_tool_keyword = /rsync\s\-r\s.{0,1000}\@.{0,1000}:.{0,1000}\s/ nocase ascii wide
+        $string2_rsync_greyware_tool_keyword = /rsync\s\-r\s.{0,1000}\@.{0,1000}\:.{0,1000}\s/ nocase ascii wide
 
     condition:
         any of them
@@ -7887,7 +7941,7 @@ rule rundll32_greyware_tool_keyword
     strings:
         // Description: Detects the use of getsystem Meterpreter/Cobalt Strike command. Getsystem is used to elevate privilege to SYSTEM account.
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/win_meterpreter_or_cobaltstrike_getsystem_service_start.yml
-        $string1_rundll32_greyware_tool_keyword = /rundll32.{0,1000}\.dll.{0,1000}a.{0,1000}\/p:/ nocase ascii wide
+        $string1_rundll32_greyware_tool_keyword = /rundll32.{0,1000}\.dll.{0,1000}a.{0,1000}\/p\:/ nocase ascii wide
         // Description: Rundll32 can be use by Cobalt Strike with StartW function to load DLLs from the command line.
         // Reference: https://github.com/MichaelKoczwara/Awesome-CobaltStrike-Defence
         $string2_rundll32_greyware_tool_keyword = /rundll32.{0,1000}\.dll.{0,1000}StartW/ nocase ascii wide
@@ -7912,7 +7966,7 @@ rule RustDesk_greyware_tool_keyword
         $string1_RustDesk_greyware_tool_keyword = /\sRustDesk\.exe/ nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
-        $string2_RustDesk_greyware_tool_keyword = /\sstart\srustdesk:\/\// nocase ascii wide
+        $string2_RustDesk_greyware_tool_keyword = /\sstart\srustdesk\:\/\// nocase ascii wide
         // Description: Rustdesk open suorce remote control software abused by scammers
         // Reference: https://github.com/rustdesk/rustdesk
         $string3_RustDesk_greyware_tool_keyword = /\/home\/user\/rustdesk/ nocase ascii wide
@@ -8176,10 +8230,10 @@ rule scp_greyware_tool_keyword
     strings:
         // Description: Detects the use of tools that copy files from or to remote systems
         // Reference: https://attack.mitre.org/techniques/T1105/
-        $string1_scp_greyware_tool_keyword = /scp\s.{0,1000}\s.{0,1000}\@.{0,1000}:/ nocase ascii wide
+        $string1_scp_greyware_tool_keyword = /scp\s.{0,1000}\s.{0,1000}\@.{0,1000}\:/ nocase ascii wide
         // Description: Detects the use of tools that copy files from or to remote systems
         // Reference: https://attack.mitre.org/techniques/T1105/
-        $string2_scp_greyware_tool_keyword = /scp\s.{0,1000}\@.{0,1000}:.{0,1000}\s/ nocase ascii wide
+        $string2_scp_greyware_tool_keyword = /scp\s.{0,1000}\@.{0,1000}\:.{0,1000}\s/ nocase ascii wide
 
     condition:
         any of them
@@ -8198,7 +8252,7 @@ rule ScreenConnect_greyware_tool_keyword
     strings:
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string1_ScreenConnect_greyware_tool_keyword = /:8040\/SetupWizard\.aspx/ nocase ascii wide
+        $string1_ScreenConnect_greyware_tool_keyword = /\:8040\/SetupWizard\.aspx/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
         $string2_ScreenConnect_greyware_tool_keyword = /\\CurrentControlSet\\Control\\SafeBoot\\Network\\ScreenConnect\sClient\s\(/ nocase ascii wide
@@ -8270,13 +8324,13 @@ rule ScreenConnect_greyware_tool_keyword
         $string24_ScreenConnect_greyware_tool_keyword = /cmd\.exe.{0,1000}\\TEMP\\ScreenConnect\\.{0,1000}\.cmd/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string25_ScreenConnect_greyware_tool_keyword = /https:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe/ nocase ascii wide
+        $string25_ScreenConnect_greyware_tool_keyword = /https\:\/\/.{0,1000}\.screenconnect\.com\/Bin\/.{0,1000}\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string26_ScreenConnect_greyware_tool_keyword = /https:\/\/.{0,1000}\.screenconnect\.com\/Host/ nocase ascii wide
+        $string26_ScreenConnect_greyware_tool_keyword = /https\:\/\/.{0,1000}\.screenconnect\.com\/Host/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string27_ScreenConnect_greyware_tool_keyword = /https:\/\/cloud\.screenconnect\.com\/\#\/trialtoinstance\?cookieValue\=/ nocase ascii wide
+        $string27_ScreenConnect_greyware_tool_keyword = /https\:\/\/cloud\.screenconnect\.com\/\#\/trialtoinstance\?cookieValue\=/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
         $string28_ScreenConnect_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\ScreenConnect\sClient/ nocase ascii wide
@@ -8399,10 +8453,10 @@ rule sendspace_com_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_sendspace_com_greyware_tool_keyword = /\shttps:\/\/www\.sendspace\.com\/file\// nocase ascii wide
+        $string1_sendspace_com_greyware_tool_keyword = /\shttps\:\/\/www\.sendspace\.com\/file\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_sendspace_com_greyware_tool_keyword = /https:\/\/.{0,1000}\.sendspace\.com\/upload/ nocase ascii wide
+        $string2_sendspace_com_greyware_tool_keyword = /https\:\/\/.{0,1000}\.sendspace\.com\/upload/ nocase ascii wide
 
     condition:
         any of them
@@ -8499,7 +8553,7 @@ rule sftp_greyware_tool_keyword
     strings:
         // Description: Detects the use of tools that copy files from or to remote systems
         // Reference: https://attack.mitre.org/techniques/T1105/
-        $string1_sftp_greyware_tool_keyword = /sftp\s.{0,1000}\@.{0,1000}:.{0,1000}\s/ nocase ascii wide
+        $string1_sftp_greyware_tool_keyword = /sftp\s.{0,1000}\@.{0,1000}\:.{0,1000}\s/ nocase ascii wide
 
     condition:
         any of them
@@ -8533,7 +8587,7 @@ rule shell_greyware_tool_keyword
         $string5_shell_greyware_tool_keyword = /socket\(S.{0,1000}PF_INET.{0,1000}SOCK_STREAM.{0,1000}getprotobyname\(.{0,1000}tcp.{0,1000}\)\).{0,1000}if\(connect\(S.{0,1000}sockaddr_in\(\$p_shell_greyware_tool_keyword.{0,1000}inet_aton\(\$i_shell_greyware_tool_keyword\)\)\)\)/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string6_shell_greyware_tool_keyword = /STDIN\-\>fdopen\(\$c_shell_greyware_tool_keyword.{0,1000}r\).{0,1000}\$~\-\>fdopen\(\$c_shell_greyware_tool_keyword.{0,1000}w\).{0,1000}system\$__shell_greyware_tool_keyword\swhile\<\>/ nocase ascii wide
+        $string6_shell_greyware_tool_keyword = /STDIN\-\>fdopen\(\$c_shell_greyware_tool_keyword.{0,1000}r\).{0,1000}\$\~\-\>fdopen\(\$c_shell_greyware_tool_keyword.{0,1000}w\).{0,1000}system\$__shell_greyware_tool_keyword\swhile\<\>/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
         $string7_shell_greyware_tool_keyword = /uname\s\-a.{0,1000}\sw.{0,1000}\sid.{0,1000}\s\/bin\/bash\s\-i/ nocase ascii wide
@@ -8623,7 +8677,7 @@ rule skymen_info_greyware_tool_keyword
     strings:
         // Description: used by attackers to find informations about a company users
         // Reference: https://www.skymem.info
-        $string1_skymen_info_greyware_tool_keyword = /https:\/\/www\.skymem\.info\/srch\?q\=/ nocase ascii wide
+        $string1_skymen_info_greyware_tool_keyword = /https\:\/\/www\.skymem\.info\/srch\?q\=/ nocase ascii wide
 
     condition:
         any of them
@@ -8729,31 +8783,31 @@ rule socat_greyware_tool_keyword
     strings:
         // Description: Shell spawning socat usage 
         // Reference: https://linuxfr.org/news/socat-un-outil-en-ligne-de-commande-pour-maitriser-vos-sockets
-        $string1_socat_greyware_tool_keyword = /socat\sexec:/ nocase ascii wide
+        $string1_socat_greyware_tool_keyword = /socat\sexec\:/ nocase ascii wide
         // Description: socat bind shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2_socat_greyware_tool_keyword = /socat\sFILE:.{0,1000}tty.{0,1000}raw.{0,1000}echo\=0\sTCP.{0,1000}:/ nocase ascii wide
+        $string2_socat_greyware_tool_keyword = /socat\sFILE\:.{0,1000}tty.{0,1000}raw.{0,1000}echo\=0\sTCP.{0,1000}\:/ nocase ascii wide
         // Description: socat reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string3_socat_greyware_tool_keyword = /socat\sfile:.{0,1000}tty.{0,1000}raw.{0,1000}echo\=0\stcp\-listen:/ nocase ascii wide
+        $string3_socat_greyware_tool_keyword = /socat\sfile\:.{0,1000}tty.{0,1000}raw.{0,1000}echo\=0\stcp\-listen\:/ nocase ascii wide
         // Description: Shell spawning socat usage 
         // Reference: https://linuxfr.org/news/socat-un-outil-en-ligne-de-commande-pour-maitriser-vos-sockets
         $string4_socat_greyware_tool_keyword = /socat\s\-O\s\/tmp\// nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
-        $string5_socat_greyware_tool_keyword = /socat\sTCP4\-LISTEN:.{0,1000}\sfork\sTCP4:.{0,1000}:/ nocase ascii wide
+        $string5_socat_greyware_tool_keyword = /socat\sTCP4\-LISTEN\:.{0,1000}\sfork\sTCP4\:.{0,1000}\:/ nocase ascii wide
         // Description: Shell spawning socat usage 
         // Reference: https://linuxfr.org/news/socat-un-outil-en-ligne-de-commande-pour-maitriser-vos-sockets
         $string6_socat_greyware_tool_keyword = /socat\stcp\-connect/ nocase ascii wide
         // Description: socat reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string7_socat_greyware_tool_keyword = /socat\stcp\-connect:.{0,1000}:.{0,1000}\sexec:.{0,1000}bash\s\-li.{0,1000}.{0,1000}pty.{0,1000}stderr.{0,1000}setsid.{0,1000}sigint.{0,1000}sane/ nocase ascii wide
+        $string7_socat_greyware_tool_keyword = /socat\stcp\-connect\:.{0,1000}\:.{0,1000}\sexec\:.{0,1000}bash\s\-li.{0,1000}.{0,1000}pty.{0,1000}stderr.{0,1000}setsid.{0,1000}sigint.{0,1000}sane/ nocase ascii wide
         // Description: socat reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string8_socat_greyware_tool_keyword = /socat\stcp\-connect:.{0,1000}:.{0,1000}\sexec:\/bin\/sh/ nocase ascii wide
+        $string8_socat_greyware_tool_keyword = /socat\stcp\-connect\:.{0,1000}\:.{0,1000}\sexec\:\/bin\/sh/ nocase ascii wide
         // Description: socat bind shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string9_socat_greyware_tool_keyword = /socat\sTCP\-LISTEN:.{0,1000}.{0,1000}reuseaddr.{0,1000}fork\sEXEC:\/bin\/sh/ nocase ascii wide
+        $string9_socat_greyware_tool_keyword = /socat\sTCP\-LISTEN\:.{0,1000}.{0,1000}reuseaddr.{0,1000}fork\sEXEC\:\/bin\/sh/ nocase ascii wide
 
     condition:
         any of them
@@ -8791,16 +8845,16 @@ rule softperfect_networkscanner_greyware_tool_keyword
     strings:
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string1_softperfect_networkscanner_greyware_tool_keyword = /\s\/config:netscan\.xml\s/ nocase ascii wide
+        $string1_softperfect_networkscanner_greyware_tool_keyword = /\s\/config\:netscan\.xml\s/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string2_softperfect_networkscanner_greyware_tool_keyword = /\snetscan\.exe\s/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string3_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range:.{0,1000}\s\/auto:.{0,1000}\./ nocase ascii wide
+        $string3_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range\:.{0,1000}\s\/auto\:.{0,1000}\./ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string4_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/hide\s\/range:all/ nocase ascii wide
+        $string4_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/hide\s\/range\:all/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string5_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/wakeall/ nocase ascii wide
@@ -9003,7 +9057,7 @@ rule ssh_greyware_tool_keyword
         $string3_ssh_greyware_tool_keyword = /error\sin\slibcrypto/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string4_ssh_greyware_tool_keyword = /fatal:\sbuffer_get_string:\sbad\sstring/ nocase ascii wide
+        $string4_ssh_greyware_tool_keyword = /fatal\:\sbuffer_get_string\:\sbad\sstring/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
         $string5_ssh_greyware_tool_keyword = /incorrect\ssignature/ nocase ascii wide
@@ -9015,7 +9069,7 @@ rule ssh_greyware_tool_keyword
         $string7_ssh_greyware_tool_keyword = /invalid\selliptic\scurve\svalue/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string8_ssh_greyware_tool_keyword = /Local:\scrc32\scompensation\sattack/ nocase ascii wide
+        $string8_ssh_greyware_tool_keyword = /Local\:\scrc32\scompensation\sattack/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
         $string9_ssh_greyware_tool_keyword = /unexpected\sbytes\sremain\safter\sdecoding/ nocase ascii wide
@@ -9046,10 +9100,10 @@ rule sshx_greyware_tool_keyword
         $string1_sshx_greyware_tool_keyword = /\s\-\-bin\ssshx\-server/ nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
-        $string2_sshx_greyware_tool_keyword = /\ss3:\/\/sshx\// nocase ascii wide
+        $string2_sshx_greyware_tool_keyword = /\ss3\:\/\/sshx\// nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
-        $string3_sshx_greyware_tool_keyword = /\.vm\.sshx\.internal:8051/ nocase ascii wide
+        $string3_sshx_greyware_tool_keyword = /\.vm\.sshx\.internal\:8051/ nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
         $string4_sshx_greyware_tool_keyword = /\/release\/sshx\-server/ nocase ascii wide
@@ -9067,13 +9121,13 @@ rule sshx_greyware_tool_keyword
         $string8_sshx_greyware_tool_keyword = /ekzhang\/sshx/ nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
-        $string9_sshx_greyware_tool_keyword = /https:\/\/s3\.amazonaws\.com\/sshx\/sshx\-/ nocase ascii wide
+        $string9_sshx_greyware_tool_keyword = /https\:\/\/s3\.amazonaws\.com\/sshx\/sshx\-/ nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
-        $string10_sshx_greyware_tool_keyword = /https:\/\/sshx\.io\/get/ nocase ascii wide
+        $string10_sshx_greyware_tool_keyword = /https\:\/\/sshx\.io\/get/ nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
-        $string11_sshx_greyware_tool_keyword = /https:\/\/sshx\.io\/s\// nocase ascii wide
+        $string11_sshx_greyware_tool_keyword = /https\:\/\/sshx\.io\/s\// nocase ascii wide
         // Description: Fast collaborative live terminal sharing over the web
         // Reference: https://github.com/ekzhang/sshx
         $string12_sshx_greyware_tool_keyword = /sshx\-server\s\-\-listen/ nocase ascii wide
@@ -9117,7 +9171,7 @@ rule sudo_greyware_tool_keyword
     strings:
         // Description: Sudo Persistence via sudoers file
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1_sudo_greyware_tool_keyword = /echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
+        $string1_sudo_greyware_tool_keyword = /echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
         // Description: access sensitive files by abusing sudo permissions
         // Reference: N/A
         $string2_sudo_greyware_tool_keyword = /sudo\sapache2\s\-f\s\/etc\/shadow/ nocase ascii wide
@@ -9145,10 +9199,10 @@ rule sudoers_greyware_tool_keyword
     strings:
         // Description: use SUDO without password
         // Reference: N/A
-        $string1_sudoers_greyware_tool_keyword = /echo\s.{0,1000}\sALL\=\(ALL\)\sNOPASSWD:\sALL.{0,1000}\s\>\>\/etc\/sudoers/ nocase ascii wide
+        $string1_sudoers_greyware_tool_keyword = /echo\s.{0,1000}\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,1000}\s\>\>\/etc\/sudoers/ nocase ascii wide
         // Description: use SUDO without password
         // Reference: N/A
-        $string2_sudoers_greyware_tool_keyword = /echo\s.{0,1000}\sALL\=NOPASSWD:\s\/bin\/bash.{0,1000}\s\>\>\/etc\/sudoers/ nocase ascii wide
+        $string2_sudoers_greyware_tool_keyword = /echo\s.{0,1000}\sALL\=NOPASSWD\:\s\/bin\/bash.{0,1000}\s\>\>\/etc\/sudoers/ nocase ascii wide
 
     condition:
         any of them
@@ -9167,7 +9221,7 @@ rule supershell_greyware_tool_keyword
     strings:
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
-        $string1_supershell_greyware_tool_keyword = /http:\/\/localhost:7681/ nocase ascii wide
+        $string1_supershell_greyware_tool_keyword = /http\:\/\/localhost\:7681/ nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
         $string2_supershell_greyware_tool_keyword = /ttyd\s\-i\s0\.0\.0\.0\s\-p\s7681\s/ nocase ascii wide
@@ -9467,7 +9521,7 @@ rule tacticalrmm_greyware_tool_keyword
         $string26_tacticalrmm_greyware_tool_keyword = /amidaware\/tacticalrmm/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string27_tacticalrmm_greyware_tool_keyword = /https:\/\/.{0,1000}\.tacticalrmm\.com\// nocase ascii wide
+        $string27_tacticalrmm_greyware_tool_keyword = /https\:\/\/.{0,1000}\.tacticalrmm\.com\// nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string28_tacticalrmm_greyware_tool_keyword = /net\sstop\stacticalrmm/ nocase ascii wide
@@ -9549,7 +9603,7 @@ rule tailscale_greyware_tool_keyword
         $string12_tailscale_greyware_tool_keyword = /\/tailscale\/clientupdate\/.{0,1000}\.go/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string13_tailscale_greyware_tool_keyword = /\/tailscale:unstable/ nocase ascii wide
+        $string13_tailscale_greyware_tool_keyword = /\/tailscale\:unstable/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
         $string14_tailscale_greyware_tool_keyword = /\/tailscale_.{0,1000}_.{0,1000}\.deb/ nocase ascii wide
@@ -9633,22 +9687,22 @@ rule tailscale_greyware_tool_keyword
         $string40_tailscale_greyware_tool_keyword = /github\.com\/tailscale/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string41_tailscale_greyware_tool_keyword = /http:\/\/127\.0\.0\.1:4000/ nocase ascii wide
+        $string41_tailscale_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:4000/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string42_tailscale_greyware_tool_keyword = /http:\/\/local\-tailscaled\.sock/ nocase ascii wide
+        $string42_tailscale_greyware_tool_keyword = /http\:\/\/local\-tailscaled\.sock/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string43_tailscale_greyware_tool_keyword = /https:\/\/api\.tailscale\.com\/api\/v2\// nocase ascii wide
+        $string43_tailscale_greyware_tool_keyword = /https\:\/\/api\.tailscale\.com\/api\/v2\// nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string44_tailscale_greyware_tool_keyword = /https:\/\/apps\.apple\.com\/us\/app\/tailscale\/id/ nocase ascii wide
+        $string44_tailscale_greyware_tool_keyword = /https\:\/\/apps\.apple\.com\/us\/app\/tailscale\/id/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string45_tailscale_greyware_tool_keyword = /https:\/\/login\.tailscale\.com\/admin\/settings\/keys/ nocase ascii wide
+        $string45_tailscale_greyware_tool_keyword = /https\:\/\/login\.tailscale\.com\/admin\/settings\/keys/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string46_tailscale_greyware_tool_keyword = /https:\/\/tailscale\.com\/s\/resolvconf\-overwrite/ nocase ascii wide
+        $string46_tailscale_greyware_tool_keyword = /https\:\/\/tailscale\.com\/s\/resolvconf\-overwrite/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
         $string47_tailscale_greyware_tool_keyword = /install\s\-y\stailscale/ nocase ascii wide
@@ -9684,7 +9738,7 @@ rule tailscale_greyware_tool_keyword
         $string57_tailscale_greyware_tool_keyword = /service\stailscaled\s/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string58_tailscale_greyware_tool_keyword = /Serving\sTailscale\sweb\sclient\son\shttp:\/\// nocase ascii wide
+        $string58_tailscale_greyware_tool_keyword = /Serving\sTailscale\sweb\sclient\son\shttp\:\/\// nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
         $string59_tailscale_greyware_tool_keyword = /Starting\stailscaled/ nocase ascii wide
@@ -9802,10 +9856,10 @@ rule takeown_greyware_tool_keyword
     strings:
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string1_takeown_greyware_tool_keyword = /takeown\s\/f\s\"C:\\windows\\system32\\config\\SAM\"/ nocase ascii wide
+        $string1_takeown_greyware_tool_keyword = /takeown\s\/f\s\"C\:\\windows\\system32\\config\\SAM\"/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string2_takeown_greyware_tool_keyword = /takeown\s\/f\sC:\\Windows\\System32\\amsi\.dll\s\/a/ nocase ascii wide
+        $string2_takeown_greyware_tool_keyword = /takeown\s\/f\sC\:\\Windows\\System32\\amsi\.dll\s\/a/ nocase ascii wide
 
     condition:
         any of them
@@ -10031,7 +10085,7 @@ rule TelegramRAT_greyware_tool_keyword
     strings:
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string1_TelegramRAT_greyware_tool_keyword = /https:\/\/api\.telegram\.org\/bot.{0,1000}\/sendMessage/ nocase ascii wide
+        $string1_TelegramRAT_greyware_tool_keyword = /https\:\/\/api\.telegram\.org\/bot.{0,1000}\/sendMessage/ nocase ascii wide
 
     condition:
         any of them
@@ -10072,10 +10126,10 @@ rule temp_sh_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_temp_sh_greyware_tool_keyword = /https:\/\/temp\.sh\/.{0,1000}\// nocase ascii wide
+        $string1_temp_sh_greyware_tool_keyword = /https\:\/\/temp\.sh\/.{0,1000}\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_temp_sh_greyware_tool_keyword = /https:\/\/temp\.sh\/upload/ nocase ascii wide
+        $string2_temp_sh_greyware_tool_keyword = /https\:\/\/temp\.sh\/upload/ nocase ascii wide
 
     condition:
         any of them
@@ -10094,10 +10148,10 @@ rule tempsend_com_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_tempsend_com_greyware_tool_keyword = /https:\/\/tempsend\.com\// nocase ascii wide
+        $string1_tempsend_com_greyware_tool_keyword = /https\:\/\/tempsend\.com\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_tempsend_com_greyware_tool_keyword = /https:\/\/tempsend\.com\/send/ nocase ascii wide
+        $string2_tempsend_com_greyware_tool_keyword = /https\:\/\/tempsend\.com\/send/ nocase ascii wide
 
     condition:
         any of them
@@ -10116,7 +10170,7 @@ rule textbin_net_greyware_tool_keyword
     strings:
         // Description: textbin.net raw access content - abused by malwares to retrieve payloads
         // Reference: textbin.net
-        $string1_textbin_net_greyware_tool_keyword = /https:\/\/textbin\.net\/raw\// nocase ascii wide
+        $string1_textbin_net_greyware_tool_keyword = /https\:\/\/textbin\.net\/raw\// nocase ascii wide
 
     condition:
         any of them
@@ -10176,7 +10230,7 @@ rule tmpfiles_org_greyware_tool_keyword
     strings:
         // Description: download of an executable files from tmpfiles.org often used by ransomware groups
         // Reference: N/A
-        $string1_tmpfiles_org_greyware_tool_keyword = /https:\/\/tmpfiles\.org\/dl\/.{0,1000}\.exe/ nocase ascii wide
+        $string1_tmpfiles_org_greyware_tool_keyword = /https\:\/\/tmpfiles\.org\/dl\/.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -10198,7 +10252,7 @@ rule tmpwatch_greyware_tool_keyword
         $string1_tmpwatch_greyware_tool_keyword = /chmod\s4777\s\/tmp\/\.scsi\/dev\/bin\/gsh/ nocase ascii wide
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
-        $string2_tmpwatch_greyware_tool_keyword = /chown\sroot:root\s\/tmp\/\.scsi\/dev\/bin\// nocase ascii wide
+        $string2_tmpwatch_greyware_tool_keyword = /chown\sroot\:root\s\/tmp\/\.scsi\/dev\/bin\// nocase ascii wide
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
         $string3_tmpwatch_greyware_tool_keyword = /echo\s.{0,1000}bailing\.\stry\sa\sdifferent\sname\\/ nocase ascii wide
@@ -10270,7 +10324,7 @@ rule transfer_sh_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_transfer_sh_greyware_tool_keyword = /https:\/\/transfer\.sh/ nocase ascii wide
+        $string1_transfer_sh_greyware_tool_keyword = /https\:\/\/transfer\.sh/ nocase ascii wide
 
     condition:
         any of them
@@ -10289,10 +10343,10 @@ rule transfert_my_files_com_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_transfert_my_files_com_greyware_tool_keyword = /https:\/\/transfert\-my\-files\.com\/files\// nocase ascii wide
+        $string1_transfert_my_files_com_greyware_tool_keyword = /https\:\/\/transfert\-my\-files\.com\/files\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_transfert_my_files_com_greyware_tool_keyword = /https:\/\/transfert\-my\-files\.com\/inc\/upload\.php/ nocase ascii wide
+        $string2_transfert_my_files_com_greyware_tool_keyword = /https\:\/\/transfert\-my\-files\.com\/inc\/upload\.php/ nocase ascii wide
 
     condition:
         any of them
@@ -10311,7 +10365,7 @@ rule translate_goog_greyware_tool_keyword
     strings:
         // Description: accessing github through google translate (evasion) false positive risk
         // Reference: https://*-com.translate.goog/*
-        $string1_translate_goog_greyware_tool_keyword = /https:\/\/github\-com\.translate\.goog\// nocase ascii wide
+        $string1_translate_goog_greyware_tool_keyword = /https\:\/\/github\-com\.translate\.goog\// nocase ascii wide
 
     condition:
         any of them
@@ -10437,7 +10491,7 @@ rule UltraVNC_greyware_tool_keyword
         $string4_UltraVNC_greyware_tool_keyword = /\svnc\.ini\s/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string5_UltraVNC_greyware_tool_keyword = /\"publisher\":\"uvnc\sbvba/ nocase ascii wide
+        $string5_UltraVNC_greyware_tool_keyword = /\"publisher\"\:\"uvnc\sbvba/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string6_UltraVNC_greyware_tool_keyword = /\/downloads\/ultravnc\.html/ nocase ascii wide
@@ -10873,7 +10927,7 @@ rule vncviewer_greyware_tool_keyword
     strings:
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
-        $string1_vncviewer_greyware_tool_keyword = /vncviewer\s.{0,1000}\..{0,1000}:5901/ nocase ascii wide
+        $string1_vncviewer_greyware_tool_keyword = /vncviewer\s.{0,1000}\..{0,1000}\:5901/ nocase ascii wide
 
     condition:
         any of them
@@ -11078,13 +11132,13 @@ rule vsftpd_greyware_tool_keyword
         $string1_vsftpd_greyware_tool_keyword = /Bad\sHTTP\sverb\./ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string2_vsftpd_greyware_tool_keyword = /bug:\spid\sactive\sin\sptrace_sandbox_free/ nocase ascii wide
+        $string2_vsftpd_greyware_tool_keyword = /bug\:\spid\sactive\sin\sptrace_sandbox_free/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string3_vsftpd_greyware_tool_keyword = /Connection\srefused:\stcp_wrappers\sdenial\./ nocase ascii wide
+        $string3_vsftpd_greyware_tool_keyword = /Connection\srefused\:\stcp_wrappers\sdenial\./ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string4_vsftpd_greyware_tool_keyword = /Connection\srefused:\stoo\smany\ssessions\sfor\sthis\saddress\./ nocase ascii wide
+        $string4_vsftpd_greyware_tool_keyword = /Connection\srefused\:\stoo\smany\ssessions\sfor\sthis\saddress\./ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
         $string5_vsftpd_greyware_tool_keyword = /Could\snot\sset\sfile\smodification\stime\./ nocase ascii wide
@@ -11111,10 +11165,10 @@ rule vsftpd_greyware_tool_keyword
         $string12_vsftpd_greyware_tool_keyword = /syscall\s.{0,1000}\sout\sof\sbounds/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string13_vsftpd_greyware_tool_keyword = /syscall\snot\spermitted:/ nocase ascii wide
+        $string13_vsftpd_greyware_tool_keyword = /syscall\snot\spermitted\:/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string14_vsftpd_greyware_tool_keyword = /syscall\svalidate\sfailed:/ nocase ascii wide
+        $string14_vsftpd_greyware_tool_keyword = /syscall\svalidate\sfailed\:/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
         $string15_vsftpd_greyware_tool_keyword = /Transfer\sdone\s\(but\sfailed\sto\sopen\sdirectory\)\./ nocase ascii wide
@@ -11123,7 +11177,7 @@ rule vsftpd_greyware_tool_keyword
         $string16_vsftpd_greyware_tool_keyword = /vsf_sysutil_read_loop/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string17_vsftpd_greyware_tool_keyword = /weird\sstatus:/ nocase ascii wide
+        $string17_vsftpd_greyware_tool_keyword = /weird\sstatus\:/ nocase ascii wide
 
     condition:
         any of them
@@ -11145,10 +11199,10 @@ rule vssadmin_greyware_tool_keyword
         $string1_vssadmin_greyware_tool_keyword = /\.exe\sdelete\sshadows/ nocase ascii wide
         // Description: the command is used to create a new Volume Shadow Copy for a specific volume which can be utilized by an attacker to collect data from the local system
         // Reference: N/A
-        $string2_vssadmin_greyware_tool_keyword = /vssadmin\screate\sshadow\s\/for\=C:/ nocase ascii wide
+        $string2_vssadmin_greyware_tool_keyword = /vssadmin\screate\sshadow\s\/for\=C\:/ nocase ascii wide
         // Description: the actor creating a Shadow Copy and then extracting a copy of the ntds.dit file from it.
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string3_vssadmin_greyware_tool_keyword = /vssadmin\screate\sshadow\s\/for\=C:.{0,1000}\s\\Temp\\.{0,1000}\.tmp/ nocase ascii wide
+        $string3_vssadmin_greyware_tool_keyword = /vssadmin\screate\sshadow\s\/for\=C\:.{0,1000}\s\\Temp\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: inhibiting recovery by deleting backup and recovery data to prevent system recovery after an attack
         // Reference: N/A
         $string4_vssadmin_greyware_tool_keyword = /vssadmin\sdelete\sshadows/ nocase ascii wide
@@ -11239,13 +11293,13 @@ rule wetransfer_greyware_tool_keyword
     strings:
         // Description: WeTransfer is a popular file sharing service often used by malicious actors for phishing campaigns due to its legitimate reputation and widespread use even within some enterprises to share files
         // Reference: https://twitter.com/mthcht/status/1658853848323182597
-        $string1_wetransfer_greyware_tool_keyword = /https:\/\/we\.tl\/t\-/ nocase ascii wide
+        $string1_wetransfer_greyware_tool_keyword = /https\:\/\/we\.tl\/t\-/ nocase ascii wide
         // Description: WeTransfer is a popular file-sharing service often used by malicious actors for phishing campaigns due to its legitimate reputation and widespread use even within some enterprises to share files
         // Reference: https://twitter.com/mthcht/status/1658853848323182597
-        $string2_wetransfer_greyware_tool_keyword = /https:\/\/wetransfer\.com\/api\/v4\/transfers\// nocase ascii wide
+        $string2_wetransfer_greyware_tool_keyword = /https\:\/\/wetransfer\.com\/api\/v4\/transfers\// nocase ascii wide
         // Description: WeTransfer is a popular file-sharing service often used by malicious actors for phishing campaigns due to its legitimate reputation and widespread use even within some enterprises to share files
         // Reference: https://twitter.com/mthcht/status/1658853848323182597
-        $string3_wetransfer_greyware_tool_keyword = /https:\/\/wetransfer\.com\/downloads\// nocase ascii wide
+        $string3_wetransfer_greyware_tool_keyword = /https\:\/\/wetransfer\.com\/downloads\// nocase ascii wide
 
     condition:
         any of them
@@ -11298,7 +11352,7 @@ rule wevtutil_greyware_tool_keyword
         $string5_wevtutil_greyware_tool_keyword = /wevtutil\.exe\sclear\-log/ nocase ascii wide
         // Description: disable a specific eventlog
         // Reference: N/A
-        $string6_wevtutil_greyware_tool_keyword = /wevtutil\.exe\ssl\s.{0,1000}\s\/e:false/ nocase ascii wide
+        $string6_wevtutil_greyware_tool_keyword = /wevtutil\.exe\ssl\s.{0,1000}\s\/e\:false/ nocase ascii wide
 
     condition:
         any of them
@@ -11317,7 +11371,7 @@ rule where_greyware_tool_keyword
     strings:
         // Description: threat actors searched for Active Directory related DLLs in directories
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string1_where_greyware_tool_keyword = /\swhere\s\/r\sC:\\Windows\\WinSxS\\\s.{0,1000}Microsoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
+        $string1_where_greyware_tool_keyword = /\swhere\s\/r\sC\:\\Windows\\WinSxS\\\s.{0,1000}Microsoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
 
     condition:
         any of them
@@ -11427,7 +11481,7 @@ rule winrs_greyware_tool_keyword
     strings:
         // Description: WinRS for Lateral Movement
         // Reference: N/A
-        $string1_winrs_greyware_tool_keyword = /winrs\s\-r:.{0,1000}whoami/ nocase ascii wide
+        $string1_winrs_greyware_tool_keyword = /winrs\s\-r\:.{0,1000}whoami/ nocase ascii wide
 
     condition:
         any of them
@@ -11470,7 +11524,7 @@ rule wireshark_greyware_tool_keyword
         $string8_wireshark_greyware_tool_keyword = /\-\-no\-promiscuous\-mode/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string9_wireshark_greyware_tool_keyword = /sharkd\s\-a\stcp:/ nocase ascii wide
+        $string9_wireshark_greyware_tool_keyword = /sharkd\s\-a\stcp\:/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
         $string10_wireshark_greyware_tool_keyword = /tshark\s.{0,1000}\-i\s/ nocase ascii wide
@@ -11543,7 +11597,7 @@ rule wmic_greyware_tool_keyword
     strings:
         // Description: Threat Actors ran the following command to download and execute a PowerShell payload
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string1_wmic_greyware_tool_keyword = /\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\spowershell\.exe\s\-nop\s\-w\shidden\s\-c\s.{0,1000}IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'https:\/\// nocase ascii wide
+        $string1_wmic_greyware_tool_keyword = /\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\spowershell\.exe\s\-nop\s\-w\shidden\s\-c\s.{0,1000}IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'https\:\/\// nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
         $string2_wmic_greyware_tool_keyword = /\.exe\sshadowcopy\sdelete/ nocase ascii wide
@@ -11564,31 +11618,31 @@ rule wmic_greyware_tool_keyword
         $string7_wmic_greyware_tool_keyword = /ac\si\sntds.{0,1000}\\\\127\.0\.0\.1\\ADMIN\$\\/ nocase ascii wide
         // Description: gather information about Windows OS version and licensing on the hosts
         // Reference: https://thedfirreport.com/2023/05/22/icedid-macro-ends-in-nokoyawa-ransomware/
-        $string8_wmic_greyware_tool_keyword = /cmd\.exe\s\/C\swmic\s\/node:.{0,1000}\s\/user:.{0,1000}\s\/password:.{0,1000}\sos\sget\scaption/ nocase ascii wide
+        $string8_wmic_greyware_tool_keyword = /cmd\.exe\s\/C\swmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sos\sget\scaption/ nocase ascii wide
         // Description: Enable WinRM remotely with wmic
         // Reference: N/A
         $string9_wmic_greyware_tool_keyword = /process\scall\screate\s\"powershell\senable\-psremoting\s\-force\"/ nocase ascii wide
         // Description: WMIC suspicious transfer 
         // Reference: N/A
-        $string10_wmic_greyware_tool_keyword = /start\swmic\s\/node:\@C:\\.{0,1000}\.txt\s\/user:.{0,1000}\/password:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
+        $string10_wmic_greyware_tool_keyword = /start\swmic\s\/node\:\@C\:\\.{0,1000}\.txt\s\/user\:.{0,1000}\/password\:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string11_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s{\$__wmic_greyware_tool_keyword\.Delete\(\)\;/ nocase ascii wide
+        $string11_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s\{\$__wmic_greyware_tool_keyword\.Delete\(\)\;/ nocase ascii wide
         // Description: Lateral Movement with wmic
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string12_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
+        $string12_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user\:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
         // Description: Execute file hosted over SMB on remote system with specified credential
         // Reference: N/A
-        $string13_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\s\/user:.{0,1000}\s\/password:.{0,1000}\sprocess\scall\screate\s\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string13_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sprocess\scall\screate\s\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Remotely start RDP with wmic
         // Reference: N/A
-        $string14_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
+        $string14_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
         // Description: get the currently logged user with wmic
         // Reference: N/A
-        $string15_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
+        $string15_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
         // Description: get the currently logged user with wmic
         // Reference: N/A
-        $string16_wmic_greyware_tool_keyword = /wmic\s\/node:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
+        $string16_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
         // Description: get domain name with wmic
         // Reference: N/A
         $string17_wmic_greyware_tool_keyword = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
@@ -11609,16 +11663,16 @@ rule wmic_greyware_tool_keyword
         $string22_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string23_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format:csv/ nocase ascii wide
+        $string23_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
         $string24_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string25_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string25_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string26_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt:.{0,1000}\.exe/ nocase ascii wide
+        $string26_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
         // Description: call cmd.exe with wmic
         // Reference: N/A
         $string27_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
@@ -11665,7 +11719,7 @@ rule xcopy_greyware_tool_keyword
     strings:
         // Description: command abused by attackers - exfiltraiton to remote host with xcopy
         // Reference: N/A
-        $string1_xcopy_greyware_tool_keyword = /xcopy\sc:\\.{0,1000}\s\\\\.{0,1000}\\c\$/ nocase ascii wide
+        $string1_xcopy_greyware_tool_keyword = /xcopy\sc\:\\.{0,1000}\s\\\\.{0,1000}\\c\$/ nocase ascii wide
 
     condition:
         any of them
@@ -11738,7 +11792,7 @@ rule xmrig_greyware_tool_keyword
         $string18_xmrig_greyware_tool_keyword = /dd7fef5e3594eb18dd676e550e128d4b64cc5a469ff6954a677dc414265db468/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string19_xmrig_greyware_tool_keyword = /donate\.v2\.xmrig\.com:3333/ nocase ascii wide
+        $string19_xmrig_greyware_tool_keyword = /donate\.v2\.xmrig\.com\:3333/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
         $string20_xmrig_greyware_tool_keyword = /e1ff2208b3786cac801ffb470b9475fbb3ced74eb503bfde7aa7f22af113989d/ nocase ascii wide
@@ -11795,7 +11849,7 @@ rule xmrig_greyware_tool_keyword
         $string37_xmrig_greyware_tool_keyword = /xmrig\.exe\s\-/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string38_xmrig_greyware_tool_keyword = /xmrpool\.eu:3333/ nocase ascii wide
+        $string38_xmrig_greyware_tool_keyword = /xmrpool\.eu\:3333/ nocase ascii wide
 
     condition:
         any of them
@@ -11852,13 +11906,13 @@ rule index_allocation_greyware_tool_keyword
     strings:
         // Description: creation of hidden folders (and file) via ...$.......::$index_allocation_index_allocation_greyware_tool_keyword
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string1_index_allocation_greyware_tool_keyword = /\.\.\.::\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
+        $string1_index_allocation_greyware_tool_keyword = /\.\.\.\:\:\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
         // Description: creation of hidden folders (and file) via ...$.......::$index_allocation_index_allocation_greyware_tool_keyword
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string2_index_allocation_greyware_tool_keyword = /cd\s.{0,1000}\.::\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
+        $string2_index_allocation_greyware_tool_keyword = /cd\s.{0,1000}\.\:\:\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
         // Description: creation of hidden folders (and file) via ...$.......::$index_allocation_index_allocation_greyware_tool_keyword
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string3_index_allocation_greyware_tool_keyword = /md\s.{0,1000}\.::\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
+        $string3_index_allocation_greyware_tool_keyword = /md\s.{0,1000}\.\:\:\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
 
     condition:
         any of them
@@ -12077,7 +12131,7 @@ rule __greyware_tool_keyword
         $string30___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string31___greyware_tool_keyword = /https:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string31___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

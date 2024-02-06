@@ -91,10 +91,10 @@ rule icebreaker
         $string27 = /found\-passwords\.txt/ nocase ascii wide
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string28 = /https:\/\/0\.0\.0\.0:1337/ nocase ascii wide
+        $string28 = /https\:\/\/0\.0\.0\.0\:1337/ nocase ascii wide
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
-        $string29 = /icebreaker:P\@ssword123456/ nocase ascii wide
+        $string29 = /icebreaker\:P\@ssword123456/ nocase ascii wide
         // Description: Gets plaintext Active Directory credentials if you're on the internal network but outside the AD environment
         // Reference: https://github.com/DanMcInerney/icebreaker
         $string30 = /icebreaker\-master\.zip/ nocase ascii wide

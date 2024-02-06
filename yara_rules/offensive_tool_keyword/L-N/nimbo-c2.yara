@@ -34,7 +34,7 @@ rule nimbo_c2
         $string8 = /beacon\.elf/ nocase ascii wide
         // Description: Nimbo-C2 is yet another (simple and lightweight) C2 framework
         // Reference: https://github.com/itaymigdal/Nimbo-C2
-        $string9 = /C:\\ProgramData\\Prefetch\\na\.exe/ nocase ascii wide
+        $string9 = /C\:\\ProgramData\\Prefetch\\na\.exe/ nocase ascii wide
         // Description: Nimbo-C2 is yet another (simple and lightweight) C2 framework
         // Reference: https://github.com/itaymigdal/Nimbo-C2
         $string10 = /C2\sFramework\sfor\svillains/ nocase ascii wide

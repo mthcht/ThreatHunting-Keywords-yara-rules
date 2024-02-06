@@ -13,7 +13,7 @@ rule RemotePipeList
         $string1 = /\[\+\]\sConnected\sto\s\\\\\\\\.{0,1000}\\\\IPC\$/ nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
-        $string2 = /\[\+\]\sPipe\slisting:/ nocase ascii wide
+        $string2 = /\[\+\]\sPipe\slisting\:/ nocase ascii wide
         // Description: A small tool that can list the named pipes bound on a remote system.
         // Reference: https://github.com/outflanknl/C2-Tool-Collection/tree/main/Other/RemotePipeList
         $string3 = /70BCFFDB\-AE25\-4BEA\-BF0E\-09DF06B7DBC4/ nocase ascii wide

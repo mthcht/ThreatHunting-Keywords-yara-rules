@@ -13,10 +13,10 @@ rule TelegramRAT
         $string1 = /\/TelegramRAT\.git/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string2 = /https:\/\/t\.me\/BotFather/ nocase ascii wide
+        $string2 = /https\:\/\/t\.me\/BotFather/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
-        $string3 = /https:\/\/t\.me\/machine1337/ nocase ascii wide
+        $string3 = /https\:\/\/t\.me\/machine1337/ nocase ascii wide
         // Description: Cross Platform Telegram based RAT that communicates via telegram to evade network restrictions
         // Reference: https://github.com/machine1337/TelegramRAT
         $string4 = /machine1337\/TelegramRAT/ nocase ascii wide

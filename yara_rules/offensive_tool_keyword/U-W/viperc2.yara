@@ -304,7 +304,7 @@ rule viperc2
         $string98 = /GetWindowsCredentials\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string99 = /http:\/\/vpsip:28888/ nocase ascii wide
+        $string99 = /http\:\/\/vpsip\:28888/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string100 = /HttpProxyScan_Log4J2\.py/ nocase ascii wide

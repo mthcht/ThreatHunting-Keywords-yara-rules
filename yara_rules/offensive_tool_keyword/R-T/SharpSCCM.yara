@@ -55,7 +55,7 @@ rule SharpSCCM
         $string15 = /\s\-p\sLastLogonTimestamp\s\-p\sLastLogonUserName\s/ nocase ascii wide
         // Description: SharpSCCM is a post-exploitation tool designed to leverage Microsoft Endpoint Configuration Manager (a.k.a. ConfigMgr. formerly SCCM) for lateral movement and credential gathering without requiring access to the SCCM administration console GUI
         // Reference: https://github.com/Mayyhem/SharpSCCM/
-        $string16 = /\sremove\sdevice\sGUID:001B2EE1\-AE95\-4146\-AE7B\-5928F1E4F396/ nocase ascii wide
+        $string16 = /\sremove\sdevice\sGUID\:001B2EE1\-AE95\-4146\-AE7B\-5928F1E4F396/ nocase ascii wide
         // Description: SharpSCCM is a post-exploitation tool designed to leverage Microsoft Endpoint Configuration Manager (a.k.a. ConfigMgr. formerly SCCM) for lateral movement and credential gathering without requiring access to the SCCM administration console GUI
         // Reference: https://github.com/Mayyhem/SharpSCCM/
         $string17 = /SharpSCCM/ nocase ascii wide

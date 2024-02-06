@@ -19,7 +19,7 @@ rule domain_analyzer
         $string3 = /\/domain_analyzer\.git/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
-        $string4 = /\/domain_analyzer:latest/ nocase ascii wide
+        $string4 = /\/domain_analyzer\:latest/ nocase ascii wide
         // Description: Analyze the security of any domain by finding all the information possible
         // Reference: https://github.com/eldraco/domain_analyzer
         $string5 = /domain_analyzer\.py/ nocase ascii wide

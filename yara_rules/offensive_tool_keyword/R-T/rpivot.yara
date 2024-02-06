@@ -16,7 +16,7 @@ rule rpivot
         $string2 = /\/rpivot\.git/ nocase ascii wide
         // Description: socks4 reverse proxy for penetration testing
         // Reference: https://github.com/klsecservices/rpivot
-        $string3 = /9b9850751be2515c8231e5189015bbe6:49ef7638d69a01f26d96ed673bf50c45/ nocase ascii wide
+        $string3 = /9b9850751be2515c8231e5189015bbe6\:49ef7638d69a01f26d96ed673bf50c45/ nocase ascii wide
         // Description: socks4 reverse proxy for penetration testing
         // Reference: https://github.com/klsecservices/rpivot
         $string4 = /client\.py\s\-\-server\-ip\s.{0,1000}\s\-\-server\-port\s/ nocase ascii wide

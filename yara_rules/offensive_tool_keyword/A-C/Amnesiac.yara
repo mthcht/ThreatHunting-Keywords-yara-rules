@@ -70,7 +70,7 @@ rule Amnesiac
         $string20 = /\[\+\]\sKeylogger\sstarted\swith\sPID\s/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with lateral movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string21 = /\[\+\]\sPayload\sformat:\spwsh/ nocase ascii wide
+        $string21 = /\[\+\]\sPayload\sformat\:\spwsh/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with lateral movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string22 = /\[\+\]\sPInject\sLoaded\s/ nocase ascii wide
@@ -142,7 +142,7 @@ rule Amnesiac
         $string44 = /Amnesiac\-main\.zip/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with lateral movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
-        $string45 = /c:\\Users\\Public\\Documents\\log\.txt/ nocase ascii wide
+        $string45 = /c\:\\Users\\Public\\Documents\\log\.txt/ nocase ascii wide
         // Description: Amnesiac is a post-exploitation framework entirely written in PowerShell and designed to assist with lateral movement within Active Directory environments
         // Reference: https://github.com/Leo4j/Amnesiac
         $string46 = /Find\-LocalAdminAccess\s/ nocase ascii wide

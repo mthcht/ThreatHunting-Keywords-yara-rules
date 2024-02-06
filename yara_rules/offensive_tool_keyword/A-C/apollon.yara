@@ -19,7 +19,7 @@ rule apollon
         $string3 = /\/apollon\-selective\-x64/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
-        $string4 = /\[\-\]\sSeems\slike\swe\skilled\sauditd\.\sOoopsie\s:D/ nocase ascii wide
+        $string4 = /\[\-\]\sSeems\slike\swe\skilled\sauditd\.\sOoopsie\s\:D/ nocase ascii wide
         // Description: evade auditd by writing /proc/PID/mem
         // Reference: https://github.com/codewhitesec/apollon
         $string5 = /\[\+\]\sauditd\spatched\ssuccessfully/ nocase ascii wide

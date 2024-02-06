@@ -190,10 +190,10 @@ rule SharpC2
         $string60 = /GenerateReverseTcpDrone/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string61 = /http.{0,1000}127\.0\.0\.1:50050/ nocase ascii wide
+        $string61 = /http.{0,1000}127\.0\.0\.1\:50050/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
-        $string62 = /http.{0,1000}localhost:50050/ nocase ascii wide
+        $string62 = /http.{0,1000}localhost\:50050/ nocase ascii wide
         // Description: Command and Control Framework written in C#
         // Reference: https://github.com/rasta-mouse/SharpC2
         $string63 = /IPeerToPeerService\./ nocase ascii wide

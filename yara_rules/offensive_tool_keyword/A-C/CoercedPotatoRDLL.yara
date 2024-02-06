@@ -13,10 +13,10 @@ rule CoercedPotatoRDLL
         $string1 = /\sCoercedPotato\.cpp/ nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string2 = /\sspawn\sC:\\Windows\\Temp\\beacon\.exe/ nocase ascii wide
+        $string2 = /\sspawn\sC\:\\Windows\\Temp\\beacon\.exe/ nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
-        $string3 = /\sspawn\sC:\\Windows\\Temp\\loader\.exe/ nocase ascii wide
+        $string3 = /\sspawn\sC\:\\Windows\\Temp\\loader\.exe/ nocase ascii wide
         // Description: Reflective DLL to privesc from NT Service to SYSTEM using SeImpersonateToken privilege
         // Reference: https://github.com/sokaRepo/CoercedPotatoRDLL
         $string4 = /\/CoercedPotato\.cpp/ nocase ascii wide

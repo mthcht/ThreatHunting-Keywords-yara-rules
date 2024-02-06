@@ -13,13 +13,13 @@ rule vsftpd
         $string1 = /Bad\sHTTP\sverb\./ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string2 = /bug:\spid\sactive\sin\sptrace_sandbox_free/ nocase ascii wide
+        $string2 = /bug\:\spid\sactive\sin\sptrace_sandbox_free/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string3 = /Connection\srefused:\stcp_wrappers\sdenial\./ nocase ascii wide
+        $string3 = /Connection\srefused\:\stcp_wrappers\sdenial\./ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string4 = /Connection\srefused:\stoo\smany\ssessions\sfor\sthis\saddress\./ nocase ascii wide
+        $string4 = /Connection\srefused\:\stoo\smany\ssessions\sfor\sthis\saddress\./ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
         $string5 = /Could\snot\sset\sfile\smodification\stime\./ nocase ascii wide
@@ -46,10 +46,10 @@ rule vsftpd
         $string12 = /syscall\s.{0,1000}\sout\sof\sbounds/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string13 = /syscall\snot\spermitted:/ nocase ascii wide
+        $string13 = /syscall\snot\spermitted\:/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string14 = /syscall\svalidate\sfailed:/ nocase ascii wide
+        $string14 = /syscall\svalidate\sfailed\:/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
         $string15 = /Transfer\sdone\s\(but\sfailed\sto\sopen\sdirectory\)\./ nocase ascii wide
@@ -58,7 +58,7 @@ rule vsftpd
         $string16 = /vsf_sysutil_read_loop/ nocase ascii wide
         // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/dagwieers/vsftpd/
-        $string17 = /weird\sstatus:/ nocase ascii wide
+        $string17 = /weird\sstatus\:/ nocase ascii wide
 
     condition:
         any of them

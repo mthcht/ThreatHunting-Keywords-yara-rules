@@ -55,7 +55,7 @@ rule openbullet
         $string15 = /OpenBullet2\.zip/ nocase ascii wide
         // Description: The OpenBullet web testing application.
         // Reference: https://github.com/openbullet/OpenBullet2
-        $string16 = /openbullet2:latest/ nocase ascii wide
+        $string16 = /openbullet2\:latest/ nocase ascii wide
         // Description: The OpenBullet web testing application.
         // Reference: https://github.com/openbullet/OpenBullet2
         $string17 = /OpenBullet2\-master/ nocase ascii wide
@@ -76,7 +76,7 @@ rule openbullet
         $string22 = /Welcome\sto\sOpenBullet\s2/ nocase ascii wide
         // Description: The OpenBullet web testing application.
         // Reference: https://github.com/openbullet/OpenBullet2
-        $string23 = /Write\-Output\s127\.0\.0\.1:1111/ nocase ascii wide
+        $string23 = /Write\-Output\s127\.0\.0\.1\:1111/ nocase ascii wide
 
     condition:
         any of them

@@ -22,7 +22,7 @@ rule evilqr
         $string4 = /evilqr\-server/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
-        $string5 = /http:\/\/127\.0\.0\.1:35000/ nocase ascii wide
+        $string5 = /http\:\/\/127\.0\.0\.1\:35000/ nocase ascii wide
         // Description: Proof-of-concept to demonstrate dynamic QR swap phishing attacks in practice
         // Reference: https://github.com/kgretzky/evilqr
         $string6 = /kgretzky\/evilqr/ nocase ascii wide

@@ -19,7 +19,7 @@ rule CmdLineSpoofer
         $string3 = /\[\!\]\sUnable\sto\sread\sPEB\saddress\!/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string4 = /\[System\.Reflection\.Assembly\]::Load\(\(Invoke\-WebRequest\s.{0,1000}\.exe.{0,1000}while\s\(\$true\){Start\-Sleep\s\-s\s1000}/ nocase ascii wide
+        $string4 = /\[System\.Reflection\.Assembly\]\:\:Load\(\(Invoke\-WebRequest\s.{0,1000}\.exe.{0,1000}while\s\(\$true\)\{Start\-Sleep\s\-s\s1000\}/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
         $string5 = /5D03EFC2\-72E9\-4410\-B147\-0A1A5C743999/ nocase ascii wide
@@ -37,7 +37,7 @@ rule CmdLineSpoofer
         $string9 = /plackyhacker\/CmdLineSpoofer/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
-        $string10 = /powershell\.exe\snothing\sto\ssee\shere\!\s:\-P/ nocase ascii wide
+        $string10 = /powershell\.exe\snothing\sto\ssee\shere\!\s\:\-P/ nocase ascii wide
         // Description: How to spoof the command line when spawning a new process from C#
         // Reference: https://github.com/plackyhacker/CmdLineSpoofer
         $string11 = /Press\sa\skey\sto\send\sPoC\?/ nocase ascii wide

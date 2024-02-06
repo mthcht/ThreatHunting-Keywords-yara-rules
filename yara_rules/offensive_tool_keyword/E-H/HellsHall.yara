@@ -19,7 +19,7 @@ rule HellsHall
         $string3 = /\[\#\]\s\[HELL\sHALL\]\sPress\s\<Enter\>\sTo\sQUIT\s\.\.\.\s/ nocase ascii wide
         // Description: Performing Indirect Clean Syscalls
         // Reference: https://github.com/Maldev-Academy/HellHall
-        $string4 = /\[\+\]\s\[HELL\sHALL\]\spAddress\s:\s/ nocase ascii wide
+        $string4 = /\[\+\]\s\[HELL\sHALL\]\spAddress\s\:\s/ nocase ascii wide
         // Description: Performing Indirect Clean Syscalls
         // Reference: https://github.com/Maldev-Academy/HellHall
         $string5 = /\[i\]\s\[HELL\sHALL\]\sPress\s\<Enter\>\sTo\sRun\s\.\.\.\s/ nocase ascii wide

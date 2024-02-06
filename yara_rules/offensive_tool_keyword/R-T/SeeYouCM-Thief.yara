@@ -25,16 +25,16 @@ rule SeeYouCM_Thief
         $string5 = /Credentials\sFound\sin\sConfigurations\!/ nocase ascii wide
         // Description: Simple tool to automatically download and parse configuration files from Cisco phone systems searching for SSH credentials
         // Reference: https://github.com/trustedsec/SeeYouCM-Thief
-        $string6 = /python.{0,1000}http:\/\/.{0,1000}:6970\/ConfigFileCacheList\.txt/ nocase ascii wide
+        $string6 = /python.{0,1000}http\:\/\/.{0,1000}\:6970\/ConfigFileCacheList\.txt/ nocase ascii wide
         // Description: Simple tool to automatically download and parse configuration files from Cisco phone systems searching for SSH credentials
         // Reference: https://github.com/trustedsec/SeeYouCM-Thief
-        $string7 = /python.{0,1000}\'http:\/\/.{0,1000}SEP.{0,1000}:6970\/.{0,1000}\.cnf\.xml/ nocase ascii wide
+        $string7 = /python.{0,1000}\'http\:\/\/.{0,1000}SEP.{0,1000}\:6970\/.{0,1000}\.cnf\.xml/ nocase ascii wide
         // Description: Simple tool to automatically download and parse configuration files from Cisco phone systems searching for SSH credentials
         // Reference: https://github.com/trustedsec/SeeYouCM-Thief
-        $string8 = /python.{0,1000}https:\/\/.{0,1000}:8443\/cucm\-uds\/users\?name\=/ nocase ascii wide
+        $string8 = /python.{0,1000}https\:\/\/.{0,1000}\:8443\/cucm\-uds\/users\?name\=/ nocase ascii wide
         // Description: Simple tool to automatically download and parse configuration files from Cisco phone systems searching for SSH credentials
         // Reference: https://github.com/trustedsec/SeeYouCM-Thief
-        $string9 = /run\sthief:latest/ nocase ascii wide
+        $string9 = /run\sthief\:latest/ nocase ascii wide
         // Description: Simple tool to automatically download and parse configuration files from Cisco phone systems searching for SSH credentials
         // Reference: https://github.com/trustedsec/SeeYouCM-Thief
         $string10 = /search_for_secrets\(/ nocase ascii wide

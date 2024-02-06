@@ -22,16 +22,16 @@ rule htshells
         $string4 = /htshells\-master/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string5 = /http:\/\/.{0,1000}\/\.htaccess\?c\=cmd/ nocase ascii wide
+        $string5 = /http\:\/\/.{0,1000}\/\.htaccess\?c\=cmd/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string6 = /http:\/\/.{0,1000}\/\.htaccess\?c\=uname\s\-a/ nocase ascii wide
+        $string6 = /http\:\/\/.{0,1000}\/\.htaccess\?c\=uname\s\-a/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string7 = /https:\/\/.{0,1000}\/\.htaccess\?c\=cmd/ nocase ascii wide
+        $string7 = /https\:\/\/.{0,1000}\/\.htaccess\?c\=cmd/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
-        $string8 = /https:\/\/.{0,1000}\/\.htaccess\?c\=uname\s\-a/ nocase ascii wide
+        $string8 = /https\:\/\/.{0,1000}\/\.htaccess\?c\=uname\s\-a/ nocase ascii wide
         // Description: Self contained htaccess shells and attacks
         // Reference: https://github.com/wireghoul/htshells
         $string9 = /mod_auth_remote\.phish\.htaccess/ nocase ascii wide

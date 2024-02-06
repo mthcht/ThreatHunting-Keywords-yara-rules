@@ -10,7 +10,7 @@ rule Set_EtwTraceProvider
     strings:
         // Description: disables Microsoft-Windows-PowerShell event logging
         // Reference: N/A
-        $string1 = /Set\-EtwTraceProvider\s\-Guid\s\'{A0C1853B\-5C40\-4B15\-8766\-3CF1C58F985A}\'\s\-AutologgerName\s\'EventLog\-Application\'\s\-Property\s0x11/ nocase ascii wide
+        $string1 = /Set\-EtwTraceProvider\s\-Guid\s\'\{A0C1853B\-5C40\-4B15\-8766\-3CF1C58F985A\}\'\s\-AutologgerName\s\'EventLog\-Application\'\s\-Property\s0x11/ nocase ascii wide
 
     condition:
         any of them

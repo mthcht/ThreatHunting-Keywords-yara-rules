@@ -76,10 +76,10 @@ rule action1
         $string22 = /action1_update\.exe/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string23 = /C:\\Windows\\Action1\\/ nocase ascii wide
+        $string23 = /C\:\\Windows\\Action1\\/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string24 = /C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Action1/ nocase ascii wide
+        $string24 = /C\:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Action1/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string25 = /\'Company\'\>Action1\sCorporation/ nocase ascii wide
@@ -88,7 +88,7 @@ rule action1
         $string26 = /CurrentControlSet\\Services\\A1Agent/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
-        $string27 = /https:\/\/app\.action1\.com\/agent\/.{0,1000}\/Windows\/.{0,1000}\.msi/ nocase ascii wide
+        $string27 = /https\:\/\/app\.action1\.com\/agent\/.{0,1000}\/Windows\/.{0,1000}\.msi/ nocase ascii wide
         // Description: Action1 remote administration tool abused buy attacker
         // Reference: https://app.action1.com/
         $string28 = /InventoryApplicationFile\\action1_agent\.ex/ nocase ascii wide

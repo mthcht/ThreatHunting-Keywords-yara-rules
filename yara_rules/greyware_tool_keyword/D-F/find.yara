@@ -10,10 +10,10 @@ rule find
     strings:
         // Description: truncate every file under /var/log to size 0 - no log content = no forensic.
         // Reference: N/A
-        $string1 = /\/\?\?\?\/\?\?\?\/f\?n\?\s\/var\/log\s\-type\sf\s\-exec\s\/\?\?\?\/\?\?\?\/tr\?\?\?\?\?e\s\-s\s0\s{}\s\\/ nocase ascii wide
+        $string1 = /\/\?\?\?\/\?\?\?\/f\?n\?\s\/var\/log\s\-type\sf\s\-exec\s\/\?\?\?\/\?\?\?\/tr\?\?\?\?\?e\s\-s\s0\s\{\}\s\\/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string2 = /dir\s\/a\sC:\\pagefile\.sys\s\|\sfindstr\s\/R\s/ nocase ascii wide
+        $string2 = /dir\s\/a\sC\:\\pagefile\.sys\s\|\sfindstr\s\/R\s/ nocase ascii wide
         // Description: It can be used to break out from restricted environments by spawning an interactive system shell.
         // Reference: N/A
         $string3 = /find\s\.\s\-exec\s\/bin\/sh\s\\\;\s\-quit/ nocase ascii wide
@@ -73,7 +73,7 @@ rule find
         $string21 = /find\s\/.{0,1000}\s\-perm\s\-u\=s\s\-type\sf\s2\>/ nocase ascii wide
         // Description: truncate every file under /var/log to size 0 - no log content = no forensic.
         // Reference: N/A
-        $string22 = /find\s\/var\/log\s\-type\sf\s\-exec\struncate\s\-s\s0\s{}\s\\/ nocase ascii wide
+        $string22 = /find\s\/var\/log\s\-type\sf\s\-exec\struncate\s\-s\s0\s\{\}\s\\/ nocase ascii wide
 
     condition:
         any of them

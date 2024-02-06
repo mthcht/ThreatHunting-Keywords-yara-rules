@@ -10,7 +10,7 @@ rule ToRat
     strings:
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string1 = /\/dist:\/dist_ext\storat/ nocase ascii wide
+        $string1 = /\/dist\:\/dist_ext\storat/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
         $string2 = /\/persist_cortana\.py/ nocase ascii wide
@@ -67,16 +67,16 @@ rule ToRat
         $string19 = /docker\srun\s\-it\storat/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string20 = /localhost:8000\/.{0,1000}\/hardware/ nocase ascii wide
+        $string20 = /localhost\:8000\/.{0,1000}\/hardware/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string21 = /localhost:8000\/.{0,1000}\/netscan/ nocase ascii wide
+        $string21 = /localhost\:8000\/.{0,1000}\/netscan/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string22 = /localhost:8000\/.{0,1000}\/osinfo/ nocase ascii wide
+        $string22 = /localhost\:8000\/.{0,1000}\/osinfo/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
-        $string23 = /localhost:8000\/.{0,1000}\/speedtest/ nocase ascii wide
+        $string23 = /localhost\:8000\/.{0,1000}\/speedtest/ nocase ascii wide
         // Description: ToRat is a Remote Administation tool written in Go using Tor as a transport mechanism and RPC for communication
         // Reference: https://github.com/lu4p/ToRat
         $string24 = /lu4p\/ToRat/ nocase ascii wide

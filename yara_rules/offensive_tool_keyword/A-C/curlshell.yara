@@ -28,7 +28,7 @@ rule curlshell
         $string6 = /curlshell\.py/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
-        $string7 = /https:\/\/curlshell:.{0,1000}\s\|\sbash/ nocase ascii wide
+        $string7 = /https\:\/\/curlshell\:.{0,1000}\s\|\sbash/ nocase ascii wide
         // Description: reverse shell using curl
         // Reference: https://github.com/irsl/curlshell
         $string8 = /irsl\/curlshell/ nocase ascii wide

@@ -16,13 +16,13 @@ rule BucketLoot
         $string2 = /bucketloot\s\-/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string3 = /bucketloot\shttps:\/\// nocase ascii wide
+        $string3 = /bucketloot\shttps\:\/\// nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
         $string4 = /bucketloot\.exe\s\-/ nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
-        $string5 = /bucketloot\.exe\shttps:\/\// nocase ascii wide
+        $string5 = /bucketloot\.exe\shttps\:\/\// nocase ascii wide
         // Description: BucketLoot is an automated S3-compatible bucket inspector that can help users extract assets- flag secret exposures and even search for custom keywords as well as Regular Expressions from publicly-exposed storage buckets by scanning files that store data in plain-text
         // Reference: https://github.com/redhuntlabs/BucketLoot
         $string6 = /bucketloot\-darwin64/ nocase ascii wide

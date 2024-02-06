@@ -22,7 +22,7 @@ rule MicroBurst
         $string4 = /\\Resources\\Disks\-NoEncryption\.txt/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
-        $string5 = /C:\\dsc_hello\.txt/ nocase ascii wide
+        $string5 = /C\:\\dsc_hello\.txt/ nocase ascii wide
         // Description: A collection of scripts for assessing Microsoft Azure security
         // Reference: https://github.com/NetSPI/MicroBurst
         $string6 = /Get\-AzAutomationAccountCredsREST\.ps1/ nocase ascii wide

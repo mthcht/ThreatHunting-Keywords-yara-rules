@@ -103,7 +103,7 @@ rule john
         $string31 = /\srockyou\.txt\s/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
-        $string32 = /\s\-\-rules:Jumbo\s/ nocase ascii wide
+        $string32 = /\s\-\-rules\:Jumbo\s/ nocase ascii wide
         // Description: John the Ripper jumbo - advanced offline password cracker
         // Reference: https://github.com/openwall/john/
         $string33 = /\s\-\-session\=allrules\s\-\-wordlist/ nocase ascii wide

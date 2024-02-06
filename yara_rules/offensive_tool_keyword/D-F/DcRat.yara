@@ -25,10 +25,10 @@ rule DcRat
         $string5 = /\\RemoteCamera\.dll/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string6 = /119\.45\.104\.153:8848/ nocase ascii wide
+        $string6 = /119\.45\.104\.153\:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string7 = /127\.0\.0\.1:8848/ nocase ascii wide
+        $string7 = /127\.0\.0\.1\:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
         $string8 = /AsyncRAT\/DCRat/ nocase ascii wide
@@ -55,7 +55,7 @@ rule DcRat
         $string15 = /DcRat\-main\.zip/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string16 = /https:\/\/pastebin\.com\/raw\/fevFJe98/ nocase ascii wide
+        $string16 = /https\:\/\/pastebin\.com\/raw\/fevFJe98/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
         $string17 = /Keylogger\.exe/ nocase ascii wide
@@ -64,7 +64,7 @@ rule DcRat
         $string18 = /Keylogger\.pdb/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
-        $string19 = /localhost:8848/ nocase ascii wide
+        $string19 = /localhost\:8848/ nocase ascii wide
         // Description: DcRat C2 A simple remote tool in C#
         // Reference: https://github.com/qwqdanchun/DcRat
         $string20 = /Plugins\\SendFile\.dll/ nocase ascii wide

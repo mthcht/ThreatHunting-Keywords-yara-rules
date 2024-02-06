@@ -52,7 +52,7 @@ rule EDRSandBlast
         $string14 = /FFA0FDDE\-BE70\-49E4\-97DE\-753304EF1113/ nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
-        $string15 = /lsass\.exe.{0,1000}C:\\temp\\tmp\.tmp/ nocase ascii wide
+        $string15 = /lsass\.exe.{0,1000}C\:\\temp\\tmp\.tmp/ nocase ascii wide
         // Description: EDRSandBlast is a tool written in C that weaponize a vulnerable signed driver to bypass EDR detections
         // Reference: https://github.com/wavestone-cdt/EDRSandblast
         $string16 = /LSASSProtectionBypass.{0,1000}\// nocase ascii wide

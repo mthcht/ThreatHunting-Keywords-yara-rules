@@ -19,7 +19,7 @@ rule NetLoader
         $string3 = /\\NetLoader\.exe/ nocase ascii wide
         // Description: Loads any C# binary in memory - patching AMSI + ETW
         // Reference: https://github.com/Flangvik/NetLoader
-        $string4 = /csc\.exe\s\/t:exe\s\/out:RandomName\.exe\sProgram\.cs/ nocase ascii wide
+        $string4 = /csc\.exe\s\/t\:exe\s\/out\:RandomName\.exe\sProgram\.cs/ nocase ascii wide
         // Description: Loads any C# binary in memory - patching AMSI + ETW
         // Reference: https://github.com/Flangvik/NetLoader
         $string5 = /d2hvYW1p/ nocase ascii wide

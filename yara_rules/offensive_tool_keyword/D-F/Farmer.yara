@@ -19,7 +19,7 @@ rule Farmer
         $string3 = /\\Fertliser\.pdb/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
-        $string4 = /c:\\windows\\temp\\test\.tmp\sfarmer/ nocase ascii wide
+        $string4 = /c\:\\windows\\temp\\test\.tmp\sfarmer/ nocase ascii wide
         // Description: Farmer is a project for collecting NetNTLM hashes in a Windows domain. Farmer achieves this by creating a local WebDAV server that causes the WebDAV Mini Redirector to authenticate from any connecting clients.
         // Reference: https://github.com/mdsecactivebreach/Farmer
         $string5 = /crop\.exe\s\\\\.{0,1000}\\.{0,1000}\.lnk\s\\\\.{0,1000}\\harvest\s\\\\.{0,1000}\\harvest/ nocase ascii wide

@@ -25,7 +25,7 @@ rule wevtutil
         $string5 = /wevtutil\.exe\sclear\-log/ nocase ascii wide
         // Description: disable a specific eventlog
         // Reference: N/A
-        $string6 = /wevtutil\.exe\ssl\s.{0,1000}\s\/e:false/ nocase ascii wide
+        $string6 = /wevtutil\.exe\ssl\s.{0,1000}\s\/e\:false/ nocase ascii wide
 
     condition:
         any of them

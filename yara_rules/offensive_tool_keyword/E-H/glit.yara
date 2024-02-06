@@ -10,7 +10,7 @@ rule glit
     strings:
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
-        $string1 = /\srepo\s\-u\shttps:\/\/github\.com\// nocase ascii wide
+        $string1 = /\srepo\s\-u\shttps\:\/\/github\.com\// nocase ascii wide
         // Description: Retrieve all mails of users related to a git repository a git user or a git organization
         // Reference: https://github.com/shadawck/glit
         $string2 = /\/glit\.git/ nocase ascii wide

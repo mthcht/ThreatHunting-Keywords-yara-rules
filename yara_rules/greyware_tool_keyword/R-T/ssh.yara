@@ -19,7 +19,7 @@ rule ssh
         $string3 = /error\sin\slibcrypto/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string4 = /fatal:\sbuffer_get_string:\sbad\sstring/ nocase ascii wide
+        $string4 = /fatal\:\sbuffer_get_string\:\sbad\sstring/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
         $string5 = /incorrect\ssignature/ nocase ascii wide
@@ -31,7 +31,7 @@ rule ssh
         $string7 = /invalid\selliptic\scurve\svalue/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string8 = /Local:\scrc32\scompensation\sattack/ nocase ascii wide
+        $string8 = /Local\:\scrc32\scompensation\sattack/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
         $string9 = /unexpected\sbytes\sremain\safter\sdecoding/ nocase ascii wide

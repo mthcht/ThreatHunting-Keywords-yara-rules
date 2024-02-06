@@ -19,7 +19,7 @@ rule Egress_Assess
         $string3 = /\s\-client\sicmp\s\-ip\s.{0,1000}\s\-Datatype\sssn\s\-Report\s\-Verbose/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string4 = /\s\-client\ssmb\s\-ip\s.{0,1000}\s\-Datatype\s.{0,1000}c:\\.{0,1000}\..{0,1000}\s\-Verbose/ nocase ascii wide
+        $string4 = /\s\-client\ssmb\s\-ip\s.{0,1000}\s\-Datatype\s.{0,1000}c\:\\.{0,1000}\..{0,1000}\s\-Verbose/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string5 = /\s\-Client\sSMTPOutlook\s\-IP\s.{0,1000}\s\-NoPing\s\-DataType\s.{0,1000}ssn/ nocase ascii wide
@@ -121,7 +121,7 @@ rule Egress_Assess
         $string37 = /automachine\.servequake\.com/ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
-        $string38 = /b64encode.{0,1000}\.:::\-989\-:::\./ nocase ascii wide
+        $string38 = /b64encode.{0,1000}\.\:\:\:\-989\-\:\:\:\./ nocase ascii wide
         // Description: Egress-Assess is a tool used to test egress data detection capabilities
         // Reference: https://github.com/FortyNorthSecurity/Egress-Assess
         $string39 = /bHVrZXJlYWxseWlzdGhlbWFubXl0aGFuZGxlZ2VuZA/ nocase ascii wide

@@ -25,10 +25,10 @@ rule Goodsync
         $string5 = /\\Users\\.{0,1000}\\AppData\\Local\\GoodSync/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string6 = /Copy\sNew\s.{0,1000}gdrive:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
+        $string6 = /Copy\sNew\s.{0,1000}gdrive\:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string7 = /Copy\sNew\s.{0,1000}sftp:\/\// nocase ascii wide
+        $string7 = /Copy\sNew\s.{0,1000}sftp\:\/\// nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
         $string8 = /GoodSync\sServer/ nocase ascii wide

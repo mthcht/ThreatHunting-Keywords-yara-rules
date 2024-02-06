@@ -73,7 +73,7 @@ rule Radmin
         $string21 = /Program\sFiles\s\(x86\)\\Radmin\sViewer\s3\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string22 = /radmin\s\/connect:/ nocase ascii wide
+        $string22 = /radmin\s\/connect\:/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string23 = /Radmin\sServer\sV3/ nocase ascii wide
@@ -85,7 +85,7 @@ rule Radmin
         $string25 = /Radmin\sViewer\s3\\rchatx\.dll/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string26 = /radmin\.exe.{0,1000}\s\/connect:/ nocase ascii wide
+        $string26 = /radmin\.exe.{0,1000}\s\/connect\:/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string27 = /rserver3\s\/start/ nocase ascii wide

@@ -13,7 +13,7 @@ rule EvilnoVNC
         $string1 = /\sEvilnoVNC/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
-        $string2 = /\/bin\/bash\s\-c\s\"php\s\-q\s\-S\s0\.0\.0\.0:80\s\&\"\s\>\s\/dev\/null\s2\>\&1/ nocase ascii wide
+        $string2 = /\/bin\/bash\s\-c\s\"php\s\-q\s\-S\s0\.0\.0\.0\:80\s\&\"\s\>\s\/dev\/null\s2\>\&1/ nocase ascii wide
         // Description: EvilnoVNC is a Ready to go Phishing Platform
         // Reference: https://github.com/JoelGMSec/EvilnoVNC
         $string3 = /\/EvilnoVNC\.git/ nocase ascii wide

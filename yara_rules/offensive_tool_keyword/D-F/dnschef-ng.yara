@@ -70,10 +70,10 @@ rule dnschef_ng
         $string20 = /byt3bl33d3r\@pm\.me/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string21 = /cooking\sA\sreplies\sto\spoint\sto\s.{0,1000}\smatching:\s/ nocase ascii wide
+        $string21 = /cooking\sA\sreplies\sto\spoint\sto\s.{0,1000}\smatching\:\s/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string22 = /cooking\sAAAA\sreplies\sto\spoint\sto\s.{0,1000}\smatching:\s/ nocase ascii wide
+        $string22 = /cooking\sAAAA\sreplies\sto\spoint\sto\s.{0,1000}\smatching\:\s/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
         $string23 = /cooking\sall\sA\sreplies\sto\spoint\sto\s/ nocase ascii wide
@@ -91,13 +91,13 @@ rule dnschef_ng
         $string27 = /cooking\sall\sNS\sreplies\sto\spoint\sto\s/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string28 = /cooking\sCNAME\sreplies\sto\spoint\sto\s.{0,1000}\smatching:\s/ nocase ascii wide
+        $string28 = /cooking\sCNAME\sreplies\sto\spoint\sto\s.{0,1000}\smatching\:\s/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string29 = /cooking\sMX\sreplies\sto\spoint\sto\s.{0,1000}\smatching:\s/ nocase ascii wide
+        $string29 = /cooking\sMX\sreplies\sto\spoint\sto\s.{0,1000}\smatching\:\s/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
-        $string30 = /cooking\sNS\sreplies\sto\spoint\sto\s.{0,1000}\smatching:\s/ nocase ascii wide
+        $string30 = /cooking\sNS\sreplies\sto\spoint\sto\s.{0,1000}\smatching\:\s/ nocase ascii wide
         // Description: DNSChef is a highly configurable DNS proxy for Penetration Testers and Malware Analysts. A DNS proxy (aka "Fake DNS") is a tool used for application network traffic analysis among other uses. For example - a DNS proxy can be used to fake requests for "badguy.com" to point to a local machine for termination or interception instead of a real host somewhere on the Internet.
         // Reference: https://github.com/byt3bl33d3r/dnschef-ng
         $string31 = /dnschef\.exe\s/ nocase ascii wide

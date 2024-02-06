@@ -73,10 +73,10 @@ rule Nuages
         $string21 = /DNSAES256Handler\./ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string22 = /http.{0,1000}127\.0\.0\.1:3030/ nocase ascii wide
+        $string22 = /http.{0,1000}127\.0\.0\.1\:3030/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
-        $string23 = /http.{0,1000}localhost:3030/ nocase ascii wide
+        $string23 = /http.{0,1000}localhost\:3030/ nocase ascii wide
         // Description: A modular C2 framework
         // Reference: https://github.com/p3nt4/Nuages
         $string24 = /HTTPAES256Handler\./ nocase ascii wide

@@ -94,13 +94,13 @@ rule AlanFramework
         $string28 = /AlanFramework\.git/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string29 = /c:\\agent\.exe/ nocase ascii wide
+        $string29 = /c\:\\agent\.exe/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string30 = /dotnet\s\.\/Server\.dll/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string31 = /DownloadString.{0,1000}https:\/\/checkip\.amazonaws\.com/ nocase ascii wide
+        $string31 = /DownloadString.{0,1000}https\:\/\/checkip\.amazonaws\.com/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string32 = /dump_lsass\.js/ nocase ascii wide
@@ -115,16 +115,16 @@ rule AlanFramework
         $string35 = /ES\.Alan\.Core\// nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string36 = /http.{0,1000}:\/\/127\.0\.0\.1:4433/ nocase ascii wide
+        $string36 = /http.{0,1000}\:\/\/127\.0\.0\.1\:4433/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string37 = /http.{0,1000}:\/\/127\.0\.0\.1:5556/ nocase ascii wide
+        $string37 = /http.{0,1000}\:\/\/127\.0\.0\.1\:5556/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string38 = /http.{0,1000}:\/\/localhost:4433/ nocase ascii wide
+        $string38 = /http.{0,1000}\:\/\/localhost\:4433/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
-        $string39 = /http.{0,1000}:\/\/localhost:5556/ nocase ascii wide
+        $string39 = /http.{0,1000}\:\/\/localhost\:5556/ nocase ascii wide
         // Description: Alan Framework is a post-exploitation framework useful during red-team activities.
         // Reference: https://github.com/enkomio/AlanFramework
         $string40 = /pe_packer\/dll_main\.c/ nocase ascii wide

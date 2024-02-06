@@ -31,7 +31,7 @@ rule NovaLdr
         $string7 = /\[\+\]\sEncrypting\sThe\sStack\.\.\.\.\s/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
-        $string8 = /\[\+\]\sRX\sInjection\saddress:\s/ nocase ascii wide
+        $string8 = /\[\+\]\sRX\sInjection\saddress\:\s/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
         $string9 = /\[\+\]\sThread\shijacking\ssuccessful/ nocase ascii wide
@@ -55,16 +55,16 @@ rule NovaLdr
         $string15 = /BlackSnufkin\/NovaLdr/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
-        $string16 = /C:\\\\Users\\\\L\.Ackerman\=/ nocase ascii wide
+        $string16 = /C\:\\\\Users\\\\L\.Ackerman\=/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
-        $string17 = /encrypted_sleep\(ms:/ nocase ascii wide
+        $string17 = /encrypted_sleep\(ms\:/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
         $string18 = /erase_dos_magic_bytes\(/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
-        $string19 = /Failed\sto\sallocate\smemory\sfor\sshellcode:/ nocase ascii wide
+        $string19 = /Failed\sto\sallocate\smemory\sfor\sshellcode\:/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
         $string20 = /Failed\sto\schange\sshellcode\smemory\sprotection/ nocase ascii wide
@@ -73,7 +73,7 @@ rule NovaLdr
         $string21 = /Failed\sto\sfind\srx\ssection\soffset/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
-        $string22 = /Failed\sto\shijack\sthread:/ nocase ascii wide
+        $string22 = /Failed\sto\shijack\sthread\:/ nocase ascii wide
         // Description: NovaLdr is a Threadless Module Stomping written in Rust designed as a learning project while exploring the world of malware development. It uses advanced techniques like indirect syscalls and string encryption to achieve its functionalities
         // Reference: https://github.com/BlackSnufkin/NovaLdr
         $string23 = /Failed\sto\soverwrite\sthe\s\.text\ssection\sof\sntdll\.dll/ nocase ascii wide

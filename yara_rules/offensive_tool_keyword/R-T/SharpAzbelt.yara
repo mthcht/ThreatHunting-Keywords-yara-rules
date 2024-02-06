@@ -13,13 +13,13 @@ rule SharpAzbelt
         $string1 = /\/SharpAzbelt\.git/ nocase ascii wide
         // Description: This is an attempt to port Azbelt by Leron Gray from Nim to C#. It can be used to enumerate and pilfer Azure-related credentials from Windows boxes and Azure IaaS resources
         // Reference: https://github.com/redskal/SharpAzbelt
-        $string2 = /\[\!\]\s\s\s\sFailed\sto\senumerate\sCredman:/ nocase ascii wide
+        $string2 = /\[\!\]\s\s\s\sFailed\sto\senumerate\sCredman\:/ nocase ascii wide
         // Description: This is an attempt to port Azbelt by Leron Gray from Nim to C#. It can be used to enumerate and pilfer Azure-related credentials from Windows boxes and Azure IaaS resources
         // Reference: https://github.com/redskal/SharpAzbelt
-        $string3 = /\[i\]\sAAD\sJoin:.{0,1000}enumerate/ nocase ascii wide
+        $string3 = /\[i\]\sAAD\sJoin\:.{0,1000}enumerate/ nocase ascii wide
         // Description: This is an attempt to port Azbelt by Leron Gray from Nim to C#. It can be used to enumerate and pilfer Azure-related credentials from Windows boxes and Azure IaaS resources
         // Reference: https://github.com/redskal/SharpAzbelt
-        $string4 = /\[i\]\sCredman:.{0,1000}Credential\sBlob\sDecrypted/ nocase ascii wide
+        $string4 = /\[i\]\sCredman\:.{0,1000}Credential\sBlob\sDecrypted/ nocase ascii wide
         // Description: This is an attempt to port Azbelt by Leron Gray from Nim to C#. It can be used to enumerate and pilfer Azure-related credentials from Windows boxes and Azure IaaS resources
         // Reference: https://github.com/redskal/SharpAzbelt
         $string5 = /\\SharpAzbelt\.csproj/ nocase ascii wide

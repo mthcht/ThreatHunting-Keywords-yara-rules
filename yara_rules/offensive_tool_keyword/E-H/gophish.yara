@@ -40,10 +40,10 @@ rule gophish
         $string10 = /gophish\/gophish/ nocase ascii wide
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string11 = /localhost:1337/ nocase ascii wide
+        $string11 = /localhost\:1337/ nocase ascii wide
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string12 = /localhost:3333/ nocase ascii wide
+        $string12 = /localhost\:3333/ nocase ascii wide
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
         $string13 = /lures\screate\s/ nocase ascii wide

@@ -28,10 +28,10 @@ rule padre
         $string6 = /Gw3kg8e3ej4ai9wffn\%2Fd0uRqKzyaPfM2UFq\%2F8dWmoW4wnyKZhx07Bg\=\=/ nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
-        $string7 = /\-p\s5000:5000\spador_vuln_server/ nocase ascii wide
+        $string7 = /\-p\s5000\:5000\spador_vuln_server/ nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
-        $string8 = /padre\s\-u\s.{0,1000}http.{0,1000}:\/\// nocase ascii wide
+        $string8 = /padre\s\-u\s.{0,1000}http.{0,1000}\:\/\// nocase ascii wide
         // Description: padre?is an advanced exploiter for Padding Oracle attacks against CBC mode encryption
         // Reference: https://github.com/glebarez/padre
         $string9 = /padre\-master\.zip/ nocase ascii wide

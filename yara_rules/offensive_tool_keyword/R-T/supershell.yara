@@ -10,16 +10,16 @@ rule supershell
     strings:
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
-        $string1 = /\s\-a\s\-t\stitleFixed\=\'Supershell\s\-\sInject\'\s\-t\sdisableLeaveAlert\=true\s\-t\sdisableReconnect\=true\sssh\s\-J\srssh:/ nocase ascii wide
+        $string1 = /\s\-a\s\-t\stitleFixed\=\'Supershell\s\-\sInject\'\s\-t\sdisableLeaveAlert\=true\s\-t\sdisableReconnect\=true\sssh\s\-J\srssh\:/ nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
-        $string2 = /\s\-a\s\-t\stitleFixed\=\'Supershell\s\-\sShell\'\s\-t\sdisableLeaveAlert\=true\sssh\s\-J\srssh:/ nocase ascii wide
+        $string2 = /\s\-a\s\-t\stitleFixed\=\'Supershell\s\-\sShell\'\s\-t\sdisableLeaveAlert\=true\sssh\s\-J\srssh\:/ nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
         $string3 = /\sSupershell\.tar\.gz/ nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
-        $string4 = /\/flask:5000\/supershell\// nocase ascii wide
+        $string4 = /\/flask\:5000\/supershell\// nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
         $string5 = /\/Supershell\.tar\.gz/ nocase ascii wide
@@ -43,7 +43,7 @@ rule supershell
         $string11 = /b7671f125bb2ed21d0476a00cfaa9ed6/ nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
-        $string12 = /http:\/\/shell:7681\/token/ nocase ascii wide
+        $string12 = /http\:\/\/shell\:7681\/token/ nocase ascii wide
         // Description: Supershell is a C2 remote control platform accessed through WEB services. By establishing a reverse SSH tunnel it obtains a fully interactive Shell and supports multi-platform architecture Payload
         // Reference: https://github.com/tdragon6/Supershell
         $string13 = /password\s\=\s\'tdragon6\'/ nocase ascii wide

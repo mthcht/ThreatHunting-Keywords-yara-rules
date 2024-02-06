@@ -19,7 +19,7 @@ rule SharpShares
         $string3 = /\[\+\]\sFinished\sEnumerating\sShares/ nocase ascii wide
         // Description: Multithreaded C# .NET Assembly to enumerate accessible network shares in a domain
         // Reference: https://github.com/Hackcraft-Labs/SharpShares
-        $string4 = /\[\+\]\sQuerying\sDC\swithout\sGlobal\sCatalog:\s/ nocase ascii wide
+        $string4 = /\[\+\]\sQuerying\sDC\swithout\sGlobal\sCatalog\:\s/ nocase ascii wide
         // Description: Multithreaded C# .NET Assembly to enumerate accessible network shares in a domain
         // Reference: https://github.com/Hackcraft-Labs/SharpShares
         $string5 = /\\SharpShares\\/ nocase ascii wide
@@ -34,7 +34,7 @@ rule SharpShares
         $string8 = /BCBC884D\-2D47\-4138\-B68F\-7D425C9291F9/ nocase ascii wide
         // Description: Multithreaded C# .NET Assembly to enumerate accessible network shares in a domain
         // Reference: https://github.com/Hackcraft-Labs/SharpShares
-        $string9 = /execute\-assembly\s.{0,1000}\.exe\s\/ldap:all\s\/filter:sysvol.{0,1000}netlogon.{0,1000}ipc\$.{0,1000}print\$/ nocase ascii wide
+        $string9 = /execute\-assembly\s.{0,1000}\.exe\s\/ldap\:all\s\/filter\:sysvol.{0,1000}netlogon.{0,1000}ipc\$.{0,1000}print\$/ nocase ascii wide
         // Description: Multithreaded C# .NET Assembly to enumerate accessible network shares in a domain
         // Reference: https://github.com/Hackcraft-Labs/SharpShares
         $string10 = /Hackcraft\-Labs\/SharpShares/ nocase ascii wide

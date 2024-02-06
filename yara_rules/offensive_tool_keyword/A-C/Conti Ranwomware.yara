@@ -43,13 +43,13 @@ rule Conti_Ranwomware
         $string11 = /powershell\.exe\s\-noninteractive\s\-executionpolicy\sbypass\squser/ nocase ascii wide
         // Description: Conti Ransomware Proxyshell PowerShell command #13
         // Reference: https://news.sophos.com/en-us/2021/09/03/conti-affiliates-use-proxyshell-exchange-exploit-in-ransomware-attacks/
-        $string12 = /powershell\.exe\s\-noninteractive\s\-executionpolicy\sbypass\srundll32\.exe\sC:\\windows\\System32\\comsvcs\.dll.{0,1000}\sMiniDump\s.{0,1000}\sC:\\programdata\\a\.zip\sfull/ nocase ascii wide
+        $string12 = /powershell\.exe\s\-noninteractive\s\-executionpolicy\sbypass\srundll32\.exe\sC\:\\windows\\System32\\comsvcs\.dll.{0,1000}\sMiniDump\s.{0,1000}\sC\:\\programdata\\a\.zip\sfull/ nocase ascii wide
         // Description: Conti Ransomware Proxyshell PowerShell command #12
         // Reference: https://news.sophos.com/en-us/2021/09/03/conti-affiliates-use-proxyshell-exchange-exploit-in-ransomware-attacks/
-        $string13 = /powershell\.exe\s\-noninteractive\s\-executionpolicy\sbypass\sStart\-Process\sc:\\windows\\SVN\.exe\s\-ArgumentList\s.{0,1000}\-connect\s.{0,1000}\s\-pass\sPassword1234/ nocase ascii wide
+        $string13 = /powershell\.exe\s\-noninteractive\s\-executionpolicy\sbypass\sStart\-Process\sc\:\\windows\\SVN\.exe\s\-ArgumentList\s.{0,1000}\-connect\s.{0,1000}\s\-pass\sPassword1234/ nocase ascii wide
         // Description: Conti Ransomware Proxyshell PowerShell command #7
         // Reference: https://news.sophos.com/en-us/2021/09/03/conti-affiliates-use-proxyshell-exchange-exploit-in-ransomware-attacks/
-        $string14 = /sc\s\-path\sc:\\inetpub\\wwwroot\\aspnet_client\\test\.txt\s\-value\steset/ nocase ascii wide
+        $string14 = /sc\s\-path\sc\:\\inetpub\\wwwroot\\aspnet_client\\test\.txt\s\-value\steset/ nocase ascii wide
 
     condition:
         any of them

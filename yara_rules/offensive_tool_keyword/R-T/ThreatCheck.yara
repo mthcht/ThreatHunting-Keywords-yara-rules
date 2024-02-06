@@ -28,7 +28,7 @@ rule ThreatCheck
         $string6 = /\\NimBlackout/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string7 = /C:\\Temp\\file\.exe/ nocase ascii wide
+        $string7 = /C\:\\Temp\\file\.exe/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
         $string8 = /NimBlackout.{0,1000}\.exe/ nocase ascii wide

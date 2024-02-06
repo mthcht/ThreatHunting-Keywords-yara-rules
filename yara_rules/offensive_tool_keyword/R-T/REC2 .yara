@@ -40,7 +40,7 @@ rule REC2_
         $string10 = /c2server_windows/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
-        $string11 = /crate::modules::{rec2mastodon.{0,1000}rec2virustotal}/ nocase ascii wide
+        $string11 = /crate\:\:modules\:\:\{rec2mastodon.{0,1000}rec2virustotal\}/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
         $string12 = /d09ccee4\-pass\-word\-0000\-98677e2356fd/ nocase ascii wide
@@ -49,10 +49,10 @@ rule REC2_
         $string13 = /g0h4n\/REC2/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
-        $string14 = /https:\/\/mastodon\.be\/\@username_fzihfzuhfuoz\/109994357971853428/ nocase ascii wide
+        $string14 = /https\:\/\/mastodon\.be\/\@username_fzihfzuhfuoz\/109994357971853428/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
-        $string15 = /https:\/\/mastodon\.be\/username_fzihfzuhfuoz\/109743339821428173/ nocase ascii wide
+        $string15 = /https\:\/\/mastodon\.be\/username_fzihfzuhfuoz\/109743339821428173/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
         $string16 = /RAMDOMdd28f0dcd9779315ee130deb565dbf315587f1611e54PASSWORD/ nocase ascii wide
@@ -64,7 +64,7 @@ rule REC2_
         $string18 = /REC2\simplant\sfor\sVirusTotal/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
-        $string19 = /rec2::modules::rec2mastodon/ nocase ascii wide
+        $string19 = /rec2\:\:modules\:\:rec2mastodon/ nocase ascii wide
         // Description: REC2 (Rusty External Command and Control) is client and server tool allowing auditor to execute command from VirusTotal and Mastodon APIs written in Rust.
         // Reference: https://github.com/g0h4n/REC2
         $string20 = /rec2_mastodon_x64\.exe/ nocase ascii wide

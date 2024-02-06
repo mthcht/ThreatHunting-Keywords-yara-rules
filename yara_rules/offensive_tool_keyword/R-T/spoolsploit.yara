@@ -52,7 +52,7 @@ rule spoolsploit
         $string14 = /SpoolSploit\// nocase ascii wide
         // Description: A collection of Windows print spooler exploits containerized with other utilities for practical exploitation.
         // Reference: https://github.com/BeetleChunks/SpoolSploit
-        $string15 = /spoolsploit:latest/ nocase ascii wide
+        $string15 = /spoolsploit\:latest/ nocase ascii wide
 
     condition:
         any of them

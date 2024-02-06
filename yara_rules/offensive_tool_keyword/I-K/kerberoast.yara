@@ -43,7 +43,7 @@ rule kerberoast
         $string11 = /kerberoast\.py/ nocase ascii wide
         // Description: Kerberoast is a series of tools for attacking MS Kerberos implementations
         // Reference: https://github.com/nidem/kerberoast
-        $string12 = /kerberos::ptt\s.{0,1000}\.kirbi/ nocase ascii wide
+        $string12 = /kerberos\:\:ptt\s.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Kerberoast is a series of tools for attacking MS Kerberos implementations
         // Reference: https://github.com/nidem/kerberoast
         $string13 = /kirbi2john\.py/ nocase ascii wide

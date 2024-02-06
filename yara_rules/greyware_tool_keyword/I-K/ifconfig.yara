@@ -13,7 +13,7 @@ rule ifconfig
         $string1 = /ifconfig\s.{0,1000}\shw\sether\s/ nocase ascii wide
         // Description: changing mac address with ifconfig
         // Reference: N/A
-        $string2 = /ifconfig\s.{0,1000}\shw\sether\s.{0,1000}:.{0,1000}:/ nocase ascii wide
+        $string2 = /ifconfig\s.{0,1000}\shw\sether\s.{0,1000}\:.{0,1000}\:/ nocase ascii wide
 
     condition:
         any of them

@@ -22,7 +22,7 @@ rule Cobaltstrike
         $string4 = /0xEr3bus\/PoolPartyBof/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string5 = /Allocated\sshellcode\smemory\sin\sthe\starget\sprocess:\s/ nocase ascii wide
+        $string5 = /Allocated\sshellcode\smemory\sin\sthe\starget\sprocess\:\s/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
         $string6 = /PoolParty\sattack\scompleted\ssuccessfully/ nocase ascii wide
@@ -40,7 +40,7 @@ rule Cobaltstrike
         $string10 = /PoolPartyBof\-main/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string11 = /Starting\sPoolParty\sattack\sagainst\sprocess\sid:/ nocase ascii wide
+        $string11 = /Starting\sPoolParty\sattack\sagainst\sprocess\sid\:/ nocase ascii wide
 
     condition:
         any of them

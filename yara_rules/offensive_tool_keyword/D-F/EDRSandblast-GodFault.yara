@@ -49,7 +49,7 @@ rule EDRSandblast_GodFault
         $string13 = /and\sCredential\sGuard\swill\snot\sbe\sbypassed/ nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
-        $string14 = /C:\\temp\\tmp\.tmp/ nocase ascii wide
+        $string14 = /C\:\\temp\\tmp\.tmp/ nocase ascii wide
         // Description: Integrates GodFault into EDR Sandblast achieving the same result without the use of any vulnerable drivers.
         // Reference: https://github.com/gabriellandau/EDRSandblast-GodFault
         $string15 = /Credential\sGuard\sbypass\smight\sfail\sif\sRunAsPPL\sis\senabled/ nocase ascii wide

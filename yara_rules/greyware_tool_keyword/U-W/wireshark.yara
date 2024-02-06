@@ -34,7 +34,7 @@ rule wireshark
         $string8 = /\-\-no\-promiscuous\-mode/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string9 = /sharkd\s\-a\stcp:/ nocase ascii wide
+        $string9 = /sharkd\s\-a\stcp\:/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
         $string10 = /tshark\s.{0,1000}\-i\s/ nocase ascii wide

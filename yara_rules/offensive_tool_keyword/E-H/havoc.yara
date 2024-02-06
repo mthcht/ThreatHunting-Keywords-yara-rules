@@ -124,7 +124,7 @@ rule havoc
         $string38 = /40056\/service\-endpoint/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
-        $string39 = /5spider:password1234/ nocase ascii wide
+        $string39 = /5spider\:password1234/ nocase ascii wide
         // Description: Havoc is a modern and malleable post-exploitation command and control framework
         // Reference: https://github.com/HavocFramework/Havoc
         $string40 = /bin\/addusertogroup\.x64/ nocase ascii wide

@@ -13,7 +13,7 @@ rule OffensiveNotion
         $string1 = /\s\/create\s\/tn\sNotion\s\/tr\s\\.{0,1000}cmd\.exe.{0,1000}\s\-c\s.{0,1000}\\.{0,1000}\s\/sc\sonlogon\s\/ru\sSystem\\/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
-        $string2 = /\$FilterArgs\s\=\s\@{\sname\=\'Notion\'.{0,1000}EventNameSpace\=\'root\\\\CimV2\'.{0,1000}QueryLanguage\=.{0,1000}WQL.{0,1000}\sQuery\=.{0,1000}SELECT\s.{0,1000}\sFROM\s__InstanceModificationE/ nocase ascii wide
+        $string2 = /\$FilterArgs\s\=\s\@\{\sname\=\'Notion\'.{0,1000}EventNameSpace\=\'root\\\\CimV2\'.{0,1000}QueryLanguage\=.{0,1000}WQL.{0,1000}\sQuery\=.{0,1000}SELECT\s.{0,1000}\sFROM\s__InstanceModificationE/ nocase ascii wide
         // Description: Notion (yes the notetaking app) as a C2.
         // Reference: https://github.com/mttaggart/OffensiveNotion
         $string3 = /\/OffensiveNotion\.git/ nocase ascii wide

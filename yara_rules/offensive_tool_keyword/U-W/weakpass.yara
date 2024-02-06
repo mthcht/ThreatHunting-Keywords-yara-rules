@@ -46,7 +46,7 @@ rule weakpass
         $string12 = /github\.io\/weakpass\/generator\// nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
-        $string13 = /https:\/\/weakpass\.com\// nocase ascii wide
+        $string13 = /https\:\/\/weakpass\.com\// nocase ascii wide
         // Description: Weakpass collection of tools for bruteforce and hashcracking
         // Reference: https://github.com/zzzteph/weakpass
         $string14 = /js\-cracker\-client\/cracker\.js/ nocase ascii wide

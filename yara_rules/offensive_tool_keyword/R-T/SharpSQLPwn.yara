@@ -10,13 +10,13 @@ rule SharpSQLPwn
     strings:
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string1 = /\s\/cmdtech:.{0,1000}\s\/cmd:.{0,1000}\s\/impuser:/ nocase ascii wide
+        $string1 = /\s\/cmdtech\:.{0,1000}\s\/cmd\:.{0,1000}\s\/impuser\:/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string2 = /\s\/cmdtech:.{0,1000}\s\/cmd:.{0,1000}\s\/query:/ nocase ascii wide
+        $string2 = /\s\/cmdtech\:.{0,1000}\s\/cmd\:.{0,1000}\s\/query\:/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
-        $string3 = /\s\/modules:.{0,1000}\s\/target:.{0,1000}\s\/linkedsql:/ nocase ascii wide
+        $string3 = /\s\/modules\:.{0,1000}\s\/target\:.{0,1000}\s\/linkedsql\:/ nocase ascii wide
         // Description: C# tool to identify and exploit weaknesses within MSSQL instances in Active Directory environments
         // Reference: https://github.com/lefayjey/SharpSQLPwn
         $string4 = /SharpSQLPwn/ nocase ascii wide

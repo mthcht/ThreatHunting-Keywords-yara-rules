@@ -88,7 +88,7 @@ rule tacticalrmm
         $string26 = /amidaware\/tacticalrmm/ nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
-        $string27 = /https:\/\/.{0,1000}\.tacticalrmm\.com\// nocase ascii wide
+        $string27 = /https\:\/\/.{0,1000}\.tacticalrmm\.com\// nocase ascii wide
         // Description: A remote monitoring & management tool
         // Reference: https://github.com/amidaware/tacticalrmm
         $string28 = /net\sstop\stacticalrmm/ nocase ascii wide

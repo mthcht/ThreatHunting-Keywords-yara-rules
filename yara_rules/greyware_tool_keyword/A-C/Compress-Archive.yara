@@ -10,13 +10,13 @@ rule Compress_Archive
     strings:
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string1 = /:\\programdata\\cloud\.exe/ nocase ascii wide
+        $string1 = /\:\\programdata\\cloud\.exe/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string2 = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath\s\$env:TEMP/ nocase ascii wide
+        $string2 = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath\s\$env\:TEMP/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string3 = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}:\\Windows\\Temp\\/ nocase ascii wide
+        $string3 = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}\:\\Windows\\Temp\\/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string4 = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}\\AppData\\Local\\Temp\\\'/ nocase ascii wide

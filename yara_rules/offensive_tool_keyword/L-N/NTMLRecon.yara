@@ -37,7 +37,7 @@ rule NTMLRecon
         $string9 = /ntlmrecon\.csv/ nocase ascii wide
         // Description: Enumerate information from NTLM authentication enabled web endpoints
         // Reference: https://github.com/puzzlepeaches/NTLMRecon
-        $string10 = /ntlmrecon:main/ nocase ascii wide
+        $string10 = /ntlmrecon\:main/ nocase ascii wide
         // Description: A fast and flexible NTLM reconnaissance tool without external dependencies. Useful to find out information about NTLM endpoints when working with a large set of potential IP addresses and domains
         // Reference: https://github.com/pwnfoo/NTLMRecon
         $string11 = /ntlmrecon\-fromfile\.csv/ nocase ascii wide

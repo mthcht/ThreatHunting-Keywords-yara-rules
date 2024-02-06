@@ -94,16 +94,16 @@ rule chisel
         $string28 = /jpillora\/chisel/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string29 = /\-local\=0\.0\.0\.0:4001/ nocase ascii wide
+        $string29 = /\-local\=0\.0\.0\.0\:4001/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
         $string30 = /\-\-name\schisel\s\-p\s/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string31 = /\-remote\=127\.0\.0\.1:3000/ nocase ascii wide
+        $string31 = /\-remote\=127\.0\.0\.1\:3000/ nocase ascii wide
         // Description: A fast TCP/UDP tunnel over HTTP
         // Reference: https://github.com/jpillora/chisel
-        $string32 = /\-server\=http:\/\/127\.0\.0\.1:4002/ nocase ascii wide
+        $string32 = /\-server\=http\:\/\/127\.0\.0\.1\:4002/ nocase ascii wide
 
     condition:
         any of them

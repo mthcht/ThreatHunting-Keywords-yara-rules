@@ -73,13 +73,13 @@ rule crossc2
         $string21 = /gloxec\/CrossC2/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string22 = /http:\/\/127\.0\.0\.1\/CrossC2/ nocase ascii wide
+        $string22 = /http\:\/\/127\.0\.0\.1\/CrossC2/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string23 = /http:\/\/127\.0\.0\.1:443\/aaaaaaaaa/ nocase ascii wide
+        $string23 = /http\:\/\/127\.0\.0\.1\:443\/aaaaaaaaa/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string24 = /http:\/\/127\.0\.0\.1:443\/bbbbbbbbb/ nocase ascii wide
+        $string24 = /http\:\/\/127\.0\.0\.1\:443\/bbbbbbbbb/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
         $string25 = /mimipenguin\./ nocase ascii wide

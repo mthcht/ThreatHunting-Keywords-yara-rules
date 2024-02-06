@@ -37,7 +37,7 @@ rule SharpStay
         $string9 = /\saction\=SchTaskCOMHijack\sclsid\=/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string10 = /\saction\=UserRegistryKey\skeyname\=Debug\skeypath\=HKCU:/ nocase ascii wide
+        $string10 = /\saction\=UserRegistryKey\skeyname\=Debug\skeypath\=HKCU\:/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
         $string11 = /\saction\=WMIEventSub\scommand\=.{0,1000}\seventname\=/ nocase ascii wide

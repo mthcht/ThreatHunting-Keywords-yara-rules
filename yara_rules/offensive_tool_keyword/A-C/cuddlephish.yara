@@ -34,7 +34,7 @@ rule cuddlephish
         $string8 = /fkasler\/cuddlephish/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string9 = /http:\/\/localhost:58082\/broadcast\?id\=/ nocase ascii wide
+        $string9 = /http\:\/\/localhost\:58082\/broadcast\?id\=/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
         $string10 = /listen\(58082.{0,1000}\s\'0\.0\.0\.0\'/ nocase ascii wide
@@ -43,7 +43,7 @@ rule cuddlephish
         $string11 = /node\sstealer\.js\s/ nocase ascii wide
         // Description: Weaponized Browser-in-the-Middle (BitM) for Penetration Testers
         // Reference: https://github.com/fkasler/cuddlephish
-        $string12 = /ws:\/\/localhost:58082/ nocase ascii wide
+        $string12 = /ws\:\/\/localhost\:58082/ nocase ascii wide
 
     condition:
         any of them

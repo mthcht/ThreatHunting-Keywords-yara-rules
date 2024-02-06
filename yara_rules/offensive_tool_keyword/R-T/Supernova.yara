@@ -37,7 +37,7 @@ rule Supernova
         $string9 = /\/Supernova\.git/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
-        $string10 = /\[\+\]\sGenerated\sXOR\skey:\s/ nocase ascii wide
+        $string10 = /\[\+\]\sGenerated\sXOR\skey\:\s/ nocase ascii wide
         // Description: securely encrypt raw shellcodes
         // Reference: https://github.com/nickvourd/Supernova
         $string11 = /\[\+\]\sSave\sencrypted\sshellcode\sto\s/ nocase ascii wide

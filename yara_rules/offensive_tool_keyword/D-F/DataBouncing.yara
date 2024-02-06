@@ -19,7 +19,7 @@ rule DataBouncing
         $string3 = /\snightCrawler\.ps1/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
-        $string4 = /\swget\s\"https:\/\/.{0,1000}\/interactshbuild/ nocase ascii wide
+        $string4 = /\swget\s\"https\:\/\/.{0,1000}\/interactshbuild/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
         $string5 = /\/DataBouncing\.git/ nocase ascii wide
@@ -58,7 +58,7 @@ rule DataBouncing
         $string16 = /Find\-Secret\s\-FilePath\s\.\/logs\.txt\s\-Regex\s/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
-        $string17 = /https:\/\/unit259\.fyi\/db/ nocase ascii wide
+        $string17 = /https\:\/\/unit259\.fyi\/db/ nocase ascii wide
         // Description: Data Bouncing is a technique for transmitting data between two endpoints using DNS lookups and HTTP header manipulation
         // Reference: https://github.com/Unit-259/DataBouncing
         $string18 = /irm\sunit259\.fyi\/dbgui\s\|\siex/ nocase ascii wide

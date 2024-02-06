@@ -10,10 +10,10 @@ rule GoToMyPC
     strings:
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string1 = /\sDownloadServer\=https:\/\/www\.gotomypc\.com\s/ nocase ascii wide
+        $string1 = /\sDownloadServer\=https\:\/\/www\.gotomypc\.com\s/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string2 = /\sgotoopener:\/\/launch\.getgo\.com\// nocase ascii wide
+        $string2 = /\sgotoopener\:\/\/launch\.getgo\.com\// nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
         $string3 = /\sLoggingServer\=logging\.getgo\.com\sProxyHost\=/ nocase ascii wide
@@ -121,7 +121,7 @@ rule GoToMyPC
         $string37 = /\<Data\>Installed\sGoToMyPC\<\/Data\>/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
-        $string38 = /\=http:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
+        $string38 = /\=http\:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
         // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
         // Reference: https://www.gotomypc.com/
         $string39 = /api\-telemetry\.servers\.getgo\.com/ nocase ascii wide

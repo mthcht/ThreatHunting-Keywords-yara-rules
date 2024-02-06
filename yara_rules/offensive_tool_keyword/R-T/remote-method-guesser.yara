@@ -19,10 +19,10 @@ rule remote_method_guesser
         $string3 = /\/tmp\/wordlist\.txt/ nocase ascii wide
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
-        $string4 = /0\.0\.0\.0:4444/ nocase ascii wide
+        $string4 = /0\.0\.0\.0\:4444/ nocase ascii wide
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
-        $string5 = /0\.0\.0\.0:4445/ nocase ascii wide
+        $string5 = /0\.0\.0\.0\:4445/ nocase ascii wide
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
         $string6 = /docker\sbuild\s\-t\srmg\s\./ nocase ascii wide
@@ -61,7 +61,7 @@ rule remote_method_guesser
         $string17 = /rmg\sbind\s.{0,1000}\sjmxrmi\s\-\-bind\-objid\s/ nocase ascii wide
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
-        $string18 = /rmg\sbind\s.{0,1000}127\.0\.0\.1:.{0,1000}\-\-localhost\-bypass/ nocase ascii wide
+        $string18 = /rmg\sbind\s.{0,1000}127\.0\.0\.1\:.{0,1000}\-\-localhost\-bypass/ nocase ascii wide
         // Description: remote-method-guesser?(rmg) is a?Java RMI?vulnerability scanner and can be used to identify and verify common security vulnerabilities on?Java RMI?endpoints.
         // Reference: https://github.com/qtc-de/remote-method-guesser
         $string19 = /rmg\scall\s.{0,1000}\s\-\-plugin\sGenericPrint\.jar/ nocase ascii wide

@@ -10,7 +10,7 @@ rule ScheduleRunner
     strings:
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
-        $string1 = /\.exe\s\/method:create\s\/taskname:.{0,1000}\s\/trigger:.{0,1000}\s\/modifier:.{0,1000}\s\/program:.{0,1000}\s\/argument:.{0,1000}\.dll\s\/remoteserver:/ nocase ascii wide
+        $string1 = /\.exe\s\/method\:create\s\/taskname\:.{0,1000}\s\/trigger\:.{0,1000}\s\/modifier\:.{0,1000}\s\/program\:.{0,1000}\s\/argument\:.{0,1000}\.dll\s\/remoteserver\:/ nocase ascii wide
         // Description: A C# tool with more flexibility to customize scheduled task for both persistence and lateral movement in red team operation
         // Reference: https://github.com/netero1010/ScheduleRunner
         $string2 = /netero1010\/ScheduleRunner/ nocase ascii wide

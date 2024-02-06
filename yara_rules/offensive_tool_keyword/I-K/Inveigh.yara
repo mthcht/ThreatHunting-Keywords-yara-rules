@@ -22,7 +22,7 @@ rule Inveigh
         $string4 = /\s\-NBNSBruteForce/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
-        $string5 = /\s\-p:AssemblyName\=inveigh/ nocase ascii wide
+        $string5 = /\s\-p\:AssemblyName\=inveigh/ nocase ascii wide
         // Description: .NET IPv4/IPv6 machine-in-the-middle tool for penetration testers
         // Reference: https://github.com/Kevin-Robertson/Inveigh
         $string6 = /\.exe\s\-sniffer\sn/ nocase ascii wide

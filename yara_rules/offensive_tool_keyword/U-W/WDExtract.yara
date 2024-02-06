@@ -133,7 +133,7 @@ rule WDExtract
         $string41 = /Source\\wdextract\\zlib\\lib\\zlibwapi64\.lib/ nocase ascii wide
         // Description: Extract Windows Defender database from vdm files and unpack it
         // Reference: https://github.com/hfiref0x/WDExtract/
-        $string42 = /wdextract\s.{0,1000}:\\.{0,1000}\\.{0,1000}\.vdm/ nocase ascii wide
+        $string42 = /wdextract\s.{0,1000}\:\\.{0,1000}\\.{0,1000}\.vdm/ nocase ascii wide
         // Description: Extract Windows Defender database from vdm files and unpack it
         // Reference: https://github.com/hfiref0x/WDExtract/
         $string43 = /wdextract\s.{0,1000}\\mrt\.exe/ nocase ascii wide

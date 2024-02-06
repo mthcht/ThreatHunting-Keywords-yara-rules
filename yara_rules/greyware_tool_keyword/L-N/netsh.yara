@@ -16,7 +16,7 @@ rule netsh
         $string2 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: adding a executable in user appdata folder to the allowed programs
         // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
-        $string3 = /netsh\sfirewall\sadd\sallowedprogram\s\"C:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
+        $string3 = /netsh\sfirewall\sadd\sallowedprogram\s\"C\:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
         // Description: Disable Windows Firewall
         // Reference: N/A
         $string4 = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide

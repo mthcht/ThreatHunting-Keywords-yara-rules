@@ -19,7 +19,7 @@ rule EQGRP_tools
         $string3 = /127\.0\.0\.1\sis\snot\sadvisable\sas\sa\ssource\.\sUse\s\-l\s127\.0\.0\.1\sto\soverride\sthis\swarning/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string4 = /Attempting\sconnection\sfrom\s0\.0\.0\.0:/ nocase ascii wide
+        $string4 = /Attempting\sconnection\sfrom\s0\.0\.0\.0\:/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers anti forensic - cleans up audit.log
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/Auditcleaner
         $string5 = /Auditcleaner\./ nocase ascii wide
@@ -28,7 +28,7 @@ rule EQGRP_tools
         $string6 = /cat\s\>\s\/dev\/tcp\/127\.0\.0\.1.{0,1000}\<\<END/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file  Anti forensic: Manipulate utmp
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/doc/old/etc/user.tool.dubmoat.COMMON
-        $string7 = /chmod\s666\s\/var\/run\/utmp~/ nocase ascii wide
+        $string7 = /chmod\s666\s\/var\/run\/utmp\~/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers - EncTelnet/Poptop To use Nopen over an existing connection
         // Reference: https://github.com/thePevertedSpartan/EQ1/blob/0c2354ff1073099b2aa417030b3167ec29d7279c/Linux/doc/old/etc/user.tool.poptop.COMMON
         $string8 = /chmod\s700\snscd\scrond/ nocase ascii wide
@@ -76,7 +76,7 @@ rule EQGRP_tools
         $string22 = /iptables\s\-\%c\sOUTPUT\s\-p\stcp\s\-d\s127\.0\.0\.1\s\-\-tcp\-flags\sRST\sRST\s\-j\sDROP\s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- file noclient CNC server for NOPEN*
         // Reference: https://github.com/x0rz/EQGRP/blob/master/Linux/bin/noclient-3.3.2.3-linux-i386
-        $string23 = /noclient:\sfailed\sto\sexecute\s\%s:\s\%s/ nocase ascii wide
+        $string23 = /noclient\:\sfailed\sto\sexecute\s\%s\:\s\%s/ nocase ascii wide
         // Description: Equation Group hack tool leaked by ShadowBrokers- from files ftshell File transfer shell
         // Reference: https://github.com/Artogn/EQGRP-1/blob/master/Linux/bin/ftshell.v3.10.2.1
         $string24 = /ourtn\-ftshell\-upcommand/ nocase ascii wide

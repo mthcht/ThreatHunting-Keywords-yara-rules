@@ -49,7 +49,7 @@ rule linux_smart_enumeration
         $string13 = /find\s\/\s.{0,1000}\s\-regextype\segrep\s\-iregex.{0,1000}\\\.kdbx/ nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
-        $string14 = /https:\/\/.{0,1000}\/releases\/download\/.{0,1000}\/lse\.sh/ nocase ascii wide
+        $string14 = /https\:\/\/.{0,1000}\/releases\/download\/.{0,1000}\/lse\.sh/ nocase ascii wide
         // Description: Linux enumeration tool for privilege escalation and discovery
         // Reference: https://github.com/diego-treitos/linux-smart-enumeration
         $string15 = /linux\-smart\-enumeration\-master/ nocase ascii wide

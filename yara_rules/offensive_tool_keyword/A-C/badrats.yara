@@ -19,7 +19,7 @@ rule badrats
         $string3 = /\sbadrat_server\.py/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
-        $string4 = /\s\-o:badrat\.xll\s/ nocase ascii wide
+        $string4 = /\s\-o\:badrat\.xll\s/ nocase ascii wide
         // Description: control tool (C2) using Python server - Jscript - Powershell and C# implants and communicates via HTTP(S) and SMB
         // Reference: https://gitlab.com/KevinJClark/badrats
         $string5 = /\/badrat\.ps1/ nocase ascii wide

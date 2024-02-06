@@ -43,7 +43,7 @@ rule ligolo_ng
         $string11 = /nicocha30\/ligolo\-ng/ nocase ascii wide
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
-        $string12 = /Password:\ssocksPass/ nocase ascii wide
+        $string12 = /Password\:\ssocksPass/ nocase ascii wide
         // Description: An advanced tunneling tool that uses TUN interfaces
         // Reference: https://github.com/nicocha30/ligolo-ng
         $string13 = /windows\sgo\sbuild\s\-o\sproxy\.exe\scmd\/proxy\/main\.go/ nocase ascii wide

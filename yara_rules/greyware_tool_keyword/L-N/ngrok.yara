@@ -22,7 +22,7 @@ rule ngrok
         $string4 = /ngrok\stcp\s/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string5 = /tcp:\/\/0\.tcp\.ngrok\.io:/ nocase ascii wide
+        $string5 = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
 
     condition:
         any of them

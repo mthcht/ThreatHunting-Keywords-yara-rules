@@ -43,7 +43,7 @@ rule cheetah
         $string11 = /git\sclone\s.{0,1000}\s\/tmp\/cheetah/ nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
-        $string12 = /http:\/\/localhost\/shell\.jsp\?pwd\=System\.out\.println\(/ nocase ascii wide
+        $string12 = /http\:\/\/localhost\/shell\.jsp\?pwd\=System\.out\.println\(/ nocase ascii wide
         // Description: a very fast brute force webshell password tool
         // Reference: https://github.com/shmilylty/cheetah
         $string13 = /run\s\-\-rm\s\-it\sxshuden\/cheetah/ nocase ascii wide

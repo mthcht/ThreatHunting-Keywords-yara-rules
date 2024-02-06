@@ -22,7 +22,7 @@ rule holehe
         $string4 = /holehe\s.{0,1000}\@gmail\.com/ nocase ascii wide
         // Description: holehe allows you to check if the mail is used on different sites like twitter instagram and will retrieve information on sites with the forgotten password function.
         // Reference: https://github.com/megadose/holehe
-        $string5 = /holehe\.core:main/ nocase ascii wide
+        $string5 = /holehe\.core\:main/ nocase ascii wide
         // Description: holehe allows you to check if the mail is used on different sites like twitter instagram and will retrieve information on sites with the forgotten password function.
         // Reference: https://github.com/megadose/holehe
         $string6 = /holehe\\holehe/ nocase ascii wide

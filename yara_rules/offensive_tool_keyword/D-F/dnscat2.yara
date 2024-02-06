@@ -19,10 +19,10 @@ rule dnscat2
         $string3 = /\/dnscat2\.git/ nocase ascii wide
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
-        $string4 = /0\.0\.0\.0:53531/ nocase ascii wide
+        $string4 = /0\.0\.0\.0\:53531/ nocase ascii wide
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
-        $string5 = /127\.0\.0\.1:53531/ nocase ascii wide
+        $string5 = /127\.0\.0\.1\:53531/ nocase ascii wide
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
         $string6 = /data\/wordlist_256\.txt/ nocase ascii wide
@@ -55,7 +55,7 @@ rule dnscat2
         $string15 = /dnsmastermind\.rb/ nocase ascii wide
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
-        $string16 = /localhost:53531/ nocase ascii wide
+        $string16 = /localhost\:53531/ nocase ascii wide
         // Description: This tool is designed to create an encrypted command-and-control (C&C) channel over the DNS protocol
         // Reference: https://github.com/iagox86/dnscat2
         $string17 = /server\=.{0,1000}port\=53531/ nocase ascii wide

@@ -46,7 +46,7 @@ rule wmiexec_pro
         $string12 = /\/wmiexec\-Pro/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
-        $string13 = /C:\\aab\.txt/ nocase ascii wide
+        $string13 = /C\:\\aab\.txt/ nocase ascii wide
         // Description: The new generation of wmiexec.py with new features whole the operations only work with port 135 (don't need smb connection) for AV evasion in lateral movement
         // Reference: https://github.com/XiaoliChan/wmiexec-Pro
         $string14 = /ClearEventlog\.vbs/ nocase ascii wide

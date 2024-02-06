@@ -10,7 +10,7 @@ rule nirsoft
     strings:
         // Description: designed to capture webcam images
         // Reference: https://medium.com/checkmarx-security/python-obfuscation-traps-1acced941375
-        $string1 = /https:\/\/www\.nirsoft\.net\/utils\/webcamimagesave\.zip/ nocase ascii wide
+        $string1 = /https\:\/\/www\.nirsoft\.net\/utils\/webcamimagesave\.zip/ nocase ascii wide
 
     condition:
         any of them

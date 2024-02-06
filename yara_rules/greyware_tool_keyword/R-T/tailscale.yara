@@ -46,7 +46,7 @@ rule tailscale
         $string12 = /\/tailscale\/clientupdate\/.{0,1000}\.go/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string13 = /\/tailscale:unstable/ nocase ascii wide
+        $string13 = /\/tailscale\:unstable/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
         $string14 = /\/tailscale_.{0,1000}_.{0,1000}\.deb/ nocase ascii wide
@@ -130,22 +130,22 @@ rule tailscale
         $string40 = /github\.com\/tailscale/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string41 = /http:\/\/127\.0\.0\.1:4000/ nocase ascii wide
+        $string41 = /http\:\/\/127\.0\.0\.1\:4000/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string42 = /http:\/\/local\-tailscaled\.sock/ nocase ascii wide
+        $string42 = /http\:\/\/local\-tailscaled\.sock/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string43 = /https:\/\/api\.tailscale\.com\/api\/v2\// nocase ascii wide
+        $string43 = /https\:\/\/api\.tailscale\.com\/api\/v2\// nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string44 = /https:\/\/apps\.apple\.com\/us\/app\/tailscale\/id/ nocase ascii wide
+        $string44 = /https\:\/\/apps\.apple\.com\/us\/app\/tailscale\/id/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string45 = /https:\/\/login\.tailscale\.com\/admin\/settings\/keys/ nocase ascii wide
+        $string45 = /https\:\/\/login\.tailscale\.com\/admin\/settings\/keys/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string46 = /https:\/\/tailscale\.com\/s\/resolvconf\-overwrite/ nocase ascii wide
+        $string46 = /https\:\/\/tailscale\.com\/s\/resolvconf\-overwrite/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
         $string47 = /install\s\-y\stailscale/ nocase ascii wide
@@ -181,7 +181,7 @@ rule tailscale
         $string57 = /service\stailscaled\s/ nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
-        $string58 = /Serving\sTailscale\sweb\sclient\son\shttp:\/\// nocase ascii wide
+        $string58 = /Serving\sTailscale\sweb\sclient\son\shttp\:\/\// nocase ascii wide
         // Description: Tailscale connects your team's devices and development environments for easy access to remote resources.
         // Reference: https://github.com/tailscale/tailscale
         $string59 = /Starting\stailscaled/ nocase ascii wide

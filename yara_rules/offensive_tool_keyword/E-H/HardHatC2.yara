@@ -43,43 +43,43 @@ rule HardHatC2
         $string11 = /HardHatC2Client/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string12 = /http.{0,1000}127\.0\.0\.1:21802/ nocase ascii wide
+        $string12 = /http.{0,1000}127\.0\.0\.1\:21802/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string13 = /http.{0,1000}127\.0\.0\.1:5000/ nocase ascii wide
+        $string13 = /http.{0,1000}127\.0\.0\.1\:5000/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string14 = /http.{0,1000}127\.0\.0\.1:5096/ nocase ascii wide
+        $string14 = /http.{0,1000}127\.0\.0\.1\:5096/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string15 = /http.{0,1000}127\.0\.0\.1:7096/ nocase ascii wide
+        $string15 = /http.{0,1000}127\.0\.0\.1\:7096/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string16 = /http.{0,1000}127\.0\.0\.1:8080\/.{0,1000}\.dll/ nocase ascii wide
+        $string16 = /http.{0,1000}127\.0\.0\.1\:8080\/.{0,1000}\.dll/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string17 = /http.{0,1000}127\.0\.0\.1:8080\/.{0,1000}\.exe/ nocase ascii wide
+        $string17 = /http.{0,1000}127\.0\.0\.1\:8080\/.{0,1000}\.exe/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string18 = /http.{0,1000}127\.0\.0\.1:8080\/.{0,1000}\.ps1/ nocase ascii wide
+        $string18 = /http.{0,1000}127\.0\.0\.1\:8080\/.{0,1000}\.ps1/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string19 = /http.{0,1000}127\.0\.0\.1:9631/ nocase ascii wide
+        $string19 = /http.{0,1000}127\.0\.0\.1\:9631/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string20 = /http.{0,1000}localhost:21802/ nocase ascii wide
+        $string20 = /http.{0,1000}localhost\:21802/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string21 = /http.{0,1000}localhost:5000/ nocase ascii wide
+        $string21 = /http.{0,1000}localhost\:5000/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string22 = /http.{0,1000}localhost:5096/ nocase ascii wide
+        $string22 = /http.{0,1000}localhost\:5096/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string23 = /http.{0,1000}localhost:7096/ nocase ascii wide
+        $string23 = /http.{0,1000}localhost\:7096/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
-        $string24 = /http.{0,1000}localhost:9631/ nocase ascii wide
+        $string24 = /http.{0,1000}localhost\:9631/ nocase ascii wide
         // Description: A C# Command & Control framework
         // Reference: https://github.com/DragoQCC/HardHatC2
         $string25 = /inlineAssembly.{0,1000}\/execmethod/ nocase ascii wide

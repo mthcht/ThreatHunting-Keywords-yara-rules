@@ -10,7 +10,7 @@ rule Payload_Download_Cradles
     strings:
         // Description: This are different types of download cradles which should be an inspiration to play and create new download cradles to bypass AV/EPP/EDR in context of download cradle detections.
         // Reference: https://github.com/VirtualAlllocEx/Payload-Download-Cradles
-        $string1 = /Download:Cradle\.js/ nocase ascii wide
+        $string1 = /Download\:Cradle\.js/ nocase ascii wide
         // Description: This are different types of download cradles which should be an inspiration to play and create new download cradles to bypass AV/EPP/EDR in context of download cradle detections.
         // Reference: https://github.com/VirtualAlllocEx/Payload-Download-Cradles
         $string2 = /Download_Cradles\./ nocase ascii wide

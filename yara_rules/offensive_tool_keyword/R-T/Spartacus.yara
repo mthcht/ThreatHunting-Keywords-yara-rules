@@ -10,13 +10,13 @@ rule Spartacus
     strings:
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string1 = /\s\-\-action\sexports\s\-\-dll\sC:\\Windows\\System32\\amsi\.dll/ nocase ascii wide
+        $string1 = /\s\-\-action\sexports\s\-\-dll\sC\:\\Windows\\System32\\amsi\.dll/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
         $string2 = /\s\-\-dll\s.{0,1000}\s\-\-only\s.{0,1000}AmsiScanBuffer.{0,1000}AmsiScanString/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
-        $string3 = /\s\-\-dll\sC:\\Windows\\System32\\version\.dll.{0,1000}\-\-dll\sC:\\Windows\\System32\\userenv\.dll/ nocase ascii wide
+        $string3 = /\s\-\-dll\sC\:\\Windows\\System32\\version\.dll.{0,1000}\-\-dll\sC\:\\Windows\\System32\\userenv\.dll/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://github.com/Accenture/Spartacus
         $string4 = /\s\-\-mode\sproxy\s\-\-ghidra\s.{0,1000}\-\-dll\s/ nocase ascii wide

@@ -46,7 +46,7 @@ rule blackcat_ransomware
         $string12 = /\.exe\s\-\-ui\s/ nocase ascii wide
         // Description: BlackCat Ransomware behavior
         // Reference: https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
-        $string13 = /bcdedit\.exe\s\/set\s{default}\srecoveryenabled\sNo/ nocase ascii wide
+        $string13 = /bcdedit\.exe\s\/set\s\{default\}\srecoveryenabled\sNo/ nocase ascii wide
         // Description: BlackCat Ransomware behavior
         // Reference: https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
         $string14 = /iisreset\.exe\s\/stop/ nocase ascii wide

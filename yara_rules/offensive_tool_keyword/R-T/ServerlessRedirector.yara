@@ -16,7 +16,7 @@ rule ServerlessRedirector
         $string2 = /C2FunctionAgent/ nocase ascii wide
         // Description: Serverless Redirector in various cloud vendor for red team
         // Reference: https://github.com/KINGSABRI/ServerlessRedirector
-        $string3 = /https:\/\/C2_SERVER_IP\// nocase ascii wide
+        $string3 = /https\:\/\/C2_SERVER_IP\// nocase ascii wide
         // Description: Serverless Redirector in various cloud vendor for red team
         // Reference: https://github.com/KINGSABRI/ServerlessRedirector
         $string4 = /KINGSABRI\/ServerlessRedirector/ nocase ascii wide

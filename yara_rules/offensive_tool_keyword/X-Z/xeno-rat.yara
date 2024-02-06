@@ -106,7 +106,7 @@ rule xeno_rat
         $string32 = /F61EEB46\-5352\-4349\-B880\-E4A0B38EC0DB/ nocase ascii wide
         // Description: Xeno-RAT is an open-source remote access tool (RAT) developed in C# providing a comprehensive set of features for remote system management. Has features such as HVNC - live microphone - reverse proxy and much much more
         // Reference: https://github.com/moom825/xeno-rat
-        $string33 = /https:\/\/t\.me\/moom825/ nocase ascii wide
+        $string33 = /https\:\/\/t\.me\/moom825/ nocase ascii wide
         // Description: Xeno-RAT is an open-source remote access tool (RAT) developed in C# providing a comprehensive set of features for remote system management. Has features such as HVNC - live microphone - reverse proxy and much much more
         // Reference: https://github.com/moom825/xeno-rat
         $string34 = /KeyLogger\.dll/ nocase ascii wide
@@ -124,13 +124,13 @@ rule xeno_rat
         $string38 = /plugins\\ScreenControl\.dll/ nocase ascii wide
         // Description: Xeno-RAT is an open-source remote access tool (RAT) developed in C# providing a comprehensive set of features for remote system management. Has features such as HVNC - live microphone - reverse proxy and much much more
         // Reference: https://github.com/moom825/xeno-rat
-        $string39 = /Ransom:Win32\/Sodinokibi/ nocase ascii wide
+        $string39 = /Ransom\:Win32\/Sodinokibi/ nocase ascii wide
         // Description: Xeno-RAT is an open-source remote access tool (RAT) developed in C# providing a comprehensive set of features for remote system management. Has features such as HVNC - live microphone - reverse proxy and much much more
         // Reference: https://github.com/moom825/xeno-rat
         $string40 = /Uacbypass\.dll/ nocase ascii wide
         // Description: Xeno-RAT is an open-source remote access tool (RAT) developed in C# providing a comprehensive set of features for remote system management. Has features such as HVNC - live microphone - reverse proxy and much much more
         // Reference: https://github.com/moom825/xeno-rat
-        $string41 = /\-\-user\-data\-dir\=C:\\\\chrome\-dev\-profile23\s\-\-remote\-debugging\-port\=9222/ nocase ascii wide
+        $string41 = /\-\-user\-data\-dir\=C\:\\\\chrome\-dev\-profile23\s\-\-remote\-debugging\-port\=9222/ nocase ascii wide
         // Description: Xeno-RAT is an open-source remote access tool (RAT) developed in C# providing a comprehensive set of features for remote system management. Has features such as HVNC - live microphone - reverse proxy and much much more
         // Reference: https://github.com/moom825/xeno-rat
         $string42 = /xeno\srat\sclient\.exe/ nocase ascii wide

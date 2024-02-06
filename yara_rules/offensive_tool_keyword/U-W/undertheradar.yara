@@ -25,13 +25,13 @@ rule undertheradar
         $string5 = /\\users\\public\\system\.save/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string6 = /c:\/users\/public\/creds\.log/ nocase ascii wide
+        $string6 = /c\:\/users\/public\/creds\.log/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string7 = /c:\\users\\public\\creds\.log/ nocase ascii wide
+        $string7 = /c\:\\users\\public\\creds\.log/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
-        $string8 = /c:\\users\\public\\output\.txt/ nocase ascii wide
+        $string8 = /c\:\\users\\public\\output\.txt/ nocase ascii wide
         // Description: scripts that afford the pentester AV bypass techniques
         // Reference: https://github.com/g3tsyst3m/undertheradar
         $string9 = /g3tsyst3m\/undertheradar/ nocase ascii wide

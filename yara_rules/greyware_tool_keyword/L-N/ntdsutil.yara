@@ -16,7 +16,7 @@ rule ntdsutil
         $string2 = /ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}create\sfull.{0,1000}\\temp/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
-        $string3 = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}c:\\ProgramData/ nocase ascii wide
+        $string3 = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}c\:\\ProgramData/ nocase ascii wide
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
         $string4 = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}\s.{0,1000}ifm.{0,1000}\s.{0,1000}create\sfull\s.{0,1000}users\\public/ nocase ascii wide

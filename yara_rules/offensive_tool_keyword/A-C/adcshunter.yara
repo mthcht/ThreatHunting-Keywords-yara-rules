@@ -28,7 +28,7 @@ rule adcshunter
         $string6 = /rpcdump\.py/ nocase ascii wide
         // Description: Uses rpcdump to locate the ADCS server and identify if ESC8 is vulnerable from unauthenticated perspective.
         // Reference: https://github.com/danti1988/adcshunter
-        $string7 = /Vulnerable\sWeb\sEnrollment\sendpoint\sidentified:\shttp:\/\/.{0,1000}\/certsrv\/certsnsh\.asp/ nocase ascii wide
+        $string7 = /Vulnerable\sWeb\sEnrollment\sendpoint\sidentified\:\shttp\:\/\/.{0,1000}\/certsrv\/certsnsh\.asp/ nocase ascii wide
 
     condition:
         any of them

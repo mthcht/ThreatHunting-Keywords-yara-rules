@@ -10,7 +10,7 @@ rule rsockstun
     strings:
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
-        $string1 = /\s\-listen\s:.{0,1000}\s\-socks\s.{0,1000}\s\-cert\s.{0,1000}\s\-agentpassword\s/ nocase ascii wide
+        $string1 = /\s\-listen\s\:.{0,1000}\s\-socks\s.{0,1000}\s\-cert\s.{0,1000}\s\-agentpassword\s/ nocase ascii wide
         // Description: reverse socks tunneler with ntlm and proxy support
         // Reference: https://github.com/llkat/rsockstun
         $string2 = /\.\/rsockstun/ nocase ascii wide

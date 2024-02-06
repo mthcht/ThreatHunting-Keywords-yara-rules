@@ -43,10 +43,10 @@ rule Sitadel
         $string11 = /python3\ssitadel/ nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string12 = /sitadel\shttp:\/\// nocase ascii wide
+        $string12 = /sitadel\shttp\:\/\// nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
-        $string13 = /sitadel\shttps:\/\// nocase ascii wide
+        $string13 = /sitadel\shttps\:\/\// nocase ascii wide
         // Description: Web Application Security Scanner
         // Reference: https://github.com/shenril/Sitadel
         $string14 = /sitadel\.py\s/ nocase ascii wide

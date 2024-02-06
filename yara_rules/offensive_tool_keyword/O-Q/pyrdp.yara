@@ -16,7 +16,7 @@ rule pyrdp
         $string2 = /\/pyrdp\.git/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
-        $string3 = /\/pyrdp:latest/ nocase ascii wide
+        $string3 = /\/pyrdp\:latest/ nocase ascii wide
         // Description: RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
         // Reference: https://github.com/GoSecure/pyrdp
         $string4 = /gosecure\/pyrdp/ nocase ascii wide

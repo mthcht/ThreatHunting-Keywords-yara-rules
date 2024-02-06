@@ -19,16 +19,16 @@ rule RedPersist
         $string3 = /\.exe\s\-\-schedule\s.{0,1000}\s.{0,1000}\.exe/ nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string4 = /\.exe\s\-\-screensaver\s.{0,1000}:\\.{0,1000}\.exe/ nocase ascii wide
+        $string4 = /\.exe\s\-\-screensaver\s.{0,1000}\:\\.{0,1000}\.exe/ nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string5 = /\.exe\s\-\-startup\s.{0,1000}:\\.{0,1000}\.exe/ nocase ascii wide
+        $string5 = /\.exe\s\-\-startup\s.{0,1000}\:\\.{0,1000}\.exe/ nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string6 = /\.exe\s\-\-winlogon\s.{0,1000}\s.{0,1000}:\\.{0,1000}\.exe/ nocase ascii wide
+        $string6 = /\.exe\s\-\-winlogon\s.{0,1000}\s.{0,1000}\:\\.{0,1000}\.exe/ nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
-        $string7 = /\.exe\s\-\-wmi\s.{0,1000}:\\.{0,1000}\.exe/ nocase ascii wide
+        $string7 = /\.exe\s\-\-wmi\s.{0,1000}\:\\.{0,1000}\.exe/ nocase ascii wide
         // Description: RedPersist is a Windows Persistence tool written in C#
         // Reference: https://github.com/mertdas/RedPersist
         $string8 = /\/RedPersist\.exe/ nocase ascii wide

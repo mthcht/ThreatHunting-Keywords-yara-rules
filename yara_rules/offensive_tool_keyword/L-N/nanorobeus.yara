@@ -10,10 +10,10 @@ rule nanorobeus
     strings:
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string1 = /\skerberoast\s\/spn:/ nocase ascii wide
+        $string1 = /\skerberoast\s\/spn\:/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
-        $string2 = /\stgtdeleg\s\/spn:cifs/ nocase ascii wide
+        $string2 = /\stgtdeleg\s\/spn\:cifs/ nocase ascii wide
         // Description: COFF file (BOF) for managing Kerberos tickets.
         // Reference: https://github.com/wavvs/nanorobeus
         $string3 = /\/kerberoast\.c/ nocase ascii wide

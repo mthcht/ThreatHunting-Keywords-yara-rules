@@ -34,7 +34,7 @@ rule C2_Server
         $string8 = /\\Chrome_pass\.db/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string9 = /192\.168\.0\.110:1234/ nocase ascii wide
+        $string9 = /192\.168\.0\.110\:1234/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
         $string10 = /C\&C\s\=\>\s/ nocase ascii wide
@@ -46,7 +46,7 @@ rule C2_Server
         $string12 = /chrome_creds\.txt/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string13 = /Invoke\-WebRequest\shttps:\/\/tinyurl\.com\// nocase ascii wide
+        $string13 = /Invoke\-WebRequest\shttps\:\/\/tinyurl\.com\// nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
         $string14 = /keylog_dump/ nocase ascii wide

@@ -10,16 +10,16 @@ rule softperfect_networkscanner
     strings:
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string1 = /\s\/config:netscan\.xml\s/ nocase ascii wide
+        $string1 = /\s\/config\:netscan\.xml\s/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string2 = /\snetscan\.exe\s/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string3 = /\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range:.{0,1000}\s\/auto:.{0,1000}\./ nocase ascii wide
+        $string3 = /\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range\:.{0,1000}\s\/auto\:.{0,1000}\./ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string4 = /\.exe\s\/hide\s\/range:all/ nocase ascii wide
+        $string4 = /\.exe\s\/hide\s\/range\:all/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string5 = /\.exe\s\/wakeall/ nocase ascii wide

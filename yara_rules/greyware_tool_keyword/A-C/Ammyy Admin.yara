@@ -43,7 +43,7 @@ rule Ammyy_Admin
         $string11 = /Ammyy\sLLC/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string12 = /PUA:Win32\/AmmyyAdmin/ nocase ascii wide
+        $string12 = /PUA\:Win32\/AmmyyAdmin/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
         $string13 = /rl\.ammyy\.com\// nocase ascii wide

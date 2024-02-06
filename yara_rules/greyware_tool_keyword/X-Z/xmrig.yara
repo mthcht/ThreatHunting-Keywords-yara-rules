@@ -64,7 +64,7 @@ rule xmrig
         $string18 = /dd7fef5e3594eb18dd676e550e128d4b64cc5a469ff6954a677dc414265db468/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string19 = /donate\.v2\.xmrig\.com:3333/ nocase ascii wide
+        $string19 = /donate\.v2\.xmrig\.com\:3333/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
         $string20 = /e1ff2208b3786cac801ffb470b9475fbb3ced74eb503bfde7aa7f22af113989d/ nocase ascii wide
@@ -121,7 +121,7 @@ rule xmrig
         $string37 = /xmrig\.exe\s\-/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string38 = /xmrpool\.eu:3333/ nocase ascii wide
+        $string38 = /xmrpool\.eu\:3333/ nocase ascii wide
 
     condition:
         any of them

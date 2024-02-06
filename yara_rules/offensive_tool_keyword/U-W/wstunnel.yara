@@ -13,67 +13,67 @@ rule wstunnel
         $string1 = /\sclient\s\-\-http\-upgrade\-path\-prefix\s.{0,1000}wss/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string2 = /\sclient\s\-L\ssocks5:\/\// nocase ascii wide
+        $string2 = /\sclient\s\-L\ssocks5\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string3 = /\sclient\s\-L\sstdio:\/\/.{0,1000}\sws:\// nocase ascii wide
+        $string3 = /\sclient\s\-L\sstdio\:\/\/.{0,1000}\sws\:\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string4 = /\sclient\s\-L\stcp:\/\/.{0,1000}\swss:\/\// nocase ascii wide
+        $string4 = /\sclient\s\-L\stcp\:\/\/.{0,1000}\swss\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string5 = /\sclient\s\-L\s\'tproxy\+tcp:\/\/.{0,1000}\s\-L\s\'tproxy\+udp:\/\// nocase ascii wide
+        $string5 = /\sclient\s\-L\s\'tproxy\+tcp\:\/\/.{0,1000}\s\-L\s\'tproxy\+udp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string6 = /\sclient\s\-L\s\'udp:\/\/.{0,1000}\swss:\/\// nocase ascii wide
+        $string6 = /\sclient\s\-L\s\'udp\:\/\/.{0,1000}\swss\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string7 = /\sclient\s\-R\s\'tcp:\/\/\[::\]:/ nocase ascii wide
+        $string7 = /\sclient\s\-R\s\'tcp\:\/\/\[\:\:\]\:/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string8 = /\s\-\-connection\-min\-idle\s.{0,1000}\sws:\/\// nocase ascii wide
+        $string8 = /\s\-\-connection\-min\-idle\s.{0,1000}\sws\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string9 = /\s\-\-local\-to\-remote\ssocks5:\/\// nocase ascii wide
+        $string9 = /\s\-\-local\-to\-remote\ssocks5\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string10 = /\s\-\-local\-to\-remote\sstdio:\/\// nocase ascii wide
+        $string10 = /\s\-\-local\-to\-remote\sstdio\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string11 = /\s\-\-local\-to\-remote\stcp:\/\// nocase ascii wide
+        $string11 = /\s\-\-local\-to\-remote\stcp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string12 = /\s\-\-local\-to\-remote\stproxy\+tcp:\/\// nocase ascii wide
+        $string12 = /\s\-\-local\-to\-remote\stproxy\+tcp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string13 = /\s\-\-local\-to\-remote\stproxy\+udp:\/\// nocase ascii wide
+        $string13 = /\s\-\-local\-to\-remote\stproxy\+udp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string14 = /\s\-\-local\-to\-remote\sudp:\/\// nocase ascii wide
+        $string14 = /\s\-\-local\-to\-remote\sudp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string15 = /\s\-\-remote\-to\-local\ssocks:\/\// nocase ascii wide
+        $string15 = /\s\-\-remote\-to\-local\ssocks\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string16 = /\s\-\-remote\-to\-local\stcp:\/\// nocase ascii wide
+        $string16 = /\s\-\-remote\-to\-local\stcp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string17 = /\s\-\-remote\-to\-local\sudp:\/\// nocase ascii wide
+        $string17 = /\s\-\-remote\-to\-local\sudp\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string18 = /\s\-\-restrict\-to\slocalhost:.{0,1000}\swss:\/\// nocase ascii wide
+        $string18 = /\s\-\-restrict\-to\slocalhost\:.{0,1000}\swss\:\/\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string19 = /\sserver\s\-\-restrict\-http\-upgrade\-path\-prefix\s.{0,1000}wss/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string20 = /\sserver\swss:\/\/\[::\]:/ nocase ascii wide
+        $string20 = /\sserver\swss\:\/\/\[\:\:\]\:/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string21 = /\sws:\/\/\[::\]:/ nocase ascii wide
+        $string21 = /\sws\:\/\/\[\:\:\]\:/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string22 = /\swss:\/\/0\.0\.0\.0:/ nocase ascii wide
+        $string22 = /\swss\:\/\/0\.0\.0\.0\:/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string23 = /\swstunnel\.exe/ nocase ascii wide
@@ -94,10 +94,10 @@ rule wstunnel
         $string28 = /\/wstunnel\/certs\// nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string29 = /\/wstunnel:latest/ nocase ascii wide
+        $string29 = /\/wstunnel\:latest/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string30 = /:\/\/wstunnel\.server\.com/ nocase ascii wide
+        $string30 = /\:\/\/wstunnel\.server\.com/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string31 = /\\wstunnel\.exe/ nocase ascii wide
@@ -121,10 +121,10 @@ rule wstunnel
         $string37 = /9ad6daccfd1d3d349a93950f599eed59280268431d76bad7fc624d4cd4c565a5/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string38 = /Cannot\sstart\swstunnel\sserver:/ nocase ascii wide
+        $string38 = /Cannot\sstart\swstunnel\sserver\:/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string39 = /curl\s\-x\ssocks5h:\/\/127\.0\.0\.1:/ nocase ascii wide
+        $string39 = /curl\s\-x\ssocks5h\:\/\/127\.0\.0\.1\:/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string40 = /erebe\/wstunnel/ nocase ascii wide
@@ -151,7 +151,7 @@ rule wstunnel
         $string47 = /wstunnel\sserver\s/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
-        $string48 = /wstunnel.{0,1000}\s\-\-restrict\-to\s127\.0\.0\.1:22/ nocase ascii wide
+        $string48 = /wstunnel.{0,1000}\s\-\-restrict\-to\s127\.0\.0\.1\:22/ nocase ascii wide
         // Description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - Static binary available
         // Reference: https://github.com/erebe/wstunnel
         $string49 = /wstunnel.{0,1000}cert\.pem/ nocase ascii wide

@@ -16,10 +16,10 @@ rule PowershellTools
         $string2 = /\sQuickViewAD\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string3 = /\.exe\sasktgs\s\/ticket:B64_TGT\s\/service:/ nocase ascii wide
+        $string3 = /\.exe\sasktgs\s\/ticket\:B64_TGT\s\/service\:/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string4 = /\.exe\ssilver\s\/sids:.{0,1000}\/target:/ nocase ascii wide
+        $string4 = /\.exe\ssilver\s\/sids\:.{0,1000}\/target\:/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string5 = /\/PowershellTools\.git/ nocase ascii wide
@@ -37,7 +37,7 @@ rule PowershellTools
         $string9 = /\\QuickViewAD\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string10 = /C:\\Temp\\.{0,1000}\-.{0,1000}\.kirbi/ nocase ascii wide
+        $string10 = /C\:\\Temp\\.{0,1000}\-.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string11 = /Find\-ADInterestingACL\s/ nocase ascii wide
@@ -67,7 +67,7 @@ rule PowershellTools
         $string19 = /Invoke\-AccessCheck\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string20 = /kerberos::golden\s\/service:/ nocase ascii wide
+        $string20 = /kerberos\:\:golden\s\/service\:/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
         $string21 = /PowershellTools\-main\.zip/ nocase ascii wide
@@ -79,7 +79,7 @@ rule PowershellTools
         $string23 = /Set\-MacroSecurityOff\.ps1/ nocase ascii wide
         // Description: Powershell tools used for Red Team / Pentesting
         // Reference: https://github.com/gustanini/PowershellTools
-        $string24 = /tgs::ask\s\/tgt:/ nocase ascii wide
+        $string24 = /tgs\:\:ask\s\/tgt\:/ nocase ascii wide
 
     condition:
         any of them

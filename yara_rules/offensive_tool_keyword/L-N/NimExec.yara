@@ -16,7 +16,7 @@ rule NimExec
         $string2 = /123abcbde966780cef8d9ec24523acac/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
-        $string3 = /cmd\.exe\s\/c\s.{0,1000}echo\stest\s\>\sC:\\Users\\Public\\test\.txt/ nocase ascii wide
+        $string3 = /cmd\.exe\s\/c\s.{0,1000}echo\stest\s\>\sC\:\\Users\\Public\\test\.txt/ nocase ascii wide
         // Description: Fileless Command Execution for Lateral Movement in Nim
         // Reference: https://github.com/frkngksl/NimExec
         $string4 = /frkngksl\/NimExec/ nocase ascii wide

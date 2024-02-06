@@ -34,7 +34,7 @@ rule LOLSpoof
         $string8 = /An\sinteractive\sshell\sto\sspoof\ssome\sLOLBins/ nocase ascii wide
         // Description: An interactive shell to spoof some LOLBins command line
         // Reference: https://github.com/itaymigdal/LOLSpoof
-        $string9 = /Could\snot\sspoof\sbinary:\s/ nocase ascii wide
+        $string9 = /Could\snot\sspoof\sbinary\:\s/ nocase ascii wide
         // Description: An interactive shell to spoof some LOLBins command line
         // Reference: https://github.com/itaymigdal/LOLSpoof
         $string10 = /itaymigdal\/LOLSpoof/ nocase ascii wide

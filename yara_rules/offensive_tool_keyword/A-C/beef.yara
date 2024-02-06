@@ -76,7 +76,7 @@ rule beef
         $string22 = /Applet_ReverseTCP\.jar/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string23 = /beef:beef/ nocase ascii wide
+        $string23 = /beef\:beef/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string24 = /beef_bind_tcp\-stage\.asm/ nocase ascii wide
@@ -181,13 +181,13 @@ rule beef
         $string57 = /http.{0,1000}\/demos\/butcher\/index\.html/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string58 = /http.{0,1000}:3000\/hook\.js/ nocase ascii wide
+        $string58 = /http.{0,1000}\:3000\/hook\.js/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string59 = /http:\/\/127\.0\.0\.1:3000\/ui\/panel/ nocase ascii wide
+        $string59 = /http\:\/\/127\.0\.0\.1\:3000\/ui\/panel/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
-        $string60 = /http:\/\/localhost:3000\/ui\/panel/ nocase ascii wide
+        $string60 = /http\:\/\/localhost\:3000\/ui\/panel/ nocase ascii wide
         // Description: BeEF is short for The Browser Exploitation Framework. It is a penetration testing tool that focuses on the web browser.
         // Reference: https://github.com/beefproject/beef
         $string61 = /ie_win_fakenotification\-clippy/ nocase ascii wide

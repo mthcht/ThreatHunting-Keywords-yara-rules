@@ -46,7 +46,7 @@ rule impacket
         $string12 = /\s\-k\s\-request\-user\s.{0,1000}\s\-dc\-ip/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string13 = /\sLMHASH:NTHASH/ nocase ascii wide
+        $string13 = /\sLMHASH\:NTHASH/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
         $string14 = /\s\-no\-pass\s\-usersfile\s/ nocase ascii wide
@@ -133,7 +133,7 @@ rule impacket
         $string41 = /\/winregistry\.py.{0,1000}/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string42 = /:9090.{0,1000}\/api\/v1\.0\/relays/ nocase ascii wide
+        $string42 = /\:9090.{0,1000}\/api\/v1\.0\/relays/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
         $string43 = /\?convert_ccache_to_kirbi/ nocase ascii wide
@@ -244,10 +244,10 @@ rule impacket
         $string78 = /goldenPac\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string79 = /http:\/\/127\.0\.0\.1:9090\// nocase ascii wide
+        $string79 = /http\:\/\/127\.0\.0\.1\:9090\// nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string80 = /http:\/\/localhost:9090\// nocase ascii wide
+        $string80 = /http\:\/\/localhost\:9090\// nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
         $string81 = /httpattack\.py/ nocase ascii wide
@@ -295,7 +295,7 @@ rule impacket
         $string95 = /impacket\/.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string96 = /impacket:latest/ nocase ascii wide
+        $string96 = /impacket\:latest/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
         $string97 = /impacket__init__/ nocase ascii wide

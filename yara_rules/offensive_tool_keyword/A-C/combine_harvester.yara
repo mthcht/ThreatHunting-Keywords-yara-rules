@@ -13,7 +13,7 @@ rule combine_harvester
         $string1 = /\/combine_harvester\.git/ nocase ascii wide
         // Description: Rust in-memory dumper
         // Reference: https://github.com/m3f157O/combine_harvester
-        $string2 = /\[X\]\sYour\sharvest\sexploded:/ nocase ascii wide
+        $string2 = /\[X\]\sYour\sharvest\sexploded\:/ nocase ascii wide
         // Description: Rust in-memory dumper
         // Reference: https://github.com/m3f157O/combine_harvester
         $string3 = /\\combine\.exe/ nocase ascii wide

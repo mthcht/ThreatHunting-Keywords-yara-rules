@@ -130,7 +130,7 @@ rule WheresMyImplant
         $string40 = /PTHWMIExec/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
-        $string41 = /root\\cimv2:Win32_Implant/ nocase ascii wide
+        $string41 = /root\\cimv2\:Win32_Implant/ nocase ascii wide
         // Description: A Bring Your Own Land Toolkit that Doubles as a WMI Provider
         // Reference: https://github.com/0xbadjuju/WheresMyImplant
         $string42 = /StartWebServiceBeacon/ nocase ascii wide

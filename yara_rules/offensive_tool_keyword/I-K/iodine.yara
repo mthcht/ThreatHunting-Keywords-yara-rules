@@ -106,7 +106,7 @@ rule iodine
         $string32 = /fdbf3b81cd69caf5230d76a8b039fd99/ nocase ascii wide
         // Description: iodine. iodined - tunnel IPv4 over DNS
         // Reference: https://github.com/yarrick/iodine
-        $string33 = /https:\/\/code\.kryo\.se\/iodine\/iodine\-/ nocase ascii wide
+        $string33 = /https\:\/\/code\.kryo\.se\/iodine\/iodine\-/ nocase ascii wide
         // Description: tunnel IPv4 over DNS tool
         // Reference: https://github.com/yarrick/iodine
         $string34 = /iodine\s\-/ nocase ascii wide

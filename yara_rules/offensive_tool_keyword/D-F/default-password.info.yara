@@ -10,7 +10,7 @@ rule default_password_info
     strings:
         // Description: default passwords database
         // Reference: https://default-password.info/
-        $string1 = /https:\/\/default\-password\.info\// nocase ascii wide
+        $string1 = /https\:\/\/default\-password\.info\// nocase ascii wide
 
     condition:
         any of them

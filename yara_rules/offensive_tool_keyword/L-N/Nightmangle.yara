@@ -16,7 +16,7 @@ rule Nightmangle
         $string2 = /\/Nightmangle\.git/ nocase ascii wide
         // Description: ightmangle is post-exploitation Telegram Command and Control (C2/C&C) Agent
         // Reference: https://github.com/1N73LL1G3NC3x/Nightmangle
-        $string3 = /\[\+\]\sBof\sreplay:/ nocase ascii wide
+        $string3 = /\[\+\]\sBof\sreplay\:/ nocase ascii wide
         // Description: ightmangle is post-exploitation Telegram Command and Control (C2/C&C) Agent
         // Reference: https://github.com/1N73LL1G3NC3x/Nightmangle
         $string4 = /\[\+\]\sSeImpersonatePrivilege\senabled/ nocase ascii wide

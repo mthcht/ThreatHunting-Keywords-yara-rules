@@ -10,7 +10,7 @@ rule EvtMute
     strings:
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
-        $string1 = /\.exe.{0,1000}\s\-\-Filter\s.{0,1000}rule\sdisable\s{\scondition:\strue\s}/ nocase ascii wide
+        $string1 = /\.exe.{0,1000}\s\-\-Filter\s.{0,1000}rule\sdisable\s\{\scondition\:\strue\s\}/ nocase ascii wide
         // Description: This is a tool that allows you to offensively use YARA to apply a filter to the events being reported by windows event logging - mute the event log
         // Reference: https://github.com/bats3c/EvtMute
         $string2 = /\/EvtMute\.git/ nocase ascii wide

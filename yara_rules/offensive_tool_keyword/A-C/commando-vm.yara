@@ -37,7 +37,7 @@ rule commando_vm
         $string9 = /fireeye.{0,1000}commando/ nocase ascii wide
         // Description: CommandoVM - a fully customizable Windows-based security distribution for penetration testing and red teaming.
         // Reference: https://github.com/mandiant/commando-vm
-        $string10 = /https:\/\/www\.myget\.org\/F\/fireeye\/api\/v2/ nocase ascii wide
+        $string10 = /https\:\/\/www\.myget\.org\/F\/fireeye\/api\/v2/ nocase ascii wide
         // Description: CommandoVM - a fully customizable Windows-based security distribution for penetration testing and red teaming.
         // Reference: https://github.com/mandiant/commando-vm
         $string11 = /Unblock\-File\s\.\\install\.ps1/ nocase ascii wide

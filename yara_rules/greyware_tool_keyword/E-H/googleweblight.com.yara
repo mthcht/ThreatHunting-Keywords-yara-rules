@@ -10,7 +10,7 @@ rule googleweblight_com
     strings:
         // Description: Open Redirect vulnerability being exploited by threat actors in Google Web Light
         // Reference: https://x.com/1ZRR4H/status/1723062039680000255
-        $string1 = /https:\/\/googleweblight\.com\/i\?u\=.{0,1000}ipfs\..{0,1000}\.html/ nocase ascii wide
+        $string1 = /https\:\/\/googleweblight\.com\/i\?u\=.{0,1000}ipfs\..{0,1000}\.html/ nocase ascii wide
 
     condition:
         any of them

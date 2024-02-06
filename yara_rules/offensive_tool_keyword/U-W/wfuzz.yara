@@ -34,7 +34,7 @@ rule wfuzz
         $string8 = /\scommon_pass\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string9 = /\sFUZZ:FUZZ\s/ nocase ascii wide
+        $string9 = /\sFUZZ\:FUZZ\s/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string10 = /\sinstall\swfuzz/ nocase ascii wide
@@ -157,13 +157,13 @@ rule wfuzz
         $string49 = /fuzzrequest\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string50 = /http:\/\/127\.0\.0\.1\/FUZZ/ nocase ascii wide
+        $string50 = /http\:\/\/127\.0\.0\.1\/FUZZ/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string51 = /http:\/\/wfuzz\.org/ nocase ascii wide
+        $string51 = /http\:\/\/wfuzz\.org/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string52 = /https:\/\/wfuzz\.readthedocs\.io/ nocase ascii wide
+        $string52 = /https\:\/\/wfuzz\.readthedocs\.io/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string53 = /import\swfuzz/ nocase ascii wide

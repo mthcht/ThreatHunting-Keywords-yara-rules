@@ -43,19 +43,19 @@ rule pspy
         $string11 = /pspy64\s\-/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string12 = /pspy\-build:latest/ nocase ascii wide
+        $string12 = /pspy\-build\:latest/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string13 = /pspy\-development:latest/ nocase ascii wide
+        $string13 = /pspy\-development\:latest/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string14 = /pspy\-example:latest/ nocase ascii wide
+        $string14 = /pspy\-example\:latest/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
         $string15 = /pspy\-master/ nocase ascii wide
         // Description: Monitor linux processes without root permissions
         // Reference: https://github.com/DominicBreuker/pspy
-        $string16 = /pspy\-testing:latest/ nocase ascii wide
+        $string16 = /pspy\-testing\:latest/ nocase ascii wide
 
     condition:
         any of them

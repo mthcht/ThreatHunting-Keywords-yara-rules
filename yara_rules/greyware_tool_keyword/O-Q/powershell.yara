@@ -10,7 +10,7 @@ rule powershell
     strings:
         // Description: alternativeto whoami
         // Reference: N/A
-        $string1 = /\[System\.Environment\]::GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
+        $string1 = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
         $string2 = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
@@ -40,10 +40,10 @@ rule powershell
         $string10 = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string11 = /gci\senv:USERNAME/ nocase ascii wide
+        $string11 = /gci\senv\:USERNAME/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string12 = /gci\s\-h\sC:\\pagefile\.sys/ nocase ascii wide
+        $string12 = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string13 = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
@@ -76,22 +76,22 @@ rule powershell
         $string22 = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string23 = /ls\senv:USERNAME/ nocase ascii wide
+        $string23 = /ls\senv\:USERNAME/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
         $string24 = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string25 = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t:/ nocase ascii wide
+        $string25 = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string26 = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string26 = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
         $string27 = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string28 = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string28 = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
         $string29 = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
@@ -118,28 +118,28 @@ rule powershell
         $string36 = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string37 = /\[Environment\]::UserName/ nocase ascii wide
+        $string37 = /\[Environment\]\:\:UserName/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string38 = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string39 = /Get\-ADComputer\s\-Filter\s{TrustedForDelegation\s\-eq\s\$True}/ nocase ascii wide
+        $string39 = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string40 = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string41 = /Get\-ADObject\s\-Filter\s{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string41 = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string42 = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string43 = /Get\-ADUser\s\-Filter\s{DoesNotRequirePreAuth\s\-eq\s\$True}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string43 = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string44 = /Get\-ADUser\s\-Filter\s{TrustedForDelegation\s\-eq\s\$True}/ nocase ascii wide
+        $string44 = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string45 = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide

@@ -10,7 +10,7 @@ rule sudo
     strings:
         // Description: Sudo Persistence via sudoers file
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
+        $string1 = /echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
         // Description: access sensitive files by abusing sudo permissions
         // Reference: N/A
         $string2 = /sudo\sapache2\s\-f\s\/etc\/shadow/ nocase ascii wide

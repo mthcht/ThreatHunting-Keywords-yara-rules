@@ -10,10 +10,10 @@ rule tempsend_com
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1 = /https:\/\/tempsend\.com\// nocase ascii wide
+        $string1 = /https\:\/\/tempsend\.com\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2 = /https:\/\/tempsend\.com\/send/ nocase ascii wide
+        $string2 = /https\:\/\/tempsend\.com\/send/ nocase ascii wide
 
     condition:
         any of them

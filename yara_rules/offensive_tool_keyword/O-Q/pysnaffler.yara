@@ -46,16 +46,16 @@ rule pysnaffler
         $string12 = /pysnaffler\s\-/ nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string13 = /pysnaffler\s\'smb2\+kerberos\+password:/ nocase ascii wide
+        $string13 = /pysnaffler\s\'smb2\+kerberos\+password\:/ nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string14 = /pysnaffler\s\'smb2\+ntlm\-nt:\/\// nocase ascii wide
+        $string14 = /pysnaffler\s\'smb2\+ntlm\-nt\:\/\// nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string15 = /pysnaffler\s\'smb2\+ntlm\-password:\/\// nocase ascii wide
+        $string15 = /pysnaffler\s\'smb2\+ntlm\-password\:\/\// nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
-        $string16 = /pysnaffler\.whatif:main/ nocase ascii wide
+        $string16 = /pysnaffler\.whatif\:main/ nocase ascii wide
         // Description: This project is a Python version of the well-known Snaffler project. Not a full implementation of that project - only focusing on SMB share/dir/file enumeration and download and parse.
         // Reference: https://github.com/skelsec/pysnaffler
         $string17 = /pysnaffler\/_version\.py/ nocase ascii wide

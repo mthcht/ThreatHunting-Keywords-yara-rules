@@ -91,7 +91,7 @@ rule kerbrute
         $string27 = /Got\sencrypted\sTGT\sfor\s.{0,1000}\sbut\scouldn\'t\sconvert\sto\shash/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string28 = /has\sno\spre\sauth\srequired\.\sDumping\shash\sto\scrack\soffline:/ nocase ascii wide
+        $string28 = /has\sno\spre\sauth\srequired\.\sDumping\shash\sto\scrack\soffline\:/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
         $string29 = /kerbrute\s\-/ nocase ascii wide

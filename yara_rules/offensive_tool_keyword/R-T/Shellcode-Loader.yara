@@ -13,7 +13,7 @@ rule Shellcode_Loader
         $string1 = /\/Shellcode\-Loader\.git/ nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
-        $string2 = /C:\\Windows\\DirectX\.log.{0,1000}\\Windows\\Temp\\backup\.log/ nocase ascii wide
+        $string2 = /C\:\\Windows\\DirectX\.log.{0,1000}\\Windows\\Temp\\backup\.log/ nocase ascii wide
         // Description: dynamic shellcode loading
         // Reference: https://github.com/ReversingID/Shellcode-Loader
         $string3 = /ReversingID\/Shellcode\-Loader/ nocase ascii wide

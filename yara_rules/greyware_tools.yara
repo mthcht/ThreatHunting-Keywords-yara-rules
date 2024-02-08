@@ -704,49 +704,64 @@ rule anydesk_greyware_tool_keyword
         $string24_anydesk_greyware_tool_keyword = /\\anydeskprintdriver\.inf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string25_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
+        $string25_anydesk_greyware_tool_keyword = /\\anydeskprintdriver\.inf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string26_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
-        // Description: Anydesk RMM usage
-        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string27_anydesk_greyware_tool_keyword = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
+        $string26_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\system\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string28_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        $string27_anydesk_greyware_tool_keyword = /\\AppData\\Roaming\\AnyDesk\\user\.conf/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
-        $string29_anydesk_greyware_tool_keyword = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
-        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
-        // Reference: https://anydesk.com/
-        $string30_anydesk_greyware_tool_keyword = /0DBF152DEAF0B981A8A938D53F769DB8/ nocase ascii wide
-        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
-        // Reference: https://anydesk.com/
-        $string31_anydesk_greyware_tool_keyword = /9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE/ nocase ascii wide
-        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
-        // Reference: https://anydesk.com/
-        $string32_anydesk_greyware_tool_keyword = /9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF/ nocase ascii wide
+        $string28_anydesk_greyware_tool_keyword = /\\ControlSet001\\Services\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string33_anydesk_greyware_tool_keyword = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
+        $string29_anydesk_greyware_tool_keyword = /\\Pictures\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string30_anydesk_greyware_tool_keyword = /\\Prefetch\\ANYDESK\.EXE/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string31_anydesk_greyware_tool_keyword = /\\ProgramFile.{0,1000}\\previous\-version/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        $string32_anydesk_greyware_tool_keyword = /\\SOFTWARE\\Clients\\Media\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string33_anydesk_greyware_tool_keyword = /\\Temp\\AnyDeskUninst/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string34_anydesk_greyware_tool_keyword = /\\Videos\\AnyDesk/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string35_anydesk_greyware_tool_keyword = /0DBF152DEAF0B981A8A938D53F769DB8/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string36_anydesk_greyware_tool_keyword = /9CD1DDB78ED05282353B20CDFE8FA0A4FB6C1ECE/ nocase ascii wide
+        // Description: Anydesk RMM usage - compromised certificate - https://anydesk.com/en/changelog/windows
+        // Reference: https://anydesk.com/
+        $string37_anydesk_greyware_tool_keyword = /9D7620A4CEBA92370E8828B3CB1007AEFF63AB36A2CBE5F044FDDE14ABAB1EBF/ nocase ascii wide
+        // Description: Anydesk RMM usage
+        // Reference: https://anydesk.com/
+        $string38_anydesk_greyware_tool_keyword = /AnyDesk\sSoftware\sGmbH/ nocase ascii wide
         // Description: setting the AnyDesk service password manually
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string34_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
+        $string39_anydesk_greyware_tool_keyword = /anydesk\.exe\s\-\-set\-password/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string35_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
+        $string40_anydesk_greyware_tool_keyword = /boot\.net\.anydesk\.com/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string36_anydesk_greyware_tool_keyword = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
+        $string41_anydesk_greyware_tool_keyword = /C\:\\Program\sFiles\s\(x86\)\\AnyDesk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string37_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
+        $string42_anydesk_greyware_tool_keyword = /Desktop\\AnyDesk\.lnk/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string38_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
+        $string43_anydesk_greyware_tool_keyword = /HKCR\\\.anydesk\\/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/
-        $string39_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
+        $string44_anydesk_greyware_tool_keyword = /relay\-.{0,1000}\.net\.anydesk\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -1636,6 +1651,15 @@ rule chattr_greyware_tool_keyword
         // Description: lock out the ability to update the file
         // Reference: N/A
         $string2_chattr_greyware_tool_keyword = /chattr\s\+i\s.{0,1000}\.bash_history/ nocase ascii wide
+        // Description: changes the permissions and attributes of sensibles files
+        // Reference: N/A
+        $string3_chattr_greyware_tool_keyword = /chattr\s\-ia\s.{0,1000}\/etc\/passwd/ nocase ascii wide
+        // Description: changes the permissions and attributes of sensibles files
+        // Reference: N/A
+        $string4_chattr_greyware_tool_keyword = /chattr\s\-ia\s.{0,1000}\/etc\/shadow/ nocase ascii wide
+        // Description: changes the permissions and attributes of sensibles files
+        // Reference: N/A
+        $string5_chattr_greyware_tool_keyword = /chattr\s\-ia\s.{0,1000}\/etc\/sudoers/ nocase ascii wide
 
     condition:
         any of them
@@ -5887,7 +5911,7 @@ rule netsh_greyware_tool_keyword
 
     strings:
         // Description: gathering information about network configurations
-        // Reference: 
+        // Reference: N/A
         $string1_netsh_greyware_tool_keyword = /netsh\sadvfirewall\sfirewall\sshow\srule\sname\=all/ nocase ascii wide
         // Description: Disable Windows Firewall
         // Reference: N/A
@@ -5904,18 +5928,21 @@ rule netsh_greyware_tool_keyword
         // Description: The actor has used the following commands to enable port forwarding [T1090] on the host
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string6_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
+        // Description:  attempt to remove port proxy configurations
+        // Reference: https://media.defense.gov/2024/Feb/07/2003389936/-1/-1/0/JOINT-GUIDANCE-IDENTIFYING-AND-MITIGATING-LOTL.PDF
+        $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        $string8_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string8_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        $string9_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string9_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string10_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string10_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string11_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
 
     condition:
         any of them
@@ -11212,6 +11239,9 @@ rule vssadmin_greyware_tool_keyword
         // Description: Deletes all Volume Shadow Copies from the system quietly (without prompts).
         // Reference: N/A
         $string6_vssadmin_greyware_tool_keyword = /vssadmin.{0,1000}\sDelete\sShadows\s\/All\s\/Quiet/ nocase ascii wide
+        // Description: the command is used to create a new Volume Shadow Copy for a specific volume which can be utilized by an attacker to collect data from the local system
+        // Reference: N/A
+        $string7_vssadmin_greyware_tool_keyword = /vssadmin\.exe\sCreate\sShadow\s\/for\=/ nocase ascii wide
 
     condition:
         any of them
@@ -11736,120 +11766,231 @@ rule xmrig_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string1_xmrig_greyware_tool_keyword = /\s\sxmrig\.exe/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string2_xmrig_greyware_tool_keyword = /\sc3pool_miner/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string1_xmrig_greyware_tool_keyword = /\s\-\-coin\s.{0,1000}\-\-nicehash\s/ nocase ascii wide
+        $string3_xmrig_greyware_tool_keyword = /\s\-\-coin\s.{0,1000}\-\-nicehash\s/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string2_xmrig_greyware_tool_keyword = /\s\-\-coin\=monero/ nocase ascii wide
+        $string4_xmrig_greyware_tool_keyword = /\s\-\-coin\=monero/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string5_xmrig_greyware_tool_keyword = /\s\-\-config\=.{0,1000}c3pool.{0,1000}config_background\.json/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string3_xmrig_greyware_tool_keyword = /\s\-\-nicehash\s.{0,1000}\-\-coin\s/ nocase ascii wide
+        $string6_xmrig_greyware_tool_keyword = /\s\-\-donate\-level\=/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string7_xmrig_greyware_tool_keyword = /\sinstall\sc3pool_miner\s/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string4_xmrig_greyware_tool_keyword = /\/xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
+        $string8_xmrig_greyware_tool_keyword = /\s\-\-nicehash\s.{0,1000}\-\-coin\s/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string9_xmrig_greyware_tool_keyword = /\%USERPROFILE\%\\\\nssm\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string5_xmrig_greyware_tool_keyword = /\/xmrig\.exe/ nocase ascii wide
+        $string10_xmrig_greyware_tool_keyword = /\/xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string6_xmrig_greyware_tool_keyword = /\/xmrig\.git/ nocase ascii wide
+        $string11_xmrig_greyware_tool_keyword = /\/xmrig\.exe/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string7_xmrig_greyware_tool_keyword = /\\WinRing0x64\.sys/ nocase ascii wide
+        $string12_xmrig_greyware_tool_keyword = /\/xmrig\.git/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string13_xmrig_greyware_tool_keyword = /\\c3pool\\\\miner\.bat/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string14_xmrig_greyware_tool_keyword = /\\c3pool\\config\.json/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string8_xmrig_greyware_tool_keyword = /\\xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
+        $string15_xmrig_greyware_tool_keyword = /\\WinRing0x64\.sys/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string9_xmrig_greyware_tool_keyword = /\\xmrig\.exe/ nocase ascii wide
+        $string16_xmrig_greyware_tool_keyword = /\\xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string10_xmrig_greyware_tool_keyword = /\\xmrig\-6\.20\.0/ nocase ascii wide
+        $string17_xmrig_greyware_tool_keyword = /\\xmrig\.exe/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string18_xmrig_greyware_tool_keyword = /\\xmrig\.log/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string19_xmrig_greyware_tool_keyword = /\\xmrig_setup\\/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string11_xmrig_greyware_tool_keyword = /\\xmrig\-master/ nocase ascii wide
+        $string20_xmrig_greyware_tool_keyword = /\\xmrig\-6\.20\.0/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string12_xmrig_greyware_tool_keyword = /08384f3f05ad85b2aa935dbd2e46a053cb0001b28bbe593dde2a8c4b822c2a7d/ nocase ascii wide
+        $string21_xmrig_greyware_tool_keyword = /\\xmrig\-master/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string22_xmrig_greyware_tool_keyword = /\]\sCreating\sc3pool_miner\sservice/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string23_xmrig_greyware_tool_keyword = /\]\sLooking\sfor\sthe\slatest\sversion\sof\sMonero\sminer/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string24_xmrig_greyware_tool_keyword = /\]\sRemoving\sprevious\sc3pool\sminer\s/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string25_xmrig_greyware_tool_keyword = /\]\sRunning\sminer\sin\sthe\sbackground/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string13_xmrig_greyware_tool_keyword = /3b5cbf0dddc3ef7e3af7d783baef315bf47be6ce11ff83455a2165befe6711f5/ nocase ascii wide
+        $string26_xmrig_greyware_tool_keyword = /08384f3f05ad85b2aa935dbd2e46a053cb0001b28bbe593dde2a8c4b822c2a7d/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string14_xmrig_greyware_tool_keyword = /4fe9647d6a8bf4790df0277283f9874385e0cd05f3008406ca5624aba8d78924/ nocase ascii wide
+        $string27_xmrig_greyware_tool_keyword = /0tZG9uYXRlLWxldmVsP/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string15_xmrig_greyware_tool_keyword = /5575c76987333427f74263e090910eae45817f0ede6b452d645fd5f9951210c9/ nocase ascii wide
+        $string28_xmrig_greyware_tool_keyword = /3b5cbf0dddc3ef7e3af7d783baef315bf47be6ce11ff83455a2165befe6711f5/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string16_xmrig_greyware_tool_keyword = /5a6e7d5c10789763b0b06442dbc7f723f8ea9aec1402abedf439c6801a8d86f2/ nocase ascii wide
+        $string29_xmrig_greyware_tool_keyword = /4fe9647d6a8bf4790df0277283f9874385e0cd05f3008406ca5624aba8d78924/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string17_xmrig_greyware_tool_keyword = /99e3e313b62bb8b55e2637fc14a78adb6f33632a3c722486416252e2630cfdf6/ nocase ascii wide
+        $string30_xmrig_greyware_tool_keyword = /5575c76987333427f74263e090910eae45817f0ede6b452d645fd5f9951210c9/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string18_xmrig_greyware_tool_keyword = /dd7fef5e3594eb18dd676e550e128d4b64cc5a469ff6954a677dc414265db468/ nocase ascii wide
+        $string31_xmrig_greyware_tool_keyword = /5a6e7d5c10789763b0b06442dbc7f723f8ea9aec1402abedf439c6801a8d86f2/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string19_xmrig_greyware_tool_keyword = /donate\.v2\.xmrig\.com\:3333/ nocase ascii wide
+        $string32_xmrig_greyware_tool_keyword = /99e3e313b62bb8b55e2637fc14a78adb6f33632a3c722486416252e2630cfdf6/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string33_xmrig_greyware_tool_keyword = /C3Pool\smining\ssetup\sscript\sv/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string34_xmrig_greyware_tool_keyword = /C3Pool\/xmrig_setup/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string35_xmrig_greyware_tool_keyword = /c3pool_miner\sservice/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string36_xmrig_greyware_tool_keyword = /c3pool_miner\.bat/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string37_xmrig_greyware_tool_keyword = /c3pool_miner\.service/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string38_xmrig_greyware_tool_keyword = /c3pool_miner\.sh/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string39_xmrig_greyware_tool_keyword = /c3pool_miner\\/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string40_xmrig_greyware_tool_keyword = /cpulimit\s\-e\sxmrig\s/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string20_xmrig_greyware_tool_keyword = /e1ff2208b3786cac801ffb470b9475fbb3ced74eb503bfde7aa7f22af113989d/ nocase ascii wide
+        $string41_xmrig_greyware_tool_keyword = /dd7fef5e3594eb18dd676e550e128d4b64cc5a469ff6954a677dc414265db468/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string42_xmrig_greyware_tool_keyword = /Description\=Monero\sminer\sservice/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string21_xmrig_greyware_tool_keyword = /ff6e67d725ee64b4607dc6490a706dc9234c708cff814477de52d3beb781c6a1/ nocase ascii wide
+        $string43_xmrig_greyware_tool_keyword = /donate\.v2\.xmrig\.com\:3333/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string44_xmrig_greyware_tool_keyword = /Downloading.{0,1000}\%MINER_LOCATION\%/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string22_xmrig_greyware_tool_keyword = /github.{0,1000}\/xmrig\/xmrig/ nocase ascii wide
+        $string45_xmrig_greyware_tool_keyword = /e1ff2208b3786cac801ffb470b9475fbb3ced74eb503bfde7aa7f22af113989d/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string23_xmrig_greyware_tool_keyword = /gpg_keys\/xmrig\.asc/ nocase ascii wide
+        $string46_xmrig_greyware_tool_keyword = /ff6e67d725ee64b4607dc6490a706dc9234c708cff814477de52d3beb781c6a1/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string24_xmrig_greyware_tool_keyword = /solo_mine_example\.cmd/ nocase ascii wide
+        $string47_xmrig_greyware_tool_keyword = /github.{0,1000}\/xmrig\/xmrig/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string25_xmrig_greyware_tool_keyword = /src\/xmrig\.cpp/ nocase ascii wide
+        $string48_xmrig_greyware_tool_keyword = /gpg_keys\/xmrig\.asc/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string49_xmrig_greyware_tool_keyword = /https\:\/\/c3pool\.com\/\#\// nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string50_xmrig_greyware_tool_keyword = /killall\sxmrig/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string26_xmrig_greyware_tool_keyword = /src\\xmrig\.cpp/ nocase ascii wide
+        $string51_xmrig_greyware_tool_keyword = /LS1kb25hdGUtbGV2ZWw9/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string52_xmrig_greyware_tool_keyword = /mining\sin\sbackground\swill\sbe\sstarted\susing\syour\sstartup\sdirectory\sscript\sand\sonly\swork\swhen\syour\sare\slogged\sin\sthis\shost/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string53_xmrig_greyware_tool_keyword = /Mining\swill\shappen\sto\s.{0,1000}\swallet/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string54_xmrig_greyware_tool_keyword = /Monero\sminer\sis\salready\srunning\sin\sthe\sbackground/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string55_xmrig_greyware_tool_keyword = /offline_miner_setup\.zip/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string56_xmrig_greyware_tool_keyword = /setup\sand\srun\sin\sbackground\sMonero\sCPU\sminer/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string27_xmrig_greyware_tool_keyword = /WinRing0.{0,1000}WinRing0x64\.sys/ nocase ascii wide
+        $string57_xmrig_greyware_tool_keyword = /solo_mine_example\.cmd/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string28_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-bionic\-x64\.tar\.gz/ nocase ascii wide
+        $string58_xmrig_greyware_tool_keyword = /src\/xmrig\.cpp/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string29_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-focal\-x64\.tar\.gz/ nocase ascii wide
+        $string59_xmrig_greyware_tool_keyword = /src\\xmrig\.cpp/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string60_xmrig_greyware_tool_keyword = /start\sdoing\sstuff\:\spreparing\sminer/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string61_xmrig_greyware_tool_keyword = /support\@c3pool\.com/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string30_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-freebsd\-static\-x64\.tar\.gz/ nocase ascii wide
+        $string62_xmrig_greyware_tool_keyword = /WinRing0.{0,1000}WinRing0x64\.sys/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string31_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
+        $string63_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-bionic\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string32_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-static\-x64\.tar\.gz/ nocase ascii wide
+        $string64_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-focal\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string33_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-x64\.tar\.gz/ nocase ascii wide
+        $string65_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-freebsd\-static\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string34_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-arm64\.tar\.gz/ nocase ascii wide
+        $string66_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string35_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-x64\.tar\.gz/ nocase ascii wide
+        $string67_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-static\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string36_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-msvc\-win64\.zip/ nocase ascii wide
+        $string68_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string37_xmrig_greyware_tool_keyword = /xmrig\.exe\s\-/ nocase ascii wide
+        $string69_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-arm64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string38_xmrig_greyware_tool_keyword = /xmrpool\.eu\:3333/ nocase ascii wide
+        $string70_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-x64\.tar\.gz/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/xmrig/xmrig/
+        $string71_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-msvc\-win64\.zip/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/xmrig/xmrig/
+        $string72_xmrig_greyware_tool_keyword = /xmrig\.exe\s\-/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string73_xmrig_greyware_tool_keyword = /xmrig\.tar\.gz/ nocase ascii wide
+        // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string74_xmrig_greyware_tool_keyword = /xmrig\.zip/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/xmrig/xmrig/
+        $string75_xmrig_greyware_tool_keyword = /xmrpool\.eu\:3333/ nocase ascii wide
 
     condition:
         any of them

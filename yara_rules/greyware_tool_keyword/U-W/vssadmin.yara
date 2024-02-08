@@ -26,6 +26,9 @@ rule vssadmin
         // Description: Deletes all Volume Shadow Copies from the system quietly (without prompts).
         // Reference: N/A
         $string6 = /vssadmin.{0,1000}\sDelete\sShadows\s\/All\s\/Quiet/ nocase ascii wide
+        // Description: the command is used to create a new Volume Shadow Copy for a specific volume which can be utilized by an attacker to collect data from the local system
+        // Reference: N/A
+        $string7 = /vssadmin\.exe\sCreate\sShadow\s\/for\=/ nocase ascii wide
 
     condition:
         any of them

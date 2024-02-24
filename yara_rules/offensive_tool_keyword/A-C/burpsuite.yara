@@ -119,54 +119,75 @@ rule burpsuite
         // Description: A collection of scripts to extend Burp SuiteExtracts the parameters from URLs in scope or from a selected host
         // Reference: https://github.com/laconicwolf/burp-extensions
         $string37 = /GenerateParameterWordlist\.py/ nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string38 = /http\:\/\/.{0,1000}\.oast\.fun\// nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string39 = /http\:\/\/.{0,1000}\.oast\.live\// nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string40 = /http\:\/\/.{0,1000}\.oast\.me\// nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string41 = /http\:\/\/.{0,1000}\.oast\.online\// nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string42 = /http\:\/\/.{0,1000}\.oast\.pro\// nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string43 = /http\:\/\/.{0,1000}\.oast\.site\// nocase ascii wide
+        // Description: domains used by burp collaborator - abused for  payload callback
+        // Reference: https://github.com/Mr-xn/BurpSuite-collections
+        $string44 = /http\:\/\/.{0,1000}\.oastify\.com\// nocase ascii wide
         // Description: Collection of burpsuite plugins
         // Reference: https://github.com/Mr-xn/BurpSuite-collections
-        $string38 = /http\-request\-smuggler\-all\.jar/ nocase ascii wide
+        $string45 = /http\-request\-smuggler\-all\.jar/ nocase ascii wide
         // Description: Collection of burpsuite plugins
         // Reference: https://github.com/Mr-xn/BurpSuite-collections
-        $string39 = /httpsmuggler\.jar/ nocase ascii wide
+        $string46 = /httpsmuggler\.jar/ nocase ascii wide
         // Description: CO2 is a project for lightweight and useful enhancements to Portswigger popular Burp Suite web penetration tool through the standard Extender API
         // Reference: https://github.com/JGillam/burp-co2
-        $string40 = /IBurpExtender\.java/ nocase ascii wide
+        $string47 = /IBurpExtender\.java/ nocase ascii wide
         // Description: CO2 is a project for lightweight and useful enhancements to Portswigger popular Burp Suite web penetration tool through the standard Extender API
         // Reference: https://github.com/JGillam/burp-co2
-        $string41 = /IBurpExtenderCallbacks\.java/ nocase ascii wide
+        $string48 = /IBurpExtenderCallbacks\.java/ nocase ascii wide
         // Description: Multi-tabbed extension that helps generate payloads for various purposes (XSS. SQLi. Header injection. and more).
         // Reference: https://github.com/laconicwolf/burp-extensions
-        $string42 = /InjectMate\.py/ nocase ascii wide
+        $string49 = /InjectMate\.py/ nocase ascii wide
         // Description: A collection of scripts to extend Burp Suite
         // Reference: https://github.com/laconicwolf/burp-extensions
-        $string43 = /InjectMateCommunity\.py/ nocase ascii wide
+        $string50 = /InjectMateCommunity\.py/ nocase ascii wide
         // Description: CO2 is a project for lightweight and useful enhancements to Portswigger popular Burp Suite web penetration tool through the standard Extender API
         // Reference: https://github.com/JGillam/burp-co2
-        $string44 = /JGillam\/burp\-co2/ nocase ascii wide
+        $string51 = /JGillam\/burp\-co2/ nocase ascii wide
         // Description: Collection of burpsuite plugins
         // Reference: https://github.com/Mr-xn/BurpSuite-collections
-        $string45 = /LFI\sscanner\schecks\.jar/ nocase ascii wide
+        $string52 = /LFI\sscanner\schecks\.jar/ nocase ascii wide
         // Description: A Burp Suite extension to help pentesters to bypass WAFs or test their effectiveness using a number of techniques
         // Reference: https://github.com/nccgroup/BurpSuiteHTTPSmuggler
-        $string46 = /MakeHTTPSmugglerJAR\.launch/ nocase ascii wide
+        $string53 = /MakeHTTPSmugglerJAR\.launch/ nocase ascii wide
         // Description: The class-leading vulnerability scanning. penetration testing. and web app security platform
         // Reference: https://portswigger.net/burp
-        $string47 = /perfdata\.portswigger\.net/ nocase ascii wide
+        $string54 = /perfdata\.portswigger\.net/ nocase ascii wide
         // Description: Burp Suite is a leading range of cybersecurity tools. brought to you by PortSwigger. We believe in giving our users a competitive advantage through superior research. This tool is not free and open source
         // Reference: https://portswigger.net/
-        $string48 = /portswigger\.net/ nocase ascii wide
+        $string55 = /portswigger\.net/ nocase ascii wide
         // Description: Burp Suite is a leading range of cybersecurity tools. brought to you by PortSwigger. We believe in giving our users a competitive advantage through superior research. This tool is not free and open source
         // Reference: https://portswigger.net/burp
-        $string49 = /portswigger\.net/ nocase ascii wide
+        $string56 = /portswigger\.net/ nocase ascii wide
         // Description: A collection of scripts to extend Burp Suite. the request gets transformed to its equivalent in Python requests. Python urllib2. and PowerShell Invoke-WebRequest.
         // Reference: https://github.com/laconicwolf/burp-extensions
-        $string50 = /RequestAsPython\-PowerShell\.py/ nocase ascii wide
+        $string57 = /RequestAsPython\-PowerShell\.py/ nocase ascii wide
         // Description: Collection of burpsuite plugins
         // Reference: https://github.com/Mr-xn/BurpSuite-collections
-        $string51 = /sqlmap4burp.{0,1000}\.jar/ nocase ascii wide
+        $string58 = /sqlmap4burp.{0,1000}\.jar/ nocase ascii wide
         // Description: Red Team Toolkit is an Open-Source Django Offensive Web-App which is keeping the useful offensive tools used in the red-teaming together
         // Reference: https://github.com/signorrayan/RedTeam_toolkit
-        $string52 = /sshbrute\.py/ nocase ascii wide
+        $string59 = /sshbrute\.py/ nocase ascii wide
         // Description: Collection of burpsuite plugins
         // Reference: https://github.com/Mr-xn/BurpSuite-collections
-        $string53 = /struts_ext_v2\.jar/ nocase ascii wide
+        $string60 = /struts_ext_v2\.jar/ nocase ascii wide
 
     condition:
         any of them

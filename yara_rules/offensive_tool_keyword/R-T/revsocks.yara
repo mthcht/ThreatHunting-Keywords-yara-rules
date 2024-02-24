@@ -14,26 +14,26 @@ rule revsocks
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
         $string2 = /\/out\:revsocks\.exe/ nocase ascii wide
-        // Description: Reverse SOCKS5 implementation in Go
-        // Reference: https://github.com/kost/revsocks
+        // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
+        // Reference: https://github.com/emilarner/revsocks
         $string3 = /\/revsocks\.exe/ nocase ascii wide
-        // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
-        // Reference: https://github.com/emilarner/revsocks
-        $string4 = /\/revsocks\.exe/ nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
-        $string5 = /\/revsocks\.git/ nocase ascii wide
+        $string4 = /\/revsocks\.exe/ nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
+        $string5 = /\/revsocks\.git/ nocase ascii wide
+        // Description: Reverse SOCKS5 implementation in Go
+        // Reference: https://github.com/kost/revsocks
         $string6 = /\/revsocks\.git/ nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks
         $string7 = /\\InventoryApplicationFile\\revsocks_windows/ nocase ascii wide
-        // Description: Reverse SOCKS5 implementation in Go
-        // Reference: https://github.com/kost/revsocks
-        $string8 = /\\revsocks\.exe/ nocase ascii wide
         // Description: Cross-platform SOCKS5 proxy server program/library written in C that can also reverse itself over a firewall.
         // Reference: https://github.com/emilarner/revsocks
+        $string8 = /\\revsocks\.exe/ nocase ascii wide
+        // Description: Reverse SOCKS5 implementation in Go
+        // Reference: https://github.com/kost/revsocks
         $string9 = /\\revsocks\.exe/ nocase ascii wide
         // Description: Reverse SOCKS5 implementation in Go
         // Reference: https://github.com/kost/revsocks

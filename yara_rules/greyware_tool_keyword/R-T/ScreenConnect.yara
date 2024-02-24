@@ -127,34 +127,37 @@ rule ScreenConnect
         $string39 = /ScreenConnect\.Server\.dll/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string40 = /SCREENCONNECT\.SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string40 = /ScreenConnect\.Service\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string41 = /ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
+        $string41 = /SCREENCONNECT\.SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string42 = /SCREENCONNECT\.WINDOWSCLIENT\..{0,1000}\.pf/ nocase ascii wide
+        $string42 = /ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string43 = /ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
+        $string43 = /SCREENCONNECT\.WINDOWSCLIENT\..{0,1000}\.pf/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string44 = /ScreenConnect\.WindowsInstaller\.dll/ nocase ascii wide
+        $string44 = /ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string45 = /ScreenConnect_.{0,1000}_Release\.msi/ nocase ascii wide
+        $string45 = /ScreenConnect\.WindowsInstaller\.dll/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string46 = /ScreenConnect_.{0,1000}_Release\.tar\.gz/ nocase ascii wide
+        $string46 = /ScreenConnect_.{0,1000}_Release\.msi/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string47 = /ScreenConnect_.{0,1000}_Release\.zip/ nocase ascii wide
+        $string47 = /ScreenConnect_.{0,1000}_Release\.tar\.gz/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string48 = /ScreenConnect_.{0,1000}_Release\.zip/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string48 = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
+        $string49 = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string49 = /\-web\.screenconnect\.com/ nocase ascii wide
+        $string50 = /\-web\.screenconnect\.com/ nocase ascii wide
 
     condition:
         any of them

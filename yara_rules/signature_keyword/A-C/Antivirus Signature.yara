@@ -179,10 +179,10 @@ rule Antivirus_Signature
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string57 = /Ransom\:Linux\/BlackBasta/ nocase ascii wide
-        // Description: AV signature for exploitation tools
+        // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string58 = /Ransom\:Win32/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
+        // Description: AV signature for exploitation tools
         // Reference: N/A
         $string59 = /Ransom\:Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword

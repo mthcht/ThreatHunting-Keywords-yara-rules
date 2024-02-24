@@ -1222,11 +1222,11 @@ rule bash_greyware_tool_keyword
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string2_bash_greyware_tool_keyword = /bash\s\-c\s.{0,1000}wget\s.{0,1000}\.sh\s\|\sbash/ nocase ascii wide
-        // Description: bash reverse shell
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string3_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
         // Description: bash reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+        $string3_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
+        // Description: bash reverse shell
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string4_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
@@ -1521,6 +1521,31 @@ rule Browser_C2_greyware_tool_keyword
 }
 
 
+rule browser_lol_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'browser.lol' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "browser.lol"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
+        // Reference: https://browser.lol
+        $string1_browser_lol_greyware_tool_keyword = /\&browser\=tor\&api\=false/ nocase ascii wide
+        // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
+        // Reference: https://browser.lol
+        $string2_browser_lol_greyware_tool_keyword = /\.srv\.browser\.lol/ nocase ascii wide
+        // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
+        // Reference: https://browser.lol
+        $string3_browser_lol_greyware_tool_keyword = /https\:\/\/browser\.lol\/vnc\?server\=/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule BullVPN_greyware_tool_keyword
 {
     meta:
@@ -1534,6 +1559,25 @@ rule BullVPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_BullVPN_greyware_tool_keyword = /chioafkonnhbpajpengbalkececleldf/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule canarytokens_com_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'canarytokens.com' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "canarytokens.com"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: free honeypot detection tokens but also abused by attacker for payload callback confirmation
+        // Reference: http://canarytokens.com
+        $string1_canarytokens_com_greyware_tool_keyword = /http\:\/\/canarytokens\.com\/.{0,1000}\// nocase ascii wide
 
     condition:
         any of them
@@ -2499,6 +2543,28 @@ rule dnscmd_greyware_tool_keyword
         // Description: the actor gather information about the target environment
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string2_dnscmd_greyware_tool_keyword = /dnscmd\s\.\s\/enumzones/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule dnslog_cn_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'dnslog.cn' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "dnslog.cn"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://dnslog.cn
+        $string1_dnslog_cn_greyware_tool_keyword = /\.dnslog\.cn\:/ nocase ascii wide
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://dnslog.cn
+        $string2_dnslog_cn_greyware_tool_keyword = /http\:\/\/dnslog\.cn\// nocase ascii wide
 
     condition:
         any of them
@@ -4218,6 +4284,91 @@ rule Goodsync_greyware_tool_keyword
 }
 
 
+rule Google_Remote_Desktop_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Google Remote Desktop' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Google Remote Desktop"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string1_Google_Remote_Desktop_greyware_tool_keyword = /\schrome\-remote\-desktop\@/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string2_Google_Remote_Desktop_greyware_tool_keyword = /\.chrome\-remote\-desktop\-session/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string3_Google_Remote_Desktop_greyware_tool_keyword = /\/system\/chrome\-remote\-desktop\@/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string4_Google_Remote_Desktop_greyware_tool_keyword = /\\Chrome\sRemote\sDesktop\\host\.json/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string5_Google_Remote_Desktop_greyware_tool_keyword = /\\Google\\Chrome\sRemote\sDesktop\\/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string6_Google_Remote_Desktop_greyware_tool_keyword = /\\pipe\\chrome_remote_desktop/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string7_Google_Remote_Desktop_greyware_tool_keyword = /\\remote_assistance_host\.exe/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string8_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_desktop\.exe/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string9_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_host\.exe/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string10_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_native_messaging_host\.exe/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string11_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_start_host\.exe/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string12_Google_Remote_Desktop_greyware_tool_keyword = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string13_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop\.service/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string14_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop_current_amd64\.deb/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string15_Google_Remote_Desktop_greyware_tool_keyword = /chromeremotedesktophost\.msi/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string16_Google_Remote_Desktop_greyware_tool_keyword = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string17_Google_Remote_Desktop_greyware_tool_keyword = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string18_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/_\/oauthredirect/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string19_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string20_Google_Remote_Desktop_greyware_tool_keyword = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string21_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/access/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string22_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/support/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string23_Google_Remote_Desktop_greyware_tool_keyword = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule googleweblight_com_greyware_tool_keyword
 {
     meta:
@@ -4839,6 +4990,67 @@ rule iNinja_VPN_greyware_tool_keyword
 }
 
 
+rule interactsh_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'interactsh' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "interactsh"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C4
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string1_interactsh_greyware_tool_keyword = /\.exec.{0,1000}\.interact\.sh/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C7
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string2_interactsh_greyware_tool_keyword = /\.interactsh\.com/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C5
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string3_interactsh_greyware_tool_keyword = /\/interactsh\// nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C6
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string4_interactsh_greyware_tool_keyword = /\/interactsh\-client/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C15
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string5_interactsh_greyware_tool_keyword = /\/interactsh\-collaborator/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C8
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string6_interactsh_greyware_tool_keyword = /\/interactsh\-server/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C3
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string7_interactsh_greyware_tool_keyword = /curl.{0,1000}\.interact\.sh/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C4
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string8_interactsh_greyware_tool_keyword = /http\:\/\/.{0,1000}\.interact\.sh/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C10
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string9_interactsh_greyware_tool_keyword = /interactsh\s\-/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C9
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string10_interactsh_greyware_tool_keyword = /interactsh.{0,1000}\.exe/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C14
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string11_interactsh_greyware_tool_keyword = /interactsh.{0,1000}oast\./ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C11
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string12_interactsh_greyware_tool_keyword = /interactsh\-client\s\-/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C13
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string13_interactsh_greyware_tool_keyword = /interactsh\-server\s\-/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C12
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string14_interactsh_greyware_tool_keyword = /projectdiscovery\/interactsh/ nocase ascii wide
+        // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C2
+        // Reference: https://github.com/projectdiscovery/interactsh
+        $string15_interactsh_greyware_tool_keyword = /wget.{0,1000}\.interact\.sh/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule IP_Unblock_greyware_tool_keyword
 {
     meta:
@@ -5114,6 +5326,193 @@ rule ivy_greyware_tool_keyword
 }
 
 
+rule kaseya_VSA_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'kaseya VSA' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "kaseya VSA"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string1_kaseya_VSA_greyware_tool_keyword = /\spcmontask\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string2_kaseya_VSA_greyware_tool_keyword = /\sRemoteDesktop\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string3_kaseya_VSA_greyware_tool_keyword = /\sVSAX_x64\.msi/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string4_kaseya_VSA_greyware_tool_keyword = /\.vsax\.net/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string5_kaseya_VSA_greyware_tool_keyword = /\/pcmontask\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string6_kaseya_VSA_greyware_tool_keyword = /\/RemoteDesktop\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string7_kaseya_VSA_greyware_tool_keyword = /\/VSAX_x64\.msi/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string8_kaseya_VSA_greyware_tool_keyword = /\/vsxrc\-clip\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string9_kaseya_VSA_greyware_tool_keyword = /\\AppData\\Roaming\\freerdp/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string10_kaseya_VSA_greyware_tool_keyword = /\\AppData\\Roaming\\VSA\sX/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string11_kaseya_VSA_greyware_tool_keyword = /\\CurrentControlSet\\Services\\VSAX/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string12_kaseya_VSA_greyware_tool_keyword = /\\Kaseya\\PC\sMonitor\\/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string13_kaseya_VSA_greyware_tool_keyword = /\\PC\sMonitor\\Addons/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string14_kaseya_VSA_greyware_tool_keyword = /\\pcmontask\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string15_kaseya_VSA_greyware_tool_keyword = /\\pcmupdate\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string16_kaseya_VSA_greyware_tool_keyword = /\\RemoteDesktop\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string17_kaseya_VSA_greyware_tool_keyword = /\\Services\\EventLog\\Application\\VSA\sX/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string18_kaseya_VSA_greyware_tool_keyword = /\\Services\\EventLog\\Application\\VSAX/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string19_kaseya_VSA_greyware_tool_keyword = /\\SOFTWARE\\Kaseya\\/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string20_kaseya_VSA_greyware_tool_keyword = /\\TaskCache\\Tree\\VSA\sXServiceCheck/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string21_kaseya_VSA_greyware_tool_keyword = /\\VSA\sX\sManager\.lnk/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string22_kaseya_VSA_greyware_tool_keyword = /\\VSA\sX\sRemote\sControl\.lnk/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string23_kaseya_VSA_greyware_tool_keyword = /\\VSA\sX\sRemote\sControl\\/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string24_kaseya_VSA_greyware_tool_keyword = /\\VSA\sX\\watchdog\.bat/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string25_kaseya_VSA_greyware_tool_keyword = /\\VSA\sXServiceCheck/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string26_kaseya_VSA_greyware_tool_keyword = /\\VSAX\\working/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string27_kaseya_VSA_greyware_tool_keyword = /\\VSAX_x64\.msi/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string28_kaseya_VSA_greyware_tool_keyword = /\\vsxrc\-clip\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string29_kaseya_VSA_greyware_tool_keyword = /KASEYA\sHOLDINGS\sINC\./ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string30_kaseya_VSA_greyware_tool_keyword = /PCMonitorCfg\.dll/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string31_kaseya_VSA_greyware_tool_keyword = /PCMonitorClient\.dll/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string32_kaseya_VSA_greyware_tool_keyword = /PCMonitorEng\.dll/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string33_kaseya_VSA_greyware_tool_keyword = /PCMonitorManager\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string34_kaseya_VSA_greyware_tool_keyword = /PCMonitorManager\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string35_kaseya_VSA_greyware_tool_keyword = /PCMONITORMANAGER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string36_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string37_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.exe/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string38_kaseya_VSA_greyware_tool_keyword = /PCMONITORSRV\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string39_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.InstallState/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string40_kaseya_VSA_greyware_tool_keyword = /PCMonitorTypes\.dll/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string41_kaseya_VSA_greyware_tool_keyword = /pcmontask\.exe\s/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string42_kaseya_VSA_greyware_tool_keyword = /PCMONTASK\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string43_kaseya_VSA_greyware_tool_keyword = /pcmrdp\-client\.dll/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string44_kaseya_VSA_greyware_tool_keyword = /Program\sFiles\\VSA\sX\\/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string45_kaseya_VSA_greyware_tool_keyword = /ProgramData\\Kaseya\\/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string46_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop\.exe\s/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string47_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop_x64\s\(1\)\.msi/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string48_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop_x64\.msi/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string49_kaseya_VSA_greyware_tool_keyword = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string50_kaseya_VSA_greyware_tool_keyword = /SC\s\sQUERYEX\s\"VSAX\"/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string51_kaseya_VSA_greyware_tool_keyword = /\'ServiceName\'\>VSA\sX\<\/Data\>/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string52_kaseya_VSA_greyware_tool_keyword = /\'ServiceName\'\>VSAX\<\/Data\>/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string53_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sManager	\'/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string54_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sRemote\sControl\'/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string55_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sService\'/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string56_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sUser\sAgent\'/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string57_kaseya_VSA_greyware_tool_keyword = /vsxrc\-client\.dll/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule ldapsearch_greyware_tool_keyword
 {
     meta:
@@ -5209,6 +5608,184 @@ rule locate_greyware_tool_keyword
         // Description: Find sensitive files
         // Reference: N/A
         $string1_locate_greyware_tool_keyword = /locate\spassword\s\|\smore/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule LogMeIn_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'LogMeIn' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "LogMeIn"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string1_LogMeIn_greyware_tool_keyword = /\.console\.gotoassist\.com/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string2_LogMeIn_greyware_tool_keyword = /\.remoteview\.logmein\.com/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string3_LogMeIn_greyware_tool_keyword = /\/LMI_Rescue\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string4_LogMeIn_greyware_tool_keyword = /\/LMIRTechConsole\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string5_LogMeIn_greyware_tool_keyword = /\\AppData\\Local\\.{0,1000}\\rescue\.log/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string6_LogMeIn_greyware_tool_keyword = /\\AppData\\Local\\LMIR.{0,1000}\.tmp\.bat/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string7_LogMeIn_greyware_tool_keyword = /\\AppData\\Local\\LogMeIn\sRescue\sApplet\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string8_LogMeIn_greyware_tool_keyword = /\\AppData\\LocalLow\\LogMeIn\sRescue\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string9_LogMeIn_greyware_tool_keyword = /\\LMI_Rescue\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string10_LogMeIn_greyware_tool_keyword = /\\lmi_rescue_srv\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string11_LogMeIn_greyware_tool_keyword = /\\LMIGuardianEvt\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string12_LogMeIn_greyware_tool_keyword = /\\LMIR.{0,1000}\.tmp\\rarcc\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string13_LogMeIn_greyware_tool_keyword = /\\LMIRescue\-.{0,1000}\.clog/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string14_LogMeIn_greyware_tool_keyword = /\\LMIRescue\-.{0,1000}\.connlog/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string15_LogMeIn_greyware_tool_keyword = /\\LMIRescueCOL\.log/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string16_LogMeIn_greyware_tool_keyword = /\\LMIRescueMqttMessages_.{0,1000}\.dat/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string17_LogMeIn_greyware_tool_keyword = /\\LMIRescueUpdater\.log/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string18_LogMeIn_greyware_tool_keyword = /\\LMIRhook\.000\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string19_LogMeIn_greyware_tool_keyword = /\\lmirtechconsole\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string20_LogMeIn_greyware_tool_keyword = /\\LMIRTechConsole\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string21_LogMeIn_greyware_tool_keyword = /\\LMITrs\-.{0,1000}\.trs/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string22_LogMeIn_greyware_tool_keyword = /\\LogMeIn\sRescue\sApplet\\LMIR/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string23_LogMeIn_greyware_tool_keyword = /\\LogMeIn\sRescue\sApplet\\LMIR/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string24_LogMeIn_greyware_tool_keyword = /\\LogMeIn\sRescue\sAVI\sCodec\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string25_LogMeIn_greyware_tool_keyword = /\\logmein\srescue\stechnician\sconsole\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string26_LogMeIn_greyware_tool_keyword = /\\LogMeIn\\Dumps\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string27_LogMeIn_greyware_tool_keyword = /\\LogMeInRescue_ipc/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string28_LogMeIn_greyware_tool_keyword = /\\LogMeInRescue_rarc_r_/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string29_LogMeIn_greyware_tool_keyword = /\\LogMeInRescue_rarc_w_/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string30_LogMeIn_greyware_tool_keyword = /\\LogMeInRescueTechnicianConsole_x64/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string31_LogMeIn_greyware_tool_keyword = /\\ProgramData\\LogMeIn\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string32_LogMeIn_greyware_tool_keyword = /\\ractrlkeyhook\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string33_LogMeIn_greyware_tool_keyword = /\\RescueWinRTLib\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string34_LogMeIn_greyware_tool_keyword = /\\RescueWinRTLib\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string35_LogMeIn_greyware_tool_keyword = /\\Root\\InventoryApplicationFile\\support\-logmeinr/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string36_LogMeIn_greyware_tool_keyword = /\\RunOnce\\.{0,1000}LogMeInRescue_/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string37_LogMeIn_greyware_tool_keyword = /\\Software\\LogMeInRescue\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string38_LogMeIn_greyware_tool_keyword = /\\Start\sMenu\\Programs\\LogMeIn\sRescue\\/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string39_LogMeIn_greyware_tool_keyword = /\\Start\sMenu\\Programs\\LogMeIn/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string40_LogMeIn_greyware_tool_keyword = /\<Data\>LogMeIn\,\sInc\.\<\/Data\>/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string41_LogMeIn_greyware_tool_keyword = /9d2ce0345f4ee5798a49a8a13e33c7502a2ac655/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string42_LogMeIn_greyware_tool_keyword = /control\..{0,1000}\.logmeinrescue\.com/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string43_LogMeIn_greyware_tool_keyword = /control\.rsc\-app.{0,1000}\.logmeinrescue\.com/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string44_LogMeIn_greyware_tool_keyword = /https\:\/\/secure\.logmeinrescue\.com\/R\?i\=2\&Code\=/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string45_LogMeIn_greyware_tool_keyword = /https\:\/\/secure\.logmeinrescue\.com\/TechnicianConsole\/Launch/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string46_LogMeIn_greyware_tool_keyword = /LMI_RescueRC\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string47_LogMeIn_greyware_tool_keyword = /LMIGuardianDll\.dll/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string48_LogMeIn_greyware_tool_keyword = /LMIGuardianSvc\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string49_LogMeIn_greyware_tool_keyword = /LogMeIn\sRescue\sTechnician\sConsole\.lnk/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string50_LogMeIn_greyware_tool_keyword = /LogMeInRescueTechnicianConsoleApp\.msi/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string51_LogMeIn_greyware_tool_keyword = /Support\-LogMeInRescue\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string52_LogMeIn_greyware_tool_keyword = /Support\-LogMeInRescue\.exe/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string53_LogMeIn_greyware_tool_keyword = /SUPPORT\-LOGMEINRESCUE\.EXE\-/ nocase ascii wide
+        // Description: LogMeIn is a legitimate remote support software that allows IT and customer support teams to remotely access and control devices to provide support - abused by threat actors 
+        // Reference: https://www.logmein.com
+        $string54_LogMeIn_greyware_tool_keyword = /turn\.console\.gotoassist\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -5928,7 +6505,7 @@ rule netsh_greyware_tool_keyword
         // Description: The actor has used the following commands to enable port forwarding [T1090] on the host
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string6_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
-        // Description:  attempt to remove port proxy configurations
+        // Description: attempt to remove port proxy configurations
         // Reference: https://media.defense.gov/2024/Feb/07/2003389936/-1/-1/0/JOINT-GUIDANCE-IDENTIFYING-AND-MITIGATING-LOTL.PDF
         $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
@@ -5996,6 +6573,250 @@ rule netstat_greyware_tool_keyword
         // Description: Adversaries may attempt to execute recon commands
         // Reference: N/A
         $string3_netstat_greyware_tool_keyword = /NETSTAT\.EXE.{0,1000}\s\-ano/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule NetSupport_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'NetSupport' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "NetSupport"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string1_NetSupport_greyware_tool_keyword = /\s\/EV\"NetSupport\sSchool\"/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string2_NetSupport_greyware_tool_keyword = /\/nspowershell\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string3_NetSupport_greyware_tool_keyword = /\/nssadmui\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string4_NetSupport_greyware_tool_keyword = /\/pcictlui\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string5_NetSupport_greyware_tool_keyword = /\/PCIDEPLY\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string6_NetSupport_greyware_tool_keyword = /\/Win7Taskbar\.dll/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string7_NetSupport_greyware_tool_keyword = /\\ADM\sTemplates\\ADMX\\.{0,1000}\.admx/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string8_NetSupport_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\NSM\.LIC/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string9_NetSupport_greyware_tool_keyword = /\\AppData\\Roaming\\.{0,1000}\\remote\.nsm/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string10_NetSupport_greyware_tool_keyword = /\\AppData\\Roaming\\NetSupport\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string11_NetSupport_greyware_tool_keyword = /\\NETSUP\~1\\PCIShellExt64\.dll/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string12_NetSupport_greyware_tool_keyword = /\\NetSupport\sLtd\\Client32/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string13_NetSupport_greyware_tool_keyword = /\\NetSupport\sLtd\\PCICTL/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string14_NetSupport_greyware_tool_keyword = /\\netsupport\smanager\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string15_NetSupport_greyware_tool_keyword = /\\NetSupport\sSchool\sConsole/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string16_NetSupport_greyware_tool_keyword = /\\NetSupport\sSchool\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string17_NetSupport_greyware_tool_keyword = /\\NetSupport\sSchool\\NetSupport/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string18_NetSupport_greyware_tool_keyword = /\\nspowershell\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string19_NetSupport_greyware_tool_keyword = /\\nssadmui\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string20_NetSupport_greyware_tool_keyword = /\\pcicfgui_client\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string21_NetSupport_greyware_tool_keyword = /\\pciconn\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string22_NetSupport_greyware_tool_keyword = /\\PCICTL\\ConfigList\\Standard\\UI\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string23_NetSupport_greyware_tool_keyword = /\\pcictlui\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string24_NetSupport_greyware_tool_keyword = /\\PCIDEPLY\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string25_NetSupport_greyware_tool_keyword = /\\PCINSSCD\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string26_NetSupport_greyware_tool_keyword = /\\PCINSSUI\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string27_NetSupport_greyware_tool_keyword = /\\PCISCRUI\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string28_NetSupport_greyware_tool_keyword = /\\PCIShellExt64\.dll/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string29_NetSupport_greyware_tool_keyword = /\\Scripts\\CreateRegKey\.scp/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string30_NetSupport_greyware_tool_keyword = /\\Scripts\\DirLst\.log/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string31_NetSupport_greyware_tool_keyword = /\\Scripts\\DirLst\.scp/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string32_NetSupport_greyware_tool_keyword = /\\Scripts\\DrvSize\.scp/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string33_NetSupport_greyware_tool_keyword = /\\Scripts\\writetofile\.scp/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string34_NetSupport_greyware_tool_keyword = /\\Software\\NetSupport\sLtd\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string35_NetSupport_greyware_tool_keyword = /\\Start\sMenu\\Programs\\NetSupport/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string36_NetSupport_greyware_tool_keyword = /\\Win7Taskbar\.dll/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string37_NetSupport_greyware_tool_keyword = /_NetSupport_NetSupport\sManager_/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string38_NetSupport_greyware_tool_keyword = /\=NetSupport\sClient_deleteme/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string39_NetSupport_greyware_tool_keyword = /\>NetSupport\sClient\sApplication\<\// nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string40_NetSupport_greyware_tool_keyword = /\>NETSUPPORT\sLTD\.\<\// nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string41_NetSupport_greyware_tool_keyword = /\>NetSupport\sLtd\<\// nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string42_NetSupport_greyware_tool_keyword = /\>NetSupport\sRemote\sControl\<\// nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string43_NetSupport_greyware_tool_keyword = /\>NetSupport\sremote\sControl\<\// nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string44_NetSupport_greyware_tool_keyword = /activate\.netsupportsoftware\.com/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string45_NetSupport_greyware_tool_keyword = /Company\'\>NetSupport\sLtd\<\// nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string46_NetSupport_greyware_tool_keyword = /geo\.netsupportsoftware\.com/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string47_NetSupport_greyware_tool_keyword = /HKCR\\nsm\\shell\\open\\command/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string48_NetSupport_greyware_tool_keyword = /HKCR\\NSScriptFile\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string49_NetSupport_greyware_tool_keyword = /HKLM\\System\\CurrentControlSet\\Services\\Client32/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string50_NetSupport_greyware_tool_keyword = /https\:\/\/nsproducts\.azureedge\.net\/nsm\-.{0,1000}\/NetSupport/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string51_NetSupport_greyware_tool_keyword = /NetSupport\sAudio\sSample\sSource\sFilter/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string52_NetSupport_greyware_tool_keyword = /NetSupport\sBitmap\sSource\sFilter/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string53_NetSupport_greyware_tool_keyword = /NetSupport\sManager\s\-\-\sInstallation\s/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string54_NetSupport_greyware_tool_keyword = /NetSupport\sManager\s\(1\)\.msi/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string55_NetSupport_greyware_tool_keyword = /NetSupport\sManager\.msi/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string56_NetSupport_greyware_tool_keyword = /NetSupport\%20Manager\.msi/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string57_NetSupport_greyware_tool_keyword = /netsupport.{0,1000}\\PCISA\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string58_NetSupport_greyware_tool_keyword = /netsupport.{0,1000}\\runscrip\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string59_NetSupport_greyware_tool_keyword = /netsupport.{0,1000}\\supporttool\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string60_NetSupport_greyware_tool_keyword = /NetSupport_Client_machine\.adml/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string61_NetSupport_greyware_tool_keyword = /NetSupport_Control_Machine\.adml/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string62_NetSupport_greyware_tool_keyword = /NSM_Control_Machine\.adm/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string63_NetSupport_greyware_tool_keyword = /pcicfgui_client\.exe.{0,1000}\\Client32\.ini/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string64_NetSupport_greyware_tool_keyword = /program\sfiles.{0,1000}\\netsupport\\/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string65_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sClient\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string66_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sControl\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string67_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sDeploy\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string68_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sGateway\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string69_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sGroup\sLeader\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string70_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sRun\sScript\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string71_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sScript\sEditor\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string72_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sScripting\sAgent\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string73_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sTech\sConsole\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string74_NetSupport_greyware_tool_keyword = /\'RuleName\'\>NetSupport\sTutor\</ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string75_NetSupport_greyware_tool_keyword = /WindowsStoreAppExporter\.exe/ nocase ascii wide
+        // Description: NetSupport Manager is a remote access tool that can be used legitimately for IT management but has also been abused  by adversaries for remote system control and surveillance
+        // Reference: https://www.netsupportmanager.com/
+        $string76_NetSupport_greyware_tool_keyword = /winst64\.exe.{0,1000}\s\/q\s\/q\s\/ex\s\/i/ nocase ascii wide
 
     condition:
         any of them
@@ -6722,45 +7543,48 @@ rule powershell_greyware_tool_keyword
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
         $string36_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        // Description: exclude exe file extensions from AV detections
+        // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
+        $string37_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string37_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
+        $string38_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string38_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string39_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string39_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string40_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string40_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string41_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string42_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string42_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string43_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string44_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string45_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string46_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string46_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
+        $string47_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string47_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
+        $string48_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string48_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string49_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string49_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -7111,6 +7935,220 @@ rule psloggedon_greyware_tool_keyword
         // Description: PsLoggedOn is an applet that displays both the locally logged on users and users logged on via resources for either the local computer. or a remote one
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/psloggedon
         $string2_psloggedon_greyware_tool_keyword = /PsLoggedon64\.exe/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Pulseway_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Pulseway' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Pulseway"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string1_Pulseway_greyware_tool_keyword = /\s\<Data\>Received\sRequest\sRun\scommand\s.{0,1000}\<\/Data\>/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string2_Pulseway_greyware_tool_keyword = /\sPCMonitorManager\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string3_Pulseway_greyware_tool_keyword = /\sPCMonitorSrv\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string4_Pulseway_greyware_tool_keyword = /\spulseway_x64\.deb/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string5_Pulseway_greyware_tool_keyword = /\sPulseway_x64\.msi/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string6_Pulseway_greyware_tool_keyword = /\spulseway_x86\.deb/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string7_Pulseway_greyware_tool_keyword = /\/etc\/pulseway\/config\.xml/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string8_Pulseway_greyware_tool_keyword = /\/PCMonitorManager\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string9_Pulseway_greyware_tool_keyword = /\/PCMonitorSrv\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string10_Pulseway_greyware_tool_keyword = /\/pcmrdp\-client\.dll/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string11_Pulseway_greyware_tool_keyword = /\/pulseway_x64\.deb/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string12_Pulseway_greyware_tool_keyword = /\/Pulseway_x64\.msi/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string13_Pulseway_greyware_tool_keyword = /\/pulseway_x86\.deb/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string14_Pulseway_greyware_tool_keyword = /\/systemd\/system\/pulseway\.service/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string15_Pulseway_greyware_tool_keyword = /\/usr\/sbin\/pulseway/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string16_Pulseway_greyware_tool_keyword = /\/usr\/sbin\/pulsewayd/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string17_Pulseway_greyware_tool_keyword = /\\AppData\\Roaming\\.{0,1000}\\RemoteDesktop\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string18_Pulseway_greyware_tool_keyword = /\\AppData\\Roaming\\.{0,1000}\\uac\.tmp/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string19_Pulseway_greyware_tool_keyword = /\\MMSOFT\sDesign\\PC\sMonitor/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string20_Pulseway_greyware_tool_keyword = /\\MMSOFT\sDesign\\Pulseway\\/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string21_Pulseway_greyware_tool_keyword = /\\PCMonitorManager\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string22_Pulseway_greyware_tool_keyword = /\\PCMonitorSrv\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string23_Pulseway_greyware_tool_keyword = /\\PCMonitorTypes\.dll/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string24_Pulseway_greyware_tool_keyword = /\\pcmrdp\-client\.dll/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string25_Pulseway_greyware_tool_keyword = /\\pcmupdate\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string26_Pulseway_greyware_tool_keyword = /\\pcmupdate\.exe\.config/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string27_Pulseway_greyware_tool_keyword = /\\Pulseway\sRemote\sControl\\/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string28_Pulseway_greyware_tool_keyword = /\\Pulseway\\/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string29_Pulseway_greyware_tool_keyword = /\\pulseway_x64\.deb/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string30_Pulseway_greyware_tool_keyword = /\\Pulseway_x64\.msi/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string31_Pulseway_greyware_tool_keyword = /\\pulseway_x86\.deb/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string32_Pulseway_greyware_tool_keyword = /\\PulsewayServiceCheck/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string33_Pulseway_greyware_tool_keyword = /\\pwyrc\-agent\.dll/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string34_Pulseway_greyware_tool_keyword = /\\pwy\-rd\\shell\\open\\command/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string35_Pulseway_greyware_tool_keyword = /\\RemoteDesktop_x64\.msi/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string36_Pulseway_greyware_tool_keyword = /\\SOFTWARE\\Microsoft\\Tracing\\PCMonitorSrv_RAS/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string37_Pulseway_greyware_tool_keyword = /\\Tasks\\PulsewayServiceCheck/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string38_Pulseway_greyware_tool_keyword = /\<Data\>Pulseway\sRemote\sControl\<\/Data\>/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string39_Pulseway_greyware_tool_keyword = /\<Data\>Received\sRequest\sExecute\sautomation\s.{0,1000}\sscript\s.{0,1000}\sfrom\sdevice\sId/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string40_Pulseway_greyware_tool_keyword = /\<Data\>Received\sRequest\sGet\sRD\spool\sscore\s.{0,1000}pulseway\.com\/remote/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string41_Pulseway_greyware_tool_keyword = /\<Provider\sName\=\"PC\sMonitor\"\s\/\>/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string42_Pulseway_greyware_tool_keyword = /\<Provider\sName\=\"Pulseway\"\s\/\>/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string43_Pulseway_greyware_tool_keyword = /https\:\/\/.{0,1000}\.pulseway\.com\/app\/main\// nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string44_Pulseway_greyware_tool_keyword = /Pulseway\s\-\-\sInstallation\scompleted\ssuccessfully/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string45_Pulseway_greyware_tool_keyword = /Pulseway\s\-\-\sRemoval\scompleted\ssuccessfully/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string46_Pulseway_greyware_tool_keyword = /Pulseway\sRemote\sControl\s\-\-\sInstallation\scompleted\ssuccessfully/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string47_Pulseway_greyware_tool_keyword = /Pulseway\sRemote\sControl\.lnk/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string48_Pulseway_greyware_tool_keyword = /pulseway_x64\.pkg\.tar\.xz/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string49_Pulseway_greyware_tool_keyword = /pwyrc\-clip\.exe/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string50_Pulseway_greyware_tool_keyword = /rd\-asia\-au\-1\.pulseway\.com/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string51_Pulseway_greyware_tool_keyword = /rd\-eu\-de\-1\.pulseway\.com/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string52_Pulseway_greyware_tool_keyword = /rd\-eu\-ie\-1\.pulseway\.com/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string53_Pulseway_greyware_tool_keyword = /rd\-us\-east\-1\.pulseway\.com/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string54_Pulseway_greyware_tool_keyword = /rd\-us\-east\-2\.pulseway\.com/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string55_Pulseway_greyware_tool_keyword = /rd\-us\-west\-1\.pulseway\.com/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string56_Pulseway_greyware_tool_keyword = /Received\sRequest\sRun\sPowerShell\scommand\s\'.{0,1000}\'\sfrom\sdevice\sId/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string57_Pulseway_greyware_tool_keyword = /RemoteDesktop\.exe.{0,1000}pwy\-rd\:\?token\=/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string58_Pulseway_greyware_tool_keyword = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string59_Pulseway_greyware_tool_keyword = /service\spulseway\sstart/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string60_Pulseway_greyware_tool_keyword = /service\spulseway\sstop/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string61_Pulseway_greyware_tool_keyword = /ServiceName\"\>Pulseway\<\/Data\>/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string62_Pulseway_greyware_tool_keyword = /systemctl\sstart\spulseway/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string63_Pulseway_greyware_tool_keyword = /systemctl\sstatus\spulseway/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string64_Pulseway_greyware_tool_keyword = /systemctl\sstop\spulseway/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string65_Pulseway_greyware_tool_keyword = /systemprofile\\AppData\\Roaming\\freerdp\\server/ nocase ascii wide
+        // Description: Pulseway - remote monitoring and management tool designed for IT administrators to monitor and manage their IT systems and infrastructure remotely - abused by attackers
+        // Reference: https://www.pulseway.com/
+        $string66_Pulseway_greyware_tool_keyword = /www\.pulseway\.com\/download\// nocase ascii wide
 
     condition:
         any of them
@@ -7708,12 +8746,12 @@ rule reg_greyware_tool_keyword
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string19_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
-        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
-        // Reference: https://github.com/ice-wzl/wmiexec2
-        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: Check if LSASS is running in PPL
         // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
-        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
+        // Reference: https://github.com/ice-wzl/wmiexec2
+        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string22_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
@@ -7777,6 +8815,427 @@ rule reg_greyware_tool_keyword
 }
 
 
+rule RemotePC_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'RemotePC' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "RemotePC"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string1_RemotePC_greyware_tool_keyword = /\s\/f\s\/im\sRemotePCS/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string2_RemotePC_greyware_tool_keyword = /\screate\sRPCService\sstart\=/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string3_RemotePC_greyware_tool_keyword = /\screate\sViewerService\sstart\=auto/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string4_RemotePC_greyware_tool_keyword = /\s\-i\sremotepc\.deb/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string5_RemotePC_greyware_tool_keyword = /\sRemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string6_RemotePC_greyware_tool_keyword = /\sremotepclauncher\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string7_RemotePC_greyware_tool_keyword = /\sremotepcuiu\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string8_RemotePC_greyware_tool_keyword = /\srpcdownloader\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string9_RemotePC_greyware_tool_keyword = /\srpcperfviewer\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string10_RemotePC_greyware_tool_keyword = /\sRPCWinXP\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string11_RemotePC_greyware_tool_keyword = /\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string12_RemotePC_greyware_tool_keyword = /\/remotepc\.deb/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string13_RemotePC_greyware_tool_keyword = /\/RemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string14_RemotePC_greyware_tool_keyword = /\/RemotePC\.lnk/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string15_RemotePC_greyware_tool_keyword = /\/RemotePC\.tmp/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string16_RemotePC_greyware_tool_keyword = /\/remotepclauncher\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string17_RemotePC_greyware_tool_keyword = /\/remotepcuiu\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string18_RemotePC_greyware_tool_keyword = /\/RpcDND_Console\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string19_RemotePC_greyware_tool_keyword = /\/rpcdownloader\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string20_RemotePC_greyware_tool_keyword = /\/RPCFireWallRule\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string21_RemotePC_greyware_tool_keyword = /\/rpcperfviewer\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string22_RemotePC_greyware_tool_keyword = /\/RPCProxyLatency\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string23_RemotePC_greyware_tool_keyword = /\/viewerhostkeypopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string24_RemotePC_greyware_tool_keyword = /\\Control\\Print\\Monitors\\REMOTEPCPRINTER/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string25_RemotePC_greyware_tool_keyword = /\\CurrentVersion\\App\sPaths\\RemotePCPerformance/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string26_RemotePC_greyware_tool_keyword = /\\CurrentVersion\\Devices\\RemotePC\sPrinter/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string27_RemotePC_greyware_tool_keyword = /\\Print\\Printers\\RemotePC\sPrinter\\/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string28_RemotePC_greyware_tool_keyword = /\\program\sfiles\s\(x86\)\\remotepc\\remotepcperformance\\/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string29_RemotePC_greyware_tool_keyword = /\\RemotePC\sPerformance\sHost\\/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string30_RemotePC_greyware_tool_keyword = /\\RemotePC\.Common\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string31_RemotePC_greyware_tool_keyword = /\\RemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string32_RemotePC_greyware_tool_keyword = /\\RemotePC\.lnk/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string33_RemotePC_greyware_tool_keyword = /\\RemotePC\.tmp/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string34_RemotePC_greyware_tool_keyword = /\\RemotePC\\.{0,1000}\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string35_RemotePC_greyware_tool_keyword = /\\RemotePCDDriver\.inf/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string36_RemotePC_greyware_tool_keyword = /\\remotepclauncher\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string37_RemotePC_greyware_tool_keyword = /\\RemotePCPDF\.conf/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string38_RemotePC_greyware_tool_keyword = /\\RemotePCPrinter\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string39_RemotePC_greyware_tool_keyword = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string40_RemotePC_greyware_tool_keyword = /\\RemotePCPSCRIPT\./ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string41_RemotePC_greyware_tool_keyword = /\\RemotePCUDE\.sys/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string42_RemotePC_greyware_tool_keyword = /\\remotepcuiu\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string43_RemotePC_greyware_tool_keyword = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string44_RemotePC_greyware_tool_keyword = /\\RpcApp\\RPCCodecEngine\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string45_RemotePC_greyware_tool_keyword = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string46_RemotePC_greyware_tool_keyword = /\\RPCCertificate\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string47_RemotePC_greyware_tool_keyword = /\\RPCClipboard\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string48_RemotePC_greyware_tool_keyword = /\\RPCConfig\.ini/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string49_RemotePC_greyware_tool_keyword = /\\RPCCoreViewerL\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string50_RemotePC_greyware_tool_keyword = /\\RpcDND_Console\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string51_RemotePC_greyware_tool_keyword = /\\rpcdownloader\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string52_RemotePC_greyware_tool_keyword = /\\RPCDownloaderLogFile\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string53_RemotePC_greyware_tool_keyword = /\\RPCDragDrop\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string54_RemotePC_greyware_tool_keyword = /\\RPCFireWallRule\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string55_RemotePC_greyware_tool_keyword = /\\RPCPerformanceService\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string56_RemotePC_greyware_tool_keyword = /\\rpcperfviewer\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string57_RemotePC_greyware_tool_keyword = /\\RPCPing\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string58_RemotePC_greyware_tool_keyword = /\\RPCPreUninstall\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string59_RemotePC_greyware_tool_keyword = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string60_RemotePC_greyware_tool_keyword = /\\RPCProxyLatency\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string61_RemotePC_greyware_tool_keyword = /\\RPCSettings\.ini/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string62_RemotePC_greyware_tool_keyword = /\\RpcStickyNotes\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string63_RemotePC_greyware_tool_keyword = /\\RPCSuite_.{0,1000}_Inc\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string64_RemotePC_greyware_tool_keyword = /\\Schedule\\TaskCache\\Tree\\RemotePC/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string65_RemotePC_greyware_tool_keyword = /\\Tools\\Ninja\.WebSockets\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string66_RemotePC_greyware_tool_keyword = /\\Tracing\\RemotePCLauncher_/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string67_RemotePC_greyware_tool_keyword = /\\Tracing\\RemotePCUIU/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string68_RemotePC_greyware_tool_keyword = /\\TransferClient\.exe\.config/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string69_RemotePC_greyware_tool_keyword = /\\TransferServer\.exe\.config/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string70_RemotePC_greyware_tool_keyword = /\\viewerhostkeypopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string71_RemotePC_greyware_tool_keyword = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string72_RemotePC_greyware_tool_keyword = /\\WOW6432Node\\RemotePC/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string73_RemotePC_greyware_tool_keyword = /download\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string74_RemotePC_greyware_tool_keyword = /HKCR\\REMOTEPC/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string75_RemotePC_greyware_tool_keyword = /ip\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string76_RemotePC_greyware_tool_keyword = /login\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string77_RemotePC_greyware_tool_keyword = /net\sstart\sRPCPerformanceService/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string78_RemotePC_greyware_tool_keyword = /program\sfiles\s\(x86\)\\remotepc\\/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string79_RemotePC_greyware_tool_keyword = /ProgramData\\RemotePC\sPerformance/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string80_RemotePC_greyware_tool_keyword = /ProgramData\\RemotePC/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string81_RemotePC_greyware_tool_keyword = /RemotePC\s\(1\)\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string82_RemotePC_greyware_tool_keyword = /RemotePC\sPerformance\sPrinter\.url/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string83_RemotePC_greyware_tool_keyword = /RemotePC\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string84_RemotePC_greyware_tool_keyword = /RemotePC\.WebSockets\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string85_RemotePC_greyware_tool_keyword = /RemotePC\\REMOTE\~2\.DLL/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string86_RemotePC_greyware_tool_keyword = /RemotePCBlackScreenApp\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string87_RemotePC_greyware_tool_keyword = /RemotePCCopyPaste\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string88_RemotePC_greyware_tool_keyword = /RemotePCDesktop\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string89_RemotePC_greyware_tool_keyword = /RemotePCDesktop\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string90_RemotePC_greyware_tool_keyword = /RemotePCHDDesktop\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string91_RemotePC_greyware_tool_keyword = /RemotePCHDService\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string92_RemotePC_greyware_tool_keyword = /remotepclauncher\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string93_RemotePC_greyware_tool_keyword = /RemotePCModules\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string94_RemotePC_greyware_tool_keyword = /RemotePCPerformanceWebLauncher\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string95_RemotePC_greyware_tool_keyword = /RemotePCPerformanceWebLauncher\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string96_RemotePC_greyware_tool_keyword = /RemotePCPrinter\.exe\.config/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string97_RemotePC_greyware_tool_keyword = /RemotePCPrinting\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string98_RemotePC_greyware_tool_keyword = /RemotePCPrintView\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string99_RemotePC_greyware_tool_keyword = /RemotePCProxys\.dat/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string100_RemotePC_greyware_tool_keyword = /RemotePCService\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string101_RemotePC_greyware_tool_keyword = /RemotePCService\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string102_RemotePC_greyware_tool_keyword = /RemotePCService_2\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string103_RemotePC_greyware_tool_keyword = /RemotePCShortcut\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string104_RemotePC_greyware_tool_keyword = /RemotePCSuite\.Model\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string105_RemotePC_greyware_tool_keyword = /RemotePCSuite\.Service\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string106_RemotePC_greyware_tool_keyword = /remotepcuiu\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string107_RemotePC_greyware_tool_keyword = /RpcApp.{0,1000}TransferClient\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string108_RemotePC_greyware_tool_keyword = /RpcApp.{0,1000}TransferServer\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string109_RemotePC_greyware_tool_keyword = /rpcdownloader\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string110_RemotePC_greyware_tool_keyword = /RPCDownloaderLogFile\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string111_RemotePC_greyware_tool_keyword = /RPCFireWallRule\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string112_RemotePC_greyware_tool_keyword = /RPCFireWallRulelogfile\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string113_RemotePC_greyware_tool_keyword = /RPCKeyMouseHandler\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string114_RemotePC_greyware_tool_keyword = /RPCPerformanceHealthCheck/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string115_RemotePC_greyware_tool_keyword = /rpcperformanceservice\.exe	/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string116_RemotePC_greyware_tool_keyword = /RPCPerformanceService\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string117_RemotePC_greyware_tool_keyword = /rpcperfviewer\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string118_RemotePC_greyware_tool_keyword = /RPCPerfViewer\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string119_RemotePC_greyware_tool_keyword = /rpcprinterdownloader\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string120_RemotePC_greyware_tool_keyword = /RPCProxyLatency\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string121_RemotePC_greyware_tool_keyword = /RPCsuiteLaunch\.txt/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string122_RemotePC_greyware_tool_keyword = /rule\sname\=\"TransferServer\"/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string123_RemotePC_greyware_tool_keyword = /sc\s\sdelete\s\"RPCService\"/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string124_RemotePC_greyware_tool_keyword = /sc\s\sstart\s\"RPCService\"/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string125_RemotePC_greyware_tool_keyword = /sc\s\sstop\s\"RPCService\"/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string126_RemotePC_greyware_tool_keyword = /sc\screate\sRPCService\sstart\=auto/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string127_RemotePC_greyware_tool_keyword = /sc\sdelete\sViewerService/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string128_RemotePC_greyware_tool_keyword = /sc\sstart\sViewerService/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string129_RemotePC_greyware_tool_keyword = /sc\sstop\sViewerService/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string130_RemotePC_greyware_tool_keyword = /StartRPCPerformanceService/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string131_RemotePC_greyware_tool_keyword = /StartRPCPerformanceServiceOnStart/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string132_RemotePC_greyware_tool_keyword = /static\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string133_RemotePC_greyware_tool_keyword = /Uninstall\sRemotePC\.lnk/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string134_RemotePC_greyware_tool_keyword = /viewerhostkeypopup\.exe\s/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string135_RemotePC_greyware_tool_keyword = /web1\.remotepc\.com/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule ren_greyware_tool_keyword
 {
     meta:
@@ -7790,6 +9249,31 @@ rule ren_greyware_tool_keyword
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
         $string1_ren_greyware_tool_keyword = /ren\sC\:\\Windows\\System32\\amsi\.dll\s.{0,1000}\.dll/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule requestbin_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'requestbin.net' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "requestbin.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://requestbin.net
+        $string1_requestbin_net_greyware_tool_keyword = /\.d\.requestbin\.net/ nocase ascii wide
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://requestbin.net
+        $string2_requestbin_net_greyware_tool_keyword = /http\:\/\/requestbin\.net\/r\// nocase ascii wide
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://requestbin.net
+        $string3_requestbin_net_greyware_tool_keyword = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
 
     condition:
         any of them
@@ -8396,34 +9880,37 @@ rule ScreenConnect_greyware_tool_keyword
         $string39_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.Server\.dll/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string40_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string40_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.Service\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string41_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
+        $string41_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string42_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.WINDOWSCLIENT\..{0,1000}\.pf/ nocase ascii wide
+        $string42_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsBackstageShell\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string43_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
+        $string43_ScreenConnect_greyware_tool_keyword = /SCREENCONNECT\.WINDOWSCLIENT\..{0,1000}\.pf/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string44_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsInstaller\.dll/ nocase ascii wide
+        $string44_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsClient\.exe/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string45_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.msi/ nocase ascii wide
+        $string45_ScreenConnect_greyware_tool_keyword = /ScreenConnect\.WindowsInstaller\.dll/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string46_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.tar\.gz/ nocase ascii wide
+        $string46_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.msi/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string47_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.zip/ nocase ascii wide
+        $string47_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.tar\.gz/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string48_ScreenConnect_greyware_tool_keyword = /ScreenConnect_.{0,1000}_Release\.zip/ nocase ascii wide
         // Description: control remote servers - abused by threat actors
         // Reference: screenconnect.com
-        $string48_ScreenConnect_greyware_tool_keyword = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
+        $string49_ScreenConnect_greyware_tool_keyword = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string49_ScreenConnect_greyware_tool_keyword = /\-web\.screenconnect\.com/ nocase ascii wide
+        $string50_ScreenConnect_greyware_tool_keyword = /\-web\.screenconnect\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -8658,6 +10145,328 @@ rule shred_greyware_tool_keyword
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
         $string5_shred_greyware_tool_keyword = /shred\s\-\-zero/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule SimpleHelp_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'SimpleHelp' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "SimpleHelp"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string1_SimpleHelp_greyware_tool_keyword = /\"SimpleHelp\sRemote\sPrinter\"/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string2_SimpleHelp_greyware_tool_keyword = /\/simplehelper64\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string3_SimpleHelp_greyware_tool_keyword = /\\JWrapper\-SimpleHelp\sRemote\sWork/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string4_SimpleHelp_greyware_tool_keyword = /\\JWrapper\-SimpleHelp\sTechnician/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string5_SimpleHelp_greyware_tool_keyword = /\\JWrapper\-SimpleHelp\sTechnician\\/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string6_SimpleHelp_greyware_tool_keyword = /\\Programs\\SimpleHelp\sRemote\sWork\"/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string7_SimpleHelp_greyware_tool_keyword = /\\Programs\\SimpleHelp\sTechnician/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string8_SimpleHelp_greyware_tool_keyword = /\\remote\saccess\ssession\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string9_SimpleHelp_greyware_tool_keyword = /\\remote\saccess\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string10_SimpleHelp_greyware_tool_keyword = /\\Remote\sAccessEmbedExample\.html/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string11_SimpleHelp_greyware_tool_keyword = /\\Remote\sAccess\-java\-online\.jar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string12_SimpleHelp_greyware_tool_keyword = /\\remote\ssupport\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string13_SimpleHelp_greyware_tool_keyword = /\\Remote\sSupportEmbedExample\.html/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string14_SimpleHelp_greyware_tool_keyword = /\\remoteaccess\-jar\-with\-dependencies\.jar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string15_SimpleHelp_greyware_tool_keyword = /\\SafeBoot\\Network\\SimpleHelp\sServer/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string16_SimpleHelp_greyware_tool_keyword = /\\Services\\SimpleHelp\sServer/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string17_SimpleHelp_greyware_tool_keyword = /\\simplegateway\.service\"/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string18_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\sTechnicianEmbedExample\.html/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string19_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\.RemoteWork\.127_0_0_1/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string20_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\.Technician\.127_0_0_1/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string21_SimpleHelp_greyware_tool_keyword = /\\simplehelper64\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string22_SimpleHelp_greyware_tool_keyword = /\\simplehelp\-rw\\shell/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string23_SimpleHelp_greyware_tool_keyword = /\\simplehelpuninstall\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string24_SimpleHelp_greyware_tool_keyword = /\\SimpleService\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string25_SimpleHelp_greyware_tool_keyword = /\\StopSimpleGatewayService\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string26_SimpleHelp_greyware_tool_keyword = /\\winpty\-agent64\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string27_SimpleHelp_greyware_tool_keyword = /bin\\Remote\sAccessLauncher\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string28_SimpleHelp_greyware_tool_keyword = /Elevate.{0,1000}\\elev_win\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string29_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\sLauncher\"/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string30_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\sUpdater\"/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string31_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\"/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string32_SimpleHelp_greyware_tool_keyword = /Manage\sRemote\sAccess\sService\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string33_SimpleHelp_greyware_tool_keyword = /Program\sFiles\\SimpleHelp/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string34_SimpleHelp_greyware_tool_keyword = /ProgramData\\JWrapper\-Remote\sAccess\\.{0,1000}\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string35_SimpleHelp_greyware_tool_keyword = /Remote\sAccessECompatibility\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string36_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32arm\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string37_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32arm\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string38_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string39_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string40_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64arm\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string41_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64arm\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string42_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string43_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string44_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-intel\-offline\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string45_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-intel\-online\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string46_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-offline\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string47_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-online\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string48_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows32\-offline\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string49_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows32\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string50_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows64\-offline\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string51_SimpleHelp_greyware_tool_keyword = /remote\saccess\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string52_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string53_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-java\-online\.jar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string54_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32arm\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string55_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32arm\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string56_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string57_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string58_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64arm\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string59_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64arm\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string60_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string61_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string62_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-intel\-offline\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string63_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-intel\-online\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string64_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-offline\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string65_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-online\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string66_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows32\-offline\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string67_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows32\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string68_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows64\-offline\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string69_SimpleHelp_greyware_tool_keyword = /remote\ssupport\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string70_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string71_SimpleHelp_greyware_tool_keyword = /remote\swork\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string72_SimpleHelp_greyware_tool_keyword = /Remote\sWork\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string73_SimpleHelp_greyware_tool_keyword = /SimpleHelp\s\-\ssimple\-help\.com/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string74_SimpleHelp_greyware_tool_keyword = /simplehelp\sremote\swork\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string75_SimpleHelp_greyware_tool_keyword = /simplehelp\sremote\sworkwinlauncher\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string76_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sRemote\sWorkWinLauncher\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string77_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string78_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnician\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string79_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-java\-online\.jar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string80_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32arm\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string81_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32arm\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string82_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string83_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string84_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64arm\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string85_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64arm\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string86_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64\-offline\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string87_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64\-online\.tar/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string88_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-intel\-offline\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string89_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-intel\-online\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string90_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-offline\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string91_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-online\.dmg/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string92_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows32\-offline\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string93_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows32\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string94_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows64\-offline\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string95_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnician\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string96_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows64\-online\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string97_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnicianwinlauncher\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string98_SimpleHelp_greyware_tool_keyword = /SimpleHelp\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string99_SimpleHelp_greyware_tool_keyword = /simplehelp\.technician\.127_0_0_1/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string100_SimpleHelp_greyware_tool_keyword = /SimpleHelp\-allplatforms\.zip/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string101_SimpleHelp_greyware_tool_keyword = /simplehelpcustomer\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string102_SimpleHelp_greyware_tool_keyword = /SimpleHelp\-install\-64\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -9196,18 +11005,24 @@ rule sudo_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: sudo on windows allowing privilege escalation
+        // Reference: https://www.tiraniddo.dev/2024/02/sudo-on-windows-quick-rundown.html
+        $string1_sudo_greyware_tool_keyword = /\.server_DoElevationRequest\(\(Get\-NtProcess\s\-ProcessId\s\$pid_sudo_greyware_tool_keyword\).{0,1000}\"cmd\.exe\".{0,1000}C\:\\\"/ nocase ascii wide
+        // Description: sudo on windows allowing privilege escalation
+        // Reference: https://www.tiraniddo.dev/2024/02/sudo-on-windows-quick-rundown.html
+        $string2_sudo_greyware_tool_keyword = /Connect\-RpcClient\s.{0,1000}\s\-EndpointPath\ssudo_elevate_4652/ nocase ascii wide
         // Description: Sudo Persistence via sudoers file
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1_sudo_greyware_tool_keyword = /echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
+        $string3_sudo_greyware_tool_keyword = /echo\s.{0,1000}\%sudo\s\sALL\=\(ALL\)\sNOPASSWD\:\sALL.{0,1000}\s\>\>\s\/etc\/sudoers/ nocase ascii wide
         // Description: access sensitive files by abusing sudo permissions
         // Reference: N/A
-        $string2_sudo_greyware_tool_keyword = /sudo\sapache2\s\-f\s\/etc\/shadow/ nocase ascii wide
+        $string4_sudo_greyware_tool_keyword = /sudo\sapache2\s\-f\s\/etc\/shadow/ nocase ascii wide
         // Description: abusing LD_LIBRARY_PATH sudo option  to escalade privilege
         // Reference: N/A
-        $string3_sudo_greyware_tool_keyword = /sudo\sLD_LIBRARY_PATH\=\.\sapache2/ nocase ascii wide
+        $string5_sudo_greyware_tool_keyword = /sudo\sLD_LIBRARY_PATH\=\.\sapache2/ nocase ascii wide
         // Description: abusinf LD_PREDLOAD option to escalade privilege
         // Reference: N/A
-        $string4_sudo_greyware_tool_keyword = /sudo\sLD_PRELOAD\=\/tmp\/preload\.so\sfind/ nocase ascii wide
+        $string6_sudo_greyware_tool_keyword = /sudo\sLD_PRELOAD\=\/tmp\/preload\.so\sfind/ nocase ascii wide
 
     condition:
         any of them
@@ -9272,100 +11087,100 @@ rule Supremo_greyware_tool_keyword
 
     strings:
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string1_Supremo_greyware_tool_keyword = /\sstart\sSupremoService/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string2_Supremo_greyware_tool_keyword = /\sSupremo\.exe/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string3_Supremo_greyware_tool_keyword = /\/Supremo\.exe/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string4_Supremo_greyware_tool_keyword = /\\\\\.\\pipe\\Supremo/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string5_Supremo_greyware_tool_keyword = /\\Control\\SafeBoot\\Network\\SupremoService/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string6_Supremo_greyware_tool_keyword = /\\CurrentControlSet\\Services\\SupremoService/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string7_Supremo_greyware_tool_keyword = /\\Program\sFiles\\Supremo\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string8_Supremo_greyware_tool_keyword = /\\ProgramData\\SupremoRemoteDesktop/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string9_Supremo_greyware_tool_keyword = /\\SOFTWARE\\Supremo\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string10_Supremo_greyware_tool_keyword = /\\Software\\Supremo\\Printer\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string11_Supremo_greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\Supremo\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string12_Supremo_greyware_tool_keyword = /\\Supremo\sRemote\sPrinter\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string13_Supremo_greyware_tool_keyword = /\\Supremo\.exe/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string14_Supremo_greyware_tool_keyword = /\\SUPREMO\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string15_Supremo_greyware_tool_keyword = /\\Supremo_Client_2/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string16_Supremo_greyware_tool_keyword = /\\Supremo_Helper_2/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string17_Supremo_greyware_tool_keyword = /\\Supremo_Service/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string18_Supremo_greyware_tool_keyword = /\\SupremoHelper\.exe/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string19_Supremo_greyware_tool_keyword = /\\SupremoRemoteDesktop\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string20_Supremo_greyware_tool_keyword = /\\Temp\\SupremoRemoteDesktop/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string21_Supremo_greyware_tool_keyword = /application\/x\-supremo/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string22_Supremo_greyware_tool_keyword = /HKCR\\supremo\\shell\\/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string23_Supremo_greyware_tool_keyword = /supremo\sremote\scontrol/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string24_Supremo_greyware_tool_keyword = /Supremo\.00\.Client\.log/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string25_Supremo_greyware_tool_keyword = /Supremo\.00\.FileTransfer\.log/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string26_Supremo_greyware_tool_keyword = /Supremo\.exe\s/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string27_Supremo_greyware_tool_keyword = /supremogw.{0,1000}\.nanosystems\.it/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string28_Supremo_greyware_tool_keyword = /supremohelper\.exe/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string29_Supremo_greyware_tool_keyword = /SupremoRemoteDesktop\\History\.txt/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string30_Supremo_greyware_tool_keyword = /SupremoService\.00\.Service\.log/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string31_Supremo_greyware_tool_keyword = /SupremoService\.exe/ nocase ascii wide
         // Description: Supremo - Remote access software
-        // Reference: 	https://www.supremocontrol.com
+        // Reference: https://www.supremocontrol.com
         $string32_Supremo_greyware_tool_keyword = /SupremoSystem\.exe/ nocase ascii wide
 
     condition:
@@ -11132,11 +12947,11 @@ rule vscode_greyware_tool_keyword
         // Description: Starts a reverse connection over global.rel.tunnels.api.visualstudio.com via websockets
         // Reference: https://badoption.eu/blog/2023/01/31/code_c2.html
         $string3_vscode_greyware_tool_keyword = /code\.exe\stunnel\s\-\-accept\-server\-license\-terms\s\-\-name\s/ nocase ascii wide
-        // Description: Starts a reverse connection over global.rel.tunnels.api.visualstudio.com via websockets
-        // Reference: https://badoption.eu/blog/2023/01/31/code_c2.html
-        $string4_vscode_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
         // Description: built-in port forwarding. This feature allows you to share locally running services over the internet to other people and devices.
         // Reference: https://twitter.com/code/status/1699869087071899669
+        $string4_vscode_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
+        // Description: Starts a reverse connection over global.rel.tunnels.api.visualstudio.com via websockets
+        // Reference: https://badoption.eu/blog/2023/01/31/code_c2.html
         $string5_vscode_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
 
     condition:
@@ -11286,6 +13101,37 @@ rule wbadmin_greyware_tool_keyword
         // Description: Wbadmin allows administrators to manage and automate backup and recovery operations in Windows systems. Adversaries may abuse wbadmin to manipulate backups and restore points as part of their evasion tactics. This can include deleting backup files. disabling backup tasks. or tampering with backup configurations to hinder recovery efforts and potentially erase traces of their malicious activities. By interfering with backups. adversaries can make it more challenging for defenders to restore systems and detect their presence.
         // Reference: N/A
         $string3_wbadmin_greyware_tool_keyword = /wbadmin\sDELETE\sSYSTEMSTATEBACKUP/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule webhook_site_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'webhook.site' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "webhook.site"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: test HTTP webhooks with this handy tool that displays requests instantly - abused by attacker for payload callback confirmation
+        // Reference: https://github.com/webhooksite/webhook.site
+        $string1_webhook_site_greyware_tool_keyword = /\/webhook\.site\.git/ nocase ascii wide
+        // Description: test HTTP webhooks with this handy tool that displays requests instantly - abused by attacker for payload callback confirmation
+        // Reference: https://github.com/webhooksite/webhook.site
+        $string2_webhook_site_greyware_tool_keyword = /\@email\.webhook\.site/ nocase ascii wide
+        // Description: test HTTP webhooks with this handy tool that displays requests instantly - abused by attacker for payload callback confirmation
+        // Reference: https://github.com/webhooksite/webhook.site
+        $string3_webhook_site_greyware_tool_keyword = /https\:\/\/webhook\.site\/.{0,1000}\-.{0,1000}\-.{0,1000}\-/ nocase ascii wide
+        // Description: test HTTP webhooks with this handy tool that displays requests instantly - abused by attacker for payload callback confirmation
+        // Reference: https://github.com/webhooksite/webhook.site
+        $string4_webhook_site_greyware_tool_keyword = /webhooksite\/webhook\.site/ nocase ascii wide
+        // Description: test HTTP webhooks with this handy tool that displays requests instantly - abused by attacker for payload callback confirmation
+        // Reference: https://github.com/webhooksite/webhook.site
+        $string5_webhook_site_greyware_tool_keyword = /whcli\sforward\s\-\-token\=.{0,1000}\-.{0,1000}\-.{0,1000}\s\-\-target\=https\:\/\/localhost/ nocase ascii wide
 
     condition:
         any of them
@@ -11790,207 +13636,249 @@ rule xmrig_greyware_tool_keyword
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
         $string8_xmrig_greyware_tool_keyword = /\s\-\-nicehash\s.{0,1000}\-\-coin\s/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
+        $string9_xmrig_greyware_tool_keyword = /\sset\sxmrig\sType\sSERVICE_WIN32_OWN_PROCESS/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string9_xmrig_greyware_tool_keyword = /\%USERPROFILE\%\\\\nssm\.zip/ nocase ascii wide
+        $string10_xmrig_greyware_tool_keyword = /\%USERPROFILE\%\\\\nssm\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string10_xmrig_greyware_tool_keyword = /\/xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
+        $string11_xmrig_greyware_tool_keyword = /\/xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string11_xmrig_greyware_tool_keyword = /\/xmrig\.exe/ nocase ascii wide
+        $string12_xmrig_greyware_tool_keyword = /\/xmrig\.exe/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string12_xmrig_greyware_tool_keyword = /\/xmrig\.git/ nocase ascii wide
+        $string13_xmrig_greyware_tool_keyword = /\/xmrig\.git/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string13_xmrig_greyware_tool_keyword = /\\c3pool\\\\miner\.bat/ nocase ascii wide
+        $string14_xmrig_greyware_tool_keyword = /\\c3pool\\\\miner\.bat/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string14_xmrig_greyware_tool_keyword = /\\c3pool\\config\.json/ nocase ascii wide
+        $string15_xmrig_greyware_tool_keyword = /\\c3pool\\config\.json/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string15_xmrig_greyware_tool_keyword = /\\WinRing0x64\.sys/ nocase ascii wide
+        $string16_xmrig_greyware_tool_keyword = /\\WinRing0x64\.sys/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string16_xmrig_greyware_tool_keyword = /\\xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
+        $string17_xmrig_greyware_tool_keyword = /\\xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string17_xmrig_greyware_tool_keyword = /\\xmrig\.exe/ nocase ascii wide
+        $string18_xmrig_greyware_tool_keyword = /\\xmrig\.exe/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string18_xmrig_greyware_tool_keyword = /\\xmrig\.log/ nocase ascii wide
+        $string19_xmrig_greyware_tool_keyword = /\\xmrig\.log/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string19_xmrig_greyware_tool_keyword = /\\xmrig_setup\\/ nocase ascii wide
+        $string20_xmrig_greyware_tool_keyword = /\\xmrig_setup\\/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string20_xmrig_greyware_tool_keyword = /\\xmrig\-6\.20\.0/ nocase ascii wide
+        $string21_xmrig_greyware_tool_keyword = /\\xmrig\-6\.20\.0/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string21_xmrig_greyware_tool_keyword = /\\xmrig\-master/ nocase ascii wide
+        $string22_xmrig_greyware_tool_keyword = /\\xmrig\-master/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string22_xmrig_greyware_tool_keyword = /\]\sCreating\sc3pool_miner\sservice/ nocase ascii wide
+        $string23_xmrig_greyware_tool_keyword = /\]\sCreating\sc3pool_miner\sservice/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string23_xmrig_greyware_tool_keyword = /\]\sLooking\sfor\sthe\slatest\sversion\sof\sMonero\sminer/ nocase ascii wide
+        $string24_xmrig_greyware_tool_keyword = /\]\sLooking\sfor\sthe\slatest\sversion\sof\sMonero\sminer/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string24_xmrig_greyware_tool_keyword = /\]\sRemoving\sprevious\sc3pool\sminer\s/ nocase ascii wide
+        $string25_xmrig_greyware_tool_keyword = /\]\sRemoving\sprevious\sc3pool\sminer\s/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string25_xmrig_greyware_tool_keyword = /\]\sRunning\sminer\sin\sthe\sbackground/ nocase ascii wide
+        $string26_xmrig_greyware_tool_keyword = /\]\sRunning\sminer\sin\sthe\sbackground/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string26_xmrig_greyware_tool_keyword = /08384f3f05ad85b2aa935dbd2e46a053cb0001b28bbe593dde2a8c4b822c2a7d/ nocase ascii wide
+        $string27_xmrig_greyware_tool_keyword = /08384f3f05ad85b2aa935dbd2e46a053cb0001b28bbe593dde2a8c4b822c2a7d/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string27_xmrig_greyware_tool_keyword = /0tZG9uYXRlLWxldmVsP/ nocase ascii wide
+        $string28_xmrig_greyware_tool_keyword = /0tZG9uYXRlLWxldmVsP/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string28_xmrig_greyware_tool_keyword = /3b5cbf0dddc3ef7e3af7d783baef315bf47be6ce11ff83455a2165befe6711f5/ nocase ascii wide
+        $string29_xmrig_greyware_tool_keyword = /3b5cbf0dddc3ef7e3af7d783baef315bf47be6ce11ff83455a2165befe6711f5/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string29_xmrig_greyware_tool_keyword = /4fe9647d6a8bf4790df0277283f9874385e0cd05f3008406ca5624aba8d78924/ nocase ascii wide
+        $string30_xmrig_greyware_tool_keyword = /4fe9647d6a8bf4790df0277283f9874385e0cd05f3008406ca5624aba8d78924/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string30_xmrig_greyware_tool_keyword = /5575c76987333427f74263e090910eae45817f0ede6b452d645fd5f9951210c9/ nocase ascii wide
+        $string31_xmrig_greyware_tool_keyword = /5575c76987333427f74263e090910eae45817f0ede6b452d645fd5f9951210c9/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string31_xmrig_greyware_tool_keyword = /5a6e7d5c10789763b0b06442dbc7f723f8ea9aec1402abedf439c6801a8d86f2/ nocase ascii wide
+        $string32_xmrig_greyware_tool_keyword = /5a6e7d5c10789763b0b06442dbc7f723f8ea9aec1402abedf439c6801a8d86f2/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string32_xmrig_greyware_tool_keyword = /99e3e313b62bb8b55e2637fc14a78adb6f33632a3c722486416252e2630cfdf6/ nocase ascii wide
+        $string33_xmrig_greyware_tool_keyword = /99e3e313b62bb8b55e2637fc14a78adb6f33632a3c722486416252e2630cfdf6/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string33_xmrig_greyware_tool_keyword = /C3Pool\smining\ssetup\sscript\sv/ nocase ascii wide
+        $string34_xmrig_greyware_tool_keyword = /C3Pool\smining\ssetup\sscript\sv/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string34_xmrig_greyware_tool_keyword = /C3Pool\/xmrig_setup/ nocase ascii wide
+        $string35_xmrig_greyware_tool_keyword = /C3Pool\/xmrig_setup/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string35_xmrig_greyware_tool_keyword = /c3pool_miner\sservice/ nocase ascii wide
+        $string36_xmrig_greyware_tool_keyword = /c3pool_miner\sservice/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string36_xmrig_greyware_tool_keyword = /c3pool_miner\.bat/ nocase ascii wide
+        $string37_xmrig_greyware_tool_keyword = /c3pool_miner\.bat/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string37_xmrig_greyware_tool_keyword = /c3pool_miner\.service/ nocase ascii wide
+        $string38_xmrig_greyware_tool_keyword = /c3pool_miner\.service/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string38_xmrig_greyware_tool_keyword = /c3pool_miner\.sh/ nocase ascii wide
+        $string39_xmrig_greyware_tool_keyword = /c3pool_miner\.sh/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string39_xmrig_greyware_tool_keyword = /c3pool_miner\\/ nocase ascii wide
+        $string40_xmrig_greyware_tool_keyword = /c3pool_miner\\/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string40_xmrig_greyware_tool_keyword = /cpulimit\s\-e\sxmrig\s/ nocase ascii wide
+        $string41_xmrig_greyware_tool_keyword = /cpulimit\s\-e\sxmrig\s/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string41_xmrig_greyware_tool_keyword = /dd7fef5e3594eb18dd676e550e128d4b64cc5a469ff6954a677dc414265db468/ nocase ascii wide
+        $string42_xmrig_greyware_tool_keyword = /dd7fef5e3594eb18dd676e550e128d4b64cc5a469ff6954a677dc414265db468/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string42_xmrig_greyware_tool_keyword = /Description\=Monero\sminer\sservice/ nocase ascii wide
+        $string43_xmrig_greyware_tool_keyword = /Description\=Monero\sminer\sservice/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string44_xmrig_greyware_tool_keyword = /donate\.ssl\.xmrig\.com/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string43_xmrig_greyware_tool_keyword = /donate\.v2\.xmrig\.com\:3333/ nocase ascii wide
+        $string45_xmrig_greyware_tool_keyword = /donate\.v2\.xmrig\.com\:3333/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string46_xmrig_greyware_tool_keyword = /donate\.xmrig\.com/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string44_xmrig_greyware_tool_keyword = /Downloading.{0,1000}\%MINER_LOCATION\%/ nocase ascii wide
+        $string47_xmrig_greyware_tool_keyword = /Downloading.{0,1000}\%MINER_LOCATION\%/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string45_xmrig_greyware_tool_keyword = /e1ff2208b3786cac801ffb470b9475fbb3ced74eb503bfde7aa7f22af113989d/ nocase ascii wide
+        $string48_xmrig_greyware_tool_keyword = /e1ff2208b3786cac801ffb470b9475fbb3ced74eb503bfde7aa7f22af113989d/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string49_xmrig_greyware_tool_keyword = /fee\.xmrig\.com/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string46_xmrig_greyware_tool_keyword = /ff6e67d725ee64b4607dc6490a706dc9234c708cff814477de52d3beb781c6a1/ nocase ascii wide
+        $string50_xmrig_greyware_tool_keyword = /ff6e67d725ee64b4607dc6490a706dc9234c708cff814477de52d3beb781c6a1/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string47_xmrig_greyware_tool_keyword = /github.{0,1000}\/xmrig\/xmrig/ nocase ascii wide
+        $string51_xmrig_greyware_tool_keyword = /github.{0,1000}\/xmrig\/xmrig/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string48_xmrig_greyware_tool_keyword = /gpg_keys\/xmrig\.asc/ nocase ascii wide
+        $string52_xmrig_greyware_tool_keyword = /gpg_keys\/xmrig\.asc/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string49_xmrig_greyware_tool_keyword = /https\:\/\/c3pool\.com\/\#\// nocase ascii wide
+        $string53_xmrig_greyware_tool_keyword = /https\:\/\/c3pool\.com\/\#\// nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string50_xmrig_greyware_tool_keyword = /killall\sxmrig/ nocase ascii wide
+        $string54_xmrig_greyware_tool_keyword = /killall\sxmrig/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string51_xmrig_greyware_tool_keyword = /LS1kb25hdGUtbGV2ZWw9/ nocase ascii wide
+        $string55_xmrig_greyware_tool_keyword = /LS1kb25hdGUtbGV2ZWw9/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string52_xmrig_greyware_tool_keyword = /mining\sin\sbackground\swill\sbe\sstarted\susing\syour\sstartup\sdirectory\sscript\sand\sonly\swork\swhen\syour\sare\slogged\sin\sthis\shost/ nocase ascii wide
+        $string56_xmrig_greyware_tool_keyword = /mining\sin\sbackground\swill\sbe\sstarted\susing\syour\sstartup\sdirectory\sscript\sand\sonly\swork\swhen\syour\sare\slogged\sin\sthis\shost/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string53_xmrig_greyware_tool_keyword = /Mining\swill\shappen\sto\s.{0,1000}\swallet/ nocase ascii wide
+        $string57_xmrig_greyware_tool_keyword = /Mining\swill\shappen\sto\s.{0,1000}\swallet/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string54_xmrig_greyware_tool_keyword = /Monero\sminer\sis\salready\srunning\sin\sthe\sbackground/ nocase ascii wide
+        $string58_xmrig_greyware_tool_keyword = /Monero\sminer\sis\salready\srunning\sin\sthe\sbackground/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
+        $string59_xmrig_greyware_tool_keyword = /nssm\sset\sxmrig\sAppNoConsole\s1/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string55_xmrig_greyware_tool_keyword = /offline_miner_setup\.zip/ nocase ascii wide
+        $string60_xmrig_greyware_tool_keyword = /offline_miner_setup\.zip/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string61_xmrig_greyware_tool_keyword = /randomx\.xmrig\.com/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
+        $string62_xmrig_greyware_tool_keyword = /set\sxmrig\sstart/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string56_xmrig_greyware_tool_keyword = /setup\sand\srun\sin\sbackground\sMonero\sCPU\sminer/ nocase ascii wide
+        $string63_xmrig_greyware_tool_keyword = /setup\sand\srun\sin\sbackground\sMonero\sCPU\sminer/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string57_xmrig_greyware_tool_keyword = /solo_mine_example\.cmd/ nocase ascii wide
+        $string64_xmrig_greyware_tool_keyword = /solo_mine_example\.cmd/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string58_xmrig_greyware_tool_keyword = /src\/xmrig\.cpp/ nocase ascii wide
+        $string65_xmrig_greyware_tool_keyword = /src\/xmrig\.cpp/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string59_xmrig_greyware_tool_keyword = /src\\xmrig\.cpp/ nocase ascii wide
+        $string66_xmrig_greyware_tool_keyword = /src\\xmrig\.cpp/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string60_xmrig_greyware_tool_keyword = /start\sdoing\sstuff\:\spreparing\sminer/ nocase ascii wide
+        $string67_xmrig_greyware_tool_keyword = /start\sdoing\sstuff\:\spreparing\sminer/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string61_xmrig_greyware_tool_keyword = /support\@c3pool\.com/ nocase ascii wide
+        $string68_xmrig_greyware_tool_keyword = /support\@c3pool\.com/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string62_xmrig_greyware_tool_keyword = /WinRing0.{0,1000}WinRing0x64\.sys/ nocase ascii wide
+        $string69_xmrig_greyware_tool_keyword = /WinRing0.{0,1000}WinRing0x64\.sys/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string63_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-bionic\-x64\.tar\.gz/ nocase ascii wide
+        $string70_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-bionic\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string64_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-focal\-x64\.tar\.gz/ nocase ascii wide
+        $string71_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-focal\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string65_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-freebsd\-static\-x64\.tar\.gz/ nocase ascii wide
+        $string72_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-freebsd\-static\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string66_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
+        $string73_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-gcc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string67_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-static\-x64\.tar\.gz/ nocase ascii wide
+        $string74_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-static\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string68_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-x64\.tar\.gz/ nocase ascii wide
+        $string75_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-linux\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string69_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-arm64\.tar\.gz/ nocase ascii wide
+        $string76_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-arm64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string70_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-x64\.tar\.gz/ nocase ascii wide
+        $string77_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-macos\-x64\.tar\.gz/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string71_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-msvc\-win64\.zip/ nocase ascii wide
+        $string78_xmrig_greyware_tool_keyword = /xmrig\-.{0,1000}\-msvc\-win64\.zip/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string72_xmrig_greyware_tool_keyword = /xmrig\.exe\s\-/ nocase ascii wide
+        $string79_xmrig_greyware_tool_keyword = /xmrig\.exe\s\-/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
+        $string80_xmrig_greyware_tool_keyword = /xmrig\.service/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string73_xmrig_greyware_tool_keyword = /xmrig\.tar\.gz/ nocase ascii wide
+        $string81_xmrig_greyware_tool_keyword = /xmrig\.tar\.gz/ nocase ascii wide
         // Description: Auto setup scripts and pre-compiled xmr miner for c3pool.com pool
         // Reference: https://github.com/C3Pool/xmrig_setup/
-        $string74_xmrig_greyware_tool_keyword = /xmrig\.zip/ nocase ascii wide
+        $string82_xmrig_greyware_tool_keyword = /xmrig\.zip/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string83_xmrig_greyware_tool_keyword = /xmrminer\.cc/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string84_xmrig_greyware_tool_keyword = /xmrpool\.de/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string85_xmrig_greyware_tool_keyword = /xmrpool\.eu/ nocase ascii wide
         // Description: CPU/GPU cryptominer often used by attackers on compromised machines
         // Reference: https://github.com/xmrig/xmrig/
-        $string75_xmrig_greyware_tool_keyword = /xmrpool\.eu\:3333/ nocase ascii wide
+        $string86_xmrig_greyware_tool_keyword = /xmrpool\.eu\:3333/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string87_xmrig_greyware_tool_keyword = /xmrpool\.me/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string88_xmrig_greyware_tool_keyword = /xmrpool\.net/ nocase ascii wide
+        // Description: CPU/GPU cryptominer often used by attackers on compromised machines
+        // Reference: https://github.com/C3Pool/xmrig_setup/
+        $string89_xmrig_greyware_tool_keyword = /xmrpool\.xyz/ nocase ascii wide
 
     condition:
         any of them

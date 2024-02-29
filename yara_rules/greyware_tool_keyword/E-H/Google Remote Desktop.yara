@@ -43,40 +43,61 @@ rule Google_Remote_Desktop
         $string11 = /\\remoting_start_host\.exe/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string12 = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
+        $string12 = /\<Data\>Product\:\sChrome\sRemote\sDesktop\sHost/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string13 = /chrome\-remote\-desktop\.service/ nocase ascii wide
+        $string13 = /\<Provider\sName\=\"chromoting\"\s\/\>/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string14 = /chrome\-remote\-desktop_current_amd64\.deb/ nocase ascii wide
+        $string14 = /Channel\sIP\sfor\sclient\:\s.{0,1000}\@gmail\.com\/chromoting/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string15 = /chromeremotedesktophost\.msi/ nocase ascii wide
+        $string15 = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string16 = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
+        $string16 = /chrome\-remote\-desktop\.service/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string17 = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
+        $string17 = /chrome\-remote\-desktop_current_amd64\.deb/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string18 = /https\:\/\/remotedesktop\.google\.com\/_\/oauthredirect/ nocase ascii wide
+        $string18 = /chromeremotedesktophost\.msi/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string19 = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
+        $string19 = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string20 = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
+        $string20 = /\-Force\sStop\-Process\s\-Name\sremote_webauthn/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string21 = /remotedesktop\.google\.com\/access/ nocase ascii wide
+        $string21 = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string22 = /remotedesktop\.google\.com\/support/ nocase ascii wide
+        $string22 = /https\:\/\/remotedesktop\.google\.com\/_\/oauthredirect/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string23 = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
+        $string23 = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string24 = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string25 = /remotedesktop\.google\.com\/access/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string26 = /remotedesktop\.google\.com\/support/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string27 = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string28 = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host_uiaccess/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string29 = /Stop\-Process\s\-Force\s\-Name\sremoting_native_messaging_host/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string30 = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
 
     condition:
         any of them

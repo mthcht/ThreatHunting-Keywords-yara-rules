@@ -1464,6 +1464,112 @@ rule bloodhound_greyware_tool_keyword
 }
 
 
+rule Bomgar_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Bomgar' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Bomgar"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string1_Bomgar_greyware_tool_keyword = /\.beyondtrustcloud\.com\/session_complete/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string2_Bomgar_greyware_tool_keyword = /\/bomgar\-rep\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string3_Bomgar_greyware_tool_keyword = /\/bomgar\-rep\-installer\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string4_Bomgar_greyware_tool_keyword = /\/bomgar\-scc\-.{0,1000}\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string5_Bomgar_greyware_tool_keyword = /\/bomgar\-scc\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string6_Bomgar_greyware_tool_keyword = /\\appdata\\local\\bomgar\\bomgar\-rep\\/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string7_Bomgar_greyware_tool_keyword = /\\Bomgar\-enum_cp\-/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string8_Bomgar_greyware_tool_keyword = /\\bomgar\-rep\.cache\\/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string9_Bomgar_greyware_tool_keyword = /\\bomgar\-rep\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string10_Bomgar_greyware_tool_keyword = /\\bomgar\-rep\-installer\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string11_Bomgar_greyware_tool_keyword = /\\bomgar\-scc\-.{0,1000}\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string12_Bomgar_greyware_tool_keyword = /\\bomgar\-scc\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string13_Bomgar_greyware_tool_keyword = /\\BOMGAR\-SCC\.EXE\-/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string14_Bomgar_greyware_tool_keyword = /\\cbhook\-x86\.dll/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string15_Bomgar_greyware_tool_keyword = /\\CurrentVersion\\Run\\Bomgar\sSupport\sReconnect/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string16_Bomgar_greyware_tool_keyword = /\\CurrentVersion\\Uninstall\\Representative\sConsole\s\[eval\-/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string17_Bomgar_greyware_tool_keyword = /\\embedhook\-x64\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string18_Bomgar_greyware_tool_keyword = /\\embedhook\-x86\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string19_Bomgar_greyware_tool_keyword = /\\programdata\\bomgar\-scc\-/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string20_Bomgar_greyware_tool_keyword = /\>Remote\sSupport\sCustomer\sClient\<\/Data\>/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string21_Bomgar_greyware_tool_keyword = /\>Representative\sConsole\<\/Data\>/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string22_Bomgar_greyware_tool_keyword = /beyondtrustcloud\.com\\Software\\Qt6/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string23_Bomgar_greyware_tool_keyword = /bomgar\-rdp\.exe/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string24_Bomgar_greyware_tool_keyword = /\'Company\'\>BeyondTrust\<\/Data\>/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string25_Bomgar_greyware_tool_keyword = /\'Company\'\>bomgar\<\/Data\>/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string26_Bomgar_greyware_tool_keyword = /eval\-.{0,1000}\.beyondtrustcloud\.com/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string27_Bomgar_greyware_tool_keyword = /license\.bomgar\.com/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string28_Bomgar_greyware_tool_keyword = /\'TaskName\'\>\\Bomgar\sTask\s/ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string29_Bomgar_greyware_tool_keyword = /To\:\sAll\sRepresentatives\s\sFrom\:\sRemote\sSupport\s.{0,1000}\shas\sadded\sa\snote\sto\sthis\ssession\./ nocase ascii wide
+        // Description: Bomgar beyoundtrust Remote access software - abused by attackers
+        // Reference: https://www.beyondtrust.com/
+        $string30_Bomgar_greyware_tool_keyword = /\>Bomgar\sCorporation\<\/Data\>/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Browsec_VPN_greyware_tool_keyword
 {
     meta:
@@ -4329,40 +4435,61 @@ rule Google_Remote_Desktop_greyware_tool_keyword
         $string11_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_start_host\.exe/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string12_Google_Remote_Desktop_greyware_tool_keyword = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
+        $string12_Google_Remote_Desktop_greyware_tool_keyword = /\<Data\>Product\:\sChrome\sRemote\sDesktop\sHost/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string13_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop\.service/ nocase ascii wide
+        $string13_Google_Remote_Desktop_greyware_tool_keyword = /\<Provider\sName\=\"chromoting\"\s\/\>/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string14_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop_current_amd64\.deb/ nocase ascii wide
+        $string14_Google_Remote_Desktop_greyware_tool_keyword = /Channel\sIP\sfor\sclient\:\s.{0,1000}\@gmail\.com\/chromoting/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string15_Google_Remote_Desktop_greyware_tool_keyword = /chromeremotedesktophost\.msi/ nocase ascii wide
+        $string15_Google_Remote_Desktop_greyware_tool_keyword = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string16_Google_Remote_Desktop_greyware_tool_keyword = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
+        $string16_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop\.service/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string17_Google_Remote_Desktop_greyware_tool_keyword = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
+        $string17_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop_current_amd64\.deb/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string18_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/_\/oauthredirect/ nocase ascii wide
+        $string18_Google_Remote_Desktop_greyware_tool_keyword = /chromeremotedesktophost\.msi/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string19_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
+        $string19_Google_Remote_Desktop_greyware_tool_keyword = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string20_Google_Remote_Desktop_greyware_tool_keyword = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
+        $string20_Google_Remote_Desktop_greyware_tool_keyword = /\-Force\sStop\-Process\s\-Name\sremote_webauthn/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string21_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/access/ nocase ascii wide
+        $string21_Google_Remote_Desktop_greyware_tool_keyword = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string22_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/support/ nocase ascii wide
+        $string22_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/_\/oauthredirect/ nocase ascii wide
         // Description: Google Remote Desktop to access remote computers - abused by attackers
         // Reference: https://remotedesktop.google.com
-        $string23_Google_Remote_Desktop_greyware_tool_keyword = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
+        $string23_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string24_Google_Remote_Desktop_greyware_tool_keyword = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string25_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/access/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string26_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/support/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string27_Google_Remote_Desktop_greyware_tool_keyword = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string28_Google_Remote_Desktop_greyware_tool_keyword = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host_uiaccess/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string29_Google_Remote_Desktop_greyware_tool_keyword = /Stop\-Process\s\-Force\s\-Name\sremoting_native_messaging_host/ nocase ascii wide
+        // Description: Google Remote Desktop to access remote computers - abused by attackers
+        // Reference: https://remotedesktop.google.com
+        $string30_Google_Remote_Desktop_greyware_tool_keyword = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
 
     condition:
         any of them
@@ -4940,9 +5067,69 @@ rule icalcs_greyware_tool_keyword
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string1_icalcs_greyware_tool_keyword = /icacls\s\"C\:\\windows\\system32\\config\\SAM\"\s\/grant/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string2_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\(x86\)\\360\"\s.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string3_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\360safe.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string4_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\AVAST\sSoftware.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string5_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\AVG\".{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string6_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Avira.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string7_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Cezurity.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string8_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\COMODO.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string9_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Doctor\sWeb.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string10_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Enigma\sSoftware\sGroup.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string11_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\ESET.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string12_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\GRIZZLY\sAntivirus.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string13_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\grizzly.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string14_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Kaspersky\sLab.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string15_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Malwarebytes.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string16_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Malwarebytes.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string17_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\McAfee.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string18_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Norton.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string19_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\Panda\sSecurity.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string20_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\SpyHunter.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: malware behavior - modify the permissions on files or directories that match AV name
+        // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
+        $string21_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\SpyHunter.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string2_icalcs_greyware_tool_keyword = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
+        $string22_icalcs_greyware_tool_keyword = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
 
     condition:
         any of them
@@ -9230,6 +9417,259 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string135_RemotePC_greyware_tool_keyword = /web1\.remotepc\.com/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule RemoteUtilities_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'RemoteUtilities' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "RemoteUtilities"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string1_RemoteUtilities_greyware_tool_keyword = /\sConnection\s\#.{0,1000}\.\sConnection\sto\s\".{0,1000}\"\sestablished\.\sMode\:\s\<Remote\scontrol\>\./ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string2_RemoteUtilities_greyware_tool_keyword = /\sConnection\s\#.{0,1000}\.\sConnection\sto\s\".{0,1000}\"\.\sSecurity\scheck\s\-\sOK\.\sMode\:\s\s\<Inventory\smanager\>/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string3_RemoteUtilities_greyware_tool_keyword = /\sConnection\s\#.{0,1000}\.\sConnection\sto\s\".{0,1000}\"\.\sSecurity\scheck\s\-\sOK\.\sMode\:\s\<Command\s\(command\:\s.{0,1000}\)\>/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string4_RemoteUtilities_greyware_tool_keyword = /\sConnection\s\#.{0,1000}\.\sDirect\sconnection\sto\s.{0,1000}\s\(.{0,1000}\:5650\)\./ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string5_RemoteUtilities_greyware_tool_keyword = /\s\-name\:.{0,1000}\s\-password\:.{0,1000}\s\-remoteexecute\s\-filename/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string6_RemoteUtilities_greyware_tool_keyword = /\.remoteutilities\.com/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string7_RemoteUtilities_greyware_tool_keyword = /\/host\-7\.2\.2\.0\.msi/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string8_RemoteUtilities_greyware_tool_keyword = /\/rfusclient\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string9_RemoteUtilities_greyware_tool_keyword = /\/rutserv\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string10_RemoteUtilities_greyware_tool_keyword = /\/rutview\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string11_RemoteUtilities_greyware_tool_keyword = /\/usr\/bin\/r\-agent/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string12_RemoteUtilities_greyware_tool_keyword = /\/usr\/bin\/r\-viewer/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string13_RemoteUtilities_greyware_tool_keyword = /\/usr\/share\/applications\/r\-agent\.desktop/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string14_RemoteUtilities_greyware_tool_keyword = /\/usr\/share\/applications\/r\-viewer\.desktop/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string15_RemoteUtilities_greyware_tool_keyword = /\/VPDAgent\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string16_RemoteUtilities_greyware_tool_keyword = /\\.{0,1000}\-.{0,1000}\-.{0,1000}_rut\-.{0,1000}\.zip\.3bf/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string17_RemoteUtilities_greyware_tool_keyword = /\\.{0,1000}\-internet\-id\-log\.csv/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string18_RemoteUtilities_greyware_tool_keyword = /\\AppData\\Local\\Downloaded\sInstallations\\.{0,1000}\\server\-3\.3\.5\.0\.msi/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string19_RemoteUtilities_greyware_tool_keyword = /\\AppData\\Local\\Downloaded\sInstallations\\.{0,1000}\\viewer\-7\.2\.2\.0\.msi/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string20_RemoteUtilities_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\server\-3\.3\.5\.0\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string21_RemoteUtilities_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\server\-3\.3\.5\.0\.msi/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string22_RemoteUtilities_greyware_tool_keyword = /\\AppData\\Local\\Temp\\rutserv/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string23_RemoteUtilities_greyware_tool_keyword = /\\AppData\\Roaming\\Remote\sUtilities\sFiles/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string24_RemoteUtilities_greyware_tool_keyword = /\\CurrentControlSet\\Services\\MiniInternetIdService/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string25_RemoteUtilities_greyware_tool_keyword = /\\CurrentVersion\\Devices\\Remote\sUtilities\sPrinter/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string26_RemoteUtilities_greyware_tool_keyword = /\\drivers\\x64\\rupdui\.dll/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string27_RemoteUtilities_greyware_tool_keyword = /\\host\-7\.2\.2\.0\.msi/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string28_RemoteUtilities_greyware_tool_keyword = /\\InternetIdService\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string29_RemoteUtilities_greyware_tool_keyword = /\\InternetIdService_.{0,1000}\-.{0,1000}\-.{0,1000}\.txt/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string30_RemoteUtilities_greyware_tool_keyword = /\\Logs\\rut_log_.{0,1000}\.html/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string31_RemoteUtilities_greyware_tool_keyword = /\\Printers\\Remote\sUtilities\sPrinter\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string32_RemoteUtilities_greyware_tool_keyword = /\\ProgramData\\Remote\sUtilities/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string33_RemoteUtilities_greyware_tool_keyword = /\\remote\sutilities\s\-\shost\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string34_RemoteUtilities_greyware_tool_keyword = /\\Remote\sUtilities\s\-\sHost\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string35_RemoteUtilities_greyware_tool_keyword = /\\remote\sutilities\sagent\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string36_RemoteUtilities_greyware_tool_keyword = /\\Remote\sUtilities\sAgent\\Logs/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string37_RemoteUtilities_greyware_tool_keyword = /\\Remote\sUtilities\sFiles\\rdp_connections\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string38_RemoteUtilities_greyware_tool_keyword = /\\Remote\sUtilities\sServer\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string39_RemoteUtilities_greyware_tool_keyword = /\\Remote\sUtilities\\Logs/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string40_RemoteUtilities_greyware_tool_keyword = /\\Remote\sUtilities\\MiniInternetId/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string41_RemoteUtilities_greyware_tool_keyword = /\\rfusclient\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string42_RemoteUtilities_greyware_tool_keyword = /\\rutserv\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string43_RemoteUtilities_greyware_tool_keyword = /\\rutview\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string44_RemoteUtilities_greyware_tool_keyword = /\\ru\-viewer\-portable\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string45_RemoteUtilities_greyware_tool_keyword = /\\SOFTWARE\\Usoris\\Remote\sUtilities\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string46_RemoteUtilities_greyware_tool_keyword = /\\spool\\drivers\\x64\\rupd\./ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string47_RemoteUtilities_greyware_tool_keyword = /\\System32\\rupdpm\.dll/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string48_RemoteUtilities_greyware_tool_keyword = /\\Two\sPilots\\Agent\\Remote\sUtilities\sPrinter/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string49_RemoteUtilities_greyware_tool_keyword = /\\unidrv_rupd\.dll/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string50_RemoteUtilities_greyware_tool_keyword = /\\unidrv_rupd\.hlp/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string51_RemoteUtilities_greyware_tool_keyword = /\\unidrvui_rupd\.dll/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string52_RemoteUtilities_greyware_tool_keyword = /\\unires_vpd\.dll/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string53_RemoteUtilities_greyware_tool_keyword = /\\viewer\-portable\-7\.2\.2\.0\\/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string54_RemoteUtilities_greyware_tool_keyword = /\\VPDAgent\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string55_RemoteUtilities_greyware_tool_keyword = /\<a\shref\=\"rutils\:/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string56_RemoteUtilities_greyware_tool_keyword = /\<Data\>Product\:\sRemote\sUtilities\s\-\sHost\s\-\-\s/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string57_RemoteUtilities_greyware_tool_keyword = /\<Data\>Remote\sUtilities\s\-\sHost\<\/Data\>/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string58_RemoteUtilities_greyware_tool_keyword = /\<Data\>Remote\sUtilities\sServer\</ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string59_RemoteUtilities_greyware_tool_keyword = /\<Data\>Removed\sRemote\sUtilities\s\-\sHost\.\<\/Data\>/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string60_RemoteUtilities_greyware_tool_keyword = /\>Installed\sRemote\sUtilities\s\-\sViewer\./ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string61_RemoteUtilities_greyware_tool_keyword = /\>Installed\sRemote\sUtilities\sServer\.\<\// nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string62_RemoteUtilities_greyware_tool_keyword = /\>Product\:\sRemote\sUtilities\s\-\sViewer\s\-\-\s/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string63_RemoteUtilities_greyware_tool_keyword = /\>Product\:\sRemote\sUtilities\sServer\s\-\-\s/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string64_RemoteUtilities_greyware_tool_keyword = /\>Remote\sUtilities\s\-\sViewer\<\// nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string65_RemoteUtilities_greyware_tool_keyword = /InternetIdService\.exe/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string66_RemoteUtilities_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Common\sFiles\\Two\sPilots/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string67_RemoteUtilities_greyware_tool_keyword = /Remote\sUtilities\sPty\s\(Cy\)\sLtd\./ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string68_RemoteUtilities_greyware_tool_keyword = /RemoteAdmin\.RemoteUtilities/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string69_RemoteUtilities_greyware_tool_keyword = /rfusclient\.exe\s/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string70_RemoteUtilities_greyware_tool_keyword = /rutserv\.exe\s/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string71_RemoteUtilities_greyware_tool_keyword = /rutserv\.exe\s\// nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string72_RemoteUtilities_greyware_tool_keyword = /rutview\.exe\s/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string73_RemoteUtilities_greyware_tool_keyword = /rutview\.exe\s\-/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string74_RemoteUtilities_greyware_tool_keyword = /server\.remoteutilities\.com/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string75_RemoteUtilities_greyware_tool_keyword = /Trojan\.RemoteUtilitiesRAT/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string76_RemoteUtilities_greyware_tool_keyword = /Uninstall\sRemote\sUtilities\s\-\sViewer\.lnk/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string77_RemoteUtilities_greyware_tool_keyword = /Uninstall\sRemote\sUtilities\sServer\.lnk/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string78_RemoteUtilities_greyware_tool_keyword = /Uninstall\sRemote\sUtilities\.lnk/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string79_RemoteUtilities_greyware_tool_keyword = /update\.remoteutilities\.net/ nocase ascii wide
 
     condition:
         any of them
@@ -13917,6 +14357,235 @@ rule ZenMate_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_ZenMate_VPN_greyware_tool_keyword = /fdcgdnkidjaadafnichfpabhfomcebme/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Zoho_Assist_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Zoho Assist' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Zoho Assist"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string1_Zoho_Assist_greyware_tool_keyword = /\s\-altgw\s.{0,1000}\.zohoassist\.com\s/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string2_Zoho_Assist_greyware_tool_keyword = /\s\-ms\sassist\.zoho\.com\s\-p\s443/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string3_Zoho_Assist_greyware_tool_keyword = /\s\-rr_flag\s.{0,1000}\s\-group\s.{0,1000}\s\-fileTransferGateways\s.{0,1000}\.zohoassist\.com\s\-ADMINAGENT/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string4_Zoho_Assist_greyware_tool_keyword = /\sSELECT\sProcessId\sFROM\sWin32_Process\s.{0,1000}\sName\=\'ZAAudioClient\.exe\'/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string5_Zoho_Assist_greyware_tool_keyword = /\sZA_Connect\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string6_Zoho_Assist_greyware_tool_keyword = /\sZAAudioClient\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string7_Zoho_Assist_greyware_tool_keyword = /\sZAFileTransfer\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string8_Zoho_Assist_greyware_tool_keyword = /\sZAService\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string9_Zoho_Assist_greyware_tool_keyword = /\.zohoassist\.com\.cn/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string10_Zoho_Assist_greyware_tool_keyword = /\.zohoassist\.jp/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string11_Zoho_Assist_greyware_tool_keyword = /\/ZA_Connect\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string12_Zoho_Assist_greyware_tool_keyword = /\/ZAAudioClient\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string13_Zoho_Assist_greyware_tool_keyword = /\/ZAFileTransfer\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string14_Zoho_Assist_greyware_tool_keyword = /\/ZAService\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string15_Zoho_Assist_greyware_tool_keyword = /\\AppData\\Local\\ZohoMeeting\\/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string16_Zoho_Assist_greyware_tool_keyword = /\\CurrentControlSet\\Services\\Zoho\sAssist\-Remote\sSupport/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string17_Zoho_Assist_greyware_tool_keyword = /\\dctoolshardware\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string18_Zoho_Assist_greyware_tool_keyword = /\\InventoryApplicationFile\\zaservice\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string19_Zoho_Assist_greyware_tool_keyword = /\\log\\FileTransferWindowAppLog\.log/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string20_Zoho_Assist_greyware_tool_keyword = /\\Root\\InventoryApplicationFile\\za_connect\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string21_Zoho_Assist_greyware_tool_keyword = /\\RSTemp\\ZohoMeeting\\/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string22_Zoho_Assist_greyware_tool_keyword = /\\SafeBoot\\Network\\Zoho\sAssist\-Remote\sSupport/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string23_Zoho_Assist_greyware_tool_keyword = /\\SOFTWARE\\Zoho\sAssist/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string24_Zoho_Assist_greyware_tool_keyword = /\\ZA_Connect\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string25_Zoho_Assist_greyware_tool_keyword = /\\ZA_Upgrader/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string26_Zoho_Assist_greyware_tool_keyword = /\\ZAAudioClient\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string27_Zoho_Assist_greyware_tool_keyword = /\\ZAFileTransfer\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string28_Zoho_Assist_greyware_tool_keyword = /\\ZAService\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string29_Zoho_Assist_greyware_tool_keyword = /\\ZAudioClientPipe_.{0,1000}ServerReadPipe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string30_Zoho_Assist_greyware_tool_keyword = /\\ZAudioClientPipe_.{0,1000}ServerWritePipe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string31_Zoho_Assist_greyware_tool_keyword = /\\ZMAgent\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string32_Zoho_Assist_greyware_tool_keyword = /\\Zoho\sAssist\\Zoho\sAssist\sRemote\ssupport/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string33_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\.7z/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string34_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string35_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\\agent\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string36_Zoho_Assist_greyware_tool_keyword = /\\zohomeeting\\agent\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string37_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\\agent_ui\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string38_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\\Connect\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string39_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\\Connection\.conf/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string40_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\\log\\.{0,1000}\.log/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string41_Zoho_Assist_greyware_tool_keyword = /\\ZohoMeeting\\ViewerUI\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string42_Zoho_Assist_greyware_tool_keyword = /\\ZohoTray\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string43_Zoho_Assist_greyware_tool_keyword = /\\ZohoURS\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string44_Zoho_Assist_greyware_tool_keyword = /\\ZohoURSService\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string45_Zoho_Assist_greyware_tool_keyword = /_Classes\\zohoassistlaunchv2/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string46_Zoho_Assist_greyware_tool_keyword = /assist\.zoho\.com/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string47_Zoho_Assist_greyware_tool_keyword = /downloads\.zohocdn\.com/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string48_Zoho_Assist_greyware_tool_keyword = /downloads\.zohodl\.com\.cn/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string49_Zoho_Assist_greyware_tool_keyword = /gateway\.zohoassist\.com/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string50_Zoho_Assist_greyware_tool_keyword = /https\:\/\/.{0,1000}\.zoho\.com\/pconnect/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string51_Zoho_Assist_greyware_tool_keyword = /https\:\/\/.{0,1000}\.zohoassist\.com\/w_socket/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string52_Zoho_Assist_greyware_tool_keyword = /https\:\/\/assist\.zoho\.com\/assist\-join\?key\=/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string53_Zoho_Assist_greyware_tool_keyword = /https\:\/\/assist\.zoho\.com\/customer\-session\-details\?client_token\=/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string54_Zoho_Assist_greyware_tool_keyword = /https\:\/\/assist\.zoho\.com\/join\?join_source\=EMAIL_INVITE/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string55_Zoho_Assist_greyware_tool_keyword = /https\:\/\/assist\.zoho\.com\/join\-session\?key\=/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string56_Zoho_Assist_greyware_tool_keyword = /https\:\/\/assist\.zoho\.com\/org\// nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string57_Zoho_Assist_greyware_tool_keyword = /https\:\/\/assist\.zoho\.com\/viewer\-assist/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string58_Zoho_Assist_greyware_tool_keyword = /https\:\/\/pubsub\.zoho\.com\/.{0,1000}_deskUserPresence\/pubsub/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string59_Zoho_Assist_greyware_tool_keyword = /https\:\/\/us4\-wms6\.zoho\.com/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string60_Zoho_Assist_greyware_tool_keyword = /ProductName\:Zoho\%\%20Assist.{0,1000}\sapptype\:ATTENDEE/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string61_Zoho_Assist_greyware_tool_keyword = /program\sfiles\s\(x86\)\\zohomeeting/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string62_Zoho_Assist_greyware_tool_keyword = /\'ServiceName\'\>Zoho\sAssist\-Remote\sSupport/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string63_Zoho_Assist_greyware_tool_keyword = /turn\-.{0,1000}\.zohomeeting\.com/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string64_Zoho_Assist_greyware_tool_keyword = /ZA_Connect\.exe\s/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string65_Zoho_Assist_greyware_tool_keyword = /ZA_Connect\.exe\.ApplicationCompany/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string66_Zoho_Assist_greyware_tool_keyword = /ZAFileTransfer\.exe\s/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string67_Zoho_Assist_greyware_tool_keyword = /ZAService\.exe\s/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string68_Zoho_Assist_greyware_tool_keyword = /ZOHO\sCORPORATION\sPRIVATE\sLIMITED/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string69_Zoho_Assist_greyware_tool_keyword = /ZohoMeeting\.exe/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string70_Zoho_Assist_greyware_tool_keyword = /ZohoMeeting\\FileTransferSettings\.conf/ nocase ascii wide
+        // Description: Zoho Assist Remote access software - abused by attackers
+        // Reference: https://www.zoho.com/assist/
+        $string71_Zoho_Assist_greyware_tool_keyword = /ZohoMeeting\\Service\.Conf/ nocase ascii wide
 
     condition:
         any of them

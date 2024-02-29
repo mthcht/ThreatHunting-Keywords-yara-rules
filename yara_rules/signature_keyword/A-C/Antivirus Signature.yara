@@ -200,150 +200,156 @@ rule Antivirus_Signature
         // Description: Antiviurs signature_keyword for remote administration tools 
         // Reference: N/A
         $string64 = /RemAdm/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string65 = /RemoteAdmin\.RemoteUtilities/ nocase ascii wide
         // Description: Antiviurs signature_keyword for ransomware
         // Reference: https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
-        $string65 = /Rootkit\.Win64\./ nocase ascii wide
+        $string66 = /Rootkit\.Win64\./ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string66 = /SPR\/Ammyy\.R/ nocase ascii wide
+        $string67 = /SPR\/Ammyy\.R/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string67 = /SupportScam\:Win32/ nocase ascii wide
+        $string68 = /SupportScam\:Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string68 = /Tojan\:Win32\/Goodkit/ nocase ascii wide
+        $string69 = /Tojan\:Win32\/Goodkit/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string69 = /TROJ_ZIPBOMB\./ nocase ascii wide
+        $string70 = /TROJ_ZIPBOMB\./ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string70 = /Trojan\.Linux/ nocase ascii wide
+        $string71 = /Trojan\.Linux/ nocase ascii wide
+        // Description: RemoteUtilities Remote Access softwares
+        // Reference: https://www.remoteutilities.com/
+        $string72 = /Trojan\.RemoteUtilitiesRAT/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string71 = /Trojan\.Win32\..{0,1000}\./ nocase ascii wide
+        $string73 = /Trojan\.Win32\..{0,1000}\./ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string72 = /Trojan\.Win64/ nocase ascii wide
+        $string74 = /Trojan\.Win64/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string73 = /Trojan\.WinGo/ nocase ascii wide
+        $string75 = /Trojan\.WinGo/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string74 = /Trojan\/Win32/ nocase ascii wide
+        $string76 = /Trojan\/Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string75 = /Trojan\/Win64/ nocase ascii wide
+        $string77 = /Trojan\/Win64/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string76 = /Trojan\:PowerShell/ nocase ascii wide
+        $string78 = /Trojan\:PowerShell/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string77 = /Trojan\:PowerShell\/BatLoader/ nocase ascii wide
+        $string79 = /Trojan\:PowerShell\/BatLoader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string78 = /Trojan\:Python\/BatLoader/ nocase ascii wide
+        $string80 = /Trojan\:Python\/BatLoader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string79 = /Trojan\:Win32/ nocase ascii wide
+        $string81 = /Trojan\:Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string80 = /Trojan\:Win32\/Batloader/ nocase ascii wide
+        $string82 = /Trojan\:Win32\/Batloader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string81 = /Trojan\:Win32\/EugenLoader/ nocase ascii wide
+        $string83 = /Trojan\:Win32\/EugenLoader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string82 = /Trojan\:Win32\/Gozi/ nocase ascii wide
+        $string84 = /Trojan\:Win32\/Gozi/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string83 = /Trojan\:Win32\/IceId/ nocase ascii wide
+        $string85 = /Trojan\:Win32\/IceId/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string84 = /Trojan\:Win32\/Smokeloader/ nocase ascii wide
+        $string86 = /Trojan\:Win32\/Smokeloader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string85 = /Trojan\:Win32\/Trickbot/ nocase ascii wide
+        $string87 = /Trojan\:Win32\/Trickbot/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string86 = /Trojan\:Win64/ nocase ascii wide
+        $string88 = /Trojan\:Win64/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string87 = /Trojan\:Win64\/IcedID/ nocase ascii wide
+        $string89 = /Trojan\:Win64\/IcedID/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string88 = /Trojan\:Win64\/IceId/ nocase ascii wide
+        $string90 = /Trojan\:Win64\/IceId/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string89 = /Trojan\:Win64\/Lumma/ nocase ascii wide
+        $string91 = /Trojan\:Win64\/Lumma/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string90 = /TrojanDownloader\:PowerShell\/EugenLoader/ nocase ascii wide
+        $string92 = /TrojanDownloader\:PowerShell\/EugenLoader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string91 = /TrojanDownloader\:PowerShell\/Malgent/ nocase ascii wide
+        $string93 = /TrojanDownloader\:PowerShell\/Malgent/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string92 = /TrojanDropper\:PowerShell\// nocase ascii wide
+        $string94 = /TrojanDropper\:PowerShell\// nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string93 = /TrojanDropper\:Win32/ nocase ascii wide
+        $string95 = /TrojanDropper\:Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string94 = /TrojanSpy\.Win64/ nocase ascii wide
+        $string96 = /TrojanSpy\.Win64/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string95 = /TrojanSpy\:MSIL\/JSSLoader/ nocase ascii wide
+        $string97 = /TrojanSpy\:MSIL\/JSSLoader/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string96 = /TrojanSpy\:MSIL\/JSSLoader/ nocase ascii wide
+        $string98 = /TrojanSpy\:MSIL\/JSSLoader/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string97 = /VirTool.{0,1000}RemoteExec/ nocase ascii wide
+        $string99 = /VirTool.{0,1000}RemoteExec/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string98 = /VirTool\:MSIL/ nocase ascii wide
+        $string100 = /VirTool\:MSIL/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string99 = /VirTool\:PowerShell\/Dipadz\./ nocase ascii wide
+        $string101 = /VirTool\:PowerShell\/Dipadz\./ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string100 = /VirTool\:Win32/ nocase ascii wide
+        $string102 = /VirTool\:Win32/ nocase ascii wide
         // Description: AV signature often associated with C2 communications (cobaltstrike for example)
         // Reference: N/A
-        $string101 = /VirTool\:Win32\/RemoteExec/ nocase ascii wide
+        $string103 = /VirTool\:Win32\/RemoteExec/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string102 = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
+        $string104 = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string103 = /Win32\.Trojan/ nocase ascii wide
+        $string105 = /Win32\.Trojan/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string104 = /Win32\/Goodkit/ nocase ascii wide
+        $string106 = /Win32\/Goodkit/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string105 = /Win32\/IceId/ nocase ascii wide
+        $string107 = /Win32\/IceId/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string106 = /Win32\/Mikatz/ nocase ascii wide
+        $string108 = /Win32\/Mikatz/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string107 = /Win32\/Trickbot/ nocase ascii wide
+        $string109 = /Win32\/Trickbot/ nocase ascii wide
         // Description: windows defender antivirus signature for UAC bypass
         // Reference: N/A
-        $string108 = /Win32\/UACBypass/ nocase ascii wide
+        $string110 = /Win32\/UACBypass/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string109 = /Win32\:Trojan/ nocase ascii wide
+        $string111 = /Win32\:Trojan/ nocase ascii wide
         // Description: antivirus signatures
         // Reference: N/A
-        $string110 = /Win64\/IceId/ nocase ascii wide
+        $string112 = /Win64\/IceId/ nocase ascii wide
         // Description: AV signature for exploitation tools
         // Reference: N/A
-        $string111 = /Win64\/Mikatz/ nocase ascii wide
+        $string113 = /Win64\/Mikatz/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string112 = /Windows\.Hacktool\./ nocase ascii wide
+        $string114 = /Windows\.Hacktool\./ nocase ascii wide
 
     condition:
         any of them

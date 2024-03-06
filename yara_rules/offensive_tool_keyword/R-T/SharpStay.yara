@@ -64,22 +64,34 @@ rule SharpStay
         $string18 = /\/SharpStay\// nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string19 = /2963C954\-7B1E\-47F5\-B4FA\-2FC1F0D56AEA/ nocase ascii wide
+        $string19 = /\[\+\]\sCreated\sElevated\sHKLM\:/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string20 = /action\=SchTaskCOMHijack\s/ nocase ascii wide
+        $string20 = /\[\+\]\sUpdated\sElevated\sHKLM\:Software\\\\Microsoft\\\\Windows\sNT\\\\CurrentVersion\\\\Winlogon\skey\sUserInit/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string21 = /SharpStay\.csproj/ nocase ascii wide
+        $string21 = /0xthirteen\/SharpStay/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string22 = /Sharpstay\.exe\s/ nocase ascii wide
+        $string22 = /2963C954\-7B1E\-47F5\-B4FA\-2FC1F0D56AEA/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string23 = /SharpStay\.sln/ nocase ascii wide
+        $string23 = /2963C954\-7B1E\-47F5\-B4FA\-2FC1F0D56AEA/ nocase ascii wide
         // Description: SharpStay - .NET Persistence
         // Reference: https://github.com/0xthirteen/SharpStay
-        $string24 = /SharpStay\-master/ nocase ascii wide
+        $string24 = /action\=SchTaskCOMHijack\s/ nocase ascii wide
+        // Description: SharpStay - .NET Persistence
+        // Reference: https://github.com/0xthirteen/SharpStay
+        $string25 = /SharpStay\.csproj/ nocase ascii wide
+        // Description: SharpStay - .NET Persistence
+        // Reference: https://github.com/0xthirteen/SharpStay
+        $string26 = /Sharpstay\.exe/ nocase ascii wide
+        // Description: SharpStay - .NET Persistence
+        // Reference: https://github.com/0xthirteen/SharpStay
+        $string27 = /SharpStay\.sln/ nocase ascii wide
+        // Description: SharpStay - .NET Persistence
+        // Reference: https://github.com/0xthirteen/SharpStay
+        $string28 = /SharpStay\-master/ nocase ascii wide
 
     condition:
         any of them

@@ -1,3 +1,1003 @@
+rule AADInternals_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'AADInternals' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AADInternals"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string1_AADInternals_greyware_tool_keyword = /\s\-ServiceName\s\"AADInternals\"/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string2_AADInternals_greyware_tool_keyword = /\/AADInternals\.git/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string3_AADInternals_greyware_tool_keyword = /\\AADInternals\\/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string4_AADInternals_greyware_tool_keyword = /\\CloudShell\.ps1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string5_AADInternals_greyware_tool_keyword = /\\CloudShell_utils\.ps1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string6_AADInternals_greyware_tool_keyword = /\\DCaaS_utils\.ps1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string7_AADInternals_greyware_tool_keyword = /\\InjectDLL\.exe/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string8_AADInternals_greyware_tool_keyword = /\\PTASpy\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string9_AADInternals_greyware_tool_keyword = /\\PTASpy\.ps1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string10_AADInternals_greyware_tool_keyword = /A\slittle\sservice\sto\ssteal\sthe\sAD\sFS\sDKM\ssecret\s\:\)/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string11_AADInternals_greyware_tool_keyword = /AADConnectProvisioningAgentWizard\.exe/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string12_AADInternals_greyware_tool_keyword = /AADInternals\.exe/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string13_AADInternals_greyware_tool_keyword = /AADInternals\.pdb/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string14_AADInternals_greyware_tool_keyword = /AADInternals\.psd1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string15_AADInternals_greyware_tool_keyword = /AADInternals\.psm1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string16_AADInternals_greyware_tool_keyword = /Add\-AADIntAccessTokenToCache/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string17_AADInternals_greyware_tool_keyword = /Add\-AADIntEASDevice/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string18_AADInternals_greyware_tool_keyword = /Add\-AADIntRolloutPolicyGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string19_AADInternals_greyware_tool_keyword = /Add\-AADIntSPOSiteFiles/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string20_AADInternals_greyware_tool_keyword = /Add\-AADIntSyncFabricServicePrincipal/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string21_AADInternals_greyware_tool_keyword = /AzureADConnectAuthenticationAgentService\.exe/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string22_AADInternals_greyware_tool_keyword = /ConvertTo\-AADIntBackdoor/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string23_AADInternals_greyware_tool_keyword = /Disable\-AADIntTenantMsolAccess/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string24_AADInternals_greyware_tool_keyword = /DSInternals\\DSInternals\.Replication\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string25_AADInternals_greyware_tool_keyword = /DSInternals\\DSInternals\.Replication\.Interop\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string26_AADInternals_greyware_tool_keyword = /DSInternals\\DSInternals\.Replication\.Model\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string27_AADInternals_greyware_tool_keyword = /DSInternals\\msvcp140\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string28_AADInternals_greyware_tool_keyword = /DSInternals\\NDceRpc\.Microsoft\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string29_AADInternals_greyware_tool_keyword = /DSInternals\\vcruntime140\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string30_AADInternals_greyware_tool_keyword = /DSInternals\\vcruntime140_1\.dll/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string31_AADInternals_greyware_tool_keyword = /Enable\-AADIntTenantMsolAccess/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string32_AADInternals_greyware_tool_keyword = /Export\-AADIntADFSCertificates/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string33_AADInternals_greyware_tool_keyword = /Export\-AADIntADFSConfiguration/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string34_AADInternals_greyware_tool_keyword = /Export\-AADIntADFSEncryptionKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string35_AADInternals_greyware_tool_keyword = /Export\-AADIntAzureCliTokens/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string36_AADInternals_greyware_tool_keyword = /Export\-AADIntLocalDeviceCertificate/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string37_AADInternals_greyware_tool_keyword = /Export\-AADIntLocalDeviceTransportKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string38_AADInternals_greyware_tool_keyword = /Export\-AADIntProxyAgentBootstraps/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string39_AADInternals_greyware_tool_keyword = /Export\-AADIntProxyAgentCertificates/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string40_AADInternals_greyware_tool_keyword = /Export\-AADIntProxyAgentCertificates\./ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string41_AADInternals_greyware_tool_keyword = /Export\-AADIntSPOSiteFile/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string42_AADInternals_greyware_tool_keyword = /Export\-AADIntTeamsTokens/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string43_AADInternals_greyware_tool_keyword = /Export\-AADIntTokenBrokerTokens/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string44_AADInternals_greyware_tool_keyword = /Export\-ADFSEncryptionKeyUsingService/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string45_AADInternals_greyware_tool_keyword = /Gerenios\/AADInternals/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string46_AADInternals_greyware_tool_keyword = /Get\-AADIntAADConnectStatus/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string47_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessAccessPackages/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string48_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessPackageAdmins/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string49_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessPackageCatalogs/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string50_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessPackages/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string51_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string52_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenFor\<service\>/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string53_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAADGraph/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string54_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAADIAMAPI/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string55_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAADJoin/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string56_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAccessPackages/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string57_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAdmin/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string58_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAzureCoreManagement/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string59_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForAzureMgmtAPI/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string60_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForCloudShell/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string61_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForEXO/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string62_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForEXOPS/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string63_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForIntuneMDM/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string64_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForMDM/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string65_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForMSCommerce/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string66_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForMSGraph/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string67_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForMSPartner/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string68_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForMySignins/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string69_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForOfficeApps/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string70_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForOneDrive/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string71_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForOneNote/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string72_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForOneOfficeApps/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string73_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForPTA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string74_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForSARA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string75_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForSPO/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string76_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForTeams/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string77_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenForWHfB/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string78_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenUsingAdminAPI/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string79_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenUsingIMDS/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string80_AADInternals_greyware_tool_keyword = /Get\-AADIntAccessTokenWithRefreshToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string81_AADInternals_greyware_tool_keyword = /Get\-AADIntAccountSkus/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string82_AADInternals_greyware_tool_keyword = /Get\-AADIntADFSPolicyStoreRules/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string83_AADInternals_greyware_tool_keyword = /Get\-AADIntAdminPortalAccessTokenUsingCBA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string84_AADInternals_greyware_tool_keyword = /Get\-AADIntADUserNTHash/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string85_AADInternals_greyware_tool_keyword = /Get\-AADIntAdUserNTHash/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string86_AADInternals_greyware_tool_keyword = /Get\-AADIntADUserThumbnailPhoto/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string87_AADInternals_greyware_tool_keyword = /Get\-AADIntAgentProxyGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string88_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureADFeature/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string89_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureADFeatures/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string90_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureADPolicies/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string91_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureAuditLog/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string92_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureClassicAdministrators/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string93_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureDiagnosticSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string94_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureDirectoryActivityLog/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string95_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureInformation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string96_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureResourceGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string97_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureRoleAssignmentId/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string98_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureSignInLog/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string99_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureSubscriptions/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string100_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureTenants/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string101_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureVMRdpSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string102_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureVMs/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string103_AADInternals_greyware_tool_keyword = /Get\-AADIntAzureWireServerAddress/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string104_AADInternals_greyware_tool_keyword = /Get\-AADIntB2CEncryptionKeys/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string105_AADInternals_greyware_tool_keyword = /Get\-AADIntCache/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string106_AADInternals_greyware_tool_keyword = /Get\-AADIntCertificate/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string107_AADInternals_greyware_tool_keyword = /Get\-AADIntCompanyInformation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string108_AADInternals_greyware_tool_keyword = /Get\-AADIntCompanyInformation\./ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string109_AADInternals_greyware_tool_keyword = /Get\-AADIntCompanyTags/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string110_AADInternals_greyware_tool_keyword = /Get\-AADIntComplianceAPICookies/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string111_AADInternals_greyware_tool_keyword = /Get\-AADIntConditionalAccessPolicies/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string112_AADInternals_greyware_tool_keyword = /Get\-AADIntDesktopSSOAccountPassword/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string113_AADInternals_greyware_tool_keyword = /Get\-AADIntDeviceCompliance/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string114_AADInternals_greyware_tool_keyword = /Get\-AADIntDeviceRegAuthMethods/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string115_AADInternals_greyware_tool_keyword = /Get\-AADIntDevices/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string116_AADInternals_greyware_tool_keyword = /Get\-AADIntDeviceTransportKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string117_AADInternals_greyware_tool_keyword = /Get\-AADIntDiagnosticSettingsDetails/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string118_AADInternals_greyware_tool_keyword = /Get\-AADIntDPAPIKeys/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string119_AADInternals_greyware_tool_keyword = /Get\-AADIntEASAutoDiscover/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string120_AADInternals_greyware_tool_keyword = /Get\-AADIntEASAutoDiscoverV1/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string121_AADInternals_greyware_tool_keyword = /Get\-AADIntEASOptions/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string122_AADInternals_greyware_tool_keyword = /Get\-AADIntEndpointInstances/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string123_AADInternals_greyware_tool_keyword = /Get\-AADIntEndpointIps/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string124_AADInternals_greyware_tool_keyword = /Get\-AADIntError/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string125_AADInternals_greyware_tool_keyword = /Get\-AADIntFOCIClientIDs/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string126_AADInternals_greyware_tool_keyword = /Get\-AADIntGlobalAdmins/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string127_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceAccessToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string128_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceAgentInfo/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string129_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceBlobUploadKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string130_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceEventHubPublisherKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string131_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceMemberCredentials/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string132_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceMembers/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string133_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServiceMonitoringPolicies/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string134_AADInternals_greyware_tool_keyword = /Get\-AADIntHybridHealthServices/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string135_AADInternals_greyware_tool_keyword = /Get\-AADIntIdentityTokenByLiveId/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string136_AADInternals_greyware_tool_keyword = /Get\-AADIntImmutableID/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string137_AADInternals_greyware_tool_keyword = /Get\-AADIntKerberosDomainSyncConfig/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string138_AADInternals_greyware_tool_keyword = /Get\-AADIntKerberosTicket/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string139_AADInternals_greyware_tool_keyword = /Get\-AADIntLocalDeviceJoinInfo/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string140_AADInternals_greyware_tool_keyword = /Get\-AADIntLocalUserCredentials/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string141_AADInternals_greyware_tool_keyword = /Get\-AADIntLoginInformation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string142_AADInternals_greyware_tool_keyword = /Get\-AADIntLSABackupKeys/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string143_AADInternals_greyware_tool_keyword = /Get\-AADIntLSASecrets/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string144_AADInternals_greyware_tool_keyword = /Get\-AADIntMobileDevices/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string145_AADInternals_greyware_tool_keyword = /Get\-AADIntMSPartnerContracts/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string146_AADInternals_greyware_tool_keyword = /Get\-AADIntMSPartnerOffers/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string147_AADInternals_greyware_tool_keyword = /Get\-AADIntMSPartnerOrganizations/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string148_AADInternals_greyware_tool_keyword = /Get\-AADIntMSPartnerPublishers/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string149_AADInternals_greyware_tool_keyword = /Get\-AADIntMSPartnerRoleMembers/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string150_AADInternals_greyware_tool_keyword = /Get\-AADIntMSPartners/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string151_AADInternals_greyware_tool_keyword = /Get\-AADIntMyTeams/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string152_AADInternals_greyware_tool_keyword = /Get\-AADIntOAuthGrants/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string153_AADInternals_greyware_tool_keyword = /Get\-AADIntODAuthenticationCookie/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string154_AADInternals_greyware_tool_keyword = /Get\-AADIntOfficeUpdateBranch/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string155_AADInternals_greyware_tool_keyword = /Get\-AADIntOneDriveFiles/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string156_AADInternals_greyware_tool_keyword = /Get\-AADIntOpenIDConfiguration/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string157_AADInternals_greyware_tool_keyword = /Get\-AADIntPortalAccessTokenUsingCBA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string158_AADInternals_greyware_tool_keyword = /Get\-AADIntProxyAgents/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string159_AADInternals_greyware_tool_keyword = /Get\-AADIntProxyGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string160_AADInternals_greyware_tool_keyword = /Get\-AADIntReadAccessTokenForAADGraph/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string161_AADInternals_greyware_tool_keyword = /Get\-AADIntRecentLocations/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string162_AADInternals_greyware_tool_keyword = /Get\-AADIntRolloutPolicies/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string163_AADInternals_greyware_tool_keyword = /Get\-AADIntRolloutPolicyGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string164_AADInternals_greyware_tool_keyword = /Get\-AADIntSARAUserInfo/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string165_AADInternals_greyware_tool_keyword = /Get\-AADIntSeamlessSSO/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string166_AADInternals_greyware_tool_keyword = /Get\-AADIntSelfServicePurchaseProducts/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string167_AADInternals_greyware_tool_keyword = /Get\-AADIntServiceLocations/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string168_AADInternals_greyware_tool_keyword = /Get\-AADIntServicePrincipals/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string169_AADInternals_greyware_tool_keyword = /Get\-AADIntSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string170_AADInternals_greyware_tool_keyword = /Get\-AADIntSharedWithUser/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string171_AADInternals_greyware_tool_keyword = /Get\-AADIntSkypeToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string172_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOAuthenticationHeader/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string173_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOIDCRL/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string174_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOServiceInformation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string175_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string176_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOSiteGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string177_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOSiteUsers/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string178_AADInternals_greyware_tool_keyword = /Get\-AADIntSPOUserProperties/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string179_AADInternals_greyware_tool_keyword = /Get\-AADIntSubscriptions/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string180_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncConfiguration/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string181_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncCredentials/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string182_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncDeviceConfiguration/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string183_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncEncryptionKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string184_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncEncryptionKeyInfo/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string185_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncFeatures/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string186_AADInternals_greyware_tool_keyword = /Get\-AADIntSyncObjects/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string187_AADInternals_greyware_tool_keyword = /Get\-AADIntSystemMasterkeys/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string188_AADInternals_greyware_tool_keyword = /Get\-AADIntTeamsAvailability/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string189_AADInternals_greyware_tool_keyword = /Get\-AADIntTeamsMessages/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string190_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantApplications/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string191_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantAuthenticationMethods/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string192_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantAuthPolicy/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string193_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantDetails/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string194_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantDomain/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string195_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantDomains/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string196_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantGuestAccess/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string197_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantID/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string198_AADInternals_greyware_tool_keyword = /Get\-AADIntTenantOrganisationInformation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string199_AADInternals_greyware_tool_keyword = /Get\-AADIntTranslation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string200_AADInternals_greyware_tool_keyword = /Get\-AADIntUnifiedAuditLogSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string201_AADInternals_greyware_tool_keyword = /Get\-AADIntUserConnections/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string202_AADInternals_greyware_tool_keyword = /Get\-AADIntUserDetails/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string203_AADInternals_greyware_tool_keyword = /Get\-AADIntUserMasterkeys/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string204_AADInternals_greyware_tool_keyword = /Get\-AADIntUserMFA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string205_AADInternals_greyware_tool_keyword = /Get\-AADIntUserMFAApps/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string206_AADInternals_greyware_tool_keyword = /Get\-AADIntUserNTHash/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string207_AADInternals_greyware_tool_keyword = /Get\-AADIntUserPRTKeys/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string208_AADInternals_greyware_tool_keyword = /Get\-AADIntUserPRTToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string209_AADInternals_greyware_tool_keyword = /Get\-AADIntUserRealm/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string210_AADInternals_greyware_tool_keyword = /Get\-AADIntUserRealmExtended/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string211_AADInternals_greyware_tool_keyword = /Get\-AADIntUserRealmV2/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string212_AADInternals_greyware_tool_keyword = /Get\-AADIntUserRealmV3/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string213_AADInternals_greyware_tool_keyword = /Get\-AADIntWindowsCredentialsSyncConfig/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string214_AADInternals_greyware_tool_keyword = /Get\-Module\sAADInternals/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string215_AADInternals_greyware_tool_keyword = /Grant\-AADIntAzureUserAccessAdminRole/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string216_AADInternals_greyware_tool_keyword = /https\:\/\/aadinternals\.com\/aadinternals\// nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string217_AADInternals_greyware_tool_keyword = /Import\-Module\sAADInternals/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string218_AADInternals_greyware_tool_keyword = /Install\-AADIntForceNTHash/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string219_AADInternals_greyware_tool_keyword = /Install\-Module\sAADInternals/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string220_AADInternals_greyware_tool_keyword = /Install\-Module\sAADInternals/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string221_AADInternals_greyware_tool_keyword = /Invoke\-AADIntAzureVMScript/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string222_AADInternals_greyware_tool_keyword = /Invoke\-AADIntPhishing/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string223_AADInternals_greyware_tool_keyword = /Invoke\-AADIntReconAsGuest/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string224_AADInternals_greyware_tool_keyword = /Invoke\-AADIntReconAsInsider/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string225_AADInternals_greyware_tool_keyword = /Invoke\-AADIntReconAsOutsider/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string226_AADInternals_greyware_tool_keyword = /Invoke\-AADIntSyncAgent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string227_AADInternals_greyware_tool_keyword = /Invoke\-AADIntUserEnumerationAsGuest/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string228_AADInternals_greyware_tool_keyword = /Invoke\-AADIntUserEnumerationAsInsider/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string229_AADInternals_greyware_tool_keyword = /Invoke\-AADIntUserEnumerationAsOutsider/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string230_AADInternals_greyware_tool_keyword = /Join\-AADIntAzureAD/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string231_AADInternals_greyware_tool_keyword = /Join\-AADIntDeviceToAzureAD/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string232_AADInternals_greyware_tool_keyword = /Join\-AADIntDeviceToAzureAD\./ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string233_AADInternals_greyware_tool_keyword = /Join\-AADIntDeviceToIntune/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string234_AADInternals_greyware_tool_keyword = /Join\-AADIntLocalDeviceToAzureAD/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string235_AADInternals_greyware_tool_keyword = /Join\-AADIntOnPremDeviceToAzureAD/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string236_AADInternals_greyware_tool_keyword = /New\-AADIntADFSRefreshToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string237_AADInternals_greyware_tool_keyword = /New\-AADIntADFSSelfSignedCertificates/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string238_AADInternals_greyware_tool_keyword = /New\-AADIntB2CAuthorizationCode/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string239_AADInternals_greyware_tool_keyword = /New\-AADIntB2CRefreshToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string240_AADInternals_greyware_tool_keyword = /New\-AADIntBackdoor/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string241_AADInternals_greyware_tool_keyword = /New\-AADIntBulkPRTToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string242_AADInternals_greyware_tool_keyword = /New\-AADIntCertificate/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string243_AADInternals_greyware_tool_keyword = /New\-AADIntGuestInvitation/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string244_AADInternals_greyware_tool_keyword = /New\-AADIntHybridHealthService/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string245_AADInternals_greyware_tool_keyword = /New\-AADIntHybridHealthServiceMember/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string246_AADInternals_greyware_tool_keyword = /New\-AADIntHybridHealtServiceEvent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string247_AADInternals_greyware_tool_keyword = /New\-AADIntInvitationVBA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string248_AADInternals_greyware_tool_keyword = /New\-AADIntMOERADomain/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string249_AADInternals_greyware_tool_keyword = /New\-AADIntMSPartnerDelegatedAdminRequest/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string250_AADInternals_greyware_tool_keyword = /New\-AADIntOneDriveSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string251_AADInternals_greyware_tool_keyword = /New\-AADIntOTP/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string252_AADInternals_greyware_tool_keyword = /New\-AADIntOTPSecret/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string253_AADInternals_greyware_tool_keyword = /New\-AADIntP2PDeviceCertificate/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string254_AADInternals_greyware_tool_keyword = /New\-AADIntSAML2Token/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string255_AADInternals_greyware_tool_keyword = /New\-AADIntSAMLToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string256_AADInternals_greyware_tool_keyword = /New\-AADIntUserPRTToken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string257_AADInternals_greyware_tool_keyword = /Open\-AADIntOffice365Portal/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string258_AADInternals_greyware_tool_keyword = /Open\-AADIntOWA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string259_AADInternals_greyware_tool_keyword = /Read\-AADIntAccesstoken/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string260_AADInternals_greyware_tool_keyword = /Read\-AADIntConfiguration/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string261_AADInternals_greyware_tool_keyword = /Register\-AADIntHybridHealthServiceAgent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string262_AADInternals_greyware_tool_keyword = /Register\-AADIntMFAApp/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string263_AADInternals_greyware_tool_keyword = /Register\-AADIntProxyAgent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string264_AADInternals_greyware_tool_keyword = /Register\-AADIntPTAAgent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string265_AADInternals_greyware_tool_keyword = /Register\-AADIntSyncAgent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string266_AADInternals_greyware_tool_keyword = /Remove\-AADIntAccessDeviceFromIntune/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string267_AADInternals_greyware_tool_keyword = /Remove\-AADIntAzureDiagnosticSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string268_AADInternals_greyware_tool_keyword = /Remove\-AADIntDeviceFromAzureAD/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string269_AADInternals_greyware_tool_keyword = /Remove\-AADIntForceNTHash/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string270_AADInternals_greyware_tool_keyword = /Remove\-AADIntHybridHealthService/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string271_AADInternals_greyware_tool_keyword = /Remove\-AADIntHybridHealthServiceMember/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string272_AADInternals_greyware_tool_keyword = /Remove\-AADIntMSPartnerDelegatedAdminRoles/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string273_AADInternals_greyware_tool_keyword = /Remove\-AADIntPTASpy/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string274_AADInternals_greyware_tool_keyword = /Remove\-AADIntRolloutPolicy/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string275_AADInternals_greyware_tool_keyword = /Remove\-AADIntRolloutPolicyGroups/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string276_AADInternals_greyware_tool_keyword = /Remove\-AADIntTeamsMessages/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string277_AADInternals_greyware_tool_keyword = /Restore\-AADIntADFSAutoRollover/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string278_AADInternals_greyware_tool_keyword = /Search\-AADIntTeamsUser/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string279_AADInternals_greyware_tool_keyword = /Search\-AADIntUnifiedAuditLog/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string280_AADInternals_greyware_tool_keyword = /Send\-AADIntEASMessage/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string281_AADInternals_greyware_tool_keyword = /Send\-AADIntHybridHealthServiceEventBlob/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string282_AADInternals_greyware_tool_keyword = /Send\-AADIntHybridHealthServiceEvents/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string283_AADInternals_greyware_tool_keyword = /Send\-AADIntOneDriveFile/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string284_AADInternals_greyware_tool_keyword = /Send\-AADIntOutlookMessage/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string285_AADInternals_greyware_tool_keyword = /Send\-AADIntTeamsMessage/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string286_AADInternals_greyware_tool_keyword = /Set\-AADIntADFSConfiguration/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string287_AADInternals_greyware_tool_keyword = /Set\-AADIntADFSPolicyStoreRules/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string288_AADInternals_greyware_tool_keyword = /Set\-AADIntADSyncAccountPassword/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string289_AADInternals_greyware_tool_keyword = /Set\-AADIntADSyncEnabled/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string290_AADInternals_greyware_tool_keyword = /Set\-AADIntAzureADFeature/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string291_AADInternals_greyware_tool_keyword = /Set\-AADIntAzureADPolicyDetail/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string292_AADInternals_greyware_tool_keyword = /Set\-AADIntAzureRoleAssignment/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string293_AADInternals_greyware_tool_keyword = /Set\-AADIntDesktopSSO/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string294_AADInternals_greyware_tool_keyword = /Set\-AADIntDesktopSSOEnabled/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string295_AADInternals_greyware_tool_keyword = /Set\-AADIntDeviceCompliant/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string296_AADInternals_greyware_tool_keyword = /Set\-AADIntDeviceRegAuthMethods/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string297_AADInternals_greyware_tool_keyword = /Set\-AADIntDeviceTransportKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string298_AADInternals_greyware_tool_keyword = /Set\-AADIntDeviceWHfBKey/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string299_AADInternals_greyware_tool_keyword = /Set\-AADIntDiagnosticSettingsDetails/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string300_AADInternals_greyware_tool_keyword = /Set\-AADIntEASSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string301_AADInternals_greyware_tool_keyword = /Set\-AADIntOfficeUpdateBranch/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string302_AADInternals_greyware_tool_keyword = /Set\-AADIntPassThroughAuthentication/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string303_AADInternals_greyware_tool_keyword = /Set\-AADIntPasswordHashSyncEnabled/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string304_AADInternals_greyware_tool_keyword = /Set\-AADIntProxySettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string305_AADInternals_greyware_tool_keyword = /Set\-AADIntPTACertificate/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string306_AADInternals_greyware_tool_keyword = /Set\-AADIntRolloutPolicy/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string307_AADInternals_greyware_tool_keyword = /Set\-AADIntSelfServicePurchaseProduct/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string308_AADInternals_greyware_tool_keyword = /Set\-AADIntSetting/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string309_AADInternals_greyware_tool_keyword = /Set\-AADIntSPOSiteMembers/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string310_AADInternals_greyware_tool_keyword = /Set\-AADIntSPOUserProperty/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string311_AADInternals_greyware_tool_keyword = /Set\-AADIntSyncFeature/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string312_AADInternals_greyware_tool_keyword = /Set\-AADIntSyncFeatures/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string313_AADInternals_greyware_tool_keyword = /Set\-AADIntTeamsAvailability/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string314_AADInternals_greyware_tool_keyword = /Set\-AADIntTeamsMessageEmotion/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string315_AADInternals_greyware_tool_keyword = /Set\-AADIntTeamsStatusMessage/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string316_AADInternals_greyware_tool_keyword = /Set\-AADIntTenantGuestAccess/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string317_AADInternals_greyware_tool_keyword = /Set\-AADIntUnifiedAuditLogSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string318_AADInternals_greyware_tool_keyword = /Set\-AADIntUserAgent/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string319_AADInternals_greyware_tool_keyword = /Set\-AADIntUserMFA/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string320_AADInternals_greyware_tool_keyword = /Set\-AADIntUserMFAApps/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string321_AADInternals_greyware_tool_keyword = /Set\-AADIntUserPassword/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string322_AADInternals_greyware_tool_keyword = /Start\-AADIntCloudShell/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string323_AADInternals_greyware_tool_keyword = /Start\-AADIntDeviceIntuneCallback/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string324_AADInternals_greyware_tool_keyword = /Start\-AADIntSpeech/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string325_AADInternals_greyware_tool_keyword = /Update\-AADIntADFSFederationSettings\!\"/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string326_AADInternals_greyware_tool_keyword = /Update\-AADIntADFSFederationSettings/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string327_AADInternals_greyware_tool_keyword = /Update\-AADIntSPOSiteFile/ nocase ascii wide
+        // Description: AADInternals PowerShell module for administering Azure AD and Office 365
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string328_AADInternals_greyware_tool_keyword = /Update\-AADIntSyncCredentials/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule action1_greyware_tool_keyword
 {
     meta:
@@ -1760,6 +2760,12 @@ rule cat_greyware_tool_keyword
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
         $string20_cat_greyware_tool_keyword = /cat\s\/etc\/sudoers/ nocase ascii wide
+        // Description: cat suspicious commands
+        // Reference: N/A
+        $string21_cat_greyware_tool_keyword = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide
+        // Description: cat suspicious commands
+        // Reference: N/A
+        $string22_cat_greyware_tool_keyword = /cat\s\/root\/\.ssh\/id_rsa/ nocase ascii wide
 
     condition:
         any of them
@@ -6055,6 +7061,196 @@ rule Malus_VPN_greyware_tool_keyword
 }
 
 
+rule MEGAsync_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'MEGAsync' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "MEGAsync"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string1_MEGAsync_greyware_tool_keyword = /\smegasync\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string2_MEGAsync_greyware_tool_keyword = /\sMEGAsyncSetup32\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string3_MEGAsync_greyware_tool_keyword = /\sMEGAsyncSetup64\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string4_MEGAsync_greyware_tool_keyword = /\.api\.mega\.co\.nz/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string5_MEGAsync_greyware_tool_keyword = /\.static\.mega\.co\.nz/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string6_MEGAsync_greyware_tool_keyword = /\/megasync\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string7_MEGAsync_greyware_tool_keyword = /\/MEGAsyncSetup32\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string8_MEGAsync_greyware_tool_keyword = /\/MEGAsyncSetup64\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string9_MEGAsync_greyware_tool_keyword = /\[megaapi_impl\.cpp\:/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string10_MEGAsync_greyware_tool_keyword = /\[megaclient\.cpp\:/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string11_MEGAsync_greyware_tool_keyword = /\\appdata\\local\\megasync\\/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string12_MEGAsync_greyware_tool_keyword = /\\ContextMenuHandlers\\MEGA\s\(Context\smenu\)/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string13_MEGAsync_greyware_tool_keyword = /\\CurrentVersion\\App\sPaths\\MEGAsync/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string14_MEGAsync_greyware_tool_keyword = /\\CurrentVersion\\Uninstall\\MEGAsync/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string15_MEGAsync_greyware_tool_keyword = /\\MEGA\sWebsite\.lnk/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string16_MEGAsync_greyware_tool_keyword = /\\MEGA\sWebsite\.url/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string17_MEGAsync_greyware_tool_keyword = /\\megaclient_statecache.{0,1000}\.db/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string18_MEGAsync_greyware_tool_keyword = /\\megaclient_syncconfig_/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string19_MEGAsync_greyware_tool_keyword = /\\megalimited\-megasync_/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string20_MEGAsync_greyware_tool_keyword = /\\MEGAprivacyMEGAsync/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string21_MEGAsync_greyware_tool_keyword = /\\MEGAsync\.cfg/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string22_MEGAsync_greyware_tool_keyword = /\\megasync\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string23_MEGAsync_greyware_tool_keyword = /\\MEGAsync\.lnk/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string24_MEGAsync_greyware_tool_keyword = /\\megasync\.lock/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string25_MEGAsync_greyware_tool_keyword = /\\MEGAsync\.log/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string26_MEGAsync_greyware_tool_keyword = /\\megasync\.version/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string27_MEGAsync_greyware_tool_keyword = /\\MEGAsyncSetup32\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string28_MEGAsync_greyware_tool_keyword = /\\MEGAsyncSetup64\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string29_MEGAsync_greyware_tool_keyword = /\\MEGAupdater\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string30_MEGAsync_greyware_tool_keyword = /\\ProgramData\\megatmp\.M1\.txt/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string31_MEGAsync_greyware_tool_keyword = /\\ProgramData\\megatmp\.M2\.txt/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string32_MEGAsync_greyware_tool_keyword = /\\ShellIconOverlayIdentifiers\\_\sMEGA\s\(Pending\)/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string33_MEGAsync_greyware_tool_keyword = /\\ShellIconOverlayIdentifiers\\_\sMEGA\s\(Synced\)/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string34_MEGAsync_greyware_tool_keyword = /\\ShellIconOverlayIdentifiers\\_\sMEGA\s\(Syncing\)/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string35_MEGAsync_greyware_tool_keyword = /\\Start\sMenu\\Programs\\MEGAsync\\/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string36_MEGAsync_greyware_tool_keyword = /\\StartupTNotiMEGAsync\.lnk/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string37_MEGAsync_greyware_tool_keyword = /\'Company\'\>Mega\sLimited\<\/Data\>/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string38_MEGAsync_greyware_tool_keyword = /https\:\/\/mega\.nz\/linux\/repo\// nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string39_MEGAsync_greyware_tool_keyword = /MEGAsync\sUpdate\sTask/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string40_MEGAsync_greyware_tool_keyword = /MEGAsync\.exe\s\// nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string41_MEGAsync_greyware_tool_keyword = /MEGASYNC\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string42_MEGAsync_greyware_tool_keyword = /MEGAsync\\ShellExtX64\.dll/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string43_MEGAsync_greyware_tool_keyword = /megasync\-CentOS_.{0,1000}\.x86_64\.rpm/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string44_MEGAsync_greyware_tool_keyword = /megasync\-CentOS_.{0,1000}\.x86_64\.rpm/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string45_MEGAsync_greyware_tool_keyword = /megasync\-Debian_.{0,1000}_amd64\.deb/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string46_MEGAsync_greyware_tool_keyword = /megasync\-Fedora_.{0,1000}\.x86_64\.rpm/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string47_MEGAsync_greyware_tool_keyword = /megasync\-openSUSE_Leap_.{0,1000}\.x86_64\.rpm/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string48_MEGAsync_greyware_tool_keyword = /megasync\-Raspbian_.{0,1000}_armhf\.deb/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string49_MEGAsync_greyware_tool_keyword = /MEGAsyncSetup32_.{0,1000}_RC3\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string50_MEGAsync_greyware_tool_keyword = /MEGASYNCSETUP64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string51_MEGAsync_greyware_tool_keyword = /MEGAsyncSetup64_.{0,1000}_RC3\.exe/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string52_MEGAsync_greyware_tool_keyword = /MEGAsyncSetupArm64\.dmg/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string53_MEGAsync_greyware_tool_keyword = /megasync\-x86_64\.pkg/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string54_MEGAsync_greyware_tool_keyword = /megasync\-xUbuntu_.{0,1000}_amd64\.deb/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string55_MEGAsync_greyware_tool_keyword = /\'Product\'\>MEGAsync\<\/Data\>/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string56_MEGAsync_greyware_tool_keyword = /ReferrerUrl\=https\:\/\/mega\.io\// nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string57_MEGAsync_greyware_tool_keyword = /\'Signature\'\>Mega\sLimited\<\/Data\>/ nocase ascii wide
+        // Description: synchronize or backup your computers to MEGA
+        // Reference: https://mega.io/en/desktop
+        $string58_MEGAsync_greyware_tool_keyword = /Windows\\System32\\Tasks\\MEGA/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule megatools_greyware_tool_keyword
 {
     meta:
@@ -8528,6 +9724,136 @@ rule qu_ax_greyware_tool_keyword
         // Description: qu.ax is a quick and private file hosting service - abused by threat actors
         // Reference: https://qu[.]ax/
         $string1_qu_ax_greyware_tool_keyword = /https\:\/\/qu\.ax\/.{0,1000}\./ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Quasar_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Quasar' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Quasar"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string1_Quasar_greyware_tool_keyword = /\sCN\=Quasar\sServer\sCA/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string2_Quasar_greyware_tool_keyword = /\/Quasar\.git/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string3_Quasar_greyware_tool_keyword = /\/Quasar\.v.{0,1000}\.zip/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string4_Quasar_greyware_tool_keyword = /\/Quasar\/releases/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string5_Quasar_greyware_tool_keyword = /\\appdata\\roaming\\.{0,1000}\'DestPort\'\>4782\<\/Data\>/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string6_Quasar_greyware_tool_keyword = /\\CurrentVersion\\Run\\Quasar\sClient\sStartup/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string7_Quasar_greyware_tool_keyword = /\\Prefetch\\QUASAR\.EXE/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string8_Quasar_greyware_tool_keyword = /\\Program\sFiles\\SubDir\\Client\.exe/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string9_Quasar_greyware_tool_keyword = /\\Quasar\.Client\\/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string10_Quasar_greyware_tool_keyword = /\\Quasar\.Common\\.{0,1000}\.cs/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string11_Quasar_greyware_tool_keyword = /\\quasar\.p12/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string12_Quasar_greyware_tool_keyword = /\\Quasar\.v.{0,1000}\.zip/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string13_Quasar_greyware_tool_keyword = /\\Quasar\-master/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string14_Quasar_greyware_tool_keyword = /\\Users\\mthcht\\AppData\\Roaming\\SubDir\\Client\.exe/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string15_Quasar_greyware_tool_keyword = /\\Windows\\system32\\SubDir\\Client\.exe/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string16_Quasar_greyware_tool_keyword = /14CA405B\-8BAC\-48AB\-9FBA\-8FB5DF88FD0D/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string17_Quasar_greyware_tool_keyword = /32A2A734\-7429\-47E6\-A362\-E344A19C0D85/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string18_Quasar_greyware_tool_keyword = /9F5CF56A\-DDB2\-4F40\-AB99\-2A1DC47588E1/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string19_Quasar_greyware_tool_keyword = /Backdoor\.Quasar/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string20_Quasar_greyware_tool_keyword = /C7C363BA\-E5B6\-4E18\-9224\-39BC8DA73172/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string21_Quasar_greyware_tool_keyword = /CFCD0759E20F29C399C9D4210BE614E4E020BEE8/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string22_Quasar_greyware_tool_keyword = /localhost\:4782/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string23_Quasar_greyware_tool_keyword = /namespace\sQuasar\.Client/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string24_Quasar_greyware_tool_keyword = /namespace\sQuasar\.Server/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string25_Quasar_greyware_tool_keyword = /ping\s\-n\s10\slocalhost\s\>\snul/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string26_Quasar_greyware_tool_keyword = /Quasar\sClient\sStartup/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string27_Quasar_greyware_tool_keyword = /Quasar\sv.{0,1000}\\Client\-built\.exe/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string28_Quasar_greyware_tool_keyword = /Quasar\.Client\./ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string29_Quasar_greyware_tool_keyword = /Quasar\.Common\.Tests\\/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string30_Quasar_greyware_tool_keyword = /Quasar\.exe/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string31_Quasar_greyware_tool_keyword = /Quasar\.Server/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string32_Quasar_greyware_tool_keyword = /Quasar\.Server\\Program\.cs/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string33_Quasar_greyware_tool_keyword = /Quasar\.sln/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string34_Quasar_greyware_tool_keyword = /Quasar\.v1\.4\.1\.zip/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string35_Quasar_greyware_tool_keyword = /quasar\/Quasar/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string36_Quasar_greyware_tool_keyword = /Quasar\-master\.zip/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string37_Quasar_greyware_tool_keyword = /QuasarRAT/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
+        // Reference: https://github.com/quasar/Quasar
+        $string38_Quasar_greyware_tool_keyword = /ylAo2kAlUS2kYkala\!/ nocase ascii wide
 
     condition:
         any of them
@@ -14338,6 +15664,85 @@ rule xxd_greyware_tool_keyword
         // Description: ICMP Tunneling One Liner
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string1_xxd_greyware_tool_keyword = /xxd\s\-p\s\-c\s4\s\/.{0,1000}\s\|\swhile\sread\sline.{0,1000}\sdo\sping\s\-c\s1\s\-p\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule yakit_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'yakit' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "yakit"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string1_yakit_greyware_tool_keyword = /\sset\-proxy\.ps1/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string2_yakit_greyware_tool_keyword = /\"http\:\/\/mitm\"/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string3_yakit_greyware_tool_keyword = /\/MITMPluginLogViewer/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string4_yakit_greyware_tool_keyword = /\/MITMServerHijacking/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string5_yakit_greyware_tool_keyword = /\/set\-proxy\.ps1/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string6_yakit_greyware_tool_keyword = /\/yak_darwin_amd64\.zip/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string7_yakit_greyware_tool_keyword = /\/yak_linux_amd64\.zip/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string8_yakit_greyware_tool_keyword = /\/yak_windows_amd64\.zip/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string9_yakit_greyware_tool_keyword = /\?\?\sMITM\s\?\?\?\?/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string10_yakit_greyware_tool_keyword = /\\default\-yakit\.db/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string11_yakit_greyware_tool_keyword = /\\set\-proxy\.ps1/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string12_yakit_greyware_tool_keyword = /\\System32\\yak\.exe/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string13_yakit_greyware_tool_keyword = /\\yak\.exe/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string14_yakit_greyware_tool_keyword = /MITMServerHijacking\/MITMPluginLocalList/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string15_yakit_greyware_tool_keyword = /pwd86u1qwZ9PWevKqm1A3yAw\=\=/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string16_yakit_greyware_tool_keyword = /PwDaBjJzgufjES89Rs4Lpq63O300R\/kOz30WCLo6BxxX6QVEilwSlpClnG5cZaikTA\=\=/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string17_yakit_greyware_tool_keyword = /pWDkVEtllTAK5h6cnhxNxDA\=\=/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string18_yakit_greyware_tool_keyword = /Yakit\-.{0,1000}\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string19_yakit_greyware_tool_keyword = /Yakit\/1\.0\.0/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string20_yakit_greyware_tool_keyword = /YAKIT_MITM/ nocase ascii wide
+        // Description: security platform with fuzzers - webshell and MITM (chinese burp)
+        // Reference: https://github.com/Gerenios/AADInternals
+        $string21_yakit_greyware_tool_keyword = /yakit\-remote\.json/ nocase ascii wide
 
     condition:
         any of them

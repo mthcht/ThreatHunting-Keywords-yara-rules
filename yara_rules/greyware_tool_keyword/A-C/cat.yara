@@ -68,6 +68,12 @@ rule cat
         // Description: linux commands abused by attackers - find guid and suid sensitives perm
         // Reference: N/A
         $string20 = /cat\s\/etc\/sudoers/ nocase ascii wide
+        // Description: cat suspicious commands
+        // Reference: N/A
+        $string21 = /cat\s\/root\/\.aws\/credentials/ nocase ascii wide
+        // Description: cat suspicious commands
+        // Reference: N/A
+        $string22 = /cat\s\/root\/\.ssh\/id_rsa/ nocase ascii wide
 
     condition:
         any of them

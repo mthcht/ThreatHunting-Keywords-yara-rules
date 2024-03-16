@@ -14,11 +14,11 @@ rule bash
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string2 = /bash\s\-c\s.{0,1000}wget\s.{0,1000}\.sh\s\|\sbash/ nocase ascii wide
-        // Description: bash reverse shell 
-        // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string3 = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
         // Description: bash reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string3 = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
+        // Description: bash reverse shell 
+        // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
         $string4 = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
@@ -50,11 +50,11 @@ rule bash
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
         $string14 = /export\sHISTFILE\=\/dev\/null/ nocase ascii wide
-        // Description: Clear command history in linux which is used for defense evasion. 
-        // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string15 = /export\sHISTFILESIZE\=0/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
+        $string15 = /export\sHISTFILESIZE\=0/ nocase ascii wide
+        // Description: Clear command history in linux which is used for defense evasion. 
+        // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
         $string16 = /export\sHISTFILESIZE\=0/ nocase ascii wide
         // Description: use a space in front of your bash command and it won't be logged with the following option
         // Reference: N/A

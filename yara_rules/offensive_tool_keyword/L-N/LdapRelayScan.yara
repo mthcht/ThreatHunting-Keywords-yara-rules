@@ -22,13 +22,16 @@ rule LdapRelayScan
         $string4 = /\/LdapRelayScan\.git/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string5 = /LdapRelayScan\.py/ nocase ascii wide
+        $string5 = /037abc006fd6d9877d3f63baa4d32ebedd18b5a1ce6f51c22aa0d18c7ad1e352/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string6 = /LdapRelayScan\-main/ nocase ascii wide
+        $string6 = /LdapRelayScan\.py/ nocase ascii wide
         // Description: Check for LDAP protections regarding the relay of NTLM authentication
         // Reference: https://github.com/zyn3rgy/LdapRelayScan
-        $string7 = /zyn3rgy\/LdapRelayScan/ nocase ascii wide
+        $string7 = /LdapRelayScan\-main/ nocase ascii wide
+        // Description: Check for LDAP protections regarding the relay of NTLM authentication
+        // Reference: https://github.com/zyn3rgy/LdapRelayScan
+        $string8 = /zyn3rgy\/LdapRelayScan/ nocase ascii wide
 
     condition:
         any of them

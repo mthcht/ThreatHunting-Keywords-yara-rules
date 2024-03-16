@@ -2222,11 +2222,11 @@ rule bash_greyware_tool_keyword
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string2_bash_greyware_tool_keyword = /bash\s\-c\s.{0,1000}wget\s.{0,1000}\.sh\s\|\sbash/ nocase ascii wide
-        // Description: bash reverse shell 
-        // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string3_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
         // Description: bash reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string3_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
+        // Description: bash reverse shell 
+        // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
         $string4_bash_greyware_tool_keyword = /bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1/ nocase ascii wide
         // Description: Clear command history in linux which is used for defense evasion. 
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
@@ -2258,11 +2258,11 @@ rule bash_greyware_tool_keyword
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
         $string14_bash_greyware_tool_keyword = /export\sHISTFILE\=\/dev\/null/ nocase ascii wide
-        // Description: Clear command history in linux which is used for defense evasion. 
-        // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
-        $string15_bash_greyware_tool_keyword = /export\sHISTFILESIZE\=0/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
+        $string15_bash_greyware_tool_keyword = /export\sHISTFILESIZE\=0/ nocase ascii wide
+        // Description: Clear command history in linux which is used for defense evasion. 
+        // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1146/T1146.yaml
         $string16_bash_greyware_tool_keyword = /export\sHISTFILESIZE\=0/ nocase ascii wide
         // Description: use a space in front of your bash command and it won't be logged with the following option
         // Reference: N/A
@@ -2700,40 +2700,40 @@ rule cat_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Enumerating user files history for interesting information
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string1_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: show atftp history
         // Reference: N/A
-        $string1_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string2_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string3_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: show bash history
         // Reference: N/A
-        $string3_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string4_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string5_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: show mysql history
         // Reference: N/A
-        $string5_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string6_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string6_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string7_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: show nano history
         // Reference: N/A
-        $string7_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string8_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string8_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string9_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
         // Description: show php history
         // Reference: N/A
-        $string9_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
-        // Description: Enumerating user files history for interesting information
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string10_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
-        // Description: show zsh history
+        // Description: Enumerating user files history for interesting information
         // Reference: N/A
         $string11_cat_greyware_tool_keyword = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
-        // Description: Enumerating user files history for interesting information
+        // Description: show zsh history
         // Reference: N/A
         $string12_cat_greyware_tool_keyword = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
         // Description: linux commands abused by attackers
@@ -3348,6 +3348,859 @@ rule Daily_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Daily_VPN_greyware_tool_keyword = /namfblliamklmeodpcelkokjbffgmeoo/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Dameware_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Dameware' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Dameware"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string1_Dameware_greyware_tool_keyword = /\s\/monitor\s\/from_service\s\/cpu_memory_refresh\s.{0,1000}\s\/disk_space_refresh\s.{0,1000}\s\/proc_list_refresh\s.{0,1000}\s\/semkey\s/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string2_Dameware_greyware_tool_keyword = /\s\/r\s\/proxy\s\s\/proxyport\s\s\/proxyusername\s\s\/proxypasswd\s/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string3_Dameware_greyware_tool_keyword = /\s\/register\s\s\/proxy\s\s\/proxyport\s\s\/proxyusername\s\s\/proxypasswd/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string4_Dameware_greyware_tool_keyword = /\s\-a\stcrmtshellagentmodule_/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string5_Dameware_greyware_tool_keyword = /\sDameware\sMini\sRemote\sControl\sx64\s\-\-\sInstallation\scompleted\ssuccessfully/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string6_Dameware_greyware_tool_keyword = /\s\-log\-level\strace\s\-dre\s\-log\-path\s/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string7_Dameware_greyware_tool_keyword = /\stkc_agent_dre\.deb/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string8_Dameware_greyware_tool_keyword = /\.exe\s\-\-pn\sdre_video_uploader\s\-\-logpath\slogs/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string9_Dameware_greyware_tool_keyword = /\.mspa\.n\-able\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string10_Dameware_greyware_tool_keyword = /\/damewareagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string11_Dameware_greyware_tool_keyword = /\/DWMRC_St_64\.msi/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string12_Dameware_greyware_tool_keyword = /\/DWRCC\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string13_Dameware_greyware_tool_keyword = /\/DWRCCMD\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string14_Dameware_greyware_tool_keyword = /\/DWRCS\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string15_Dameware_greyware_tool_keyword = /\/SolarWinds\-Dameware\-DRS\-St\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string16_Dameware_greyware_tool_keyword = /\/tkc_agent_dre\.deb/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string17_Dameware_greyware_tool_keyword = /\\appdata\\local\\damewa\~1\\/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string18_Dameware_greyware_tool_keyword = /\\appdata\\local\\dameware\sremote\severywhere/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string19_Dameware_greyware_tool_keyword = /\\appdata\\local\\microsoft\\windows\\inetcache\\ie\\can_install_pc\[1\]\.xml/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string20_Dameware_greyware_tool_keyword = /\\AppData\\Roaming\\DameWare\sDevelopment\\/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string21_Dameware_greyware_tool_keyword = /\\baconsoleapp\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string22_Dameware_greyware_tool_keyword = /\\baconsoleappen\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string23_Dameware_greyware_tool_keyword = /\\baseclient\.exe.{0,1000}\s\-consoleinstallcomplete/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string24_Dameware_greyware_tool_keyword = /\\basupclphlp\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string25_Dameware_greyware_tool_keyword = /\\basupclpprg\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string26_Dameware_greyware_tool_keyword = /\\basupconhelper\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string27_Dameware_greyware_tool_keyword = /\\basuplib\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string28_Dameware_greyware_tool_keyword = /\\basupportexpresssrvcupdater_dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string29_Dameware_greyware_tool_keyword = /\\basupportexpressstandaloneservice_dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string30_Dameware_greyware_tool_keyword = /\\basupregedithlpr\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string31_Dameware_greyware_tool_keyword = /\\basupregedithlpr_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string32_Dameware_greyware_tool_keyword = /\\basupsrvc\.cfg/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string33_Dameware_greyware_tool_keyword = /\\basupsrvc\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string34_Dameware_greyware_tool_keyword = /\\basupsrvc\.ico/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string35_Dameware_greyware_tool_keyword = /\\basupsrvc\.ini/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string36_Dameware_greyware_tool_keyword = /\\basupsrvc\.xml/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string37_Dameware_greyware_tool_keyword = /\\basupsrvc_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string38_Dameware_greyware_tool_keyword = /\\basupsrvccnfg\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string39_Dameware_greyware_tool_keyword = /\\basupsrvccnfg_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string40_Dameware_greyware_tool_keyword = /\\basupsrvccnfg_dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string41_Dameware_greyware_tool_keyword = /\\basupsrvccnfgde\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string42_Dameware_greyware_tool_keyword = /\\basupsrvccnfgen\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string43_Dameware_greyware_tool_keyword = /\\basupsrvccnfges\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string44_Dameware_greyware_tool_keyword = /\\basupsrvccnfgfr\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string45_Dameware_greyware_tool_keyword = /\\basupsrvccnfgit\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string46_Dameware_greyware_tool_keyword = /\\basupsrvccnfgpt\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string47_Dameware_greyware_tool_keyword = /\\basupsrvcde\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string48_Dameware_greyware_tool_keyword = /\\basupsrvcen\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string49_Dameware_greyware_tool_keyword = /\\basupsrvces\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string50_Dameware_greyware_tool_keyword = /\\basupsrvcevnt3\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string51_Dameware_greyware_tool_keyword = /\\basupsrvcfr\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string52_Dameware_greyware_tool_keyword = /\\basupsrvcit\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string53_Dameware_greyware_tool_keyword = /\\basupsrvcpt\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string54_Dameware_greyware_tool_keyword = /\\basupsrvcupdater\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string55_Dameware_greyware_tool_keyword = /\\basupsrvcupdater_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string56_Dameware_greyware_tool_keyword = /\\basupsysinf.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string57_Dameware_greyware_tool_keyword = /\\basupsysinf\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string58_Dameware_greyware_tool_keyword = /\\basupsysinf\.ini/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string59_Dameware_greyware_tool_keyword = /\\basupsysshell\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string60_Dameware_greyware_tool_keyword = /\\basupsysshell64\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string61_Dameware_greyware_tool_keyword = /\\basuptshelper\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string62_Dameware_greyware_tool_keyword = /\\basuptshelper_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string63_Dameware_greyware_tool_keyword = /\\basuptshelperlib\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string64_Dameware_greyware_tool_keyword = /\\basupunelev\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string65_Dameware_greyware_tool_keyword = /\\basupvista\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string66_Dameware_greyware_tool_keyword = /\\bavideochat\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string67_Dameware_greyware_tool_keyword = /\\bawhook\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string68_Dameware_greyware_tool_keyword = /\\beanywhere\ssupport\sexpress\sservice\s\-\s\[dameware\]/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string69_Dameware_greyware_tool_keyword = /\\currentversion\\uninstall\\dameware\sremote\severywhere/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string70_Dameware_greyware_tool_keyword = /\\DameWare\sDevelopment\\MrcVerbLog/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string71_Dameware_greyware_tool_keyword = /\\Dameware\sMini\sRemote\sControl\sx64\\/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string72_Dameware_greyware_tool_keyword = /\\dameware\smini\sremote\scontrol\sx64\\/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string73_Dameware_greyware_tool_keyword = /\\DameWare\sMini\sRemote\sControl.{0,1000}\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string74_Dameware_greyware_tool_keyword = /\\Dameware\sMini\sRemote\sControl\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string75_Dameware_greyware_tool_keyword = /\\dameware\sremote\severywhere\sagent/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string76_Dameware_greyware_tool_keyword = /\\dameware\sremote\severywhere\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string77_Dameware_greyware_tool_keyword = /\\Dameware\sRemote\sSupport\s\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string78_Dameware_greyware_tool_keyword = /\\Dameware\sRemote\sSupport\\/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string79_Dameware_greyware_tool_keyword = /\\DameWare\.Diagnostics/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string80_Dameware_greyware_tool_keyword = /\\DameWare\.LogAdjuster\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string81_Dameware_greyware_tool_keyword = /\\DameWare\.LogAdjuster\.exe\.config/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string82_Dameware_greyware_tool_keyword = /\\damewareagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string83_Dameware_greyware_tool_keyword = /\\damewareagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string84_Dameware_greyware_tool_keyword = /\\damewareremoteeverywhere\\/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string85_Dameware_greyware_tool_keyword = /\\damewareremoteeverywhereagentinstaller\.install\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string86_Dameware_greyware_tool_keyword = /\\disable\sdameware\sremote\severywhere\sagent\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string87_Dameware_greyware_tool_keyword = /\\DMRC\-10\-Evaluation\.lic/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string88_Dameware_greyware_tool_keyword = /\\DNTU\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string89_Dameware_greyware_tool_keyword = /\\dre_mac_console\.zip/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string90_Dameware_greyware_tool_keyword = /\\DWAMTD\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string91_Dameware_greyware_tool_keyword = /\\DWAMTDRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string92_Dameware_greyware_tool_keyword = /\\DWMRC_St_64\.msi/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string93_Dameware_greyware_tool_keyword = /\\DWMSISET\.W32/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string94_Dameware_greyware_tool_keyword = /\\DWMSISET\.X64/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string95_Dameware_greyware_tool_keyword = /\\DWNativeWCFClient\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string96_Dameware_greyware_tool_keyword = /\\DWNativeWCFClientRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string97_Dameware_greyware_tool_keyword = /\\DWPing\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string98_Dameware_greyware_tool_keyword = /\\DWPINGRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string99_Dameware_greyware_tool_keyword = /\\DWRCBA\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string100_Dameware_greyware_tool_keyword = /\\DWRCBN\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string101_Dameware_greyware_tool_keyword = /\\DWRCC\.chm/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string102_Dameware_greyware_tool_keyword = /\\DWRCC\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string103_Dameware_greyware_tool_keyword = /\\DWRCC\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string104_Dameware_greyware_tool_keyword = /\\DWRCC\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string105_Dameware_greyware_tool_keyword = /\\DWRCC\.Logging\.xml/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string106_Dameware_greyware_tool_keyword = /\\DWRCCH\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string107_Dameware_greyware_tool_keyword = /\\DWRCChat\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string108_Dameware_greyware_tool_keyword = /\\DWRCChatRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string109_Dameware_greyware_tool_keyword = /\\DWRCCMD\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string110_Dameware_greyware_tool_keyword = /\\DWRCCRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string111_Dameware_greyware_tool_keyword = /\\DWRCCSFTv2\.data/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string112_Dameware_greyware_tool_keyword = /\\DWRCD\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string113_Dameware_greyware_tool_keyword = /\\DWRCD\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string114_Dameware_greyware_tool_keyword = /\\DWRCK\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string115_Dameware_greyware_tool_keyword = /\\DWRCOP\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string116_Dameware_greyware_tool_keyword = /\\DWRCOPRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string117_Dameware_greyware_tool_keyword = /\\DWRCPN\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string118_Dameware_greyware_tool_keyword = /\\DWRCRSA\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string119_Dameware_greyware_tool_keyword = /\\DWRCRSS\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string120_Dameware_greyware_tool_keyword = /\\DWRCRSS\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string121_Dameware_greyware_tool_keyword = /\\DWRCS\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string122_Dameware_greyware_tool_keyword = /\\DWRCS\.Logging\.xml/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string123_Dameware_greyware_tool_keyword = /\\DWRCS\.reg/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string124_Dameware_greyware_tool_keyword = /\\DWRCSET\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string125_Dameware_greyware_tool_keyword = /\\DWRCSETRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string126_Dameware_greyware_tool_keyword = /\\DWRCSh\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string127_Dameware_greyware_tool_keyword = /\\DWRCSHRegister\.cmd/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string128_Dameware_greyware_tool_keyword = /\\DWRCSI\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string129_Dameware_greyware_tool_keyword = /\\DWRCSI\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string130_Dameware_greyware_tool_keyword = /\\DWRCSIRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string131_Dameware_greyware_tool_keyword = /\\DWRCSMSI\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string132_Dameware_greyware_tool_keyword = /\\DWRCSMSIRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string133_Dameware_greyware_tool_keyword = /\\DWRCSPC\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string134_Dameware_greyware_tool_keyword = /\\DWRCSPCRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string135_Dameware_greyware_tool_keyword = /\\DWRCSPX\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string136_Dameware_greyware_tool_keyword = /\\DWRCSPXRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string137_Dameware_greyware_tool_keyword = /\\DWRCSRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string138_Dameware_greyware_tool_keyword = /\\DWRCST\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string139_Dameware_greyware_tool_keyword = /\\DWRCST\.Logging\.xml/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string140_Dameware_greyware_tool_keyword = /\\DWRCSTRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string141_Dameware_greyware_tool_keyword = /\\DWRCU3\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string142_Dameware_greyware_tool_keyword = /\\DWRCWHD\.Logging\.xml/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string143_Dameware_greyware_tool_keyword = /\\DWRCWHDAPI\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string144_Dameware_greyware_tool_keyword = /\\DWRCWHDUI\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string145_Dameware_greyware_tool_keyword = /\\DWRCWHDUIRES\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string146_Dameware_greyware_tool_keyword = /\\DWRCWol\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string147_Dameware_greyware_tool_keyword = /\\DWRCWXL\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string148_Dameware_greyware_tool_keyword = /\\DWRTD\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string149_Dameware_greyware_tool_keyword = /\\DWRTDE\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string150_Dameware_greyware_tool_keyword = /\\DWRTDR\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string151_Dameware_greyware_tool_keyword = /\\DWRTDR\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string152_Dameware_greyware_tool_keyword = /\\DWSGRWRP\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string153_Dameware_greyware_tool_keyword = /\\DWUtil\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string154_Dameware_greyware_tool_keyword = /\\DWWFDS\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string155_Dameware_greyware_tool_keyword = /\\enable\sdameware\sremote\severywhere\sagent\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string156_Dameware_greyware_tool_keyword = /\\eventlog\\application\\dameware\s/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string157_Dameware_greyware_tool_keyword = /\\getsupportservice_common_dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string158_Dameware_greyware_tool_keyword = /\\getsupportservice_dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string159_Dameware_greyware_tool_keyword = /\\getsupportservice_dameware\\/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string160_Dameware_greyware_tool_keyword = /\\linuxconsole_dw\s\(1\)\.zip/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string161_Dameware_greyware_tool_keyword = /\\logs\\baseclient_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string162_Dameware_greyware_tool_keyword = /\\logs\\baseconsoleapp_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string163_Dameware_greyware_tool_keyword = /\\logs\\basupclphlp_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string164_Dameware_greyware_tool_keyword = /\\Logs\\DNTU\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string165_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\sClient\sAgent\sMSI\sBuilder\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string166_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\sDiagnostics\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string167_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\sHelp\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string168_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\sLog\sAdjuster\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string169_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\sService/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string170_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\sService\\Settings\\SFT\:\sUpload\sFolder/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string171_Dameware_greyware_tool_keyword = /\\Mini\sRemote\sControl\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string172_Dameware_greyware_tool_keyword = /\\MRC_12\.0_Bootstrap_Install_Log\.txt/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string173_Dameware_greyware_tool_keyword = /\\MRCCv2\.db/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string174_Dameware_greyware_tool_keyword = /\\mspacredentialprovider_.{0,1000}_dameware\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string175_Dameware_greyware_tool_keyword = /\\msparegedithelper_/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string176_Dameware_greyware_tool_keyword = /\\mspxtshlpsrv_/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string177_Dameware_greyware_tool_keyword = /\\mspxwebcom\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string178_Dameware_greyware_tool_keyword = /\\multiplicar\snegocios\\beanywhere\ssupport\sexpress/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string179_Dameware_greyware_tool_keyword = /\\prefetch\\baconsoleapp\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string180_Dameware_greyware_tool_keyword = /\\prefetch\\baseclient\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string181_Dameware_greyware_tool_keyword = /\\prefetch\\basupclphlp\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string182_Dameware_greyware_tool_keyword = /\\prefetch\\basupregedithlpr\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string183_Dameware_greyware_tool_keyword = /\\prefetch\\basupsrvc\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string184_Dameware_greyware_tool_keyword = /\\prefetch\\basupsrvccnfg\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string185_Dameware_greyware_tool_keyword = /\\prefetch\\basupsrvcupdater\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string186_Dameware_greyware_tool_keyword = /\\prefetch\\basupsysinf\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string187_Dameware_greyware_tool_keyword = /\\prefetch\\basuptshelper\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string188_Dameware_greyware_tool_keyword = /\\prefetch\\damewareagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string189_Dameware_greyware_tool_keyword = /\\prefetch\\damewareremoteeverywhereconso/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string190_Dameware_greyware_tool_keyword = /\\prefetch\\tcrmtshellagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string191_Dameware_greyware_tool_keyword = /\\prefetch\\tcrmtshellviewer\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string192_Dameware_greyware_tool_keyword = /\\prefetch\\tkcuploader\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string193_Dameware_greyware_tool_keyword = /\\progra\~2\\damewa\~1\\remoteshell\\/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string194_Dameware_greyware_tool_keyword = /\\quick\slaunch\\dameware\sremote\severywhere\stech\sconsole\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string195_Dameware_greyware_tool_keyword = /\\Service\sInstall\sOverwrite\sRemote\sCFG/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string196_Dameware_greyware_tool_keyword = /\\SFT\:\sEnable\sSimple\sFile\sTransfer/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string197_Dameware_greyware_tool_keyword = /\\SolarWinds\.DepInjectedClassWalker\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string198_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.Contract\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string199_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.DameWare\.Extensions\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string200_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string201_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.exe\.config/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string202_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.Extensions\.Common\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string203_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.Extensions\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string204_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.Platform\.Extensions\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string205_Dameware_greyware_tool_keyword = /\\SolarWinds\.Diags\.Strings\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string206_Dameware_greyware_tool_keyword = /\\SOLARWINDS\.DRS\.LICENSOR\.EXE\-/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string207_Dameware_greyware_tool_keyword = /\\SolarWinds\.LicenseManager\.msi/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string208_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.Gen4\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string209_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.Gen4\.dll\.config/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string210_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.Gen4\.Resources\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string211_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.Gen4\.UI\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string212_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.MRC\.COMWrapper\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string213_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.MRC\.COMWrapper\.dll\.config/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string214_Dameware_greyware_tool_keyword = /\\SolarWinds\.Licensing\.MRC\.COMWrapper\.tlb/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string215_Dameware_greyware_tool_keyword = /\\SolarWinds\.Logging\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string216_Dameware_greyware_tool_keyword = /\\SolarWinds\.MRC\.Licensor\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string217_Dameware_greyware_tool_keyword = /\\SolarWinds\.MRC\.Licensor\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string218_Dameware_greyware_tool_keyword = /\\SolarWinds\.MRC\.Licensor\.exe\.config/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string219_Dameware_greyware_tool_keyword = /\\SolarWinds\.MRC\.Licensor\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string220_Dameware_greyware_tool_keyword = /\\SolarWinds\.Pluggability\.Contract\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string221_Dameware_greyware_tool_keyword = /\\SolarWinds\.Pluggability\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string222_Dameware_greyware_tool_keyword = /\\SolarWinds\\Dameware\sMini\sRemote\sControl/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string223_Dameware_greyware_tool_keyword = /\\SolarWinds\\Logs\\Dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string224_Dameware_greyware_tool_keyword = /\\SOLARWINDS\-DAMEWARE\-DRS\-ST\.EX\-/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string225_Dameware_greyware_tool_keyword = /\\SolarWinds\-Dameware\-DRS\-St\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string226_Dameware_greyware_tool_keyword = /\\start\sdameware\sremote\severywhere\sagent\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string227_Dameware_greyware_tool_keyword = /\\start\smenu\\programs\\dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string228_Dameware_greyware_tool_keyword = /\\tcdirectchat\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string229_Dameware_greyware_tool_keyword = /\\tcdirectchatde\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string230_Dameware_greyware_tool_keyword = /\\tcdirectchaten\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string231_Dameware_greyware_tool_keyword = /\\tcdirectchates\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string232_Dameware_greyware_tool_keyword = /\\tcdirectchatfr\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string233_Dameware_greyware_tool_keyword = /\\tcdirectchatit\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string234_Dameware_greyware_tool_keyword = /\\tcdirectchatpt\.dll/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string235_Dameware_greyware_tool_keyword = /\\tcrmtshellagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string236_Dameware_greyware_tool_keyword = /\\tcrmtshellagent_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string237_Dameware_greyware_tool_keyword = /\\tcrmtshellagentmodule_/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string238_Dameware_greyware_tool_keyword = /\\tcrmtshellviewer\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string239_Dameware_greyware_tool_keyword = /\\tcrmtshellviewer_.{0,1000}\.log/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string240_Dameware_greyware_tool_keyword = /\\tcrmtshellviewermodule_/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string241_Dameware_greyware_tool_keyword = /\\tkcuploader\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string242_Dameware_greyware_tool_keyword = /\\wow6432node\\multiplicar\snegocios\\bace_dameware/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string243_Dameware_greyware_tool_keyword = /\<data\>dameware\sremote\severywhere\<\/data\>/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string244_Dameware_greyware_tool_keyword = /\<data\>n\-able\stake\scontrol\<\/data\>/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string245_Dameware_greyware_tool_keyword = /\<provider\sname\=\"dameware\sremote\severywhere\s\-\s\[dameware\]\"\s\/\>/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string246_Dameware_greyware_tool_keyword = /admin\..{0,1000}\.swi\-dre\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string247_Dameware_greyware_tool_keyword = /C\:\\Program\sFiles\\SolarWinds\\Dameware\sMini\sRemote\sControl\sx64\\/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string248_Dameware_greyware_tool_keyword = /C\:\\Users\\mthcht\\AppData\\Roaming\\DameWare\sDevelopment\\/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string249_Dameware_greyware_tool_keyword = /chat\.us\.n\-able\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string250_Dameware_greyware_tool_keyword = /\'company\'\>n\-able\stake\scontrol\<\/data\>/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string251_Dameware_greyware_tool_keyword = /comserver\.corporate\.beanywhere\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string252_Dameware_greyware_tool_keyword = /DameWare\sDevelopment\sCommon\sData\\Mini\sRemote\sControl/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string253_Dameware_greyware_tool_keyword = /DameWare\sDevelopment\\Agent\sConfiguration/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string254_Dameware_greyware_tool_keyword = /dameware\sremote\severywhere\sagent\s\-\s\[dameware\]/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string255_Dameware_greyware_tool_keyword = /DameWare\sRemote\sSupport\.exe	/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string256_Dameware_greyware_tool_keyword = /damewareagent\.msi/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string257_Dameware_greyware_tool_keyword = /damewareremoteeverywhereagent\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string258_Dameware_greyware_tool_keyword = /damewareremoteeverywhereconsole\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string259_Dameware_greyware_tool_keyword = /\'Description\'\>Dameware\sproducts\<\/Data\>/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string260_Dameware_greyware_tool_keyword = /download\.global\.mspa\.n\-able\.com\// nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string261_Dameware_greyware_tool_keyword = /getsupportservice_common_dameware\\logs/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string262_Dameware_greyware_tool_keyword = /https\:\/\/downloads\.solarwinds\.com\/solarwinds\/Release\/DameWare\// nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string263_Dameware_greyware_tool_keyword = /login\.swi\-dre\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string264_Dameware_greyware_tool_keyword = /msi\-installs\.swi\-rc\.com\// nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string265_Dameware_greyware_tool_keyword = /notifications\..{0,1000}\.swi\-rc\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string266_Dameware_greyware_tool_keyword = /product\:\sdamewareagent\s\-\-/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string267_Dameware_greyware_tool_keyword = /provider\sname\=\"n\-able\stake\scontrol\s\-\s\[dameware\]\"\s\/\>/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string268_Dameware_greyware_tool_keyword = /\-\-single\-argument\shttps\:\/\/www\.solarwinds\.com\/.{0,1000}\/remote\-support\-software/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string269_Dameware_greyware_tool_keyword = /SolarWinds\.MRC\.Licensor/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string270_Dameware_greyware_tool_keyword = /SolarWinds\.Orion\.MaintDateCheck/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string271_Dameware_greyware_tool_keyword = /SolarWinds\-Dameware\-DRS\-St\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string272_Dameware_greyware_tool_keyword = /SolarWinds\-Dameware\-DRS\-St\-Eval\.zip/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string273_Dameware_greyware_tool_keyword = /SolarWinds\-Dameware\-MRC\-32bit\-St\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string274_Dameware_greyware_tool_keyword = /SolarWinds\-Dameware\-MRC\-32bit\-St\-Eval\.zip/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string275_Dameware_greyware_tool_keyword = /SolarWinds\-Dameware\-MRC\-64bit\-St\.exe/ nocase ascii wide
+        // Description: Solarwind Dameware Mini Remote Control tool 
+        // Reference: https://www.solarwinds.com/dameware-mini-remote-control
+        $string276_Dameware_greyware_tool_keyword = /SolarWinds\-Dameware\-MRC\-64bit\-St\-Eval\.zip/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string277_Dameware_greyware_tool_keyword = /stop\sdameware\sremote\severywhere\sagent\.lnk/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string278_Dameware_greyware_tool_keyword = /techws\..{0,1000}\.swi\-rc\.com/ nocase ascii wide
+        // Description: Solarwind Dameware Remote Control utilities
+        // Reference: https://www.solarwinds.com/fr/remote-support-software
+        $string279_Dameware_greyware_tool_keyword = /vaults\..{0,1000}\.swi\-rc\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -5782,6 +6635,25 @@ rule grep_greyware_tool_keyword
 }
 
 
+rule greyware_tool_keyword_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'greyware_tool_keyword' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "greyware_tool_keyword"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
+        // Reference: https://www.teamviewer.com/
+        $string1_greyware_tool_keyword_greyware_tool_keyword = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Guru_VPN__and__Proxy_greyware_tool_keyword
 {
     meta:
@@ -6428,6 +7300,34 @@ rule ipv4_myip_wtf_greyware_tool_keyword
         // Description: get public ip address. Used by disctopia-c2
         // Reference: https://github.com/3ct0s/disctopia-c2/blob/main/libraries/disctopia.py
         $string1_ipv4_myip_wtf_greyware_tool_keyword = /https\:\/\/ipv4\.myip\.wtf\/text/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule ired_team_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'ired.team' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "ired.team"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Red Teaming Tactics and Techniques
+        // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
+        $string1_ired_team_greyware_tool_keyword = /\/RedTeaming\-Tactics\-and\-Techniques\.git/ nocase ascii wide
+        // Description: Red Teaming Tactics and Techniques
+        // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
+        $string2_ired_team_greyware_tool_keyword = /\\RedTeaming\-Tactics\-and\-Techniques\-master/ nocase ascii wide
+        // Description: Red Teaming Tactics and Techniques
+        // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
+        $string3_ired_team_greyware_tool_keyword = /mantvydasb\/RedTeaming\-Tactics\-and\-Techniques/ nocase ascii wide
+        // Description: Red Teaming Tactics and Techniques
+        // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
+        $string4_ired_team_greyware_tool_keyword = /www\.ired\.team/ nocase ascii wide
 
     condition:
         any of them
@@ -9913,97 +10813,115 @@ rule Radmin_greyware_tool_keyword
         $string1_Radmin_greyware_tool_keyword = /\/Radmin\.exe/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string2_Radmin_greyware_tool_keyword = /\/rserver3\.exe/ nocase ascii wide
+        $string2_Radmin_greyware_tool_keyword = /\/Radmin_Server_.{0,1000}\.msi/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string3_Radmin_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}_Radmin_3\..{0,1000}\.zip/ nocase ascii wide
+        $string3_Radmin_greyware_tool_keyword = /\/Radmin_Viewer_.{0,1000}\.msi/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string4_Radmin_greyware_tool_keyword = /\\AppData\\Roaming\\Radmin/ nocase ascii wide
+        $string4_Radmin_greyware_tool_keyword = /\/Radmin_VPN_1\..{0,1000}\.exe/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string5_Radmin_greyware_tool_keyword = /\\Radmin\.exe/ nocase ascii wide
+        $string5_Radmin_greyware_tool_keyword = /\/rserver3\.exe/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string6_Radmin_greyware_tool_keyword = /\\RADMIN\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string6_Radmin_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}_Radmin_3\..{0,1000}\.zip/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string7_Radmin_greyware_tool_keyword = /\\Radmin\\radmin\.rpb/ nocase ascii wide
+        $string7_Radmin_greyware_tool_keyword = /\\AppData\\Roaming\\Radmin/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string8_Radmin_greyware_tool_keyword = /\\Radmin_Server_.{0,1000}\.msi/ nocase ascii wide
+        $string8_Radmin_greyware_tool_keyword = /\\Radmin\.exe/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string9_Radmin_greyware_tool_keyword = /\\Radmin_Viewer_.{0,1000}\.msi/ nocase ascii wide
+        $string9_Radmin_greyware_tool_keyword = /\\RADMIN\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string10_Radmin_greyware_tool_keyword = /\\rserver3\.exe/ nocase ascii wide
+        $string10_Radmin_greyware_tool_keyword = /\\Radmin\\radmin\.rpb/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string11_Radmin_greyware_tool_keyword = /\\rsetup64\.exe.{0,1000}\/stop/ nocase ascii wide
+        $string11_Radmin_greyware_tool_keyword = /\\Radmin_Server_.{0,1000}\.msi/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string12_Radmin_greyware_tool_keyword = /\\rsl\.exe\s\/setup/ nocase ascii wide
+        $string12_Radmin_greyware_tool_keyword = /\\Radmin_Viewer_.{0,1000}\.msi/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string13_Radmin_greyware_tool_keyword = /\\rsl\.exe.{0,1000}\/stop/ nocase ascii wide
+        $string13_Radmin_greyware_tool_keyword = /\\Radmin_VPN_1\..{0,1000}\.exe/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string14_Radmin_greyware_tool_keyword = /\\Start\sMenu\\Programs\\Radmin\sServer\s/ nocase ascii wide
+        $string14_Radmin_greyware_tool_keyword = /\\rserver3\.exe/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string15_Radmin_greyware_tool_keyword = /\\Start\sMenu\\Programs\\Radmin\sViewer\s/ nocase ascii wide
+        $string15_Radmin_greyware_tool_keyword = /\\rsetup64\.exe.{0,1000}\/stop/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string16_Radmin_greyware_tool_keyword = /\\SysWOW64\\rserver30\\FamItrf2/ nocase ascii wide
+        $string16_Radmin_greyware_tool_keyword = /\\rsl\.exe\s\/setup/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string17_Radmin_greyware_tool_keyword = /\\SysWOW64\\rserver30\\FamItrfc/ nocase ascii wide
+        $string17_Radmin_greyware_tool_keyword = /\\rsl\.exe.{0,1000}\/stop/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string18_Radmin_greyware_tool_keyword = /\\Windows\\SysWOW64\\rserver30\\/ nocase ascii wide
+        $string18_Radmin_greyware_tool_keyword = /\\Start\sMenu\\Programs\\Radmin\sServer\s/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string19_Radmin_greyware_tool_keyword = /HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Radmin\\/ nocase ascii wide
+        $string19_Radmin_greyware_tool_keyword = /\\Start\sMenu\\Programs\\Radmin\sViewer\s/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string20_Radmin_greyware_tool_keyword = /netsh\sadvfirewall\sfirewall\sadd\srule\sname\=\"Radmin\sServer\s/ nocase ascii wide
+        $string20_Radmin_greyware_tool_keyword = /\\SysWOW64\\rserver30\\FamItrf2/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string21_Radmin_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Radmin\sViewer\s3\\/ nocase ascii wide
+        $string21_Radmin_greyware_tool_keyword = /\\SysWOW64\\rserver30\\FamItrfc/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string22_Radmin_greyware_tool_keyword = /radmin\s\/connect\:/ nocase ascii wide
+        $string22_Radmin_greyware_tool_keyword = /\\Windows\\SysWOW64\\rserver30\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string23_Radmin_greyware_tool_keyword = /Radmin\sServer\sV3/ nocase ascii wide
+        $string23_Radmin_greyware_tool_keyword = /download\.radmin\.com/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string24_Radmin_greyware_tool_keyword = /Radmin\sViewer\s3\\CHATLOGS\\/ nocase ascii wide
+        $string24_Radmin_greyware_tool_keyword = /download\.radmin\-vpn\.com/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string25_Radmin_greyware_tool_keyword = /Radmin\sViewer\s3\\rchatx\.dll/ nocase ascii wide
+        $string25_Radmin_greyware_tool_keyword = /HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Radmin\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string26_Radmin_greyware_tool_keyword = /radmin\.exe.{0,1000}\s\/connect\:/ nocase ascii wide
+        $string26_Radmin_greyware_tool_keyword = /netsh\sadvfirewall\sfirewall\sadd\srule\sname\=\"Radmin\sServer\s/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string27_Radmin_greyware_tool_keyword = /rserver3\s\/start/ nocase ascii wide
+        $string27_Radmin_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Radmin\sViewer\s3\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string28_Radmin_greyware_tool_keyword = /rserver3\s\/stop/ nocase ascii wide
+        $string28_Radmin_greyware_tool_keyword = /radmin\s\/connect\:/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string29_Radmin_greyware_tool_keyword = /rserver3\.exe.{0,1000}\/start/ nocase ascii wide
+        $string29_Radmin_greyware_tool_keyword = /Radmin\sServer\sV3/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string30_Radmin_greyware_tool_keyword = /rserver3\.exe.{0,1000}\/stop/ nocase ascii wide
+        $string30_Radmin_greyware_tool_keyword = /Radmin\sViewer\s3\\CHATLOGS\\/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string31_Radmin_greyware_tool_keyword = /Settings\sfor\sRadmin\sServer\.lnk/ nocase ascii wide
+        $string31_Radmin_greyware_tool_keyword = /Radmin\sViewer\s3\\rchatx\.dll/ nocase ascii wide
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
-        $string32_Radmin_greyware_tool_keyword = /Stop\sRadmin\sServer\.lnk/ nocase ascii wide
+        $string32_Radmin_greyware_tool_keyword = /radmin\.exe.{0,1000}\s\/connect\:/ nocase ascii wide
+        // Description: Radmin is a remote control program that lets you work on another computer through your own
+        // Reference: https://www.radmin.com/download/
+        $string33_Radmin_greyware_tool_keyword = /rserver3\s\/start/ nocase ascii wide
+        // Description: Radmin is a remote control program that lets you work on another computer through your own
+        // Reference: https://www.radmin.com/download/
+        $string34_Radmin_greyware_tool_keyword = /rserver3\s\/stop/ nocase ascii wide
+        // Description: Radmin is a remote control program that lets you work on another computer through your own
+        // Reference: https://www.radmin.com/download/
+        $string35_Radmin_greyware_tool_keyword = /rserver3\.exe.{0,1000}\/start/ nocase ascii wide
+        // Description: Radmin is a remote control program that lets you work on another computer through your own
+        // Reference: https://www.radmin.com/download/
+        $string36_Radmin_greyware_tool_keyword = /rserver3\.exe.{0,1000}\/stop/ nocase ascii wide
+        // Description: Radmin is a remote control program that lets you work on another computer through your own
+        // Reference: https://www.radmin.com/download/
+        $string37_Radmin_greyware_tool_keyword = /Settings\sfor\sRadmin\sServer\.lnk/ nocase ascii wide
+        // Description: Radmin is a remote control program that lets you work on another computer through your own
+        // Reference: https://www.radmin.com/download/
+        $string38_Radmin_greyware_tool_keyword = /Stop\sRadmin\sServer\.lnk/ nocase ascii wide
 
     condition:
         any of them
@@ -12761,6 +13679,34 @@ rule sslip_io_greyware_tool_keyword
 }
 
 
+rule stowaway_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'stowaway' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "stowaway"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
+        // Reference: https://github.com/ph4ntonn/Stowaway
+        $string1_stowaway_greyware_tool_keyword = /\/linux_x64_admin/ nocase ascii wide
+        // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
+        // Reference: https://github.com/ph4ntonn/Stowaway
+        $string2_stowaway_greyware_tool_keyword = /\/linux_x64_agent/ nocase ascii wide
+        // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
+        // Reference: https://github.com/ph4ntonn/Stowaway
+        $string3_stowaway_greyware_tool_keyword = /\/linux_x86_admin/ nocase ascii wide
+        // Description: Stowaway -- Multi-hop Proxy Tool for pentesters
+        // Reference: https://github.com/ph4ntonn/Stowaway
+        $string4_stowaway_greyware_tool_keyword = /\/linux_x86_agent/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule sudo_greyware_tool_keyword
 {
     meta:
@@ -13524,148 +14470,148 @@ rule teamviewer_greyware_tool_keyword
     strings:
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string1_teamviewer_greyware_tool_keyword = /\.router\.teamviewer\.com/ nocase ascii wide
+        $string1_teamviewer_greyware_tool_keyword = /\.exe\s\-\-IPCport\s5939\s\-\-Module\s1/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string2_teamviewer_greyware_tool_keyword = /\/Create\s\/TN\sTVInstallRestore\s\/TR\s/ nocase ascii wide
+        $string2_teamviewer_greyware_tool_keyword = /\.router\.teamviewer\.com/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string3_teamviewer_greyware_tool_keyword = /\\AppData\\Roaming\\TeamViewer/ nocase ascii wide
+        $string3_teamviewer_greyware_tool_keyword = /\/Create\s\/TN\sTVInstallRestore\s\/TR\s/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string4_teamviewer_greyware_tool_keyword = /\\CurrentControlSet\\Services\\TeamViewer/ nocase ascii wide
+        $string4_teamviewer_greyware_tool_keyword = /\\AppData\\Roaming\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string5_teamviewer_greyware_tool_keyword = /\\Program\sFiles\\TeamViewer/ nocase ascii wide
+        $string5_teamviewer_greyware_tool_keyword = /\\CurrentControlSet\\Services\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string6_teamviewer_greyware_tool_keyword = /\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
+        $string6_teamviewer_greyware_tool_keyword = /\\Program\sFiles\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string7_teamviewer_greyware_tool_keyword = /\\Software\\TeamViewer\\Temp/ nocase ascii wide
+        $string7_teamviewer_greyware_tool_keyword = /\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string8_teamviewer_greyware_tool_keyword = /\\TeamViewer\.exe/ nocase ascii wide
+        $string8_teamviewer_greyware_tool_keyword = /\\Software\\TeamViewer\\Temp/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string9_teamviewer_greyware_tool_keyword = /\\TeamViewer\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string10_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections\.txt/ nocase ascii wide
+        $string10_teamviewer_greyware_tool_keyword = /\\TeamViewer\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string11_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections_incoming\.txt/ nocase ascii wide
+        $string11_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections\.txt/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string12_teamviewer_greyware_tool_keyword = /\\TeamViewer_\.ex/ nocase ascii wide
+        $string12_teamviewer_greyware_tool_keyword = /\\TeamViewer\\Connections_incoming\.txt/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string13_teamviewer_greyware_tool_keyword = /\\teamviewer_note\.exe/ nocase ascii wide
+        $string13_teamviewer_greyware_tool_keyword = /\\TeamViewer_\.ex/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string14_teamviewer_greyware_tool_keyword = /\\TeamViewerSession\\shell\\open/ nocase ascii wide
+        $string14_teamviewer_greyware_tool_keyword = /\\teamviewer_note\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string15_teamviewer_greyware_tool_keyword = /\\TeamViewerTermsOfUseAccepted/ nocase ascii wide
+        $string15_teamviewer_greyware_tool_keyword = /\\TeamViewerSession\\shell\\open/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string16_teamviewer_greyware_tool_keyword = /\\TV15Install\.log/ nocase ascii wide
+        $string16_teamviewer_greyware_tool_keyword = /\\TeamViewerTermsOfUseAccepted/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string17_teamviewer_greyware_tool_keyword = /\\TVExtractTemp\\TeamViewer_Resource_/ nocase ascii wide
+        $string17_teamviewer_greyware_tool_keyword = /\\TV15Install\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string18_teamviewer_greyware_tool_keyword = /\\TVExtractTemp\\tvfiles\.7z/ nocase ascii wide
+        $string18_teamviewer_greyware_tool_keyword = /\\TVExtractTemp\\TeamViewer_Resource_/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string19_teamviewer_greyware_tool_keyword = /\\TvGetVersion\.dll/ nocase ascii wide
+        $string19_teamviewer_greyware_tool_keyword = /\\TVExtractTemp\\tvfiles\.7z/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string20_teamviewer_greyware_tool_keyword = /\\TVNetwork\.log/ nocase ascii wide
+        $string20_teamviewer_greyware_tool_keyword = /\\TvGetVersion\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string21_teamviewer_greyware_tool_keyword = /\\TVWebRTC\.dll/ nocase ascii wide
+        $string21_teamviewer_greyware_tool_keyword = /\\TVNetwork\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string22_teamviewer_greyware_tool_keyword = /\\Users\\Public\\Desktop\\TVTest\.tmp/ nocase ascii wide
+        $string22_teamviewer_greyware_tool_keyword = /\\TVWebRTC\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string23_teamviewer_greyware_tool_keyword = /\\Windows\\Temp\\TeamViewer/ nocase ascii wide
+        $string23_teamviewer_greyware_tool_keyword = /\\Users\\Public\\Desktop\\TVTest\.tmp/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string24_teamviewer_greyware_tool_keyword = /AppData\\Local\\Temp\\TeamViewer/ nocase ascii wide
+        $string24_teamviewer_greyware_tool_keyword = /\\Windows\\Temp\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string25_teamviewer_greyware_tool_keyword = /AppData\\Roaming\\Microsoft\\Windows\\SendTo\\TeamViewer\.lnk/ nocase ascii wide
+        $string25_teamviewer_greyware_tool_keyword = /AppData\\Local\\Temp\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string26_teamviewer_greyware_tool_keyword = /client\.teamviewer\.com/ nocase ascii wide
+        $string26_teamviewer_greyware_tool_keyword = /AppData\\Roaming\\Microsoft\\Windows\\SendTo\\TeamViewer\.lnk/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string27_teamviewer_greyware_tool_keyword = /download\.teamviewer\.com\.cdn\.cloudflare\.net/ nocase ascii wide
+        $string27_teamviewer_greyware_tool_keyword = /client\.teamviewer\.com/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string28_teamviewer_greyware_tool_keyword = /HKLM\\SOFTWARE\\TeamViewer/ nocase ascii wide
+        $string28_teamviewer_greyware_tool_keyword = /download\.teamviewer\.com\.cdn\.cloudflare\.net/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string29_teamviewer_greyware_tool_keyword = /MRU\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
+        $string29_teamviewer_greyware_tool_keyword = /HKLM\\SOFTWARE\\TeamViewer/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string30_teamviewer_greyware_tool_keyword = /TeamViewer\sVPN\sAdapter/ nocase ascii wide
+        $string30_teamviewer_greyware_tool_keyword = /MRU\\RemoteSupport\\127\.0\.0\.1\.tvc/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string31_teamviewer_greyware_tool_keyword = /TEAMVIEWER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string31_teamviewer_greyware_tool_keyword = /TeamViewer\sVPN\sAdapter/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string32_teamviewer_greyware_tool_keyword = /TeamViewer\\tv_w32\.exe/ nocase ascii wide
+        $string32_teamviewer_greyware_tool_keyword = /TEAMVIEWER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string33_teamviewer_greyware_tool_keyword = /TeamViewer\\tv_x64\.dll/ nocase ascii wide
+        $string33_teamviewer_greyware_tool_keyword = /TeamViewer\\tv_w32\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string34_teamviewer_greyware_tool_keyword = /TeamViewer\\tv_x64\.exe/ nocase ascii wide
+        $string34_teamviewer_greyware_tool_keyword = /TeamViewer\\tv_x64\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string35_teamviewer_greyware_tool_keyword = /TeamViewer\\TVNetwork\.log/ nocase ascii wide
+        $string35_teamviewer_greyware_tool_keyword = /TeamViewer\\tv_x64\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string36_teamviewer_greyware_tool_keyword = /TEAMVIEWER_\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string36_teamviewer_greyware_tool_keyword = /TeamViewer\\TVNetwork\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string37_teamviewer_greyware_tool_keyword = /TeamViewer_Desktop\.exe/ nocase ascii wide
+        $string37_teamviewer_greyware_tool_keyword = /TEAMVIEWER_\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string38_teamviewer_greyware_tool_keyword = /TEAMVIEWER_DESKTOP\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string38_teamviewer_greyware_tool_keyword = /TeamViewer_Desktop\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string39_teamviewer_greyware_tool_keyword = /TeamViewer_Hooks\.log/ nocase ascii wide
+        $string39_teamviewer_greyware_tool_keyword = /TEAMVIEWER_DESKTOP\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string40_teamviewer_greyware_tool_keyword = /TeamViewer_Service\.exe/ nocase ascii wide
+        $string40_teamviewer_greyware_tool_keyword = /TeamViewer_Hooks\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string41_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string41_teamviewer_greyware_tool_keyword = /TeamViewer_Service\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string42_teamviewer_greyware_tool_keyword = /TeamViewer_Setup_x64\.exe/ nocase ascii wide
+        $string42_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SERVICE\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string43_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SETUP_X64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string43_teamviewer_greyware_tool_keyword = /TeamViewer_Setup_x64\.exe/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string44_teamviewer_greyware_tool_keyword = /TeamViewer_VirtualDeviceDriver/ nocase ascii wide
+        $string44_teamviewer_greyware_tool_keyword = /TEAMVIEWER_SETUP_X64\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string45_teamviewer_greyware_tool_keyword = /TeamViewer_XPSDriverFilter/ nocase ascii wide
+        $string45_teamviewer_greyware_tool_keyword = /TeamViewer_VirtualDeviceDriver/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string46_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
+        $string46_teamviewer_greyware_tool_keyword = /TeamViewer_XPSDriverFilter/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string47_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string48_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
+        $string48_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
         $string49_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide

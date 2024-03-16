@@ -8,40 +8,40 @@ rule cat
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Enumerating user files history for interesting information
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string1 = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: show atftp history
         // Reference: N/A
-        $string1 = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string2 = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2 = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string3 = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: show bash history
         // Reference: N/A
-        $string3 = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string4 = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4 = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string5 = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: show mysql history
         // Reference: N/A
-        $string5 = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string6 = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string6 = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string7 = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: show nano history
         // Reference: N/A
-        $string7 = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string8 = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string8 = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string9 = /cat\s.{0,1000}\.php_history/ nocase ascii wide
         // Description: show php history
         // Reference: N/A
-        $string9 = /cat\s.{0,1000}\.php_history/ nocase ascii wide
-        // Description: Enumerating user files history for interesting information
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string10 = /cat\s.{0,1000}\.php_history/ nocase ascii wide
-        // Description: show zsh history
+        // Description: Enumerating user files history for interesting information
         // Reference: N/A
         $string11 = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
-        // Description: Enumerating user files history for interesting information
+        // Description: show zsh history
         // Reference: N/A
         $string12 = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
         // Description: linux commands abused by attackers

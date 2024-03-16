@@ -14,19 +14,19 @@ rule POSTDump
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string2 = /\.exe\s\-\-signature\s\-\-driver/ nocase ascii wide
-        // Description: perform minidump of LSASS process using few technics to avoid detection.
+        // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string3 = /\/PostDump\.exe/ nocase ascii wide
-        // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
-        // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string4 = /\/PostDump\.exe/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string5 = /\/PostDump\.exe/ nocase ascii wide
+        $string4 = /\/PostDump\.exe/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string6 = /\/POSTDump\.git/ nocase ascii wide
+        $string5 = /\/PostDump\.exe/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
+        // Reference: https://github.com/YOLOP0wn/POSTDump
+        $string6 = /\/POSTDump\.git/ nocase ascii wide
+        // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string7 = /\/POSTDump\.git/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
@@ -38,13 +38,13 @@ rule POSTDump
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string10 = /\\POSTDump\.csproj/ nocase ascii wide
-        // Description: perform minidump of LSASS process using few technics to avoid detection.
-        // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string11 = /\\PostDump\.exe/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string12 = /\\PostDump\.exe/ nocase ascii wide
+        $string11 = /\\PostDump\.exe/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
+        // Reference: https://github.com/YOLOP0wn/POSTDump
+        $string12 = /\\PostDump\.exe/ nocase ascii wide
+        // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string13 = /\\PostDump\.exe/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
@@ -74,13 +74,13 @@ rule POSTDump
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string22 = /Done\!\sCheck\sfor\sexisting\slsass\.dmp\sfile\sinto\scurrent\sfolder/ nocase ascii wide
-        // Description: perform minidump of LSASS process using few technics to avoid detection.
-        // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string23 = /E54195F0\-060C\-4B24\-98F2\-AD9FB5351045/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string24 = /E54195F0\-060C\-4B24\-98F2\-AD9FB5351045/ nocase ascii wide
+        $string23 = /E54195F0\-060C\-4B24\-98F2\-AD9FB5351045/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
+        // Reference: https://github.com/YOLOP0wn/POSTDump
+        $string24 = /E54195F0\-060C\-4B24\-98F2\-AD9FB5351045/ nocase ascii wide
+        // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string25 = /E54195F0\-060C\-4B24\-98F2\-AD9FB5351045/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
@@ -101,13 +101,13 @@ rule POSTDump
         // Description: perform minidump of LSASS process using few technics to avoid detection
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string31 = /POSTDump\.csproj/ nocase ascii wide
-        // Description: perform minidump of LSASS process using few technics to avoid detection.
-        // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string32 = /PostDump\.exe\s/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string33 = /PostDump\.exe\s/ nocase ascii wide
+        $string32 = /PostDump\.exe\s/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
+        // Reference: https://github.com/YOLOP0wn/POSTDump
+        $string33 = /PostDump\.exe\s/ nocase ascii wide
+        // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string34 = /PostDump\.exe\s/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
@@ -122,13 +122,13 @@ rule POSTDump
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string38 = /POSTDump\\PROCEXP\.sys/ nocase ascii wide
-        // Description: perform minidump of LSASS process using few technics to avoid detection.
-        // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string39 = /POSTDump\-main/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string40 = /POSTDump\-main/ nocase ascii wide
+        $string39 = /POSTDump\-main/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
+        // Reference: https://github.com/YOLOP0wn/POSTDump
+        $string40 = /POSTDump\-main/ nocase ascii wide
+        // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string41 = /POSTDump\-main/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
@@ -152,13 +152,13 @@ rule POSTDump
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string48 = /python3\sdump\-restore\.py/ nocase ascii wide
-        // Description: perform minidump of LSASS process using few technics to avoid detection.
-        // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string49 = /YOLOP0wn\/POSTDump/ nocase ascii wide
         // Description: Another tool to perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
-        $string50 = /YOLOP0wn\/POSTDump/ nocase ascii wide
+        $string49 = /YOLOP0wn\/POSTDump/ nocase ascii wide
         // Description: perform minidump of LSASS process using few technics to avoid detection
+        // Reference: https://github.com/YOLOP0wn/POSTDump
+        $string50 = /YOLOP0wn\/POSTDump/ nocase ascii wide
+        // Description: perform minidump of LSASS process using few technics to avoid detection.
         // Reference: https://github.com/YOLOP0wn/POSTDump
         $string51 = /YOLOP0wn\/POSTDump/ nocase ascii wide
 

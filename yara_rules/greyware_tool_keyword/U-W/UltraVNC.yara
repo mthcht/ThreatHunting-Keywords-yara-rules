@@ -85,7 +85,7 @@ rule UltraVNC
         $string25 = /\\winvncsc\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
-        $string26 = /\\winwvc\.exe	/ nocase ascii wide
+        $string26 = /\\winwvc\.exe/ nocase ascii wide
         // Description: UltraVNC remote access software usage
         // Reference: https://uvnc.com/downloads/ultravnc.html
         $string27 = /bvba_UltraVNC_.{0,1000}_exe/ nocase ascii wide

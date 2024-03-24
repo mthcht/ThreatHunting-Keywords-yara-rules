@@ -436,388 +436,391 @@ rule redpill
         $string142 = /\\Temp\\Wdlogfile\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string143 = /\\void\.log/ nocase ascii wide
+        $string143 = /\\URL_obfuscated\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string144 = /\\WinBruteLogon\.zip/ nocase ascii wide
+        $string144 = /\\void\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string145 = /\\windows\\temp\\fakefile\.exe/ nocase ascii wide
+        $string145 = /\\WinBruteLogon\.zip/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string146 = /\\Xclipboard\.ps1/ nocase ascii wide
+        $string146 = /\\windows\\temp\\fakefile\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string147 = /\]\sDumping\sbrowsers\scredentials\s\.\./ nocase ascii wide
+        $string147 = /\\Xclipboard\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string148 = /\]\sDumping\smail\sserv\scredentials\s\.\./ nocase ascii wide
+        $string148 = /\]\sDumping\sbrowsers\scredentials\s\.\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string149 = /\]\sDumping\smessenger\scredentials\s\.\./ nocase ascii wide
+        $string149 = /\]\sDumping\smail\sserv\scredentials\s\.\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string150 = /\]\sSending\scredentials\sto\spastebin\s\.\./ nocase ascii wide
+        $string150 = /\]\sDumping\smessenger\scredentials\s\.\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string151 = /\]\sto\sdownload\svoid\.zip\susing\sBitsTransfer/ nocase ascii wide
+        $string151 = /\]\sSending\scredentials\sto\spastebin\s\.\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string152 = /0evilpwfilter\.dll/ nocase ascii wide
+        $string152 = /\]\sto\sdownload\svoid\.zip\susing\sBitsTransfer/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string153 = /Administrator\sprivileges\srequired\sto\sspoof\sprocesses/ nocase ascii wide
+        $string153 = /0evilpwfilter\.dll/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string154 = /amibypass\.exe/ nocase ascii wide
+        $string154 = /Administrator\sprivileges\srequired\sto\sspoof\sprocesses/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string155 = /amsibypass\.exe/ nocase ascii wide
+        $string155 = /amibypass\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string156 = /amsitrigger_x64\.exe/ nocase ascii wide
+        $string156 = /amsibypass\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string157 = /bpysecdump\.exe/ nocase ascii wide
+        $string157 = /amsitrigger_x64\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string158 = /CommandCam\.exe\s\/devlist\s\>\s.{0,1000}\\CC\.log/ nocase ascii wide
+        $string158 = /bpysecdump\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string159 = /Crandle_Builder\.ps1/ nocase ascii wide
+        $string159 = /CommandCam\.exe\s\/devlist\s\>\s.{0,1000}\\CC\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string160 = /CScrandle_fileless\.cs/ nocase ascii wide
+        $string160 = /Crandle_Builder\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string161 = /DarkRCovery\.exe/ nocase ascii wide
+        $string161 = /CScrandle_fileless\.cs/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string162 = /DecodeRDPCache\.ps1/ nocase ascii wide
+        $string162 = /DarkRCovery\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string163 = /DEL\s\/q\s\/f\s\%appdata\%\\Google\\Chrome\\\"User\sData\"\\Default\\.{0,1000}\.tmp/ nocase ascii wide
+        $string163 = /DecodeRDPCache\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string164 = /DEL\s\/q\s\/f\s\%appdata\%\\Google\\Chrome\\\"User\sData\"\\Default\\History\\.{0,1000}\./ nocase ascii wide
+        $string164 = /DEL\s\/q\s\/f\s\%appdata\%\\Google\\Chrome\\\"User\sData\"\\Default\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string165 = /DEL\s\/q\s\/f\s\%appdata\%\\Microsoft\\Windows\\Recent\\.{0,1000}\./ nocase ascii wide
+        $string165 = /DEL\s\/q\s\/f\s\%appdata\%\\Google\\Chrome\\\"User\sData\"\\Default\\History\\.{0,1000}\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string166 = /DEL\s\/q\s\/f\s\%windir\%\\.{0,1000}\.log/ nocase ascii wide
+        $string166 = /DEL\s\/q\s\/f\s\%appdata\%\\Microsoft\\Windows\\Recent\\.{0,1000}\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string167 = /DEL\s\/q\s\/f\s\%windir\%\\.{0,1000}\.tmp/ nocase ascii wide
+        $string167 = /DEL\s\/q\s\/f\s\%windir\%\\.{0,1000}\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string168 = /DEL\s\/q\s\/f\s\%windir\%\\Prefetch\\.{0,1000}\.pf/ nocase ascii wide
+        $string168 = /DEL\s\/q\s\/f\s\%windir\%\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string169 = /DEL\s\/q\s\/f\s\%windir\%\\system\\.{0,1000}\.log/ nocase ascii wide
+        $string169 = /DEL\s\/q\s\/f\s\%windir\%\\Prefetch\\.{0,1000}\.pf/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string170 = /DEL\s\/q\s\/f\s\%windir\%\\system\\.{0,1000}\.tmp/ nocase ascii wide
+        $string170 = /DEL\s\/q\s\/f\s\%windir\%\\system\\.{0,1000}\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string171 = /DEL\s\/q\s\/f\s\%windir\%\\system32\\.{0,1000}\.log/ nocase ascii wide
+        $string171 = /DEL\s\/q\s\/f\s\%windir\%\\system\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string172 = /DEL\s\/q\s\/f\s\%windir\%\\system32\\.{0,1000}\.tmp/ nocase ascii wide
+        $string172 = /DEL\s\/q\s\/f\s\%windir\%\\system32\\.{0,1000}\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string173 = /DEL\s\/q\s\/f\s\%windir\%\\Temp\\.{0,1000}\.inf/ nocase ascii wide
+        $string173 = /DEL\s\/q\s\/f\s\%windir\%\\system32\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string174 = /DEL\s\/q\s\/f\s\%windir\%\\Temp\\.{0,1000}\.lnk/ nocase ascii wide
+        $string174 = /DEL\s\/q\s\/f\s\%windir\%\\Temp\\.{0,1000}\.inf/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string175 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Microsoft\\Windows\\Cookies\\.{0,1000}\./ nocase ascii wide
+        $string175 = /DEL\s\/q\s\/f\s\%windir\%\\Temp\\.{0,1000}\.lnk/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string176 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Microsoft\\Windows\\Cookies\\.{0,1000}\..{0,1000}/ nocase ascii wide
+        $string176 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Microsoft\\Windows\\Cookies\\.{0,1000}\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string177 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Microsoft\\Windows\\Recent\\.{0,1000}\./ nocase ascii wide
+        $string177 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Microsoft\\Windows\\Cookies\\.{0,1000}\..{0,1000}/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string178 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Mozilla\\Firefox\\Profiles\\.{0,1000}\./ nocase ascii wide
+        $string178 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Microsoft\\Windows\\Recent\\.{0,1000}\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string179 = /DEL\s\/q\s\/f\s\/s\s\%userprofile\%\\.{0,1000}\.log/ nocase ascii wide
+        $string179 = /DEL\s\/q\s\/f\s\/s\s\%appdata\%\\Mozilla\\Firefox\\Profiles\\.{0,1000}\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string180 = /DEL\s\/q\s\/f\s\/s\s\%userprofile\%\\.{0,1000}\.tmp/ nocase ascii wide
+        $string180 = /DEL\s\/q\s\/f\s\/s\s\%userprofile\%\\.{0,1000}\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string181 = /DeletePSscriptSignning\.bat/ nocase ascii wide
+        $string181 = /DEL\s\/q\s\/f\s\/s\s\%userprofile\%\\.{0,1000}\.tmp/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string182 = /DigitalSignature\-Hijack\.ps1/ nocase ascii wide
+        $string182 = /DeletePSscriptSignning\.bat/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string183 = /Disable\-AMS1\.ps1/ nocase ascii wide
+        $string183 = /DigitalSignature\-Hijack\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string184 = /DisableDefender\.ps1/ nocase ascii wide
+        $string184 = /Disable\-AMS1\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string185 = /DnsSpoof\.ps1/ nocase ascii wide
+        $string185 = /DisableDefender\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string186 = /DumpChromePasswords\.ps1/ nocase ascii wide
+        $string186 = /DnsSpoof\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string187 = /Env\:TMP\\ACl\.log/ nocase ascii wide
+        $string187 = /DumpChromePasswords\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string188 = /eviltree_x64\.exe/ nocase ascii wide
+        $string188 = /Env\:TMP\\ACl\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string189 = /fail\sto\sretrieve\sSAM\shashs\!/ nocase ascii wide
+        $string189 = /eviltree_x64\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string190 = /FakeCmdLine\.exe/ nocase ascii wide
+        $string190 = /fail\sto\sretrieve\sSAM\shashs\!/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string191 = /Fake\-Cmdline\.exe/ nocase ascii wide
+        $string191 = /FakeCmdLine\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string192 = /HarvestBrowserPasswords\.exe/ nocase ascii wide
+        $string192 = /Fake\-Cmdline\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string193 = /HarvestBrowserPasswords\.pdb/ nocase ascii wide
+        $string193 = /HarvestBrowserPasswords\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string194 = /HiddenUser\.ps1/ nocase ascii wide
+        $string194 = /HarvestBrowserPasswords\.pdb/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string195 = /How\-to\-bypass\-UAC\-in\-newer\-Windows\-versions\.html/ nocase ascii wide
+        $string195 = /HiddenUser\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string196 = /Invoke\-HiveNightmare\.ps1/ nocase ascii wide
+        $string196 = /How\-to\-bypass\-UAC\-in\-newer\-Windows\-versions\.html/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string197 = /Invoke\-LazySign\.ps1/ nocase ascii wide
+        $string197 = /Invoke\-HiveNightmare\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string198 = /Invoke\-Mimikatz/ nocase ascii wide
+        $string198 = /Invoke\-LazySign\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string199 = /Invoke\-PortScan/ nocase ascii wide
+        $string199 = /Invoke\-Mimikatz/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string200 = /Invoke\-PuttyCreds/ nocase ascii wide
+        $string200 = /Invoke\-PortScan/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string201 = /Invoke\-SAMDump/ nocase ascii wide
+        $string201 = /Invoke\-PuttyCreds/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string202 = /Invoke\-SendToPasteBin/ nocase ascii wide
+        $string202 = /Invoke\-SAMDump/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string203 = /Invoke\-WDigest\.ps1/ nocase ascii wide
+        $string203 = /Invoke\-SendToPasteBin/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string204 = /Invoke\-WebCamAvi\.ps1/ nocase ascii wide
+        $string204 = /Invoke\-WDigest\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string205 = /Key\`logger\srunning\sin\sbackground/ nocase ascii wide
+        $string205 = /Invoke\-WebCamAvi\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string206 = /Keylogger\.ps1/ nocase ascii wide
+        $string206 = /Key\`logger\srunning\sin\sbackground/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string207 = /List\-AllMailboxAndPST\.ps1/ nocase ascii wide
+        $string207 = /Keylogger\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string208 = /meterpeter\.ps1/ nocase ascii wide
+        $string208 = /List\-AllMailboxAndPST\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string209 = /Meterpeter_\$RandMe\.zip/ nocase ascii wide
+        $string209 = /meterpeter\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string210 = /Mouselogger\.ps1/ nocase ascii wide
+        $string210 = /Meterpeter_\$RandMe\.zip/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string211 = /mozlz4\-win32\.exe/ nocase ascii wide
+        $string211 = /Mouselogger\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string212 = /MpCmdRun\.exe\s\-RemoveDefinitions\s\-All/ nocase ascii wide
+        $string212 = /mozlz4\-win32\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string213 = /MyMeterpreter\.ps1/ nocase ascii wide
+        $string213 = /MpCmdRun\.exe\s\-RemoveDefinitions\s\-All/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string214 = /Out\-PasteBin\.ps1/ nocase ascii wide
+        $string214 = /MyMeterpreter\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string215 = /patch\-amsi\-x64\-powershell\.ps1/ nocase ascii wide
+        $string215 = /Out\-PasteBin\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string216 = /PPIDSpoof\.ps1/ nocase ascii wide
+        $string216 = /patch\-amsi\-x64\-powershell\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string217 = /PrintNotifyPotato\.exe/ nocase ascii wide
+        $string217 = /PPIDSpoof\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string218 = /PrintNotifyPotato\-NET2\.exe/ nocase ascii wide
+        $string218 = /PrintNotifyPotato\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string219 = /r00t\-3xp10it\/venom\/master\/bin\/void\.zip/ nocase ascii wide
+        $string219 = /PrintNotifyPotato\-NET2\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string220 = /Reg\sAdd\s\'HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\'\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string220 = /r00t\-3xp10it\/venom\/master\/bin\/void\.zip/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string221 = /REG\sDELETE\s\"HKCU\\Software\\Classes\\Local\sSettings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\"\s\/f/ nocase ascii wide
+        $string221 = /Reg\sAdd\s\'HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\'\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string222 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Internet\sExplorer\\TypedPaths\"\s\/f/ nocase ascii wide
+        $string222 = /REG\sDELETE\s\"HKCU\\Software\\Classes\\Local\sSettings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string223 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Internet\sExplorer\\TypedURLs\"\s\/f/ nocase ascii wide
+        $string223 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Internet\sExplorer\\TypedPaths\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string224 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppBadgeUpdated\"\s\/f/ nocase ascii wide
+        $string224 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Internet\sExplorer\\TypedURLs\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string225 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppLaunch\"\s\/f/ nocase ascii wide
+        $string225 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppBadgeUpdated\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string226 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\ShowJumpView\"\s\/f/ nocase ascii wide
+        $string226 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\AppLaunch\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string227 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs\"\s\/f/ nocase ascii wide
+        $string227 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FeatureUsage\\ShowJumpView\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string228 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU\"\s\/f/ nocase ascii wide
+        $string228 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string229 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\"\s\/f/ nocase ascii wide
+        $string229 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string230 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\RecentApps\"\s\/f/ nocase ascii wide
+        $string230 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string231 = /\-Rem\@ov\@eDef\@ini\@tio\@ns\s\-\@Al\@l/ nocase ascii wide
+        $string231 = /REG\sDELETE\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\RecentApps\"\s\/f/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string232 = /revTCPclient\.ps1/ nocase ascii wide
+        $string232 = /\-Rem\@ov\@eDef\@ini\@tio\@ns\s\-\@Al\@l/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string233 = /RevTcpShell\.exe/ nocase ascii wide
+        $string233 = /revTCPclient\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string234 = /ScanInterception_x64\.ps1/ nocase ascii wide
+        $string234 = /RevTcpShell\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string235 = /Scanning\sConsoleHost_History\sfor\screds/ nocase ascii wide
+        $string235 = /ScanInterception_x64\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string236 = /Scanning\scredential\sstore\sfor\screds\!/ nocase ascii wide
+        $string236 = /Scanning\sConsoleHost_History\sfor\screds/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string237 = /Scanning\sregistry\sfor\swinlogon\screds/ nocase ascii wide
+        $string237 = /Scanning\scredential\sstore\sfor\screds\!/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string238 = /Scanning\sTeamviewer\sfor\screds\!/ nocase ascii wide
+        $string238 = /Scanning\sregistry\sfor\swinlogon\screds/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string239 = /Scanning\swinlogon\sfor\scrypted\screds\!/ nocase ascii wide
+        $string239 = /Scanning\sTeamviewer\sfor\screds\!/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string240 = /Sending\sloot\sto\spastebin\swebserver\./ nocase ascii wide
+        $string240 = /Scanning\swinlogon\sfor\scrypted\screds\!/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string241 = /SendToPasteBin\.ps1/ nocase ascii wide
+        $string241 = /Sending\sloot\sto\spastebin\swebserver\./ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string242 = /SenseCncProxy\.exe/ nocase ascii wide
+        $string242 = /SendToPasteBin\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string243 = /ServiceName.{0,1000}CorpVPN/ nocase ascii wide
+        $string243 = /SenseCncProxy\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string244 = /SharpGhost\.exe/ nocase ascii wide
+        $string244 = /ServiceName.{0,1000}CorpVPN/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string245 = /SharpGhosting\.exe/ nocase ascii wide
+        $string245 = /SharpGhost\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string246 = /Show\-BallonTip\.ps1/ nocase ascii wide
+        $string246 = /SharpGhosting\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string247 = /Show\-BalloonTip\.ps1/ nocase ascii wide
+        $string247 = /Show\-BallonTip\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string248 = /Sigthief\.py/ nocase ascii wide
+        $string248 = /Show\-BalloonTip\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string249 = /SilenceDefender\.ps1/ nocase ascii wide
+        $string249 = /Sigthief\.py/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string250 = /SilenceDefender_ATP\.log/ nocase ascii wide
+        $string250 = /SilenceDefender\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string251 = /SilenceDefender_ATP\.ps1/ nocase ascii wide
+        $string251 = /SilenceDefender_ATP\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string252 = /smblogin\.results\.log/ nocase ascii wide
+        $string252 = /SilenceDefender_ATP\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
         $string253 = /smblogin\.results\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string254 = /smblogin\-spray\.ps1/ nocase ascii wide
+        $string254 = /smblogin\.results\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string255 = /Spray\-Passwords\.ps1/ nocase ascii wide
+        $string255 = /smblogin\-spray\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string256 = /Start\-SimpleHTTPServer\.ps1/ nocase ascii wide
+        $string256 = /Spray\-Passwords\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string257 = /TeamViewerDecrypt\.ps1/ nocase ascii wide
+        $string257 = /Start\-SimpleHTTPServer\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string258 = /Temp\\graca\.log/ nocase ascii wide
+        $string258 = /TeamViewerDecrypt\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string259 = /TestMyPrivs\.ps1/ nocase ascii wide
+        $string259 = /Temp\\graca\.log/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string260 = /\-u\sSSARedTeam\:s3cr3t/ nocase ascii wide
+        $string260 = /TestMyPrivs\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string261 = /UACBypassCMSTP\.ps1/ nocase ascii wide
+        $string261 = /\-u\sSSARedTeam\:s3cr3t/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string262 = /vbs_obfuscator\.vbs/ nocase ascii wide
+        $string262 = /UACBypassCMSTP\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string263 = /vbs_ofuscator\.vbs/ nocase ascii wide
+        $string263 = /vbs_obfuscator\.vbs/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string264 = /vssadmin\sdelete\sshadows\s\/for\=\%systemdrive\%\s\/all\s\/quiet/ nocase ascii wide
+        $string264 = /vbs_ofuscator\.vbs/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string265 = /WebBrowserPassView\.cfg/ nocase ascii wide
+        $string265 = /vssadmin\sdelete\sshadows\s\/for\=\%systemdrive\%\s\/all\s\/quiet/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string266 = /WebBrowserPassView\.exe/ nocase ascii wide
+        $string266 = /WebBrowserPassView\.cfg/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string267 = /WebBrowserPassView\.pdb/ nocase ascii wide
+        $string267 = /WebBrowserPassView\.exe/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string268 = /WifiPasswords\.ps1/ nocase ascii wide
+        $string268 = /WebBrowserPassView\.pdb/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string269 = /WinBruteLogon\.exe/ nocase ascii wide
+        $string269 = /WifiPasswords\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string270 = /wtXx6sM1482OWfsMXon6Am4Hi01idvFNgog3jTCsyAA\=/ nocase ascii wide
+        $string270 = /WinBruteLogon\.exe/ nocase ascii wide
+        // Description: Assist reverse tcp shells in post-exploration tasks
+        // Reference: https://github.com/r00t-3xp10it/redpill
+        $string271 = /wtXx6sM1482OWfsMXon6Am4Hi01idvFNgog3jTCsyAA\=/ nocase ascii wide
 
     condition:
         any of them

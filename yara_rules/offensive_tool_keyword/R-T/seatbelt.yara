@@ -22,52 +22,79 @@ rule seatbelt
         $string4 = /\.exe\s\-group\=all\s/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string5 = /\.exe\s\-group\=all\s\-full/ nocase ascii wide
+        $string5 = /\.exe\s\-group\=all\s\-AuditPolicies/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string6 = /\.exe\s\-group\=remote\s/ nocase ascii wide
+        $string6 = /\.exe\s\-group\=all\s\-full/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string7 = /\.exe\s\-group\=system\s/ nocase ascii wide
+        $string7 = /\.exe\s\-group\=remote\s/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string8 = /\.exe\s\-group\=user\s/ nocase ascii wide
+        $string8 = /\.exe\s\-group\=system\s/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string9 = /\.exe\sNonstandardProcesses/ nocase ascii wide
+        $string9 = /\.exe\s\-group\=user\s/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string10 = /\.exe\sNTLMSettings/ nocase ascii wide
+        $string10 = /\.exe\sNonstandardProcesses/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string11 = /\.exe\s\-q\sInterestingProcesses/ nocase ascii wide
+        $string11 = /\.exe\sNTLMSettings/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string12 = /\.exe\s\-q\sPowerShell/ nocase ascii wide
+        $string12 = /\.exe\s\-q\sInterestingProcesses/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string13 = /\.exe\s\-q\sWindowsDefender/ nocase ascii wide
+        $string13 = /\.exe\s\-q\sPowerShell/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string14 = /\/Seatbelt\/Commands/ nocase ascii wide
+        $string14 = /\.exe\s\-q\sWindowsDefender/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string15 = /\\Seatbelt\\Commands\\/ nocase ascii wide
+        $string15 = /\/Seatbelt\.git/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string16 = /\-\-assemblyargs\sAntiVirus\sAppLocker/ nocase ascii wide
+        $string16 = /\/Seatbelt\/Commands/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string17 = /GhostPack\/Seatbelt/ nocase ascii wide
+        $string17 = /\\Seatbelt\.sln/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string18 = /Seatbelt.{0,1000}\s\-group\=all/ nocase ascii wide
+        $string18 = /\\Seatbelt\\Commands\\/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string19 = /Seatbelt\.exe/ nocase ascii wide
+        $string19 = /\\Seatbelt\\Program\.cs/ nocase ascii wide
         // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
         // Reference: https://github.com/GhostPack/Seatbelt
-        $string20 = /SeatbeltNet.{0,1000}\.exe/ nocase ascii wide
+        $string20 = /\\Seatbelt\\Seatbelt\.cs/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string21 = /26edf5820094951dd18e20e86b1151d7113f1e17b64f1d3817d4995885559850/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string22 = /ACE_Get\-KerberosTicketCache\.ps1/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string23 = /AEC32155\-D589\-4150\-8FE7\-2900DF4554C8/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string24 = /\-\-assemblyargs\sAntiVirus\sAppLocker/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string25 = /GhostPack\/Seatbelt/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string26 = /Invoke\-WCMDump\.ps1/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string27 = /Seatbelt.{0,1000}\s\-group\=all/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string28 = /Seatbelt\.exe/ nocase ascii wide
+        // Description: Seatbelt is a comprehensive security scanning tool that can be used to perform a variety of checks. including but not limited to. user privileges. logged in users. network information. system information. and many others
+        // Reference: https://github.com/GhostPack/Seatbelt
+        $string29 = /SeatbeltNet.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them

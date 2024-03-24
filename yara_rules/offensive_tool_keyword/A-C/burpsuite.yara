@@ -219,10 +219,10 @@ rule burpsuite
         // Reference: https://portswigger.net/burp
         $string70 = /perfdata\.portswigger\.net/ nocase ascii wide
         // Description: Burp Suite is a leading range of cybersecurity tools. brought to you by PortSwigger. We believe in giving our users a competitive advantage through superior research. This tool is not free and open source
-        // Reference: https://portswigger.net/
+        // Reference: https://portswigger.net/burp
         $string71 = /portswigger\.net/ nocase ascii wide
         // Description: Burp Suite is a leading range of cybersecurity tools. brought to you by PortSwigger. We believe in giving our users a competitive advantage through superior research. This tool is not free and open source
-        // Reference: https://portswigger.net/burp
+        // Reference: https://portswigger.net/
         $string72 = /portswigger\.net/ nocase ascii wide
         // Description: Collection of burpsuite plugins
         // Reference: https://github.com/Mr-xn/BurpSuite-collections

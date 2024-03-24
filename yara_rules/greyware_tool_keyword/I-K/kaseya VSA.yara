@@ -166,7 +166,7 @@ rule kaseya_VSA
         $string52 = /\'ServiceName\'\>VSAX\<\/Data\>/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string53 = /\'VSA\sX\sManager	\'/ nocase ascii wide
+        $string53 = /\'VSA\sX\sManager/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
         $string54 = /\'VSA\sX\sRemote\sControl\'/ nocase ascii wide

@@ -34,52 +34,79 @@ rule Coercer
         $string8 = /\/Coercer\/.{0,1000}\.py/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string9 = /\\Coercer\.py/ nocase ascii wide
+        $string9 = /\\\\\\\\\.\\\\.{0,1000}\\\\.{0,1000}\\\\.{0,1000}\\\\smile\.txt\\/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string10 = /Coercer\scoerce/ nocase ascii wide
+        $string10 = /\\coercer\.exe/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string11 = /Coercer\sfuzz/ nocase ascii wide
+        $string11 = /\\Coercer\.py/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string12 = /Coercer\sscan/ nocase ascii wide
+        $string12 = /Author\s\s\s\s\s\s\s\s\s\s\s\s\s\:\sPodalirius\s\(\@podalirius_\)/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string13 = /coercer\.core/ nocase ascii wide
+        $string13 = /cbbadc6ef65c597a7cd81e6f98758815d35ac0530367d87341dd0618b5c7359b/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string14 = /coercer\.methods/ nocase ascii wide
+        $string14 = /Coercer\scoerce/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string15 = /coercer\.models/ nocase ascii wide
+        $string15 = /Coercer\sfuzz/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string16 = /coercer\.network/ nocase ascii wide
+        $string16 = /Coercer\sscan/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string17 = /Coercer\.py\s/ nocase ascii wide
+        $string17 = /coercer\.core/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string18 = /coercer\.structures/ nocase ascii wide
+        $string18 = /coercer\.methods/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string19 = /coercer\/core\/loader/ nocase ascii wide
+        $string19 = /coercer\.models/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string20 = /find_and_load_coerce_methods/ nocase ascii wide
+        $string20 = /coercer\.network/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string21 = /generate_exploit_path_from_template/ nocase ascii wide
+        $string21 = /coercer\.network\.DCERPCSession/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string22 = /install\scoercer/ nocase ascii wide
+        $string22 = /coercer\.network\.smb/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string23 = /p0dalirius\/Coercer/ nocase ascii wide
+        $string23 = /Coercer\.py\s/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string24 = /podalirius\@protonmail\.com/ nocase ascii wide
+        $string24 = /coercer\.structures/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string25 = /coercer\/core\/loader/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string26 = /find_and_load_coerce_methods/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string27 = /generate_exploit_path_from_template\(/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string28 = /generate_exploit_path_from_template/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string29 = /install\scoercer/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string30 = /p0dalirius\/Coercer/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string31 = /pip\sinstall\scoercer/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string32 = /podalirius\@protonmail\.com/ nocase ascii wide
+        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
+        // Reference: https://github.com/p0dalirius/Coercer
+        $string33 = /podalirius\@protonmail\.com/ nocase ascii wide
 
     condition:
         any of them

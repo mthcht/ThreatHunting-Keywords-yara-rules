@@ -97,7 +97,7 @@ rule dploot
         $string29 = /lsassy\s\-/ nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
-        $string30 = /Password\:	Waza1234/ nocase ascii wide
+        $string30 = /Password\:Waza1234/ nocase ascii wide
         // Description: DPAPI looting remotely in Python
         // Reference: https://github.com/zblurx/dploot
         $string31 = /zblurx\/dploot/ nocase ascii wide

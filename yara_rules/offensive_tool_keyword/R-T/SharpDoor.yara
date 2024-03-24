@@ -16,37 +16,37 @@ rule SharpDoor
         $string2 = /\sSharpDoor\.exe/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
         // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string3 = /.{0,1000}\\Users\\Public\\termsrv\.patch\.dll/ nocase ascii wide
+        $string3 = /\/SharpDoor\.cs/ nocase ascii wide
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
+        // Reference: https://github.com/infosecn1nja/SharpDoor
+        $string4 = /\/SharpDoor\.exe/ nocase ascii wide
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
+        // Reference: https://github.com/infosecn1nja/SharpDoor
+        $string5 = /\/SharpDoor\.git/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
-        // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string4 = /\/SharpDoor\.cs/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
-        // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string5 = /\/SharpDoor\.exe/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
         // Reference: https://github.com/infosecn1nja/SharpDoor
         $string6 = /\/SharpDoor\.git/ nocase ascii wide
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
+        // Reference: https://github.com/infosecn1nja/SharpDoor
+        $string7 = /\[\!\]\sUnhandled\sSharpDoor\sexception/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
         // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string7 = /\/SharpDoor\.git/ nocase ascii wide
+        $string8 = /\\SharpDoor\.cs/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
         // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string8 = /\[\!\]\sUnhandled\sSharpDoor\sexception/ nocase ascii wide
+        $string9 = /\\SharpDoor\.exe/ nocase ascii wide
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
+        // Reference: https://github.com/infosecn1nja/SharpDoor
+        $string10 = /\\termsrv\.patch\.dll/ nocase ascii wide
+        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
+        // Reference: https://github.com/infosecn1nja/SharpDoor
+        $string11 = /\\Users\\Public\\termsrv\.dll/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
-        // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string9 = /\\SharpDoor\.cs/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
-        // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string10 = /\\SharpDoor\.exe/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
-        // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string11 = /\\termsrv\.patch\.dll/ nocase ascii wide
-        // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file
         // Reference: https://github.com/infosecn1nja/SharpDoor
         $string12 = /\\Users\\Public\\termsrv\.dll/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
         // Reference: https://github.com/infosecn1nja/SharpDoor
-        $string13 = /\\Users\\Public\\termsrv\.dll/ nocase ascii wide
+        $string13 = /\\Users\\Public\\termsrv\.patch\.dll/ nocase ascii wide
         // Description: SharpDoor is alternative RDPWrap written in C# to allowed multiple RDP (Remote Desktop) sessions by patching termsrv.dll file.
         // Reference: https://github.com/infosecn1nja/SharpDoor
         $string14 = /4cec28b4c00002245dffc8346be0cc11/ nocase ascii wide

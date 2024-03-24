@@ -19,37 +19,58 @@ rule RasmanPotato
         $string3 = /\/RasmanPotato/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string4 = /\\rasman\.exe/ nocase ascii wide
+        $string4 = /\[\!\]\sRasman\sservice\sis\snot\srunning\!/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string5 = /\\RasmanPotato/ nocase ascii wide
+        $string5 = /\[\+\]\sRasman\sservice\sis\serror/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string6 = /anypotato\.exe/ nocase ascii wide
+        $string6 = /\[\+\]\sRasman\sservice\sis\srunning\!/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string7 = /magicRasMan/ nocase ascii wide
+        $string7 = /\\RasMan\.cpp/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string8 = /rasman.{0,1000}whoami/ nocase ascii wide
+        $string8 = /\\rasman\.exe/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string9 = /RasMan\.cpp/ nocase ascii wide
+        $string9 = /\\RasMan\.sln/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string10 = /RasMan\.sln/ nocase ascii wide
+        $string10 = /\\RasmanPotato/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string11 = /RasMan\.vcxproj/ nocase ascii wide
+        $string11 = /5AC309CE\-1223\-4FF5\-AF84\-24BCD0B9E4DC/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string12 = /rasman_c\.c/ nocase ascii wide
+        $string12 = /anypotato\.exe/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string13 = /rasman_h\.h/ nocase ascii wide
+        $string13 = /Choose\sThe\sRPC\sFunction\s\[1\]VpnProtEngWinRtConnect\s\[2\]VpnProtEngGetInterface/ nocase ascii wide
         // Description: using RasMan service for privilege escalation
         // Reference: https://github.com/crisprss/RasmanPotato
-        $string14 = /RasmanPotato\-master/ nocase ascii wide
+        $string14 = /dae7d1a42b0bb178bff2ca9729c31d59db045cd65db817cc9eca7a1721bc4c57/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string15 = /magicRasMan/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string16 = /Provided\sthat\sthe\scurrent\suser\shas\sthe\sSeImpersonate\sprivilege\,\sthis\stool\swill\shave\san\sescalation\sto\sSYSTEM/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string17 = /rasman.{0,1000}whoami/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string18 = /RasMan\.vcxproj/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string19 = /rasman_c\.c/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string20 = /rasman_h\.h/ nocase ascii wide
+        // Description: using RasMan service for privilege escalation
+        // Reference: https://github.com/crisprss/RasmanPotato
+        $string21 = /RasmanPotato\-master/ nocase ascii wide
 
     condition:
         any of them

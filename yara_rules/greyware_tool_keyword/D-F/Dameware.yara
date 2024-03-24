@@ -772,7 +772,7 @@ rule Dameware
         $string254 = /dameware\sremote\severywhere\sagent\s\-\s\[dameware\]/ nocase ascii wide
         // Description: Solarwind Dameware Mini Remote Control tool 
         // Reference: https://www.solarwinds.com/fr/remote-support-software
-        $string255 = /DameWare\sRemote\sSupport\.exe	/ nocase ascii wide
+        $string255 = /DameWare\sRemote\sSupport\.exe/ nocase ascii wide
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string256 = /damewareagent\.msi/ nocase ascii wide

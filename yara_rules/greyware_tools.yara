@@ -3318,8 +3318,128 @@ rule CyberGhost_VPN_greyware_tool_keyword
 
     strings:
         // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string1_CyberGhost_VPN_greyware_tool_keyword = /\\AppData\\Local\\CyberGhost/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string2_CyberGhost_VPN_greyware_tool_keyword = /\\Applications\\VPN\\Data\\OpenVPN\\/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string3_CyberGhost_VPN_greyware_tool_keyword = /\\Applications\\VPN\\tunnel\.dll/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string4_CyberGhost_VPN_greyware_tool_keyword = /\\Applications\\VPN\\wireguard\.dll/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string5_CyberGhost_VPN_greyware_tool_keyword = /\\CyberGhost\s6\.lnk/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string6_CyberGhost_VPN_greyware_tool_keyword = /\\CyberGhost\s7\.lnk/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string7_CyberGhost_VPN_greyware_tool_keyword = /\\CyberGhost\s8\.lnk/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string8_CyberGhost_VPN_greyware_tool_keyword = /\\CyberGhost\.VPN\..{0,1000}\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string9_CyberGhost_VPN_greyware_tool_keyword = /\\CyberGhost\-WireGuard\-1\.conf/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string10_CyberGhost_VPN_greyware_tool_keyword = /\\Dashboard\.exe\.config/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string11_CyberGhost_VPN_greyware_tool_keyword = /\\Program\sFiles\\CyberGhost/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string12_CyberGhost_VPN_greyware_tool_keyword = /\\Windows\\Temp\\.{0,1000}\\wireguard\.sys/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string13_CyberGhost_VPN_greyware_tool_keyword = /\>CyberGhost\s6\sInstaller\</ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string14_CyberGhost_VPN_greyware_tool_keyword = /\>CyberGhost\s7\sInstaller\</ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string15_CyberGhost_VPN_greyware_tool_keyword = /\>CyberGhost\s8\sInstaller\</ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string16_CyberGhost_VPN_greyware_tool_keyword = /api\.cyberghostvpn\.com/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string17_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\s6\sService/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string18_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\s7\sService/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string19_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\s8\sService/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string20_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\sS\.R\.L\./ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string21_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\sTunnel\sClient\:/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string22_CyberGhost_VPN_greyware_tool_keyword = /cyberghost.{0,1000}\\Dashboard\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string23_CyberGhost_VPN_greyware_tool_keyword = /cyberghost.{0,1000}\\Dashboard\.Service\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string24_CyberGhost_VPN_greyware_tool_keyword = /cyberghost.{0,1000}\\wyUpdate\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string25_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.Browser\.dll/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string26_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string27_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.resources\.dll/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string28_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.Service\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string29_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.Service\.InstallLog/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string30_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.Service\.pdb/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string31_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\.VPNServices\.dll/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string32_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost6Service/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string33_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost7Service/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string34_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost8Service/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string35_CyberGhost_VPN_greyware_tool_keyword = /CyberGhostTunnel\$CyberGhost_CyberGhost_VPN_greyware_tool_keyword\-WireGuard\-1/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string36_CyberGhost_VPN_greyware_tool_keyword = /CyberGhostVPNSetup\.exe/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string37_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost\-WireGuard\-1\.conf/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string38_CyberGhost_VPN_greyware_tool_keyword = /download\.cyberghostvpn\.com/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string39_CyberGhost_VPN_greyware_tool_keyword = /feedback\.cyberghostvpn\.com/ nocase ascii wide
+        // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_CyberGhost_VPN_greyware_tool_keyword = /ffbkglfijbcbgblgflchnbphjdllaogb/ nocase ascii wide
+        $string40_CyberGhost_VPN_greyware_tool_keyword = /ffbkglfijbcbgblgflchnbphjdllaogb/ nocase ascii wide
+        // Description: External VPN usage within coporate network
+        // Reference: https://www.cyberghostvpn.com/
+        $string41_CyberGhost_VPN_greyware_tool_keyword = /payment\.cyberghostvpn\.com/ nocase ascii wide
 
     condition:
         any of them

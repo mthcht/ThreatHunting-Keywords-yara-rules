@@ -8,7 +8,7 @@ rule the_backdoor_factory
         rule_category = "offensive_tool_keyword"
 
     strings:
-        // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
+        // Description: Patch PE ELF Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
         $string1 = /\sbackdoor\.py/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*

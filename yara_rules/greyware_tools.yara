@@ -4772,6 +4772,133 @@ rule ducktail_greyware_tool_keyword
 }
 
 
+rule dwagent_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'dwagent' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "dwagent"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string1_dwagent_greyware_tool_keyword = /\/dwagent\.desktop/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string2_dwagent_greyware_tool_keyword = /\/dwagent\.service/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string3_dwagent_greyware_tool_keyword = /\/dwagsystray/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string4_dwagent_greyware_tool_keyword = /\\\.dwagent\\/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string5_dwagent_greyware_tool_keyword = /\\AppData\\Local\\Temp\\dwagent/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string6_dwagent_greyware_tool_keyword = /\\CurrentVersion\\Run\\DWAgentMon/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string7_dwagent_greyware_tool_keyword = /\\dwagent\.exe/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string8_dwagent_greyware_tool_keyword = /\\DWAgent\.lnk/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string9_dwagent_greyware_tool_keyword = /\\dwagent\.log/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string10_dwagent_greyware_tool_keyword = /\\dwagent\.pid/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string11_dwagent_greyware_tool_keyword = /\\dwagent\.start/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string12_dwagent_greyware_tool_keyword = /\\dwagent\.stop/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string13_dwagent_greyware_tool_keyword = /\\dwaggdi\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string14_dwagent_greyware_tool_keyword = /\\dwaginstall\.log/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string15_dwagent_greyware_tool_keyword = /\\dwaglnc\.exe/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string16_dwagent_greyware_tool_keyword = /\\dwagsvc\.exe/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string17_dwagent_greyware_tool_keyword = /\\dwagupd\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string18_dwagent_greyware_tool_keyword = /\\Services\\DWAgent/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string19_dwagent_greyware_tool_keyword = /\\Start\sMenu\\Programs\\DWAgent/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string20_dwagent_greyware_tool_keyword = /\>DWAgent\</ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string21_dwagent_greyware_tool_keyword = /015774ac49fa929ca39c0707aa8177e4605b7df9f53d8630fea1ef5155bb5328/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string22_dwagent_greyware_tool_keyword = /1429e62855ce5572b735fe0460ffa6a8f26d56199a8e166152252c7bd659d275/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string23_dwagent_greyware_tool_keyword = /3241d780f32a6a89d3b3f30d85f21f33f9d4d91227d129b2fd81d75baa870337/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string24_dwagent_greyware_tool_keyword = /36a7532a957652a55dbf0b196905652a1f0b8c4019b7ca4e749fa81e5f2c149b/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string25_dwagent_greyware_tool_keyword = /4f21a1d0e7caa97018e4d0b8c7e63fbc54d081976dfda9409f57a3ead24074a7/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string26_dwagent_greyware_tool_keyword = /cd12e8a285c77102487f04726b91bc649f9ad087a1e9a5546124a0cc7480c221/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string27_dwagent_greyware_tool_keyword = /d2b2455b755476d0b35c721ccdb84432e51812ab646a9210137c1e85b90d7de4/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string28_dwagent_greyware_tool_keyword = /dwagent_install\.log/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string29_dwagent_greyware_tool_keyword = /dwagent_unistall\.log/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string30_dwagent_greyware_tool_keyword = /dwaggdi_x86_32\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string31_dwagent_greyware_tool_keyword = /dwaggdi_x86_64\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string32_dwagent_greyware_tool_keyword = /dwagscreencapture\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string33_dwagent_greyware_tool_keyword = /dwagscreencapturebitblt\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string34_dwagent_greyware_tool_keyword = /dwagscreencapturedesktopduplication\.dll/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string35_dwagent_greyware_tool_keyword = /dwservice\/agent/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string36_dwagent_greyware_tool_keyword = /Program\sFiles\\DWAgent/ nocase ascii wide
+        // Description: The DWService to remotly control your machine - abused by attackers
+        // Reference: https://github.com/dwservice/agent
+        $string37_dwagent_greyware_tool_keyword = /www\.dwservice\.net/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Earth_VPN_greyware_tool_keyword
 {
     meta:
@@ -9682,6 +9809,52 @@ rule openssh_server_greyware_tool_keyword
 }
 
 
+rule OPENVPN_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'OPENVPN' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "OPENVPN"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string1_OPENVPN_greyware_tool_keyword = /\"\-\-\-\-\-BEGIN\sOpenVPN\sStatic\skey/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string2_OPENVPN_greyware_tool_keyword = /\/openvpn\.exe/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string3_OPENVPN_greyware_tool_keyword = /\\bin\\tapinstall\.exe/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string4_OPENVPN_greyware_tool_keyword = /\\Licenses\\OpenVPN\.txt/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string5_OPENVPN_greyware_tool_keyword = /\\openvpn\.exe/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string6_OPENVPN_greyware_tool_keyword = /\\Program\sFiles\\TAP\-Windows\\/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string7_OPENVPN_greyware_tool_keyword = /\\Root\\InventoryApplicationFile\\tap\-windows/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string8_OPENVPN_greyware_tool_keyword = /\\SOFTWARE\\TAP\-Windows/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string9_OPENVPN_greyware_tool_keyword = /\\tap\-windows\-.{0,1000}\.exe/ nocase ascii wide
+        // Description: OpenVPN is a legitimate tool that might be used by an adversary to maintain persistence or exfiltrate data
+        // Reference: https://openvpn.net/
+        $string10_OPENVPN_greyware_tool_keyword = /\>the\sopenvpn\sproject\</ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule PAExec_greyware_tool_keyword
 {
     meta:
@@ -14195,6 +14368,82 @@ rule ssh_greyware_tool_keyword
 }
 
 
+rule sshtunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'sshtunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "sshtunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string1_sshtunnel_greyware_tool_keyword = /\sinstall\s\-c\sconda\-forge\ssshtunnel/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string2_sshtunnel_greyware_tool_keyword = /\s\-m\ssshtunnel\s/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string3_sshtunnel_greyware_tool_keyword = /\ssshtunnel\.py/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string4_sshtunnel_greyware_tool_keyword = /\sSSHTunnelForwarder\(/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string5_sshtunnel_greyware_tool_keyword = /\/sshtunnel\s\-/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string6_sshtunnel_greyware_tool_keyword = /\/sshtunnel\.git/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string7_sshtunnel_greyware_tool_keyword = /\/sshtunnel\.py/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string8_sshtunnel_greyware_tool_keyword = /\/sshtunnel\/tarball\// nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string9_sshtunnel_greyware_tool_keyword = /\/sshtunnel\/zipball\// nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string10_sshtunnel_greyware_tool_keyword = /\\sshtunnel\.py/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string11_sshtunnel_greyware_tool_keyword = /c89b4490de04897b1c16e5dae1c10ef10e60c56294bd4ca45d1669f5dcb6f9e3/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string12_sshtunnel_greyware_tool_keyword = /Creating\sSSHTunnelForwarder.{0,1000}paramiko/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string13_sshtunnel_greyware_tool_keyword = /easy_install\ssshtunnel/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string14_sshtunnel_greyware_tool_keyword = /from\ssshtunnel\simport\s/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string15_sshtunnel_greyware_tool_keyword = /from\ssshtunnel\simport\sSSHTunnelForwarder/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string16_sshtunnel_greyware_tool_keyword = /import\ssshtunnel/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string17_sshtunnel_greyware_tool_keyword = /pahaz\/sshtunnel/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string18_sshtunnel_greyware_tool_keyword = /pip\sinstall\ssshtunnel/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string19_sshtunnel_greyware_tool_keyword = /sshtunnel\.readthedocs\.io/ nocase ascii wide
+        // Description: SSH tunnels to remote server
+        // Reference: https://github.com/pahaz/sshtunnel
+        $string20_sshtunnel_greyware_tool_keyword = /sshtunnel\.readthedocs\.org/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule sshx_greyware_tool_keyword
 {
     meta:
@@ -15353,6 +15602,97 @@ rule Thunder_Proxy_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Thunder_Proxy_greyware_tool_keyword = /knmmpciebaoojcpjjoeonlcjacjopcpf/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule tightvnc_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tightvnc' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tightvnc"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string1_tightvnc_greyware_tool_keyword = /\s\-service\sTightVNC\sServer/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string2_tightvnc_greyware_tool_keyword = /\.\\TightVNC1/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string3_tightvnc_greyware_tool_keyword = /\.\\TightVNC2/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string4_tightvnc_greyware_tool_keyword = /\.\\TightVNC3/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string5_tightvnc_greyware_tool_keyword = /\/tightvnc\-.{0,1000}\.msi/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string6_tightvnc_greyware_tool_keyword = /\\mlnhcpkomdeavomsjalt/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string7_tightvnc_greyware_tool_keyword = /\\Programs\\TightVNC/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string8_tightvnc_greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\TightVNC\\/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string9_tightvnc_greyware_tool_keyword = /\\TightVNC\sServer/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string10_tightvnc_greyware_tool_keyword = /\\tightvnc\-/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string11_tightvnc_greyware_tool_keyword = /\\TightVNC_Service_Control/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string12_tightvnc_greyware_tool_keyword = /\\TVN_log_pipe_public_name/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string13_tightvnc_greyware_tool_keyword = /\>TightVNC\sViewer\</ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string14_tightvnc_greyware_tool_keyword = /00\:\\\.vnc\\/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string15_tightvnc_greyware_tool_keyword = /GlavSoft\sLLC\./ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string16_tightvnc_greyware_tool_keyword = /HKCR\\\.vnc/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string17_tightvnc_greyware_tool_keyword = /program\sfiles\s\(x86\)\\tightvnc\\/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string18_tightvnc_greyware_tool_keyword = /ProgramData\\TightVNC/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string19_tightvnc_greyware_tool_keyword = /TightVNC\sService/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string20_tightvnc_greyware_tool_keyword = /TightVNC\sWeb\sSite\.url/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string21_tightvnc_greyware_tool_keyword = /tvnserver/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string22_tightvnc_greyware_tool_keyword = /tvnserver\.exe/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string23_tightvnc_greyware_tool_keyword = /tvnviewer\.exe/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string24_tightvnc_greyware_tool_keyword = /VncViewer\.Config/ nocase ascii wide
+        // Description: TightVNC is a free and Open Source remote desktop software that lets you access and control a computer over the network - often abused by attackers
+        // Reference: https://www.tightvnc.com
+        $string25_tightvnc_greyware_tool_keyword = /www\.tightvnc\.com\/download\/.{0,1000}\=/ nocase ascii wide
 
     condition:
         any of them

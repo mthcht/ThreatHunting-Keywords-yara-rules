@@ -1218,7 +1218,10 @@ rule adget_greyware_tool_keyword
     strings:
         // Description: gather valuable informations about the AD environment
         // Reference: https://thedfirreport.com/2023/05/22/icedid-macro-ends-in-nokoyawa-ransomware/
-        $string1_adget_greyware_tool_keyword = /\\ADGet\.exe/ nocase ascii wide
+        $string1_adget_greyware_tool_keyword = /\/ADGet\.exe/ nocase ascii wide
+        // Description: gather valuable informations about the AD environment
+        // Reference: https://thedfirreport.com/2023/05/22/icedid-macro-ends-in-nokoyawa-ransomware/
+        $string2_adget_greyware_tool_keyword = /\\ADGet\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -13592,6 +13595,43 @@ rule shred_greyware_tool_keyword
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
         $string5_shred_greyware_tool_keyword = /shred\s\-\-zero/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Shredder_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Shredder' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Shredder"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string1_Shredder_greyware_tool_keyword = /\\file_shredder_setup\.tmp/ nocase ascii wide
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string2_Shredder_greyware_tool_keyword = /\\Shredder\.exe/ nocase ascii wide
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string3_Shredder_greyware_tool_keyword = /\>File\sShredder\sby\sPowTools\</ nocase ascii wide
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string4_Shredder_greyware_tool_keyword = /File\sShredder\ssetup\.exe/ nocase ascii wide
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string5_Shredder_greyware_tool_keyword = /File\sShredder\.exe/ nocase ascii wide
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string6_Shredder_greyware_tool_keyword = /file_shredder_setup\.exe/ nocase ascii wide
+        // Description: File Shredder is FREE and powerfull aplication to shred and permanently remove unwanted files from your computer beyond recovery
+        // Reference: https://www.fileshredder.org/
+        $string7_Shredder_greyware_tool_keyword = /Program\sFiles\\File\sShredder\\/ nocase ascii wide
 
     condition:
         any of them

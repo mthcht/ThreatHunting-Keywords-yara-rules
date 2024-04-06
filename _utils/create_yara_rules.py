@@ -75,6 +75,7 @@ def generate_yara_rules(output_directory):
         
     for (tool, keyword_type), keywords in aggregated_data.items():
         keyword_type_dir = os.path.join(output_directory, keyword_type)
+        print(tool)
         subdirectory_name = get_subdirectory_name(tool)
         final_directory = os.path.join(keyword_type_dir, subdirectory_name)
         

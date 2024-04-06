@@ -8,7 +8,7 @@ rule copy
         rule_category = "offensive_tool_keyword"
 
     strings:
-        // Description: DCOM lateral movement technique leveraging Excel and ActivateMicrosoftApp works.
+        // Description: DCOM Lateral Movement technique leveraging Excel and ActivateMicrosoftApp works.
         // Reference: https://x.com/ACEResponder/status/1720906842631549377
         $string1 = /copy\s.{0,1000}\.exe\s\\\\.{0,1000}\\c\$\\Windows\\foxprow\.exe/ nocase ascii wide
 

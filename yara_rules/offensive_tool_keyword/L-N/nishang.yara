@@ -116,11 +116,11 @@ rule nishang
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
         $string36 = /Add\-Exfiltration\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string37 = /Add\-Persistence\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string37 = /Add\-Persistence\.ps1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string38 = /Add\-Persistence\.ps1/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
@@ -131,11 +131,11 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string41 = /Brute\-Force\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string42 = /ConvertTo\-ROT13\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string42 = /ConvertTo\-ROT13\.ps1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string43 = /ConvertTo\-ROT13\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
@@ -203,32 +203,32 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string65 = /Get\-Wlan\-Keys\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string66 = /Gupt\-Backdoor\.ps1/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
-        $string67 = /Gupt\-Backdoor\.ps1/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string68 = /HTTP\-Backdoor\.ps1/ nocase ascii wide
+        $string67 = /Gupt\-Backdoor\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string68 = /HTTP\-Backdoor\.ps1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string69 = /HTTP\-Backdoor\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
         $string70 = /Invoke\-.{0,1000}WDigestDowngrade\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string71 = /Invoke\-ADSBackdoor/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
-        $string72 = /Invoke\-ADSBackdoor/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string73 = /Invoke\-AmsiBypass/ nocase ascii wide
+        $string72 = /Invoke\-ADSBackdoor/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string73 = /Invoke\-AmsiBypass/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string74 = /Invoke\-AmsiBypass/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
@@ -245,17 +245,17 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string79 = /Invoke\-Interceptor\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string80 = /Invoke\-JSRatRegsvr/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
-        $string81 = /Invoke\-JSRatRegsvr/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string82 = /Invoke\-JSRatRundll/ nocase ascii wide
+        $string81 = /Invoke\-JSRatRegsvr/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string82 = /Invoke\-JSRatRundll/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string83 = /Invoke\-JSRatRundll/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
@@ -275,17 +275,17 @@ rule nishang
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
         $string89 = /Invoke\-PortScan/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string90 = /Invoke\-PoshRatHttp/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
-        $string91 = /Invoke\-PoshRatHttp/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string92 = /Invoke\-PoshRatHttps/ nocase ascii wide
+        $string91 = /Invoke\-PoshRatHttp/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string92 = /Invoke\-PoshRatHttps/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string93 = /Invoke\-PoshRatHttps/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
@@ -299,11 +299,11 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string97 = /Invoke\-PowerShellTcp\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string98 = /Invoke\-PowerShellTcpOneLine/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string98 = /Invoke\-PowerShellTcpOneLine/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string99 = /Invoke\-PowerShellTcpOneLine/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
@@ -359,20 +359,20 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string117 = /Invoke\-PsUACme\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string118 = /Invoke\-SessionGopher/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string118 = /Invoke\-SessionGopher/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string119 = /Invoke\-SessionGopher/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string120 = /Invoke\-Shellcode\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string121 = /Invoke\-SSIDExfil/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string121 = /Invoke\-SSIDExfil/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string122 = /Invoke\-SSIDExfil/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
@@ -386,14 +386,14 @@ rule nishang
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
         $string126 = /nishang\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string127 = /Nishang\.psm1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string128 = /nishang\.psm1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string127 = /nishang\.psm1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        $string128 = /Nishang\.psm1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string129 = /nishang\.psm1/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
@@ -407,23 +407,23 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string133 = /Port\-Scan\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string134 = /Powerpreter\.psm1/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string135 = /powerpreter\.psm1/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
-        $string136 = /Powerpreter\.psm1/ nocase ascii wide
+        $string135 = /Powerpreter\.psm1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        $string136 = /powerpreter\.psm1/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string137 = /Prasadhak\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string138 = /Remove\-Persistence\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string138 = /Remove\-Persistence\.ps1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string139 = /Remove\-Persistence\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
@@ -443,11 +443,11 @@ rule nishang
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
         $string145 = /samratashok\/nishang/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string146 = /Set\-DCShadowPermissions/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string146 = /Set\-DCShadowPermissions/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string147 = /Set\-DCShadowPermissions/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
@@ -458,23 +458,23 @@ rule nishang
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string150 = /Set\-RemoteShellAccess\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string151 = /Set\-RemoteWMI\.ps1/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string152 = /Set\-RemoteWMI\.ps1/ nocase ascii wide
-        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
-        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
+        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
+        // Reference: https://github.com/samratashok/nishang
         $string153 = /Show\-TargetScreen\.ps1/ nocase ascii wide
-        // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
-        // Reference: https://github.com/samratashok/nishang
-        $string154 = /Show\-TargetScreen\.ps1/ nocase ascii wide
         // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
         // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
-        $string155 = /Start\-CaptureServer\.ps1/ nocase ascii wide
+        $string154 = /Show\-TargetScreen\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang
+        $string155 = /Start\-CaptureServer\.ps1/ nocase ascii wide
+        // Description: Antak is a webshell written in ASP.Net which utilizes PowerShell. Antak is a part of Nishang and updates can be found here: https://github.com/samratashok/nishang
+        // Reference: https://github.com/samratashok/nishang/tree/master/Antak-WebShell
         $string156 = /Start\-CaptureServer\.ps1/ nocase ascii wide
         // Description: Nishang is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security penetration testing and red teaming. Nishang is useful during all phases of penetration testing.
         // Reference: https://github.com/samratashok/nishang

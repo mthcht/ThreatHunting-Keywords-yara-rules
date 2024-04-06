@@ -14,6 +14,9 @@ rule adrecon
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string2 = /ADRecon\.ps1/ nocase ascii wide
+        // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
+        // Reference: https://github.com/adrecon/ADRecon
+        $string3 = /ADRecon\-Report\-/ nocase ascii wide
 
     condition:
         any of them

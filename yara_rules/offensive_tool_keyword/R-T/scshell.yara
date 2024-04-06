@@ -8,7 +8,7 @@ rule scshell
         rule_category = "offensive_tool_keyword"
 
     strings:
-        // Description: SCShell is a fileless lateral movement tool that relies on ChangeServiceConfigA to run commands. The beauty of this tool is that it does not perform authentication against SMB. Everything is performed over DCERPC.The utility can be used remotely WITHOUT registering a service or creating a service. It also doesn't have to drop any file on the remote system* (Depend on the technique used to execute)
+        // Description: SCShell is a fileless Lateral Movement tool that relies on ChangeServiceConfigA to run commands. The beauty of this tool is that it does not perform authentication against SMB. Everything is performed over DCERPC.The utility can be used remotely WITHOUT registering a service or creating a service. It also doesn't have to drop any file on the remote system* (Depend on the technique used to execute)
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
         $string1 = /\/scshell/ nocase ascii wide
         // Description: network pentestration test (shell)

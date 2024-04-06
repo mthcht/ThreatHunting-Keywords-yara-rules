@@ -13,43 +13,43 @@ rule Jasmin_Ransomware
         $string1 = /\s\-u\sjasminadmin\s\-p.{0,1000}\sjasmin_db\s/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string2 = /\"handshake\"\,\s\"jasmin\@123\"/ nocase ascii wide
+        $string2 = /\.500\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string3 = /\.500\.jasmin/ nocase ascii wide
+        $string3 = /\.docx\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string4 = /\.docx\.jasmin/ nocase ascii wide
+        $string4 = /\.jpeg\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string5 = /\.jpeg\.jasmin/ nocase ascii wide
+        $string5 = /\.jpg\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string6 = /\.jpg\.jasmin/ nocase ascii wide
+        $string6 = /\.pdf\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string7 = /\.pdf\.jasmin/ nocase ascii wide
+        $string7 = /\.png\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string8 = /\.png\.jasmin/ nocase ascii wide
+        $string8 = /\.pptx\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string9 = /\.pptx\.jasmin/ nocase ascii wide
+        $string9 = /\.txt\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string10 = /\.txt\.jasmin/ nocase ascii wide
+        $string10 = /\.xlsx\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string11 = /\.xlsx\.jasmin/ nocase ascii wide
+        $string11 = /\/jasmin\-ransomware\.git/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string12 = /\/jasmin\-ransomware\.git/ nocase ascii wide
+        $string12 = /\\Jasmin\sDecryptor\\/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
         $string13 = /\\Jasmin\sDecryptor\\/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string14 = /\\Jasmin\sDecryptor\\/ nocase ascii wide
+        $string14 = /\\Jasmin\sRansomware\sFinal\\/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
         $string15 = /\\unlock\syour\sfiles\.lnk/ nocase ascii wide
@@ -67,91 +67,121 @@ rule Jasmin_Ransomware
         $string19 = /\>\-Infected\sSystems\sDatabase\-\<\/span\>/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string20 = /\>Jasmin\sRansomware\<\/div\>/ nocase ascii wide
+        $string20 = /\>Jasmin\sEncryptor\</ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string21 = /6FF9974C\-B3C6\-4EEA\-8472\-22BE6BD6F5CD/ nocase ascii wide
+        $string21 = /\>Jasmin\sRansomware\<\/div\>/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string22 = /78C76961\-8249\-4EFE\-9DE2\-B6EF15A187F7/ nocase ascii wide
+        $string22 = /6FF9974C\-B3C6\-4EEA\-8472\-22BE6BD6F5CD/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string23 = /C\:\\\\Users\\\\Public\\\\Windows\\\\Ui\\\\/ nocase ascii wide
+        $string23 = /78C76961\-8249\-4EFE\-9DE2\-B6EF15A187F7/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string24 = /codesiddhant\/jasmin\-ransomware/ nocase ascii wide
+        $string24 = /ba41cc2f4c5dfb7df874b0e92f99f33b37b11574aab288d229749eba00e98813/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string25 = /ConsoleHost_history\.txt\.jasmin/ nocase ascii wide
+        $string25 = /C\:\\\\Users\\\\Public\\\\Windows\\\\Ui\\\\/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string26 = /CREATE\sDATABASE\sjasmin_db/ nocase ascii wide
+        $string26 = /C\:\\Users\\cyberstair\\/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string27 = /GRANT\sALL\sPRIVILEGES\sON\sjasmin_db\./ nocase ascii wide
+        $string27 = /c062b58a1151df4a0ebad3d9246f69342b0ac1ecf5e5a5c4116f292994c481bd/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string28 = /htdocs\/database\/jasmin_db\.sql/ nocase ascii wide
+        $string28 = /c51005736c67304bf96c0e5421ce44f700578b87dbc912a820fd38dfa146fe41/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string29 = /http.{0,1000}\/alertmsg\.zip/ nocase ascii wide
+        $string29 = /codesiddhant\/jasmin\-ransomware/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string30 = /http\:\/\/127\.0\.0\.1\/handshake\.php/ nocase ascii wide
+        $string30 = /ConsoleHost_history\.txt\.jasmin/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string31 = /Jasmin\sDecryptor\.csproj/ nocase ascii wide
+        $string31 = /CREATE\sDATABASE\sjasmin_db/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string32 = /Jasmin\sDecryptor\.exe/ nocase ascii wide
+        $string32 = /d24cfba28aeecfecb7698350ca04c4ed07f6a9b88b212bbcbaacd168372fa980/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string33 = /Jasmin\sDecryptor\.pdb/ nocase ascii wide
+        $string33 = /GRANT\sALL\sPRIVILEGES\sON\sjasmin_db\./ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string34 = /Jasmin\sDecryptor\.sln/ nocase ascii wide
+        $string34 = /handshake.{0,1000}jasmin\@123/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string35 = /Jasmin\sEncryptor\.csproj/ nocase ascii wide
+        $string35 = /htdocs\/database\/jasmin_db\.sql/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string36 = /Jasmin\sEncryptor\.exe/ nocase ascii wide
+        $string36 = /http.{0,1000}\/alertmsg\.zip/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string37 = /Jasmin\sEncryptor\.sln/ nocase ascii wide
+        $string37 = /http\:\/\/127\.0\.0\.1\/handshake\.php/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string38 = /Jasmin\sEncryptor\\bin\\Release/ nocase ascii wide
+        $string38 = /https\:\/\/cnc\.mkbot\.info\/alertmsg\.zip/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string39 = /Jasmin\sRansomware\sC2\sCheckin/ nocase ascii wide
+        $string39 = /https\:\/\/cnc\.mkbot\.info\/handshake\.php/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string40 = /Jasmin\%20Decryptor\.exe/ nocase ascii wide
+        $string40 = /Jasmin\sDecryptor\.csproj/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string41 = /Jasmin\%20Decryptor\.pdb/ nocase ascii wide
+        $string41 = /Jasmin\sDecryptor\.exe/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string42 = /Jasmin\%20Encryptor\.exe/ nocase ascii wide
+        $string42 = /Jasmin\sDecryptor\.pdb/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string43 = /Jasmin_Decryptor\.mainform/ nocase ascii wide
+        $string43 = /Jasmin\sDecryptor\.sln/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string44 = /Jasmin_Decryptor\.Properties/ nocase ascii wide
+        $string44 = /Jasmin\sEncryptor\.csproj/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string45 = /\'jasminadmin\'\@\'localhost\'/ nocase ascii wide
+        $string45 = /Jasmin\sEncryptor\.exe/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string46 = /jasmin\-ransomware\-master/ nocase ascii wide
+        $string46 = /Jasmin\sEncryptor\.sln/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string47 = /The\sRansomware\sfor\sRedTeams\sCoded\sby\sSiddhant\sGour\swith\s/ nocase ascii wide
+        $string47 = /Jasmin\sEncryptor\\bin\\Release/ nocase ascii wide
         // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
         // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
-        $string48 = /VXpCMk1UTjBjMU14YkhZemNsSTBibk13YlhjMGNqTQ/ nocase ascii wide
+        $string48 = /Jasmin\sRansomware\sC2\sCheckin/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string49 = /Jasmin\%20Decryptor\.exe/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string50 = /Jasmin\%20Decryptor\.pdb/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string51 = /Jasmin\%20Encryptor\.exe/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string52 = /Jasmin_Decryptor\.mainform/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string53 = /Jasmin_Decryptor\.Properties/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string54 = /\'jasminadmin\'\@\'localhost\'/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string55 = /jasmin\-ransomware\-master/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string56 = /namespace\sJasmin_Encrypter/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string57 = /The\sRansomware\sfor\sRedTeams\sCoded\sby\sSiddhant\sGour\swith\s/ nocase ascii wide
+        // Description: Jasmin Ransomware is an advanced red team tool (WannaCry Clone) used for simulating real ransomware attacks
+        // Reference: https://github.com/codesiddhant/Jasmin-Ransomware
+        $string58 = /VXpCMk1UTjBjMU14YkhZemNsSTBibk13YlhjMGNqTQ/ nocase ascii wide
 
     condition:
         any of them

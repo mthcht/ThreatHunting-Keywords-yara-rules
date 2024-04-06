@@ -20,11 +20,11 @@ rule NTMLRecon
         // Description: Enumerate information from NTLM authentication enabled web endpoints
         // Reference: https://github.com/puzzlepeaches/NTLMRecon
         $string4 = /\/ntlmrecon\/.{0,1000}\.py/ nocase ascii wide
-        // Description: A fast and flexible NTLM reconnaissance tool without external dependencies. Useful to find out information about NTLM endpoints when working with a large set of potential IP addresses and domains
-        // Reference: https://github.com/pwnfoo/NTLMRecon
-        $string5 = /\/ntlmutil\.py/ nocase ascii wide
         // Description: Enumerate information from NTLM authentication enabled web endpoints
         // Reference: https://github.com/puzzlepeaches/NTLMRecon
+        $string5 = /\/ntlmutil\.py/ nocase ascii wide
+        // Description: A fast and flexible NTLM reconnaissance tool without external dependencies. Useful to find out information about NTLM endpoints when working with a large set of potential IP addresses and domains
+        // Reference: https://github.com/pwnfoo/NTLMRecon
         $string6 = /\/ntlmutil\.py/ nocase ascii wide
         // Description: Enumerate information from NTLM authentication enabled web endpoints
         // Reference: https://github.com/puzzlepeaches/NTLMRecon

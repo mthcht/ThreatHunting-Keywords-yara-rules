@@ -1161,13 +1161,13 @@ rule adfind_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string1_adfind_greyware_tool_keyword = /\sdclist\s/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string2_adfind_greyware_tool_keyword = /\s\-sc\strustdump/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string3_adfind_greyware_tool_keyword = /adfind\s\-f\s/ nocase ascii wide
         // Description: query domain trusts with adfind
@@ -1176,7 +1176,7 @@ rule adfind_greyware_tool_keyword
         // Description: query domain trusts with adfind
         // Reference: N/A
         $string5_adfind_greyware_tool_keyword = /adfind\s\-sc\strustdmp/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string6_adfind_greyware_tool_keyword = /adfind\.bat/ nocase ascii wide
         // Description: query domain trusts with adfind
@@ -1185,19 +1185,19 @@ rule adfind_greyware_tool_keyword
         // Description: query domain trusts with adfind
         // Reference: N/A
         $string8_adfind_greyware_tool_keyword = /adfind\.exe\s\-sc\strustdmp/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string9_adfind_greyware_tool_keyword = /adfind\.exe/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://www.joeware.net/freetools/tools/adfind/usage.htm
         $string10_adfind_greyware_tool_keyword = /AdFind\.zip/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string11_adfind_greyware_tool_keyword = /computers_pwdnotreqd/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string12_adfind_greyware_tool_keyword = /name\=.{0,1000}Domain\sAdmins/ nocase ascii wide
-        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in lateral movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
+        // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string13_adfind_greyware_tool_keyword = /tools\/adfind/ nocase ascii wide
 
@@ -1291,6 +1291,9 @@ rule adrecon_greyware_tool_keyword
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string2_adrecon_greyware_tool_keyword = /ADRecon\.ps1/ nocase ascii wide
+        // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
+        // Reference: https://github.com/adrecon/ADRecon
+        $string3_adrecon_greyware_tool_keyword = /ADRecon\-Report\-/ nocase ascii wide
 
     condition:
         any of them
@@ -1490,6 +1493,145 @@ rule aeroadmin_greyware_tool_keyword
         // Description: RMM software - full remote control / file transfer
         // Reference: https://ulm.aeroadmin.com/AeroAdmin.exe
         $string25_aeroadmin_greyware_tool_keyword = /ulm\.aeroadmin\.com\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Ahk2Exe_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Ahk2Exe' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Ahk2Exe"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string1_Ahk2Exe_greyware_tool_keyword = /\sAhk2Exe\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string2_Ahk2Exe_greyware_tool_keyword = /\/Ahk2Exe\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string3_Ahk2Exe_greyware_tool_keyword = /\/Ahk2Exe\.git/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string4_Ahk2Exe_greyware_tool_keyword = /\/Ahk2Exe\.zip/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string5_Ahk2Exe_greyware_tool_keyword = /\/Ahk2Exe1\..{0,1000}\.zip/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string6_Ahk2Exe_greyware_tool_keyword = /\/ahk\-install\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string7_Ahk2Exe_greyware_tool_keyword = /\/ahk\-v2\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string8_Ahk2Exe_greyware_tool_keyword = /\/AutoHotkey_1.{0,1000}_setup\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string9_Ahk2Exe_greyware_tool_keyword = /\/AutoHotkey_2.{0,1000}_setup\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string10_Ahk2Exe_greyware_tool_keyword = /\/AutoHotkey64\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string11_Ahk2Exe_greyware_tool_keyword = /\/releases\/download\/Ahk2Exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string12_Ahk2Exe_greyware_tool_keyword = /\\Ahk2Exe\.ahk/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string13_Ahk2Exe_greyware_tool_keyword = /\\Ahk2Exe\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string14_Ahk2Exe_greyware_tool_keyword = /\\Ahk2Exe\.zip/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string15_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkey_1.{0,1000}_setup\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string16_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkey_2.{0,1000}_setup\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string17_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkey64\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string18_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkey64_UIA\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string19_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkeySC\.bin/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string20_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkeyU32\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string21_Ahk2Exe_greyware_tool_keyword = /\\AutoHotkeyUX\.exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string22_Ahk2Exe_greyware_tool_keyword = /\\Program\sFiles\\AutoHotkey/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string23_Ahk2Exe_greyware_tool_keyword = /\\SetExeSubsystem\.ahk/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string24_Ahk2Exe_greyware_tool_keyword = /\\SOFTWARE\\Classes\\\.ahk\\/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string25_Ahk2Exe_greyware_tool_keyword = /\\SOFTWARE\\Classes\\AutoHotkeyScript\\/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string26_Ahk2Exe_greyware_tool_keyword = /\\UX\\reset\-assoc\.ahk/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string27_Ahk2Exe_greyware_tool_keyword = /\>AutoHotkey\sinstaller\</ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string28_Ahk2Exe_greyware_tool_keyword = /\>AutoHotkey\sSetup\</ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string29_Ahk2Exe_greyware_tool_keyword = /14a8b1ff0297c5f7c06c6ab36a257140c2f3d33e8c15a28e790d5039a29c00a7/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string30_Ahk2Exe_greyware_tool_keyword = /41092e2433211a876f2b14f16a29fdae85a0d7e74565b23ab9e9c85bee892351/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string31_Ahk2Exe_greyware_tool_keyword = /46d335c6ebda027aea00f5a8261b4d1a1763e17b858fe512bbe541f9bb66d464/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string32_Ahk2Exe_greyware_tool_keyword = /4e1e3123dd85d3ac65a0803b08dd89b9b12b5a00b9f566782855332d03e5fe26/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string33_Ahk2Exe_greyware_tool_keyword = /4f30ed7899506d15974d12e428f4647660f97a52cc21da06a6a295a06197bbd8/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string34_Ahk2Exe_greyware_tool_keyword = /7a2aeb7256c40efa434c6fc95f920ee9b4555e526f2f7cd325b6dc482faa7c20/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string35_Ahk2Exe_greyware_tool_keyword = /80840379e83b70528c541218023961323ae10cfd85b4a1dcf6bf0fc01a9336b7/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string36_Ahk2Exe_greyware_tool_keyword = /80ce06d9341317b4c4b4b1e89b2f046e0426e1e952eaa9152231cc26a08de58f/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string37_Ahk2Exe_greyware_tool_keyword = /9f2c7f990c554ba286616dd08e59ac32d543e80eef335f5c65762c020234bc1b/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string38_Ahk2Exe_greyware_tool_keyword = /ab464ef9bfa3735111e4fbf0e21f34feecf29a66d8effce37814df6be1d8314b/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string39_Ahk2Exe_greyware_tool_keyword = /AutoHotkey\/Ahk2Exe/ nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string40_Ahk2Exe_greyware_tool_keyword = /https\:\/\/www\.autohotkey\.com\/download\// nocase ascii wide
+        // Description: Official AutoHotkey script compiler - misused in scripting malicious executables
+        // Reference: https://github.com/AutoHotkey/Ahk2Exe
+        $string41_Ahk2Exe_greyware_tool_keyword = /s\\AutoHotkey\sWindow\sSpy\.lnk/ nocase ascii wide
 
     condition:
         any of them
@@ -2722,40 +2864,40 @@ rule cat_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: Enumerating user files history for interesting information
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: show atftp history
         // Reference: N/A
-        $string2_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string1_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string3_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string2_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: show bash history
         // Reference: N/A
-        $string4_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string3_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string5_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string4_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: show mysql history
         // Reference: N/A
-        $string6_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string5_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string7_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string6_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: show nano history
         // Reference: N/A
-        $string8_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string7_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string9_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
+        $string8_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: show php history
         // Reference: N/A
-        $string10_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
+        $string9_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string10_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
+        // Description: show zsh history
         // Reference: N/A
         $string11_cat_greyware_tool_keyword = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
-        // Description: show zsh history
+        // Description: Enumerating user files history for interesting information
         // Reference: N/A
         $string12_cat_greyware_tool_keyword = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
         // Description: linux commands abused by attackers
@@ -6490,28 +6632,58 @@ rule Goodsync_greyware_tool_keyword
         $string1_Goodsync_greyware_tool_keyword = /\/GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string2_Goodsync_greyware_tool_keyword = /\\GoodSync\-2.{0,1000}\-.{0,1000}\.log/ nocase ascii wide
+        $string2_Goodsync_greyware_tool_keyword = /\\DIRECTORY\\BACKGROUND\\SHELL\\GOODSYNC/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string3_Goodsync_greyware_tool_keyword = /\\GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
+        $string3_Goodsync_greyware_tool_keyword = /\\GoodSync\-2.{0,1000}\-.{0,1000}\.log/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string4_Goodsync_greyware_tool_keyword = /\\Siber\sSystems\\GoodSync\\/ nocase ascii wide
+        $string4_Goodsync_greyware_tool_keyword = /\\GOODSYNC2GO\.EXE/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string5_Goodsync_greyware_tool_keyword = /\\Users\\.{0,1000}\\AppData\\Local\\GoodSync/ nocase ascii wide
+        $string5_Goodsync_greyware_tool_keyword = /\\GOODSYNC2GO\-V.{0,1000}\.EXE/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string6_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}gdrive\:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
+        $string6_Goodsync_greyware_tool_keyword = /\\GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string7_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}sftp\:\/\// nocase ascii wide
+        $string7_Goodsync_greyware_tool_keyword = /\\gs\-runner\.exe/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string8_Goodsync_greyware_tool_keyword = /GoodSync\sServer/ nocase ascii wide
+        $string8_Goodsync_greyware_tool_keyword = /\\GS\-SERVER\.EXE/ nocase ascii wide
         // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
         // Reference: https://www.goodsync.com/
-        $string9_Goodsync_greyware_tool_keyword = /GoodSync\-vsub\-2Go\-Setup\.exe/ nocase ascii wide
+        $string9_Goodsync_greyware_tool_keyword = /\\Program\sFiles\\SIBER\sSYSTEMS\\GOODSYNC\\/ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string10_Goodsync_greyware_tool_keyword = /\\Siber\sSystems\\GoodSync\\/ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string11_Goodsync_greyware_tool_keyword = /\\Users\\.{0,1000}\\AppData\\Local\\GoodSync/ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string12_Goodsync_greyware_tool_keyword = /\>GoodSync\</ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string13_Goodsync_greyware_tool_keyword = /\>gs\-runner\.exe\</ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string14_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}gdrive\:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string15_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}sftp\:\/\// nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string16_Goodsync_greyware_tool_keyword = /GoodSync\sServer/ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string17_Goodsync_greyware_tool_keyword = /GoodSync\-vsub\-2Go\-Setup\.exe/ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string18_Goodsync_greyware_tool_keyword = /mediator\.goodsync\.com/ nocase ascii wide
+        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
+        // Reference: https://www.goodsync.com/
+        $string19_Goodsync_greyware_tool_keyword = /temp.{0,1000}\\gsync\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -7410,6 +7582,94 @@ rule interactsh_greyware_tool_keyword
         // Description: Interactsh is an open-source tool for detecting out-of-band interactions. It is a tool designed to detect vulnerabilities that cause external interactions but abused by attackers as C2
         // Reference: https://github.com/projectdiscovery/interactsh
         $string15_interactsh_greyware_tool_keyword = /wget.{0,1000}\.interact\.sh/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule IObitUnlocker_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'IObitUnlocker' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "IObitUnlocker"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string1_IObitUnlocker_greyware_tool_keyword = /\sIObitUnlocker\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string2_IObitUnlocker_greyware_tool_keyword = /\/IObitUnlocker\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string3_IObitUnlocker_greyware_tool_keyword = /\/unlocker\-setup\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string4_IObitUnlocker_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\IObitUnlockerSetup/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string5_IObitUnlocker_greyware_tool_keyword = /\\Application\sData\\IObit\\IObit\sUnlocker/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string6_IObitUnlocker_greyware_tool_keyword = /\\Downloads\\IObitUnlockerSetup/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string7_IObitUnlocker_greyware_tool_keyword = /\\IObit\sUnlocker\.lnk/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string8_IObitUnlocker_greyware_tool_keyword = /\\IObitUnlocker\.dll/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string9_IObitUnlocker_greyware_tool_keyword = /\\IObitUnlocker\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string10_IObitUnlocker_greyware_tool_keyword = /\\IObitUnlocker\.ini/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string11_IObitUnlocker_greyware_tool_keyword = /\\IObitUnlocker\.log/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string12_IObitUnlocker_greyware_tool_keyword = /\\IObitUnlockerExtension\.dll/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string13_IObitUnlocker_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\IObit\\IObit\sUnlocker/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string14_IObitUnlocker_greyware_tool_keyword = /\\Program\sFiles\\IObit\\IObit\sUnlocker/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string15_IObitUnlocker_greyware_tool_keyword = /\\Uninstall\sIObit\sUnlocker\.lnk/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string16_IObitUnlocker_greyware_tool_keyword = /\\Uninstall\sIObit\sUnlocker\.url/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string17_IObitUnlocker_greyware_tool_keyword = /\\Unlocker\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string18_IObitUnlocker_greyware_tool_keyword = /\\unlocker\-setup\s\(1\)\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string19_IObitUnlocker_greyware_tool_keyword = /\\unlocker\-setup\.exe/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string20_IObitUnlocker_greyware_tool_keyword = /\\unlocker\-setup\.tmp/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string21_IObitUnlocker_greyware_tool_keyword = /2efdffd1cf3adab21ff760f009d8893d8c4cbcf63b2c3bfcc1139457c9cd430b/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string22_IObitUnlocker_greyware_tool_keyword = /http\:\/\/update\.iobit\.com\/infofiles\/iobitunlocker\.upt/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string23_IObitUnlocker_greyware_tool_keyword = /https\:\/\/silentbreaksecurity\.com\/adaptive\-dll\-hijacking/ nocase ascii wide
+        // Description: unlocking locked files on Windows systems
+        // Reference: https://www.iobit.com/en/iobit-unlocker.php#
+        $string24_IObitUnlocker_greyware_tool_keyword = /IObitUnlocker\.sys/ nocase ascii wide
 
     condition:
         any of them
@@ -8485,6 +8745,499 @@ rule megatools_greyware_tool_keyword
 }
 
 
+rule meshcentral_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'meshcentral' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "meshcentral"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string1_meshcentral_greyware_tool_keyword = /\sinstall\smeshcentral/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string2_meshcentral_greyware_tool_keyword = /\smeshcentral\.service/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string3_meshcentral_greyware_tool_keyword = /\s\-omeshcmd\.exe\s\-imodule1\.js/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string4_meshcentral_greyware_tool_keyword = /\.meshagent\.pid/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string5_meshcentral_greyware_tool_keyword = /\/bin\/meshagent/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string6_meshcentral_greyware_tool_keyword = /\/bin\/MeshCommander/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string7_meshcentral_greyware_tool_keyword = /\/MeshAgent\s\-\-/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string8_meshcentral_greyware_tool_keyword = /\/MeshAgent\.git/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string9_meshcentral_greyware_tool_keyword = /\/MeshCentral\.git/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string10_meshcentral_greyware_tool_keyword = /\/meshcentral\.service/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string11_meshcentral_greyware_tool_keyword = /\/meshinstall\.sh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string12_meshcentral_greyware_tool_keyword = /\/meshinstall\-bsd\-rcd\.sh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string13_meshcentral_greyware_tool_keyword = /\/system\/meshagent/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string14_meshcentral_greyware_tool_keyword = /\/system\/MeshCommander/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string15_meshcentral_greyware_tool_keyword = /\\\\MeshAgent/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string16_meshcentral_greyware_tool_keyword = /\\CurrentControlSet\\Services\\Mesh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string17_meshcentral_greyware_tool_keyword = /\\meshagent\.db/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string18_meshcentral_greyware_tool_keyword = /\\MeshAgent\.sln/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string19_meshcentral_greyware_tool_keyword = /\\MeshAgentKvm\.log/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string20_meshcentral_greyware_tool_keyword = /\\MeshAgent\-master/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string21_meshcentral_greyware_tool_keyword = /\\meshcentral\.db/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string22_meshcentral_greyware_tool_keyword = /\\meshcentral\.js/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string23_meshcentral_greyware_tool_keyword = /\\MeshCentral\.sln/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string24_meshcentral_greyware_tool_keyword = /\\MeshCentral\\/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string25_meshcentral_greyware_tool_keyword = /\\MeshCmd\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string26_meshcentral_greyware_tool_keyword = /\\meshcmd\.js/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string27_meshcentral_greyware_tool_keyword = /\\meshcommander\.dmp/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string28_meshcentral_greyware_tool_keyword = /\\MeshMessenger\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string29_meshcentral_greyware_tool_keyword = /\\MeshService\.rc/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string30_meshcentral_greyware_tool_keyword = /\\node_modules\\meshcentral/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string31_meshcentral_greyware_tool_keyword = /\\Open\sSource\\MeshCentral\\/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string32_meshcentral_greyware_tool_keyword = /\\Safeboot\\Network\\AltMeshAgent/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string33_meshcentral_greyware_tool_keyword = /\\Uninstall\\MeshCentralAgent/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string34_meshcentral_greyware_tool_keyword = /\>Mesh\sAgent\sbackground\sservice\</ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string35_meshcentral_greyware_tool_keyword = /\>Mesh\sAgent\sCompany\</ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string36_meshcentral_greyware_tool_keyword = /\>meshagentRepair\</ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string37_meshcentral_greyware_tool_keyword = /\>MeshCentral\sAgent\</ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string38_meshcentral_greyware_tool_keyword = /\>MeshCentral\</ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string39_meshcentral_greyware_tool_keyword = /035cf1744ffefef60ff711aeae4bcf39cd902e0a581b443553545f6b934f2a71/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string40_meshcentral_greyware_tool_keyword = /03A09084\-0576\-45C5\-97CA\-B83B1A8688B8/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string41_meshcentral_greyware_tool_keyword = /127ec181a70d665e539d93b8e4a014ce099faf64f0eb790a85158cd5a1349bfd/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string42_meshcentral_greyware_tool_keyword = /128C450F\-C8B3\-403A\-9D0C\-E5AD6B7F566F/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string43_meshcentral_greyware_tool_keyword = /169fa5bf73c73e2785691de174d40209dfa479430539acbce08eaf24a4cbb0c0/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string44_meshcentral_greyware_tool_keyword = /1e5aad914ec6f6fdbb0c0c340ab0e2c336922fba3e556b007d8d5002a6c478ca/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string45_meshcentral_greyware_tool_keyword = /1f2cf255b1a6d9fafad11a2d27bc9471f1e883c59a02504794e2846c7f955976/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string46_meshcentral_greyware_tool_keyword = /2523d17e9fc1b815001f2e7ea951dd3454a78bab0b12cea6a82294b9d93cd95c/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string47_meshcentral_greyware_tool_keyword = /2ca71789c452d549809f184185b08febc560b5dc81030586a3920a95ea7a3d12/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string48_meshcentral_greyware_tool_keyword = /3887f7179aa36da3d9fc527a714d6f4be500dd25beede1e161e9f019beaf7636/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string49_meshcentral_greyware_tool_keyword = /3b2cec2cc3a2e3185fc1797590dc58421cf4382e86d83e8658990bb3979d7209/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string50_meshcentral_greyware_tool_keyword = /3f47dae30e9b18dcfd50eef1d188f83171072136257758ea39997818f38d49e8/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string51_meshcentral_greyware_tool_keyword = /43861355ea40db311824a51d5a4c6dc773ebfc0c5862a252a4692847f184594c/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string52_meshcentral_greyware_tool_keyword = /460acbb38b0bdb3d227de65010b1a323f448ec196860ce4979c0b8314763eb56/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string53_meshcentral_greyware_tool_keyword = /68257a6f9ff196179ec03624e849927f26599eb180a7c82e14ef5bc4e93bc309/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string54_meshcentral_greyware_tool_keyword = /70f1ed3ea1ba5d2fe5430735089f03cbce1b85a4c719ad2adc7d1049345f2b6c/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string55_meshcentral_greyware_tool_keyword = /77432fd21f975da9215b15efc8e0080345732102f7d57a5d9d57f61faa4dfa20/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string56_meshcentral_greyware_tool_keyword = /7777E837\-E7A3\-481B\-8BD2\-4C76F639ECFC/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string57_meshcentral_greyware_tool_keyword = /7f68729cb251f5aa9ecba08e57f13c8a258ea3cb3c45e7f99881ca496a639d7e/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string58_meshcentral_greyware_tool_keyword = /8365dc72d291194a2b3bd59e36473db7404a219fe999c50dad3d793c3a3178e4/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string59_meshcentral_greyware_tool_keyword = /8cec1c5a5e6e7e7a7b2d2991e12587228ed2aa9428b1af003ff68dd6bd6994a4/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string60_meshcentral_greyware_tool_keyword = /92f384f789dae517d1da7493322db430f5a7d4a6b7d7b74ca3b075bfac881b15/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string61_meshcentral_greyware_tool_keyword = /96fb297f3cba18a95a7228a4853a0641d193859999a5488b0cbae6efe708e89c/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string62_meshcentral_greyware_tool_keyword = /a0c293a144cb66f4b07d8bd7d52a489b89c2ff30af9427c399e400bc3d374505/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string63_meshcentral_greyware_tool_keyword = /aeabd0eed04e87b955809822a4696df781a25ccb649f097a523d1cb4cf93a567/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string64_meshcentral_greyware_tool_keyword = /AgentCore\/MeshServer_/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string65_meshcentral_greyware_tool_keyword = /alt\.meshcentral\.com/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string66_meshcentral_greyware_tool_keyword = /c0b17012581f088528c73adb9f228a99bad35ee0a9f74e1a93e688f95d11080f/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string67_meshcentral_greyware_tool_keyword = /c3f35c99bf40d43b4eaa759a92f9a1bc5fc3ddcd0f35d338302a9e88cbdf995a/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string68_meshcentral_greyware_tool_keyword = /c75e682dd8f063bd0c151b30095bae8061146928f6d8533ac983280ad2c6effc/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string69_meshcentral_greyware_tool_keyword = /cc94b15863602ae52934d4c3c08db27c61c1530a483093b82a1029a41c4fbd60/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string70_meshcentral_greyware_tool_keyword = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string71_meshcentral_greyware_tool_keyword = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string72_meshcentral_greyware_tool_keyword = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string73_meshcentral_greyware_tool_keyword = /CE62CBEE\-DAA8\-4E5E\-AAAA\-1F6FC291AB94/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string74_meshcentral_greyware_tool_keyword = /d3e630985cb4b429375d79dd506842da176a9cbe4e0afb992c694cab48f3e7ce/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string75_meshcentral_greyware_tool_keyword = /d8445e3bd78bac3cc8f8a3f23b68ab971fb85ff061059f8256e41c6b892374f4/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string76_meshcentral_greyware_tool_keyword = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string77_meshcentral_greyware_tool_keyword = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string78_meshcentral_greyware_tool_keyword = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string79_meshcentral_greyware_tool_keyword = /e7e6fcf7d0b2ce3732fbeb5c7e48bb4a2f9f8bbca49ad55d13a57e9abb661481/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string80_meshcentral_greyware_tool_keyword = /ff98ae3248a0c2d93b00ec2d426578a3b90aec301883662b8da0fb2a213d60ca/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string81_meshcentral_greyware_tool_keyword = /https\:\/\/meshcentral\.com\/login/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string82_meshcentral_greyware_tool_keyword = /info\.meshcentral\.com/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string83_meshcentral_greyware_tool_keyword = /MESH_AGENT_PORT/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string84_meshcentral_greyware_tool_keyword = /MESH_AGENT_STUN_PORT/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string85_meshcentral_greyware_tool_keyword = /MeshAgent\sCrash\sDumps/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string86_meshcentral_greyware_tool_keyword = /meshagent\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string87_meshcentral_greyware_tool_keyword = /meshagent\.js/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string88_meshcentral_greyware_tool_keyword = /MeshAgent\.mpkg/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string89_meshcentral_greyware_tool_keyword = /meshagent\.pid/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string90_meshcentral_greyware_tool_keyword = /meshagent\.service/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string91_meshcentral_greyware_tool_keyword = /meshagent\.zip/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string92_meshcentral_greyware_tool_keyword = /meshagent_aarch64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string93_meshcentral_greyware_tool_keyword = /meshagent_aarch64\-cortex\-a53/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string94_meshcentral_greyware_tool_keyword = /meshagent_alpine\-x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string95_meshcentral_greyware_tool_keyword = /meshagent_android\.apk/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string96_meshcentral_greyware_tool_keyword = /meshagent_arm/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string97_meshcentral_greyware_tool_keyword = /meshagent_arm64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string98_meshcentral_greyware_tool_keyword = /meshagent_armhf/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string99_meshcentral_greyware_tool_keyword = /meshagent_freebsd_x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string100_meshcentral_greyware_tool_keyword = /meshagent_mips/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string101_meshcentral_greyware_tool_keyword = /meshagent_mips24kc/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string102_meshcentral_greyware_tool_keyword = /meshagent_mipsel24kc/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string103_meshcentral_greyware_tool_keyword = /meshagent_openbsd_x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string104_meshcentral_greyware_tool_keyword = /meshagent_openwrt_x86_64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string105_meshcentral_greyware_tool_keyword = /meshagent_osx64\.msh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string106_meshcentral_greyware_tool_keyword = /meshagent_osx64_LaunchDaemon/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string107_meshcentral_greyware_tool_keyword = /meshagent_osx\-arm\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string108_meshcentral_greyware_tool_keyword = /meshagent_osx\-universal\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string109_meshcentral_greyware_tool_keyword = /meshagent_osx\-x86\-32/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string110_meshcentral_greyware_tool_keyword = /meshagent_osx\-x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string111_meshcentral_greyware_tool_keyword = /meshagent_pogo/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string112_meshcentral_greyware_tool_keyword = /meshagent_poky/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string113_meshcentral_greyware_tool_keyword = /meshagent_poky64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string114_meshcentral_greyware_tool_keyword = /meshagent_x86/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string115_meshcentral_greyware_tool_keyword = /meshagent_x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string116_meshcentral_greyware_tool_keyword = /meshagent32\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string117_meshcentral_greyware_tool_keyword = /meshagent64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string118_meshcentral_greyware_tool_keyword = /MeshAgent\-Android\-x86/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string119_meshcentral_greyware_tool_keyword = /meshagentarm64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string120_meshcentral_greyware_tool_keyword = /MeshAgent\-ChromeOS/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string121_meshcentral_greyware_tool_keyword = /MeshAgent\-Linux\-ARM\-PlugPC/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string122_meshcentral_greyware_tool_keyword = /MeshAgent\-Linux\-XEN\-x86\-32/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string123_meshcentral_greyware_tool_keyword = /MeshAgent\-NodeJS/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string124_meshcentral_greyware_tool_keyword = /MeshAgentOSXPackager\.zip/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string125_meshcentral_greyware_tool_keyword = /MeshAgent\-WinMinCore\-Console\-x86\-32\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string126_meshcentral_greyware_tool_keyword = /MeshAgent\-WinMinCore\-Service\-x86\-64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string127_meshcentral_greyware_tool_keyword = /Meshcentral\s\-\sWebRTC\sSample\sServer/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string128_meshcentral_greyware_tool_keyword = /MeshCentral\sHTTP\sserver\sport\s/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string129_meshcentral_greyware_tool_keyword = /MeshCentral\sSatellite\scould\snot\screate\sa\s802\.1x\sprofile\sfor\sthis\sdevice/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string130_meshcentral_greyware_tool_keyword = /MeshCentral\sServer\sTCP\sports/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string131_meshcentral_greyware_tool_keyword = /MeshCentral\sServer\sUDP\sports/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string132_meshcentral_greyware_tool_keyword = /meshcentral\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string133_meshcentral_greyware_tool_keyword = /meshcentral\.serverstats/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string134_meshcentral_greyware_tool_keyword = /MeshCentralAssistant\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string135_meshcentral_greyware_tool_keyword = /MeshCentralInstaller\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string136_meshcentral_greyware_tool_keyword = /meshcentralinstaller\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string137_meshcentral_greyware_tool_keyword = /meshcentral\-plugins\.db/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string138_meshcentral_greyware_tool_keyword = /MeshCentralRoot\-/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string139_meshcentral_greyware_tool_keyword = /MeshCentralRouter\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string140_meshcentral_greyware_tool_keyword = /MeshCentralServer\.njsproj/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string141_meshcentral_greyware_tool_keyword = /meshcentral\-smbios\.db/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string142_meshcentral_greyware_tool_keyword = /MeshCmd64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string143_meshcentral_greyware_tool_keyword = /meshcmdService\.run/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string144_meshcentral_greyware_tool_keyword = /MeshCmd\-signed\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string145_meshcentral_greyware_tool_keyword = /meshcommander\sinstall/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string146_meshcentral_greyware_tool_keyword = /meshcommander\sstart/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string147_meshcentral_greyware_tool_keyword = /meshcommander\sstop/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string148_meshcentral_greyware_tool_keyword = /meshcommander\suninstall/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string149_meshcentral_greyware_tool_keyword = /MeshConsole64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string150_meshcentral_greyware_tool_keyword = /MeshConsoleARM64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string151_meshcentral_greyware_tool_keyword = /meshinstall\-initd\.sh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string152_meshcentral_greyware_tool_keyword = /meshinstall\-linux\.sh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string153_meshcentral_greyware_tool_keyword = /MeshService\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string154_meshcentral_greyware_tool_keyword = /rootcert\.meshcentral\.com/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string155_meshcentral_greyware_tool_keyword = /swarm\.meshcentral\.com/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string156_meshcentral_greyware_tool_keyword = /Uploading\sMeshCommander/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string157_meshcentral_greyware_tool_keyword = /wss\:\/\/meshcentral\.com/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshAgent
+        $string158_meshcentral_greyware_tool_keyword = /Ylianst\/MeshAgent/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string159_meshcentral_greyware_tool_keyword = /Ylianst\/MeshCentral/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule mkdir_greyware_tool_keyword
 {
     meta:
@@ -9076,33 +9829,36 @@ rule netsh_greyware_tool_keyword
         // Description: Disable Windows Firewall
         // Reference: N/A
         $string2_netsh_greyware_tool_keyword = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        // Description: script to dismantle complete windows defender protection and even bypass tamper protection  - Disable Windows-Defender Permanently.
+        // Reference: https://github.com/swagkarna/Defeat-Defender-V1.2.0
+        $string3_netsh_greyware_tool_keyword = /netsh\sadvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: adding a executable in user appdata folder to the allowed programs
         // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
-        $string3_netsh_greyware_tool_keyword = /netsh\sfirewall\sadd\sallowedprogram\s\"C\:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
+        $string4_netsh_greyware_tool_keyword = /netsh\sfirewall\sadd\sallowedprogram\s\"C\:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
         // Description: Disable Windows Firewall
         // Reference: N/A
-        $string4_netsh_greyware_tool_keyword = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
+        $string5_netsh_greyware_tool_keyword = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string5_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,1000}\sconnectport\=.{0,1000}\sconnectaddress\=/ nocase ascii wide
+        $string6_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,1000}\sconnectport\=.{0,1000}\sconnectaddress\=/ nocase ascii wide
         // Description: The actor has used the following commands to enable port forwarding [T1090] on the host
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string6_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
+        $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
         // Description: attempt to remove port proxy configurations
         // Reference: https://media.defense.gov/2024/Feb/07/2003389936/-1/-1/0/JOINT-GUIDANCE-IDENTIFYING-AND-MITIGATING-LOTL.PDF
-        $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
+        $string8_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string8_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        $string9_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string9_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        $string10_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string10_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string11_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string11_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string12_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
 
     condition:
         any of them
@@ -10166,7 +10922,7 @@ rule powershell_greyware_tool_keyword
         // Description: Gets the status of antimalware software on the computer.
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
         $string17_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
-        // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or lateral movement within the network.
+        // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
         // Reference: N/A
         $string18_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
         // Description: PowerView Find users with SPN
@@ -10581,25 +11337,25 @@ rule psexec_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling lateral movement. privilege escalation. or the execution of malicious payloads.
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string1_psexec_greyware_tool_keyword = /\s\-accepteula\s\-nobanner\s\-d\scmd\.exe\s\/c\s/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling lateral movement. privilege escalation. or the execution of malicious payloads.
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string2_psexec_greyware_tool_keyword = /\.exe\s\-i\s\-s\scmd\.exe/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling lateral movement. privilege escalation. or the execution of malicious payloads.
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string3_psexec_greyware_tool_keyword = /\\PsExec\.exe/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling lateral movement. privilege escalation. or the execution of malicious payloads.
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string4_psexec_greyware_tool_keyword = /\\Windows\\Prefetch\\PSEXEC/ nocase ascii wide
         // Description: .key file created and deleted on the target system
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string5_psexec_greyware_tool_keyword = /PSEXEC\-.{0,1000}\.key/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling lateral movement. privilege escalation. or the execution of malicious payloads.
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string6_psexec_greyware_tool_keyword = /PsExec\[1\]\.exe/ nocase ascii wide
-        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling lateral movement. privilege escalation. or the execution of malicious payloads.
+        // Description: Adversaries may place the PsExec executable in the temp directory and execute it from there as part of their offensive activities. By doing so. they can leverage PsExec to execute commands or launch processes on remote systems. enabling Lateral Movement. privilege escalation. or the execution of malicious payloads.
         // Reference: https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec
         $string7_psexec_greyware_tool_keyword = /PsExec64\.exe/ nocase ascii wide
         // Description: PsExec is a legitimate Microsoft tool for remote administration. However. attackers can misuse it to execute malicious commands or software on other network machines. install persistent threats. and evade some security systems. 
@@ -11568,10 +12324,10 @@ rule reg_greyware_tool_keyword
         // Description: Disable Windows Defender Security Center
         // Reference: N/A
         $string12_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
-        // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for lateral movement and privilege escalation
+        // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string13_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
-        // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for lateral movement and privilege escalation
+        // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string14_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: This particular change is associated with the handling of LAN Manager (LM) hash storage which can affect the security of password storage on the system. This command can be used as part of credential access or defense evasion techniques
@@ -11589,12 +12345,12 @@ rule reg_greyware_tool_keyword
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string19_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
-        // Description: Check if LSASS is running in PPL
-        // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
-        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
+        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
+        // Description: Check if LSASS is running in PPL
+        // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
+        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string22_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
@@ -11652,6 +12408,106 @@ rule reg_greyware_tool_keyword
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string40_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule RemCom_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'RemCom' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "RemCom"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string1_RemCom_greyware_tool_keyword = /\s\\\\\\\\localhost\s\/user\:Username\s\/pwd\:Password\s\s\\\"C\:\\\\InstallMe\.bat/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string2_RemCom_greyware_tool_keyword = /\sRemCom\.exe/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string3_RemCom_greyware_tool_keyword = /\sRemComSvc\.exe/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string4_RemCom_greyware_tool_keyword = /\sRemComSvc\.h/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string5_RemCom_greyware_tool_keyword = /\.\\RemComSvc\\/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string6_RemCom_greyware_tool_keyword = /\/RemCom\.exe/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string7_RemCom_greyware_tool_keyword = /\/RemCom\.git/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string8_RemCom_greyware_tool_keyword = /\/RemComSvc\.exe/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string9_RemCom_greyware_tool_keyword = /\[\stalha\.tariq\@gmail\.com\s\]/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string10_RemCom_greyware_tool_keyword = /\\RemCom\.cpp/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string11_RemCom_greyware_tool_keyword = /\\RemCom\.exe/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string12_RemCom_greyware_tool_keyword = /\\RemCom\.pdb/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string13_RemCom_greyware_tool_keyword = /\\RemCom\.vcxproj/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string14_RemCom_greyware_tool_keyword = /\\RemCom\-master\\/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string15_RemCom_greyware_tool_keyword = /\\RemComSvc\.exe/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string16_RemCom_greyware_tool_keyword = /\\RemComSvc\\/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string17_RemCom_greyware_tool_keyword = /\\Remote\sCommand\sExecutor\.sln/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string18_RemCom_greyware_tool_keyword = /0d8f28ea01d3866ad7ee4abbdc5bdfd83d41702dcf029584ef30cb0055be8538/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string19_RemCom_greyware_tool_keyword = /29548EB7\-5E44\-21F9\-5C82\-15DDDC80449A/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string20_RemCom_greyware_tool_keyword = /8CC59FFA\-00E0\-0AEA\-59E8\-E780672C3CB3/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string21_RemCom_greyware_tool_keyword = /C7038612\-8183\-67A7\-8A9C\-1379C2674156/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string22_RemCom_greyware_tool_keyword = /define\sRemComSVCEXE/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string23_RemCom_greyware_tool_keyword = /eee20962a1056f525bbe1c99c656794511697e510221522e7d62efd943457190/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string24_RemCom_greyware_tool_keyword = /kavika13\/RemCom/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string25_RemCom_greyware_tool_keyword = /RemCom\s\-\sWin32\sDebug/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string26_RemCom_greyware_tool_keyword = /RemCom\s\-\sWin32\sRelease/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string27_RemCom_greyware_tool_keyword = /RemComSvc\s\-\sWin32\sDebug/ nocase ascii wide
+        // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
+        // Reference: https://github.com/kavika13/RemCom
+        $string28_RemCom_greyware_tool_keyword = /RemComSvc\s\-\sWin32\sRelease/ nocase ascii wide
 
     condition:
         any of them
@@ -13130,30 +13986,33 @@ rule sc_greyware_tool_keyword
         // Description: Get information about Windows Defender service
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
         $string1_sc_greyware_tool_keyword = /\s\/c\ssc\squery\sWinDefend/ nocase ascii wide
+        // Description: script to dismantle complete windows defender protection and even bypass tamper protection  - Disable Windows-Defender Permanently.
+        // Reference: https://github.com/swagkarna/Defeat-Defender-V1.2.0
+        $string2_sc_greyware_tool_keyword = /dnefedniw\s\seteled\scs/ nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
-        $string2_sc_greyware_tool_keyword = /echo\sstart\s\>\s\\\\\.\\pipe\\winreg/ nocase ascii wide
+        $string3_sc_greyware_tool_keyword = /echo\sstart\s\>\s\\\\\.\\pipe\\winreg/ nocase ascii wide
         // Description: create service with netcat
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string3_sc_greyware_tool_keyword = /sc\screate\s.{0,1000}nc\.exe\s\-.{0,1000}cmd\.exe/ nocase ascii wide
+        $string4_sc_greyware_tool_keyword = /sc\screate\s.{0,1000}nc\.exe\s\-.{0,1000}cmd\.exe/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string4_sc_greyware_tool_keyword = /sc\sdelete\sMBAMProtection/ nocase ascii wide
+        $string5_sc_greyware_tool_keyword = /sc\sdelete\sMBAMProtection/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string5_sc_greyware_tool_keyword = /sc\sdelete\sMBAMService/ nocase ascii wide
+        $string6_sc_greyware_tool_keyword = /sc\sdelete\sMBAMService/ nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
-        $string6_sc_greyware_tool_keyword = /sc\sqtriggerinfo\sRemoteRegistry/ nocase ascii wide
+        $string7_sc_greyware_tool_keyword = /sc\sqtriggerinfo\sRemoteRegistry/ nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
-        $string7_sc_greyware_tool_keyword = /sc\sstart\sRemoteRegistry/ nocase ascii wide
+        $string8_sc_greyware_tool_keyword = /sc\sstart\sRemoteRegistry/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string8_sc_greyware_tool_keyword = /sc\sstop\sMBAMProtection/ nocase ascii wide
+        $string9_sc_greyware_tool_keyword = /sc\sstop\sMBAMProtection/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string9_sc_greyware_tool_keyword = /sc\sstop\sMBAMService/ nocase ascii wide
+        $string10_sc_greyware_tool_keyword = /sc\sstop\sMBAMService/ nocase ascii wide
 
     condition:
         any of them
@@ -14001,6 +14860,25 @@ rule skymen_info_greyware_tool_keyword
         // Description: used by attackers to find informations about a company users
         // Reference: https://www.skymem.info
         $string1_skymen_info_greyware_tool_keyword = /https\:\/\/www\.skymem\.info\/srch\?q\=/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule slack_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'slack' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "slack"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: API usage of slack - creating channel - abused by multiple C2
+        // Reference: https://github.com/mthcht/Purpleteam/blob/main/Detection/Threat%20Hunting/generic/C2_abusing_API_services.md
+        $string1_slack_greyware_tool_keyword = /https\:\/\/slack\.com\/api\/channels\.create/ nocase ascii wide
 
     condition:
         any of them
@@ -16965,22 +17843,22 @@ rule whoami_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string1_whoami_greyware_tool_keyword = /whoami\s\/all/ nocase ascii wide
-        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string2_whoami_greyware_tool_keyword = /whoami\s\/domain/ nocase ascii wide
-        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string3_whoami_greyware_tool_keyword = /whoami\s\/groups/ nocase ascii wide
-        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string4_whoami_greyware_tool_keyword = /whoami\s\/priv/ nocase ascii wide
-        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
         $string5_whoami_greyware_tool_keyword = /whoami/ nocase ascii wide
-        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for lateral movement. privilege escalation. or targeted attacks within the compromised network.
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
         $string6_whoami_greyware_tool_keyword = /whoami\.exe.{0,1000}\s\/groups/ nocase ascii wide
 
@@ -17059,6 +17937,415 @@ rule winrs_greyware_tool_keyword
         // Description: WinRS for Lateral Movement
         // Reference: N/A
         $string1_winrs_greyware_tool_keyword = /winrs\s\-r\:.{0,1000}whoami/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule wireproxy_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'wireproxy' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "wireproxy"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string1_wireproxy_greyware_tool_keyword = /\swireproxy\.service/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string2_wireproxy_greyware_tool_keyword = /\/bin\/wireproxy/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string3_wireproxy_greyware_tool_keyword = /\/wireproxy\.conf/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string4_wireproxy_greyware_tool_keyword = /\/wireproxy\.git/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string5_wireproxy_greyware_tool_keyword = /\/wireproxy\.service/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string6_wireproxy_greyware_tool_keyword = /\/wireproxy\/releases\// nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string7_wireproxy_greyware_tool_keyword = /\/wireproxy_darwin/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string8_wireproxy_greyware_tool_keyword = /\/wireproxy_linux_/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string9_wireproxy_greyware_tool_keyword = /\/wireproxy_windows/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string10_wireproxy_greyware_tool_keyword = /\/wireproxy\-ci\-test/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string11_wireproxy_greyware_tool_keyword = /\/wireproxy\-master/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string12_wireproxy_greyware_tool_keyword = /\/wireproxy\-udp/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string13_wireproxy_greyware_tool_keyword = /\\wireguard\.go/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string14_wireproxy_greyware_tool_keyword = /\\wireproxy\.service/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string15_wireproxy_greyware_tool_keyword = /\\wireproxy\\/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string16_wireproxy_greyware_tool_keyword = /\\wireproxy\-ci\-test/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string17_wireproxy_greyware_tool_keyword = /\\wireproxy\-master/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string18_wireproxy_greyware_tool_keyword = /\\wireproxy\-udp/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string19_wireproxy_greyware_tool_keyword = /009878ba04d0708fd86cc333fcda1e4d9f6a908b95bf28484dcae293bd497201/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string20_wireproxy_greyware_tool_keyword = /01553e1a8ac9b5a158f2ff4861643892ac018aefe598c80fb09710c702b70d8c/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string21_wireproxy_greyware_tool_keyword = /01afaf85adb57c17d2d817c34134ffc1804db080b9493cc7e1a45e3288bf7536/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string22_wireproxy_greyware_tool_keyword = /02b26e392e2c9043de39d0c39595b587383170b211b2b86f3499227100192e41/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string23_wireproxy_greyware_tool_keyword = /03e55f4304347ccf6363e5770ac810b3eab5212f734dd9bfc6835eb9423b24d5/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string24_wireproxy_greyware_tool_keyword = /07311a98f0eb27945a68e1013e666e2ceff69c9241398b7d572086baabb145ee/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string25_wireproxy_greyware_tool_keyword = /0b8f89e4fc750945542db27755503efb9f7bc315991393be3841a5946cc1f1c9/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string26_wireproxy_greyware_tool_keyword = /1770fedc0630c7c0602f9adaa1ef853a44cd8a889bfd0786b7cdc8aa05f61db6/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string27_wireproxy_greyware_tool_keyword = /1bcdf25876c01658756741f64fe06654583e539aa3139bdf55ef1324137e148e/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string28_wireproxy_greyware_tool_keyword = /1befd6f9e0bec802dc6a4e2a33a85c967bbe3eb6126c1c4d0182f55aba1166a6/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string29_wireproxy_greyware_tool_keyword = /1d023cdd6aa17ec552878b1d36e3ce4fb32dc5b9563042a35452b0800c9da124/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string30_wireproxy_greyware_tool_keyword = /2146c1335034e53171750fd914adf88e77bb5d9b2a98c61632474a97ae5b016f/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string31_wireproxy_greyware_tool_keyword = /26e454248321c9543371ce81407a9eba31ebe35c58667daaa588965cdee501fe/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string32_wireproxy_greyware_tool_keyword = /2dfa8caa50560a707a4877e2c9bb40acecaa475d5b792ef78f5309a46038f1ba/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string33_wireproxy_greyware_tool_keyword = /2f4e89575f662c72f7c1dcb4f7b5d2bfb356594883e39b0d3b6e17dd941c278f/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string34_wireproxy_greyware_tool_keyword = /319aa6516c8bef2fc13ae80390fb4a2a99b8ceaaf6ceb462842001b89f22bca1/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string35_wireproxy_greyware_tool_keyword = /31c085fa529ca13e77e2ad911bf901a0d0c7e21cd27142b09371da30d676ad60/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string36_wireproxy_greyware_tool_keyword = /3204a42f02f8cfed9ba183a2141e16079ad99854b74f9a9e0c6a4831e8b25d8e/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string37_wireproxy_greyware_tool_keyword = /340318e256a321e87e1a56c948c1d6ab6dcae8f585aacb26b0de457b215b9fbe/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string38_wireproxy_greyware_tool_keyword = /356eae02a0b678a82174417da439cbdcab3e678197aa8a91824849fb9085fc32/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string39_wireproxy_greyware_tool_keyword = /3e6945f3127371b2f2c3f0bdcb2a1c574f92394cc78fbe2144ecefe23f83c983/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string40_wireproxy_greyware_tool_keyword = /3ee17b78ee6df429959331d016e7a2a64931584c70275c2b72da8b5ff33a3d59/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string41_wireproxy_greyware_tool_keyword = /4019e9601d40a27634c95f10d98a0ee8c6820d2653665d8c718e132e92887814/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string42_wireproxy_greyware_tool_keyword = /40eb2e3dcca0c9f4ed11b3fd96b5824489f60fc0c3caa8f609539dd68ec6f1d5/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string43_wireproxy_greyware_tool_keyword = /42f742e6fa63b5b289083c4d17d57065e599754618d56d6a4690199436cdd316/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string44_wireproxy_greyware_tool_keyword = /45348fbbfaebb3eeee47d5a96c4254e02e44da4628427fd5da1e5904479b5ce5/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string45_wireproxy_greyware_tool_keyword = /47b8e0993b997e7f465802945187521ba8c68592af990215cdf43bef121f8df7/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string46_wireproxy_greyware_tool_keyword = /47e0483c22d1a0554dfa2b9b51895e866932b4c7269dee4ccc6ad41b3e433abc/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string47_wireproxy_greyware_tool_keyword = /485911ecec88451f4e4272a732526b5024b815630d0d238c452d7faa097f39de/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string48_wireproxy_greyware_tool_keyword = /487a53f4e4f82f5d0789f4cc7b942bd2accddcd2eb296669afbf7d8cf91c421b/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string49_wireproxy_greyware_tool_keyword = /4acadcd4e74a40bb798d207b3d25b4b5f43cfddc39f9beb78fe5badf428b47a6/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string50_wireproxy_greyware_tool_keyword = /4cd912755e503c2010ab1f436128165f1f899c384bffce49f183c0663ba5da22/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string51_wireproxy_greyware_tool_keyword = /4f3bc75be8df0f82b7b79041715ed30cf1a0e658fe2be024825da74c7a8a37c1/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string52_wireproxy_greyware_tool_keyword = /503c58501ddb578dd5ee825bdacde7e5e416210276ec7e6688c8556dfca9ae26/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string53_wireproxy_greyware_tool_keyword = /54b3370eb307a1b726f60f1c1accfb1159feb6e38d6dfda1fe1c6c1d09f79446/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string54_wireproxy_greyware_tool_keyword = /573af5ccab4dccb4c9eb1f21b5e65d18c0b3a4e2b262c426b6bebc24243904f1/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string55_wireproxy_greyware_tool_keyword = /5a1790facd6c8aea4b8c49a0e8d4aaa2f65e367a5d15c8f58014d62a8668b4df/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string56_wireproxy_greyware_tool_keyword = /5c247bb774e29eb43ef20279ae9d8cee98cd0ec4028dd282a09f0bb84f379976/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string57_wireproxy_greyware_tool_keyword = /5c4bcebb1782c9cf6c993a076f306555f62b1c8b14e149478ab2358d5a6ca517/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string58_wireproxy_greyware_tool_keyword = /5ddc8f41b610fd28ff2a50d363f3085640b3af7278103524bff3075ca2dd993d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string59_wireproxy_greyware_tool_keyword = /5f523d5a29283d1581a3444d2bdfcab0afd70cb8e2991f1931e70f89e6d8b271/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string60_wireproxy_greyware_tool_keyword = /60e6f67d6d09c7986ee9b2683a77eb28d2004ef5c1fa45ef9b9358bca170fc16/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string61_wireproxy_greyware_tool_keyword = /642aad896feb5dad407faf2d4c863afcf715eec4f51b21768cd484867c215031/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string62_wireproxy_greyware_tool_keyword = /651574316f30fcb27c5730435566812d3bdd67c5615c56473ae2ed1e22adabe2/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string63_wireproxy_greyware_tool_keyword = /65b130644bca2559f84fca5bb2bc22a1ae7d889f01e8905f9799763720fccdb6/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string64_wireproxy_greyware_tool_keyword = /66b52ee470feb8f6d2e6bc138a82d0db8aa59511b3c9f6d44300250ed7273ebc/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string65_wireproxy_greyware_tool_keyword = /66cb20febb3ce35cfd4bd1320e7abd087c6b23aa457f6e350a8b05fddecc641f/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string66_wireproxy_greyware_tool_keyword = /6abb1bc9f730937c6bb77f096087aed70599b3e708fe645dbcf8dfe6240d005d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string67_wireproxy_greyware_tool_keyword = /6cf85567ac67515da97ff2cfd2adea85a088c5bb4b8eb3fc847d6d3d5637b842/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string68_wireproxy_greyware_tool_keyword = /7a70080db23b2f02e3304cf2e5d41e75286e28d33b79d0cf514f0161dbe378ea/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string69_wireproxy_greyware_tool_keyword = /7ea81ae66bbcb8065d3b7d00c7f67738a4f9fc5c38a28a6cd602552369ea3343/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string70_wireproxy_greyware_tool_keyword = /80594939a5a0caa3ae0a8425bb0cc149f1ba31b4dfc15fd183ca2ff1650150ad/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string71_wireproxy_greyware_tool_keyword = /84024388bfbdb79a8d084767325ef4b8f25c6551f50a1f9beb2409e73041644f/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string72_wireproxy_greyware_tool_keyword = /851dddcb60f2e90bc02a00a056ec9bf8d131082b0d7e3b9b7bf67ac1a381d297/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string73_wireproxy_greyware_tool_keyword = /86bd9d5adf837decef7b59ae3a02134103908a249ddd0457f4a688467a42ca63/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string74_wireproxy_greyware_tool_keyword = /870089165f0603447e099ef6a27cbf0926fda8cbbe1df6fa3c7021897f1eabcc/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string75_wireproxy_greyware_tool_keyword = /87a0056914c80855f8226b2b23118ed48776bd46a56d1cee328db464ec7502a3/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string76_wireproxy_greyware_tool_keyword = /8ad37d3ba1aeb25f8997349cc4d1ee21540881ebb62249c5b4c95a2a7137dcca/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string77_wireproxy_greyware_tool_keyword = /8d9a8c8e646b26d5242d8fa7018bc58147435076d8b9c19fb3df35be786fa2da/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string78_wireproxy_greyware_tool_keyword = /8e459ac9f01ef6901b45681fe24dd1abc411a2e35a85a108f9e209d1b0182321/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string79_wireproxy_greyware_tool_keyword = /905a3126b66ae96cf8171b13f7b727d44971636c1504a496fbd1b7250a491711/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string80_wireproxy_greyware_tool_keyword = /90e0acfe005774296f6b39b88bda3819bb29f0debd6340bc048bfcca38898c8a/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string81_wireproxy_greyware_tool_keyword = /94158766003e207f843092ba29787aeb83800799fe9f605682c761d8c75deba7/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string82_wireproxy_greyware_tool_keyword = /969a0ad64c9d99f21d8e8a8201fa19b0be3a757d220e89492a4d2f532eeae126/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string83_wireproxy_greyware_tool_keyword = /98d3073aff25e6cdb287e366be5de18f461b7e820176a5211dfcf203e8ef6680/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string84_wireproxy_greyware_tool_keyword = /a35294253d487a15fd813da9ec51e1f9c71e6ba81a5e19caf2401a87572627de/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string85_wireproxy_greyware_tool_keyword = /a48e07ec7e49b7db108e6491d061d118b5c0b52dcf3bbc60390d4b2b9011f8dc/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string86_wireproxy_greyware_tool_keyword = /a6990ac66bfbbfeaef787dff39ec08610cca7c77d33747b5a76583e7f7916f2c/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string87_wireproxy_greyware_tool_keyword = /a9c55684d85a79c12aea4a9c4c43be98addd32f88c21b240979f47b8c04cca02/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string88_wireproxy_greyware_tool_keyword = /a9fd574e1f0c58461722fc1abc15cd01efb472bcdc1f703de2b918f2fa7dec64/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string89_wireproxy_greyware_tool_keyword = /aea7f25ff97c149ba56c8b4c956d4814269c6c66a5d2a215ef8333ab9499b2da/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string90_wireproxy_greyware_tool_keyword = /b03d96d8d00893f76bd9c55b7ce47750222728e30b19d23e1a39e0239ea6420d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string91_wireproxy_greyware_tool_keyword = /b39aacc5eb127dab66d1ccbbcbee9ee6cf659d27ebe9cec63c4940754acab7da/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string92_wireproxy_greyware_tool_keyword = /b673a20bc465d0312a145da0fa9382d990b4f28d2d492452be952a32c1740f50/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string93_wireproxy_greyware_tool_keyword = /b6c43379ca375e18916fd220fb5bb4c76a0bb75c5e83532fa47d6f74aeee61d6/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string94_wireproxy_greyware_tool_keyword = /b93eda57716e1c55030ac507cbbb9c70b6cfe3d0d5b9041742b4a5e90538a90e/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string95_wireproxy_greyware_tool_keyword = /bafe621127910335db84dfc38a60088d1aaf6ab52cf2ecebab389457103137b0/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string96_wireproxy_greyware_tool_keyword = /bbe8a83b968e62d2f07b427ca70f48454a33e44250ae43fbe917caf93bc0da26/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string97_wireproxy_greyware_tool_keyword = /bc19099bd718989cf9f415548edc77044563a512dafeba5a2042626b3238df6d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string98_wireproxy_greyware_tool_keyword = /bcf09d38544f07d19337c6c7cbf1d12a29f418d0f85cae8c3af17f37b63d5836/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string99_wireproxy_greyware_tool_keyword = /bef4bc1889b6d80b2551b3b3f70feb3df848edf2beb72935129f7e4fba42edc5/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string100_wireproxy_greyware_tool_keyword = /bf352b6fb09f15ce5bb29db4f131baa128eb579b157e7ab140682891bae6393b/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string101_wireproxy_greyware_tool_keyword = /c46fd158ad7a0dbb616b1c0c5416bb77e43d5aef95869923d62097034d2a1cf7/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string102_wireproxy_greyware_tool_keyword = /c66ea235f3bec5713b4b30abb7fa938c472f9f66b1f1fcaacdf8b0e7c36a735b/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string103_wireproxy_greyware_tool_keyword = /c85dda1fd27eb34db30a297fe5ddfa279904579ce968d8fbe08d68a263c71a8a/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string104_wireproxy_greyware_tool_keyword = /cb5d63e74dee2d3908969d245f21722523a3a111f98a3ed13f6554cab98569e3/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string105_wireproxy_greyware_tool_keyword = /cfad83c752fa011d705c5a6fa65f0ea4fb99f56209a8b67f9a32629a7f36ee6d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string106_wireproxy_greyware_tool_keyword = /d1409d4d6fc200f7f5569b844c0005eb1963a94a857ae4fb5caeb496783cca07/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string107_wireproxy_greyware_tool_keyword = /d166f3899cc7eb349d9ce4c8adc8f60e3a2908ed29ddf4a2e52e070d78e290ec/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string108_wireproxy_greyware_tool_keyword = /d341e25ece7b66006ffeae3f76194bb12a9d120368f0616e1ab58186dcaff932/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string109_wireproxy_greyware_tool_keyword = /d3ac20c9e1aa6062e8454e12f8dcae4bb66ed6bef18e304268196066760947aa/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string110_wireproxy_greyware_tool_keyword = /d454762487d1118fa84e8931d4ae93bdf0c39fa1f42deb177825eb8d94e8f989/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string111_wireproxy_greyware_tool_keyword = /d4a4b8c5f774ed28466d584b62cc61f44d2f89f139c7df2e63aefcfc203c2f3a/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string112_wireproxy_greyware_tool_keyword = /d6e656ad3fba0ef5630a6607f3b02ee5920085a8fc724e7617d959300d809cab/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string113_wireproxy_greyware_tool_keyword = /d72dd4d052362db7dee1bb2ed177279d4b4f6199288b7a0f9f377accc67e8f01/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string114_wireproxy_greyware_tool_keyword = /d9499b5feb59b820c0b9610da94455e1ef96ea018e170261ffabedda39044cce/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string115_wireproxy_greyware_tool_keyword = /dae86be018d5317f61477f260e8508149e769688aa642327fc6caba5786cc26d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string116_wireproxy_greyware_tool_keyword = /db5df4b216cfc30f8a23337a875331dfa29a90ec6d1330aa834bd5eb641c2c6a/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string117_wireproxy_greyware_tool_keyword = /e2ad65bd782f8e3faa19426d408b84ca2d1cd0b4a3d12668febb8d94aca0457c/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string118_wireproxy_greyware_tool_keyword = /e90c0327bdf81bc4b5ebca4701cd2bfeb5f62a63c2e78e04756e3219ce01d990/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string119_wireproxy_greyware_tool_keyword = /ea40a6037ecaaf48b26ef67834d9142e426b84bdb9d7bac5ed62528e0a27cc60/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string120_wireproxy_greyware_tool_keyword = /eca2eda42fa2d4f71de8055f79066fce3866d22c8f38060ee98978341fd2a078/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string121_wireproxy_greyware_tool_keyword = /edb87b5669e9a133f18328402a89242a7844ad244929133803439e95201958d8/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string122_wireproxy_greyware_tool_keyword = /f00e2511ae291bed3ad7e08cfb4cb960ea10e14ef51ba15c928d5d3d14fdb09d/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string123_wireproxy_greyware_tool_keyword = /f18f551bbe47c5078c3e49718dea7287979b203fbd01149e9def64bbae723e4c/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string124_wireproxy_greyware_tool_keyword = /f5ebf3d481f604a7f5d301034f7868eb02bf07545dc2a3eccd755ca49356684f/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string125_wireproxy_greyware_tool_keyword = /f650e73547f22ce8b7503d31f62d2f8426c5734e5b25074d08527e50f74b0bdb/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string126_wireproxy_greyware_tool_keyword = /f71e8c4887a42cff058f46f270cc2c142ba2fdb4b714fd6c65e44a0ed09e2433/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string127_wireproxy_greyware_tool_keyword = /pufferffish\/wireproxy/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string128_wireproxy_greyware_tool_keyword = /wireproxy\s\-\-/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string129_wireproxy_greyware_tool_keyword = /wireproxy\s\-c\s/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string130_wireproxy_greyware_tool_keyword = /wireproxy\s\-n\s/ nocase ascii wide
+        // Description: Wireguard client that exposes itself as a socks5 proxy
+        // Reference: https://github.com/pufferffish/wireproxy
+        $string131_wireproxy_greyware_tool_keyword = /wireproxy\s\-s/ nocase ascii wide
 
     condition:
         any of them

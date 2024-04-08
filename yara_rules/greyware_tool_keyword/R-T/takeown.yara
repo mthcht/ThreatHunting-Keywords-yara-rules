@@ -14,6 +14,12 @@ rule takeown
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
         $string2 = /takeown\s\/f\sC\:\\Windows\\System32\\amsi\.dll\s\/a/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string3 = /takeown\s\/f\sc\:\\windows\\system32\\sethc\.exe/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string4 = /takeown\s\/f\sc\:\\windows\\system32\\sethcold\.exe/ nocase ascii wide
 
     condition:
         any of them

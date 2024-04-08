@@ -2864,40 +2864,40 @@ rule cat_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Enumerating user files history for interesting information
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string1_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: show atftp history
         // Reference: N/A
-        $string1_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string2_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2_cat_greyware_tool_keyword = /cat\s.{0,1000}\.atftp_history/ nocase ascii wide
+        $string3_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: show bash history
         // Reference: N/A
-        $string3_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string4_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4_cat_greyware_tool_keyword = /cat\s.{0,1000}\.bash_history/ nocase ascii wide
+        $string5_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: show mysql history
         // Reference: N/A
-        $string5_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string6_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string6_cat_greyware_tool_keyword = /cat\s.{0,1000}\.mysql_history/ nocase ascii wide
+        $string7_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: show nano history
         // Reference: N/A
-        $string7_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string8_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
         // Description: Enumerating user files history for interesting information
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string8_cat_greyware_tool_keyword = /cat\s.{0,1000}\.nano_history/ nocase ascii wide
+        $string9_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
         // Description: show php history
         // Reference: N/A
-        $string9_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
-        // Description: Enumerating user files history for interesting information
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string10_cat_greyware_tool_keyword = /cat\s.{0,1000}\.php_history/ nocase ascii wide
-        // Description: show zsh history
+        // Description: Enumerating user files history for interesting information
         // Reference: N/A
         $string11_cat_greyware_tool_keyword = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
-        // Description: Enumerating user files history for interesting information
+        // Description: show zsh history
         // Reference: N/A
         $string12_cat_greyware_tool_keyword = /cat\s.{0,1000}\.zsh_history/ nocase ascii wide
         // Description: linux commands abused by attackers
@@ -7446,9 +7446,12 @@ rule icalcs_greyware_tool_keyword
         // Description: malware behavior - modify the permissions on files or directories that match AV name
         // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
         $string21_icalcs_greyware_tool_keyword = /icacls\s.{0,1000}\\SpyHunter.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string22_icalcs_greyware_tool_keyword = /icacls\sc\:\\windows\\system32\\sethc\.exe\s/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string22_icalcs_greyware_tool_keyword = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
+        $string23_icalcs_greyware_tool_keyword = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
 
     condition:
         any of them
@@ -12174,6 +12177,133 @@ rule rderzh_VPN_Proxy_greyware_tool_keyword
 }
 
 
+rule rdpwrap_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'rdpwrap' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "rdpwrap"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string1_rdpwrap_greyware_tool_keyword = /\sRDPWInst\.exe/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string2_rdpwrap_greyware_tool_keyword = /\srdpwrap\.dll/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string3_rdpwrap_greyware_tool_keyword = /\"\%\~dp0RDPWInst\"\s\-i\s\-o/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string4_rdpwrap_greyware_tool_keyword = /\%\~dp0RDPWInst\.exe/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string5_rdpwrap_greyware_tool_keyword = /\/RDPWInst\.exe/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string6_rdpwrap_greyware_tool_keyword = /\/RDPWInst\-v.{0,1000}\.msi/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string7_rdpwrap_greyware_tool_keyword = /\/rdpwrap\.dll/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string8_rdpwrap_greyware_tool_keyword = /\/rdpwrap\.git/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string9_rdpwrap_greyware_tool_keyword = /\/RDPWrap\-v.{0,1000}\.zip/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string10_rdpwrap_greyware_tool_keyword = /\/res\/rdpwrap\.ini/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string11_rdpwrap_greyware_tool_keyword = /\\bin\\RDPConf\.exe/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string12_rdpwrap_greyware_tool_keyword = /\\RDP\sWrapper\\/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string13_rdpwrap_greyware_tool_keyword = /\\RDPCheck\.exe/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string14_rdpwrap_greyware_tool_keyword = /\\RDPWInst\.exe/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string15_rdpwrap_greyware_tool_keyword = /\\RDPWInst\-v.{0,1000}\.msi/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string16_rdpwrap_greyware_tool_keyword = /\\RDPWrap\.cpp/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string17_rdpwrap_greyware_tool_keyword = /\\rdpwrap\.dll/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string18_rdpwrap_greyware_tool_keyword = /\\rdpwrap\.ini/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string19_rdpwrap_greyware_tool_keyword = /\\RDPWrap\.sln/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string20_rdpwrap_greyware_tool_keyword = /\\rdpwrap\.txt/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string21_rdpwrap_greyware_tool_keyword = /\\rdpwrap\-master/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string22_rdpwrap_greyware_tool_keyword = /\\RDPWrapSetup/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string23_rdpwrap_greyware_tool_keyword = /\\RDPWrap\-v.{0,1000}\.zip/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string24_rdpwrap_greyware_tool_keyword = /1232372059db3ecf28cc2609a36b7f20cef2dfe0618770e3ebaa9488bc7fc2de/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string25_rdpwrap_greyware_tool_keyword = /29E4E73B\-EBA6\-495B\-A76C\-FBB462196C64/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string26_rdpwrap_greyware_tool_keyword = /35a9481ddbed5177431a9ea4bd09468fe987797d7b1231d64942d17eb54ec269/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string27_rdpwrap_greyware_tool_keyword = /3699b102bf5ad1120ef560ae3036f27c74f6161b62b31fda8087bd7ae1496ee1/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string28_rdpwrap_greyware_tool_keyword = /9899ffecf141ab4535ec702facbf2b4233903b428b862f3a87e635d09c6244de/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string29_rdpwrap_greyware_tool_keyword = /aaf7e238a5c0bb2a7956e2fdca9b534f227f7b737641962fb0ed965390ace4c6/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string30_rdpwrap_greyware_tool_keyword = /f9a82873a1e55bb1b5b8b8781b06799ff665464cff8ce77e07474c089123b643/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string31_rdpwrap_greyware_tool_keyword = /fed08bd733b8e60b5805007bd01a7bf0d0b1993059bbe319d1179facc6b73361/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string32_rdpwrap_greyware_tool_keyword = /Initializing\sRDP\sWrapper/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string33_rdpwrap_greyware_tool_keyword = /\'RDP\sWrapper\sLibrary\sInstaller\sv1\.0\'/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string34_rdpwrap_greyware_tool_keyword = /RDP\sWrapper\\RDPConf/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string35_rdpwrap_greyware_tool_keyword = /RDPWInst\s\-w/ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string36_rdpwrap_greyware_tool_keyword = /rdpwrap\\.{0,1000}\\RDPWInst\./ nocase ascii wide
+        // Description: RDP Wrapper Library used by malwares
+        // Reference: https://github.com/stascorp/rdpwrap
+        $string37_rdpwrap_greyware_tool_keyword = /stascorp\/rdpwrap/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Red_Panda_VPN_greyware_tool_keyword
 {
     meta:
@@ -12345,12 +12475,12 @@ rule reg_greyware_tool_keyword
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string19_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
-        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
-        // Reference: https://github.com/ice-wzl/wmiexec2
-        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: Check if LSASS is running in PPL
         // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
-        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
+        // Reference: https://github.com/ice-wzl/wmiexec2
+        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string22_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
@@ -12408,6 +12538,25 @@ rule reg_greyware_tool_keyword
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string40_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule regsvr32_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'regsvr32' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "regsvr32"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: A fake AMSI Provider which can be used for persistence
+        // Reference: https://github.com/netbiosX/AMSI-Provider
+        $string1_regsvr32_greyware_tool_keyword = /regsvr32\sAmsiProvider\.dll/ nocase ascii wide
 
     condition:
         any of them
@@ -12563,26 +12712,26 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string13_RemotePC_greyware_tool_keyword = /\"RemotePCAttendedService\"/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string14_RemotePC_greyware_tool_keyword = /\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string14_RemotePC_greyware_tool_keyword = /\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string15_RemotePC_greyware_tool_keyword = /\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string16_RemotePC_greyware_tool_keyword = /\/AttendedUDP\.zip/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string17_RemotePC_greyware_tool_keyword = /\/remotepc\.deb/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string18_RemotePC_greyware_tool_keyword = /\/remotepc\.deb/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string19_RemotePC_greyware_tool_keyword = /\/RemotePC\.exe/ nocase ascii wide
+        $string18_RemotePC_greyware_tool_keyword = /\/remotepc\.deb/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string19_RemotePC_greyware_tool_keyword = /\/RemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string20_RemotePC_greyware_tool_keyword = /\/RemotePC\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -12671,26 +12820,26 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string49_RemotePC_greyware_tool_keyword = /\\RemotePC\sPerformance\sHost\\/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string50_RemotePC_greyware_tool_keyword = /\\RemotePC\.Common\.dll/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string51_RemotePC_greyware_tool_keyword = /\\RemotePC\.Common\.dll/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string52_RemotePC_greyware_tool_keyword = /\\RemotePC\.exe/ nocase ascii wide
+        $string51_RemotePC_greyware_tool_keyword = /\\RemotePC\.Common\.dll/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string52_RemotePC_greyware_tool_keyword = /\\RemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string53_RemotePC_greyware_tool_keyword = /\\RemotePC\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string54_RemotePC_greyware_tool_keyword = /\\RemotePC\.lnk/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string55_RemotePC_greyware_tool_keyword = /\\RemotePC\.tmp/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string55_RemotePC_greyware_tool_keyword = /\\RemotePC\.tmp/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string56_RemotePC_greyware_tool_keyword = /\\RemotePC\.tmp/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -12704,11 +12853,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string60_RemotePC_greyware_tool_keyword = /\\RemotePCDDriver\.cat/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string61_RemotePC_greyware_tool_keyword = /\\RemotePCDDriver\.inf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string61_RemotePC_greyware_tool_keyword = /\\RemotePCDDriver\.inf/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string62_RemotePC_greyware_tool_keyword = /\\RemotePCDDriver\.inf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -12737,20 +12886,20 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string71_RemotePC_greyware_tool_keyword = /\\RemotePCModules\.log/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string72_RemotePC_greyware_tool_keyword = /\\RemotePCPDF\.conf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string72_RemotePC_greyware_tool_keyword = /\\RemotePCPDF\.conf/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string73_RemotePC_greyware_tool_keyword = /\\RemotePCPDF\.conf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string74_RemotePC_greyware_tool_keyword = /\\RemotePCPerformancePlugins\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string75_RemotePC_greyware_tool_keyword = /\\RemotePCPrinter\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string75_RemotePC_greyware_tool_keyword = /\\RemotePCPrinter\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string76_RemotePC_greyware_tool_keyword = /\\RemotePCPrinter\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -12767,11 +12916,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string81_RemotePC_greyware_tool_keyword = /\\RemotePCProxys\.dat/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string82_RemotePC_greyware_tool_keyword = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string82_RemotePC_greyware_tool_keyword = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string83_RemotePC_greyware_tool_keyword = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -12803,11 +12952,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string93_RemotePC_greyware_tool_keyword = /\\RemotePCUDE\.inf/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string94_RemotePC_greyware_tool_keyword = /\\RemotePCUDE\.sys/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string94_RemotePC_greyware_tool_keyword = /\\RemotePCUDE\.sys/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string95_RemotePC_greyware_tool_keyword = /\\RemotePCUDE\.sys/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -12821,29 +12970,29 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string99_RemotePC_greyware_tool_keyword = /\\RemotePCUIA\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string100_RemotePC_greyware_tool_keyword = /\\remotepcuiu\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string101_RemotePC_greyware_tool_keyword = /\\RemotePCUIU\.exe/ nocase ascii wide
+        $string100_RemotePC_greyware_tool_keyword = /\\RemotePCUIU\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string101_RemotePC_greyware_tool_keyword = /\\remotepcuiu\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string102_RemotePC_greyware_tool_keyword = /\\RemotePCViewer\.msi/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string103_RemotePC_greyware_tool_keyword = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string103_RemotePC_greyware_tool_keyword = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string104_RemotePC_greyware_tool_keyword = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string105_RemotePC_greyware_tool_keyword = /\\RpcApp\\RPCCodecEngine\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string106_RemotePC_greyware_tool_keyword = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string106_RemotePC_greyware_tool_keyword = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string107_RemotePC_greyware_tool_keyword = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -12857,11 +13006,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string111_RemotePC_greyware_tool_keyword = /\\RPCAttendedAdmin\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string112_RemotePC_greyware_tool_keyword = /\\RPCCertificate\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string112_RemotePC_greyware_tool_keyword = /\\RPCCertificate\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string113_RemotePC_greyware_tool_keyword = /\\RPCCertificate\.log/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -12878,23 +13027,23 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string118_RemotePC_greyware_tool_keyword = /\\RPCCoreViewerL\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string119_RemotePC_greyware_tool_keyword = /\\RpcDND_Console\.exe/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string120_RemotePC_greyware_tool_keyword = /\\RpcDND_Console\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string121_RemotePC_greyware_tool_keyword = /\\rpcdownloader\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string122_RemotePC_greyware_tool_keyword = /\\RPCDownloader\.exe/ nocase ascii wide
+        $string121_RemotePC_greyware_tool_keyword = /\\RPCDownloader\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
+        $string122_RemotePC_greyware_tool_keyword = /\\rpcdownloader\.exe/ nocase ascii wide
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string123_RemotePC_greyware_tool_keyword = /\\RPCDownloaderLogFile\.txt/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string124_RemotePC_greyware_tool_keyword = /\\RPCDownloaderLogFile\.txt/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -12902,11 +13051,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string126_RemotePC_greyware_tool_keyword = /\\RPCFirewallAttended\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string127_RemotePC_greyware_tool_keyword = /\\RPCFireWallRule\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string127_RemotePC_greyware_tool_keyword = /\\RPCFireWallRule\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string128_RemotePC_greyware_tool_keyword = /\\RPCFireWallRule\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -12953,53 +13102,53 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string143_RemotePC_greyware_tool_keyword = /\\RPCPerformanceService\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string144_RemotePC_greyware_tool_keyword = /\\RPCPerformanceService\.log/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string145_RemotePC_greyware_tool_keyword = /\\RPCPerformanceService\.log/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string146_RemotePC_greyware_tool_keyword = /\\rpcperfviewer\.exe/ nocase ascii wide
+        $string145_RemotePC_greyware_tool_keyword = /\\RPCPerformanceService\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string147_RemotePC_greyware_tool_keyword = /\\RPCPerfViewer\.exe/ nocase ascii wide
+        $string146_RemotePC_greyware_tool_keyword = /\\RPCPerfViewer\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string147_RemotePC_greyware_tool_keyword = /\\rpcperfviewer\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string148_RemotePC_greyware_tool_keyword = /\\RPCPerfViewer\.log/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string149_RemotePC_greyware_tool_keyword = /\\RPCPing\.txt/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string150_RemotePC_greyware_tool_keyword = /\\RPCPreUninstall\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string150_RemotePC_greyware_tool_keyword = /\\RPCPreUninstall\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string151_RemotePC_greyware_tool_keyword = /\\RPCPreUninstall\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string152_RemotePC_greyware_tool_keyword = /\\RPCPrinterDownloader\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string153_RemotePC_greyware_tool_keyword = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string154_RemotePC_greyware_tool_keyword = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string155_RemotePC_greyware_tool_keyword = /\\RPCProxyLatency\.exe/ nocase ascii wide
+        $string154_RemotePC_greyware_tool_keyword = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string155_RemotePC_greyware_tool_keyword = /\\RPCProxyLatency\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string156_RemotePC_greyware_tool_keyword = /\\RPCProxyLatency\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string157_RemotePC_greyware_tool_keyword = /\\RPCProxyLatencyAttended\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string158_RemotePC_greyware_tool_keyword = /\\RPCSettings\.ini/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string158_RemotePC_greyware_tool_keyword = /\\RPCSettings\.ini/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string159_RemotePC_greyware_tool_keyword = /\\RPCSettings\.ini/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -13031,14 +13180,14 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string169_RemotePC_greyware_tool_keyword = /\\TransferServer\.exe\.config/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string170_RemotePC_greyware_tool_keyword = /\\viewerhostkeypopup\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string171_RemotePC_greyware_tool_keyword = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string170_RemotePC_greyware_tool_keyword = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string171_RemotePC_greyware_tool_keyword = /\\viewerhostkeypopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string172_RemotePC_greyware_tool_keyword = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -13046,11 +13195,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string174_RemotePC_greyware_tool_keyword = /AppData\\Local\\Temp\\RemotePC\sAttended/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string175_RemotePC_greyware_tool_keyword = /download\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string175_RemotePC_greyware_tool_keyword = /download\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string176_RemotePC_greyware_tool_keyword = /download\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -13106,11 +13255,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string194_RemotePC_greyware_tool_keyword = /RemotePCCopyPaste\.txt/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string195_RemotePC_greyware_tool_keyword = /RemotePCDesktop\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string195_RemotePC_greyware_tool_keyword = /RemotePCDesktop\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string196_RemotePC_greyware_tool_keyword = /RemotePCDesktop\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -13160,11 +13309,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string212_RemotePC_greyware_tool_keyword = /RemotePCSuite\.Model\.dll/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string213_RemotePC_greyware_tool_keyword = /RemotePCSuite\.Service\.dll/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string213_RemotePC_greyware_tool_keyword = /RemotePCSuite\.Service\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string214_RemotePC_greyware_tool_keyword = /RemotePCSuite\.Service\.dll/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -13259,11 +13408,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string245_RemotePC_greyware_tool_keyword = /StartRPCPerformanceServiceOnStart/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string246_RemotePC_greyware_tool_keyword = /static\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string246_RemotePC_greyware_tool_keyword = /static\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string247_RemotePC_greyware_tool_keyword = /static\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -13271,11 +13420,11 @@ rule RemotePC_greyware_tool_keyword
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string249_RemotePC_greyware_tool_keyword = /viewerhostkeypopup\.exe\s/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string250_RemotePC_greyware_tool_keyword = /web1\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string250_RemotePC_greyware_tool_keyword = /web1\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string251_RemotePC_greyware_tool_keyword = /web1\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -13552,6 +13701,15 @@ rule ren_greyware_tool_keyword
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
         $string1_ren_greyware_tool_keyword = /ren\sC\:\\Windows\\System32\\amsi\.dll\s.{0,1000}\.dll/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string2_ren_greyware_tool_keyword = /ren\ssethc\.exe\ssethcbad\.exe/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string3_ren_greyware_tool_keyword = /ren\ssethcold\.exe\ssethc\.exe/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string4_ren_greyware_tool_keyword = /ren\ssethcold\.exe\ssethc\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -16171,6 +16329,12 @@ rule takeown_greyware_tool_keyword
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
         $string2_takeown_greyware_tool_keyword = /takeown\s\/f\sC\:\\Windows\\System32\\amsi\.dll\s\/a/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string3_takeown_greyware_tool_keyword = /takeown\s\/f\sc\:\\windows\\system32\\sethc\.exe/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string4_takeown_greyware_tool_keyword = /takeown\s\/f\sc\:\\windows\\system32\\sethcold\.exe/ nocase ascii wide
 
     condition:
         any of them

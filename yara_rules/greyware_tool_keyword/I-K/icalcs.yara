@@ -71,9 +71,12 @@ rule icalcs
         // Description: malware behavior - modify the permissions on files or directories that match AV name
         // Reference: https://www.hybrid-analysis.com/sample/22a2fc907d960e67fe9def8946907fd324f77afce3f2792750f1ddb1de76fc9f/5ed63f715448965c0d232702
         $string21 = /icacls\s.{0,1000}\\SpyHunter.{0,1000}\s\/deny\s\%username\%\:\(OI\)\(CI\)\(F\)/ nocase ascii wide
+        // Description: automated sticky keys backdoor + credentials harvesting
+        // Reference: https://github.com/l3m0n/WinPirate
+        $string22 = /icacls\sc\:\\windows\\system32\\sethc\.exe\s/ nocase ascii wide
         // Description: Spartacus DLL/COM Hijacking Toolkit
         // Reference: https://www.pavel.gr/blog/neutralising-amsi-system-wide-as-an-admin
-        $string22 = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
+        $string23 = /icacls\.exe\sC\:\\Windows\\System32\\amsi\.dll\s\/grant\sadministrators\:F/ nocase ascii wide
 
     condition:
         any of them

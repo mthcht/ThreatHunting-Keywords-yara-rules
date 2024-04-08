@@ -47,26 +47,26 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string13 = /\"RemotePCAttendedService\"/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string14 = /\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string14 = /\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string15 = /\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string16 = /\/AttendedUDP\.zip/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string17 = /\/remotepc\.deb/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string18 = /\/remotepc\.deb/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string19 = /\/RemotePC\.exe/ nocase ascii wide
+        $string18 = /\/remotepc\.deb/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string19 = /\/RemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string20 = /\/RemotePC\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -155,26 +155,26 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string49 = /\\RemotePC\sPerformance\sHost\\/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string50 = /\\RemotePC\.Common\.dll/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string51 = /\\RemotePC\.Common\.dll/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string52 = /\\RemotePC\.exe/ nocase ascii wide
+        $string51 = /\\RemotePC\.Common\.dll/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string52 = /\\RemotePC\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string53 = /\\RemotePC\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string54 = /\\RemotePC\.lnk/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string55 = /\\RemotePC\.tmp/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string55 = /\\RemotePC\.tmp/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string56 = /\\RemotePC\.tmp/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -188,11 +188,11 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string60 = /\\RemotePCDDriver\.cat/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string61 = /\\RemotePCDDriver\.inf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string61 = /\\RemotePCDDriver\.inf/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string62 = /\\RemotePCDDriver\.inf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -221,20 +221,20 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string71 = /\\RemotePCModules\.log/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string72 = /\\RemotePCPDF\.conf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string72 = /\\RemotePCPDF\.conf/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string73 = /\\RemotePCPDF\.conf/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string74 = /\\RemotePCPerformancePlugins\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string75 = /\\RemotePCPrinter\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string75 = /\\RemotePCPrinter\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string76 = /\\RemotePCPrinter\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -251,11 +251,11 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string81 = /\\RemotePCProxys\.dat/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string82 = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string82 = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string83 = /\\RemotePCPS5UI\.DLL/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -287,11 +287,11 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string93 = /\\RemotePCUDE\.inf/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string94 = /\\RemotePCUDE\.sys/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string94 = /\\RemotePCUDE\.sys/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string95 = /\\RemotePCUDE\.sys/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -305,29 +305,29 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string99 = /\\RemotePCUIA\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string100 = /\\remotepcuiu\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string101 = /\\RemotePCUIU\.exe/ nocase ascii wide
+        $string100 = /\\RemotePCUIU\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string101 = /\\remotepcuiu\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string102 = /\\RemotePCViewer\.msi/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string103 = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string103 = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string104 = /\\RpcAccessPermissionNotifier\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string105 = /\\RpcApp\\RPCCodecEngine\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string106 = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string106 = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string107 = /\\RpcApp\\Tools\\Chat\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -341,11 +341,11 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string111 = /\\RPCAttendedAdmin\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string112 = /\\RPCCertificate\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string112 = /\\RPCCertificate\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string113 = /\\RPCCertificate\.log/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -362,23 +362,23 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string118 = /\\RPCCoreViewerL\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string119 = /\\RpcDND_Console\.exe/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string120 = /\\RpcDND_Console\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string121 = /\\rpcdownloader\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string122 = /\\RPCDownloader\.exe/ nocase ascii wide
+        $string121 = /\\RPCDownloader\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
+        $string122 = /\\rpcdownloader\.exe/ nocase ascii wide
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string123 = /\\RPCDownloaderLogFile\.txt/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string124 = /\\RPCDownloaderLogFile\.txt/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -386,11 +386,11 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string126 = /\\RPCFirewallAttended\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string127 = /\\RPCFireWallRule\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string127 = /\\RPCFireWallRule\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string128 = /\\RPCFireWallRule\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
@@ -437,53 +437,53 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string143 = /\\RPCPerformanceService\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string144 = /\\RPCPerformanceService\.log/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string145 = /\\RPCPerformanceService\.log/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string146 = /\\rpcperfviewer\.exe/ nocase ascii wide
+        $string145 = /\\RPCPerformanceService\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
-        $string147 = /\\RPCPerfViewer\.exe/ nocase ascii wide
+        $string146 = /\\RPCPerfViewer\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string147 = /\\rpcperfviewer\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string148 = /\\RPCPerfViewer\.log/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string149 = /\\RPCPing\.txt/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string150 = /\\RPCPreUninstall\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string150 = /\\RPCPreUninstall\.log/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string151 = /\\RPCPreUninstall\.log/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string152 = /\\RPCPrinterDownloader\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
+        // Description: RemotePC Remote administration tool
+        // Reference: https://remotepc.com/
         $string153 = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
-        // Description: RemotePC Remote administration tool
-        // Reference: https://remotepc.com/
-        $string154 = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
-        $string155 = /\\RPCProxyLatency\.exe/ nocase ascii wide
+        $string154 = /\\RPCPrinterDownloader\.txt/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string155 = /\\RPCProxyLatency\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string156 = /\\RPCProxyLatency\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string157 = /\\RPCProxyLatencyAttended\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string158 = /\\RPCSettings\.ini/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string158 = /\\RPCSettings\.ini/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string159 = /\\RPCSettings\.ini/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -515,14 +515,14 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string169 = /\\TransferServer\.exe\.config/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string170 = /\\viewerhostkeypopup\.exe/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string171 = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string170 = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
+        $string171 = /\\viewerhostkeypopup\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string172 = /\\ViewerHostKeyPopup\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -530,11 +530,11 @@ rule RemotePC
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
         $string174 = /AppData\\Local\\Temp\\RemotePC\sAttended/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string175 = /download\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string175 = /download\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string176 = /download\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -590,11 +590,11 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string194 = /RemotePCCopyPaste\.txt/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string195 = /RemotePCDesktop\.exe/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string195 = /RemotePCDesktop\.exe/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string196 = /RemotePCDesktop\.exe/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -644,11 +644,11 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string212 = /RemotePCSuite\.Model\.dll/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string213 = /RemotePCSuite\.Service\.dll/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string213 = /RemotePCSuite\.Service\.dll/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string214 = /RemotePCSuite\.Service\.dll/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -743,11 +743,11 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string245 = /StartRPCPerformanceServiceOnStart/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string246 = /static\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string246 = /static\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string247 = /static\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
@@ -755,11 +755,11 @@ rule RemotePC
         // Description: RemotePC RMM tool - abused by attackers
         // Reference: https://www.remotedesktop.com/
         $string249 = /viewerhostkeypopup\.exe\s/ nocase ascii wide
-        // Description: RemotePC RMM tool - abused by attackers
-        // Reference: https://www.remotedesktop.com/
-        $string250 = /web1\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/
+        $string250 = /web1\.remotepc\.com/ nocase ascii wide
+        // Description: RemotePC RMM tool - abused by attackers
+        // Reference: https://www.remotedesktop.com/
         $string251 = /web1\.remotepc\.com/ nocase ascii wide
         // Description: RemotePC Remote administration tool
         // Reference: https://remotepc.com/

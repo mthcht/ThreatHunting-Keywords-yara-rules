@@ -19,16 +19,16 @@ rule RDPassSpray
         $string3 = /RDPassSpray\.csv/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string4 = /RDPassSpray\.py/ nocase ascii wide
+        $string4 = /RDPassSpray\-master/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string5 = /RDPassSpray\-master/ nocase ascii wide
+        $string5 = /xFreed0m\/RDPassSpray/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string6 = /xFreed0m\/RDPassSpray/ nocase ascii wide
+        $string6 = /xfreerdp\s\/v.{0,1000}SOCtest.{0,1000}AllLegitHere/ nocase ascii wide
         // Description: Python3 tool to perform password spraying using RDP
         // Reference: https://github.com/xFreed0m/RDPassSpray
-        $string7 = /xfreerdp\s\/v.{0,1000}SOCtest.{0,1000}AllLegitHere/ nocase ascii wide
+        $string7 = /d/ nocase ascii wide
 
     condition:
         any of them

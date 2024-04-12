@@ -82,25 +82,28 @@ rule ruler
         $string24 = /http\:\/\/212\.111\.43\.206\:9090\/pk\.html/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string25 = /ruler\-linux64/ nocase ascii wide
+        $string25 = /ruler\s\-\-insecure\s/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string26 = /ruler\-linux86/ nocase ascii wide
+        $string26 = /ruler\-linux64/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string27 = /ruler\-osx64/ nocase ascii wide
+        $string27 = /ruler\-linux86/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string28 = /ruler\-win64\.exe/ nocase ascii wide
+        $string28 = /ruler\-osx64/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string29 = /ruler\-win86\.exe/ nocase ascii wide
+        $string29 = /ruler\-win64\.exe/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string30 = /sensepost\/ruler/ nocase ascii wide
+        $string30 = /ruler\-win86\.exe/ nocase ascii wide
         // Description: A tool to abuse Exchange services
         // Reference: https://github.com/sensepost/ruler
-        $string31 = /UserPassBruteForce/ nocase ascii wide
+        $string31 = /sensepost\/ruler/ nocase ascii wide
+        // Description: A tool to abuse Exchange services
+        // Reference: https://github.com/sensepost/ruler
+        $string32 = /UserPassBruteForce/ nocase ascii wide
 
     condition:
         any of them

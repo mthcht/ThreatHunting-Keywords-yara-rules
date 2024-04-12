@@ -8,12 +8,57 @@ rule DomainPasswordSpray
         rule_category = "offensive_tool_keyword"
 
     strings:
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string1 = /\s\-UserList\s.{0,1000}\s\-Domain\s.{0,1000}\s\-PasswordList\s.{0,1000}\s\-OutFile\s/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string2 = /\/DomainPasswordSpray\.git/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string3 = /\\DomainPasswordSpray\\/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string4 = /\\DomainPasswordSpray\-master/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string5 = /\\sprayed\-creds\.txt/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string6 = /\\valid\-creds\.txt/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string7 = /\]\sAny\spasswords\sthat\swere\ssuccessfully\ssprayed\shave\sbeen\soutput\sto\s/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string8 = /\]\sPassword\sspraying\shas\sbegun\swith\s/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string9 = /\]\sPassword\sspraying\sis\scomplete/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string10 = /433d59580b95a3e3b82364729aac65643385eb4500c46eae2aab1c0567df03e6/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string11 = /Cancelling\sthe\spassword\sspray\./ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string12 = /dafthack\/DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string1 = /DomainPasswordSpray/ nocase ascii wide
+        $string13 = /DomainPasswordSpray/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string14 = /DomainPasswordSpray\.ps1/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string15 = /Get\-DomainUserList\s\-Domain\s.{0,1000}\s\-RemoveDisabled\s/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string16 = /Invoke\-DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string2 = /PasswordSpray\s/ nocase ascii wide
+        $string17 = /PasswordSpray\s/ nocase ascii wide
 
     condition:
         any of them

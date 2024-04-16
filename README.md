@@ -1,5 +1,7 @@
 # ThreatHunting-Keywords-yara-rules
 
+![B9lGW1697885670](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/98dfefe9-f915-4dc7-bb72-d8a9118cf0d8)
+
 All the detection patterns from the [threathunting-keywords](https://github.com/mthcht/ThreatHunting-Keywords) project are automatically organized in yara rules for each tool and keyword type.
 - 🛠️ **offensive tool keyword**: These keywords relate to offensive tools or exhibit high confidence of malicious intent. It's crucial that these terms are relevant and reliable in detecting potential threats (low false positive rate).
 - 🛠️ **greyware tool keyword**: Keywords in this category correspond to 'legitimate' tools that are abused by malicious actors. As these tools also have legitimate uses, the potential for false positives is inherently higher. It's important to interpret these results with the understanding that not all detections may signify malicious activity

@@ -9,20 +9,62 @@ rule ngrok
 
     strings:
         // Description: ngrok - abused by attackers for C2 usage
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1 = /\/ngrok\.exe/ nocase ascii wide
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string1 = /\.ngrok\.me/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2 = /\\ngrok\.exe/ nocase ascii wide
+        $string2 = /\/ngrok\.exe/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string3 = /\/ngrok\.git/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string4 = /\/ngrok\.go/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string5 = /\/ngrok\.log/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string6 = /\/ngrokd\.go/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string7 = /\/ngrokroot\.crt/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string3 = /LHOST\=0\.tcp\.ngrok\.io/ nocase ascii wide
+        $string8 = /\\ngrok\.exe/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string9 = /\\ngrok\.go/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string10 = /\\ngrok\.log/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string11 = /\\ngrokd\.go/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string12 = /6abfc342f0a659066c8b42999510ccc3592b499569c2e7af37470a445a2e3560/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string13 = /fe9dd722a085bce94fe2403f8d02e20becf0f0faa019d0789fadf35b66611a46/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string14 = /inconshreveable\/ngrok/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4 = /ngrok\stcp\s/ nocase ascii wide
+        $string15 = /LHOST\=0\.tcp\.ngrok\.io/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string16 = /Mozilla\/5\.0\s\(compatible\;\sngrok\)/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string5 = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
+        $string17 = /ngrok\stcp\s/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string18 = /ngrokd\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string19 = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
 
     condition:
         any of them

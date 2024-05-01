@@ -1135,16 +1135,31 @@ rule adexplorer_greyware_tool_keyword
     strings:
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string1_adexplorer_greyware_tool_keyword = /adexplorer\.exe/ nocase ascii wide
+        $string1_adexplorer_greyware_tool_keyword = /\\Software\\MSDART\\Active\sDirectory\sExplorer/ nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string2_adexplorer_greyware_tool_keyword = /adexplorer\.zip/ nocase ascii wide
+        $string2_adexplorer_greyware_tool_keyword = /\\Software\\Sysinternals\\Active\sDirectory\sExplorer/ nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string3_adexplorer_greyware_tool_keyword = /adexplorer64\.exe/ nocase ascii wide
+        $string3_adexplorer_greyware_tool_keyword = /\<Data\sName\=\'OriginalFileName\'\>AdExp\</ nocase ascii wide
         // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
-        $string4_adexplorer_greyware_tool_keyword = /adexplorer64a\.exe/ nocase ascii wide
+        $string4_adexplorer_greyware_tool_keyword = /\>Active\sDirectory\sEditor\</ nocase ascii wide
+        // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
+        $string5_adexplorer_greyware_tool_keyword = /\>Sysinternals\sADExplorer\</ nocase ascii wide
+        // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
+        $string6_adexplorer_greyware_tool_keyword = /adexplorer\.exe/ nocase ascii wide
+        // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
+        $string7_adexplorer_greyware_tool_keyword = /adexplorer\.zip/ nocase ascii wide
+        // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
+        $string8_adexplorer_greyware_tool_keyword = /adexplorer64\.exe/ nocase ascii wide
+        // Description: Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database. It can be abused by malicious actors
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer
+        $string9_adexplorer_greyware_tool_keyword = /adexplorer64a\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -1705,19 +1720,16 @@ rule Ammyy_Admin_greyware_tool_keyword
         $string11_Ammyy_Admin_greyware_tool_keyword = /Ammyy\sLLC/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string12_Ammyy_Admin_greyware_tool_keyword = /PUA\:Win32\/AmmyyAdmin/ nocase ascii wide
+        $string12_Ammyy_Admin_greyware_tool_keyword = /rl\.ammyy\.com\// nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string13_Ammyy_Admin_greyware_tool_keyword = /rl\.ammyy\.com\// nocase ascii wide
+        $string13_Ammyy_Admin_greyware_tool_keyword = /SPR\/Ammyy\.R/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string14_Ammyy_Admin_greyware_tool_keyword = /SPR\/Ammyy\.R/ nocase ascii wide
+        $string14_Ammyy_Admin_greyware_tool_keyword = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
         // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
         // Reference: https://www.ammyy.com
-        $string15_Ammyy_Admin_greyware_tool_keyword = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
-        // Description: Ammyy Admin is a remote desktop software application abudsed by attackers
-        // Reference: https://www.ammyy.com
-        $string16_Ammyy_Admin_greyware_tool_keyword = /www\.ammyy\.com\/files\/v/ nocase ascii wide
+        $string15_Ammyy_Admin_greyware_tool_keyword = /www\.ammyy\.com\/files\/v/ nocase ascii wide
 
     condition:
         any of them
@@ -2840,6 +2852,127 @@ rule bore_greyware_tool_keyword
 }
 
 
+rule boringproxy_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'boringproxy' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "boringproxy"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string1_boringproxy_greyware_tool_keyword = /\sboringproxy\-client\.service/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string2_boringproxy_greyware_tool_keyword = /\sboringproxy\-server\.service/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string3_boringproxy_greyware_tool_keyword = /\s\-m\sboringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string4_boringproxy_greyware_tool_keyword = /\.\/boringproxy\sserver/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string5_boringproxy_greyware_tool_keyword = /\/bin\/boringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string6_boringproxy_greyware_tool_keyword = /\/boringproxy\.git/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string7_boringproxy_greyware_tool_keyword = /\/boringproxy\-client\.service/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string8_boringproxy_greyware_tool_keyword = /\/boringproxy\-server\.service/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string9_boringproxy_greyware_tool_keyword = /\/home\/boringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string10_boringproxy_greyware_tool_keyword = /\/tmp\/boringproxy\-client/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string11_boringproxy_greyware_tool_keyword = /23d61c88520628dc2ab58b25e556df92640327ca4f946cd8ea30eb813897d107/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string12_boringproxy_greyware_tool_keyword = /34362de1defeb018d71e6319afabca362fa4acd69341bfcfb3ce77b6e8c61a6a/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string13_boringproxy_greyware_tool_keyword = /403d4848966e4e5e7859758766269a5340f309c641e71f65fd3cf4b01049b8d9/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string14_boringproxy_greyware_tool_keyword = /47532247f32b7a9f42b0dfe5a1314a674e92deef79eaab647af34507a677d375/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string15_boringproxy_greyware_tool_keyword = /5805e0f064ce3aa72e5a0b4dd00c0bf4150995cb1f1b7b80f2b3a78da78d1d27/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string16_boringproxy_greyware_tool_keyword = /7a778797dd640eb51defe912e8b6872df92241927193106590a2ccb92a5dc926/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string17_boringproxy_greyware_tool_keyword = /828ee46c07c36e54f11e38f01898e3bd215739c28bbcf05606abe00ba0c6c51f/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string18_boringproxy_greyware_tool_keyword = /89bd3a31299f6bbf9be9bcf5f1456c11333590290626f11017079fd84ee58ca1/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string19_boringproxy_greyware_tool_keyword = /9a688243e33a6cddb1bb4807277e352118141e7321385024cbff655a00b7b660/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string20_boringproxy_greyware_tool_keyword = /a262487a6bac019c52f1ada940aa357f0be3c69cf1232a052115e74723a65ade/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string21_boringproxy_greyware_tool_keyword = /b4f3bc92ccedfbb0714c662c8d6a7842e71f1ebb2d8392ec5064b314dd5dede5/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string22_boringproxy_greyware_tool_keyword = /boringproxy\sclient\s\-server\s/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string23_boringproxy_greyware_tool_keyword = /boringproxy\/boringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string24_boringproxy_greyware_tool_keyword = /boringproxy_db\.json/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string25_boringproxy_greyware_tool_keyword = /boringproxy\-client\@default\.service/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string26_boringproxy_greyware_tool_keyword = /chown\sboringproxy\:boringproxy\s/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string27_boringproxy_greyware_tool_keyword = /cmd\/boringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string28_boringproxy_greyware_tool_keyword = /f2915f5a3885391738923ecd18faf840074c65cd2e390e1474a4d84ce315b9ff/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string29_boringproxy_greyware_tool_keyword = /f5b42d933cea4d53aa975039de0cb1053287fac5ce4377d2afb663e26a5d22dd/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string30_boringproxy_greyware_tool_keyword = /groupadd\sboringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string31_boringproxy_greyware_tool_keyword = /https\:\/\/boringproxy\.io\/installation/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string32_boringproxy_greyware_tool_keyword = /pkill\s\-u\sboringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string33_boringproxy_greyware_tool_keyword = /runuser\s\-l\sboringproxy\s/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string34_boringproxy_greyware_tool_keyword = /setcap\scap_net_bind_service\=\+ep\sboringproxy/ nocase ascii wide
+        // Description: Simple tunneling reverse proxy with a fast web UI and auto HTTPS. Designed for self-hosters.
+        // Reference: https://github.com/boringproxy/boringproxy
+        $string35_boringproxy_greyware_tool_keyword = /usermod\s\-a\s\-G\sboringproxy\sboringproxy/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Browsec_VPN_greyware_tool_keyword
 {
     meta:
@@ -3533,6 +3666,149 @@ rule crontab_greyware_tool_keyword
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string1_crontab_greyware_tool_keyword = /crontab.{0,1000}\ssleep\s.{0,1000}ncat\s.{0,1000}\s\-e\s\/bin\/bash.{0,1000}crontab/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule crowbar_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'crowbar' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "crowbar"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string1_crowbar_greyware_tool_keyword = /\/crowbar\.git/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string2_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_darwin_386\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string3_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_darwin_amd64\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string4_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_freebsd_386\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string5_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_freebsd_amd64\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string6_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_freebsd_arm\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string7_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_linux_386\.tar\.gz/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string8_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_linux_amd64\.tar\.gz/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string9_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_linux_arm\.tar\.gz/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string10_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_openbsd_386\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string11_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_openbsd_amd64\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string12_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_windows_386\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string13_crowbar_greyware_tool_keyword = /\/crowbar_1\.0\.0_windows_amd64\.zip/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string14_crowbar_greyware_tool_keyword = /\/etc\/crowbar\// nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string15_crowbar_greyware_tool_keyword = /\/etc\/crowbard\.conf/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string16_crowbar_greyware_tool_keyword = /47e4818c3db3471c950cdb4c4732232bafc584997098c92ada8a0f720e2ad448/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string17_crowbar_greyware_tool_keyword = /4ba042e8f3a3f5cf7e01e64461d27f5733c505b8a0f221fb91ed44e93627cd91/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string18_crowbar_greyware_tool_keyword = /4df132ced0bbdbe4965bea528bb11385426a938fcdec3a2905b92d800c9c8fba/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string19_crowbar_greyware_tool_keyword = /515983df3a9aad4aae1e5e37cdf489686b4d7daed5610a75d75ebba006c4ddc9/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string20_crowbar_greyware_tool_keyword = /602b348fd6e3407423330d761b04dfdcd8094e552c1184db100c07058343f8d4/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string21_crowbar_greyware_tool_keyword = /6510e91b5511a68222bade46531b5d70850559b7da4dadd2fb187015cc811efa/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string22_crowbar_greyware_tool_keyword = /8c39d2ef5bd7cb5c7aae4c5094f50cbd39b2a6c3fe65a049c91f7943f679d6b9/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string23_crowbar_greyware_tool_keyword = /91bc0b2cabb6618b228003f1f7f4467b1867eae3c3f42081ee8c4e30e937e77e/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string24_crowbar_greyware_tool_keyword = /9bfd1f0cb077ba95935c260cf66554142867486a42c8d84920e09dd3c6117ed1/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string25_crowbar_greyware_tool_keyword = /b4bed3b73a07c019ea853ee051e35932c97a1547809697dfa495a00710dec8eb/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string26_crowbar_greyware_tool_keyword = /chown\scrowbar\:crowbar\s/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string27_crowbar_greyware_tool_keyword = /cmd\/crowbard\// nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string28_crowbar_greyware_tool_keyword = /crowbar\-forward\s\-local\=/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string29_crowbar_greyware_tool_keyword = /e4d2ed3af31f30f40f83a73dd6c4dcce275ae8cc85d52c7f30a51bfdb7ebeec2/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string30_crowbar_greyware_tool_keyword = /eb459c0af8c8d7bb91f7c6acc4682f1b2a6add840925bc8a9321c5cc1e2a8137/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string31_crowbar_greyware_tool_keyword = /f154878288857410353e4cabc498941869ffbbd1783f6a1923c6ed92c03dfab6/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string32_crowbar_greyware_tool_keyword = /fc81435479e432562efbbb8ed75a397b565d70593af843bb1ac89628132c7ef7/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string33_crowbar_greyware_tool_keyword = /q3k\/crowbar/ nocase ascii wide
+        // Description: Tunnel TCP over a plain HTTP session
+        // Reference: https://github.com/q3k/crowbar
+        $string34_crowbar_greyware_tool_keyword = /useradd\s\-rm\scrowbar/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule curl_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'curl' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "curl"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: potential suspicious curl command - downloading payload in the temp directory
+        // Reference: https://thedfirreport.com/2024/04/29/from-icedid-to-dagon-locker-ransomware-in-29-days/
+        $string1_curl_greyware_tool_keyword = /cmd\.exe.{0,1000}\s\/c\secho\scurl\shttps\:\/\/.{0,1000}\s\-\-output\s\"\%temp\%.{0,1000}\s\-\-ssl\sno\-revoke\s\-\-insecure\s\-\-location\s\>\s\"\%temp\%/ nocase ascii wide
+        // Description: potential malicious command with curl (|sh)
+        // Reference: https://x.com/CraigHRowland/status/1782938242108837896
+        $string2_curl_greyware_tool_keyword = /curl\shttp\:\/\/.{0,1000}\.png\s\-k\|dd\sskip\=2446\sbs\=1\|sh/ nocase ascii wide
+        // Description: potential malicious command with curl (|sh)
+        // Reference: https://x.com/CraigHRowland/status/1782938242108837896
+        $string3_curl_greyware_tool_keyword = /curl\shttps\:\/\/.{0,1000}\.png\s\-k\|dd\sskip\=2446\sbs\=1\|sh/ nocase ascii wide
 
     condition:
         any of them
@@ -5004,6 +5280,85 @@ rule dsquery_greyware_tool_keyword
 }
 
 
+rule duckdns_org_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'duckdns.org' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "duckdns.org"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string1_duckdns_org_greyware_tool_keyword = /\/DuckDNS\.7z/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string2_duckdns_org_greyware_tool_keyword = /\/DuckDNS\.git/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string3_duckdns_org_greyware_tool_keyword = /\/DuckDNS\.zip\"/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string4_duckdns_org_greyware_tool_keyword = /\/duckdns\/duck\.log/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string5_duckdns_org_greyware_tool_keyword = /\/duckdns\/duck\.sh/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string6_duckdns_org_greyware_tool_keyword = /\/duckdns\-powershell\.git/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string7_duckdns_org_greyware_tool_keyword = /\/opt\/duckdns\// nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string8_duckdns_org_greyware_tool_keyword = /\\DuckDNS\.cfg/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string9_duckdns_org_greyware_tool_keyword = /\\DuckDNS\.csproj/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string10_duckdns_org_greyware_tool_keyword = /\\DuckDNS\.exe/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string11_duckdns_org_greyware_tool_keyword = /\\DuckDNS\.lnk/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string12_duckdns_org_greyware_tool_keyword = /\\DuckDNS\.sln/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string13_duckdns_org_greyware_tool_keyword = /\\Update\-DuckDNS\.ps1/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string14_duckdns_org_greyware_tool_keyword = /4B9C98F6\-AF30\-4280\-873D\-B45C7A7B89EB/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string15_duckdns_org_greyware_tool_keyword = /8a35136501dde420ec5f3e88a7906c8c3d63af06621b47513befe8f09db3ed04/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string16_duckdns_org_greyware_tool_keyword = /ataylor32\/duckdns\-powershell/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string17_duckdns_org_greyware_tool_keyword = /chmod\s700\sduck\.sh/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string18_duckdns_org_greyware_tool_keyword = /https\:\/\/www\.duckdns\.org\/update\?domains\=/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string19_duckdns_org_greyware_tool_keyword = /jzelinskie\/duckdns/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string20_duckdns_org_greyware_tool_keyword = /Sending\supdate\srequest\sto\sDuck\sDNS/ nocase ascii wide
+        // Description: A simple C# DuckDNS updater - free dynamic DNS hosted on AWS - often used by threat actors for contacting C2
+        // Reference: https://www.duckdns.org/install.jsp
+        $string21_duckdns_org_greyware_tool_keyword = /XWolfOverride\/DuckDNS/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule ducktail_greyware_tool_keyword
 {
     meta:
@@ -5462,6 +5817,61 @@ rule export_greyware_tool_keyword
 }
 
 
+rule expose_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'expose' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "expose"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string1_expose_greyware_tool_keyword = /\s\/usr\/local\/bin\/expose/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string2_expose_greyware_tool_keyword = /\/expose\/database\/expose\.db/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string3_expose_greyware_tool_keyword = /\/expose\/raw\/master\/builds\/expose/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string4_expose_greyware_tool_keyword = /\/src\/expose\sserve\s/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string5_expose_greyware_tool_keyword = /beyondcode\/expose/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string6_expose_greyware_tool_keyword = /docker\sbuild\s\-t\sexpose\s/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string7_expose_greyware_tool_keyword = /docker\srun\sexpose\s/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string8_expose_greyware_tool_keyword = /expose\sshare\shttp\:\/\// nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string9_expose_greyware_tool_keyword = /exposeConfigPath\=\/src\/config\/expose\.php/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string10_expose_greyware_tool_keyword = /\'host\'\s\=\>\s\'sharedwithexpose\.com\'/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string11_expose_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:4040\/api\/logs\// nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string12_expose_greyware_tool_keyword = /https\:\/\/expose\.dev\/api\/servers/ nocase ascii wide
+        // Description: tunneling service - written in pure PHP
+        // Reference: https://github.com/beyondcode/expose
+        $string13_expose_greyware_tool_keyword = /https\:\/\/expose\.dev\/register/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule ExpressVPN_greyware_tool_keyword
 {
     meta:
@@ -5563,6 +5973,49 @@ rule file_io_greyware_tool_keyword
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
         $string2_file_io_greyware_tool_keyword = /https\:\/\/file\.io\/\?title\=/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule FileZilla_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'FileZilla' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "FileZilla"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string1_FileZilla_greyware_tool_keyword = /\/FileZilla_.{0,1000}_sponsored\-setup\.exe/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string2_FileZilla_greyware_tool_keyword = /\/FileZilla_Server_.{0,1000}\.deb/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string3_FileZilla_greyware_tool_keyword = /\\FileZilla_.{0,1000}_sponsored\-setup\.exe/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string4_FileZilla_greyware_tool_keyword = /\\FILEZILLA_.{0,1000}_WIN64_SPONSO\-.{0,1000}\.pf/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string5_FileZilla_greyware_tool_keyword = /\\FileZilla_.{0,1000}\-setup\.exe/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string6_FileZilla_greyware_tool_keyword = /\\FileZilla_Server_/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string7_FileZilla_greyware_tool_keyword = /download\.filezilla\-project\.org/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string8_FileZilla_greyware_tool_keyword = /Software\\FileZilla/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string9_FileZilla_greyware_tool_keyword = /Win32\/FileZilla_BundleInstaller/ nocase ascii wide
 
     condition:
         any of them
@@ -7942,6 +8395,157 @@ rule github_greyware_tool_keyword
 }
 
 
+rule go_http_tunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'go-http-tunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "go-http-tunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string1_go_http_tunnel_greyware_tool_keyword = /\stunneld\.service/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string2_go_http_tunnel_greyware_tool_keyword = /\/\.tunneld\/.{0,1000}\.key/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string3_go_http_tunnel_greyware_tool_keyword = /\/go\-http\-tunnel\.git\.git/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string4_go_http_tunnel_greyware_tool_keyword = /\/go\-http\-tunnel\/cmd\// nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string5_go_http_tunnel_greyware_tool_keyword = /\/tunneld\.service/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string6_go_http_tunnel_greyware_tool_keyword = /03cbb2a21105c9aae4fb499ad8fb4898d6c87c7d3a3071eae601bdae8bad19ab/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string7_go_http_tunnel_greyware_tool_keyword = /0a08cac081d32713c5aaa00b04424dcdf2ffcaa7b58620eebc9ee17b5d25ebbf/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string8_go_http_tunnel_greyware_tool_keyword = /0cba4351414f3da3355bc9ab73052e0d36d6f18e513047650dad956fb6344285/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string9_go_http_tunnel_greyware_tool_keyword = /0faad61745a8c559756165ec4bf749c7ee334b815b750dbdc671af2283805739/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string10_go_http_tunnel_greyware_tool_keyword = /1433542e6c771cd59c491558e482ebbc7d40bbaf86190379bb4236067b21d805/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string11_go_http_tunnel_greyware_tool_keyword = /14d18d34c262664246cc1eb46dfe1159fce9b5d0b14d6ba013f08d1d55a6eeb6/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string12_go_http_tunnel_greyware_tool_keyword = /2c183c4c53ddb0419f401cf690f16ccbeefc829f09fafca2a19700665c322cbc/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string13_go_http_tunnel_greyware_tool_keyword = /341e6c79cb6383b166d0f21f77f88735b340195dce8945bf9ff05a3cda1cb9a0/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string14_go_http_tunnel_greyware_tool_keyword = /3daf819f691c66a2216bc047349e5d6ed252aa1393c076cce9f68a1a7bed5b76/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string15_go_http_tunnel_greyware_tool_keyword = /4416b23c351acb1ea86eff2f75926ee7fbb78dea66fe2f01e38e9f81683645e9/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string16_go_http_tunnel_greyware_tool_keyword = /57944ea45f77ef9b4757a95c077b30af638ed72c1399e75356f08cae37a3965f/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string17_go_http_tunnel_greyware_tool_keyword = /5c4247c201d5bfb98cd4021c4cf0dd732c4fa47daeb4c70fcb29f7ddfe1b5760/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string18_go_http_tunnel_greyware_tool_keyword = /616bcf6f1ebc84ce6c2f0469f6c38b08eabef2339dfca03d0782a54ae6cc6024/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string19_go_http_tunnel_greyware_tool_keyword = /6794102a7b3d61dd4344b555ab684f4140d40da9ec0da36b03cd397f1987bb61/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string20_go_http_tunnel_greyware_tool_keyword = /690f31d0d8f473ae1f71a7fbce1e7943d601f6adf2065d22d44162266c88f546/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string21_go_http_tunnel_greyware_tool_keyword = /7f23ac69fa3f519b324bcc33e56272bf1cc9191980bef960a562099844659a3c/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string22_go_http_tunnel_greyware_tool_keyword = /81317db18f63092007326ae6330d704c17d95ff2dfc65fc1922d0f3708ddee6e/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string23_go_http_tunnel_greyware_tool_keyword = /873b15cab88f6d288e02bd71e5cefb1edf0b96dc80a8a0d7d404f4b327c68097/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string24_go_http_tunnel_greyware_tool_keyword = /8eb3e6b0ac776c819158b0127631f860223f5fe80cc7297d01626252562cb866/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string25_go_http_tunnel_greyware_tool_keyword = /8f904a5fd2b5c821121ad0003e3f4021cc5f1c2969d14e64e67ce35721ab6f70/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string26_go_http_tunnel_greyware_tool_keyword = /9684712e7ea18e0e82bbdf8b990173349ac97423ab59b0daa265a222cfbef816/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string27_go_http_tunnel_greyware_tool_keyword = /9dc3c784b09c7e143046fee8b0b96f2b2c92fa95aad96679e0ab79383e20647c/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string28_go_http_tunnel_greyware_tool_keyword = /a11a44666cbdc5c56112cdb109e37c7f4f466f947500efce2192007d553a07f5/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string29_go_http_tunnel_greyware_tool_keyword = /a5dd833c5c1f9ac79705b4fddd9d9e7dde9b25f5bbf79a7dc1c00537f181f47a/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string30_go_http_tunnel_greyware_tool_keyword = /aacf0692bcac39321f5f427164f6807107ae9bc75404a07d009f553710d9bc55/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string31_go_http_tunnel_greyware_tool_keyword = /b3f0715b807f2c31670a389cb430f01423f281d38f44e93d53e5fb2732406173/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string32_go_http_tunnel_greyware_tool_keyword = /bb5f01316e315e4a9039a17dd2358cec0a86cac566638d8ce5e2ce0b5ebc1fbf/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string33_go_http_tunnel_greyware_tool_keyword = /c6b4e0b176b29a3a2bf68e702195cbf72d705f8c6419ac17e7bfd16b18429447/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string34_go_http_tunnel_greyware_tool_keyword = /cbdf3b97f6a72121a00e8f14fd0bbd564aefc6edfde0b9449f1613559678d09f/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string35_go_http_tunnel_greyware_tool_keyword = /cc3badcfbd2bad09f5a4312eabdc50b2d2259cbac5429deb6e53340468c7b7b0/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string36_go_http_tunnel_greyware_tool_keyword = /cde0f088445933eef88c2663bf2684f6e020d30347a7a230658d534c05f4e8d9/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string37_go_http_tunnel_greyware_tool_keyword = /cf418ac948b21bbed8565d6f11419405aa7b25d3c37b8a2b212e85f6aa76d233/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string38_go_http_tunnel_greyware_tool_keyword = /d5e79002815d4d904942d07786fab82492f83912d175804e21c059c00efe3d95/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string39_go_http_tunnel_greyware_tool_keyword = /e7f434888e992b2679e221199354f80eaee1e7c3c546043f37aeefa3fbe252ae/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string40_go_http_tunnel_greyware_tool_keyword = /edb84e2914bb1bd31a213b87aabd387999159093c5c00138cbc8f8f8fdc77fb1/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string41_go_http_tunnel_greyware_tool_keyword = /f0ded25a361ea53de7518a357c03d733d8caf206f7a90a8e3b4d6a29563c9277/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string42_go_http_tunnel_greyware_tool_keyword = /f955157646e94bed38b8e4d6ce6df58489eeb89ebf0d44ffe03b3c4902dc5d4e/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string43_go_http_tunnel_greyware_tool_keyword = /mmatczuk\/go\-http\-tunnel\.git/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string44_go_http_tunnel_greyware_tool_keyword = /tunnel\s\-config\s.{0,1000}tunnel\.yml/ nocase ascii wide
+        // Description: Fast and secure tunnels over HTTP/2
+        // Reference: https://github.com/mmatczuk/go-http-tunnel
+        $string45_go_http_tunnel_greyware_tool_keyword = /tunneld\s\-tlsCrt\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule golang_c2_greyware_tool_keyword
 {
     meta:
@@ -8191,6 +8795,268 @@ rule googleweblight_com_greyware_tool_keyword
         // Description: Open Redirect vulnerability being exploited by threat actors in Google Web Light
         // Reference: https://x.com/1ZRR4H/status/1723062039680000255
         $string1_googleweblight_com_greyware_tool_keyword = /https\:\/\/googleweblight\.com\/i\?u\=.{0,1000}ipfs\..{0,1000}\.html/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule gost_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'gost' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "gost"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string1_gost_greyware_tool_keyword = /\sgost\.tar\.gz/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string2_gost_greyware_tool_keyword = /\sgost\/cmd\/gost/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string3_gost_greyware_tool_keyword = /\"gost\sinstallation\scompleted\!\"/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string4_gost_greyware_tool_keyword = /\/go\-gost\/core\// nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string5_gost_greyware_tool_keyword = /\/gost\.tar\.gz/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string6_gost_greyware_tool_keyword = /\/gost\/raw\/master\/install\.sh/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string7_gost_greyware_tool_keyword = /\\gost\.tar\.gz/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string8_gost_greyware_tool_keyword = /0276ec0ea830a61275437a98b81224b95712ecac5a7b9850bcbf2444ff46e47a/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string9_gost_greyware_tool_keyword = /047ab1af44f368297bf21b302a2548a556ca4e6c6b721940954e88f43d1cfba5/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string10_gost_greyware_tool_keyword = /10168a998e30a4f0d0d175f1aa2d5a533df3d69cf206f04f7d2686afdbe0949f/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string11_gost_greyware_tool_keyword = /110ec720cf51d05c3a07ee73534f4c949644920a4760f1ceb8fc09e80172aaf0/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string12_gost_greyware_tool_keyword = /1ff7731d1b7af7110f27796e0fecb551cb5067030aa7d87e333d46f3f57f4214/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string13_gost_greyware_tool_keyword = /254cc9b46f64f1ae8150c65632ce0e749dd894b20db9d39313e8030477152add/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string14_gost_greyware_tool_keyword = /25dec6e071fbf271817fa34a76abe61e41e2cb27cc52f25d78488340ccedd190/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string15_gost_greyware_tool_keyword = /2c344a29ed1d2107554b83137bdcd87db445be709b089520282945d21c755189/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string16_gost_greyware_tool_keyword = /2e8bd529f1452a300c60d13e57b46c35d1c3c2f8b42a4b03ce82fbf78211af49/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string17_gost_greyware_tool_keyword = /2f6d418d6b2a974433581cdb959f6b0f8f305fa48c00ad44dc19a9d7504a4c5f/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string18_gost_greyware_tool_keyword = /39f119574d66d00a12ab7ed202bca6e41204bf838fb5f58ca170bdf76beaa445/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string19_gost_greyware_tool_keyword = /4363de01f1dfd6b393f889bb916128df95a02bc1df2c294e28a48bd197a685f2/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string20_gost_greyware_tool_keyword = /4549122ba17882aaa89999d170ca7cfe4d2f4d9cc9b6c57961abf276576c9d42/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string21_gost_greyware_tool_keyword = /49e7c86340e6930402911320150a14e5aad183efafb8b56747d97a8a5469a187/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string22_gost_greyware_tool_keyword = /4d7fa7fbfca88ec9adb9e227f4049a544acd312dd5c3a4d4f936e053497b7d65/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string23_gost_greyware_tool_keyword = /58553520765d913785914cb41570a76668b07e43c40d313841f7c03fddc899cd/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string24_gost_greyware_tool_keyword = /5babcba4005adce8f620995f2a56e5d6bdcf6695f52a539bdaeaff889d47e8b5/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string25_gost_greyware_tool_keyword = /5bd56a5da478c542e8265d5fd15fe8ba90f720bbb6a2649ea6c4ddd5acb77d85/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string26_gost_greyware_tool_keyword = /60cd72287033962ecbbe8c27c7cb84dd7aeabd183a338ca4195a5b5275138076/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string27_gost_greyware_tool_keyword = /62d7b075905119d8ab637df0f4348aca30ede58adacfe6d05cd3951db128ba91/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string28_gost_greyware_tool_keyword = /6419610ef4957f7d62fdd16b22764a68ff694a612449195b932d169f523ffe20/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string29_gost_greyware_tool_keyword = /681f20b796bc6b59048b2eecf7a05884cfb1ea2464a14364f0769a10077bfb5b/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string30_gost_greyware_tool_keyword = /68715639afd1f47089068f9de486068471fce5fca4a07aef888f960b73b09d56/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string31_gost_greyware_tool_keyword = /68b38ba64f0639f6c5b7c95e2d19676574cf9cfb2034748c46d89811546f3d88/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string32_gost_greyware_tool_keyword = /6eba09a7e386379e173bea81ca5de348bef4c0f024d2efa963ab8d3bb8b37a8e/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string33_gost_greyware_tool_keyword = /7455b514720dacb5dadbf5c3cc1a69614ded8375ebe23daf0778441af6da907d/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string34_gost_greyware_tool_keyword = /79c98d35d02ac92c72aadf48a1ca55e2b7afe5a41ad70e5cf0467c50a84dce22/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string35_gost_greyware_tool_keyword = /7b23bad83e3921e1d9e528b69b7d643b646231e5b736f8588698326c527e31a7/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string36_gost_greyware_tool_keyword = /7cbcaba89fb2dfe22cbeeaf2426379560f015d49f4dad0caf2cd732146d96b84/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string37_gost_greyware_tool_keyword = /7f27f414ebe84f189adc68a963c7735d4cef34307a19cd0c21243ec202f9f456/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string38_gost_greyware_tool_keyword = /8579d38432b7652643a84d0fd7edbc78668ca3f91ddc1d78ee8840a7a35fa9b7/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string39_gost_greyware_tool_keyword = /8768fb4f5c0829e3ed696af614ff761ca72b5538bef2073464f57eadc76f5ed4/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string40_gost_greyware_tool_keyword = /87a25f52f233c1176eeeab554a2941f1738a9e86669fb7febe8155d15ddf5530/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string41_gost_greyware_tool_keyword = /8a1d6e1d9a8494a491c1f2fef92f0243f4d39406fa159b4ecb45428148fcbeb4/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string42_gost_greyware_tool_keyword = /8d59755171b977af9ec836990ee55a4d1f17873d7773131267b774b14d121fff/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string43_gost_greyware_tool_keyword = /8e3a219286ad2715712ada61697d622cf5eb597a05bab126546101cc48e0991b/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string44_gost_greyware_tool_keyword = /929081341e76319dc5209b58611cc5304b940bed099b2b63589534d1963afab7/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string45_gost_greyware_tool_keyword = /92d2460414d1b79ae54466442eae7628bbb343c70948e8c2f9afa4d158a0f3ef/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string46_gost_greyware_tool_keyword = /956c78246b4873877ac8e1a0ee7eed3ff7f9068826696f40f8a0577c55c8f184/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string47_gost_greyware_tool_keyword = /96c82ea18a4d63d57c4ae10b16e9761fd7a29f92e0704850783768f561e9b85a/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string48_gost_greyware_tool_keyword = /96d4cb5937b2b5a38dbe2721ea427ca64ffcd745ecaace820fb4daa1c322f696/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string49_gost_greyware_tool_keyword = /96e1cc96595bc8486dfef57f78f680c49e7b19d12649d43fc6501d7a599b4657/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string50_gost_greyware_tool_keyword = /98b39f9470d2ed0cbf458c04e94dc5762c8b72cf4fb51ba2bf641fdc4462668e/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string51_gost_greyware_tool_keyword = /a10f6df2968d892ca277eeddb104dce0bda26aaf47b6a29fa37f6ef7b9b4b330/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string52_gost_greyware_tool_keyword = /a49b64c34c17e2f94a789517960f3438cab8b92f8e21560320be9ef68065c9fa/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string53_gost_greyware_tool_keyword = /a5c16b96d4df537cdc307206b955f7808b58fc2fb425a327bcd6e0bccf95c1ba/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string54_gost_greyware_tool_keyword = /a7a2808a64b5ee630b2ce13597623de03ca5d7a27870aa72f3e0f8156f20d10c/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string55_gost_greyware_tool_keyword = /a91962e86f2b0b0a3a75a097ad056c5595dce4a66a204d15507d03da6eec699c/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string56_gost_greyware_tool_keyword = /b19a810320e3d27743080c6732d3ee8caae0c8b747df6001b81b0a1fb226665b/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string57_gost_greyware_tool_keyword = /b6f5c4dc870fdc69d0309c5d5a2a5d48a924a5c14a62b8a13228f071749739b5/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string58_gost_greyware_tool_keyword = /b7e45744a48f5a5db2177b70a0c6741909343d2393045204ebf6c740c50e1de1/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string59_gost_greyware_tool_keyword = /c3d703c8e406f542bb9688a3e31c8164c8a34ff99785e256b2f7da8ae73a85cf/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string60_gost_greyware_tool_keyword = /cd84694d8b390661c5295f76a523381daaf840c0b3ef16cf02b11086ad8d4028/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string61_gost_greyware_tool_keyword = /ce360e6f1b4a634b603f8ac114e938c057bb1cda5141a053d83e16bcfe08e373/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string62_gost_greyware_tool_keyword = /ce523561aafdc54a24581460262853a579dfeda9653fb88bec95e3752a370118/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string63_gost_greyware_tool_keyword = /d12a87b47c9213d80b8dfe9626702c953ebbfa92320b01f5f8b42a520a232537/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string64_gost_greyware_tool_keyword = /d5257c716525f4cc42778285074e6425b22a272333d08cc75fa27334025b4c90/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string65_gost_greyware_tool_keyword = /e0955f1c4b9c89c926928109a080924c6400136bc2bce8d673ebf42c1d54d510/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string66_gost_greyware_tool_keyword = /e2d664ab3604b082e17dbd728c89bfdb82b5616f92defbe0cec24d94674c5818/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string67_gost_greyware_tool_keyword = /e40c9f18d7f47c131876d6ef9a29385802e0d006e75ead9906a980c751fbee16/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string68_gost_greyware_tool_keyword = /e5350eb7c85f40bd5eeb5df8b3cd58805d39b2469a1c1c9817957fbab77e9427/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string69_gost_greyware_tool_keyword = /e59ee7929f1c67c3aae6aa1f31299e0403430e7f25aecbcc572e19db79451d96/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string70_gost_greyware_tool_keyword = /e671c90f050cc03b06a1c976db31a1f2f1a498730c63bb2a29d92c9e47af5f66/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string71_gost_greyware_tool_keyword = /e7ff1472a7294417e4f1dcd1c882de9f81f214b3f68f34ef4b8adca5af593c6c/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string72_gost_greyware_tool_keyword = /e9ff51cca46583fe8f3ec4077fd863edb916e4d170d491100e4e35d8fa782a14/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string73_gost_greyware_tool_keyword = /ed19d0c0a65e0eaf321f86f95c1026fbae834876a8431d65609937e56e240ef8/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string74_gost_greyware_tool_keyword = /eed97f810223bcf85f69b84040fd3e44e4a4569b4fab06da412c93fed71aef02/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string75_gost_greyware_tool_keyword = /ef1d847561dc29afa96b2e827e7c9a94facb9b6aae2b09ddb33c3c50ab581ae2/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string76_gost_greyware_tool_keyword = /f0d19d73955298f2766e55ff49347e31b2482a3bcba107ccbe38630b1aac355a/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string77_gost_greyware_tool_keyword = /f2f4b7576e0e51425fa90f94f272d0163571f90a0ecb8549f8b97dbf89c5255f/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string78_gost_greyware_tool_keyword = /f7f52607771ce2dddde694ebeced6e2dc438a29c8b87cfb93f125db4e968107c/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string79_gost_greyware_tool_keyword = /fc258ceabaf70cc28b8519a46a8045cac406d275707942f88e952621c6c382ec/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string80_gost_greyware_tool_keyword = /fce455e607e33bce8fc0f29bb1bbf34e7a886c39bb48995ee3af25a91f2a57f9/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string81_gost_greyware_tool_keyword = /go\-gost\/gost/ nocase ascii wide
+        // Description: GO Simple Tunnel - a simple tunnel written in golang
+        // Reference: https://github.com/go-gost/gost
+        $string82_gost_greyware_tool_keyword = /https\:\/\/gost\.run\/tutorials\// nocase ascii wide
 
     condition:
         any of them
@@ -8477,6 +9343,791 @@ rule greyware_tool_keyword_greyware_tool_keyword
 }
 
 
+rule gsocket_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "gsocket"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string1_gsocket_greyware_tool_keyword = /\sGS_STTY_INIT_HACK/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string2_gsocket_greyware_tool_keyword = /\sgsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string3_gsocket_greyware_tool_keyword = /\sgsocket_.{0,1000}_all\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string4_gsocket_greyware_tool_keyword = /\snc\s.{0,1000}\.gsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string5_gsocket_greyware_tool_keyword = /\snc\sgsocket\s31337/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string6_gsocket_greyware_tool_keyword = /\s\-\-remote\sgsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string7_gsocket_greyware_tool_keyword = /\s\-\-rm\s\-it\s\-\-name\sgsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string8_gsocket_greyware_tool_keyword = /\sssh\s.{0,1000}\@gsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string9_gsocket_greyware_tool_keyword = /\sstart\sgs\-sshd/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string10_gsocket_greyware_tool_keyword = /\sstatus\sgs\-sshd/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string11_gsocket_greyware_tool_keyword = /\/bin\/gs\-netcat/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string12_gsocket_greyware_tool_keyword = /\/etc\/gsocket\.conf/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string13_gsocket_greyware_tool_keyword = /\/gsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string14_gsocket_greyware_tool_keyword = /\/gsocket\.git/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string15_gsocket_greyware_tool_keyword = /\/gsocket\/releases\/latest/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string16_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}_all\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string17_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}_x86_64\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string18_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}aarch64\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string19_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}arm\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string20_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}armv6\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string21_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}armv7l\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string22_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}i686\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string23_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mips32\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string24_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mips64\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string25_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mipsel\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string26_gsocket_greyware_tool_keyword = /\/gsocket_dso\.so\./ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string27_gsocket_greyware_tool_keyword = /\/gsocket_latest_all\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string28_gsocket_greyware_tool_keyword = /\/gsocket\-build/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string29_gsocket_greyware_tool_keyword = /\/gsocket\-deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string30_gsocket_greyware_tool_keyword = /\/gsocket\-pkg\// nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string31_gsocket_greyware_tool_keyword = /\/gsocket\-src/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string32_gsocket_greyware_tool_keyword = /\/gsocket\-tor/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string33_gsocket_greyware_tool_keyword = /\/gs\-portforward\.service/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string34_gsocket_greyware_tool_keyword = /\/gs\-root\-shell\.service/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string35_gsocket_greyware_tool_keyword = /\/lib\/gsocket_.{0,1000}\.so/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string36_gsocket_greyware_tool_keyword = /\/raw\/main\/gsocket\// nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string37_gsocket_greyware_tool_keyword = /\/root\/\.gs_with_tor/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string38_gsocket_greyware_tool_keyword = /\/share\/gsocket\// nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string39_gsocket_greyware_tool_keyword = /\/tools\/gs\-pipe\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string40_gsocket_greyware_tool_keyword = /\/usr\/bin\/gs\-mount/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string41_gsocket_greyware_tool_keyword = /\/usr\/bin\/gs\-netcat/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string42_gsocket_greyware_tool_keyword = /\/usr\/bin\/gsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string43_gsocket_greyware_tool_keyword = /\/usr\/bin\/gs\-sftp/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string44_gsocket_greyware_tool_keyword = /\\gsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string45_gsocket_greyware_tool_keyword = /\\gsocket_.{0,1000}_all\.deb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string46_gsocket_greyware_tool_keyword = /\\gsocket_dso\.so\./ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string47_gsocket_greyware_tool_keyword = /\]\sGS\slogin\sdetected\.\sTotal\sUsers\:\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string48_gsocket_greyware_tool_keyword = /\]\sGS\slogout\sdetected\.\sRemaining\sUsers\:\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string49_gsocket_greyware_tool_keyword = /00b5a02c0350f67ee2562d63461f29a2907e3e991b51a0fa3e424b102b1cf552/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string50_gsocket_greyware_tool_keyword = /05fb17382f049ded33be4d8d624a2b3cc246ab0814e44f07352c12e1880079b6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string51_gsocket_greyware_tool_keyword = /06541ed5fb95052dfeda2cc6165732d1c125f9b49ed400f578750b03a67c418f/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string52_gsocket_greyware_tool_keyword = /0a5e1abf70407a1de22cd14107dca8019bab45e8bfe4c45ca1e05e7e8bb92e89/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string53_gsocket_greyware_tool_keyword = /0ca53778e8cf399b1052ba2f500881d04066525b65e8b564360e7b581ac9cf68/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string54_gsocket_greyware_tool_keyword = /0cf7ec1618e87248f23674db07692a63fbd4e945102b143baa5b34d7eebb5977/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string55_gsocket_greyware_tool_keyword = /0da3621a6676dcb4ac7e260ea7280a14d05c9bcc02c0a296a6507172a3cc7bd8/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string56_gsocket_greyware_tool_keyword = /0dd41d5c99202fa4387bb5b9db7ce55236fc913b65e3a9fb58f697d3480f14ef/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string57_gsocket_greyware_tool_keyword = /0e95446bac57b2a3276703c700865bf025f1eac27bc5c9ebcf820c1e351b6732/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string58_gsocket_greyware_tool_keyword = /0f948584d230abb0e870a4e46541cdf4dd8b60f23fa7e031d27cd856bc49b4c4/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string59_gsocket_greyware_tool_keyword = /1106565073956253736\/mEDRS5iY0S4sgUnRh8Q5pC4S54zYwczZhGOwXvR3vKr7YQmA0Ej1\-Ig60Rh4P_TGFq\-m/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string60_gsocket_greyware_tool_keyword = /1160bcaa562e5a40c74e633ec58a2518b110e74b1d3f48bfa06f74f72cf9ff98/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string61_gsocket_greyware_tool_keyword = /11f50c95d4dbcd97d5c76753aa7bc38bb615295f553a4c989015176ac0fa3be3/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string62_gsocket_greyware_tool_keyword = /155c711cf850d024e86f65be8ff0f9e7e0e947c5632350913dadf8cc678909fa/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string63_gsocket_greyware_tool_keyword = /17eb30ef4d91991b265d5d93ab7f4ad6b58d43061a46ba3292142b962be95f7d/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string64_gsocket_greyware_tool_keyword = /1a1be3746ab4055e51557ec20f236da58a4dcbe1a523c8f5a2cd5dc97e699533/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string65_gsocket_greyware_tool_keyword = /1ab1fb9214bf799302b9204b211eec714d0c1fd551ca45adeab8483a350719a3/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string66_gsocket_greyware_tool_keyword = /1ba34d4d223d6a532c194e578a3efc5e8aeae8bf657223614c502e28d84942cf/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string67_gsocket_greyware_tool_keyword = /1d4c6a6ae56e7a9983254e4a31a368ebea653d96277466ffb8127e8ce0b54369/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string68_gsocket_greyware_tool_keyword = /2028fe2f9036b7fd8f192b6c9844acaa40bec1f40cead52c0ebc5defd9255f64/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string69_gsocket_greyware_tool_keyword = /2042b3773e03285939fe7f0d0597a77c8d4958644b1d8a366cc71d384f1e5c30/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string70_gsocket_greyware_tool_keyword = /22f6a8fb8771a0ed253a3652c6852a831b4919b2a677ddb6a6d03cad6a0f76f6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string71_gsocket_greyware_tool_keyword = /22fdc29d790bb072a0bd54651adab4892fb1df1c75fb44388c3d6a0b0506d908/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string72_gsocket_greyware_tool_keyword = /25cf89a0105c08084f05df75a9dcd1c239e3ec07cf5b36413c04d204393b3560/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string73_gsocket_greyware_tool_keyword = /269d5ebc2a387173830bd5aa8f622c4a9787ff60379bcc960febfe950927ae72/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string74_gsocket_greyware_tool_keyword = /2c25e65ae97f9652d4ab24abcc8c75a48e9b0446211feaeb0e8b138176086ef1/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string75_gsocket_greyware_tool_keyword = /2c68f74c83b924d84b0de8e4a75a44964ad5bf934d3b9ba0baec9732b70183de/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string76_gsocket_greyware_tool_keyword = /2e7d5dfd64c9741ef27284fa9e9e20f84da15669b6979daf730974f7da356849/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string77_gsocket_greyware_tool_keyword = /30d80944d6e4ecec3421db4532a9a146f882e381454e2e09ea35845a4da1f9c6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string78_gsocket_greyware_tool_keyword = /37328d4092b0c2cf9e23443a1575078c0a072e0ca39382e27c8e9c177bad2048/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string79_gsocket_greyware_tool_keyword = /3891197c6740b1864b7a01b8d64b917fded55d40516b5e2774c92e92fc2ed5ef/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string80_gsocket_greyware_tool_keyword = /3906359d473ef56efef773c5bcbd0c8f8df1b3f18e90fc0d0c8f4c2112706ea9/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string81_gsocket_greyware_tool_keyword = /3b73d2414403cb76345c4885921348b96a63499c04027df1cba8b9825959bc1e/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string82_gsocket_greyware_tool_keyword = /4104657745ea61b6e8ea8e468968e96bb5b266abedd73d93324ce14113edcdd9/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string83_gsocket_greyware_tool_keyword = /41aad6daa162539ca954357d9477850ccc5c1f3d492fafe09091c7419d35a441/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string84_gsocket_greyware_tool_keyword = /44b40a461af2ad711898a48285e333fbffd459797e4b24b4fde92ddcbb2196ae/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string85_gsocket_greyware_tool_keyword = /453485f59e550e5ad903796a7fd65c0e50c0f3977d635f373eddbc3777d70949/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string86_gsocket_greyware_tool_keyword = /48f6c28eb0f6be7a624095e620820e21cabb7008c14beee1210d930aa3d9ffb6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string87_gsocket_greyware_tool_keyword = /4ad964e61bd5f63da0f48dfdbf4252550a4a8f894bf3c0813b3eb0dab6ac73bf/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string88_gsocket_greyware_tool_keyword = /4ae67074c52164526a351037946fd4deacd275b5fbdea7e49845e9f201ac151d/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string89_gsocket_greyware_tool_keyword = /4b532e80f16904176fc50b312ca8114d8ece3ec594cb34a29d7e5e0d767dca59/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string90_gsocket_greyware_tool_keyword = /4bb77a1ecf1a057a39bd8b6f7b3f349717eac5d32eb87df25e29aceacfa1ec7f/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string91_gsocket_greyware_tool_keyword = /4d6434d5a809c797570c59fd91eecd4f86b85e46cc6a43cf186a10a08db5e844/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string92_gsocket_greyware_tool_keyword = /4E48vR7v8OUJO5OEYkOUUZmF55UOYVqo9l9w2eRS50k\=/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string93_gsocket_greyware_tool_keyword = /4f64f71a7d6b8be79754e7bf2109675ffc8a3e37a4a55b08c95a1b1d25e458e5/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string94_gsocket_greyware_tool_keyword = /512c31ebafb9013dfaf82b0123e088f976d3c1b57658ea60a7c8825a1c4bf7c7/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string95_gsocket_greyware_tool_keyword = /561cc9eca17d61f99abf5fd5257bed4a8bf2d4c8c67ac731f5f067cf5f88e230/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string96_gsocket_greyware_tool_keyword = /561cc9eca17d61f99abf5fd5257bed4a8bf2d4c8c67ac731f5f067cf5f88e230/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string97_gsocket_greyware_tool_keyword = /5a86428ea0c5d6424b44518fe411e2a8c795d201f4a6df3b77b04f2af8f2a911/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string98_gsocket_greyware_tool_keyword = /5b4dd71b0d9ac18c80db2eb0149e56af6b01533ff1e7a28359ca2f61ee0f8c8c/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string99_gsocket_greyware_tool_keyword = /5bbc850a274b933a4e8b0ac7d5bc8b0527c3eddbaee7f8a9389c284f27a6fe14/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string100_gsocket_greyware_tool_keyword = /5d6beae72888b5b7c4d4d6bcef2c37256c736435fd1b08ff642ee4c60a310ea5/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string101_gsocket_greyware_tool_keyword = /5fdc26ee180c18e799e436da359f24c54ebeb91cbb5206b89f3c82b0d28b93b5/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string102_gsocket_greyware_tool_keyword = /628e139e7f12c2e5cac243778c3fe428c878aaf690e64cf650e0be14915eee1e/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string103_gsocket_greyware_tool_keyword = /64a7c5e1ef0e19140bf06ba70e0255f53c67c117ce1b072f46c30a1be44ff671/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string104_gsocket_greyware_tool_keyword = /64f0fda500b2a622279f62bcc86e5282b9e6c5ee8e5ef55380e3a08e55b5ecc8/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string105_gsocket_greyware_tool_keyword = /668718b8b09f631c3f1fa81519b99b83792a2e84d306296997a28db2e4f90d8c/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string106_gsocket_greyware_tool_keyword = /67552b46f859511333d63e26a980b251e458c474243aa2af4c2f697aaea3680f/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string107_gsocket_greyware_tool_keyword = /6a8351ce89e27856e20f04a2500f9a7851ea05113fb6babb4f359aa7a389ca73/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string108_gsocket_greyware_tool_keyword = /6d0156efe079ba8f6fbb009df73332e5dab53955613b1795f09b431cf668163a/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string109_gsocket_greyware_tool_keyword = /70fae385cd6c9bbcc73c17efabd236f0a0bfe00d11b0c9360651ec7e4baf42c2/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string110_gsocket_greyware_tool_keyword = /70fc96e2f1e0cd752068e94fb4f37b3f19d670243921f76b0f2114578151f1e3/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string111_gsocket_greyware_tool_keyword = /74f93a2398222f802089239c9610a21ea5ff34fb81cf6869f58bf5782ea5127f/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string112_gsocket_greyware_tool_keyword = /750b490f1788db4c843135e409ae3175cff1be5c61246341eabdfa135ac6c7e3/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string113_gsocket_greyware_tool_keyword = /75a064400fdf9acdbedb430ed009b961041fa379b4f219304477102f9f3d4281/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string114_gsocket_greyware_tool_keyword = /75f3f565f1024b367a72a934cff9735e3fd9311ce5ad77de20c103cc72442edc/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string115_gsocket_greyware_tool_keyword = /78792f8846332fa4d48b2710fd1d5d0bc6dd1fdbd62fdfed2c9aefa91b486547/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string116_gsocket_greyware_tool_keyword = /7896c394ae338f34d46c51c5403ee41200a3fb1816763a4763c1228a72febe07/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string117_gsocket_greyware_tool_keyword = /78ba173f30785ce45c8aa96e9cd13578d1db9bf48bece39a50617a8a49dd80f6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string118_gsocket_greyware_tool_keyword = /7b1f95fad0a9d54d14ec51545fa5739a6b0764117843a3d468f387cfbe133e6f/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string119_gsocket_greyware_tool_keyword = /7e6e4d4f8d52c0b8ed9b71fa0d0fad11872d1ee4204fc3f4835eb70932047883/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string120_gsocket_greyware_tool_keyword = /813342bc9592e0e2b5672eb84376b59e098cc45929a42c55bdc96750f2abd5f2/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string121_gsocket_greyware_tool_keyword = /840be30a16f12a6c57f8f68233b6aedb9e10e7dda76b1024b74fd660f3a13cd4/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string122_gsocket_greyware_tool_keyword = /850d5195de840280e1638f121743617ad47852109636541bccd20d4cdd953d6b/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string123_gsocket_greyware_tool_keyword = /88552e15e5ce836e9f7f1b12b55ca6b3805641d577fb71663d2c8fc5fb96ce47/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string124_gsocket_greyware_tool_keyword = /8857efba9865de5690af4a3559f4839286cd2083f752ba93c30bd969c6636170/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string125_gsocket_greyware_tool_keyword = /89d3c1ac21486c9deb1a08ac10cc6b722a19801163dad4d8b57c1aa8a18f32b8/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string126_gsocket_greyware_tool_keyword = /8a131449c4f5bffc5ae0cda597df9d17a3dff1d02422c890622c0359ee0a03f1/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string127_gsocket_greyware_tool_keyword = /8c7511cc6dae84071080a37c2842782cc0635f8d32301afebdc818a392a58bc3/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string128_gsocket_greyware_tool_keyword = /90487bd2731d62d51c5bda9ea313fe915fb6ce31fc2c5f54622d780d924da26e/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string129_gsocket_greyware_tool_keyword = /96c7a830d1ec55b1db8892e1d452394cd2a5eb2549003d4428b5d52774637e94/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string130_gsocket_greyware_tool_keyword = /9abd6408e999901f0b7504eb679d0403f49589b7ecaaa5588923daa0bb22f186/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string131_gsocket_greyware_tool_keyword = /9acdf1fd60fb9b5185fab1f18b843757f05f34f73ce947b71498d494a9e30843/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string132_gsocket_greyware_tool_keyword = /9c6804a10a191fe49061ca8022394c3a44fba75e20aa0c1fbf79a07e01f28df5/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string133_gsocket_greyware_tool_keyword = /9d780803519141fc8c14c067688184d7df094190cf74825b6ea6651e7ccd911b/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string134_gsocket_greyware_tool_keyword = /9f6a38018fe8228de57605c35bb927d39418c7793bb935ff0ab5022424d9774a/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string135_gsocket_greyware_tool_keyword = /a1be92f17090edca27bbb0af8e9ac44b97d7a2dd15b66d09e1a6a6b237ace336/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string136_gsocket_greyware_tool_keyword = /a1ce03c2907bdfc7be8ab37b967961a4adb4c2764bbb0f42afea773d1f89f666/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string137_gsocket_greyware_tool_keyword = /a9b13111606ca8ed948030515217c0e1af7cf2af2af8eb034999ff9e3f071b24/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string138_gsocket_greyware_tool_keyword = /apt\sinstall\sgsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string139_gsocket_greyware_tool_keyword = /apt\-get\sinstall\sgsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string140_gsocket_greyware_tool_keyword = /b035dfbf2f3125fbf0d00f86158efbc4a7c7715f03e4d7bcf634dfd16888e965/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string141_gsocket_greyware_tool_keyword = /b3ed38872b50a110a8704d1d2eb4e6e47ed6f2998d1bd08b712f840cc3a4643a/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string142_gsocket_greyware_tool_keyword = /b6e5d9d7d95caf2550fecebcfe6f7c54f1779c6a65547ef342f76446dcbd6c1d/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string143_gsocket_greyware_tool_keyword = /b7890a15dadef8cdedd6580aed94ca26df6ec0eddb009176dba1eef8941ff6e6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string144_gsocket_greyware_tool_keyword = /b938ac4eb603113d3617ddcfeb8fbb32a6bbe54b1419482966b41ee8b1dc05b9/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string145_gsocket_greyware_tool_keyword = /bc7229c619a3af7fd330588286b4e48e7804b1c03427ef9e8bb3b7e2eb0318ce/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string146_gsocket_greyware_tool_keyword = /bd0f5440775fe02946ffc659425427ef167a1dd6d2993606d4376422f8d33bc4/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string147_gsocket_greyware_tool_keyword = /c08ba6e45d3859ecb3cd5df132fb04dcd86913afce15057de03bba9d256de4ef/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string148_gsocket_greyware_tool_keyword = /c2e755a58685ea4f356c897fdc0c9420579f6eae48ac6f27307e8a8b73500cb6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string149_gsocket_greyware_tool_keyword = /c4da631e510a57e39a6e9021a1d3f1d563f59f351bdd84b46e48a0e27e6b9cbb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string150_gsocket_greyware_tool_keyword = /c74f294042ccfc39dec052d9871e6bbd4e69b019a353f6e02947303adeac3794/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string151_gsocket_greyware_tool_keyword = /cc0ced090edf59964428ab7b16b9cf8ce57b8ee21e999ac05e7f4d5d52b5470c/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string152_gsocket_greyware_tool_keyword = /cd672b609691c61005f4c69233abbce538d334db30e809150f8087b7735bfd2e/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string153_gsocket_greyware_tool_keyword = /ce7979010bdb291a0a1884e00e238d9fc3bc27ec7a1d1093be273c22e865f676/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string154_gsocket_greyware_tool_keyword = /cfa25f5e4321a86b2c4f646a63345fb6ac46a7089886354ad82653a47e55be51/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string155_gsocket_greyware_tool_keyword = /cfcad25ab252fbff7fc8a7bbac67915dfce5f76b5738f894fa13afbd5d60a5de/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string156_gsocket_greyware_tool_keyword = /curl\s\-fsSL\shttps\:\/\/gsocket\.io\/x/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string157_gsocket_greyware_tool_keyword = /curl\s\-fsSL\shttps\:\/\/tiny\.cc\/gsinst/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string158_gsocket_greyware_tool_keyword = /d24fe924f62a3bb95319812d67dbdb7e375d60f7baa933eab82070b3c4a11a77/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string159_gsocket_greyware_tool_keyword = /d325c92a9bba538fdbb1c054584ffd0672debaef935dfb27e9d0a6b67649d369/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string160_gsocket_greyware_tool_keyword = /d69430717f07c774cdb8ea58b32b066e99dbf3cbc046e876b8ea73c20a3a6507/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string161_gsocket_greyware_tool_keyword = /d700c8a3a4ecbb1e547b3c14a5a2a3605cabbabc8350284e923982809945694d/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string162_gsocket_greyware_tool_keyword = /d748b4244f359f0d9c46860ea8918940c8cd05e4a65c3ae5b99208d719a3a9c1/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string163_gsocket_greyware_tool_keyword = /d84d9d935f9f3392934ff2613e47032d3120f7c0ac4278a1e88bec65c5316a53/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string164_gsocket_greyware_tool_keyword = /db17fa0b10c60bd01a60f64cf436586c9c6708ad64a1dce8350e13689336d67f/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string165_gsocket_greyware_tool_keyword = /dd226a8ba33f50cd9ca4fedcec4df5c29e6b9841cb8cf2ab2d940bdef8a0a403/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string166_gsocket_greyware_tool_keyword = /de74cc01088879ddf3f7c392345e9229490e06f0cc03c52102b0e94b79c01cfc/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string167_gsocket_greyware_tool_keyword = /dfd2e8d943aab32e5988a886e6ed0a3bb36b5f5c3959fa3fb1281b6f524b16bb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string168_gsocket_greyware_tool_keyword = /e05dfa6b3fc5b59044f4b18ba455d751c5a18948d1d0a032d3a11fb753659faa/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string169_gsocket_greyware_tool_keyword = /e417c3eb936ec35eb80f7cab07aaba0c051f3385d8262eaa93e5e59f52cb60e7/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string170_gsocket_greyware_tool_keyword = /e660765bee5e704c8f15d6a20c14d720c0aea5382fd21123974df9435a3b7bad/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string171_gsocket_greyware_tool_keyword = /e66ba30f8c2e47462d60db7d5bdcb9465fa63c7115a2287d68f57d191ada1b6e/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string172_gsocket_greyware_tool_keyword = /e74e119f6c9d89e2419518395abc0bb44008928d3748b60ea7d02e70b757a75a/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string173_gsocket_greyware_tool_keyword = /e897d08460dbb646108b17a32455d9be51487bee26b48dfef992b7f246d54f1d/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string174_gsocket_greyware_tool_keyword = /e8bcea5769f7121a256a8d690d1eeae2a6040af90d7d97fccfc0379c241df060/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string175_gsocket_greyware_tool_keyword = /eb11e2e1f6611560c9822ca53a829028642a676c2d03bbf86c57e4b41fdcff9e/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string176_gsocket_greyware_tool_keyword = /ec7ac72aea879c8a68fe5cbd38f8be5f37c7b3ee99ca67481331b8eba84f7726/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string177_gsocket_greyware_tool_keyword = /ececdc677eaf4bf46268f4839d825090b16a40d37803c38600bf52bc79e1a363/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string178_gsocket_greyware_tool_keyword = /ef8eb970940d435e07001fccf2ac210f539a9bb09ea1ef146c5f6ff4cc15a402/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string179_gsocket_greyware_tool_keyword = /eff4aa3e27c98422705a19de82c1386d11b9559ded06eed46c26ab82860c0a81/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string180_gsocket_greyware_tool_keyword = /f18bc0dae72814ff2e076c2b61846a35d00575c4e1554f74a4a70a036a15f9c5/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string181_gsocket_greyware_tool_keyword = /f32a57e81fc9d08ca1412e932e8701a45ed35b0213c0da78bee8e65a1c6942e9/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string182_gsocket_greyware_tool_keyword = /f94c9642833e1efd81b07dcb06bf653f61937ae8b7baf69b3731ac1132a66d52/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string183_gsocket_greyware_tool_keyword = /fc0e69e5c2f4ed4cfb830ebb66ba54a86ce95a114603a5fffa42cea8caf3e864/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string184_gsocket_greyware_tool_keyword = /fcea3e6443289fde4faa10d9d892ce4f0c23f90913dbfde6c9f60c825f92150c/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string185_gsocket_greyware_tool_keyword = /fd57273dcd84084b20ad214de3b38c4e5a3f506da7810574d4a68dcdd63176cb/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string186_gsocket_greyware_tool_keyword = /fecf1da09ddb7a5f5ab7cc20c6d542be33193cbc30e5c8c3dd877cee6a682063/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string187_gsocket_greyware_tool_keyword = /GS_SO_TOR_DOMAIN/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string188_gsocket_greyware_tool_keyword = /gs\-full\-pipe\s\-s\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string189_gsocket_greyware_tool_keyword = /gs\-netcat\s\-/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string190_gsocket_greyware_tool_keyword = /gs\-netcat\s.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string191_gsocket_greyware_tool_keyword = /gs\-netcat_freebsd\-x86_64/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string192_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-aarch64/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string193_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-arm/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string194_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-armhf/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string195_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-armv6/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string196_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-armv7l/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string197_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-i686/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string198_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-mips32/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string199_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-mips64/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string200_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-mipsel/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string201_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-x86_64/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string202_gsocket_greyware_tool_keyword = /gs\-netcat_macOS/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string203_gsocket_greyware_tool_keyword = /gs\-netcat_openbsd\-x86_64/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string204_gsocket_greyware_tool_keyword = /gsocket\s\/usr\/sbin\/sshd/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string205_gsocket_greyware_tool_keyword = /gsocket\s\-k\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string206_gsocket_greyware_tool_keyword = /gsocket\sopenvpn\s\-\-/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string207_gsocket_greyware_tool_keyword = /gsocket\sssh\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string208_gsocket_greyware_tool_keyword = /gsocket\.io\/deploy/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string209_gsocket_greyware_tool_keyword = /gsocket\/gsocket\.h/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string210_gsocket_greyware_tool_keyword = /gsocket_macOS\.tar\.gz/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string211_gsocket_greyware_tool_keyword = /GSOCKET_SECRET/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string212_gsocket_greyware_tool_keyword = /GSOCKET_SOCKS_IP/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string213_gsocket_greyware_tool_keyword = /GSOCKET_SOCKS_PORT/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string214_gsocket_greyware_tool_keyword = /gsocket\-relay\/monitor\// nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string215_gsocket_greyware_tool_keyword = /gs\-sftp\s\-l/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string216_gsocket_greyware_tool_keyword = /gs\-sftp\s\-s\sthctestserver/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string217_gsocket_greyware_tool_keyword = /hackerschoice\/gsocket/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string218_gsocket_greyware_tool_keyword = /https\:\/\/gsocket\.io\/install\.sh/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string219_gsocket_greyware_tool_keyword = /Installing\ssystemwide\sremote\saccess\spermanentally/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string220_gsocket_greyware_tool_keyword = /Join\sus\son\sTelegram\s\-\shttps\:\/\/t\.me\/thcorg/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string221_gsocket_greyware_tool_keyword = /Running\:\snetcat\s/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string222_gsocket_greyware_tool_keyword = /socat\s\-\sTCP_LISTEN\:31337/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string223_gsocket_greyware_tool_keyword = /TCP\:gsocket\:31337/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string224_gsocket_greyware_tool_keyword = /Testing\sGlobal\sSocket\sRelay\sNetwork/ nocase ascii wide
+        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
+        // Reference: https://github.com/hackerschoice/gsocket
+        $string225_gsocket_greyware_tool_keyword = /wget\s\-qO\-\sgsocket\.io/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule gt_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'gt' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "gt"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string1_gt_greyware_tool_keyword = /\sgt\-win\-x86_64\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string2_gt_greyware_tool_keyword = /\/gt\sserver\s\-c\s\.\/config\.yml/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string3_gt_greyware_tool_keyword = /\/gt\-win\-x86_64\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string4_gt_greyware_tool_keyword = /\/opt\/config\/aonetwork\-client\.yml/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string5_gt_greyware_tool_keyword = /\/opt\/entrypoint\.sh/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string6_gt_greyware_tool_keyword = /\/release\/gt\-win\-x86_64\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string7_gt_greyware_tool_keyword = /\/usr\/bin\/gt\sclient\-c\s/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string8_gt_greyware_tool_keyword = /\/x86_64\-pc\-windows\-msvc\/release\/gt\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string9_gt_greyware_tool_keyword = /\/x86_64\-pc\-windows\-msvc\/release\/gt\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string10_gt_greyware_tool_keyword = /\\gt\-win\-x86_64\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string11_gt_greyware_tool_keyword = /\\x86_64\-pc\-windows\-msvc\\release\\gt\.exe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string12_gt_greyware_tool_keyword = /037be40510a193376a127023deb2fe312d265b5ebc78422879e9126c5d02f2b4/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string13_gt_greyware_tool_keyword = /1a535e15b11923cd368d6b39e1a308b67d7ed2be686d7968aa50e5c3630ea11a/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string14_gt_greyware_tool_keyword = /1f51e236e7e1fbeb8cf38462e17da4d1921aeef093e2990538a4eb1d35554076/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string15_gt_greyware_tool_keyword = /2a17ed79b4a0cb9d1c6345ee3f0d1c6d349a660391345c17e78ceb57a26a32fe/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string16_gt_greyware_tool_keyword = /300161cd89c6094776ad40c08308249c7323c9b19105e09f15ef209f4e1f7980/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string17_gt_greyware_tool_keyword = /56be52735563e73f0cdf9d4e8b52f86ccc5313495eec99c69c6f2bfeb0a08317/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string18_gt_greyware_tool_keyword = /71e29bff6cee7938472b8d16ea5696b4966cb587a266c43257770efffed93aae/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string19_gt_greyware_tool_keyword = /ab894c2ffa7886fe889c4a35b15fc5d5558d11896550d563c299408e6d4da363/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string20_gt_greyware_tool_keyword = /c46ac57304fda332b5c3b027ae3fd0a54917e2b194f0d9f13e6cacfa1f61ff53/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string21_gt_greyware_tool_keyword = /ed1f4ff9004e7065939247b9df3e4d51e08a0c990931e438b733fb4e64b4adf2/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string22_gt_greyware_tool_keyword = /ghcr\.io\/ao\-space\/gt\:client\-dev/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string23_gt_greyware_tool_keyword = /ghcr\.io\/ao\-space\/gt\:server\-dev/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string24_gt_greyware_tool_keyword = /github.{0,1000}ao\-space\/gt/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string25_gt_greyware_tool_keyword = /linux\-amd64\-client\s\-local\shttp\:\/\/127\.0\.0\.1/ nocase ascii wide
+        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
+        // Reference: https://github.com/ao-space/gt
+        $string26_gt_greyware_tool_keyword = /linux\-amd64\-server\s\-addr\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Guru_VPN__and__Proxy_greyware_tool_keyword
 {
     meta:
@@ -8749,6 +10400,64 @@ rule Hunter_io_greyware_tool_keyword
         // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
         // Reference: https://hunter.io/
         $string5_Hunter_io_greyware_tool_keyword = /https\:\/\/hunter\.io\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule hypertunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'hypertunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "hypertunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string1_hypertunnel_greyware_tool_keyword = /\/hypertunnel\.git/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string2_hypertunnel_greyware_tool_keyword = /\/hypertunnel\-tcp\-relay.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string3_hypertunnel_greyware_tool_keyword = /\/hypertunnel\-tcp\-relay.{0,1000}\.zip/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string4_hypertunnel_greyware_tool_keyword = /23fe91b0f562494d22d23a02a05f35847520170930ceb92cffa6783229b46d78/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string5_hypertunnel_greyware_tool_keyword = /berstend\/hypertunnel/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string6_hypertunnel_greyware_tool_keyword = /https\:\/\/hypertunnel\.ga/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string7_hypertunnel_greyware_tool_keyword = /hypertunnel\.lvh\.me/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string8_hypertunnel_greyware_tool_keyword = /hypertunnel\-server\@latest/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string9_hypertunnel_greyware_tool_keyword = /local\.hypertunnel\.lvh\.me/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string10_hypertunnel_greyware_tool_keyword = /MIIJKgIBAAKCAgEAuvAs1YNtpCaqyG3Rkyutst3uIjzYLQTPWf1v\+OLi3GgzshUB/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string11_hypertunnel_greyware_tool_keyword = /npm\sinstall\shypertunnel\-server/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string12_hypertunnel_greyware_tool_keyword = /packages\/hypertunnel\// nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string13_hypertunnel_greyware_tool_keyword = /packages\/hypertunnel\-server/ nocase ascii wide
+        // Description: Expose any local TCP/IP service on the internet
+        // Reference: https://github.com/berstend/hypertunnel
+        $string14_hypertunnel_greyware_tool_keyword = /packages\/hypertunnel\-tcp\-relay/ nocase ascii wide
 
     condition:
         any of them
@@ -9364,6 +11073,187 @@ rule ivy_greyware_tool_keyword
 }
 
 
+rule jprq_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'jprq' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "jprq"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string1_jprq_greyware_tool_keyword = /\sjprq\-windows\-386\.exe/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string2_jprq_greyware_tool_keyword = /\sjprq\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string3_jprq_greyware_tool_keyword = /\/etc\/letsencrypt\/live\/jprq\.site\// nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string4_jprq_greyware_tool_keyword = /\/jprq\.git/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string5_jprq_greyware_tool_keyword = /\/jprq\.log/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string6_jprq_greyware_tool_keyword = /\/jprq\.service/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string7_jprq_greyware_tool_keyword = /\/jprq\/server\/.{0,1000}\.go/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string8_jprq_greyware_tool_keyword = /\/jprq\-darwin\-arm64/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string9_jprq_greyware_tool_keyword = /\/jprq\-linux\-386/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string10_jprq_greyware_tool_keyword = /\/jprq\-linux\-arm64/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string11_jprq_greyware_tool_keyword = /\/jprq\-windows\-386\.exe/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string12_jprq_greyware_tool_keyword = /\/jprq\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string13_jprq_greyware_tool_keyword = /\/root\/jprq\-server/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string14_jprq_greyware_tool_keyword = /\/usr\/local\/bin\/jprq/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string15_jprq_greyware_tool_keyword = /\/var\/log\/jprq\// nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string16_jprq_greyware_tool_keyword = /\\jprq\-windows\-386\.exe/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string17_jprq_greyware_tool_keyword = /\\jprq\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string18_jprq_greyware_tool_keyword = /\>jprq\s\-\sjoin\spublic\srouter/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string19_jprq_greyware_tool_keyword = /01713b6ae56ab0f1faf7834f29c22fb36c41bef9c6cf2b702dc3f617513c3be6/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string20_jprq_greyware_tool_keyword = /0cfa716d39fc90ed0c4db1bd68f1b4b791f26e5fab4003ae9b816d1f7d68d208/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string21_jprq_greyware_tool_keyword = /0d05bed47cc1579a068f83123a502c59d447b20a5318c1d70ffb7a0b638a7aff/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string22_jprq_greyware_tool_keyword = /1a1b2883ad2c55fe3a1d4544bc1401e92a0b98148d85f6e5fdaa54154ba5a2e8/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string23_jprq_greyware_tool_keyword = /1b41fb4be93b92548f9e5419fae45b76592a5b6ab0c5d42930f6824686225f3c/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string24_jprq_greyware_tool_keyword = /1e68cb8928288f31a3f1b7fc867f79f56912c289f93a3dffd962fea895fb8f12/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string25_jprq_greyware_tool_keyword = /2ed85cb524b3d21a29ae39ad50874d1cf8546d2dfedb931b9fcf76cc4e0e7cf0/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string26_jprq_greyware_tool_keyword = /31fb5154969f2729699b04a7ea6202ad59dabb1e36eb5f8f9b1159e3775e267f/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string27_jprq_greyware_tool_keyword = /3984e827963ca5f0925404d02526b0c12956f4d04a64853226e54a2f9333bf04/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string28_jprq_greyware_tool_keyword = /3eaa14907c96c3a261cce8f5379fa8ecab9911cc2f3711b4b08b8d382a7ee772/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string29_jprq_greyware_tool_keyword = /4796c4183abeeb96966e3eb03493345cd7e148688e9fe5613c5bda26692063b7/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string30_jprq_greyware_tool_keyword = /51e63f127dfc4804bec4dc1e5bc19034d50953c246417203b95ddba89bbfe082/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string31_jprq_greyware_tool_keyword = /5a19b174e1c46c7f3591c79dc5264d43bb68c9537393a8cecd6269567b821778/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string32_jprq_greyware_tool_keyword = /6c3dc714596f1b78c4921bb8b25f073bdc95a8bca363f070b4e5e34c4b2a34ac/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string33_jprq_greyware_tool_keyword = /73314bd200038dc11b2a008f9d90164565d15744724a5ea9a0750823a8d0d73b/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string34_jprq_greyware_tool_keyword = /7d367e348e24f197222c639324ce56bea8d2b2cd39c88f8df390e1b5af90942b/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string35_jprq_greyware_tool_keyword = /8e63f8fb62f2dd2f310bf619ab65c97d5dd1835d97cced5eb8cebddd293d2d06/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string36_jprq_greyware_tool_keyword = /905bda9ca65d9b7f6151de763a7c3ce2dd15a69b8410d89b04dd5bb68d17dece/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string37_jprq_greyware_tool_keyword = /9e3476f783250e1fd848c17fb9d5a6c32e151ff1382bcde09a0ac903dea8a16f/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string38_jprq_greyware_tool_keyword = /a56d443310f333dae0b4900ca18d0f903f5076369ae4053c035d9c39d76f59b2/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string39_jprq_greyware_tool_keyword = /acd19845a6484eee65db6f925b1d0244300831d4d5a37d147cc61e7e8c56775b/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string40_jprq_greyware_tool_keyword = /azimjohn\/jprq/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string41_jprq_greyware_tool_keyword = /b44c1910df6b24847b75712e9f183d5fd9119e2e4dfdc15eeecb5e7159e4530a/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string42_jprq_greyware_tool_keyword = /bdca5844eac154b94bbdd1b51e68f7d4e45a560fa13c7ce0a227646b0091982a/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string43_jprq_greyware_tool_keyword = /bf356e9c87e06eddfe9c5c476742bbc9cf26405631296f03c8f57f91afbb5247/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string44_jprq_greyware_tool_keyword = /de10b700cffb64956f55e044a9ce830d9b775af10560b54f21b2fc125c801618/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string45_jprq_greyware_tool_keyword = /e749b296484dbb4329fc0e4dff5fe963ddc7ff3450042ce267fdd1b5abcd2fdb/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string46_jprq_greyware_tool_keyword = /f11f0d5b7f14d4751f40b9c2c92928dfdbe0d055981e140ba0a5d75ecfe72e10/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string47_jprq_greyware_tool_keyword = /fc621d5952a8fb61bfc73e197db64d87f35d1c12550b7bf6160bc78f6d61e44f/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string48_jprq_greyware_tool_keyword = /github\.com.{0,1000}\/jprq\/releases\/download\// nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string49_jprq_greyware_tool_keyword = /https\:\/\/aur\.archlinux\.org\/jprq\.git/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string50_jprq_greyware_tool_keyword = /https\:\/\/jprq\.io\/auth/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string51_jprq_greyware_tool_keyword = /https\:\/\/jprq\.io\/install\.sh/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string52_jprq_greyware_tool_keyword = /JPRQ\s\-\sThe\sTunneling\sService/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string53_jprq_greyware_tool_keyword = /jprq\sis\ssuccessfully\sinstalled/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string54_jprq_greyware_tool_keyword = /JPRQ_DOMAIN\=/ nocase ascii wide
+        // Description: expose TCP protocols such as HTTP - SSH etc. Any server!
+        // Reference: https://github.com/azimjohn/jprq
+        $string55_jprq_greyware_tool_keyword = /MIIEpQIBAAKCAQEAuIGT1C2uPwb62IT\/5IJdFioVAB\/r3Pa885n4z\+xEtGIm6XmD/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule kaseya_VSA_greyware_tool_keyword
 {
     meta:
@@ -9913,6 +11803,34 @@ rule ls_greyware_tool_keyword
         // Description: list remote pipename 
         // Reference: https://outflank.nl/blog/2023/10/19/listing-remote-named-pipes/
         $string1_ls_greyware_tool_keyword = /ls\s\\\\1.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}\\IPC\$\\/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule lsa_whisperer_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'lsa-whisperer' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "lsa-whisperer"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Tools for interacting with authentication packages using their individual message protocols
+        // Reference: https://github.com/EvanMcBroom/lsa-whisperer
+        $string1_lsa_whisperer_greyware_tool_keyword = /\/lsa\-whisperer\-.{0,1000}\.zip/ nocase ascii wide
+        // Description: Tools for interacting with authentication packages using their individual message protocols
+        // Reference: https://github.com/EvanMcBroom/lsa-whisperer
+        $string2_lsa_whisperer_greyware_tool_keyword = /\/lsa\-whisperer\.git/ nocase ascii wide
+        // Description: Tools for interacting with authentication packages using their individual message protocols
+        // Reference: https://github.com/EvanMcBroom/lsa-whisperer
+        $string3_lsa_whisperer_greyware_tool_keyword = /\\lsa\-whisperer\-/ nocase ascii wide
+        // Description: Tools for interacting with authentication packages using their individual message protocols
+        // Reference: https://github.com/EvanMcBroom/lsa-whisperer
+        $string4_lsa_whisperer_greyware_tool_keyword = /EvanMcBroom\/lsa\-whisperer/ nocase ascii wide
 
     condition:
         any of them
@@ -11305,15 +13223,21 @@ rule netsh_greyware_tool_keyword
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
         $string9_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        // Description: display all current TCP port redirections configured on the system
+        // Reference: N/A
+        $string10_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sall/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string10_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        $string11_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string11_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string12_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string12_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string13_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        // Description: display all current TCP port redirections configured on the system
+        // Reference: N/A
+        $string14_netsh_greyware_tool_keyword = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
 
     condition:
         any of them
@@ -11684,6 +13608,27 @@ rule ngrok_greyware_tool_keyword
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
         $string19_ngrok_greyware_tool_keyword = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string20_ngrok_greyware_tool_keyword = /tunnel\.ap\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string21_ngrok_greyware_tool_keyword = /tunnel\.au\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string22_ngrok_greyware_tool_keyword = /tunnel\.eu\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string23_ngrok_greyware_tool_keyword = /tunnel\.in\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string24_ngrok_greyware_tool_keyword = /tunnel\.jp\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string25_ngrok_greyware_tool_keyword = /tunnel\.sa\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string26_ngrok_greyware_tool_keyword = /tunnel\.us\.ngrok\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -12380,6 +14325,391 @@ rule pdbedit_greyware_tool_keyword
 }
 
 
+rule pgrok_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'pgrok' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "pgrok"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string1_pgrok_greyware_tool_keyword = /\sinstall\spgrok/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/jerson/pgrok
+        $string2_pgrok_greyware_tool_keyword = /\spgrok\.exe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/jerson/pgrok
+        $string3_pgrok_greyware_tool_keyword = /\spgrokd\.exe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string4_pgrok_greyware_tool_keyword = /\/app\/pgrokd\// nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/jerson/pgrok
+        $string5_pgrok_greyware_tool_keyword = /\/pgrok\.exe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string6_pgrok_greyware_tool_keyword = /\/pgrok\.git/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string7_pgrok_greyware_tool_keyword = /\/pgrok\.yml/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/jerson/pgrok
+        $string8_pgrok_greyware_tool_keyword = /\/pgrokd\.exe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string9_pgrok_greyware_tool_keyword = /\/pgrokd\.yml/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string10_pgrok_greyware_tool_keyword = /\/pgrokd_.{0,1000}\.zip/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string11_pgrok_greyware_tool_keyword = /\/var\/opt\/pgrokd/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/jerson/pgrok
+        $string12_pgrok_greyware_tool_keyword = /\\pgrok\.exe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string13_pgrok_greyware_tool_keyword = /\\pgrok\.yml/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/jerson/pgrok
+        $string14_pgrok_greyware_tool_keyword = /\\pgrokd\.exe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string15_pgrok_greyware_tool_keyword = /\\pgrokd\.yml/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string16_pgrok_greyware_tool_keyword = /\\pgrokd_.{0,1000}\.zip/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string17_pgrok_greyware_tool_keyword = /\>Poor\sman\'s\sngrok\</ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string18_pgrok_greyware_tool_keyword = /00440c4525e995e54ce65e9d0c85f7482136463c9109c61650687226aca149bc/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string19_pgrok_greyware_tool_keyword = /068793abf6b6c18bfcc9f22207b12de7f25d922960cd5b48e3547851216bc456/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string20_pgrok_greyware_tool_keyword = /073f9b935fa7e67e49cdd53823955c3ec8291fefcc39516f88ac57e2dd9131a1/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string21_pgrok_greyware_tool_keyword = /0c20cf6d65d5dfc9f36005813dc82517043fd635cbb571aa1c1039d3cd5161ec/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string22_pgrok_greyware_tool_keyword = /0fc8c8a3c45bf30f1f09ae9c74e8986c367958d81ba2001c23ee536ca0227fbe/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string23_pgrok_greyware_tool_keyword = /1079079045b66cde89827c0129aff180ad2d67fda71415164a2a3e98f37c40e7/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string24_pgrok_greyware_tool_keyword = /116fae615a600632bd007ea8608b2c814c55a02324f9b8cdd75e63e2b71d53ba/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string25_pgrok_greyware_tool_keyword = /11f6bee5589f447de6fa74890630deb8fc33cae47fdf31907b705a05a27e39b5/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string26_pgrok_greyware_tool_keyword = /17db2b8cf5cb903ef0b04dc10dfa5f24fd9ce7ec75674219f322b15d706935eb/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string27_pgrok_greyware_tool_keyword = /1fe3604bdf69ff5a881a77258a10583a3fea5958aaab958ee4c22080635f64ba/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string28_pgrok_greyware_tool_keyword = /22415883e18cde6e909ddcf683ded67fa419a726557f7124636f980e64b04576/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string29_pgrok_greyware_tool_keyword = /2b92a08a76d9b0e13e41660fdc2491eaeda7b8400f9d29542f27ad2edd004d9f/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string30_pgrok_greyware_tool_keyword = /2bf454abbd1446061cac6ee9f57b12c572c07a3093e45e29b0cdc088ab18238e/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string31_pgrok_greyware_tool_keyword = /2eb58b8d72bebd6f4ca4d55ac855dae5dd7f29b825ad14aba8e4a96e19c5ae54/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string32_pgrok_greyware_tool_keyword = /31dc3fe53dd1ad80d2c5e6ffa9221b62385b1cd2f16ecc240cd59e5f485155cd/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string33_pgrok_greyware_tool_keyword = /349d0d0ecabf954caa8a1a78ab35b16bbc625424e827e008db1c76fd4bd29dc5/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string34_pgrok_greyware_tool_keyword = /35d6b2ef9a31b54ebee2a29bf22bb623bb5c9a74110472268581d6ea8122132c/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string35_pgrok_greyware_tool_keyword = /3892f45ccf44d24fbe3b48933a876414e79e8e9a35f3924ef2dd1c63053f4656/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string36_pgrok_greyware_tool_keyword = /3da0eb5c83daa77c9e52759d3b668774b0bccbe16b87c74301ec08979ffb15d4/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string37_pgrok_greyware_tool_keyword = /3f06328ca39cad23ca718129de65b24c3630dbc51fb473b42405c18a23e21992/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string38_pgrok_greyware_tool_keyword = /4071819358aab734ff8346fa8540427d3735d964d636af6a803f84433e9ca03a/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string39_pgrok_greyware_tool_keyword = /43c68bdc9adf3cea7c3643492732aac7e8731d0abd50fdeab1f9b078801d41a8/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string40_pgrok_greyware_tool_keyword = /46d4423a5cf1811ceb701cd756aa94bcc6d53a3c4ca49d961a4fd2b2a75ab300/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string41_pgrok_greyware_tool_keyword = /47fd3fa87768d26e5e71cd73d507d5faf8ec898ead1ec46487e54c8e0ed63838/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string42_pgrok_greyware_tool_keyword = /48a3acd3b29c436bb696a1486128fa509bd08323eadafb8c7dad54882b45b8f4/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string43_pgrok_greyware_tool_keyword = /4973faa197eedbe906929425c2f85a2f29411fd84e1b0599e4951c07fe5f37be/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string44_pgrok_greyware_tool_keyword = /4aa6c882ba3b5d8a4a62f183f4ea878a9d86dda8e6713c44f0bb16528bc124df/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string45_pgrok_greyware_tool_keyword = /51ae744086e74f4266459e4fec04b65386dce95598a87b961398f85119bbf701/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string46_pgrok_greyware_tool_keyword = /53cb0a4c9d99d9fa9ceb83bc5fe6ac1f8f7100130b1597d9eb71b3a9fdb01fcd/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string47_pgrok_greyware_tool_keyword = /5579149600842ad916cf87ca07c8b8fd81b4a5737d28ba2c66b1e2c72a8cf036/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string48_pgrok_greyware_tool_keyword = /57ec0021464f26379ee9242f6b517b4276fb7e431cd963df8950dcec8c83d6ba/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string49_pgrok_greyware_tool_keyword = /5829a7b027c1fe0c12ba6e6fa4e53e8d21c94de346c0c3919a73da2565561979/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string50_pgrok_greyware_tool_keyword = /5b5327952836163d6a5c2a9ae0d300daebcae8b8066fd2cebf1e3907ccb0b3fd/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string51_pgrok_greyware_tool_keyword = /5e2b755a50d007fc6f5807bae412ea3d35ca448bda47423e0f80a3692e3455a6/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string52_pgrok_greyware_tool_keyword = /5f712eb517e8d795f053d28f443cddea953a0bfa339f78eed68a1c01566d84d3/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string53_pgrok_greyware_tool_keyword = /62dca9e606b8d8c2a1379e791210dece010cd801912d588dbbf3859d00a821da/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string54_pgrok_greyware_tool_keyword = /63ccc3e608d3225793b40e643af2115811668731a2b43cbf5217bfb3d7e01d84/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string55_pgrok_greyware_tool_keyword = /6fec9d5af24c2d845ab1e2146e38196ae9a8ae351442c6fb8a048373befd88d8/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string56_pgrok_greyware_tool_keyword = /763ca50b38753d213fa1c4b3d447ad0b7f595e9251f5471be04c6dae3a034308/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string57_pgrok_greyware_tool_keyword = /78db6e175aac64df82c8c51798da5dcedeb82559fa7cdcc489a718f87c385203/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string58_pgrok_greyware_tool_keyword = /79ae34d44a22c9c5e7f1eb1d60fc19e8ab43120cdf0852d8e17ea62ee39669ac/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string59_pgrok_greyware_tool_keyword = /7a75ffa6b95556dfc5841eed63d45ad41eb495c0da386aa4f61ddf209a529075/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string60_pgrok_greyware_tool_keyword = /7be3968468ba873800b67376c017a529418f1aa250f65577776b9630641f2468/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string61_pgrok_greyware_tool_keyword = /7ffdce15d8adc97dcaaa845d3e7f493b9750103f4e0e6a3e5281109d93272374/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string62_pgrok_greyware_tool_keyword = /81e16f20ad480d901964c4b9bfc2f0321a4693cb123f4d3148277bd9f7bc3f5d/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string63_pgrok_greyware_tool_keyword = /8513ddc466aa21460a7790754d7f9441725820996f68ae44731bd63fb8abd957/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string64_pgrok_greyware_tool_keyword = /8572bd593860c780a609128b9764e2f98e13ebf7130018e288f067bc75c71ef3/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string65_pgrok_greyware_tool_keyword = /869076f7f55c9cecc46bcef4b7c44a7538f2af695ff8ce728c71a0d52c48443b/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string66_pgrok_greyware_tool_keyword = /89c0d3180d1baa0b0ca6fb7dd3af81a80400ea4c5674101a5800c074bd3aec98/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string67_pgrok_greyware_tool_keyword = /8c3d91b1b0f23fa6998de41c1f4c12eab9f14e39fc224d3055477fbdf0c8a7aa/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string68_pgrok_greyware_tool_keyword = /8d2162fe492d7be3c17eb6578d8fcdedaeffe2294156a3f898f0cdb1fb6c10a8/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string69_pgrok_greyware_tool_keyword = /92ba52da6b5b623559117809305a93ee9ad6da07ea6352efec349e8d2760d307/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string70_pgrok_greyware_tool_keyword = /9827e63054ddec1ffe0f246f9bb0c0de0d30deac2055481b44304d13cc928fe2/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string71_pgrok_greyware_tool_keyword = /99e0f20ad43baaff5a1a38d9bb0e98a2b2269b8fc6ac3c3ff6fb70b802fb6911/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string72_pgrok_greyware_tool_keyword = /9b6ebca62874fff570d19b1d7eeee8eca39f0e9fe1c5496930413527fceaf85a/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string73_pgrok_greyware_tool_keyword = /9c86d0fbe739883dc37c81ff6a9e4fa7f06417c56fa52ad6ceb6ba7bc3e9f420/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string74_pgrok_greyware_tool_keyword = /9dd63128c55bdc6f062713958960f7bdec1983051df3114d9cfc2037089686c3/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string75_pgrok_greyware_tool_keyword = /9f6ee8fe7fea7bb68fed2ca7626a9277af8990ff8ee565c03ca3eecc083717df/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string76_pgrok_greyware_tool_keyword = /a2551565a931107db6e9ed883c7252bcfb51b185f95d598cffc30dc7997c4d61/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string77_pgrok_greyware_tool_keyword = /a2e65bd4579385605e7233852bea4627cf94a2ee83e6233d462740b7e930c284/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string78_pgrok_greyware_tool_keyword = /a483e9f06a8e03c3a09028279f8a03380dfc41c5ee85327763e684c866f9019f/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string79_pgrok_greyware_tool_keyword = /a8a01db928e625521789fb4187b72857049ea2542d1795afbe581ed6d77e6bc1/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string80_pgrok_greyware_tool_keyword = /a8ab4a99f65193c1bba3f8864a0f1d39e8d7c97843b4ac0fbacc98fe1d2ec161/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string81_pgrok_greyware_tool_keyword = /a8effdadf86dd52ed13ab8051982927ea464500c36b4d0c1fff5158da2b4abed/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string82_pgrok_greyware_tool_keyword = /a920c6b7605a82318a7f60f4a2bcab191359f6187983bbb82e56a6fe2cd7418d/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string83_pgrok_greyware_tool_keyword = /application_name\=\'pgrokd\'/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string84_pgrok_greyware_tool_keyword = /b1ce529f2a0ff157590b2607388d425ac9a0d076de7f58bb6ee7c14bdb657bd7/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string85_pgrok_greyware_tool_keyword = /b668e7abef3da11ad164c618aff533f225d96fa046034e64485a48eaf5fdaf58/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string86_pgrok_greyware_tool_keyword = /b7efb92268e1e7897c0844e0a0f6c8648173a3c5c2c51d46fa5677b6c58c1dcd/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string87_pgrok_greyware_tool_keyword = /b8714bdc54a797d35052db4d241bf2c5ca1dbd0f0ab549711ccdd0b54b4d1d55/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string88_pgrok_greyware_tool_keyword = /b886f3afc9b5d11dcf8741b00aff8c1f43f1007554ac58f949c7654df0566fed/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string89_pgrok_greyware_tool_keyword = /b9488c840679a25f1afc5666025727d823751107550249b8b28fdda43cf270d2/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string90_pgrok_greyware_tool_keyword = /ba9ae74a938a83efcaee904b800d7bff0b19e02f632c4956bd0361e6a32f4ef3/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string91_pgrok_greyware_tool_keyword = /bdb7525b0af0c8528ee5811393f46ca0905eea38ec615ba68bf86f9d358e9c11/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string92_pgrok_greyware_tool_keyword = /c54778b8dc4e458130197cf95d6fc594cc1b016b70eea917f8a44c2c37c080c7/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string93_pgrok_greyware_tool_keyword = /c6df3acfa4964ce75534e76ea4635280be68c946b8b5d0566a858337e74d5fd3/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string94_pgrok_greyware_tool_keyword = /cbab130e55af45dd1cc7b1644a799b92f7fa4b04f82b93e021e182399b8aefec/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string95_pgrok_greyware_tool_keyword = /cd23ba3117eb39491f3286532575c3ccce97f0445e18352c87799a7f82274c10/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string96_pgrok_greyware_tool_keyword = /cd5b16213c11faffa7ed44becec55368348013aa980e6a38f85f7f2a0aa2b85e/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string97_pgrok_greyware_tool_keyword = /cec943f322857887bed2af7cf0aacb4052dcdb63eb76180f6a2022e3e4133718/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string98_pgrok_greyware_tool_keyword = /cf2a0ea978a7f5a254a046155a39127ae68701a7b4ec51dd2e509b9f217e960f/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string99_pgrok_greyware_tool_keyword = /d0e4117d84d8a5e8a716a6cf6f06128a365465eb83e803a85ecd9ab2671468b4/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string100_pgrok_greyware_tool_keyword = /d110395a75afff8f1e8c54c7ae5fbd9e085ec21da4c472e4fb11346c17d8652d/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string101_pgrok_greyware_tool_keyword = /d273dcfbaab605187495a344d65d3a39f423144bf005a36bee87c292ab202c69/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string102_pgrok_greyware_tool_keyword = /d6541e6233d5baf5190b494f434dcf30943c33d4bb78266cac230eb905a10f50/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string103_pgrok_greyware_tool_keyword = /d789739fc4f5928ee0cb38a4520f9562562cffb2e3a48ab3cd6ba0c6e8b4cfb5/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string104_pgrok_greyware_tool_keyword = /d8d88c5aecf5f0b27208387cc830fd094e2b0e7230a965728a6862ee9c8278e0/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string105_pgrok_greyware_tool_keyword = /d9473d3695626684a9cae93f417516900fd0f21a03f61e6943f50435c762ac73/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string106_pgrok_greyware_tool_keyword = /da409444f4db4761ccf441e1e9ba8ba39ab8e63bf0dcc8054308aa5e805379d6/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string107_pgrok_greyware_tool_keyword = /db20e3d1a1eb02a323d1d3abcdd7adfdb71c04965988edb4e75fbe28c03858bc/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string108_pgrok_greyware_tool_keyword = /dc8ddf520783dad3b74770b0ad90d0201b090ef858dee7971825b7e45424f799/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string109_pgrok_greyware_tool_keyword = /e3bc166f9e3cd64e1eee1061f26cb80347f2cd4997971c91f3ae9cbe5cf35999/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string110_pgrok_greyware_tool_keyword = /ec0b2820e26edffdfbcb1e3e66a78dd1ba830fe37897a3a55bf4602a3e807cef/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string111_pgrok_greyware_tool_keyword = /f4e95340caf77ecf01f0b73c8d2941ff56fcbd908722a827db9bc8931ead693c/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string112_pgrok_greyware_tool_keyword = /f6c2a3ad0c251e7a5c109c6a60127c8e90506d8b71e78598c6a449c7f5c24659/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string113_pgrok_greyware_tool_keyword = /fb10885853b0c5f6a0cb0bc0e5998c430d99ffcb9a5bda1fd03cefe9f3028f7a/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string114_pgrok_greyware_tool_keyword = /fcc37e68c723df92d2c17ce16d8c703a90a0c2f160eeb84c4559457406bfdf57/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string115_pgrok_greyware_tool_keyword = /ff3ae7ab29ef7a21094e07650e8cd4a4291363c2819e2dfbae34520ec762efd7/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string116_pgrok_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:3320\/\-\/healthcheck/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string117_pgrok_greyware_tool_keyword = /jerson\/tap\/pgrok/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string118_pgrok_greyware_tool_keyword = /pgrok\shttp\s/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string119_pgrok_greyware_tool_keyword = /pgrok\sinit\s\-\-/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string120_pgrok_greyware_tool_keyword = /pgrok\stcp\s/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string121_pgrok_greyware_tool_keyword = /pgrok\/pgrok/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string122_pgrok_greyware_tool_keyword = /pgrokd\.exmaple\.yml/ nocase ascii wide
+        // Description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port forwarding
+        // Reference: https://github.com/pgrok/pgrok
+        $string123_pgrok_greyware_tool_keyword = /Reverse\stunnel\sserver\sstarted/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule phoenix_miner_greyware_tool_keyword
 {
     meta:
@@ -12434,6 +14764,277 @@ rule pktmon_greyware_tool_keyword
         // Description: pktmon network diagnostics tool for Windows that can be used for packet capture - packet drop detection - packet filtering and counting.
         // Reference: https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon
         $string1_pktmon_greyware_tool_keyword = /pktmon\sstart/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Portr_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Portr' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Portr"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string1_Portr_greyware_tool_keyword = /\son\shttp\:\/\/localhost\:7777/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string2_Portr_greyware_tool_keyword = /\sPortr\sinspector\srunning\son\s/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string3_Portr_greyware_tool_keyword = /\sportr\.exe/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string4_Portr_greyware_tool_keyword = /\/amalshaji\/portr\-admin\// nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string5_Portr_greyware_tool_keyword = /\/bin\/portr/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string6_Portr_greyware_tool_keyword = /\/portr\.exe/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string7_Portr_greyware_tool_keyword = /\/portr\.git/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string8_Portr_greyware_tool_keyword = /\/portr\/releases/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string9_Portr_greyware_tool_keyword = /\/portr_.{0,1000}_Darwin_arm64\.zip/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string10_Portr_greyware_tool_keyword = /\/portr_.{0,1000}_Darwin_x86_64\.zip/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string11_Portr_greyware_tool_keyword = /\/portr_.{0,1000}_Linux_arm64\.zip/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string12_Portr_greyware_tool_keyword = /\/portr_.{0,1000}_Linux_x86_64\.zip/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string13_Portr_greyware_tool_keyword = /\/portr_.{0,1000}_Windows_arm64\.zip/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string14_Portr_greyware_tool_keyword = /\/portr_.{0,1000}_Windows_x86_64\.zip/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string15_Portr_greyware_tool_keyword = /\/portr_admin\/.{0,1000}\.py/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string16_Portr_greyware_tool_keyword = /\\portr\.exe/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string17_Portr_greyware_tool_keyword = /\\portr\-main\\/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string18_Portr_greyware_tool_keyword = /04aeff8ca9ced185a7f1e860e046fcfbf47b5345d4480b3015937978fe2d2ecb/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string19_Portr_greyware_tool_keyword = /0927710fe2ab1e73a1797de36da9ada6322b8ac8ce473fc2db3a8b70b3ce141b/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string20_Portr_greyware_tool_keyword = /0c6710b58b9054fd232c624dae29020bc765c962ae095a3eb53a0981379689b8/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string21_Portr_greyware_tool_keyword = /0f3a3f091d06f67f44077711477c0908a957f161d178d9ad8942fee864ed7a29/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string22_Portr_greyware_tool_keyword = /1350cbc251898cdd6fc09f6ac24ff69b68ddb95ea71379dee9f598a62b484430/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string23_Portr_greyware_tool_keyword = /1c76ba5931eda89deb05158b1abbac7f740a594509f3620c52fa66287a5e7a6e/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string24_Portr_greyware_tool_keyword = /1d57d63ec9e3ec8fb3b527132e6603c81d8bdea62141c25c29e7d9e24b026e9f/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string25_Portr_greyware_tool_keyword = /224de67abbba2df8eb17aa567bb2b3be029ad21e4203692b6abb73628e75db02/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string26_Portr_greyware_tool_keyword = /34b5107c27cbae4cab4addfece8236d168102d7d6cc3ee93d29bf4d4b550065c/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string27_Portr_greyware_tool_keyword = /3f3be7d94aa91ed9d14a8c8f37413d2a3057c0a2758d579189c84904285007d5/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string28_Portr_greyware_tool_keyword = /451d8fa3adce80028ea451e1ddf7a185ea4a3329aae156bf40fdda5d1ac60c84/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string29_Portr_greyware_tool_keyword = /466869834998e6668cf4b7e73ed043c145c73c5a62e21d1bbf1ebf7cde3f86bd/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string30_Portr_greyware_tool_keyword = /48ef85a7f6eea1b650affacb62f046eca8a965f134482ff808e4a148a69e72b5/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string31_Portr_greyware_tool_keyword = /4bc1b107cd497c88dfbc262ff7bcae4e85874848df0435bb7ecb8334f23b19b3/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string32_Portr_greyware_tool_keyword = /4d797b16f3aa81a13bc1736b37e783336bcfb9a538148810b3d1ec8fe592e50c/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string33_Portr_greyware_tool_keyword = /51f4ff1014c223e9f936e13e8d053dddb16678c65e87b2cfa63cad36564d243c/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string34_Portr_greyware_tool_keyword = /54538a9a0676b8d5bb23c42250df271b736052c1f5b7168a73c14bc65aa017dc/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string35_Portr_greyware_tool_keyword = /5757b774c407cc8a6ce5f9601b244730635a30efcb0015fe454610850b14d38d/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string36_Portr_greyware_tool_keyword = /5b036a1f20522f45ddfe9956f4014efe311daed29a6888959f0822ff72da948f/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string37_Portr_greyware_tool_keyword = /61924a52c149b6ad50e462cebbdfc14c570293abdf1c97bddfe7c0c7580ada31/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string38_Portr_greyware_tool_keyword = /673de62a71e95d4b855f3a8c616edbe2b51f066625cdef9924c76a1f021a660c/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string39_Portr_greyware_tool_keyword = /6db7f9491dc7389e6f64cd4ae549eb3a304b1868309a40b7a175c0206c681bc9/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string40_Portr_greyware_tool_keyword = /6f4cee01855c127463f149bb94adc8bec1a5b9b19f8edfd8471002effbdd1fdb/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string41_Portr_greyware_tool_keyword = /727b1692111d8e799e8deb7f1243503994f08d71488805d3f8c35015b142a6b7/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string42_Portr_greyware_tool_keyword = /7a9f4a3bfc2a24075f9331f9ac21655b270ca43bb1845bc8f81e56943374a775/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string43_Portr_greyware_tool_keyword = /8027e8c3404952986b4323ee0773650bab81ae3cb36eb5f643b95c4f2c912ebf/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string44_Portr_greyware_tool_keyword = /83a82600aa1102569a14bb436c08b4abde68c4b47bd05934a4fed0ca8d187abd/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string45_Portr_greyware_tool_keyword = /85eaf5c3848e384ff88f16bf59f8d6e31194e01b2b8be58191de5a74d03348be/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string46_Portr_greyware_tool_keyword = /869df81bed2d14ea117e02aaff9894b9f9eac2b6c8802dd7be37eb14da8cca48/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string47_Portr_greyware_tool_keyword = /892dfce05bfcab969306a1034ef0fc0decc52d82b43cda8b6c395549c8ef1133/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string48_Portr_greyware_tool_keyword = /8e293b5a49ada7798b6d681ec267efecd5c6fbd12163ac13b042707b80f56c50/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string49_Portr_greyware_tool_keyword = /906172da211b4b657ad01652ffa8911d5add169b3eca2c77f5f1b79a178fe977/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string50_Portr_greyware_tool_keyword = /926dd1743afb553ef123f185b1ea1a0a463a25b4c4d0635142fa4ee4d5aceedb/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string51_Portr_greyware_tool_keyword = /97fc48554850cc143f262d6cc01fa415c7ff3bc517d2505795b70f447b0de993/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string52_Portr_greyware_tool_keyword = /9b50261daa62f2440c9e3ae0399615fe0b4d5dc807f4f9f1fdcd8a80bc0ab22f/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string53_Portr_greyware_tool_keyword = /9bf17e192c1d67d3116bee309c16ccdeaae36a68e53db5b555ccaf9455a255b1/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string54_Portr_greyware_tool_keyword = /a577a27e8304b63365699d0220bade895000da9fde1b29fdb0925292dcff0b4f/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string55_Portr_greyware_tool_keyword = /a7b789b5fbd81fafca5a5dca4671de13c6bf3b54b807c513d03bd1ee3f5290a9/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string56_Portr_greyware_tool_keyword = /a819a2e3e513712ec9dcba8129b7471aafc70ca6631561a8f6a4881a51ffa2c4/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string57_Portr_greyware_tool_keyword = /a853e1ad13c03ed6e28dba69cd407bfb2bdde3401c83abe79ab57a42fbd8968a/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string58_Portr_greyware_tool_keyword = /aea26b638e19ae54c752ccc0d9985bc6ccf0214a56ca5b2b26714feef2d95ac9/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string59_Portr_greyware_tool_keyword = /amalshaji\/portr/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string60_Portr_greyware_tool_keyword = /amalshaji\/taps\/portr/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string61_Portr_greyware_tool_keyword = /be21413da8a75c62583b1c9eaf5194f5853f5ee8aba7e67510069717a0fbfcf2/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string62_Portr_greyware_tool_keyword = /c3dcf5597629c40fa47791ba86420ff1322ca0adb6110b4fceec6168f5141ee7/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string63_Portr_greyware_tool_keyword = /c948e37486bb247fbbc9f20b5040a11f28f642f5760be9abda81fc979c9911f1/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string64_Portr_greyware_tool_keyword = /ccf830a3d9985235d37d82bc38432568ff15744e3772fbf52c947914cdd6745a/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string65_Portr_greyware_tool_keyword = /db73ab5dce549d531bd7e8ec51a89bf5040da07200e2834e7b652a0384db783b/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string66_Portr_greyware_tool_keyword = /e2ffe6675e592cf2760e3b9de2fd6a7c0298226b76f86f26b084de63ff4be574/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string67_Portr_greyware_tool_keyword = /ecdf4ee43944adcc0aa55f707711a0be5a0ff539792175195aeed7e3a860e457/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string68_Portr_greyware_tool_keyword = /ee64735aef9a98eff32fa75e2bf8df53b3c8312d85ca1d02e37c01d06fa6c47e/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string69_Portr_greyware_tool_keyword = /f1aa7c960a64c65548d23d2a77b3aa04844695174e44c7e04e0094190a1b8b46/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string70_Portr_greyware_tool_keyword = /f9ec1153b825b2a9bdb5bc59df82bfb08b7b85fe371c591f37c6748957378591/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string71_Portr_greyware_tool_keyword = /http\:\/\/localhost\:7777/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string72_Portr_greyware_tool_keyword = /https\:\/\/portr\.dev\/client\/installation\// nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string73_Portr_greyware_tool_keyword = /Portr\s\-\sExpose\slocal\sports\sto\spublic\sURLs/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string74_Portr_greyware_tool_keyword = /portr\sauth\sset\s\-\-token\s/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string75_Portr_greyware_tool_keyword = /portr\s\-c\s.{0,1000}\.yaml/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string76_Portr_greyware_tool_keyword = /portr\shttp\s/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string77_Portr_greyware_tool_keyword = /portr\stcp\s/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string78_Portr_greyware_tool_keyword = /portr\.exe\shttp\s/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string79_Portr_greyware_tool_keyword = /portr_admin\.apis/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string80_Portr_greyware_tool_keyword = /portr_admin\.db/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string81_Portr_greyware_tool_keyword = /portr_admin\.models\.auth/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string82_Portr_greyware_tool_keyword = /portr_admin\.services/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string83_Portr_greyware_tool_keyword = /PORTR_ADMIN_GITHUB_CLIENT_ID/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string84_Portr_greyware_tool_keyword = /PORTR_ADMIN_GITHUB_CLIENT_SECRET/ nocase ascii wide
+        // Description: Portr is a tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet
+        // Reference: https://github.com/amalshaji/portr
+        $string85_Portr_greyware_tool_keyword = /portr_next_url/ nocase ascii wide
 
     condition:
         any of them
@@ -12519,102 +15120,105 @@ rule powershell_greyware_tool_keyword
         // Description: alternativeto whoami
         // Reference: N/A
         $string23_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
+        // Description: hiding a user from the login screen by modifying a specific registry key
+        // Reference: N/A
+        $string24_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string24_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
+        $string25_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string25_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
+        $string26_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string26_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string27_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string27_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
+        $string28_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string28_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string29_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string29_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string30_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string30_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
+        $string31_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string31_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
+        $string32_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string32_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string33_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string33_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string34_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string34_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
+        $string35_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string35_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
+        $string36_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string36_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string37_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string38_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: list AV products with powershell
         // Reference: N/A
-        $string38_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        $string39_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string39_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string40_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string40_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string41_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        $string42_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string42_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string43_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string44_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string45_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string46_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string46_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string47_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string47_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string48_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string48_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string49_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string49_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string50_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string51_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string51_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string52_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string52_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
+        $string53_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string53_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
+        $string54_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string54_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string55_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string55_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string56_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -13318,6 +15922,160 @@ rule pyinstaller_greyware_tool_keyword
 }
 
 
+rule PyPagekite_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'PyPagekite' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "PyPagekite"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string1_PyPagekite_greyware_tool_keyword = /\sinstall\sxvnc4viewer\snetcat\-traditional\ssocat/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string2_PyPagekite_greyware_tool_keyword = /\spagekite\.logging/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string3_PyPagekite_greyware_tool_keyword = /\spagekite\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string4_PyPagekite_greyware_tool_keyword = /\spagekite\-gtk\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string5_PyPagekite_greyware_tool_keyword = /\"PageKite\ssystem\sservice\"/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string6_PyPagekite_greyware_tool_keyword = /\/etc\/pagekite\.d/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string7_PyPagekite_greyware_tool_keyword = /\/pagekite\-.{0,1000}\.log/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string8_PyPagekite_greyware_tool_keyword = /\/pagekite\.log/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string9_PyPagekite_greyware_tool_keyword = /\/pagekite\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string10_PyPagekite_greyware_tool_keyword = /\/pagekite\-0\.3\.21\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string11_PyPagekite_greyware_tool_keyword = /\/pagekite\-0\.4\.6a\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string12_PyPagekite_greyware_tool_keyword = /\/pagekite\-0\.5\.6d\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string13_PyPagekite_greyware_tool_keyword = /\/pagekite\-0\.5\.8a\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string14_PyPagekite_greyware_tool_keyword = /\/pagekite\-gtk\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string15_PyPagekite_greyware_tool_keyword = /\/pagekite\-tmp\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string16_PyPagekite_greyware_tool_keyword = /\/PyPagekite\.git/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string17_PyPagekite_greyware_tool_keyword = /\/PyPagekite\/tarball\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string18_PyPagekite_greyware_tool_keyword = /\/PyPagekite\/zipball\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string19_PyPagekite_greyware_tool_keyword = /\/var\/log\/pagekite\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string20_PyPagekite_greyware_tool_keyword = /\/var\/run\/pagekite\.pid/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string21_PyPagekite_greyware_tool_keyword = /\[PageKite\]\sRemote\sconnection\sclosed\!/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string22_PyPagekite_greyware_tool_keyword = /\\pagekite\.cfg/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string23_PyPagekite_greyware_tool_keyword = /\\pagekite\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string24_PyPagekite_greyware_tool_keyword = /\\pagekite\-gtk\.py/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string25_PyPagekite_greyware_tool_keyword = /23e8d0a95d5769ea14e4fd5eac6b5c111ce538e61b18492c21482afd015170eb/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string26_PyPagekite_greyware_tool_keyword = /7270581d315cffb125f9ac64ebcb6622959c8e9f779b8a07808fd6929b0e746a/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string27_PyPagekite_greyware_tool_keyword = /7dc50c28dc7c2fa9a6ea80df35c06bd649b17ae86d333e88b3bf242ac5690c98/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string28_PyPagekite_greyware_tool_keyword = /b01db099512e344df190ee405619399c835b1d5522e2e6faa8e47b49418bab66/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string29_PyPagekite_greyware_tool_keyword = /be8fc36ec0082bdb7d20a21ae7098899529bc9b9f6439b1496ca634395598d8a/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string30_PyPagekite_greyware_tool_keyword = /bre\@pagekite\.net/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string31_PyPagekite_greyware_tool_keyword = /c4ec5f4d04c44b7a1c8cf813435dbc66a541b450bbaca4d70ded985d6518e76a/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string32_PyPagekite_greyware_tool_keyword = /f16d1b7d69bf4c2a9a7e737809dd930012f419e7b7977887226f0f6859367cc4/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string33_PyPagekite_greyware_tool_keyword = /f2fd6676dba233df558278e6be42cd4c50a78a9c3f879db87acfc96607f41331/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string34_PyPagekite_greyware_tool_keyword = /http\:\/\/.{0,1000}\.pagekite\.me/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string35_PyPagekite_greyware_tool_keyword = /http\:\/\/up\.pagekite\.net\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string36_PyPagekite_greyware_tool_keyword = /https\:\/\/.{0,1000}\.pagekite\.me/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string37_PyPagekite_greyware_tool_keyword = /https\:\/\/pagekite\.net\/downloads\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string38_PyPagekite_greyware_tool_keyword = /https\:\/\/pagekite\.net\/pk\/src\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string39_PyPagekite_greyware_tool_keyword = /kitename\.pagekite\.me/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string40_PyPagekite_greyware_tool_keyword = /pagekite\.httpd/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string41_PyPagekite_greyware_tool_keyword = /pagekite\.py\s\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string42_PyPagekite_greyware_tool_keyword = /pagekite\.py\s443\shttps\:\/\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string43_PyPagekite_greyware_tool_keyword = /pagekite\.py\s80\shttp\:\/\// nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string44_PyPagekite_greyware_tool_keyword = /pagekite\.py\s\-\-add\s/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string45_PyPagekite_greyware_tool_keyword = /pagekite\.py\slocalhost\:/ nocase ascii wide
+        // Description: This is pagekite.py a fast and reliable tool to make localhost servers visible to the public Internet.
+        // Reference: https://github.com/pagekite/PyPagekite
+        $string46_PyPagekite_greyware_tool_keyword = /pagekite\/PyPagekite/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule pyshark_greyware_tool_keyword
 {
     meta:
@@ -13352,6 +16110,31 @@ rule pyshark_greyware_tool_keyword
         // Description: Python wrapper for tshark allowing python packet parsing using wireshark dissectors
         // Reference: https://github.com/KimiNewt/pyshark
         $string8_pyshark_greyware_tool_keyword = /pyshark\.RemoteCapture\(/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule python_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'python' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "python"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: interactive shell
+        // Reference: N/A
+        $string1_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/bash/ nocase ascii wide
+        // Description: interactive shell
+        // Reference: N/A
+        $string2_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/sh/ nocase ascii wide
+        // Description: interactive shell
+        // Reference: N/A
+        $string3_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\\\"\/bin\/sh/ nocase ascii wide
 
     condition:
         any of them
@@ -13694,6 +16477,817 @@ rule ratchatpt_greyware_tool_keyword
 }
 
 
+rule rathole_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'rathole' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "rathole"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string1_rathole_greyware_tool_keyword = /\srathole\.exe/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string2_rathole_greyware_tool_keyword = /\/frpc\-mem\.log/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string3_rathole_greyware_tool_keyword = /\/frps\-mem\.log/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string4_rathole_greyware_tool_keyword = /\/rathole\.exe/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string5_rathole_greyware_tool_keyword = /\/rathole\.git/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string6_rathole_greyware_tool_keyword = /\/rathole\/src\// nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string7_rathole_greyware_tool_keyword = /\/rathole\-aarch64\-/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string8_rathole_greyware_tool_keyword = /\/rathole\-arm/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string9_rathole_greyware_tool_keyword = /\/rathole\-main\// nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string10_rathole_greyware_tool_keyword = /\/rathole\-mipsel\-/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string11_rathole_greyware_tool_keyword = /\/rathole\-x86_64/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string12_rathole_greyware_tool_keyword = /\\rathole\.exe/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string13_rathole_greyware_tool_keyword = /\\rathole\\src\\/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string14_rathole_greyware_tool_keyword = /\\rathole\-aarch64\-/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string15_rathole_greyware_tool_keyword = /\\rathole\-arm/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string16_rathole_greyware_tool_keyword = /\\rathole\-main\\/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string17_rathole_greyware_tool_keyword = /\\rathole\-mips\-/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string18_rathole_greyware_tool_keyword = /\\rathole\-x86_64/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string19_rathole_greyware_tool_keyword = /\|\svegeta\sattack\s\-duration\s10s\s\>\s\/dev\/null/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string20_rathole_greyware_tool_keyword = /\|\svegeta\sattack\s\-rate\s/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string21_rathole_greyware_tool_keyword = /0059214c35241df34371e16ec368ef02023ca321cbdc8608c36ab75c4b14cab4/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string22_rathole_greyware_tool_keyword = /016d82ec6cf3550ac4dea3881c248a0d544f09144881557439aa6e4b0f134989/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string23_rathole_greyware_tool_keyword = /024db78c74b32524c54cc8617d1c7dbcd742b0d99bf44087ad85c2e913ca4156/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string24_rathole_greyware_tool_keyword = /0581143b11d99500ea1fd4b61775c395276fd3ec2a0352cf3b9050274ddd8068/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string25_rathole_greyware_tool_keyword = /05da4e917b0c66df49df25e8e1139d57a8bfd6454ecd3e69ebb433fe0a52988c/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string26_rathole_greyware_tool_keyword = /065886fd1e058334a56aae3730a9291f35cc144a858a0435d17773f85b3fb5c9/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string27_rathole_greyware_tool_keyword = /075860a08ea0a48a076989f101341a2b20f62e493fc045e9b3f2c6b04fee7374/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string28_rathole_greyware_tool_keyword = /082b4796f2b2fb7a81f9f00a8b2008713fba88eb8d80266c12a24a8ed3379101/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string29_rathole_greyware_tool_keyword = /0aef9a7896fe8bcad991aec5afc995529bd676169494759b4c5b0d4867431da0/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string30_rathole_greyware_tool_keyword = /0e7eb9d663478b8e6567d14c86a08b41e179a6ff7af69f44d343a05aa5082c23/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string31_rathole_greyware_tool_keyword = /0efb7bcf56f438180692206231d7119baf1696a927a64097ff0e4fdeb2d7b68a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string32_rathole_greyware_tool_keyword = /0f37caadfbf7eb1c8d7462487deec3080ca824c06ab1cef3a17ee803f80e0b96/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string33_rathole_greyware_tool_keyword = /10667fa9b2ff274ad3ad30e8747278bf55a1ff2b47db7fe43216e5f77c15ed3d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string34_rathole_greyware_tool_keyword = /113d243a2931e1b1b610181229a9e52d3ebd47fde7b5c2f286b8d54aed09efba/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string35_rathole_greyware_tool_keyword = /113f78974c687c8bc7ba3ae62843a9fdb1d767c85fbbda7779e7199b5a560100/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string36_rathole_greyware_tool_keyword = /137fc29ed639a8b44b3056598d1c85505650b5ad3a4a4e392b084ee7345e58b7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string37_rathole_greyware_tool_keyword = /14e7065f629b384425308287023f0bd181c464ea522109846c2d7db26ad29608/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string38_rathole_greyware_tool_keyword = /14ebe6f781314c1d68eecca437483e92b621ca69f8859a652d73a94dd0a93018/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string39_rathole_greyware_tool_keyword = /15b24f9b6d402b8f55a96f9deea8cc387513c040030428d9c32dbfb1013d912f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string40_rathole_greyware_tool_keyword = /167a5fd6a1435ef23452aabcc251924144c04fb75cba9d178d3b4eec0a0b89d6/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string41_rathole_greyware_tool_keyword = /189b30810273723068cc1de34f0898f999fb1e8e912140e78119f588de4c613b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string42_rathole_greyware_tool_keyword = /191768fc581508bcc3426c4ed5d227ff4b075d6d1d5309d220d144486d8490d1/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string43_rathole_greyware_tool_keyword = /193051af6c427627482ae2318feff8615ce834f3c00cb61d7a12e71bfabc60f3/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string44_rathole_greyware_tool_keyword = /197893f2048f9925f1e6ed4e292ac9e7fc5923fa06cb27f994d26572e8015263/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string45_rathole_greyware_tool_keyword = /1a451fd4ea04c5e764361e14cf2458ed4c3880659d0aa664c9dbc5ab74d7b44e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string46_rathole_greyware_tool_keyword = /1a7124d26b8e5b879fd245cd8c0d0eae962a3aa7e897d7cecf23c38528a3f58c/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string47_rathole_greyware_tool_keyword = /1b501cd229b855a0d7c4fe904c512ea453a3c1b225f55f03a4577e91cc434aaf/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string48_rathole_greyware_tool_keyword = /1c4cd487862b68af1e3319e7f37e3b37db822b41e580528653c16264e5d44c40/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string49_rathole_greyware_tool_keyword = /1c722fc7d3e234e27029f791232f8f19460b02226f80d391ab8f2102b5f76c29/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string50_rathole_greyware_tool_keyword = /1d55ef3e801a86435e2146f3409669fd31cb572500f3da333109f017181114c5/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string51_rathole_greyware_tool_keyword = /1df13a2ce963c124cb494c745e67d8bf8abb87b94a9b640e5143b16138cb5d2d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string52_rathole_greyware_tool_keyword = /1e8312b30e0290161f6304f3fe76b7bf1cd111038b09e423f3d30ce1e77a7bdc/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string53_rathole_greyware_tool_keyword = /21fc8fb357996e9e95c04088f5fdc06cf2862bb7cb074e0f2919e9ed015ee884/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string54_rathole_greyware_tool_keyword = /22eb2e3f446e71d111afbe7e10ec82d0c729545e7823d9ca860f3a65754cc200/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string55_rathole_greyware_tool_keyword = /24f8d15c5c09600a2138153f68eebed5831b31d90ae785bf4d25c6129afe2be5/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string56_rathole_greyware_tool_keyword = /261dc25293f04e40a09a24fd1e039041aea5e27afa7ddb234db3882b74b396ca/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string57_rathole_greyware_tool_keyword = /262a3f517a064466994ff41b9fa24f03b5df660adf9a4ff53ad34fd071bd85a9/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string58_rathole_greyware_tool_keyword = /26600cf2666c1482269a4844910e9af915894981dedd319dfa47e7f3240dba7e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string59_rathole_greyware_tool_keyword = /272c46ee6c8dc5d08397a2d602e398ca5465bce04df1571fc53ee993ea58d95f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string60_rathole_greyware_tool_keyword = /2874343d4ca8de15f5a994dbf330d7497cc6798e5685db1d3c4a64ed160dffd2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string61_rathole_greyware_tool_keyword = /28b4073db264ae8edbbc66194419ba03950a22c63c88555978a6d4747245c9e8/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string62_rathole_greyware_tool_keyword = /2a7a2455eaa1b1bf0ae58b1edd93acc514b4f985ec57c681e85d7490e50402f9/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string63_rathole_greyware_tool_keyword = /2abf5f64cce68069617766e7d6c105b71215fc936574e31c13a8aa116c14ac4e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string64_rathole_greyware_tool_keyword = /2b33ead1b58d9e5254447cef54119027e5b1ca360c88e5929bff19685955d668/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string65_rathole_greyware_tool_keyword = /2b3f74062d1303d71cd368b1090436d1aeddecf45e8561bd94f9fe412dd1abff/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string66_rathole_greyware_tool_keyword = /2b4df7d7756102aadcdeda533e9372a45ede141300ef3d7941dd0d445de8adb6/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string67_rathole_greyware_tool_keyword = /2da2aa0a3d231a0b7aee9d0bbd71e6c20a836def31a42711875acc0eeee75635/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string68_rathole_greyware_tool_keyword = /2e90b0aeb75f7fc93b683697981df8cbcc207690fc550f0d36d80d2281ce4d14/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string69_rathole_greyware_tool_keyword = /2f3b4900a63d32a14e1578b2de68f78daad89b7c47b9388c26d922962faef430/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string70_rathole_greyware_tool_keyword = /2f747edb8eed5af60f18975abb44746e3986e332b6099764f91b6e2882736150/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string71_rathole_greyware_tool_keyword = /30338174d43234b97ffa081de00dc8364df7e1bc50e69ebba7c915c61adfacf1/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string72_rathole_greyware_tool_keyword = /308128ad3679e15f7992bcb3305e5a286a8a865df3ee7e6b3e4a07b5a041a46a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string73_rathole_greyware_tool_keyword = /335ce7cb470142a3022d1158a8f102bcd97a8a0348d47022c4674d70a1487e6e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string74_rathole_greyware_tool_keyword = /336cc961fe07dfb37fc61a5b585ae5b9e966389062aa2cc0d70d282e56edf32f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string75_rathole_greyware_tool_keyword = /348064a4a5a249c2e4a76251dea47477f366babc23bb26633923c75302d844f2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string76_rathole_greyware_tool_keyword = /357374d483045884038aa500fdba371af79e095d8e900f2d49bc23c45348ac07/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string77_rathole_greyware_tool_keyword = /37bc6496577a618cfba0ea53759dabf7e01e218ede999d5290d32040cd219eba/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string78_rathole_greyware_tool_keyword = /38c02b41d5db41d58683737cb04191cdfd3b61f41d31dc14b8d68a3a141cc647/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string79_rathole_greyware_tool_keyword = /391fd08daf4986afda1690225e4d9fed0c6d36ad1a56e4362cd8f2797e2ac93a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string80_rathole_greyware_tool_keyword = /39433eab5c47e1153d8e17086402f2848b7ba868df213fce01db52a664f53d64/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string81_rathole_greyware_tool_keyword = /3a4ce767d5ff5706372f654aa5ccf01bf84d10dc87777094be635dca8869ed39/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string82_rathole_greyware_tool_keyword = /3b96ccd1383bbd60d1b79867f5ed32bd15778b94399fb891c3172ea02516ccb1/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string83_rathole_greyware_tool_keyword = /3bbd5d43f581b39aa84a88d801f48506ab3105b7f958ea718556b4faa4564c0f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string84_rathole_greyware_tool_keyword = /3dc341f1a1daa80084699b292d0493012a3a85a5cbc157f6984c04def0d2dce7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string85_rathole_greyware_tool_keyword = /3e7d0d0f365120cd3cd351d147d1a12ee960c8068b464d4dd533a3821873b80e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string86_rathole_greyware_tool_keyword = /3f04e968871c818880aa23cecc9239651b7e550a625d655236690af22ea2bbdc/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string87_rathole_greyware_tool_keyword = /3fad6d60c83b9bce3ca61da5ef4cd799d91e6c1f17db783ebd515953c392cd4a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string88_rathole_greyware_tool_keyword = /40fa588b18db010c3b2826ea38be66a2894f95e284682caf14bc8894b16c4cae/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string89_rathole_greyware_tool_keyword = /427b5beef3af730379ab66c28fe12f192768f4aebcd24e02f540feee952d001f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string90_rathole_greyware_tool_keyword = /42850266bcac0528664c59738c32ba234582c70ffa0326b35c79612914961740/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string91_rathole_greyware_tool_keyword = /43486a6363b656d155d759db8a67e2e7264c38984c9ffa2d7449dfb085ad009d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string92_rathole_greyware_tool_keyword = /45f654720ebb2583ea767c849f3ac197e386c6a8dd0015db4084603da6c9ae8b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string93_rathole_greyware_tool_keyword = /46813eb8d4d50118f67087792670db2b8efdef414c6d3134ad474f1e6856c704/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string94_rathole_greyware_tool_keyword = /4684afc644880a2ba1b92c512ed3d4e5c653236d370e069b13065b1af878fe5c/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string95_rathole_greyware_tool_keyword = /469b789cfedcb5d0c3ffd47a4fb4666f38e582b56fb75efb21e38de4b23d8e9b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string96_rathole_greyware_tool_keyword = /46c6e992b3552d3672c40e7a91ecfb6f9b4620199cf2b5d1dd11cfccd44fa4b0/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string97_rathole_greyware_tool_keyword = /4721c0b58d6421bff09d13ade097f71af24d0752c2a9d69021f53e2726c76b5b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string98_rathole_greyware_tool_keyword = /482e5f220835c0ed0bad7c5823a7aab0e3c04fbe020d13f403400ddb368ab705/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string99_rathole_greyware_tool_keyword = /48a3b1707d22b65890d7feae45f45dff52faa7234ea5fb6f8c738eb0ad265246/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string100_rathole_greyware_tool_keyword = /48c45f037e2d32fa7f55d0c1e9957bba8cf9bce467437c389c5630d00dd46e10/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string101_rathole_greyware_tool_keyword = /4babb86918876772a6370e0e08a2640186971a1124728616289a9bda68ddc434/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string102_rathole_greyware_tool_keyword = /4be299e6a3466a6306d4ead72959aafa4a6c05618ddabc47d67dd0efd34281d7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string103_rathole_greyware_tool_keyword = /4bf8d88abad30daff8751a1c3a82769901969db2691ba8047cca09641410fca3/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string104_rathole_greyware_tool_keyword = /4fb15611c3facf046b2f52178d939e5c7b9fbba79320bd0329e129c4f179cd3d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string105_rathole_greyware_tool_keyword = /5041dad585a35ab841cf44028ee5318b61ce73b97f2ff90757a8ce609e620a63/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string106_rathole_greyware_tool_keyword = /507fb6f358381291fe987336263b35ab8c49b42abfa44f4b3f159b92ac54c521/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string107_rathole_greyware_tool_keyword = /51fffad6f5e6f4a431c08cc28c25297e62f85f97dca246fecb6f3c5d3ca22cbb/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string108_rathole_greyware_tool_keyword = /5252ae734d3bc191efdb95074830509a7ae4293fa25ce866b9fe35c455e61058/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string109_rathole_greyware_tool_keyword = /53afadaca917c0192ff3c2bae061516c6b14e6befe1d2d5c0cbb5f96de2eb74b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string110_rathole_greyware_tool_keyword = /5852511a70f384dcf32e29b3ec2f3d10d2704fdaae504d07d3876a887ca05cf4/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string111_rathole_greyware_tool_keyword = /589f0861ae990113c24fed3527dc6b15d3b9108bfbda358ed10503800820508a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string112_rathole_greyware_tool_keyword = /58cea3ee018d8f72239d639b012df07d9b0d22e49ecbe2522461db439643fb11/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string113_rathole_greyware_tool_keyword = /58edc63c43a77b5d217b081b9597824ff4831de52ce2491bcff4c62ce6888e2f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string114_rathole_greyware_tool_keyword = /5a7cd4fcf7cecb7d346af8e28b49ad66c43d5bb34610485dde2210cadba3d8c2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string115_rathole_greyware_tool_keyword = /5b3ae3dde66a377dec786323215a45d10f55ada626d29a2890d2f4915111b7a7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string116_rathole_greyware_tool_keyword = /5b65d6f452aacc65b9282a842c5c327bf27bb92c11d73ed5466ba29f582bea07/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string117_rathole_greyware_tool_keyword = /5c470be4bbc5ffc24dfbde00aba320a8eb66a4bd2889a02e4e97a5c12117e061/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string118_rathole_greyware_tool_keyword = /5f9832e49d35fa40dd007cdb3cdddfea38ea63079cce124a01b43d7b47d4c6be/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string119_rathole_greyware_tool_keyword = /6130adcd3415141a87525d6a511d996d1b17afd3f9876e48b36f866c86a9f7c6/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string120_rathole_greyware_tool_keyword = /6133e8d04f789d3810b1c9fe24b0454ee821d809bae82e26642baa6f7a5312b6/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string121_rathole_greyware_tool_keyword = /62fe7d29d8b013efa5b599313a50713b285473514819ed4b427d910211c53d24/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string122_rathole_greyware_tool_keyword = /661ff1a84f0413f062b672be7ffccad36357290c76646715887689e3524e2b48/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string123_rathole_greyware_tool_keyword = /6680fa302838dad7262ebe0dc33c2f954d74552021062e3dc1f20993038e54bc/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string124_rathole_greyware_tool_keyword = /669d5f76c3456565a231a907aee6c2887a8835638a023cbded6c7bdaa306fbe5/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string125_rathole_greyware_tool_keyword = /68c3320fc6aac048a90bbbbe7e066df33a9ad43831fe27101130627e1180565d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string126_rathole_greyware_tool_keyword = /68d84e43220ca8a2245f37422e8499710529197cfa599ee2174049c83fd68898/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string127_rathole_greyware_tool_keyword = /6988f41ce97bebcfae509ed20ba95dc1a7148dcafdfb7c58452088d6d6d74df4/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string128_rathole_greyware_tool_keyword = /6b994027ecb764471cdcf3d547532203e4fcbe55fd68ad04a5f9881b56fce399/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string129_rathole_greyware_tool_keyword = /6c511d6c053f8958c718d4374289b25457d4d426c0215c5eba3616f77c6f65bb/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string130_rathole_greyware_tool_keyword = /6c8386af326a7123f12bff56f737a825e52564e9f142862cbd88653fc5b841b7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string131_rathole_greyware_tool_keyword = /6d01bb9b786da4013f55f0fe29dfb7490cede245414db1bac43fb204aad2c97c/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string132_rathole_greyware_tool_keyword = /6d686399731d32af0783b096717c5a14fdbe74e1e432ee2e8fdaace36ebbbe3d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string133_rathole_greyware_tool_keyword = /6e2966ff6488fa05ed5ffb24ae5dde4fe1954b3006aa0269510ac9feaf099c78/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string134_rathole_greyware_tool_keyword = /6e8b78647d756a84e7662d42955224fe17bcea674ff125ba1e63b0737ceaebe1/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string135_rathole_greyware_tool_keyword = /701fd0ae9d88d3a08c418e9d0fca6651c058b7eef8fb34194acf753bfd80e221/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string136_rathole_greyware_tool_keyword = /711795b31d4482d7f7ce181b00db2ce2a33d3d7675f1d9feab0e984b017d2178/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string137_rathole_greyware_tool_keyword = /726996a84c8ef0f3c50ecbab6842c5679c38f73f2dd7d0c7f7b4dec5411daee3/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string138_rathole_greyware_tool_keyword = /735a96908571fa623b9d4065a3061deaa897e5140724fc3dcb620bdd6679b516/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string139_rathole_greyware_tool_keyword = /73793e0d320ba7c4a8a4c5b7fe75283ca880530e18c76f3fc02180603301a34b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string140_rathole_greyware_tool_keyword = /768789bf3298d6ebcd03995ad1a0af4de83af5d894030c67e70edc229f61bd75/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string141_rathole_greyware_tool_keyword = /77bbb9dfeb00b721fdd4e6bf429487460843ca308673fb344c8ccbdb2e7ee7b6/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string142_rathole_greyware_tool_keyword = /7836f34128ee338249e00a47199408d57a052bd5f3e542ee9f09b6e42ad0895f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string143_rathole_greyware_tool_keyword = /7e479c191b5a4dc29c0da009c7165ed6cba9171338a6360ce9e8e83167dcba99/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string144_rathole_greyware_tool_keyword = /7f476454dbd7fb672b1d63e0786e2e2755a1fbfc3be04ab4f5bec8f23132a631/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string145_rathole_greyware_tool_keyword = /7fd3bda1079e0e7ca9186f8e2ac6a41c688b5ad0293b9afbe1f4397aa8f26e53/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string146_rathole_greyware_tool_keyword = /7ff5da235f8932a5e66bcf40bdf79947ebe731f8802af62a10684fed4e4e0388/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string147_rathole_greyware_tool_keyword = /822374f306a334c37c055f40f4adcc6ef5b381a0e38133760634bdcd480186aa/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string148_rathole_greyware_tool_keyword = /831296851f3b9f90c613b245ea3957e926f44f8373121a29b3f63df905b614c4/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string149_rathole_greyware_tool_keyword = /84002e45f5979c6ca1478be38d0215007f8208edb2b4a45e2571f6c003828dbc/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string150_rathole_greyware_tool_keyword = /846318dda27ff847acc25676c4d7a133ee8ea2cb80d4f5d273ef0945f211dd57/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string151_rathole_greyware_tool_keyword = /84c868b63bcfba344a52d0f53c63beaaf5dfc08f0ead2cee80656b48fa1d5e47/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string152_rathole_greyware_tool_keyword = /85549f76ecf192f4e61cdcbedc8af83b48a76d78924ab9c09eaeb31141944770/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string153_rathole_greyware_tool_keyword = /85bf085697ae96895b2ddf719c382e1647b4f17f4f4dc216dd89da79783dcd87/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string154_rathole_greyware_tool_keyword = /894368f2b42eac9feee89560aa890c1215883b716232c66f20bf4145d6bbf671/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string155_rathole_greyware_tool_keyword = /8a1ad5d4fc59693ea546bc7d9dfb9881cf33e48070907a5d7ca1b3643fb42590/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string156_rathole_greyware_tool_keyword = /8b4cda04c1c75474ce2c59d9acbc32f83deaa0a0b6ce16aff15948ebddfec63e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string157_rathole_greyware_tool_keyword = /8d2d38ec00ce9c7b59d7fb058a05709c6ecf7628cf9fcfc560c475691badc533/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string158_rathole_greyware_tool_keyword = /8d800107c780c3f726b3768f5db0daa1a6d3d7ae0a505a8ea93fe554a4749294/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string159_rathole_greyware_tool_keyword = /8f722963b5b107b2856cb4169ed16aaf5b823df9795bf4dd11b97d644fa39347/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string160_rathole_greyware_tool_keyword = /8fc95d849e66592d8a52f98f28c2d7443b8b2057fc6bafe2a5fca05251507300/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string161_rathole_greyware_tool_keyword = /90f66748d7cafe4e995a0ebcb7e7e10b84454618f02cc9dfdcb0bdfa01000642/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string162_rathole_greyware_tool_keyword = /921cf5b205e08c55b7d72439f0f27c4436cad9624493adedaec15a0283608d37/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string163_rathole_greyware_tool_keyword = /921e9e63dabdae842d71d8f7e856d50e0bb25fa9e4e8aa40ac248b88fb4cb808/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string164_rathole_greyware_tool_keyword = /92cc3feb57149c0b4dba7ec198dbda26c4831cde0a7c74a7d9f51e0002f65ead/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string165_rathole_greyware_tool_keyword = /933c42cc2516eb49b1af6e7a601b79e3e993c192ed3c50b7a96d22398197dc96/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string166_rathole_greyware_tool_keyword = /95663244ae0b98220f0e0075980c0da70094a06638fb4498515857e92e3f8b56/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string167_rathole_greyware_tool_keyword = /95f005945eac00f3412ffc59d7c6bdfce751fcaac307f4b599ae917e98841766/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string168_rathole_greyware_tool_keyword = /9a49111f3b3fcd8f1f7c1ecfe79c3d10dc6ba4e7595e0bc776fb328f70f68705/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string169_rathole_greyware_tool_keyword = /9c3286d0cb644bc2ffdff9dacb89b6d1b87dabbde373a52e45b73717fcc97664/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string170_rathole_greyware_tool_keyword = /9d6d883e78e055575e91b222042d50bb7a9d9e4f046257bc7c38e7f57deb552e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string171_rathole_greyware_tool_keyword = /9f1df2f4b8d5719321755917aa858e159ead67978a568196bde136759e9dcb2b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string172_rathole_greyware_tool_keyword = /a0038697d35fbe64f1d9edc3493da99bdd0f27f7a79502134605c3064b2c704e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string173_rathole_greyware_tool_keyword = /a131448308aacfd65d51f1a3861ccee0fd68640ed2694421871d46cd1216367b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string174_rathole_greyware_tool_keyword = /a2a82a2374bd7e6ade1645b0460c385b124bc7cce906c736f0b067ab21f0edaf/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string175_rathole_greyware_tool_keyword = /a355fed40b126e5a6fe1963d63bb12397f6fd5a88f0e67a4325dafa925229e56/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string176_rathole_greyware_tool_keyword = /a3ac47f75e01e2efedea26ee4cf9ef3b4f45d12c45dd429438e03224c055832c/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string177_rathole_greyware_tool_keyword = /a4b0f3f35a5fb57515736985a37f348b9a3303515d5c381ecf95f3422f124da5/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string178_rathole_greyware_tool_keyword = /a581c3c813327c36e97ca933d0169224d82a428b596b1d64492b06108ac4b97d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string179_rathole_greyware_tool_keyword = /a6d0d66175c5968762fcb0cb5b967cb7add0ca4b11fa276899cf8de9a1c20c7f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string180_rathole_greyware_tool_keyword = /a6d80ede0043ee980ff8f7f70acabb0e318c18d4514f90a131250232b33f2933/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string181_rathole_greyware_tool_keyword = /a73d83dd80d910135838437fc31497f5a865c8021c38cebe29805c237115a995/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string182_rathole_greyware_tool_keyword = /a7c2394f127db053d7da7e57353e017b319406f6474ff0318a8545c85cf55d80/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string183_rathole_greyware_tool_keyword = /a8392f36da158c474403c3fee97076c704714db05735b0c23bec268d591e27b2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string184_rathole_greyware_tool_keyword = /aafc9e58277f79e98ea146c55da484c7524d7e56b13cb189102e8438f510edbb/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string185_rathole_greyware_tool_keyword = /ace8104c5e20d3ff08efbb7ccc7a17421fa620ad0130a2f96642d38bcbf2de45/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string186_rathole_greyware_tool_keyword = /ad1cdabfb431402a99e40c0a9d932fe2153d8a26dc3be0e3a0a3a6736989b2d4/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string187_rathole_greyware_tool_keyword = /ad62f18dcc34d56d48931cf7559bcb64e46e71feaf7e62ba8608ed38fc115937/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string188_rathole_greyware_tool_keyword = /ae33a0a1e4918c394acfd08d99853492fc97b9abafb4257fa739b6876a807950/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string189_rathole_greyware_tool_keyword = /aec887efef96f1f2ef41197b37806768476df4319c5f9a9cccac582e44f9893d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string190_rathole_greyware_tool_keyword = /aedb3bc27109fe131c2e5fcd778b9f30b864ac438f9252266492ba83ae0b73f8/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string191_rathole_greyware_tool_keyword = /b084b50bb95806e54bd010fa7e2663adfae267d4baea1b590b8f97a66ae730f9/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string192_rathole_greyware_tool_keyword = /b14b44b9a2346327ab1debd3d56028c3f861821666cbddb6c084e72ded0cb662/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string193_rathole_greyware_tool_keyword = /b4ae7e04d503aacbe2bcaf751c159d258fb4f199ccb3b5c2e0587531af6d3c4f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string194_rathole_greyware_tool_keyword = /b5bed9e86f1fcce890d35bf0f75dcdabe99dece7a1b5af2f1cafb1af5104ec66/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string195_rathole_greyware_tool_keyword = /b60aca868ccb04dd0116edeae8430c93be5dda4410f766d137d22dc02f9dce6e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string196_rathole_greyware_tool_keyword = /b6bb35e5bb724ced8d8d7da596f060ec650909eba12e38b5c40bcf32ed5e0ac2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string197_rathole_greyware_tool_keyword = /b76e232b8d3bb64d981b3a90fc81d1cf4e737fe28dfcfb41e37054a48ed326c2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string198_rathole_greyware_tool_keyword = /bb57a815d8a4aae884fe930b7a0daa6c408b60d932286fd060a4cf61ee79e01a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string199_rathole_greyware_tool_keyword = /bc375342f9360b0b5cbcb5a3701c301eaf577ec8ab5d1796cf10908d315edf72/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string200_rathole_greyware_tool_keyword = /bc4447977cdc9a765c2d6b61aada0fa40f45435aa68b193729cf4e7d8a94e891/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string201_rathole_greyware_tool_keyword = /bc680f0aa5ee457d60cb9d660071b3bb393f31c05c0e7fd7b89b39584ba25619/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string202_rathole_greyware_tool_keyword = /bd158af8aa25d8f7123030620494c3296b96e56a1cc387bdf2274635335be867/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string203_rathole_greyware_tool_keyword = /bd7eb45070c8a4e1595e9daaf55bfc331e5ada1244c4ed496b89225e22429cf7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string204_rathole_greyware_tool_keyword = /bef64b382548fdcd24b4736f6a92c5c68e5b8555c897ed27d83ecf50f8117486/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string205_rathole_greyware_tool_keyword = /c0386231b4e1b594981b572cd9859cde3f7fadd74729ef51107cd65999aa8f9e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string206_rathole_greyware_tool_keyword = /c1e6d0a41a0af8589303ab6940937d9183b344a62283ff6033a17e82c357ce17/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string207_rathole_greyware_tool_keyword = /c1fcfdac8ef03a170f6ec0f7baa30a470c61585c6e78a59cd73e6d50c9e6f5f9/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string208_rathole_greyware_tool_keyword = /c3d9753c93a5a4f6fdfd7c5146ffcb2ae4b733926b0ae3fff899d3b0851e0f60/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string209_rathole_greyware_tool_keyword = /c45bff01783f3f79df4d0c43b404ab3293e4e351fa760d7c9500200d5771d73a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string210_rathole_greyware_tool_keyword = /c518a96dc78f8a6fb2ccecb02c5ab09bb41f0e04c8f7e7de8b87b3392d3083d7/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string211_rathole_greyware_tool_keyword = /c5fb70cf2c8a3681d7e8397c8ac82c119f5bd64055dd47432c5e5672ce9a3986/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string212_rathole_greyware_tool_keyword = /c793af04a5ffa53c8dcde8f9453b312e40168de4081d64cbead076b8e7fcb0b9/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string213_rathole_greyware_tool_keyword = /c80c697470033dcb0c21c4c8bfb51f8514b4bfc10f3cc64e0960ed62420eb14f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string214_rathole_greyware_tool_keyword = /c8ca4efbee070fbf92d8029eb0ab7b6debc91c4f7fc3fe6c578c416294807565/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string215_rathole_greyware_tool_keyword = /c9404d48d63246380ae88630c327b603c5795542b4cc51287bea22a04bca46b5/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string216_rathole_greyware_tool_keyword = /c9673c278cbf55574c7a8d0c4e067e2d39b938d673b0d7332f58d28170ce267b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string217_rathole_greyware_tool_keyword = /ca6c79f236c29b8a923703800c1bc63ed8eb9d4e7f1951e9660bfdcc2b98e55e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string218_rathole_greyware_tool_keyword = /cabd08e92a016eb971ebda7ee0954f8e2b9cc234a3a61e4c04ce6fa97798ff06/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string219_rathole_greyware_tool_keyword = /cb548fc5c8a0eccd0a51a371d5ceb8abf994ea20a570d97cbd4592db6ac1919b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string220_rathole_greyware_tool_keyword = /ccfae00ec39b5da0ecd9b68049725f07ac4a340c837fd43468419a5a5929f103/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string221_rathole_greyware_tool_keyword = /ce30c574477d0b2527ccfe103b31d810f6c1aa8a83c08bfb5899214951d75c0d/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string222_rathole_greyware_tool_keyword = /ce9c03462b055ad6152b572662fbbc1febb19f9ce41f6ff7c7a2bfed51102166/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string223_rathole_greyware_tool_keyword = /d00b56fb9a39f27ad1c1b95a397861ab2d9898e13f60046669c72b875dcd43f4/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string224_rathole_greyware_tool_keyword = /d258f53b9e011e64920fb4f74c2cf0386993b9427de52c71b2147676422da83e/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string225_rathole_greyware_tool_keyword = /d5f0bd19109ae3e6385b613848cc09bee2d9b9a853c56ee82b75c888a2369499/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string226_rathole_greyware_tool_keyword = /dcb2717dd9c64e62a47b08565d50d43f8be857b9febd6f3a150941f95ce7ba44/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string227_rathole_greyware_tool_keyword = /dd4a876937f29c0732fe28b12d83372eab31a776a0a5c59f774190163bc6d442/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string228_rathole_greyware_tool_keyword = /dda6b391a168711d19c4499aba12c914e222dd053def0c21d054d66c53226bcc/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string229_rathole_greyware_tool_keyword = /e11c8f5673861b72e624373d2ebfed1cc50ebd59c8633da4b87a1e2361a53c02/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string230_rathole_greyware_tool_keyword = /e16e725b1a703f35d47a43e9c74996017703a65bcfd2fe042af15185ac856e29/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string231_rathole_greyware_tool_keyword = /e415807ec90293945012e78bfc528d3585e7672ca050cd3b56084e112c2d0249/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string232_rathole_greyware_tool_keyword = /e51c2e66cc4407d842afa1c1f700549da5efd37a6bd2dcc5c8094b777c72bc76/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string233_rathole_greyware_tool_keyword = /e54a93d0138fae68b4876b8f9ba5f88d2ce5b0d238a7fca6925ad6d0aeac5d98/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string234_rathole_greyware_tool_keyword = /e66e1d2a59507e235e6302d1a00e7bb3df833ba25b7151ef2d7521dbc1c2e3f3/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string235_rathole_greyware_tool_keyword = /e674a3b1a74f65ff587eef1080d3ce789484615f66af8c9c332231e9304f5220/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string236_rathole_greyware_tool_keyword = /e6a85ade86d4ae629e14eecf8883a618a8ddfd4c02bedc77cbb1a9e3219a56f0/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string237_rathole_greyware_tool_keyword = /e8662d80d2cc9acc5f8f4d8a1c1a5ff7717b2fa71919a405d0eed8b64c8c1d88/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string238_rathole_greyware_tool_keyword = /eb23b507e63729581b16b35de2db0cad23cce0afc1de1018198066c20e5c0c20/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string239_rathole_greyware_tool_keyword = /ec79b650c290fdfc46a1c80359337ba7458eee334197d2aecac4a3b86db1a1ed/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string240_rathole_greyware_tool_keyword = /ece4f9a9ae3d7823ed86c3dcc5540b02c7504904bbe0878d17cd7bbf71ac61ee/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string241_rathole_greyware_tool_keyword = /ee5d276260040e43272cdf7c70c51e4a03a959e0bd4f3f4752edb02569c7736a/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string242_rathole_greyware_tool_keyword = /f052586d3c8b6cecbafff4773c2a67a130c00ecdece4ea43f101923c53c28f58/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string243_rathole_greyware_tool_keyword = /f160f0e2319e8ead547548ccecdff561aea5b77a3bb00b387e1ddf3f1c3298db/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string244_rathole_greyware_tool_keyword = /f1c1f6e3dd1697be115ea8567fbed5f993832bc5e2400e69dbac6ccd95d02c61/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string245_rathole_greyware_tool_keyword = /f36b371ac6f48895384d78dc53d83daaf59d6f7086d5cb9ce7c74ba60ab81a0b/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string246_rathole_greyware_tool_keyword = /f415f14b5c1f88971cfd80555ba1a0c77a437401a7bd623a616261b7985ac5c2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string247_rathole_greyware_tool_keyword = /f43398d585caae28761b340c083216b2dda0898667161c5a43f587cea8b7f799/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string248_rathole_greyware_tool_keyword = /f4a0d07aa0dd0cb020a0d3273a615107ddb15ca8264577ac4c22e41cad47a2c2/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string249_rathole_greyware_tool_keyword = /f57034e42cba38366cfc0a304f16b1c1412419e322560d589d6b896312acde7f/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string250_rathole_greyware_tool_keyword = /f889e16f7550565628be5da507bbf33ab1fca61ab3541015fbb7a120a3a9cc29/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string251_rathole_greyware_tool_keyword = /f9b0e8b9bdc130652b4ec4c86a9c2d03dc85bd2057401970ff34cb5284581b90/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string252_rathole_greyware_tool_keyword = /fa4a6fc63d86f8f1faa7c103a845e4715ce79a048455c0eec897b27237576564/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string253_rathole_greyware_tool_keyword = /Failed\sto\srun\sthe\spingpong\sserver\sfor\stesting\:\s/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string254_rathole_greyware_tool_keyword = /fb75480462e81fe6c0d821641057d0534989a45452feb66851bf781e42e82ef5/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string255_rathole_greyware_tool_keyword = /fc3b41639946509efb1f6835bc2da2233482f71859031aeb73006967ef5d7b66/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string256_rathole_greyware_tool_keyword = /fc6b0a57727383a1491591f8e9ee76b1e0e25ecf7c2736b803d8f4411f651a15/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string257_rathole_greyware_tool_keyword = /fd243d10718135287eb1a555427abf58fdf9cabad14d08d31815763479b877dd/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string258_rathole_greyware_tool_keyword = /fe24df06821a78f1ccc81a8459ed13a14558b632908b266864257636e4fa8812/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string259_rathole_greyware_tool_keyword = /fee22f170cba77a8a17614c87621393e45ca2d703c049ca5e352083f0c9dd313/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string260_rathole_greyware_tool_keyword = /fef39ed9d25e944711e2a27d5a9c812163ab184bf3f703827fca6bbf54504fbf/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string261_rathole_greyware_tool_keyword = /rapiz1\/rathole/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string262_rathole_greyware_tool_keyword = /rathole\sconfig\.toml/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string263_rathole_greyware_tool_keyword = /rathole\sserver\.toml/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string264_rathole_greyware_tool_keyword = /ratholec\-mem\.log/ nocase ascii wide
+        // Description:  expose the service on the device behind the NAT to the Internet, via a server with a public IP.
+        // Reference: https://github.com/rapiz1/rathole
+        $string265_rathole_greyware_tool_keyword = /ratholes\-mem\.log/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rclone_greyware_tool_keyword
 {
     meta:
@@ -14000,120 +17594,123 @@ rule reg_greyware_tool_keyword
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
         $string2_reg_greyware_tool_keyword = /copy\s.{0,1000}system\.hive\s\\\\/ nocase ascii wide
+        // Description: hiding a user from the login screen by modifying a specific registry key
+        // Reference: N/A
+        $string3_reg_greyware_tool_keyword = /reg\sadd\s\"HKLM\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\/v\s.{0,1000}\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
         // Description: Allowing remote connections to this computer
         // Reference: N/A
-        $string3_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer.{0,1000}\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string4_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer.{0,1000}\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Hit F5 a bunch of times when you are at the RDP login screen
         // Reference: N/A
-        $string4_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
+        $string5_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
         // Description: At the login screen press Windows Key+U and you get a cmd.exe window as SYSTEM.
         // Reference: N/A
-        $string5_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
+        $string6_reg_greyware_tool_keyword = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
         // Description: Defense evasion technique disable windows defender
         // Reference: N/A
-        $string6_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string7_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string7_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\/v\s.{0,1000}DisableAntiSpyware.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
+        $string8_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\/v\s.{0,1000}DisableAntiSpyware.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string8_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\s.{0,1000}DisableAntiVirus.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
+        $string9_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\s.{0,1000}DisableAntiVirus.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string9_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\sDisable.{0,1000}\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string10_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\sDisable.{0,1000}\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Anti forensic - Disabling Prefetch
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string10_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session\sManager\\Memory\sManagement\\PrefetchParameters.{0,1000}\s\/v\sEnablePrefetcher\s\/t\sREG_DWORD\s\/f\s\/d\s0/ nocase ascii wide
+        $string11_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session\sManager\\Memory\sManagement\\PrefetchParameters.{0,1000}\s\/v\sEnablePrefetcher\s\/t\sREG_DWORD\s\/f\s\/d\s0/ nocase ascii wide
         // Description: Blind ETW Windows Defender: zero out registry values corresponding to its ETW sessions
         // Reference: N/A
-        $string11_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}0.{0,1000}\s\/f/ nocase ascii wide
+        $string12_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}0.{0,1000}\s\/f/ nocase ascii wide
         // Description: Disable Windows Defender Security Center
         // Reference: N/A
-        $string12_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
+        $string13_reg_greyware_tool_keyword = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
         // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string13_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        $string14_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
         // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string14_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string15_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: This particular change is associated with the handling of LAN Manager (LM) hash storage which can affect the security of password storage on the system. This command can be used as part of credential access or defense evasion techniques
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string15_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        $string16_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
         // Description: Disable Cortex: Change the DLL to a random value
         // Reference: N/A
-        $string16_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CryptSvc\\Parameters\s\/t\sREG_EXPAND_SZ\s\/v\sServiceDll\s\/d\s/ nocase ascii wide
+        $string17_reg_greyware_tool_keyword = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CryptSvc\\Parameters\s\/t\sREG_EXPAND_SZ\s\/v\sServiceDll\s\/d\s/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string17_reg_greyware_tool_keyword = /reg\sdelete\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/f/ nocase ascii wide
+        $string18_reg_greyware_tool_keyword = /reg\sdelete\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/f/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string18_reg_greyware_tool_keyword = /reg\squery\s\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
+        $string19_reg_greyware_tool_keyword = /reg\squery\s\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string19_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
+        $string20_reg_greyware_tool_keyword = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
         // Description: Check if LSASS is running in PPL
         // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
-        $string20_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string21_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
+        $string22_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string22_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
+        $string23_reg_greyware_tool_keyword = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string23_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
+        $string24_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string24_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
+        $string25_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string25_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
+        $string26_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string26_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
+        $string27_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string27_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
+        $string28_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string28_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
+        $string29_reg_greyware_tool_keyword = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string29_reg_greyware_tool_keyword = /reg\squery\sHKLM\\System\\CurrentControlSet\\Control\\LSA\s\/v\sLsaCfgFlags/ nocase ascii wide
+        $string30_reg_greyware_tool_keyword = /reg\squery\sHKLM\\System\\CurrentControlSet\\Control\\LSA\s\/v\sLsaCfgFlags/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string30_reg_greyware_tool_keyword = /reg\squery\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential/ nocase ascii wide
+        $string31_reg_greyware_tool_keyword = /reg\squery\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string31_reg_greyware_tool_keyword = /reg\ssave\s\"HK\"L\"\"M\\s\"\"a\"\"m\"\"\swin32\.dll/ nocase ascii wide
+        $string32_reg_greyware_tool_keyword = /reg\ssave\s\"HK\"L\"\"M\\s\"\"a\"\"m\"\"\swin32\.dll/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string32_reg_greyware_tool_keyword = /reg\ssave\s\"HK\"L\"\"M\\s\"\"ys\"\"t\"em\"\swin32\.exe/ nocase ascii wide
+        $string33_reg_greyware_tool_keyword = /reg\ssave\s\"HK\"L\"\"M\\s\"\"ys\"\"t\"em\"\swin32\.exe/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string33_reg_greyware_tool_keyword = /reg\ssave\s\"HK.{0,1000}L.{0,1000}M\\s.{0,1000}ec.{0,1000}u.{0,1000}rit.{0,1000}y.{0,1000}\"\supdate\.exe/ nocase ascii wide
+        $string34_reg_greyware_tool_keyword = /reg\ssave\s\"HK.{0,1000}L.{0,1000}M\\s.{0,1000}ec.{0,1000}u.{0,1000}rit.{0,1000}y.{0,1000}\"\supdate\.exe/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\sam to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string34_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
+        $string35_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string35_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
+        $string36_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string36_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
+        $string37_reg_greyware_tool_keyword = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\security to a .dat file
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string37_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c\:/ nocase ascii wide
+        $string38_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SECURITY\s.{0,1000}c\:/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\system to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string38_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
+        $string39_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string39_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
+        $string40_reg_greyware_tool_keyword = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string40_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+        $string41_reg_greyware_tool_keyword = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
 
     condition:
         any of them
@@ -14233,6 +17830,76 @@ rule RemCom_greyware_tool_keyword
         // Description: Remote Command Executor: A OSS replacement for PsExec and RunAs
         // Reference: https://github.com/kavika13/RemCom
         $string28_RemCom_greyware_tool_keyword = /RemComSvc\s\-\sWin32\sRelease/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule remotemoe_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'remotemoe' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "remotemoe"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string1_remotemoe_greyware_tool_keyword = /\sssh\s\-R.{0,1000}\sremote\.moe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string2_remotemoe_greyware_tool_keyword = /\.config\/systemd\/user\/remotemoe\.service/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string3_remotemoe_greyware_tool_keyword = /\/remotemoe\.git/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string4_remotemoe_greyware_tool_keyword = /159\.69\.126\.209/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string5_remotemoe_greyware_tool_keyword = /69bc5a68959f7b47ac43810dbe782723eca56101d4bb60533a78530ac1ba23b1/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string6_remotemoe_greyware_tool_keyword = /7k3j6g3h67l23j345wennkoc4a2223rhjkba22o77ihzdj3achwa\.remote\.moe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string7_remotemoe_greyware_tool_keyword = /92c70b09d49bef20ae730c579e125f4f7c66d85ef2249c77694f0066a3156b26/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string8_remotemoe_greyware_tool_keyword = /df1b9ddfb57a7fa9b93b250a689e392171764364ff929a701e7a2df763904b78/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string9_remotemoe_greyware_tool_keyword = /dummy\.remote\.moe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string10_remotemoe_greyware_tool_keyword = /fasmide\/remotemoe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string11_remotemoe_greyware_tool_keyword = /http\:\/\/.{0,1000}\.remote\.moe\// nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string12_remotemoe_greyware_tool_keyword = /https\:\/\/.{0,1000}\.remote\.moe\// nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string13_remotemoe_greyware_tool_keyword = /infrastructure\/remotemoe\.service/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string14_remotemoe_greyware_tool_keyword = /systemctl\srestart\sremotemoe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string15_remotemoe_greyware_tool_keyword = /systemctl\sstart\sremotemoe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string16_remotemoe_greyware_tool_keyword = /systemctl\sstatus\sremotemoe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string17_remotemoe_greyware_tool_keyword = /systemctl\sstop\sremotemoe/ nocase ascii wide
+        // Description: remotemoe is a software daemon for exposing ad-hoc services to the internet without having to deal with the regular network stuff such as configuring VPNs - changing firewalls - or adding port forwards
+        // Reference: https://github.com/fasmide/remotemoe
+        $string18_remotemoe_greyware_tool_keyword = /systemctl\s\-\-user\sstart\sremotemoe\.service/ nocase ascii wide
 
     condition:
         any of them
@@ -15339,6 +19006,263 @@ rule requests_ntlm_greyware_tool_keyword
 }
 
 
+rule restic_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'restic' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "restic"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string1_restic_greyware_tool_keyword = /\s\-r\srclone\:.{0,1000}\sinit/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string2_restic_greyware_tool_keyword = /\srestic\.exe/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string3_restic_greyware_tool_keyword = /\srestic\/restic\s/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string4_restic_greyware_tool_keyword = /\/restic\-.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string5_restic_greyware_tool_keyword = /\/restic\.exe/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string6_restic_greyware_tool_keyword = /\/restic_.{0,1000}_windows_amd64\.zip/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string7_restic_greyware_tool_keyword = /\/restic\-master\// nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string8_restic_greyware_tool_keyword = /\\restic\-.{0,1000}\.tar\.gz/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string9_restic_greyware_tool_keyword = /\\restic\.exe/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string10_restic_greyware_tool_keyword = /\\RESTIC_.{0,1000}_WINDOWS_AMD64\.E\-FC5783E7\.pf/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string11_restic_greyware_tool_keyword = /\\restic_.{0,1000}_windows_amd64\.zip/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string12_restic_greyware_tool_keyword = /\\restic\-completion\.ps1/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string13_restic_greyware_tool_keyword = /\\restic\-master\\/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string14_restic_greyware_tool_keyword = /78312276c42ff12162e5afaf6de8586d432022c8bc7551366471b8812703be7e/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string15_restic_greyware_tool_keyword = /98394683d8f30ce9fb313100f593dc16e97a52723b18d534cf586391a97cdc1d/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string16_restic_greyware_tool_keyword = /restic\scheck\s\-\-read\-data/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string17_restic_greyware_tool_keyword = /restic\sinit\s\-\-repo\s/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string18_restic_greyware_tool_keyword = /restic\s\-o\ss3\.bucket\-lookup/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string19_restic_greyware_tool_keyword = /restic\s\-r\s/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string20_restic_greyware_tool_keyword = /restic\/restic\:latest/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string21_restic_greyware_tool_keyword = /restic_.{0,1000}_windows_amd64\.exe/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string22_restic_greyware_tool_keyword = /RESTIC_REST_PASSWORD/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string23_restic_greyware_tool_keyword = /RESTIC_REST_USERNAME/ nocase ascii wide
+        // Description: backup program used by threat actors for data exfiltration
+        // Reference: https://github.com/restic/restic
+        $string24_restic_greyware_tool_keyword = /winpty\srestic\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule reverse_tunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'reverse-tunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "reverse-tunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string1_reverse_tunnel_greyware_tool_keyword = /\srtun\-server\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string2_reverse_tunnel_greyware_tool_keyword = /\srtun\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string3_reverse_tunnel_greyware_tool_keyword = /\sStarting\stunneling\sserver/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string4_reverse_tunnel_greyware_tool_keyword = /\/reverse\-tunnel\.git/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string5_reverse_tunnel_greyware_tool_keyword = /\/reverse\-tunnel\/agent\/cmd/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string6_reverse_tunnel_greyware_tool_keyword = /\/reverse\-tunnel\/server\/service/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string7_reverse_tunnel_greyware_tool_keyword = /\/rtun\-freebsd\-amd64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string8_reverse_tunnel_greyware_tool_keyword = /\/rtun\-linux\-amd64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string9_reverse_tunnel_greyware_tool_keyword = /\/rtun\-linux\-arm64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string10_reverse_tunnel_greyware_tool_keyword = /\/rtun\-mac\-amd64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string11_reverse_tunnel_greyware_tool_keyword = /\/rtun\-server\-freebsd\-amd64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string12_reverse_tunnel_greyware_tool_keyword = /\/rtun\-server\-linux\-amd64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string13_reverse_tunnel_greyware_tool_keyword = /\/rtun\-server\-linux\-arm64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string14_reverse_tunnel_greyware_tool_keyword = /\/rtun\-server\-mac\-amd64/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string15_reverse_tunnel_greyware_tool_keyword = /\/rtun\-server\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string16_reverse_tunnel_greyware_tool_keyword = /\/rtun\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string17_reverse_tunnel_greyware_tool_keyword = /\\rtun\-server\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string18_reverse_tunnel_greyware_tool_keyword = /\\rtun\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string19_reverse_tunnel_greyware_tool_keyword = /0f5c329fa1e4abd3d1d2fbbd493d0dcf419bc33e1aa809ed55500481ed2ebe65/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string20_reverse_tunnel_greyware_tool_keyword = /14d29e0f977fb74a925c9c2cab1ef3ed34eb6b35345b0af1645a64f6b85040f8/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string21_reverse_tunnel_greyware_tool_keyword = /19529823b5d0e8b0c2a4cf5e67b825254efbd7568b7d6b204a220e684e3787d7/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string22_reverse_tunnel_greyware_tool_keyword = /1ccedb3262e89f8d841a6c6b3ea5e8c5ef8fb42779168e5cc47ba1674be930f1/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string23_reverse_tunnel_greyware_tool_keyword = /2e28d91e35ca1009d77fc67d36553730e785333ffc14cb8af621113571bd730b/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string24_reverse_tunnel_greyware_tool_keyword = /2e4ce6b3a2e7019459a3f6cad24e07ee614c800a9d5b29c3d83f50fd758d1a93/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string25_reverse_tunnel_greyware_tool_keyword = /397ac6bd1ffe2d8baf3c8e41307bb36339fa0f7a97e61b614d25ab85cb3b90a7/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string26_reverse_tunnel_greyware_tool_keyword = /3b76d79a32202f1cdbae1e5ed949ee7a75f373a9280fbdfd15a6cc4490a1b595/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string27_reverse_tunnel_greyware_tool_keyword = /3e62062061ddd7a0974eb2f6106dc96d3c54f95f41121ff355de12d5a23e2624/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string28_reverse_tunnel_greyware_tool_keyword = /411b16657e992717f0eb9ac77b2a5468e23afcc8747bdabba4bcdfc008c845e7/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string29_reverse_tunnel_greyware_tool_keyword = /512fba960ac745dbb62576225ee9dd7f65bf83261c8d1364f50101c8e3fd55bf/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string30_reverse_tunnel_greyware_tool_keyword = /5e47aac7b50d8ac6ce9ebba6c28ca58ef1332493fba47ab47ec1d2da61c7f6e2/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string31_reverse_tunnel_greyware_tool_keyword = /6ab324b655ea1c39c3c8fb5709f322f0c468a203411fbbcb460b36ee0fc1d835/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string32_reverse_tunnel_greyware_tool_keyword = /6f94077fc6f9092d9e9282bee1588e70aaf70ad90407e2bd164c38325249af5e/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string33_reverse_tunnel_greyware_tool_keyword = /774dbc75e046096a7a18dbcef9353543db74312e9656ff4017d7f41c778be2fb/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string34_reverse_tunnel_greyware_tool_keyword = /793e227ee3a811a143e303909645a874c8db144cf6b48f480411efb2fdd44904/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string35_reverse_tunnel_greyware_tool_keyword = /8fd62fc653cef0bf765a71cf20a917c8440689e9f5ff77e95a5fea7be6818c66/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string36_reverse_tunnel_greyware_tool_keyword = /955854f00a41ee91d047e520aa445035d881f9cb214de1ed49fac829e1caf829/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string37_reverse_tunnel_greyware_tool_keyword = /a522a8bfbf83bf52cde85edb32577d6b9acddac6e3a432726f659ae7dd5a6a96/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string38_reverse_tunnel_greyware_tool_keyword = /a79a4c3ae4ecd33b7c078631d3424137ff332d7897ecd6e9ddee28df138a0064/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string39_reverse_tunnel_greyware_tool_keyword = /a8ebccf2cc342e1b5154989cd784691b5740a7f3df77cd8adb785f67384a93de/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string40_reverse_tunnel_greyware_tool_keyword = /ba65a4a428b16812cfade65b50138e0b865496a637bdf5dad7993bf3907cdd60/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string41_reverse_tunnel_greyware_tool_keyword = /d66a79fcbac667d28014c15003770a35bd941c346e87fb8e4e1b7fd02c3291c9/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string42_reverse_tunnel_greyware_tool_keyword = /d71bbdd588cd4f1507ea794ed63be80a7cb3bbb1d30430150dd8800adec83fd5/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string43_reverse_tunnel_greyware_tool_keyword = /d7eceeb90b1e75b17c42c6cef5b42e0ef1dc615efba9424bafce718304c7ee43/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string44_reverse_tunnel_greyware_tool_keyword = /dec51bba37da4ecf4df8994cb21931fdfcc4f661c362cb8392f44229d42ef337/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string45_reverse_tunnel_greyware_tool_keyword = /e6c9ef3c9ee804ca3bed5f13f5e179f9ef16b7b2513cdfc33974902faa0f7516/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string46_reverse_tunnel_greyware_tool_keyword = /e717e4a46f338480838e760a05b7a628ccca57b0d4d705a67359bf9481fa58ae/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string47_reverse_tunnel_greyware_tool_keyword = /ef77dea20926b6f460844b5a51fd0d238976a1dba89f20f0fccff96712ad9df8/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string48_reverse_tunnel_greyware_tool_keyword = /f865ac0b99a90f54ce67bbabb2e57226a5c61f58e7a867598a3d54fdfee895ee/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string49_reverse_tunnel_greyware_tool_keyword = /f99a0080be86f97331ea300f2a4f448097c5ae39100b15202c89fc91024b215e/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string50_reverse_tunnel_greyware_tool_keyword = /snsinfu\/reverse\-tunnel/ nocase ascii wide
+        // Description: rtun is a tool for exposing TCP and UDP ports to the Internet via a public gateway server. You can expose ssh and mosh server on a machine behind firewall and NAT.
+        // Reference: https://github.com/snsinfu/reverse-tunnel
+        $string51_reverse_tunnel_greyware_tool_keyword = /Tunneling\sremote\sconnection\sfrom\s.{0,1000}\sto\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rm_greyware_tool_keyword
 {
     meta:
@@ -16079,6 +20003,62 @@ rule set_greyware_tool_keyword
 }
 
 
+rule SetACL_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'SetACL' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "SetACL"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Manage Windows permissions from the command line
+        // Reference: https://helgeklein.com/download/
+        $string1_SetACL_greyware_tool_keyword = /\/SetACL\.exe/ nocase ascii wide
+        // Description: Manage Windows permissions from the command line
+        // Reference: https://helgeklein.com/download/
+        $string2_SetACL_greyware_tool_keyword = /\/SetACL64\.\.exe/ nocase ascii wide
+        // Description: Manage Windows permissions from the command line
+        // Reference: https://helgeklein.com/download/
+        $string3_SetACL_greyware_tool_keyword = /\\SetACL\.exe/ nocase ascii wide
+        // Description: Manage Windows permissions from the command line
+        // Reference: https://helgeklein.com/download/
+        $string4_SetACL_greyware_tool_keyword = /\\SetACL64\.exe/ nocase ascii wide
+        // Description: Manage Windows permissions from the command line
+        // Reference: https://helgeklein.com/download/
+        $string5_SetACL_greyware_tool_keyword = /\>SetACL\.exe\</ nocase ascii wide
+        // Description: Manage Windows permissions from the command line
+        // Reference: https://helgeklein.com/download/
+        $string6_SetACL_greyware_tool_keyword = /\>SetACL64\.\.exe\</ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule setspn_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'setspn' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "setspn"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Getting users with SPNs
+        // Reference: https://github.com/b401/Wiki/blob/main/Security/Windows/AD/enumeration.md?plain=1
+        $string1_setspn_greyware_tool_keyword = /setspn\.exe\s\-F\s\-Q\s.{0,1000}\// nocase ascii wide
+        // Description: Getting users with SPNs
+        // Reference: https://thedfirreport.com/2024/04/29/from-icedid-to-dagon-locker-ransomware-in-29-days/
+        $string2_setspn_greyware_tool_keyword = /setspn\.exe.{0,1000}\s\-T\s.{0,1000}\-Q\scifs\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule SetupVPN_greyware_tool_keyword
 {
     meta:
@@ -16111,6 +20091,352 @@ rule sftp_greyware_tool_keyword
         // Description: Detects the use of tools that copy files from or to remote systems
         // Reference: https://attack.mitre.org/techniques/T1105/
         $string1_sftp_greyware_tool_keyword = /sftp\s.{0,1000}\@.{0,1000}\:.{0,1000}\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule shadowsocks_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'shadowsocks' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "shadowsocks"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string1_shadowsocks_greyware_tool_keyword = /\sinstall\sshadowsocks\-rust/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string2_shadowsocks_greyware_tool_keyword = /\sprivoxy\.exe/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string3_shadowsocks_greyware_tool_keyword = /\sshadowsocks\-divert/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string4_shadowsocks_greyware_tool_keyword = /\sshadowsocks\-rust\.sslocal\-daemon/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string5_shadowsocks_greyware_tool_keyword = /\sshadowsocks\-tproxy\-mark/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string6_shadowsocks_greyware_tool_keyword = /\/etc\/capabilities\/shadowsocks\.json/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string7_shadowsocks_greyware_tool_keyword = /\/etc\/shadowsocks\-rust/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string8_shadowsocks_greyware_tool_keyword = /\/genacl_proxy_gfw_bypass_china_ip\.py/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string9_shadowsocks_greyware_tool_keyword = /\/privoxy\.exe/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string10_shadowsocks_greyware_tool_keyword = /\/Shadowsocks\-.{0,1000}\.zip/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string11_shadowsocks_greyware_tool_keyword = /\/Shadowsocks\.zip/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string12_shadowsocks_greyware_tool_keyword = /\/shadowsocks_service\./ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string13_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-manager\.sock/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string14_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-rust\.default/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string15_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-rust\.git/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string16_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-rust\.init/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string17_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-rust\.service/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string18_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-service/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string19_shadowsocks_greyware_tool_keyword = /\/shadowsocks\-windows\.git/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string20_shadowsocks_greyware_tool_keyword = /\/usr\/local\/etc\/shadowsocks6\.json/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string21_shadowsocks_greyware_tool_keyword = /\/var\/log\/shadowsocks/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string22_shadowsocks_greyware_tool_keyword = /\\genacl_proxy_gfw_bypass_china_ip\.py/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string23_shadowsocks_greyware_tool_keyword = /\\privoxy\.exe/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string24_shadowsocks_greyware_tool_keyword = /\\Shadowsocks\-.{0,1000}\.zip/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string25_shadowsocks_greyware_tool_keyword = /\\Shadowsocks\.CLI\\/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string26_shadowsocks_greyware_tool_keyword = /\\Shadowsocks\.csproj/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string27_shadowsocks_greyware_tool_keyword = /\\Shadowsocks\.zip/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string28_shadowsocks_greyware_tool_keyword = /\\shadowsocks\-windows\.sln/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string29_shadowsocks_greyware_tool_keyword = /\\ss_privoxy\.log/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string30_shadowsocks_greyware_tool_keyword = /__PRIVOXY_BIND_IP__/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string31_shadowsocks_greyware_tool_keyword = /__PRIVOXY_BIND_PORT__/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string32_shadowsocks_greyware_tool_keyword = /00833ecb01131c0c74ca39cfc0e0fe3549651df916dfc4d2c6d7aeda600784bc/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string33_shadowsocks_greyware_tool_keyword = /0472497b295c4466e58c2623f2f03281f4a8297696753dd18effe3a4d633e86e/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string34_shadowsocks_greyware_tool_keyword = /0eaa8e2763861316fdb41ba45636dbb78c1593714a0ed480573ff7efc5b34b7a/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string35_shadowsocks_greyware_tool_keyword = /13141ae2c7cfeea1ffe619f76b569d4c52204298daf5b986ffd4693534581b1e/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string36_shadowsocks_greyware_tool_keyword = /14f0840dbabc554d43cf3021e04f7b11c7285bd85ee13dfb9d59c0a942bcd515/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string37_shadowsocks_greyware_tool_keyword = /1CC6E8A9\-1875\-430C\-B2BB\-F227ACD711B1/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string38_shadowsocks_greyware_tool_keyword = /261755fa0c132c7719c4c5176bb2b5308a0176dc716fea898d3c63d60a21c521/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string39_shadowsocks_greyware_tool_keyword = /2654a13a86c8ac23149c8a173eed10965036445c50d53515d67a634b43e4ab87/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string40_shadowsocks_greyware_tool_keyword = /2731974930b30b2fce237f48911486b45dbd2d896d9ab3347051b0022a8bd424/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string41_shadowsocks_greyware_tool_keyword = /276d3ecc4dcbd180a4ee953cd9721ced7ecf1309d332b05bf3d0f02bfb73bfee/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string42_shadowsocks_greyware_tool_keyword = /2cc467b53348d1cafe2d329b96a48fdb54198fca6a6e1cf41b98df353f458e6f/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string43_shadowsocks_greyware_tool_keyword = /3f2b33ff51dfa3351b72926fc97202f2681af4aa329b815e55100851b02b8896/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string44_shadowsocks_greyware_tool_keyword = /46143050aa4cea03129c03b45faacccaa3773f2d7f300f7f031ffb83de547cbf/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string45_shadowsocks_greyware_tool_keyword = /4a302071d7fc21367f31e0d9c5f77ef1eb41ec097eaeadb8d65472b6be55ab99/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string46_shadowsocks_greyware_tool_keyword = /4acb4274db08c54c943eef6f456c6913557163d203cbd8be63a6780e5dcf7a42/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string47_shadowsocks_greyware_tool_keyword = /4b7786288011e1255695cdae0c2199353203fd94c2c6fa57bc3be3d332344c6a/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string48_shadowsocks_greyware_tool_keyword = /4d75006597652c67dc56aa9a078eeca3a52634bf1bf591b68c926bd01ad53d25/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string49_shadowsocks_greyware_tool_keyword = /4f932e61afb6bd1dd8b5c4c25c715f1623d3f574637d8154256531b4ef5000ac/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string50_shadowsocks_greyware_tool_keyword = /5bb545bf51618a253b1ccc145bf97c8ab29d9118d6ac5e90b9bfc33bb988c3d7/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string51_shadowsocks_greyware_tool_keyword = /62786ba330d6b4969906b297fbb26c3f9a9ad36672b4600938d3b607e9b3c980/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string52_shadowsocks_greyware_tool_keyword = /62b74a688d22bfdf20f673a351580029d7b9de67c6facc9a5613b22b3f798968/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string53_shadowsocks_greyware_tool_keyword = /662f875055d740d98e0047adeb2b632b85cafffa2129c1635c5312217ca978f3/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string54_shadowsocks_greyware_tool_keyword = /69c2084081bcd8ea91474bc4292863af35bdafa0b3e3b585195bdb0e0523a419/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string55_shadowsocks_greyware_tool_keyword = /6a842f64b5e04384ef3a1cb19797f2aa714ab44b3320f132529c60f4aafc6d75/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string56_shadowsocks_greyware_tool_keyword = /6c8aefae3e5ece28c1e182ffec2c00baf2faa7ca61c426b1db6275b03524dc8d/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string57_shadowsocks_greyware_tool_keyword = /6e2028eb0bc06325c6101c497832e66a95ce482b1771455bc7a873ef22291c65/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string58_shadowsocks_greyware_tool_keyword = /7749bb3fa881d702bdcaf541f87308c438663ef32fc67c07d0c10c286f7da12f/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string59_shadowsocks_greyware_tool_keyword = /78EB3006\-81B0\-4C13\-9B80\-E91766874A57/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string60_shadowsocks_greyware_tool_keyword = /7a52b4827a4dac14ccd0c8a05a46c7debafca33672285e7630ee8f8e54387738/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string61_shadowsocks_greyware_tool_keyword = /81257d02ae9cd6d59809ea470ce590cdeb3e7949f5a51dfacba21e1cd3d2713e/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string62_shadowsocks_greyware_tool_keyword = /83c2966fe942b2b0a1e31ea84f6336c024cb57ff5c397b0d1cddf050bb4e5b21/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string63_shadowsocks_greyware_tool_keyword = /8455f37f4777a237e87e3326cc9dd7af51b3bc2cfe968ff488e85effb2ca30ac/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string64_shadowsocks_greyware_tool_keyword = /87907a6d7e8d6b4cdf4264950869799096b5ebc9c3de4c9ed0204d91650ed54e/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string65_shadowsocks_greyware_tool_keyword = /8923E1ED\-2594\-4668\-A4FA\-DC2CFF7EA1CA/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string66_shadowsocks_greyware_tool_keyword = /8bd3acb166ddf194c57b5a38af0c9b3d1a60ab623fd04efa94434dcf5bb787c8/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string67_shadowsocks_greyware_tool_keyword = /913a779a64c4488167dd4d0e43427498ac2bb64b63ad6075b38c5c4af4f2e768/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string68_shadowsocks_greyware_tool_keyword = /94DE5045\-4D09\-437B\-BDE3\-679FCAF07A2D/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string69_shadowsocks_greyware_tool_keyword = /9509da528a842ad647f557e84ec00afbaf345222bf7d6219031bf176e4bba80e/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string70_shadowsocks_greyware_tool_keyword = /97C056B0\-2AEB\-4467\-AAC9\-E0FE0639BA9E/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string71_shadowsocks_greyware_tool_keyword = /97c1afbdfbe31e7fed17143d9885be6588be294488cffc83661a5ef55655d3d2/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string72_shadowsocks_greyware_tool_keyword = /99142A50\-E046\-4F18\-9C52\-9855ABADA9B3/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string73_shadowsocks_greyware_tool_keyword = /a44ba10f3e101f1118ea65ff2272e1b2da2d0ac96ceb0043bf3c9c75ad4a53a7/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string74_shadowsocks_greyware_tool_keyword = /a5e9856fc84492bf129cca06659842ccc9705f7e24eaa9bd6ec5d529f7c61abb/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string75_shadowsocks_greyware_tool_keyword = /a9b64e47ef85ace30ca6ea6e9d79fdc665a7eb7b0a4763a659f00aa307cf7ad5/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string76_shadowsocks_greyware_tool_keyword = /AE81B416\-FBC4\-4F88\-9EFC\-D07D8789355F/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string77_shadowsocks_greyware_tool_keyword = /b4810eb33bbc3888e66d51db3c76a52abe7b98d8520584daa8d92c03e412be57/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string78_shadowsocks_greyware_tool_keyword = /b5df12aab758bbaea8291069515a6e46b84b7b5326f24d54410fa20ac8c0c447/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string79_shadowsocks_greyware_tool_keyword = /b6d55d6536ff5e827c393516158924d228cfc2de2d127e302537e0f4abf1f98f/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string80_shadowsocks_greyware_tool_keyword = /ba5e8ac5fc350cef4640480e48932359266bff6a2a85fff3a9163dc07e5a310b/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string81_shadowsocks_greyware_tool_keyword = /cab2848992b779a1bdcdf76553265dc73b70046442ec9949135a515f7b65819f/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string82_shadowsocks_greyware_tool_keyword = /d19215f26a1791d5f04cd626f65108628e507be6df194fec4fe25115d74469ab/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string83_shadowsocks_greyware_tool_keyword = /d39f61dbf2a753769c0efb7712dd7bfa6e1d1593ebaed06150f206f3b6ff7de2/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string84_shadowsocks_greyware_tool_keyword = /DFE11C77\-62FA\-4011\-8398\-38626C02E382/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string85_shadowsocks_greyware_tool_keyword = /e1f6be0e39290a73ebd45a3f6254015badf0f451307ded5d96d2a3acb91e0642/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string86_shadowsocks_greyware_tool_keyword = /e3584150cc2cc74f7582e84f91ae9c258e63b67e722b0219a6378212c03ee85a/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string87_shadowsocks_greyware_tool_keyword = /e6225af4ab483e49445f0021bc05efc405e544e7a725eb6ecb3f8777a8783109/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string88_shadowsocks_greyware_tool_keyword = /e6fe3c2968b235f58bdd9b5e0d1eefafb1e577c9fc7a533eb88e198d11773b2d/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string89_shadowsocks_greyware_tool_keyword = /e9fad6bcba22427d7efb3d9b341d11173659a06cc12670ba9d542aeb670284b8/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string90_shadowsocks_greyware_tool_keyword = /EA1FB2D4\-B5A7\-47A6\-B097\-2F4D29E23010/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string91_shadowsocks_greyware_tool_keyword = /f3cb648c848b10ea67fe776ed08f1de7258d3e3e4f1b9a5779ecd500de9e9dd0/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string92_shadowsocks_greyware_tool_keyword = /f5f1aeff01f602aca4aa2da893395b2ae6552325e46ffe31c267ae5494558c8e/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string93_shadowsocks_greyware_tool_keyword = /F60CD6D5\-4B1C\-4293\-829E\-9C10D21AE8A3/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string94_shadowsocks_greyware_tool_keyword = /privoxy_UID\.conf/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string95_shadowsocks_greyware_tool_keyword = /Shadowsocks\sLocal\sService/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string96_shadowsocks_greyware_tool_keyword = /Shadowsocks\sstarted\sTCP/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string97_shadowsocks_greyware_tool_keyword = /Shadowsocks\sstarted\sUDP/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string98_shadowsocks_greyware_tool_keyword = /Shadowsocks\.PAC\./ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string99_shadowsocks_greyware_tool_keyword = /Shadowsocks\.Protocol/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string100_shadowsocks_greyware_tool_keyword = /Shadowsocks\.WPF/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string101_shadowsocks_greyware_tool_keyword = /shadowsocks\/shadowsocks\-rust/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string102_shadowsocks_greyware_tool_keyword = /shadowsocks\/shadowsocks\-windows/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string103_shadowsocks_greyware_tool_keyword = /shadowsocks\/ssserver\-rust/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string104_shadowsocks_greyware_tool_keyword = /SHADOWSOCKS_CONFIG_PATH/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string105_shadowsocks_greyware_tool_keyword = /SHADOWSOCKS6_CONFIG_PATH/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string106_shadowsocks_greyware_tool_keyword = /shadowsocks\-local\-service/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string107_shadowsocks_greyware_tool_keyword = /shadowsocks\-rust\-local\@/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string108_shadowsocks_greyware_tool_keyword = /shadowsocks\-rust\-server\@/ nocase ascii wide
+        // Description: Rust port - shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-rust
+        $string109_shadowsocks_greyware_tool_keyword = /snap\.shadowsocks\-rust\.sslocal\-daemon\.service/ nocase ascii wide
+        // Description: shadowsocks is a fast tunnel proxy that helps you bypass firewalls
+        // Reference: https://github.com/shadowsocks/shadowsocks-windows
+        $string110_shadowsocks_greyware_tool_keyword = /ss_privoxy\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -16581,6 +20907,140 @@ rule simplehttpserver_greyware_tool_keyword
 }
 
 
+rule SirTunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'SirTunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "SirTunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string1_SirTunnel_greyware_tool_keyword = /\s\$domain_SirTunnel_greyware_tool_keyword\ssirtunnel\s\$domain_SirTunnel_greyware_tool_keyword\s\$serverPort_SirTunnel_greyware_tool_keyword/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string2_SirTunnel_greyware_tool_keyword = /\ssirtunnel\.py/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string3_SirTunnel_greyware_tool_keyword = /\/config\/apps\/http\/servers\/sirtunnel\/routes/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string4_SirTunnel_greyware_tool_keyword = /\/SirTunnel\.git/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string5_SirTunnel_greyware_tool_keyword = /\/sirtunnel\.py/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string6_SirTunnel_greyware_tool_keyword = /\\sirtunnel\.py/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string7_SirTunnel_greyware_tool_keyword = /anderspitman\/SirTunnel/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string8_SirTunnel_greyware_tool_keyword = /d5687d84d518119cbdd84183bfe8cb29009d054794b3aed5bda7ad117a7e4d5e/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string9_SirTunnel_greyware_tool_keyword = /daps94\/SirTunnel/ nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string10_SirTunnel_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:2019\/id\// nocase ascii wide
+        // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
+        // Reference: https://github.com/anderspitman/SirTunnel
+        $string11_SirTunnel_greyware_tool_keyword = /matiboy\/SirTunnel/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule sish_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'sish' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "sish"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string1_sish_greyware_tool_keyword = /\ssish\s\-c\sdate/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string2_sish_greyware_tool_keyword = /\/_sish\/console/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string3_sish_greyware_tool_keyword = /\/sish\.git/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string4_sish_greyware_tool_keyword = /\/sish\.log/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string5_sish_greyware_tool_keyword = /\/sish\/cmd\// nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string6_sish_greyware_tool_keyword = /\\sish\.log/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string7_sish_greyware_tool_keyword = /0f8802e2c560ffe447ecaf7e88b9a7a0ac526c8e13b382822f9b4eba16c744a2/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string8_sish_greyware_tool_keyword = /3f4a0c9d63796dc8d7d2bb3947edf3a2722c9e783e7c7fdfa7e13f2b43eafdc3/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string9_sish_greyware_tool_keyword = /4146c24d1d9cfa4c6c019fe4a0bd22f7b5d18086b18b7a74a0965e16e7f94bef/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string10_sish_greyware_tool_keyword = /5afdada4e30699db8a1903e8a57fb9b50783299b1a8606f145a56e15fa1a9521/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string11_sish_greyware_tool_keyword = /87ae04b11731fe410b0e3bc87e6c99150dc9ba79bfcbd0ec4bf368930e6e2e7b/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string12_sish_greyware_tool_keyword = /93eabc4b534f92a5532322bbcc461a04abbb0c32c3c4957c258fd77f451e3b52/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string13_sish_greyware_tool_keyword = /aa52afe3cfd41aa6bdc1601a8f5a8dc2f0cac8a7af2cc162bd569082a12aaefa/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string14_sish_greyware_tool_keyword = /ab7c24fe58442c46ea47fe89b2b967d733d3a35e2f363af15ddfc82c6f680509/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string15_sish_greyware_tool_keyword = /antoniomika\/sish/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string16_sish_greyware_tool_keyword = /e3e70157c3a75c549870c5f2796a64c8de05c3d9f71fbcf76239f07875bff829/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string17_sish_greyware_tool_keyword = /eb0d8e4273608c13b5957ac047f911442b3d55527e20097cd038e120f01df5ae/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string18_sish_greyware_tool_keyword = /http\:\/\/.{0,1000}\.ssi\.sh/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string19_sish_greyware_tool_keyword = /https\:\/\/.{0,1000}\.ssi\.sh/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string20_sish_greyware_tool_keyword = /sish\s\-x/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string21_sish_greyware_tool_keyword = /ssh\s\-L\s.{0,1000}\stuns\.sh/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string22_sish_greyware_tool_keyword = /ssh\s\-R\s.{0,1000}\stuns\.sh/ nocase ascii wide
+        // Description: HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH.
+        // Reference: https://github.com/antoniomika/sish
+        $string23_sish_greyware_tool_keyword = /testing\.ssi\.sh/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule skymen_info_greyware_tool_keyword
 {
     meta:
@@ -16821,11 +21281,14 @@ rule softperfect_networkscanner_greyware_tool_keyword
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string14_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_setup\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
-        // Reference: https://www.softperfect.com/products/networkscanner/
-        $string15_softperfect_networkscanner_greyware_tool_keyword = /netscan\.exe\s\// nocase ascii wide
+        // Reference: https://www.softperfect.com.cach3.com/board/read.php%3F12,10134,12202.html
+        $string15_softperfect_networkscanner_greyware_tool_keyword = /\<Data\sName\=\"RelativeTargetName\"\>delete\.me\</ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string16_softperfect_networkscanner_greyware_tool_keyword = /SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe/ nocase ascii wide
+        $string16_softperfect_networkscanner_greyware_tool_keyword = /netscan\.exe\s\// nocase ascii wide
+        // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
+        // Reference: https://www.softperfect.com/products/networkscanner/
+        $string17_softperfect_networkscanner_greyware_tool_keyword = /SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -18781,6 +23244,94 @@ rule tunnel_pyjam_as_greyware_tool_keyword
 }
 
 
+rule tunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string1_tunnel_greyware_tool_keyword = /\sthe\sservers\sWireguard\sinterface\./ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string2_tunnel_greyware_tool_keyword = /\.tunnel\.pyjam\.as/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string3_tunnel_greyware_tool_keyword = /\/\/\sPackage\stunnel\sis\sa\sserver\/client\spackage\sthat\senables\sto\sproxy\spublic/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string4_tunnel_greyware_tool_keyword = /\/etc\/wireguard\/.{0,1000}\.conf/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string5_tunnel_greyware_tool_keyword = /\/etc\/wireguard\/.{0,1000}\.conf/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string6_tunnel_greyware_tool_keyword = /\/pyjam\.as\/tunnel/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string7_tunnel_greyware_tool_keyword = /\/tunnel\/server\.go/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string8_tunnel_greyware_tool_keyword = /\/tunnel\/tunnel\.py/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string9_tunnel_greyware_tool_keyword = /\/tunnel\/tunnel\.service/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string10_tunnel_greyware_tool_keyword = /\/tunnel\-main\.tar\.gz/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string11_tunnel_greyware_tool_keyword = /3579ab708388d7be3e66c1a45deea0f6a249865ce4105310d8fe340ed28accca/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string12_tunnel_greyware_tool_keyword = /447a5e8b424ebc3b82e909ab8c585fda579881ad26c35cba3c32b77896008c62/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string13_tunnel_greyware_tool_keyword = /9e3c014399ad61b61a1fa5fa58de95a4ddfded6ff863c413cea089f2d92f9d70/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string14_tunnel_greyware_tool_keyword = /c9165f1628aa7d5a75b907d71efda4fa4ab1fa8bb2ee12ef86478ef6e2c3e162/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string15_tunnel_greyware_tool_keyword = /e82ae72bb202db9bae86dc81cf4df152b6d8d3b5062295004b8ae92088904dc7/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string16_tunnel_greyware_tool_keyword = /github.{0,1000}koding\/tunnel/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string17_tunnel_greyware_tool_keyword = /http\:\/\/arslan\.koding\.io\// nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string18_tunnel_greyware_tool_keyword = /https\:\/\/tunnel\.pyjam\.as\// nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string19_tunnel_greyware_tool_keyword = /https\:\/\/www\.wireguard\.com\/install/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string20_tunnel_greyware_tool_keyword = /tunnel\/httpproxy\.go/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string21_tunnel_greyware_tool_keyword = /wg\-quick\sdown\s\.\/tunnel\.conf/ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string22_tunnel_greyware_tool_keyword = /wg\-quick\sup\s\.\/tunnel\.conf/ nocase ascii wide
+        // Description: Tunnel is a server/client package that enables to proxy public connections to your local machine over a tunnel connection from the local machine to the public server. What this means is, you can share your localhost even if it doesn't have a Public IP or if it's not reachable from outside
+        // Reference: https://github.com/koding/tunnel
+        $string23_tunnel_greyware_tool_keyword = /Write\sWireguard\sserver\sconfiguration\sto\sdisk\./ nocase ascii wide
+        // Description: SSL-terminated ephemeral HTTP tunnels to your local machine
+        // Reference: https://gitlab.com/pyjam.as/tunnel
+        $string24_tunnel_greyware_tool_keyword = /Write\sWireguard\sserver\sconfiguration\sto\sdisk\./ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule TunnelBear_VPN_greyware_tool_keyword
 {
     meta:
@@ -18800,6 +23351,187 @@ rule TunnelBear_VPN_greyware_tool_keyword
 }
 
 
+rule tunneller_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tunneller' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tunneller"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string1_tunneller_greyware_tool_keyword = /\/tunneller\.git/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string2_tunneller_greyware_tool_keyword = /\/tunneller\/releases\// nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string3_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string4_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string5_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string6_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string7_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string8_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string9_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string10_tunneller_greyware_tool_keyword = /\/tunneller\-darwin\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string11_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string12_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string13_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string14_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string15_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string16_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string17_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string18_tunneller_greyware_tool_keyword = /\/tunneller\-freebsd\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string19_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string20_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string21_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string22_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-amd64/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string23_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string24_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string25_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string26_tunneller_greyware_tool_keyword = /\/tunneller\-linux\-i386/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string27_tunneller_greyware_tool_keyword = /087dae4b718907c400d19d3e497619042ad74036da714be2812ab423e0a86e84/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string28_tunneller_greyware_tool_keyword = /1556d7d7fe7f2342854a24b05c3eca7e593d7e22021c559118c3fde32950bfd0/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string29_tunneller_greyware_tool_keyword = /23588b81078e4ce796050b5eb3f87e37be16233d45ca17e222be509445127a3f/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string30_tunneller_greyware_tool_keyword = /2d5d5cd63277002d698485c5a87a51c1c8d520a963ae1c1689c9e6c5c4964c0c/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string31_tunneller_greyware_tool_keyword = /4f91e07aba2c4e94121f45cfb8252d2e173d565a4a15faacd7b3fa3f78b0d978/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string32_tunneller_greyware_tool_keyword = /51921c04f725490abfce3611cef91f602314bb272240d7d4a252bf16a2199154/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string33_tunneller_greyware_tool_keyword = /5370c48e778806b0676a70e133a32a7ed674ad22545bb61e120198236504245a/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string34_tunneller_greyware_tool_keyword = /582b8f96d51ff83c2daf3970faa3c141a18dc8b1af0b23a3dc40aee1d04c6702/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string35_tunneller_greyware_tool_keyword = /6c23f9dc5552c6286c852faa91236587470efaf28af92c5b4742feac70ffed6b/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string36_tunneller_greyware_tool_keyword = /6f072e5783a999399690a8fbb7aff14f818746a910165bb7514576bf9ef179da/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string37_tunneller_greyware_tool_keyword = /70bac6ab24591aa3df6592daacec697e11fdf865e3f27b8ccb7fa5a65934d96d/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string38_tunneller_greyware_tool_keyword = /86f182e121994ab7f27c9936c947bf21151dbaa1a2c94640c9b3493e3101c98a/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string39_tunneller_greyware_tool_keyword = /8bbfc29e4494eaa861f1e8ceea0982279cae939a7cbe4a6606919e07a67b85bc/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string40_tunneller_greyware_tool_keyword = /959dfbb8cd213bd33aa99fcf4494c61397dc39685f43806ddd9804798d4c94cb/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string41_tunneller_greyware_tool_keyword = /9f6b80fa0ffaad84c92776eaa2af7a16d5fcb724ac12ed9a07dffd88565c6397/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string42_tunneller_greyware_tool_keyword = /a17972b286ec9492e224a2adcc4ec7487615caec87a04be7d7a1c0bbfc0f0b43/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string43_tunneller_greyware_tool_keyword = /a857a9f7a34b247348439a6b13dda18e4aafa381eb7d50215610d9d360d68485/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string44_tunneller_greyware_tool_keyword = /aca3bacd0f7f2a5e75ed74643e1fbb57ec10dc94f675dab12f8d7aeb48c3a503/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string45_tunneller_greyware_tool_keyword = /ae4e32d838b180b920722598fa8cc91533742f1bc53805520b372f1f210d6833/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string46_tunneller_greyware_tool_keyword = /b56153a4717acef3981496c1b7612efb801ce9b90ec941f1ebf69026d7fbbe20/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string47_tunneller_greyware_tool_keyword = /b99def34d979c04dd81857a6ba93e79d8a16bcefecc8f4607e3c1cee097f41c1/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string48_tunneller_greyware_tool_keyword = /c3a41b08c2665cc4036b9540ee39aa4a0786ed2416f03fe2ae5429ef303f409e/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string49_tunneller_greyware_tool_keyword = /ce9e92734048598d84c3ca3a1da32ecdf759e43b3e13716bf0bf91183c7544f2/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string50_tunneller_greyware_tool_keyword = /d49e100ae7518571c6b4953693cc63e975072203787c492f389326ea3b1e988f/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string51_tunneller_greyware_tool_keyword = /eefd30efe33687408541ad00fead452f4f341c32fad1a77e84006ae7aa4fbe9a/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string52_tunneller_greyware_tool_keyword = /efa4485dbd9d5813411e35144b17f676459fb681dc67c5a84d61da68f77099f8/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string53_tunneller_greyware_tool_keyword = /Launch\sthe\sclient\,\sexposing\sa\slocal\sservice\sto\sthe\sinternet/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string54_tunneller_greyware_tool_keyword = /skx\/tunneller/ nocase ascii wide
+        // Description: Tunneller allows you to expose services which are running on localhost or on your local network to the public internet.
+        // Reference: https://github.com/skx/tunneller
+        $string55_tunneller_greyware_tool_keyword = /You\smust\sspecify\sthe\slocal\shost\:port\sto\sexpose/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Tunnello_VPN_greyware_tool_keyword
 {
     meta:
@@ -18813,6 +23545,360 @@ rule Tunnello_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Tunnello_VPN_greyware_tool_keyword = /hoapmlpnmpaehilehggglehfdlnoegck/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule tunnelmole_client_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tunnelmole-client' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tunnelmole-client"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string1_tunnelmole_client_greyware_tool_keyword = /\stunnelmole\.bundle\.js/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string2_tunnelmole_client_greyware_tool_keyword = /\.bin\/tmole/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string3_tunnelmole_client_greyware_tool_keyword = /\.bin\/tunnelmole/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string4_tunnelmole_client_greyware_tool_keyword = /\/bin\/tunnelmole\.js/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string5_tunnelmole_client_greyware_tool_keyword = /\/tunnelmole\.js/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string6_tunnelmole_client_greyware_tool_keyword = /\/tunnelmole\-client\.git/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string7_tunnelmole_client_greyware_tool_keyword = /\/tunnelmole\-service/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string8_tunnelmole_client_greyware_tool_keyword = /\/tunnelmole\-service\.git/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string9_tunnelmole_client_greyware_tool_keyword = /\\\.tmole\.sh\\/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string10_tunnelmole_client_greyware_tool_keyword = /\\tmole\.exe/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string11_tunnelmole_client_greyware_tool_keyword = /\\tunnelmole\.bundle\.js/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string12_tunnelmole_client_greyware_tool_keyword = /25191b226ad7ef139f81890c531b0c606c5645bbca6f149b3679b06c73e6cddc/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string13_tunnelmole_client_greyware_tool_keyword = /2b4328c30b58ecaf6febe1d7225b543b8886dcb4d8295be5973e6dc36f62c0f2/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string14_tunnelmole_client_greyware_tool_keyword = /dashboard\.tunnelmole\.com/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string15_tunnelmole_client_greyware_tool_keyword = /f38fg\.tunnelmole\.net/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string16_tunnelmole_client_greyware_tool_keyword = /http\:\/\/.{0,1000}\.tunnelmole\.net/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string17_tunnelmole_client_greyware_tool_keyword = /https\:\/\/.{0,1000}\.tunnelmole\.net/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string18_tunnelmole_client_greyware_tool_keyword = /https\:\/\/tunnelmole\.com\/docs/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string19_tunnelmole_client_greyware_tool_keyword = /https\:\/\/tunnelmole\.com\/downloads\/tmole\.exe/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string20_tunnelmole_client_greyware_tool_keyword = /install\.tunnelmole\.com/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string21_tunnelmole_client_greyware_tool_keyword = /node\stunnelmole\.js/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string22_tunnelmole_client_greyware_tool_keyword = /npm\sinstall\s\-g\stunnelmole/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string23_tunnelmole_client_greyware_tool_keyword = /npm\sinstall.{0,1000}\stunnelmole/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string24_tunnelmole_client_greyware_tool_keyword = /\-\-output\stmole\.exe/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string25_tunnelmole_client_greyware_tool_keyword = /robbie\-cahill\/tunnelmole\-client/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string26_tunnelmole_client_greyware_tool_keyword = /service\.tunnelmole\.com/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string27_tunnelmole_client_greyware_tool_keyword = /tmole\s\-\sShare\syour\slocal\sserver\swith\sa\sPublic\sURL/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string28_tunnelmole_client_greyware_tool_keyword = /tmole\s\-\-set\-api\-key\s/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string29_tunnelmole_client_greyware_tool_keyword = /\'Tunnelmole\sService\slistening\son\shttp\sport\s/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string30_tunnelmole_client_greyware_tool_keyword = /Tunnelmole\sService\slistening\son\swebsocket\sport\s/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string31_tunnelmole_client_greyware_tool_keyword = /tunnelmole\/cjs/ nocase ascii wide
+        // Description: tmole - Share your local server with a Public URL
+        // Reference: https://github.com/robbie-cahill/tunnelmole-client/
+        $string32_tunnelmole_client_greyware_tool_keyword = /TUNNELMOLE_TELEMETRY/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule tunnelto_dev_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tunnelto.dev' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tunnelto.dev"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string1_tunnelto_dev_greyware_tool_keyword = /\sinstall\stunnelto/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string2_tunnelto_dev_greyware_tool_keyword = /\"User\-Agent\"\,\s\"tunnelto\-client\"/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string3_tunnelto_dev_greyware_tool_keyword = /\.\.\/tunnelto_lib/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string4_tunnelto_dev_greyware_tool_keyword = /\.tunnelto\.dev/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string5_tunnelto_dev_greyware_tool_keyword = /\/tunnelto\.git/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string6_tunnelto_dev_greyware_tool_keyword = /\/tunnelto\/releases\/latest/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string7_tunnelto_dev_greyware_tool_keyword = /\/tunnelto_server/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string8_tunnelto_dev_greyware_tool_keyword = /\/tunnelto_server\// nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string9_tunnelto_dev_greyware_tool_keyword = /\/tunnelto_server\:/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string10_tunnelto_dev_greyware_tool_keyword = /\@tunnelto\.dev/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string11_tunnelto_dev_greyware_tool_keyword = /\\\.tunnelto\\key\.token/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string12_tunnelto_dev_greyware_tool_keyword = /84a0a90cde73607684db0142f2d9cd8e636f089514eba57835ec10806d8f5f4b/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string13_tunnelto_dev_greyware_tool_keyword = /99736bcb172f9cbed127f25a80a6b91fe355c4673461878962d7b5ac94782db1/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string14_tunnelto_dev_greyware_tool_keyword = /agrinman\/tap\/tunnelto/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string15_tunnelto_dev_greyware_tool_keyword = /agrinman\/tunnelto/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string16_tunnelto_dev_greyware_tool_keyword = /\-\-bin\stunnelto/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string17_tunnelto_dev_greyware_tool_keyword = /\-\-bin\stunnelto_server/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string18_tunnelto_dev_greyware_tool_keyword = /\-\-bin\=tunnelto/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string19_tunnelto_dev_greyware_tool_keyword = /\-\-bin\=tunnelto_server/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string20_tunnelto_dev_greyware_tool_keyword = /cb70ca2937afdb647a8716f0b0d122f71f91dd7ce777250d0d2573f0ec47c5fc/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string21_tunnelto_dev_greyware_tool_keyword = /f6e06ec835c02ff1f08cc12c77b067bce8eddd96b9015cefef250353c89e1fbd/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string22_tunnelto_dev_greyware_tool_keyword = /ghcr\.io\/agrinman\/tunnelto/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string23_tunnelto_dev_greyware_tool_keyword = /tunnelto\sinspector/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string24_tunnelto_dev_greyware_tool_keyword = /tunnelto\s\-\-port\s/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string25_tunnelto_dev_greyware_tool_keyword = /tunnelto_server\/src\// nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string26_tunnelto_dev_greyware_tool_keyword = /tunnelto\-linux\.tar\.gz/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string27_tunnelto_dev_greyware_tool_keyword = /tunnelto\-windows\.exe/ nocase ascii wide
+        // Description: Expose your local web server to the internet with a public URL
+        // Reference: https://github.com/agrinman/tunnelto
+        $string28_tunnelto_dev_greyware_tool_keyword = /wormhole\.tunnelto\.dev/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule tunwg_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'tunwg' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "tunwg"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string1_tunwg_greyware_tool_keyword = /\stunwg\.exe/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string2_tunwg_greyware_tool_keyword = /\.\/tunwg\s\-\-/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string3_tunwg_greyware_tool_keyword = /\.l\.tunwg\.com/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string4_tunwg_greyware_tool_keyword = /\/bin\/tunwg/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string5_tunwg_greyware_tool_keyword = /\/latest\/download\/tunwg/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string6_tunwg_greyware_tool_keyword = /\/tunwg\.exe/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string7_tunwg_greyware_tool_keyword = /\/tunwg\.git/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string8_tunwg_greyware_tool_keyword = /\/tunwg\@latest/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string9_tunwg_greyware_tool_keyword = /\/tunwg\-arm64\.exe/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string10_tunwg_greyware_tool_keyword = /\\tunwg\.exe/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string11_tunwg_greyware_tool_keyword = /\\tunwg\-arm64\.exe/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string12_tunwg_greyware_tool_keyword = /067fca2b141364d273b05e14a8f01d961d80d9599b8658a02a4f486510b9b89b/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string13_tunwg_greyware_tool_keyword = /0f1ccf4c5e7eada818bafad12e911a4d122a8329f7287ea0e4903ee1398e72f9/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string14_tunwg_greyware_tool_keyword = /175c54eb22bc4eeb089586244b2863d53e14fbe8be999be5574901aa0a726744/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string15_tunwg_greyware_tool_keyword = /2664814fc6bac015389cad412970cb6617f38a653f30585060c158f4d7963527/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string16_tunwg_greyware_tool_keyword = /2cf91adccb7872c4e0526ac1b4c5d9ccb539dcd9f3c2c85daba0837fb2483e2b/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string17_tunwg_greyware_tool_keyword = /3451e50cf07aa0e206cc3a632482276574f820542860187ffb8ec2221453a875/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string18_tunwg_greyware_tool_keyword = /393d1d4e9992cbda5a9980c25d9d16890b18f276fc08a44c5855b3a14f4be894/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string19_tunwg_greyware_tool_keyword = /3a52dc3df7ea98057fb163965ed3390702a95a57e8b4e5e263c7efeb83908577/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string20_tunwg_greyware_tool_keyword = /3bcd2aa02fed9aad200636add540ac159c082eb6058a9da45ed0dc7410713f38/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string21_tunwg_greyware_tool_keyword = /574583d2e4b8f71d7aa57ed24c4015e37bdfe937bcd7f0d708f300eac9bc33e2/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string22_tunwg_greyware_tool_keyword = /6d7d84fd5a11387aa706ed690f5855893594d5ded8ddeaf49cb449927c071f5f/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string23_tunwg_greyware_tool_keyword = /72b86dc356b7f6708f1996cf2085fd66a75d05e04ab728c245db5d660f645281/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string24_tunwg_greyware_tool_keyword = /8d3cb4cbaa6643fd38caec3505f0541a56883504a65759e38e8a9e8764a5f4c7/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string25_tunwg_greyware_tool_keyword = /9e66f8414c42c546b1d73672929a13285681ab0862f8ed9aa75d048dd5aa00e7/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string26_tunwg_greyware_tool_keyword = /a8ea3cb39c602716d396076e7621a61e3df77e4e08377f33c6aebf4cc970f26c/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string27_tunwg_greyware_tool_keyword = /b46ed003967f739acb4f0778b4665dc9aceab652c51223b10f632ab0681b7261/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string28_tunwg_greyware_tool_keyword = /certs\@tunwg\.com/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string29_tunwg_greyware_tool_keyword = /d0d4347afb60b25e067af0d693c644b76560164c793304e35af765d023c14df6/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string30_tunwg_greyware_tool_keyword = /ddc7e4a39c307d93871a3198d2e888e697a0106b5ebc7002e9361d0f49ba2b21/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string31_tunwg_greyware_tool_keyword = /e105000f9beb2d9659ead318f0f8a9a3acf90606024c5eef2fe11a4d140c4ee2/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string32_tunwg_greyware_tool_keyword = /e750475e2594a84524d937f7ee405611f4237851d4a8d119f4d41b6127d2aa82/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string33_tunwg_greyware_tool_keyword = /ea46f4c9b2aacf0628d9410efe46c2a625eaf7a1b9a1a017e5547a5361062985/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string34_tunwg_greyware_tool_keyword = /https\:\/\/tunwg\.com/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string35_tunwg_greyware_tool_keyword = /ntnj\/tunwg/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string36_tunwg_greyware_tool_keyword = /tunwg\s\-\-forward/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string37_tunwg_greyware_tool_keyword = /tunwg\s\-p\s/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string38_tunwg_greyware_tool_keyword = /tunwg.{0,1000}wireguard\.go/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string39_tunwg_greyware_tool_keyword = /tunwg\:\sinitiating\shandshake\sto\sserver/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string40_tunwg_greyware_tool_keyword = /TUNWG_IP\=/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string41_tunwg_greyware_tool_keyword = /TUNWG_RELAY/ nocase ascii wide
+        // Description: End to end encrypted secure tunnel to local servers
+        // Reference: https://github.com/ntnj/tunwg
+        $string42_tunwg_greyware_tool_keyword = /TUNWG_RUN_SERVER/ nocase ascii wide
 
     condition:
         any of them
@@ -19783,6 +24869,28 @@ rule wevtutil_greyware_tool_keyword
 }
 
 
+rule wget_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'wget' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "wget"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: potential malicious command with wget (|sh)
+        // Reference: https://x.com/CraigHRowland/status/1782938242108837896
+        $string1_wget_greyware_tool_keyword = /wget\s\-O\s\-\s\-q\shttp\:\/\/.{0,1000}\.jpg\|sh/ nocase ascii wide
+        // Description: potential malicious command with wget (|sh)
+        // Reference: https://x.com/CraigHRowland/status/1782938242108837896
+        $string2_wget_greyware_tool_keyword = /wget\s\-O\s\-\s\-q\shttps\:\/\/.{0,1000}\.jpg\|sh/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule where_greyware_tool_keyword
 {
     meta:
@@ -20412,6 +25520,313 @@ rule wireshark_greyware_tool_keyword
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
         $string27_wireshark_greyware_tool_keyword = /rawshark\s\-/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule wiretap_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'wiretap' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "wiretap"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string1_wiretap_greyware_tool_keyword = /\sinstall\swireguard/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string2_wiretap_greyware_tool_keyword = /\sinstall\swireguard\-tools/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string3_wiretap_greyware_tool_keyword = /\spacman\s\-S\swireguard\-tools/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string4_wiretap_greyware_tool_keyword = /\swireguard\-installer\.exe/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string5_wiretap_greyware_tool_keyword = /\swiretap\.exe/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string6_wiretap_greyware_tool_keyword = /\.\/chisel\sclient\s/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string7_wiretap_greyware_tool_keyword = /\.\/wiretap\sremove/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string8_wiretap_greyware_tool_keyword = /\/Wireguard\.zip/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string9_wiretap_greyware_tool_keyword = /\/wireguard\-amd64\-.{0,1000}\.msi/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string10_wiretap_greyware_tool_keyword = /\/wireguard\-installer\.exe/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string11_wiretap_greyware_tool_keyword = /\/wireguard\-installer\.rar/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string12_wiretap_greyware_tool_keyword = /\/wiretap\sadd\sclient/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string13_wiretap_greyware_tool_keyword = /\/wiretap\.conf/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string14_wiretap_greyware_tool_keyword = /\/wiretap\.Dockerfile/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string15_wiretap_greyware_tool_keyword = /\/wiretap\.exe/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string16_wiretap_greyware_tool_keyword = /\/wiretap\.git/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string17_wiretap_greyware_tool_keyword = /\/wiretap\.log/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string18_wiretap_greyware_tool_keyword = /\/wiretap\/releases\/download\// nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string19_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_linux_386\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string20_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_linux_amd64\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string21_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_linux_arm64\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string22_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_linux_armv6\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string23_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_windows_386\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string24_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_windows_amd64\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string25_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_windows_arm64\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string26_wiretap_greyware_tool_keyword = /\/wiretap_.{0,1000}_windows_armv6\.tar\.gz/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string27_wiretap_greyware_tool_keyword = /\/wiretap_relay\.conf/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string28_wiretap_greyware_tool_keyword = /\/wiretap_relay_1\.conf/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string29_wiretap_greyware_tool_keyword = /\/wiretap_server\.conf/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string30_wiretap_greyware_tool_keyword = /\/wiretap_server_1\.conf/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string31_wiretap_greyware_tool_keyword = /\\WireGuard\.lnk/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string32_wiretap_greyware_tool_keyword = /\\Wireguard\.zip/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string33_wiretap_greyware_tool_keyword = /\\wireguard\-installer\.exe/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string34_wiretap_greyware_tool_keyword = /\\wireguard\-installer\.rar/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string35_wiretap_greyware_tool_keyword = /\\wiretap\.exe/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string36_wiretap_greyware_tool_keyword = /\\wiretap\.log/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string37_wiretap_greyware_tool_keyword = /\<Data\sName\=\'Product\'\>WireGuard/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string38_wiretap_greyware_tool_keyword = /\>WireGuard\sRelay\</ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string39_wiretap_greyware_tool_keyword = /\>WireGuard\sTunnel\</ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string40_wiretap_greyware_tool_keyword = /\>wireguard\-installer\</ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string41_wiretap_greyware_tool_keyword = /0164502183613e987753f77bf9a45bde5a08f9332cf2d119cbfbf284cae64a25/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string42_wiretap_greyware_tool_keyword = /0183a78b64841b968eac59c0c912ecb0c44ec0ccdd773e422c6529d4e0ea5ca3/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string43_wiretap_greyware_tool_keyword = /071c1ac9622484472732bfb85fdf11bf4a62d70d4f5d2aeed5a92e9e8be51346/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string44_wiretap_greyware_tool_keyword = /072c59c3bc429c761425c680611cc35c189582d6837d4b2bd205c648722b51de/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string45_wiretap_greyware_tool_keyword = /0b3128b7117e4575cd58267525750053b8ad2abbff38d586faa4e2b72c7a31db/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string46_wiretap_greyware_tool_keyword = /0fe131b5d680b328dd8c3286d6c300b0bd606373d3a2de0e6ebec613528bf65d/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string47_wiretap_greyware_tool_keyword = /106be837e5aca74895a290d85bbcf90f95e4613f41de7d28f9fc834d8f34afad/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string48_wiretap_greyware_tool_keyword = /12d9cf76e82ea590777ee552a9ff96a10b6304df20b141bb2dc7bdf054be8402/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string49_wiretap_greyware_tool_keyword = /14ac418b893997f60d07f0b2ce81ac979ec6ba849664de462cef5c6c720e93f3/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string50_wiretap_greyware_tool_keyword = /1c7b04e5a15afed07071240ef6dfda584aede9f24e333463b6e00cdaa3886fc5/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string51_wiretap_greyware_tool_keyword = /1caf54aea406542836d678b35daef36f7dab5c6b271cc9333bf9132fb9a11b5a/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string52_wiretap_greyware_tool_keyword = /256ade9e6d03ca6e485f0932c122dbd226762d2c29c07414d0dc1dcac2a4eb0b/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string53_wiretap_greyware_tool_keyword = /2d042ee6e000dbf50b37b2fe8a77fb8cc71de9b4beb0f6f902b4d0885ae8facf/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string54_wiretap_greyware_tool_keyword = /2d87b8f3d0a56c9e101271c83e0b4c8f243af14a10965619d037210900304dde/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string55_wiretap_greyware_tool_keyword = /35fb32ecde0afcac0b1feb446052674763484264adae6c09148f4a0c7adac433/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string56_wiretap_greyware_tool_keyword = /5141adc9e35e695f849f9f2a7749a428263d1a02e1efdf24547f53596be97a25/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string57_wiretap_greyware_tool_keyword = /64601caa675146be542b3e4c658019f9c443c8fa64a898985aa691eab5c5037d/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string58_wiretap_greyware_tool_keyword = /671eaebafae768f136c85087dca3ecc2068283e611f62345d152d843cfcf02ea/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string59_wiretap_greyware_tool_keyword = /6e44d4eec61c35b14e9e43158b8a169269a98be0e2ae8992cdb0a50ea09b97a1/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string60_wiretap_greyware_tool_keyword = /74ce40c0871314e1308984b12d93161faf806f6d508dd256678f09af1abc1052/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string61_wiretap_greyware_tool_keyword = /7ca32274aad66276fcbc12b50158356781277aa4efc50eee49c10f2eac192cef/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string62_wiretap_greyware_tool_keyword = /831096dedc1741e97c5a65d992cf8825a02bdcd43c76727d2a9d26638cfeedd3/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string63_wiretap_greyware_tool_keyword = /8432faf9d944bcf430ebb7d45282f84901a59eb5e4ae3fc9b7ba5226b7a4ce35/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string64_wiretap_greyware_tool_keyword = /8fcc7cb6eee6a29804ae22281e0477c47de9a924bd7beb9bed24f7c1d84d8a9d/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string65_wiretap_greyware_tool_keyword = /9a6975a16e6abee257353caa0216c7ee50aed1618cb05c73ee105ecd07e0bdf3/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string66_wiretap_greyware_tool_keyword = /a059a3d56743994d8f3996e05725957ebb5099c97bdd8ee92ed739f552073f46/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string67_wiretap_greyware_tool_keyword = /aa660d59e6c7783ebb9d4244d3991392ab602cd4fcd06457656bed2f61b7b51a/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string68_wiretap_greyware_tool_keyword = /b1a6f85aa7693abc888ec5cd0313b16ae5e932dee4e04f495481935530276427/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string69_wiretap_greyware_tool_keyword = /b710bdc87555b125cca39a89d2f41449b99afa567ec7e78f6e28b3f7bf872ac3/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string70_wiretap_greyware_tool_keyword = /c88212e7221a28d2877ba03c01c5df776c61aa4e36bc5a5909bceea7545fdfb1/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string71_wiretap_greyware_tool_keyword = /chisel\sserver\s\-\-port\s/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string72_wiretap_greyware_tool_keyword = /d04679accb8ad4bbd940d7afcb4d2765c3ea1421bb773b71e79f3f0233f847cd/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string73_wiretap_greyware_tool_keyword = /d520c8bd60a9f8da3a90b1b47194dfb17df78554a97de633fda813c0152c01b1/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string74_wiretap_greyware_tool_keyword = /d59838007c4724beca80ad34c6adc749c526f6de636d79e06565499d0e390110/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string75_wiretap_greyware_tool_keyword = /docker\sexec\s\-it\swiretap\-client\-1\sbash/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string76_wiretap_greyware_tool_keyword = /download\.wireguard\.com\/windows\-client\// nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string77_wiretap_greyware_tool_keyword = /eeee2b0a6ad1c7e4614fed4dfbe58b63776f6a3a6758267b5a976b4dc4315f48/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string78_wiretap_greyware_tool_keyword = /f9ddbf1047c9a2e24310e5dc68508504c69e037e47c624f32b4d25ff8b30ed87/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string79_wiretap_greyware_tool_keyword = /fc901b9f783876c3cb057dbed28b5612fd376963f148d1375bb0c8cf86bb2e10/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string80_wiretap_greyware_tool_keyword = /https\:\/\/www\.wireguard\.com\/install/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string81_wiretap_greyware_tool_keyword = /sandialabs\/wiretap/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string82_wiretap_greyware_tool_keyword = /WireGuard\/wireguard\-go/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string83_wiretap_greyware_tool_keyword = /wiretap\sadd\sclient\s\-\-port\s/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string84_wiretap_greyware_tool_keyword = /wiretap\sadd\sserver\s\-\-/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string85_wiretap_greyware_tool_keyword = /wiretap\sconfigure\s\-\-/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string86_wiretap_greyware_tool_keyword = /wiretap\sexpose\s\-\-dynamic/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string87_wiretap_greyware_tool_keyword = /wiretap\sexpose\slist/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string88_wiretap_greyware_tool_keyword = /wiretap\sexpose\s\-\-local\s/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string89_wiretap_greyware_tool_keyword = /wiretap\sserve\s\-f\s/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string90_wiretap_greyware_tool_keyword = /WIRETAP_E2EE_INTERFACE_API/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string91_wiretap_greyware_tool_keyword = /WIRETAP_E2EE_PEER_ENDPOINT/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string92_wiretap_greyware_tool_keyword = /WIRETAP_E2EE_PEER_PUBLICKEY/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string93_wiretap_greyware_tool_keyword = /WIRETAP_RELAY_INTERFACE_IPV4/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string94_wiretap_greyware_tool_keyword = /WIRETAP_RELAY_INTERFACE_IPV6/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string95_wiretap_greyware_tool_keyword = /WIRETAP_RELAY_PEER_ALLOWED/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string96_wiretap_greyware_tool_keyword = /WIRETAP_RELAY_PEER_PUBLICKEY/ nocase ascii wide
+        // Description: Wiretap is a transparent - VPN-like proxy server that tunnels traffic via WireGuard and requires no special privileges to run.
+        // Reference: https://github.com/sandialabs/wiretap
+        $string97_wiretap_greyware_tool_keyword = /yum\sinstall\s.{0,1000}wireguard\-/ nocase ascii wide
 
     condition:
         any of them
@@ -21182,6 +26597,220 @@ rule Zoho_Assist_greyware_tool_keyword
         // Description: Zoho Assist Remote access software - abused by attackers
         // Reference: https://www.zoho.com/assist/
         $string71_Zoho_Assist_greyware_tool_keyword = /ZohoMeeting\\Service\.Conf/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule zrok_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'zrok' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "zrok"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string1_zrok_greyware_tool_keyword = /\sadmin\screate\sfrontend\ssqJRAINSiB\spublic\s/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string2_zrok_greyware_tool_keyword = /\s\-c\srest_client_zrok\s\-t/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string3_zrok_greyware_tool_keyword = /\s\-s\srest_server_zrok\s\-t/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string4_zrok_greyware_tool_keyword = /\szrok\.listener/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string5_zrok_greyware_tool_keyword = /\$HOME_zrok_greyware_tool_keyword\/\.zrok/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string6_zrok_greyware_tool_keyword = /\.in\.zrok\.io/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string7_zrok_greyware_tool_keyword = /\.share\.zrok\.io/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string8_zrok_greyware_tool_keyword = /\.zrok\.quigley\.com/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string9_zrok_greyware_tool_keyword = /\/\.zrok\/.{0,1000}\.json/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string10_zrok_greyware_tool_keyword = /\/\.zrok\:\/\.zrok/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string11_zrok_greyware_tool_keyword = /\/\/\sNewHTTPClient\screates\sa\snew\szrok\sHTTP\sclient\./ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string12_zrok_greyware_tool_keyword = /\/docker\/compose\/zrok\-instance\// nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string13_zrok_greyware_tool_keyword = /\/etc\/zrok\.env/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string14_zrok_greyware_tool_keyword = /\/etc\/zrok\// nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string15_zrok_greyware_tool_keyword = /\/rest_client_zrok\// nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string16_zrok_greyware_tool_keyword = /\/var\/lib\/zrok\-/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string17_zrok_greyware_tool_keyword = /\/zrok\.exe/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string18_zrok_greyware_tool_keyword = /\/zrok\.git/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string19_zrok_greyware_tool_keyword = /\/zrok\.zip/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string20_zrok_greyware_tool_keyword = /\/zrok\-amd64_darwin_amd64/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string21_zrok_greyware_tool_keyword = /\/zrok\-arm64_darwin_arm64/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string22_zrok_greyware_tool_keyword = /\/zrok\-controller\.log/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string23_zrok_greyware_tool_keyword = /\/zrok\-docker\// nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string24_zrok_greyware_tool_keyword = /\/zrok\-frontend\.log/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string25_zrok_greyware_tool_keyword = /\/zrok\-share\.env/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string26_zrok_greyware_tool_keyword = /\\zrok\.exe/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string27_zrok_greyware_tool_keyword = /\\zrok\.zip/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string28_zrok_greyware_tool_keyword = /\\zrok\-controller\.log/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string29_zrok_greyware_tool_keyword = /\\zrok\-frontend\.log/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string30_zrok_greyware_tool_keyword = /\>Welcome\snew\szrok\suser\!\</ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string31_zrok_greyware_tool_keyword = /\>Welcome\sto\szrok\!\</ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string32_zrok_greyware_tool_keyword = /\>zrok\sfrontend\shealth\:\sok\</ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string33_zrok_greyware_tool_keyword = /\>zrok\stest\sendpoint\</ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string34_zrok_greyware_tool_keyword = /25e850edd1cb8707c9a18a0fcc610b831cce25203dff650ec7e781175d900df3/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string35_zrok_greyware_tool_keyword = /4adeaf8287ac71363bb2c5ccd6b67b8c973f783702c18c444741875375772be1/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string36_zrok_greyware_tool_keyword = /651caf1b8d81a445db65551955dda4aa7df88a0013a81fda506bdfcfe05611b0/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string37_zrok_greyware_tool_keyword = /9af57a343f42da2250dd4499d6dcff61a7a6395eae77eaab0ddddbe544743116/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string38_zrok_greyware_tool_keyword = /d5be8ba1112a210428cac87772b6d7902a9b9299b9a658d03ffbc52e9d125593/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string39_zrok_greyware_tool_keyword = /def7512aaa595d7cad9b2e237a0ee99e778bbae0a30dd2eba75d099fc80f310f/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string40_zrok_greyware_tool_keyword = /http.{0,1000}api\.zrok\./ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string41_zrok_greyware_tool_keyword = /http\:\/\/.{0,1000}\.zrok\.io/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string42_zrok_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:18080/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string43_zrok_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:9191/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string44_zrok_greyware_tool_keyword = /https\:\/\/.{0,1000}\.zrok\.io/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string45_zrok_greyware_tool_keyword = /https\:\/\/zrok\./ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string46_zrok_greyware_tool_keyword = /openziti\/zrok/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string47_zrok_greyware_tool_keyword = /pastefrom\sb46p9j82z81f/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string48_zrok_greyware_tool_keyword = /share\.zrok\.io/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string49_zrok_greyware_tool_keyword = /tags\.zrokShareToken\=/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string50_zrok_greyware_tool_keyword = /the\szrok\senvironment\swas\ssuccessfully\senabled/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string51_zrok_greyware_tool_keyword = /zrockify_func\(/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string52_zrok_greyware_tool_keyword = /zrok\sadmin\sbootstrap/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string53_zrok_greyware_tool_keyword = /zrok\sconfiguration\supdated/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string54_zrok_greyware_tool_keyword = /zrok\senvironment\sdisabled/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string55_zrok_greyware_tool_keyword = /zrok\sshare\spublic\s/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string56_zrok_greyware_tool_keyword = /zrok\sshare\sreserved\s/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string57_zrok_greyware_tool_keyword = /zrok\stest\sloop\spublic/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string58_zrok_greyware_tool_keyword = /zrok\.environment\.root/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string59_zrok_greyware_tool_keyword = /zrok\.environment\.root\.Load/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string60_zrok_greyware_tool_keyword = /zrok\.proxy\.v1/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string61_zrok_greyware_tool_keyword = /zrok\.share\.CreateShare\(/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string62_zrok_greyware_tool_keyword = /zrok_api\.configuration/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string63_zrok_greyware_tool_keyword = /ZROK_BACKEND_MODE/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string64_zrok_greyware_tool_keyword = /ZROK_RESERVED_TOKEN/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string65_zrok_greyware_tool_keyword = /zrok\-share\.service/ nocase ascii wide
+        // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
+        // Reference: https://github.com/openziti/zrok
+        $string66_zrok_greyware_tool_keyword = /zrokSvcId\=/ nocase ascii wide
 
     condition:
         any of them

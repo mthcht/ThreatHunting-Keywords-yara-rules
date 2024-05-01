@@ -56,6 +56,9 @@ rule FilelessPELoader
         // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
         // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
         $string16 = /mimikatz\.exe/ nocase ascii wide
+        // Description: Loading Remote AES Encrypted PE in memory - Decrypted it and run it
+        // Reference: https://github.com/TheD1rkMtr/FilelessPELoader
+        $string17 = /Trojan\:Win32\/TurtleLoader\./ nocase ascii wide
 
     condition:
         any of them

@@ -51,11 +51,14 @@ rule softperfect_networkscanner
         // Reference: https://www.softperfect.com/products/networkscanner/
         $string14 = /\\netscan_setup\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
-        // Reference: https://www.softperfect.com/products/networkscanner/
-        $string15 = /netscan\.exe\s\// nocase ascii wide
+        // Reference: https://www.softperfect.com.cach3.com/board/read.php%3F12,10134,12202.html
+        $string15 = /\<Data\sName\=\"RelativeTargetName\"\>delete\.me\</ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string16 = /SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe/ nocase ascii wide
+        $string16 = /netscan\.exe\s\// nocase ascii wide
+        // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
+        // Reference: https://www.softperfect.com/products/networkscanner/
+        $string17 = /SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them

@@ -10,583 +10,613 @@ rule impacket
     strings:
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string1 = /\s\-dc\-ip\s.{0,1000}\s\s\-so\s/ nocase ascii wide
+        $string1 = /\sdacledit\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string2 = /\s\-dc\-ip\s.{0,1000}\s\-computer\-pass\s/ nocase ascii wide
+        $string2 = /\s\-dc\-ip\s.{0,1000}\s\s\-so\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string3 = /\s\-dc\-ip\s.{0,1000}\s\-impersonate\s/ nocase ascii wide
+        $string3 = /\s\-dc\-ip\s.{0,1000}\s\-computer\-pass\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string4 = /\s\-dc\-ip\s.{0,1000}\s\-target\-ip\s/ nocase ascii wide
+        $string4 = /\s\-dc\-ip\s.{0,1000}\s\-impersonate\s/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string5 = /\s\-dc\-ip\s.{0,1000}\s\-target\-ip\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket/blob/master/examples/getST.py
-        $string5 = /\s\-force\-forwardable/ nocase ascii wide
+        $string6 = /\s\-force\-forwardable/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string6 = /\s\-hashes\s.{0,1000}\s\-spn\s.{0,1000}\s\-impersonate\s/ nocase ascii wide
+        $string7 = /\s\-hashes\s.{0,1000}\s\-spn\s.{0,1000}\s\-impersonate\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string7 = /\simpacket/ nocase ascii wide
+        $string8 = /\simpacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string8 = /\simpacket\// nocase ascii wide
+        $string9 = /\simpacket\// nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket/blob/master/examples/getST.py
-        $string9 = /\s\-impersonate.{0,1000}\s\-hashes/ nocase ascii wide
+        $string10 = /\s\-impersonate.{0,1000}\s\-hashes/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string10 = /\s\-just\-dc\-ntlm\s\s/ nocase ascii wide
+        $string11 = /\s\-just\-dc\-ntlm\s\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string11 = /\s\-just\-dc\-user\s/ nocase ascii wide
+        $string12 = /\s\-just\-dc\-user\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string12 = /\s\-k\s\-request\-user\s.{0,1000}\s\-dc\-ip/ nocase ascii wide
+        $string13 = /\s\-k\s\-request\-user\s.{0,1000}\s\-dc\-ip/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string13 = /\sLMHASH\:NTHASH/ nocase ascii wide
+        $string14 = /\sLMHASH\:NTHASH/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string14 = /\s\-no\-pass\s\-usersfile\s/ nocase ascii wide
+        $string15 = /\s\-no\-pass\s\-usersfile\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string15 = /\s\-ntds\s.{0,1000}\.dit\s.{0,1000}\-system\s/ nocase ascii wide
+        $string16 = /\s\-ntds\s.{0,1000}\.dit\s.{0,1000}\-system\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string16 = /\s\-ntds\sntds\.dit\s\-system\sSYSTEM\s/ nocase ascii wide
+        $string17 = /\s\-ntds\sntds\.dit\s\-system\sSYSTEM\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string17 = /\s\-nthash\s.{0,1000}\s\-domain\-sid\s/ nocase ascii wide
+        $string18 = /\s\-nthash\s.{0,1000}\s\-domain\-sid\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string18 = /\sntlm\.py/ nocase ascii wide
+        $string19 = /\sntlm\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket/blob/master/examples/getST.py
-        $string19 = /\sPrincipalsAllowedToDelegateToAccount\s/ nocase ascii wide
+        $string20 = /\sPrincipalsAllowedToDelegateToAccount\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string20 = /\s\-sam\s.{0,1000}\s\-system\s.{0,1000}\s\-security\s.{0,1000}\sLOCAL\s\>\s.{0,1000}\.out/ nocase ascii wide
+        $string21 = /\s\-sam\s.{0,1000}\s\-system\s.{0,1000}\s\-security\s.{0,1000}\sLOCAL\s\>\s.{0,1000}\.out/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string21 = /\s\-\-shadow\-credentials\s\-\-shadow\-target\s/ nocase ascii wide
+        $string22 = /\s\-\-shadow\-credentials\s\-\-shadow\-target\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket/blob/master/examples/getST.py
-        $string22 = /\s\-spn\scifs\/.{0,1000}\s\-hashes/ nocase ascii wide
+        $string23 = /\s\-spn\scifs\/.{0,1000}\s\-hashes/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string23 = /\s\-system\sSYSTEM\s\-ntds\sNTDS\.dit\sLOCAL/ nocase ascii wide
+        $string24 = /\s\-system\sSYSTEM\s\-ntds\sNTDS\.dit\sLOCAL/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string24 = /\s\-system\sSYSTEM\s\-ntds\sNTDS\.dit\s\-outputfile/ nocase ascii wide
+        $string25 = /\s\-system\sSYSTEM\s\-ntds\sNTDS\.dit\s\-outputfile/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string25 = /\s\-target\-domain\s.{0,1000}\s\-outputfile\s.{0,1000}\s\-no\-pass/ nocase ascii wide
+        $string26 = /\s\-target\-domain\s.{0,1000}\s\-outputfile\s.{0,1000}\s\-no\-pass/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string26 = /\.py\s.{0,1000}\s\-k\s\-no\-pass/ nocase ascii wide
+        $string27 = /\.py\s.{0,1000}\s\-k\s\-no\-pass/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string27 = /\/atexec\.py/ nocase ascii wide
+        $string28 = /\/atexec\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string28 = /\/attacks\/.{0,1000}\.py/ nocase ascii wide
+        $string29 = /\/attacks\/.{0,1000}\.py/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string30 = /\/dacledit\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string29 = /\/exchanger\.py/ nocase ascii wide
+        $string31 = /\/exchanger\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string30 = /\/getST\.py/ nocase ascii wide
+        $string32 = /\/getST\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string31 = /\/impacket\./ nocase ascii wide
+        $string33 = /\/impacket\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string32 = /\/impacket\// nocase ascii wide
+        $string34 = /\/impacket\// nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string33 = /\/kerberos\-ldap\-password\-hunter/ nocase ascii wide
+        $string35 = /\/kerberos\-ldap\-password\-hunter/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string34 = /\/krb5\/.{0,1000}\.py/ nocase ascii wide
+        $string36 = /\/krb5\/.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string35 = /\/ldap\.py/ nocase ascii wide
+        $string37 = /\/ldap\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string36 = /\/lookupsid\.py/ nocase ascii wide
+        $string38 = /\/lookupsid\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string37 = /\/ntlm\.py/ nocase ascii wide
+        $string39 = /\/ntlm\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string38 = /\/ping6\.py/ nocase ascii wide
+        $string40 = /\/ping6\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string39 = /\/smb\.py/ nocase ascii wide
+        $string41 = /\/smb\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string40 = /\/SMB_RPC\/.{0,1000}\.py/ nocase ascii wide
+        $string42 = /\/SMB_RPC\/.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string41 = /\/smb3\.py/ nocase ascii wide
+        $string43 = /\/smb3\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string42 = /\/sniff\.py/ nocase ascii wide
+        $string44 = /\/sniff\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string43 = /\/winregistry\.py.{0,1000}/ nocase ascii wide
+        $string45 = /\/winregistry\.py.{0,1000}/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string44 = /\:9090.{0,1000}\/api\/v1\.0\/relays/ nocase ascii wide
+        $string46 = /\:9090.{0,1000}\/api\/v1\.0\/relays/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string45 = /\?convert_ccache_to_kirbi/ nocase ascii wide
+        $string47 = /\?convert_ccache_to_kirbi/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string46 = /\?convert_kirbi_to_ccache/ nocase ascii wide
+        $string48 = /\?convert_kirbi_to_ccache/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string47 = /\\\$.{0,1000}\.kirbi/ nocase ascii wide
+        $string49 = /\\\$.{0,1000}\.kirbi/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string48 = /\\\\127\.0\.0\.1\\c\$/ nocase ascii wide
+        $string50 = /\\\\127\.0\.0\.1\\c\$/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string49 = /\\impacket\./ nocase ascii wide
+        $string51 = /\\dacledit\-.{0,1000}\.bak/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string50 = /\\krb5\\.{0,1000}\.py/ nocase ascii wide
+        $string52 = /\\dacledit\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string51 = /\\ntlm\.py/ nocase ascii wide
+        $string53 = /\\impacket\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string52 = /\\SMB_RPC\\.{0,1000}\.py/ nocase ascii wide
+        $string54 = /\\krb5\\.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string53 = /\\sniff\.py/ nocase ascii wide
+        $string55 = /\\ntlm\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string54 = /41414141\-4141\-4141\-4141\-414141414141/ nocase ascii wide
+        $string56 = /\\SMB_RPC\\.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string55 = /adcsattack\.py/ nocase ascii wide
+        $string57 = /\\sniff\.py/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string58 = /41414141\-4141\-4141\-4141\-414141414141/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string59 = /adcsattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string56 = /addcomputer\.py/ nocase ascii wide
+        $string60 = /addcomputer\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string57 = /admin\.kirbi/ nocase ascii wide
+        $string61 = /admin\.kirbi/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string58 = /atexec\.py/ nocase ascii wide
+        $string62 = /atexec\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string59 = /cat\s.{0,1000}\.ntds/ nocase ascii wide
+        $string63 = /cat\s.{0,1000}\.ntds/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string60 = /changepasswd\.py/ nocase ascii wide
+        $string64 = /changepasswd\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string61 = /cmd\.exe\s\/Q\s\/c\scd\s\\\s1\>\s\\\\127\.0\.0\.1\\ADMIN\$\\__.{0,1000}\s2\>\&1/ nocase ascii wide
+        $string65 = /cmd\.exe\s\/Q\s\/c\scd\s\\\s1\>\s\\\\127\.0\.0\.1\\ADMIN\$\\__.{0,1000}\s2\>\&1/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string62 = /dcomexec\.py/ nocase ascii wide
+        $string66 = /db8b7152534b483ed966cd9557bed083106b448feea5e06d6963c0bd7b282f40/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string63 = /dcsyncattack\.py/ nocase ascii wide
+        $string67 = /dcomexec\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string64 = /dcsyncclient\.py/ nocase ascii wide
+        $string68 = /dcsyncattack\.py/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string69 = /dcsyncclient\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string65 = /dpapi\.py/ nocase ascii wide
+        $string70 = /dpapi\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string66 = /DumpNTLMInfo\.py/ nocase ascii wide
+        $string71 = /DumpNTLMInfo\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string67 = /examples\/netview\.py/ nocase ascii wide
+        $string72 = /examples\/netview\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string68 = /findDelegation\.py/ nocase ascii wide
+        $string73 = /findDelegation\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket/blob/master/examples/getST.py
-        $string69 = /\-force\-forwardableet\-ADComputer/ nocase ascii wide
+        $string74 = /\-force\-forwardableet\-ADComputer/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string70 = /fortra\/impacket/ nocase ascii wide
+        $string75 = /fortra\/impacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string71 = /FrameManagementAssociationRequest\.py/ nocase ascii wide
+        $string76 = /FrameManagementAssociationRequest\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string72 = /FrameManagementDeauthentication\.py/ nocase ascii wide
+        $string77 = /FrameManagementDeauthentication\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string73 = /FrameManagementProbeRequest\.py/ nocase ascii wide
+        $string78 = /FrameManagementProbeRequest\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string74 = /FrameManagementReassociationResponse\.py/ nocase ascii wide
+        $string79 = /FrameManagementReassociationResponse\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string75 = /GetADUsers\.py/ nocase ascii wide
+        $string80 = /GetADUsers\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string76 = /Get\-GPPPassword\.py/ nocase ascii wide
+        $string81 = /Get\-GPPPassword\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string77 = /GetNPUsers\.py/ nocase ascii wide
+        $string82 = /GetNPUsers\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string78 = /getPac\.py/ nocase ascii wide
+        $string83 = /getPac\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string79 = /getTGT\.py/ nocase ascii wide
+        $string84 = /getTGT\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string80 = /GetUserSPNs\./ nocase ascii wide
+        $string85 = /GetUserSPNs\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string81 = /goldenPac\.py/ nocase ascii wide
+        $string86 = /goldenPac\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string82 = /http\:\/\/127\.0\.0\.1\:9090\// nocase ascii wide
+        $string87 = /http\:\/\/127\.0\.0\.1\:9090\// nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string83 = /http\:\/\/localhost\:9090\// nocase ascii wide
+        $string88 = /http\:\/\/localhost\:9090\// nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string84 = /httpattack\.py/ nocase ascii wide
+        $string89 = /httpattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string85 = /httpattacks\/.{0,1000}\.py/ nocase ascii wide
+        $string90 = /httpattacks\/.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string86 = /httprelayclient\.py/ nocase ascii wide
+        $string91 = /httprelayclient\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string87 = /httprelayserver\.py/ nocase ascii wide
+        $string92 = /httprelayserver\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string88 = /imapattack\.py/ nocase ascii wide
+        $string93 = /imapattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string89 = /imaprelayclient\.py/ nocase ascii wide
+        $string94 = /imaprelayclient\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself. Packets can be constructed from scratch. as well as parsed from raw data. and the object oriented API makes it simple to work with deep hierarchies of protocols. The library provides a set of tools as examples of what can be done within the context of this library
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string90 = /impacket/ nocase ascii wide
+        $string95 = /impacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself. Packets can be constructed from scratch. as well as parsed from raw data. and the object oriented API makes it simple to work with deep hierarchies of protocols. The library provides a set of tools as examples of what can be done within the context of this library.
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string91 = /impacket/ nocase ascii wide
+        $string96 = /impacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string92 = /impacket\-.{0,1000}\s/ nocase ascii wide
+        $string97 = /impacket\-.{0,1000}\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string93 = /impacket\-.{0,1000}\.tar\.gz/ nocase ascii wide
+        $string98 = /impacket\-.{0,1000}\.tar\.gz/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string94 = /\'impacket\./ nocase ascii wide
+        $string99 = /\'impacket\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string95 = /impacket\.git/ nocase ascii wide
+        $string100 = /impacket\.git/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string96 = /impacket\.ldap/ nocase ascii wide
+        $string101 = /impacket\.krb5\.asn1/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string97 = /impacket\.ntlm/ nocase ascii wide
+        $string102 = /impacket\.krb5\.ccache/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string98 = /impacket\/.{0,1000}\.py/ nocase ascii wide
+        $string103 = /impacket\.krb5\.kerberosv5/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string99 = /impacket\:latest/ nocase ascii wide
+        $string104 = /impacket\.ldap/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string100 = /impacket__init__/ nocase ascii wide
+        $string105 = /impacket\.msada_guids/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string101 = /impacket\-atexec/ nocase ascii wide
+        $string106 = /impacket\.ntlm/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string102 = /impacket\-dcomexec/ nocase ascii wide
+        $string107 = /impacket\/.{0,1000}\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string103 = /impacket\-GetADUsers/ nocase ascii wide
+        $string108 = /impacket\:latest/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string104 = /impacket\-GetNPUsers/ nocase ascii wide
+        $string109 = /impacket__init__/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string105 = /impacket\-getST/ nocase ascii wide
+        $string110 = /impacket\-atexec/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string106 = /impacket\-getTGT/ nocase ascii wide
+        $string111 = /impacket\-dcomexec/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string107 = /impacketldap_shell/ nocase ascii wide
+        $string112 = /impacket\-GetADUsers/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string108 = /impacketlogger/ nocase ascii wide
+        $string113 = /impacket\-GetNPUsers/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string109 = /impacket\-lookupsid/ nocase ascii wide
+        $string114 = /impacket\-getST/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string110 = /impacketmssqlshell/ nocase ascii wide
+        $string115 = /impacket\-getTGT/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string111 = /impacket\-netview/ nocase ascii wide
+        $string116 = /impacketldap_shell/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string112 = /impacketntlmrelayx/ nocase ascii wide
+        $string117 = /impacketlogger/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string113 = /impacketos_ident/ nocase ascii wide
+        $string118 = /impacket\-lookupsid/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string114 = /impacket\-psexec/ nocase ascii wide
+        $string119 = /impacketmssqlshell/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string115 = /impacket\-reg/ nocase ascii wide
+        $string120 = /impacket\-netview/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string121 = /impacketntlmrelayx/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string122 = /impacketos_ident/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string123 = /impacket\-psexec/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string124 = /impacket\-reg/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself. Packets can be constructed from scratch. as well as parsed from raw data. and the object oriented API makes it simple to work with deep hierarchies of protocols. The library provides a set of tools as examples of what can be done within the context of this library
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string116 = /impacket\-reg/ nocase ascii wide
+        $string125 = /impacket\-reg/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string117 = /impacketremcomsvc/ nocase ascii wide
+        $string126 = /impacketremcomsvc/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string118 = /impacketrpcdatabase/ nocase ascii wide
+        $string127 = /impacketrpcdatabase/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string119 = /impacket\-rpcdump/ nocase ascii wide
+        $string128 = /impacket\-rpcdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string120 = /impacket\-samrdump/ nocase ascii wide
+        $string129 = /impacket\-samrdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string121 = /impacketsecretsdump/ nocase ascii wide
+        $string130 = /impacketsecretsdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string122 = /impacket\-secretsdump/ nocase ascii wide
+        $string131 = /impacket\-secretsdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string123 = /impacket\-secretsdump/ nocase ascii wide
+        $string132 = /impacket\-secretsdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string124 = /impacketserviceinstall/ nocase ascii wide
+        $string133 = /impacketserviceinstall/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string125 = /impacket\-services/ nocase ascii wide
+        $string134 = /impacket\-services/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string126 = /impacketsmbclient/ nocase ascii wide
+        $string135 = /impacketsmbclient/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string127 = /impacket\-smbclient/ nocase ascii wide
+        $string136 = /impacket\-smbclient/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string128 = /impacket\-smbserver/ nocase ascii wide
+        $string137 = /impacket\-smbserver/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string129 = /impacket\-ticketer/ nocase ascii wide
+        $string138 = /impacket\-ticketer/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string130 = /impacketutils/ nocase ascii wide
+        $string139 = /impacketutils/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself. Packets can be constructed from scratch. as well as parsed from raw data. and the object oriented API makes it simple to work with deep hierarchies of protocols. The library provides a set of tools as examples of what can be done within the context of this library
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string131 = /impacket\-wmiexec/ nocase ascii wide
+        $string140 = /impacket\-wmiexec/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string132 = /ImpactDecoder/ nocase ascii wide
+        $string141 = /ImpactDecoder/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string133 = /ImpactPacket/ nocase ascii wide
+        $string142 = /ImpactPacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string134 = /import\simpacket/ nocase ascii wide
+        $string143 = /import\simpacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string135 = /is_kirbi_file/ nocase ascii wide
+        $string144 = /is_kirbi_file/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string136 = /karmaSMB\.py/ nocase ascii wide
+        $string145 = /karmaSMB\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string137 = /kerberos\-ldap\-password\-hunter\.sh/ nocase ascii wide
+        $string146 = /kerberos\-ldap\-password\-hunter\.sh/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string138 = /kerberosv5\.py/ nocase ascii wide
+        $string147 = /kerberosv5\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string139 = /keylistattack\.py/ nocase ascii wide
+        $string148 = /keylistattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string140 = /kintercept\.py/ nocase ascii wide
+        $string149 = /kintercept\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string141 = /kintercept\.py/ nocase ascii wide
+        $string150 = /kintercept\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/dirkjanm/krbrelayx
-        $string142 = /krbrelayx/ nocase ascii wide
+        $string151 = /krbrelayx/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string143 = /ldapasn1\.py/ nocase ascii wide
+        $string152 = /ldapasn1\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string144 = /ldapattack\.py/ nocase ascii wide
+        $string153 = /ldapattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
-        $string145 = /LDAP\-Password\-Hunter/ nocase ascii wide
+        $string154 = /LDAP\-Password\-Hunter/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string146 = /ldaprelayclient\.py/ nocase ascii wide
+        $string155 = /ldaprelayclient\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string147 = /loadKirbiFile/ nocase ascii wide
+        $string156 = /loadKirbiFile/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string148 = /lookupsid\.py/ nocase ascii wide
+        $string157 = /lookupsid\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string149 = /mimikatz\.py/ nocase ascii wide
+        $string158 = /mimikatz\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string150 = /mimilib\.py/ nocase ascii wide
+        $string159 = /mimilib\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string151 = /mqtt_check\.py/ nocase ascii wide
+        $string160 = /mqtt_check\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string152 = /mssqlattack\.py/ nocase ascii wide
+        $string161 = /mssqlattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string153 = /mssqlrelayclient\./ nocase ascii wide
+        $string162 = /mssqlrelayclient\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string154 = /ndDelegation\.py/ nocase ascii wide
+        $string163 = /ndDelegation\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string155 = /netview\.py/ nocase ascii wide
+        $string164 = /netview\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string156 = /nmapAnswerMachine\.py/ nocase ascii wide
+        $string165 = /nmapAnswerMachine\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string157 = /ntfs\-read\.py/ nocase ascii wide
+        $string166 = /ntfs\-read\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string158 = /ntlm\.py\s/ nocase ascii wide
+        $string167 = /ntlm\.py\s/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string159 = /ntlmrelayx\./ nocase ascii wide
+        $string168 = /ntlmrelayx\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string160 = /package\=impacket/ nocase ascii wide
+        $string169 = /package\=impacket/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string161 = /pcap_linktypes\.py/ nocase ascii wide
+        $string170 = /pcap_linktypes\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string162 = /pcapfile\.py/ nocase ascii wide
+        $string171 = /pcapfile\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string163 = /psexec\.py/ nocase ascii wide
+        $string172 = /Permits\sto\sbackup\sa\sDACL\sbefore\sa\smodification/ nocase ascii wide
+        // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
+        // Reference: https://github.com/fortra/impacket
+        $string173 = /psexec\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string164 = /raiseChild\.py/ nocase ascii wide
+        $string174 = /raiseChild\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string165 = /rawrelayserver\.py/ nocase ascii wide
+        $string175 = /rawrelayserver\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string166 = /rbcd\.py/ nocase ascii wide
+        $string176 = /rbcd\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string167 = /rdp_check\.py/ nocase ascii wide
+        $string177 = /rdp_check\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string168 = /registry\-read\.py/ nocase ascii wide
+        $string178 = /registry\-read\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string169 = /relay.{0,1000}\/utils\/enum\.py/ nocase ascii wide
+        $string179 = /relay.{0,1000}\/utils\/enum\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string170 = /rpcattack\.py/ nocase ascii wide
+        $string180 = /rpcattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string171 = /rpcdump\.py/ nocase ascii wide
+        $string181 = /rpcdump\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string172 = /rpcmap\.py/ nocase ascii wide
+        $string182 = /rpcmap\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string173 = /rpcrelayclient\./ nocase ascii wide
+        $string183 = /rpcrelayclient\./ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string174 = /sambaPipe\.py/ nocase ascii wide
+        $string184 = /sambaPipe\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string175 = /samrdump\.py/ nocase ascii wide
+        $string185 = /samrdump\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string176 = /secretsdump\.py/ nocase ascii wide
+        $string186 = /secretsdump\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string177 = /smbattack\.py/ nocase ascii wide
+        $string187 = /smbattack\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string178 = /smbexec\.py/ nocase ascii wide
+        $string188 = /smbexec\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string179 = /smbpasswd\.py/ nocase ascii wide
+        $string189 = /smbpasswd\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string180 = /smbrelayclient\.py/ nocase ascii wide
+        $string190 = /smbrelayclient\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string181 = /smbrelayserver\.py/ nocase ascii wide
+        $string191 = /smbrelayserver\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string182 = /smbrelayx\.py/ nocase ascii wide
+        $string192 = /smbrelayx\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string183 = /smbserver\.py/ nocase ascii wide
+        $string193 = /smbserver\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string184 = /smtprelayclient\.py/ nocase ascii wide
+        $string194 = /smtprelayclient\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string185 = /sniffer\.py/ nocase ascii wide
+        $string195 = /sniffer\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string186 = /tcpshell\.py/ nocase ascii wide
+        $string196 = /tcpshell\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string187 = /test_ccache_fromKirbi/ nocase ascii wide
+        $string197 = /test_ccache_fromKirbi/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string188 = /ticketConverter\.py/ nocase ascii wide
+        $string198 = /ticketConverter\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string189 = /ticketer\.py/ nocase ascii wide
+        $string199 = /ticketer\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string190 = /wcfrelayserver\.py/ nocase ascii wide
+        $string200 = /wcfrelayserver\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/SecureAuthCorp/impacket
-        $string191 = /winregistry\.py/ nocase ascii wide
+        $string201 = /winregistry\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string192 = /wmipersist\.py/ nocase ascii wide
+        $string202 = /wmipersist\.py/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket
-        $string193 = /Impacket\s/ nocase ascii wide
+        $string203 = /Impacket\s/ nocase ascii wide
 
     condition:
         any of them

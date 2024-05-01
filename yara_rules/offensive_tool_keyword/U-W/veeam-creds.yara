@@ -25,22 +25,25 @@ rule veeam_creds
         $string5 = /\\veeam\-creds\\/ nocase ascii wide
         // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
         // Reference: https://github.com/sadshade/veeam-creds
-        $string6 = /Invoke\-VeeamGetCreds/ nocase ascii wide
+        $string6 = /b683f658cc3320b969164f1dd01ce028c2a2e8f69ed56695415805cb601b96cc/ nocase ascii wide
         // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
         // Reference: https://github.com/sadshade/veeam-creds
-        $string7 = /sadshade\/veeam\-creds/ nocase ascii wide
+        $string7 = /Invoke\-VeeamGetCreds/ nocase ascii wide
         // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
         // Reference: https://github.com/sadshade/veeam-creds
-        $string8 = /veeam\-creds\-main/ nocase ascii wide
+        $string8 = /sadshade\/veeam\-creds/ nocase ascii wide
         // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
         // Reference: https://github.com/sadshade/veeam-creds
-        $string9 = /Veeam\-Get\-Creds\.ps1/ nocase ascii wide
+        $string9 = /veeam\-creds\-main/ nocase ascii wide
         // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
         // Reference: https://github.com/sadshade/veeam-creds
-        $string10 = /VeeamGetCreds\.yaml/ nocase ascii wide
+        $string10 = /Veeam\-Get\-Creds\.ps1/ nocase ascii wide
         // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
         // Reference: https://github.com/sadshade/veeam-creds
-        $string11 = /veeampot\.py/ nocase ascii wide
+        $string11 = /VeeamGetCreds\.yaml/ nocase ascii wide
+        // Description: Collection of scripts to retrieve stored passwords from Veeam Backup
+        // Reference: https://github.com/sadshade/veeam-creds
+        $string12 = /veeampot\.py/ nocase ascii wide
 
     condition:
         any of them

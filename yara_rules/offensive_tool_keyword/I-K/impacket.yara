@@ -399,10 +399,10 @@ rule impacket
         // Reference: https://github.com/fortra/impacket
         $string130 = /impacketsecretsdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
-        // Reference: https://github.com/fortra/impacket
+        // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
         $string131 = /impacket\-secretsdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
-        // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
+        // Reference: https://github.com/fortra/impacket
         $string132 = /impacket\-secretsdump/ nocase ascii wide
         // Description: Impacket is a collection of Python classes for working with network protocols. Impacket is focused on providing low-level programmatic access to the packets and for some protocols (e.g. SMB1-3 and MSRPC) the protocol implementation itself
         // Reference: https://github.com/fortra/impacket

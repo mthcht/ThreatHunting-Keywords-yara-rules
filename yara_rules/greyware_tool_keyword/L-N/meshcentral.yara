@@ -216,13 +216,13 @@ rule meshcentral
         // Reference: https://github.com/Ylianst/MeshCentral
         $string69 = /cc94b15863602ae52934d4c3c08db27c61c1530a483093b82a1029a41c4fbd60/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
+        // Reference: https://github.com/Ylianst/MeshAgent
         $string70 = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
         $string71 = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshAgent
+        // Reference: https://github.com/Ylianst/MeshCentral
         $string72 = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
@@ -234,13 +234,13 @@ rule meshcentral
         // Reference: https://github.com/Ylianst/MeshCentral
         $string75 = /d8445e3bd78bac3cc8f8a3f23b68ab971fb85ff061059f8256e41c6b892374f4/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
+        // Reference: https://github.com/Ylianst/MeshAgent
         $string76 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
         $string77 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshAgent
+        // Reference: https://github.com/Ylianst/MeshCentral
         $string78 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral

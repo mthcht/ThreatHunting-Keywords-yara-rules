@@ -30,10 +30,10 @@ rule Shell3er
         // Reference: https://github.com/yehia-mamdouh/Shell3er
         $string7 = /6334665cbd227e91e2fe4517cc5bb0e6f4163aa4ae10430e034df836287dc339/ nocase ascii wide
         // Description: PowerShell Reverse Shell
-        // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
+        // Reference: https://github.com/yehia-mamdouh/Shell3er
         $string8 = /cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA/ nocase ascii wide
         // Description: PowerShell Reverse Shell
-        // Reference: https://github.com/yehia-mamdouh/Shell3er
+        // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1
         $string9 = /cABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBFAHgAZQBjAHUAdABpAG8AbgBQAG8AbABpAGMAeQAgAEIAeQBwAGEAcwBzACAALQBGAGkAbABlACAAQwA6AFwAUAByAG8AZwByAGEAbQBEAGEAdABhAFwAUwBoAGUAbABsADMAZQByAC4AcABzADEA/ nocase ascii wide
         // Description: PowerShell Reverse Shell
         // Reference: https://github.com/yehia-mamdouh/Shell3er/blob/main/Shell3er.ps1

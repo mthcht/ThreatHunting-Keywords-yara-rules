@@ -80,15 +80,6 @@ rule wireshark
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
         $string24 = /Wireshark\-win.{0,1000}\.exe/ nocase ascii wide
-        // Description: Wireshark is a network protocol analyzer.
-        // Reference: https://www.wireshark.org/
-        $string25 = /capinfos\s\-/ nocase ascii wide
-        // Description: Wireshark is a network protocol analyzer.
-        // Reference: https://www.wireshark.org/
-        $string26 = /captype\s\-/ nocase ascii wide
-        // Description: Wireshark is a network protocol analyzer.
-        // Reference: https://www.wireshark.org/
-        $string27 = /rawshark\s\-/ nocase ascii wide
 
     condition:
         any of them

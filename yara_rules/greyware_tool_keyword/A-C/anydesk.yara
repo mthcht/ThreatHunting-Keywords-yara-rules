@@ -63,10 +63,10 @@ rule anydesk
         // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
         $string18 = /\\AnyDesk\\ad_svc\.trace/ nocase ascii wide
         // Description: Anydesk RMM usage
-        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
+        // Reference: https://anydesk.com/
         $string19 = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
-        // Reference: https://anydesk.com/
+        // Reference: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2024-ALE-003/
         $string20 = /\\AnyDesk\\connection_trace\.txt/ nocase ascii wide
         // Description: Anydesk RMM usage
         // Reference: https://anydesk.com/

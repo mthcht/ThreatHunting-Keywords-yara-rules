@@ -8,11 +8,11 @@ rule Spring4Shell
         rule_category = "offensive_tool_keyword"
 
     strings:
-        // Description: Dockerized Spring4Shell (CVE-2022-22965) PoC application and exploit
-        // Reference: https://github.com/reznok/Spring4Shell-POC
-        $string1 = /\/Spring4Shell\-POC/ nocase ascii wide
         // Description: Spring4Shell Proof Of Concept/Information CVE-2022-22965
         // Reference: https://github.com/BobTheShoplifter/Spring4Shell-POC
+        $string1 = /\/Spring4Shell\-POC/ nocase ascii wide
+        // Description: Dockerized Spring4Shell (CVE-2022-22965) PoC application and exploit
+        // Reference: https://github.com/reznok/Spring4Shell-POC
         $string2 = /\/Spring4Shell\-POC/ nocase ascii wide
         // Description: CVE-2022-22965 - CVE-2010-1622 redux
         // Reference: https://github.com/DDuarte/springshell-rce-poc

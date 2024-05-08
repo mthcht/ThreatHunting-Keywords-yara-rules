@@ -11,12 +11,12 @@ rule netsh
         // Description: gathering information about network configurations
         // Reference: N/A
         $string1 = /netsh\sadvfirewall\sfirewall\sshow\srule\sname\=all/ nocase ascii wide
-        // Description: Disable Windows Firewall
-        // Reference: N/A
-        $string2 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: script to dismantle complete windows defender protection and even bypass tamper protection  - Disable Windows-Defender Permanently.
         // Reference: https://github.com/swagkarna/Defeat-Defender-V1.2.0
-        $string3 = /netsh\sadvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        $string2 = /netsh\sadvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        // Description: Disable Windows Firewall
+        // Reference: N/A
+        $string3 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: adding a executable in user appdata folder to the allowed programs
         // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
         $string4 = /netsh\sfirewall\sadd\sallowedprogram\s\"C\:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide

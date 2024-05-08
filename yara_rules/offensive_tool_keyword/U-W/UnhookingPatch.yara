@@ -18,10 +18,10 @@ rule UnhookingPatch
         // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
         $string3 = /\/PatchingAPI\.exe/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
+        // Reference: https://github.com/SaadAhla/UnhookingPatch
         $string4 = /\/UnhookingPatch\.git/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/SaadAhla/UnhookingPatch
+        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
         $string5 = /\/UnhookingPatch\.git/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
         // Reference: https://github.com/SaadAhla/UnhookingPatch
@@ -42,10 +42,10 @@ rule UnhookingPatch
         // Reference: https://github.com/SaadAhla/UnhookingPatch
         $string11 = /\[\+\]\sNtWaitForSingleObject\sNot\sHooked/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
+        // Reference: https://github.com/SaadAhla/UnhookingPatch
         $string12 = /\\PatchingAPI\.cpp/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/SaadAhla/UnhookingPatch
+        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
         $string13 = /\\PatchingAPI\.cpp/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
         // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
@@ -54,10 +54,10 @@ rule UnhookingPatch
         // Reference: https://github.com/SaadAhla/UnhookingPatch
         $string15 = /\\UnhookingPatch\\bin2mac\.py/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
+        // Reference: https://github.com/SaadAhla/UnhookingPatch
         $string16 = /81E60DC6\-694E\-4F51\-88FA\-6F481B9A4208/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/SaadAhla/UnhookingPatch
+        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
         $string17 = /81E60DC6\-694E\-4F51\-88FA\-6F481B9A4208/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
         // Reference: https://github.com/SaadAhla/UnhookingPatch
@@ -72,10 +72,10 @@ rule UnhookingPatch
         // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
         $string21 = /TheD1rkMtr\/UnhookingPatch/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
+        // Reference: https://github.com/SaadAhla/UnhookingPatch
         $string22 = /UnhookingPatch\-main/ nocase ascii wide
         // Description: Bypass EDR Hooks by patching NT API stub and resolving SSNs and syscall instructions at runtime
-        // Reference: https://github.com/SaadAhla/UnhookingPatch
+        // Reference: https://github.com/TheD1rkMtr/UnhookingPatch
         $string23 = /UnhookingPatch\-main/ nocase ascii wide
 
     condition:

@@ -320,264 +320,252 @@ rule mythic
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
         $string104 = /agent_code\/bash_executor/ nocase ascii wide
-        // Description: A .NET Framework 4.0 Windows Agent
-        // Reference: https://github.com/MythicAgents/Apollo/
-        $string105 = /assembly_inject\s\-/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string106 = /Athena\.Forwarders\.SMB/ nocase ascii wide
+        $string105 = /Athena\.Forwarders\.SMB/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string107 = /athena\/agent_code\// nocase ascii wide
+        $string106 = /athena\/agent_code\// nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string108 = /AthenaPlugins\.csproj/ nocase ascii wide
+        $string107 = /AthenaPlugins\.csproj/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string109 = /bash_executor\s/ nocase ascii wide
+        $string108 = /bash_executor\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string110 = /blockdlls\s\-/ nocase ascii wide
+        $string109 = /blockdlls\s\-/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string111 = /build\.ps1\s\-commands\s.{0,1000}\s\-profile\s.{0,1000}selfcontained\s\-singlefile/ nocase ascii wide
+        $string110 = /build\.ps1\s\-commands\s.{0,1000}\s\-profile\s.{0,1000}selfcontained\s\-singlefile/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string112 = /build\.ps1\s\-profiles\s.{0,1000}\s\-commands\s.{0,1000}\s\-compressed/ nocase ascii wide
+        $string111 = /build\.ps1\s\-profiles\s.{0,1000}\s\-commands\s.{0,1000}\s\-compressed/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string113 = /C2_RPC_functions\.py/ nocase ascii wide
+        $string112 = /C2_RPC_functions\.py/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string114 = /c2_service\.sh/ nocase ascii wide
+        $string113 = /c2_service\.sh/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string115 = /C2ProfileManager\./ nocase ascii wide
+        $string114 = /C2ProfileManager\./ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string116 = /\-cli\sinstall\sgithub\s/ nocase ascii wide
+        $string115 = /\-cli\sinstall\sgithub\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string117 = /\-cli\sinstall\sgithub\s.{0,1000}Apollo\./ nocase ascii wide
+        $string116 = /\-cli\sinstall\sgithub\s.{0,1000}Apollo\./ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string118 = /\-cli\spayload\sstart\s/ nocase ascii wide
+        $string117 = /\-cli\spayload\sstart\s/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string119 = /cmd_executor\s/ nocase ascii wide
+        $string118 = /cmd_executor\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string120 = /dcsync\s\-Domain/ nocase ascii wide
+        $string119 = /dcsync\s\-Domain/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string121 = /execute_assembly\s\-Assembly\s/ nocase ascii wide
-        // Description: A .NET Framework 4.0 Windows Agent
-        // Reference: https://github.com/MythicAgents/Apollo/
-        $string122 = /execute_pe\s\-PE/ nocase ascii wide
-        // Description: A .NET Framework 4.0 Windows Agent
-        // Reference: https://github.com/MythicAgents/Apollo/
-        $string123 = /ExecuteAssembly\./ nocase ascii wide
+        $string120 = /execute_pe\s\-PE/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string124 = /execute\-assembly\.py/ nocase ascii wide
+        $string121 = /execute\-assembly\.py/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string125 = /execute\-pe\.py/ nocase ascii wide
+        $string122 = /execute\-pe\.py/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string126 = /execute\-shellcode\.py/ nocase ascii wide
+        $string123 = /execute\-shellcode\.py/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string127 = /fb8b5d212f449a8ba61ab9ed9b44853315c33d12a07f8ce4642892750e251530/ nocase ascii wide
+        $string124 = /fb8b5d212f449a8ba61ab9ed9b44853315c33d12a07f8ce4642892750e251530/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string128 = /from\smerlin\simport\s/ nocase ascii wide
+        $string125 = /from\smerlin\simport\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string129 = /get_injection_techniques/ nocase ascii wide
+        $string126 = /get_injection_techniques/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string130 = /GETCLIPBOARD.{0,1000}GETLOCALGROUP/ nocase ascii wide
+        $string127 = /GETCLIPBOARD.{0,1000}GETLOCALGROUP/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string131 = /get\-password\-policy\.py/ nocase ascii wide
+        $string128 = /get\-password\-policy\.py/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string132 = /github\.com\/MythicAgents\// nocase ascii wide
+        $string129 = /github\.com\/MythicAgents\// nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string133 = /golden_ticket\.py/ nocase ascii wide
+        $string130 = /golden_ticket\.py/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string134 = /http\:\/\/127\.0\.0\.1\:7444/ nocase ascii wide
+        $string131 = /http\:\/\/127\.0\.0\.1\:7444/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string135 = /https\:\/\/127\.0\.0\.1\:7443/ nocase ascii wide
+        $string132 = /https\:\/\/127\.0\.0\.1\:7443/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string136 = /import\smythic/ nocase ascii wide
+        $string133 = /import\smythic/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string137 = /inline_assembly\s\-Assembly\s/ nocase ascii wide
+        $string134 = /inline_assembly\s\-Assembly\s/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string138 = /inline\-exec\.py/ nocase ascii wide
+        $string135 = /inline\-exec\.py/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string139 = /issue_shell_whoami/ nocase ascii wide
+        $string136 = /issue_shell_whoami/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string140 = /its\-a\-feature\/Apfell/ nocase ascii wide
+        $string137 = /its\-a\-feature\/Apfell/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string141 = /its\-a\-feature\/Mythic/ nocase ascii wide
+        $string138 = /its\-a\-feature\/Mythic/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string142 = /its\-a\-feature\/Mythic/ nocase ascii wide
+        $string139 = /its\-a\-feature\/Mythic/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string143 = /keylog_inject\s/ nocase ascii wide
+        $string140 = /keylog_inject\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string144 = /keylog_inject\.py/ nocase ascii wide
+        $string141 = /keylog_inject\.py/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string145 = /killprocess\.py/ nocase ascii wide
+        $string142 = /killprocess\.py/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string146 = /link_tcp\s127\.0\.0\.1\s/ nocase ascii wide
+        $string143 = /link_tcp\s127\.0\.0\.1\s/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string147 = /merlin\-.{0,1000}\.zip/ nocase ascii wide
+        $string144 = /merlin\-.{0,1000}\.zip/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string148 = /mimikatz\s\-Command\s/ nocase ascii wide
+        $string145 = /mimikatz\s\-Command\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string149 = /MockDirUACBypassDll/ nocase ascii wide
+        $string146 = /MockDirUACBypassDll/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string150 = /mythic_c2_container/ nocase ascii wide
+        $string147 = /mythic_c2_container/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string151 = /mythic_nginx/ nocase ascii wide
+        $string148 = /mythic_nginx/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string152 = /mythic_payloadtype/ nocase ascii wide
+        $string149 = /mythic_payloadtype/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string153 = /mythic_payloadtype/ nocase ascii wide
+        $string150 = /mythic_payloadtype/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string154 = /mythic_payloadtype_container/ nocase ascii wide
+        $string151 = /mythic_payloadtype_container/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string155 = /mythic_rest\.Payload/ nocase ascii wide
+        $string152 = /mythic_rest\.Payload/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string156 = /mythic_service\.py/ nocase ascii wide
+        $string153 = /mythic_service\.py/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string157 = /mythic_translator_containter/ nocase ascii wide
+        $string154 = /mythic_translator_containter/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string158 = /MythicAgents\/Apollo/ nocase ascii wide
+        $string155 = /MythicAgents\/Apollo/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string159 = /MythicAgents\/Athena/ nocase ascii wide
+        $string156 = /MythicAgents\/Athena/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string160 = /MythicAgents\/merlin/ nocase ascii wide
+        $string157 = /MythicAgents\/merlin/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string161 = /mythic\-cli\s/ nocase ascii wide
+        $string158 = /mythic\-cli\s/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string162 = /mythic\-cli.{0,1000}athena/ nocase ascii wide
+        $string159 = /mythic\-cli.{0,1000}athena/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string163 = /MythicClient\.cs/ nocase ascii wide
+        $string160 = /MythicClient\.cs/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string164 = /mythic\-docker/ nocase ascii wide
+        $string161 = /mythic\-docker/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string165 = /nanorobeus\.x64\./ nocase ascii wide
+        $string162 = /nanorobeus\.x64\./ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string166 = /nanorubeus\./ nocase ascii wide
+        $string163 = /nanorubeus\./ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string167 = /net_dclist\s/ nocase ascii wide
+        $string164 = /net_dclist\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string168 = /net_localgroup_member\s\-Group/ nocase ascii wide
+        $string165 = /net_localgroup_member\s\-Group/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string169 = /Payload_Type\/freyja\// nocase ascii wide
+        $string166 = /Payload_Type\/freyja\// nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string170 = /\-PID\s.{0,1000}\s\-Assembly\s.{0,1000}\s\-Arguments\s/ nocase ascii wide
+        $string167 = /\-PID\s.{0,1000}\s\-Assembly\s.{0,1000}\s\-Arguments\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string171 = /powerpick\s\-Command\s/ nocase ascii wide
+        $string168 = /powerpick\s\-Command\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string172 = /printspoofer\s\-Command/ nocase ascii wide
+        $string169 = /printspoofer\s\-Command/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string173 = /printspoofer\.py/ nocase ascii wide
+        $string170 = /printspoofer\.py/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string174 = /PrintSpoofer_x64\.exe/ nocase ascii wide
+        $string171 = /PrintSpoofer_x64\.exe/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string175 = /psinject\s\-PID/ nocase ascii wide
+        $string172 = /psinject\s\-PID/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string176 = /run\s\-Executable\s.{0,1000}\.exe/ nocase ascii wide
+        $string173 = /run\s\-Executable\s.{0,1000}\.exe/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string177 = /screenshot_inject\s/ nocase ascii wide
+        $string174 = /screenshot_inject\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string178 = /set_injection_technique/ nocase ascii wide
+        $string175 = /set_injection_technique/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string179 = /setup_apfell\.sh/ nocase ascii wide
+        $string176 = /setup_apfell\.sh/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string180 = /spawnto_x64\s\-Application\s/ nocase ascii wide
+        $string177 = /spawnto_x64\s\-Application\s/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string181 = /spawnto_x64\.py/ nocase ascii wide
+        $string178 = /spawnto_x64\.py/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string182 = /spawnto_x86\s\-Application/ nocase ascii wide
+        $string179 = /spawnto_x86\s\-Application/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string183 = /spawnto_x86\.py/ nocase ascii wide
+        $string180 = /spawnto_x86\.py/ nocase ascii wide
         // Description: A collaborative multi-platform red teaming framework
         // Reference: https://github.com/its-a-feature/Mythic
-        $string184 = /start_mythic_server\.sh/ nocase ascii wide
+        $string181 = /start_mythic_server\.sh/ nocase ascii wide
         // Description: A .NET Framework 4.0 Windows Agent
         // Reference: https://github.com/MythicAgents/Apollo/
-        $string185 = /steal_token\s/ nocase ascii wide
+        $string182 = /steal_token\s/ nocase ascii wide
         // Description: Cross-platform post-exploitation HTTP Command & Control agent written in golang
         // Reference: https://github.com/MythicAgents/merlin
-        $string186 = /steal_token\.py/ nocase ascii wide
+        $string183 = /steal_token\.py/ nocase ascii wide
         // Description: Athena is a fully-featured cross-platform agent designed using the .NET 6. Athena is designed for Mythic 2.2 and newer
         // Reference: https://github.com/MythicAgents/Athena
-        $string187 = /TicketToHashcat\.py/ nocase ascii wide
+        $string184 = /TicketToHashcat\.py/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string188 = /zsh_executor\s/ nocase ascii wide
-        // Description: A .NET Framework 4.0 Windows Agent
-        // Reference: https://github.com/MythicAgents/Apollo/
-        $string189 = /getprivs/ nocase ascii wide
+        $string185 = /zsh_executor\s/ nocase ascii wide
         // Description: mythic C2 agent
         // Reference: https://github.com/MythicAgents/freyja/
-        $string190 = /sh_executor\s/ nocase ascii wide
+        $string186 = /sh_executor\s/ nocase ascii wide
 
     condition:
         any of them

@@ -163,385 +163,379 @@ rule viperc2
         $string51 = /DefenseEvasion_SubvertTrustControls_CloneSSLPem\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string52 = /DirectDLL_x64\.dll/ nocase ascii wide
+        $string52 = /Discovery_AccountDiscovery_GetNetDomainUser\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string53 = /DirectDLL_x86\.dll/ nocase ascii wide
+        $string53 = /Discovery_AccountDiscovery_PowerView\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string54 = /Discovery_AccountDiscovery_GetNetDomainUser\.py/ nocase ascii wide
+        $string54 = /Discovery_ApplicationWindowDiscovery_EnumApplication\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string55 = /Discovery_AccountDiscovery_PowerView\.py/ nocase ascii wide
+        $string55 = /Discovery_Microphone_CallInfo\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string56 = /Discovery_ApplicationWindowDiscovery_EnumApplication\.py/ nocase ascii wide
+        $string56 = /Discovery_Microphone_camera\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string57 = /Discovery_Microphone_CallInfo\.py/ nocase ascii wide
+        $string57 = /Discovery_Microphone_record_mic\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string58 = /Discovery_Microphone_camera\.py/ nocase ascii wide
+        $string58 = /Discovery_NetworkServiceScanning_ARPScan\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string59 = /Discovery_Microphone_record_mic\.py/ nocase ascii wide
+        $string59 = /Discovery_NetworkServiceScanning_NbtScanByPython\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string60 = /Discovery_NetworkServiceScanning_ARPScan\.py/ nocase ascii wide
+        $string60 = /Discovery_NetworkServiceScanning_NextnetByPE\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string61 = /Discovery_NetworkServiceScanning_NbtScanByPython\.py/ nocase ascii wide
+        $string61 = /Discovery_NetworkServiceScanning_PingByPython\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string62 = /Discovery_NetworkServiceScanning_NextnetByPE\.py/ nocase ascii wide
+        $string62 = /Discovery_NetworkServiceScanning_PortScanByPython\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string63 = /Discovery_NetworkServiceScanning_PingByPython\.py/ nocase ascii wide
+        $string63 = /Discovery_NetworkServiceScanning_PortScanWithServiceByPython\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string64 = /Discovery_NetworkServiceScanning_PortScanByPython\.py/ nocase ascii wide
+        $string64 = /Discovery_NetworkShareDiscovery_PowerView\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string65 = /Discovery_NetworkServiceScanning_PortScanWithServiceByPython\.py/ nocase ascii wide
+        $string65 = /Discovery_PermissionGroupsDiscovery_PowerView\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string66 = /Discovery_NetworkShareDiscovery_PowerView\.py/ nocase ascii wide
+        $string66 = /Discovery_QueryRegistry_GetDotNetVersions\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string67 = /Discovery_PermissionGroupsDiscovery_PowerView\.py/ nocase ascii wide
+        $string67 = /Discovery_QueryRegistry_GetRDPPort\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string68 = /Discovery_QueryRegistry_GetDotNetVersions\.py/ nocase ascii wide
+        $string68 = /Discovery_RemoteSystemDiscovery_GetDomainIPAddress\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string69 = /Discovery_QueryRegistry_GetRDPPort\.py/ nocase ascii wide
+        $string69 = /Discovery_RemoteSystemDiscovery_GetNetComputer\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string70 = /Discovery_RemoteSystemDiscovery_GetDomainIPAddress\.py/ nocase ascii wide
+        $string70 = /Discovery_RemoteSystemDiscovery_GetNetDomain\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string71 = /Discovery_RemoteSystemDiscovery_GetNetComputer\.py/ nocase ascii wide
+        $string71 = /Discovery_RemoteSystemDiscovery_GetNetDomainController\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string72 = /Discovery_RemoteSystemDiscovery_GetNetDomain\.py/ nocase ascii wide
+        $string72 = /Discovery_SecuritySoftwareDiscovery_ListAVByTasklist\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string73 = /Discovery_RemoteSystemDiscovery_GetNetDomainController\.py/ nocase ascii wide
+        $string73 = /Discovery_SystemNetworkConnectionsDiscovery_GetPublicIP\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string74 = /Discovery_SecuritySoftwareDiscovery_ListAVByTasklist\.py/ nocase ascii wide
+        $string74 = /Discovery_SystemUserDiscovery_GetLastLoggedOn\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string75 = /Discovery_SystemNetworkConnectionsDiscovery_GetPublicIP\.py/ nocase ascii wide
+        $string75 = /Discovery_SystemUserDiscovery_GetLoggedOnLocal\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string76 = /Discovery_SystemUserDiscovery_GetLastLoggedOn\.py/ nocase ascii wide
-        // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
-        // Reference: https://github.com/FunnyWolf/viperpython
-        $string77 = /Discovery_SystemUserDiscovery_GetLoggedOnLocal\.py/ nocase ascii wide
-        // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
-        // Reference: https://github.com/FunnyWolf/viperpython
-        $string78 = /DomainTrustDiscovery_PowerView\.py/ nocase ascii wide
+        $string76 = /DomainTrustDiscovery_PowerView\.py/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string79 = /dswmiexec\.exe/ nocase ascii wide
+        $string77 = /dswmiexec\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string80 = /EfsPotato\-.{0,1000}\.exe/ nocase ascii wide
+        $string78 = /EfsPotato\-.{0,1000}\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string81 = /Eternalblue\-.{0,1000}\.exe/ nocase ascii wide
+        $string79 = /Eternalblue\-.{0,1000}\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string82 = /Execution_CommandAndScriptingInterpreter_UploadAndExec\.py/ nocase ascii wide
+        $string80 = /Execution_CommandAndScriptingInterpreter_UploadAndExec\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string83 = /Execution_UserExecution_CallbackCreateThreadpoolWait\.py/ nocase ascii wide
+        $string81 = /Execution_UserExecution_CallbackCreateThreadpoolWait\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string84 = /Execution_UserExecution_CallbackCreateTimerQueue\.py/ nocase ascii wide
+        $string82 = /Execution_UserExecution_CallbackCreateTimerQueue\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string85 = /Execution_UserExecution_CallbackEnumChildWindows\.py/ nocase ascii wide
+        $string83 = /Execution_UserExecution_CallbackEnumChildWindows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string86 = /Execution_UserExecution_CallbackEnumWindows\.py/ nocase ascii wide
+        $string84 = /Execution_UserExecution_CallbackEnumWindows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string87 = /Execution_UserExecution_DirectConnectReverseHTTPS\.py/ nocase ascii wide
+        $string85 = /Execution_UserExecution_DirectConnectReverseHTTPS\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string88 = /Execution_UserExecution_DirectConnectReverseTCPRc4\.py/ nocase ascii wide
+        $string86 = /Execution_UserExecution_DirectConnectReverseTCPRc4\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string89 = /Execution_UserExecution_FakePPID\.py/ nocase ascii wide
+        $string87 = /Execution_UserExecution_FakePPID\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string90 = /Execution_UserExecution_LinuxBaseShellcodeLoader\.py/ nocase ascii wide
+        $string88 = /Execution_UserExecution_LinuxBaseShellcodeLoader\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string91 = /Execution_UserExecution_LinuxSelfGuardLoader\.py/ nocase ascii wide
+        $string89 = /Execution_UserExecution_LinuxSelfGuardLoader\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string92 = /Execution_UserExecution_NtCreateSection\.py/ nocase ascii wide
+        $string90 = /Execution_UserExecution_NtCreateSection\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string93 = /Execution_UserExecution_Syscall_inject\.py/ nocase ascii wide
+        $string91 = /Execution_UserExecution_Syscall_inject\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string94 = /Execution_UserExecution_VSSyscallProject\.py/ nocase ascii wide
+        $string92 = /Execution_UserExecution_VSSyscallProject\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string95 = /FakePPID\./ nocase ascii wide
+        $string93 = /FakePPID\./ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string96 = /filemsf\.py/ nocase ascii wide
+        $string94 = /filemsf\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string97 = /GeneratesShellcodeFromPEorDll/ nocase ascii wide
+        $string95 = /GeneratesShellcodeFromPEorDll/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string98 = /GetWindowsCredentials\.exe/ nocase ascii wide
+        $string96 = /GetWindowsCredentials\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string99 = /http\:\/\/vpsip\:28888/ nocase ascii wide
+        $string97 = /http\:\/\/vpsip\:28888/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string100 = /HttpProxyScan_Log4J2\.py/ nocase ascii wide
+        $string98 = /HttpProxyScan_Log4J2\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string101 = /InitialAccess_SpearphishingAttachment_FakeWordDoc\.py/ nocase ascii wide
+        $string99 = /InitialAccess_SpearphishingAttachment_FakeWordDoc\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string102 = /InitialAccess_SpearphishingAttachment_Windows\.py/ nocase ascii wide
+        $string100 = /InitialAccess_SpearphishingAttachment_Windows\.py/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string103 = /Invoke\-S4U\-persistence\.ps1/ nocase ascii wide
+        $string101 = /Invoke\-S4U\-persistence\.ps1/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string104 = /Invoke\-Service\-persistence\.ps1/ nocase ascii wide
+        $string102 = /Invoke\-Service\-persistence\.ps1/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string105 = /Ladon\-N20\.exe/ nocase ascii wide
+        $string103 = /Ladon\-N20\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string106 = /Ladon\-N40\.exe/ nocase ascii wide
+        $string104 = /Ladon\-N40\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string107 = /LateralMovement_.{0,1000}_Exploit.{0,1000}\.py/ nocase ascii wide
+        $string105 = /LateralMovement_.{0,1000}_Exploit.{0,1000}\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string108 = /LateralMovement_ExploitationOfRemoteServices_AuxiliaryMs17010\.py/ nocase ascii wide
+        $string106 = /LateralMovement_ExploitationOfRemoteServices_AuxiliaryMs17010\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string109 = /LateralMovement_ExploitationOfRemoteServices_MS17010\.py/ nocase ascii wide
+        $string107 = /LateralMovement_ExploitationOfRemoteServices_MS17010\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string110 = /LateralMovement_Other_Ladon\.py/ nocase ascii wide
+        $string108 = /LateralMovement_Other_Ladon\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string111 = /LateralMovement_PassTheHash_ByInvokeWMIExec\.py/ nocase ascii wide
+        $string109 = /LateralMovement_PassTheHash_ByInvokeWMIExec\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string112 = /LateralMovement_PassTheHash_ByWmi\.py/ nocase ascii wide
+        $string110 = /LateralMovement_PassTheHash_ByWmi\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string113 = /LateralMovement_PassTheTicket_ByPsexec\.py/ nocase ascii wide
+        $string111 = /LateralMovement_PassTheTicket_ByPsexec\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string114 = /LateralMovement_PassTheTicket_BySharpwmi\.py/ nocase ascii wide
+        $string112 = /LateralMovement_PassTheTicket_BySharpwmi\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string115 = /LateralMovement_PassTheTicket_ByWmi\.py/ nocase ascii wide
+        $string113 = /LateralMovement_PassTheTicket_ByWmi\.py/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string116 = /laZagne\.exe/ nocase ascii wide
+        $string114 = /laZagne\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string117 = /MDSDLL_x64\.dll/ nocase ascii wide
+        $string115 = /MDSDLL_x64\.dll/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string118 = /MDSDLL_x86\.dll/ nocase ascii wide
+        $string116 = /MDSDLL_x86\.dll/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string119 = /mimikatz_x64\.exe/ nocase ascii wide
+        $string117 = /mimikatz_x64\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string120 = /mimikatz_x86\.exe/ nocase ascii wide
+        $string118 = /mimikatz_x86\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string121 = /MimikatzByPowerShellForDomain\.py/ nocase ascii wide
+        $string119 = /MimikatzByPowerShellForDomain\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string122 = /MimikatzOnLocal\.py/ nocase ascii wide
+        $string120 = /MimikatzOnLocal\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string123 = /mitmdump\s\-/ nocase ascii wide
+        $string121 = /mitmdump\s\-/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string124 = /msf\-json\-rpc\./ nocase ascii wide
+        $string122 = /msf\-json\-rpc\./ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string125 = /MsfModule/ nocase ascii wide
+        $string123 = /MsfModule/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string126 = /msfmodule\.py/ nocase ascii wide
+        $string124 = /msfmodule\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string127 = /MsfModuleAsFunction/ nocase ascii wide
+        $string125 = /MsfModuleAsFunction/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string128 = /nextnet\.exe/ nocase ascii wide
+        $string126 = /nextnet\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string129 = /Persistence_AccountManipulation_Windows\.py/ nocase ascii wide
+        $string127 = /Persistence_AccountManipulation_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string130 = /Persistence_Guard_Windows\.py/ nocase ascii wide
+        $string128 = /Persistence_Guard_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string131 = /Persistence_LogonScripts_Windows\.py/ nocase ascii wide
+        $string129 = /Persistence_LogonScripts_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string132 = /Persistence_NewService_Windows\.py/ nocase ascii wide
+        $string130 = /Persistence_NewService_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string133 = /Persistence_OfficeApplicationStartup_OfficeTest\.py/ nocase ascii wide
+        $string131 = /Persistence_OfficeApplicationStartup_OfficeTest\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string134 = /Persistence_Other_WindowsLibraryMs\.py/ nocase ascii wide
+        $string132 = /Persistence_Other_WindowsLibraryMs\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string135 = /Persistence_RegistryRunKeys_SharpHide\.py/ nocase ascii wide
+        $string133 = /Persistence_RegistryRunKeys_SharpHide\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string136 = /Persistence_RegistryRunKeys_Windows\.py/ nocase ascii wide
+        $string134 = /Persistence_RegistryRunKeys_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string137 = /Persistence_ScheduledTask_Windows\.py/ nocase ascii wide
+        $string135 = /Persistence_ScheduledTask_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string138 = /Persistence_WinlogonHelperDLL_Windows\.py/ nocase ascii wide
+        $string136 = /Persistence_WinlogonHelperDLL_Windows\.py/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string139 = /portScanWithService\.py/ nocase ascii wide
+        $string137 = /portScanWithService\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string140 = /portScanWithService\.py/ nocase ascii wide
+        $string138 = /portScanWithService\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string141 = /PostMulitDomainSpider\.py/ nocase ascii wide
+        $string139 = /PostMulitDomainSpider\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string142 = /PostMulitMsfGetDomainInfoByBloodHound\.py/ nocase ascii wide
+        $string140 = /PostMulitMsfGetDomainInfoByBloodHound\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string143 = /PostPowershellPowerViewAddNetUser\.py/ nocase ascii wide
+        $string141 = /PostPowershellPowerViewAddNetUser\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string144 = /PostPowershellPowerViewGetNetGroup\.py/ nocase ascii wide
+        $string142 = /PostPowershellPowerViewGetNetGroup\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string145 = /PostPowershellPowerViewGetNetGroupMember\.py/ nocase ascii wide
+        $string143 = /PostPowershellPowerViewGetNetGroupMember\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string146 = /PostPowershellPowerViewGetNetProcess\.py/ nocase ascii wide
+        $string144 = /PostPowershellPowerViewGetNetProcess\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string147 = /PostPowershellPowerViewUserHunter\.py/ nocase ascii wide
+        $string145 = /PostPowershellPowerViewUserHunter\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string148 = /PostRewMsfAuxiliaryCVE.{0,1000}\.py/ nocase ascii wide
+        $string146 = /PostRewMsfAuxiliaryCVE.{0,1000}\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string149 = /PostRewMsfExample\.py/ nocase ascii wide
+        $string147 = /PostRewMsfExample\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string150 = /PostRewMsfPostConfInfos\.py/ nocase ascii wide
+        $string148 = /PostRewMsfPostConfInfos\.py/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string151 = /PowerView_dev\.ps1/ nocase ascii wide
+        $string149 = /PowerView_dev\.ps1/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string152 = /PrivilegeEscalation_BypassUserAccountControl_Windows\.py/ nocase ascii wide
+        $string150 = /PrivilegeEscalation_BypassUserAccountControl_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string153 = /PrivilegeEscalation_EnumPatchExample_Windows\.py/ nocase ascii wide
+        $string151 = /PrivilegeEscalation_EnumPatchExample_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string154 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_CVE_2021_40449\.py/ nocase ascii wide
+        $string152 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_CVE_2021_40449\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string155 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_EfsPotato\.py/ nocase ascii wide
+        $string153 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_EfsPotato\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string156 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_SweetPotato\.py/ nocase ascii wide
+        $string154 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_SweetPotato\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string157 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_Windows\.py/ nocase ascii wide
+        $string155 = /PrivilegeEscalation_ExploitationForPrivilegeEscalation_Windows\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string158 = /PrivilegeEscalation_ProcessInjection_Getsystem\.py/ nocase ascii wide
+        $string156 = /PrivilegeEscalation_ProcessInjection_Getsystem\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string159 = /ResourceDevelopment_EstablishAccounts_RGPerson\.py/ nocase ascii wide
+        $string157 = /ResourceDevelopment_EstablishAccounts_RGPerson\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string160 = /ResourceDevelopment_Server_DNSLog\.py/ nocase ascii wide
+        $string158 = /ResourceDevelopment_Server_DNSLog\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string161 = /ResourceDevelopment_Server_LDAPServer\.py/ nocase ascii wide
+        $string159 = /ResourceDevelopment_Server_LDAPServer\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string162 = /ResourceDevelopment_WebServices_TencentAPIGateway\.py/ nocase ascii wide
+        $string160 = /ResourceDevelopment_WebServices_TencentAPIGateway\.py/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string163 = /SharpHide\-N.{0,1000}\.exe/ nocase ascii wide
+        $string161 = /SharpHide\-N.{0,1000}\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string164 = /SharpHound\.exe/ nocase ascii wide
+        $string162 = /SharpHound\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string165 = /SharpHound\.ps1/ nocase ascii wide
+        $string163 = /SharpHound\.ps1/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string166 = /SharpKatz\.exe/ nocase ascii wide
+        $string164 = /SharpKatz\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string167 = /SharpSploit\.dll/ nocase ascii wide
+        $string165 = /SharpSploit\.dll/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string168 = /sharpwmi\-N.{0,1000}\.exe/ nocase ascii wide
+        $string166 = /sharpwmi\-N.{0,1000}\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string169 = /sigthief\.py/ nocase ascii wide
+        $string167 = /sigthief\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string170 = /SSHBruteForce\.py/ nocase ascii wide
+        $string168 = /SSHBruteForce\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string171 = /SweetPotato\.exe/ nocase ascii wide
+        $string169 = /SweetPotato\.exe/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string172 = /SweetPotato\-N.{0,1000}\.exe/ nocase ascii wide
+        $string170 = /SweetPotato\-N.{0,1000}\.exe/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string173 = /VbulletinWidgetTemplateRce\.py/ nocase ascii wide
+        $string171 = /VbulletinWidgetTemplateRce\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string174 = /viper\/.{0,1000}\.sock/ nocase ascii wide
+        $string172 = /viper\/.{0,1000}\.sock/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string175 = /viper\-dev\.conf/ nocase ascii wide
+        $string173 = /viper\-dev\.conf/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string176 = /viperpython\-dev/ nocase ascii wide
+        $string174 = /viperpython\-dev/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
-        $string177 = /viperpython\-main/ nocase ascii wide
+        $string175 = /viperpython\-main/ nocase ascii wide
         // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/vipermsf
-        $string178 = /viperzip\.exe/ nocase ascii wide
+        $string176 = /viperzip\.exe/ nocase ascii wide
 
     condition:
         any of them

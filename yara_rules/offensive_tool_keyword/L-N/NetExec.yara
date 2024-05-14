@@ -10,7 +10,7 @@ rule NetExec
     strings:
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string1 = /\s.{0,1000}\s2\>\&1\s\&\&\scertutil\s\-encodehex\s\-f\s.{0,1000}\s\&\&\sfor\s\/F\s\"usebackq\"\s.{0,1000}\sreg\sadd\sHKLM\\/ nocase ascii wide
+        $string1 = /\s2\>\&1\s\&\&\scertutil\s\-encodehex\s\-f\s.{0,1000}\s\&\&\sfor\s\/F\s\"usebackq\"\s.{0,1000}\sreg\sadd\sHKLM\\/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string2 = /\s\-\-asreproast\s/ nocase ascii wide

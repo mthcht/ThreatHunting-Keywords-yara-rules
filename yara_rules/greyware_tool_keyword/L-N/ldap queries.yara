@@ -80,7 +80,7 @@ rule ldap_queries
         // Description: enumeration of Domain Admins group members
         // Reference: https://github.com/swarleysez/AD-common-queries
         $string24 = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$_\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
-        // Description:  get LDAP properties for password settings directly
+        // Description: get LDAP properties for password settings directly
         // Reference: https://github.com/swarleysez/AD-common-queries
         $string25 = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
         // Description: find user descriptions in Active Directory:

@@ -37,10 +37,13 @@ rule AsyncRAT_C_Sharp
         $string9 = /AsyncRAT\s\sSimple\sRAT/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool For Windows C# (RAT)
         // Reference: https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp
-        $string10 = /AsyncRAT\.exe/ nocase ascii wide
+        $string10 = /AsyncRAT\sServer/ nocase ascii wide
         // Description: Open-Source Remote Administration Tool For Windows C# (RAT)
         // Reference: https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp
-        $string11 = /C3C49F45\-2589\-4E04\-9C50\-71B6035C14AE/ nocase ascii wide
+        $string11 = /AsyncRAT\.exe/ nocase ascii wide
+        // Description: Open-Source Remote Administration Tool For Windows C# (RAT)
+        // Reference: https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp
+        $string12 = /C3C49F45\-2589\-4E04\-9C50\-71B6035C14AE/ nocase ascii wide
 
     condition:
         any of them

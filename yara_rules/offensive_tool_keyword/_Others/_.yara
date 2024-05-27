@@ -277,34 +277,37 @@ rule _
         $string89 = /\:\\users\\public\\.{0,1000}\.bat/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string90 = /\:\\users\\public\\.{0,1000}\.ps1/ nocase ascii wide
+        $string90 = /\:\\users\\public\\.{0,1000}\.hta/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string91 = /\:\\users\\public\\.{0,1000}\.vbs/ nocase ascii wide
+        $string91 = /\:\\users\\public\\.{0,1000}\.ps1/ nocase ascii wide
+        // Description: scripts in public user folder
+        // Reference: N/A
+        $string92 = /\:\\users\\public\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string92 = /\\Appdata\\.{0,1000}\\aloy64\.exe/ nocase ascii wide
+        $string93 = /\\Appdata\\.{0,1000}\\aloy64\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string93 = /\\Appdata\\.{0,1000}\\Beacon\.exe/ nocase ascii wide
+        $string94 = /\\Appdata\\.{0,1000}\\Beacon\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string94 = /\\Appdata\\.{0,1000}\\Beacon01\.exe/ nocase ascii wide
+        $string95 = /\\Appdata\\.{0,1000}\\Beacon01\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string95 = /\\Appdata\\.{0,1000}\\Beacon02\.exe/ nocase ascii wide
+        $string96 = /\\Appdata\\.{0,1000}\\Beacon02\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string96 = /\\Appdata\\.{0,1000}\\kitty\.exe/ nocase ascii wide
+        $string97 = /\\Appdata\\.{0,1000}\\kitty\.exe/ nocase ascii wide
         // Description: dll file in public user folder
         // Reference: https://detect.fyi/rhysida-ransomware-and-the-detection-opportunities-3599e9a02bb2
-        $string97 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
+        $string98 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string98 = /\-pentest/ nocase ascii wide
+        $string99 = /\-pentest/ nocase ascii wide
         // Description: windows exploit keyword often used in poc exploit github repo or could be a file name or folder
         // Reference: N/A
-        $string99 = /Windows\sExploit/ nocase ascii wide
+        $string100 = /Windows\sExploit/ nocase ascii wide
 
     condition:
         any of them

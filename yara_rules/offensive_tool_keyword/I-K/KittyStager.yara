@@ -76,64 +76,58 @@ rule KittyStager
         $string22 = /Enelg52\/KittyStager/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string23 = /http\:\/\/127\.0\.0\.1\:8080/ nocase ascii wide
+        $string23 = /Invoke\-EDRChecker\.ps1/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string24 = /http\:\/\/localhost\:8080/ nocase ascii wide
+        $string24 = /kitten\.dll/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string25 = /Invoke\-EDRChecker\.ps1/ nocase ascii wide
+        $string25 = /kitten\/basicKitten/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string26 = /kitten\.dll/ nocase ascii wide
+        $string26 = /kitten_test\.go/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string27 = /kitten\/basicKitten/ nocase ascii wide
+        $string27 = /kittens\/bananaKitten/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string28 = /kitten_test\.go/ nocase ascii wide
+        $string28 = /KittyStager\s\-/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string29 = /kittens\/bananaKitten/ nocase ascii wide
+        $string29 = /KittyStager\s\?/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string30 = /KittyStager\s\-/ nocase ascii wide
+        $string30 = /KittyStager\s\?\?/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string31 = /KittyStager\s\?/ nocase ascii wide
+        $string31 = /KittyStager\.git/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string32 = /KittyStager\s\?\?/ nocase ascii wide
+        $string32 = /KittyStager\/cmd/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string33 = /KittyStager\.git/ nocase ascii wide
+        $string33 = /KittyStager\/internal/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string34 = /KittyStager\/cmd/ nocase ascii wide
+        $string34 = /KittyStager\/kitten/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string35 = /KittyStager\/internal/ nocase ascii wide
+        $string35 = /localhost\:1337/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string36 = /KittyStager\/kitten/ nocase ascii wide
+        $string36 = /malware\.NewConfig/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string37 = /localhost\:1337/ nocase ascii wide
+        $string37 = /\-o\s\skitten\.exe/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string38 = /malware\.NewConfig/ nocase ascii wide
+        $string38 = /output.{0,1000}kitten\.exe/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string39 = /\-o\s\skitten\.exe/ nocase ascii wide
+        $string39 = /shellcode.{0,1000}shellcode\.bin/ nocase ascii wide
         // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
         // Reference: https://github.com/Enelg52/KittyStager
-        $string40 = /output.{0,1000}kitten\.exe/ nocase ascii wide
-        // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
-        // Reference: https://github.com/Enelg52/KittyStager
-        $string41 = /shellcode.{0,1000}shellcode\.bin/ nocase ascii wide
-        // Description: KittyStager is a simple stage 0 C2. It is made of a web server to host the shellcode and an implant called kitten. The purpose of this project is to be able to have a web server and some kitten and be able to use the with any shellcode.
-        // Reference: https://github.com/Enelg52/KittyStager
-        $string42 = /xzfbmR6MskR8J6Zr58RrhMc325kejLJE/ nocase ascii wide
+        $string40 = /xzfbmR6MskR8J6Zr58RrhMc325kejLJE/ nocase ascii wide
 
     condition:
         any of them

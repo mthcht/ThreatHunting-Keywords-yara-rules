@@ -79,64 +79,64 @@ rule Pyramid
         $string23 = /\\\\\.\\\\pipe\\\\blindspot\-/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string24 = /\\\\\.\\\\pipe\\\\keylogger/ nocase ascii wide
+        $string24 = /\\bin\\uactoken\.x86\.o/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string25 = /\\\\\.\\\\pipe\\\\netview/ nocase ascii wide
+        $string25 = /\\bin\\uactoken2\.x64\.o/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string26 = /\\\\\.\\\\pipe\\\\portscan/ nocase ascii wide
+        $string26 = /\\bin\\wmiexec\.x64\.o/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string27 = /\\bin\\uactoken\.x86\.o/ nocase ascii wide
+        $string27 = /\\DECRYPT\-FILES\.txt/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string28 = /\\bin\\uactoken2\.x64\.o/ nocase ascii wide
+        $string28 = /\\Development\\GOLD\-BACKDOOR\\/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string29 = /\\bin\\wmiexec\.x64\.o/ nocase ascii wide
+        $string29 = /\\impacket\.zip/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string30 = /\\DECRYPT\-FILES\.txt/ nocase ascii wide
+        $string30 = /\\itsdangerous\.zip/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string31 = /\\Development\\GOLD\-BACKDOOR\\/ nocase ascii wide
+        $string31 = /\\LaZagne\.py/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string32 = /\\impacket\.zip/ nocase ascii wide
+        $string32 = /\\lazagne\.zip/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string33 = /\\itsdangerous\.zip/ nocase ascii wide
+        $string33 = /\\netview\.x64\.dll/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string34 = /\\LaZagne\.py/ nocase ascii wide
+        $string34 = /\\pxlib\\bin\\wmiexec\.x86\.o/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string35 = /\\lazagne\.zip/ nocase ascii wide
+        $string35 = /\\pyramid\.py/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string36 = /\\netview\.x64\.dll/ nocase ascii wide
+        $string36 = /\\tunnel\-socks5\.py/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string37 = /\\PIPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ nocase ascii wide
+        $string37 = /\\users\\public\\desktop\\Fix\-Your\-Files\.txt/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string38 = /\\pxlib\\bin\\wmiexec\.x86\.o/ nocase ascii wide
+        $string38 = /6f83bb55a9762c656e90c49fd505ba79414edf22a89a4029f96a6ff784716e29/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string39 = /\\pyramid\.py/ nocase ascii wide
+        $string39 = /816bac589fcdd14efd90df8fecfadd0b1908dcd18a3617ef9f64170fee14ad5c/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string40 = /\\tunnel\-socks5\.py/ nocase ascii wide
+        $string40 = /8BF82BBE\-909C\-4777\-A2FC\-EA7C070FF43E/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string41 = /\\users\\public\\desktop\\Fix\-Your\-Files\.txt/ nocase ascii wide
+        $string41 = /bin\\psexec_command\.x64\.o/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string42 = /8BF82BBE\-909C\-4777\-A2FC\-EA7C070FF43E/ nocase ascii wide
+        $string42 = /c518104a683209a63029169a1a69e839cf0a7baf26f29bf1fcc96e6c4f776245/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string43 = /bin\\psexec_command\.x64\.o/ nocase ascii wide
+        $string43 = /ddacbf2fc85fd85cdbe8016b19f2f783acb17dbaf6361e9827039885d382e8d2/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
         $string44 = /hashdump\.x64\.dll/ nocase ascii wide
@@ -187,7 +187,10 @@ rule Pyramid
         $string59 = /timestomp\.x64\.o/ nocase ascii wide
         // Description: a tool to help operate in EDRs' blind spots
         // Reference: https://github.com/naksyn/Pyramid
-        $string60 = /webinject64\.dll/ nocase ascii wide
+        $string60 = /User\-Agent\:\spproxy\-/ nocase ascii wide
+        // Description: a tool to help operate in EDRs' blind spots
+        // Reference: https://github.com/naksyn/Pyramid
+        $string61 = /webinject64\.dll/ nocase ascii wide
 
     condition:
         any of them

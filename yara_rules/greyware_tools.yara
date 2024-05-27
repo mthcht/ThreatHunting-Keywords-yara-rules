@@ -1210,42 +1210,51 @@ rule adfind_greyware_tool_keyword
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
         $string1_adfind_greyware_tool_keyword = /\sdclist\s/ nocase ascii wide
+        // Description: Enumerate All Computers in the Domain
+        // Reference: N/A
+        $string2_adfind_greyware_tool_keyword = /\s\-f\s\"\(objectcategory\=computer\)\"\s\-s\ssubtree\sdn\soperatingSystem/ nocase ascii wide
+        // Description: Enumerate All Users in the Domain
+        // Reference: N/A
+        $string3_adfind_greyware_tool_keyword = /\s\-f\s\"\(objectcategory\=person\)\"\s\-s\ssubtree\ssamaccountname\suserPrincipalName/ nocase ascii wide
+        // Description: Dump All Domain Trusts
+        // Reference: N/A
+        $string4_adfind_greyware_tool_keyword = /\s\-f\s\"\(objectcategory\=trustedDomain\)\"\s\-s\ssubtree\sname\strustAttributes\strustDirection\strustType/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string2_adfind_greyware_tool_keyword = /\s\-sc\strustdump/ nocase ascii wide
+        $string5_adfind_greyware_tool_keyword = /\s\-sc\strustdump/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string3_adfind_greyware_tool_keyword = /adfind\s\-f\s/ nocase ascii wide
+        $string6_adfind_greyware_tool_keyword = /adfind\s\-f\s/ nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string4_adfind_greyware_tool_keyword = /adfind\s\-f\sobjectclass\=trusteddomain/ nocase ascii wide
+        $string7_adfind_greyware_tool_keyword = /adfind\s\-f\sobjectclass\=trusteddomain/ nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string5_adfind_greyware_tool_keyword = /adfind\s\-sc\strustdmp/ nocase ascii wide
+        $string8_adfind_greyware_tool_keyword = /adfind\s\-sc\strustdmp/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string6_adfind_greyware_tool_keyword = /adfind\.bat/ nocase ascii wide
+        $string9_adfind_greyware_tool_keyword = /adfind\.bat/ nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string7_adfind_greyware_tool_keyword = /adfind\.exe\s\-f\sobjectclass\=trusteddomain/ nocase ascii wide
+        $string10_adfind_greyware_tool_keyword = /adfind\.exe\s\-f\sobjectclass\=trusteddomain/ nocase ascii wide
         // Description: query domain trusts with adfind
         // Reference: N/A
-        $string8_adfind_greyware_tool_keyword = /adfind\.exe\s\-sc\strustdmp/ nocase ascii wide
+        $string11_adfind_greyware_tool_keyword = /adfind\.exe\s\-sc\strustdmp/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string9_adfind_greyware_tool_keyword = /adfind\.exe/ nocase ascii wide
+        $string12_adfind_greyware_tool_keyword = /adfind\.exe/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://www.joeware.net/freetools/tools/adfind/usage.htm
-        $string10_adfind_greyware_tool_keyword = /AdFind\.zip/ nocase ascii wide
+        $string13_adfind_greyware_tool_keyword = /AdFind\.zip/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string11_adfind_greyware_tool_keyword = /computers_pwdnotreqd/ nocase ascii wide
+        $string14_adfind_greyware_tool_keyword = /computers_pwdnotreqd/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string12_adfind_greyware_tool_keyword = /name\=.{0,1000}Domain\sAdmins/ nocase ascii wide
+        $string15_adfind_greyware_tool_keyword = /name\=.{0,1000}Domain\sAdmins/ nocase ascii wide
         // Description: Adfind is a command-line tool often used by administrators for Active Directory queries. However. attackers can misuse it to gather valuable information about the network environment. including user accounts. group memberships. domain controllers. and domain trusts. This gathered intelligence can aid in Lateral Movement. privilege escalation. or even data exfiltration. Such reconnaissance activities often precede more damaging attacks.
         // Reference: https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-        $string13_adfind_greyware_tool_keyword = /tools\/adfind/ nocase ascii wide
+        $string16_adfind_greyware_tool_keyword = /tools\/adfind/ nocase ascii wide
 
     condition:
         any of them
@@ -2127,43 +2136,46 @@ rule Atera_greyware_tool_keyword
         $string8_Atera_greyware_tool_keyword = /\\Program\sFiles\\Atera\sNetworks/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string9_Atera_greyware_tool_keyword = /\\TEMP\\AteraUpgradeAgentPackage\\/ nocase ascii wide
+        $string9_Atera_greyware_tool_keyword = /\\Services\\AteraAgent/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string10_Atera_greyware_tool_keyword = /acontrol\.atera\.com/ nocase ascii wide
+        $string10_Atera_greyware_tool_keyword = /\\TEMP\\AteraUpgradeAgentPackage\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string11_Atera_greyware_tool_keyword = /agent\-api\.atera\.com/ nocase ascii wide
+        $string11_Atera_greyware_tool_keyword = /acontrol\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string12_Atera_greyware_tool_keyword = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
+        $string12_Atera_greyware_tool_keyword = /agent\-api\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string13_Atera_greyware_tool_keyword = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
+        $string13_Atera_greyware_tool_keyword = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string14_Atera_greyware_tool_keyword = /AlphaControlAgent\.CloudLogsManager\+\<\>/ nocase ascii wide
+        $string14_Atera_greyware_tool_keyword = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string15_Atera_greyware_tool_keyword = /atera_del\.bat/ nocase ascii wide
+        $string15_Atera_greyware_tool_keyword = /AlphaControlAgent\.CloudLogsManager\+\<\>/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string16_Atera_greyware_tool_keyword = /atera_del2\.bat/ nocase ascii wide
+        $string16_Atera_greyware_tool_keyword = /atera_del\.bat/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string17_Atera_greyware_tool_keyword = /atera_del2\.bat/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string17_Atera_greyware_tool_keyword = /AteraAgent.{0,1000}AgentPackageRunCommandInteractive\.exe/ nocase ascii wide
+        $string18_Atera_greyware_tool_keyword = /AteraAgent.{0,1000}AgentPackageRunCommandInteractive\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string18_Atera_greyware_tool_keyword = /AteraSetupLog\.txt/ nocase ascii wide
+        $string19_Atera_greyware_tool_keyword = /AteraSetupLog\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string19_Atera_greyware_tool_keyword = /http.{0,1000}\/agent\-api\-.{0,1000}\.atera\.com/ nocase ascii wide
+        $string20_Atera_greyware_tool_keyword = /http.{0,1000}\/agent\-api\-.{0,1000}\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string20_Atera_greyware_tool_keyword = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
+        $string21_Atera_greyware_tool_keyword = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string21_Atera_greyware_tool_keyword = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
+        $string22_Atera_greyware_tool_keyword = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
 
     condition:
         any of them
@@ -2183,15 +2195,40 @@ rule attrib_greyware_tool_keyword
         // Description: command aiming to hide a file.  It can be performed with attrib.exe on a WINDOWS machine with command option +h 
         // Reference: N/A
         $string1_attrib_greyware_tool_keyword = /\\attrib\.exe.{0,1000}\s\+H\s/ nocase ascii wide
+        // Description: defense evasion - hidding in suspicious directory
+        // Reference: N/A
+        $string2_attrib_greyware_tool_keyword = /attrib\s\+s\s\+h\s\/D\s\"C\:\\Program\sFiles\\Windows\sNT\\/ nocase ascii wide
+        // Description: defense evasion - hidding in suspicious directory
+        // Reference: N/A
+        $string3_attrib_greyware_tool_keyword = /attrib\s\+s\s\+h\s\/D\s\"C\:\\users\\Public\\/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string2_attrib_greyware_tool_keyword = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide
+        $string4_attrib_greyware_tool_keyword = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string3_attrib_greyware_tool_keyword = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        $string5_attrib_greyware_tool_keyword = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string4_attrib_greyware_tool_keyword = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
+        $string6_attrib_greyware_tool_keyword = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule AutoIt_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'AutoIt' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AutoIt"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: starting autoit script and hiding it
+        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
+        $string1_AutoIt_greyware_tool_keyword = /start\s\'AutoIt3\.exe\'\s\-a\s\'.{0,1000}\.a3x\'\;attrib\s\+h/ nocase ascii wide
 
     condition:
         any of them
@@ -11561,123 +11598,129 @@ rule ldap_queries_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: metasploit enum_ad_user_comments
+        // Reference: https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/hunting-for-reconnaissance-activities-using-ldap-search-filters/ba-p/824726
+        $string1_ldap_queries_greyware_tool_keyword = /\(\&\(\&\(objectCategory\=person\)\(objectClass\=user\)\)\(\|\(description\=.{0,1000}pass.{0,1000}\)\(comment\=.{0,1000}pass.{0,1000}\)\)\)/ nocase ascii wide
         // Description: Enumerate Read-Only Domain Controllers (RODC)
         // Reference: https://github.com/mthcht/ThreatHunting-Keywords
-        $string1_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=computer\)\(msDS\-isRODC\=TRUE\)\)/ nocase ascii wide
+        $string2_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=computer\)\(msDS\-isRODC\=TRUE\)\)/ nocase ascii wide
         // Description: LAPS passwords (from SharpLAPS)
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string2_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=computer\)\(ms\-MCS\-AdmPwd\=.{0,1000}\)\(sAMAccountName\=\"\s\+\starget\s\+\s\"\)\)/ nocase ascii wide
+        $string3_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=computer\)\(ms\-MCS\-AdmPwd\=.{0,1000}\)\(sAMAccountName\=\"\s\+\starget\s\+\s\"\)\)/ nocase ascii wide
         // Description: Enumerate Accounts with Non-Expiring Passwords and Administrative Privileges
         // Reference: https://github.com/mthcht/ThreatHunting-Keywords
-        $string3_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=65536\)\(memberOf\=CN\=Administrators/ nocase ascii wide
+        $string4_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=65536\)\(memberOf\=CN\=Administrators/ nocase ascii wide
         // Description: Enumerate all users with the account configuration 'Password never expires'
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string4_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=65536\)/ nocase ascii wide
+        $string5_ldap_queries_greyware_tool_keyword = /\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=65536\)/ nocase ascii wide
+        // Description: metasploit  enum_ad_managedby_groups.rb
+        // Reference: https://github.com/rapid7/metasploit-framework/blob/d37a82500d1d08f9d8ab3da9b194653835748fae/modules/post/windows/gather/enum_ad_managedby_groups.rb#L59
+        $string6_ldap_queries_greyware_tool_keyword = /\(\&\(objectClass\=group\)\(managedBy\=.{0,1000}\)\(groupType\:1\.2\.840\.113556\.1\.4\.803\:\=2147483648\)\)/ nocase ascii wide
         // Description: Enumerate Domain Administrators Group
         // Reference: https://jsecurity101.medium.com/uncovering-adversarial-ldap-tradecraft-658b2deca384
-        $string5_ldap_queries_greyware_tool_keyword = /\(\&\(objectclass\=group\)\(samaccountname\=.{0,1000}domain\sadmins.{0,1000}\)\)/ nocase ascii wide
+        $string7_ldap_queries_greyware_tool_keyword = /\(\&\(objectclass\=group\)\(samaccountname\=.{0,1000}domain\sadmins.{0,1000}\)\)/ nocase ascii wide
         // Description: Kerberoasting
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string6_ldap_queries_greyware_tool_keyword = /\(\&\(samAccountType\=805306368\)\(servicePrincipalName\=.{0,1000}\)\(\!samAccountName\=krbtgt\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\(\!msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.804\:\=24\)\)/ nocase ascii wide
+        $string8_ldap_queries_greyware_tool_keyword = /\(\&\(samAccountType\=805306368\)\(servicePrincipalName\=.{0,1000}\)\(\!samAccountName\=krbtgt\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\(\!msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.804\:\=24\)\)/ nocase ascii wide
         // Description: Kerberoasting
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string7_ldap_queries_greyware_tool_keyword = /\(\&\(samAccountType\=805306368\)\(servicePrincipalName\=.{0,1000}\)\(\!samAccountName\=krbtgt\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.804\:\=24\)\)/ nocase ascii wide
+        $string9_ldap_queries_greyware_tool_keyword = /\(\&\(samAccountType\=805306368\)\(servicePrincipalName\=.{0,1000}\)\(\!samAccountName\=krbtgt\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.804\:\=24\)\)/ nocase ascii wide
         // Description: Kerberoasting
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string8_ldap_queries_greyware_tool_keyword = /\(\&\(samAccountType\=805306368\)\(servicePrincipalName\=.{0,1000}\)\(\!samAccountName\=krbtgt\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
+        $string10_ldap_queries_greyware_tool_keyword = /\(\&\(samAccountType\=805306368\)\(servicePrincipalName\=.{0,1000}\)\(\!samAccountName\=krbtgt\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
         // Description: Enumerate all servers configured for Unconstrained Delegation
         // Reference: N/A
-        $string9_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(\!\(primaryGroupID\=516\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string11_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(\!\(primaryGroupID\=516\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: Enumerate all Domain Controllers
         // Reference: https://web.archive.org/web/20240109000256/https://cyberdom.blog/2024/01/07/defender-for-identity-hunting-for-ldap/
-        $string10_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=8192\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string12_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=8192\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: Search for user accounts with SPN but not TGT accounts
         // Reference: https://jsecurity101.medium.com/uncovering-adversarial-ldap-tradecraft-658b2deca384
-        $string11_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(\&\(objectCategory\=user\)\(\!\(samAccountName\=krbtgt\)\(servicePrincipalName\=.{0,1000}\)\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string13_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(\&\(objectCategory\=user\)\(\!\(samAccountName\=krbtgt\)\(servicePrincipalName\=.{0,1000}\)\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: Search for all objects with AdminSHHolder
         // Reference: https://jsecurity101.medium.com/uncovering-adversarial-ldap-tradecraft-658b2deca384
-        $string12_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(adminCount\=1\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string14_ldap_queries_greyware_tool_keyword = /\(\[adsisearcher\]\'\(adminCount\=1\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: Queries for domain level and mode information
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string13_ldap_queries_greyware_tool_keyword = /\(\[DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\)\.Domains/ nocase ascii wide
+        $string15_ldap_queries_greyware_tool_keyword = /\(\[DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\)\.Domains/ nocase ascii wide
         // Description: enumeration of AD Forest Sites
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string14_ldap_queries_greyware_tool_keyword = /\(\[DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\)\.Sites\s\|\s/ nocase ascii wide
+        $string16_ldap_queries_greyware_tool_keyword = /\(\[DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\)\.Sites\s\|\s/ nocase ascii wide
         // Description: querying all domain controllers with detailed properties
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string15_ldap_queries_greyware_tool_keyword = /\(\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\)\.FindAllDomainControllers\(\)\s\|\sSelect\-Object\s\-Property\s/ nocase ascii wide
+        $string17_ldap_queries_greyware_tool_keyword = /\(\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\)\.FindAllDomainControllers\(\)\s\|\sSelect\-Object\s\-Property\s/ nocase ascii wide
         // Description: get all trust relationships in the current domain
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string16_ldap_queries_greyware_tool_keyword = /\(\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\)\.GetAllTrustRelationships\(\)/ nocase ascii wide
+        $string18_ldap_queries_greyware_tool_keyword = /\(\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\)\.GetAllTrustRelationships\(\)/ nocase ascii wide
         // Description: Enumerate all of the domain controllers for all domains in a forest
         // Reference: N/A
-        $string17_ldap_queries_greyware_tool_keyword = /\(Get\-ADForest\)\.Domains\s\|\s\%\{\sGet\-ADDomainController\s\-Filter\s.{0,1000}\s\-Server\s\$__ldap_queries_greyware_tool_keyword\s\}/ nocase ascii wide
+        $string19_ldap_queries_greyware_tool_keyword = /\(Get\-ADForest\)\.Domains\s\|\s\%\{\sGet\-ADDomainController\s\-Filter\s.{0,1000}\s\-Server\s\$__ldap_queries_greyware_tool_keyword\s\}/ nocase ascii wide
         // Description: Query to find service accounts which are typically high-privileged and targeted for privilege escalation
         // Reference: https://github.com/mthcht/ThreatHunting-Keywords
-        $string18_ldap_queries_greyware_tool_keyword = /\(objectCategory\=person\)\(objectClass\=user\)\(serviceAccount\=TRUE\)/ nocase ascii wide
+        $string20_ldap_queries_greyware_tool_keyword = /\(objectCategory\=person\)\(objectClass\=user\)\(serviceAccount\=TRUE\)/ nocase ascii wide
         // Description: Enumerate Domain Admins
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string19_ldap_queries_greyware_tool_keyword = /\(objectclass\=group\)\(samaccountname\=domain\sadmins\)/ nocase ascii wide
+        $string21_ldap_queries_greyware_tool_keyword = /\(objectclass\=group\)\(samaccountname\=domain\sadmins\)/ nocase ascii wide
         // Description: Accounts Trusted for Delegation
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string20_ldap_queries_greyware_tool_keyword = /\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)/ nocase ascii wide
+        $string22_ldap_queries_greyware_tool_keyword = /\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)/ nocase ascii wide
         // Description: enumeration of Domain Password Policies
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string21_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutDuration/ nocase ascii wide
+        $string23_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutDuration/ nocase ascii wide
         // Description: enumeration of Domain Password Policies
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string22_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutThreshold/ nocase ascii wide
+        $string24_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutThreshold/ nocase ascii wide
         // Description: enumeration of Domain Password Policies
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string23_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}minPwdLength/ nocase ascii wide
+        $string25_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}minPwdLength/ nocase ascii wide
         // Description: enumeration of Domain Admins group members
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string24_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$__ldap_queries_greyware_tool_keyword\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
+        $string26_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$__ldap_queries_greyware_tool_keyword\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
         // Description: get LDAP properties for password settings directly
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string25_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
+        $string27_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
         // Description: find user descriptions in Active Directory:
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string26_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users_ldap_queries_greyware_tool_keyword\s\=\s\$searchUsers_ldap_queries_greyware_tool_keyword\.FindAll\(\)\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\=\s\$users_ldap_queries_greyware_tool_keyword\.Properties\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\|\sWhere\-Object\s\{\$__ldap_queries_greyware_tool_keyword\.description\}/ nocase ascii wide
+        $string28_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users_ldap_queries_greyware_tool_keyword\s\=\s\$searchUsers_ldap_queries_greyware_tool_keyword\.FindAll\(\)\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\=\s\$users_ldap_queries_greyware_tool_keyword\.Properties\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\|\sWhere\-Object\s\{\$__ldap_queries_greyware_tool_keyword\.description\}/ nocase ascii wide
         // Description: find all disabled user accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string27_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\"/ nocase ascii wide
+        $string29_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\"/ nocase ascii wide
         // Description: get a count of all inter domain trust accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string28_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2560\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"/ nocase ascii wide
+        $string30_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2560\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"/ nocase ascii wide
         // Description: Detection of all accounts with 'Password Not Required'
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string29_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
+        $string31_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
         // Description: Enumerate all Domain Controllers
         // Reference: https://web.archive.org/web/20240109000256/https://cyberdom.blog/2024/01/07/defender-for-identity-hunting-for-ldap/
-        $string30_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(primaryGroupID\=516\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string32_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(primaryGroupID\=516\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: Enumerate all accounts that do not require a password
         // Reference: https://jsecurity101.medium.com/uncovering-adversarial-ldap-tradecraft-658b2deca384
-        $string31_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string33_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: ADSI query to retrieve all active user accounts with non-expiring passwords
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string32_ldap_queries_greyware_tool_keyword = /\[adsisearcher\].{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=66048\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)/ nocase ascii wide
+        $string34_ldap_queries_greyware_tool_keyword = /\[adsisearcher\].{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=66048\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)/ nocase ascii wide
         // Description: Discover all Domain Controller in the domain using ADSI
         // Reference: https://adsecurity.org/?p=299
-        $string33_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\.DomainControllers/ nocase ascii wide
+        $string35_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\.DomainControllers/ nocase ascii wide
         // Description: Discover all Global Catalogs in the forest using ADSI
         // Reference: https://adsecurity.org/?p=299
-        $string34_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.GlobalCatalogs/ nocase ascii wide
+        $string36_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.GlobalCatalogs/ nocase ascii wide
         // Description: query for the primary domain controller within the forest
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string35_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.RootDomain\.PDCRoleOwner\.Name/ nocase ascii wide
+        $string37_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.RootDomain\.PDCRoleOwner\.Name/ nocase ascii wide
         // Description: cmdlets to get computer information about Domain Controllers
         // Reference: https://adsecurity.org/?p=299
-        $string36_ldap_queries_greyware_tool_keyword = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\"516\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
+        $string38_ldap_queries_greyware_tool_keyword = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\"516\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
         // Description: identifying accounts with 'Password Not Required
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string37_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$__ldap_queries_greyware_tool_keyword\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$__ldap_queries_greyware_tool_keyword\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
+        $string39_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$__ldap_queries_greyware_tool_keyword\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$__ldap_queries_greyware_tool_keyword\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
         // Description: querying accounts that have not been logged into for over 90 days
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string38_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(passwordlastset\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(enabled\s\-eq\s\$True_ldap_queries_greyware_tool_keyword\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false_ldap_queries_greyware_tool_keyword\)\s\-and\s\(whencreated\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\}/ nocase ascii wide
+        $string40_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(passwordlastset\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(enabled\s\-eq\s\$True_ldap_queries_greyware_tool_keyword\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false_ldap_queries_greyware_tool_keyword\)\s\-and\s\(whencreated\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\}/ nocase ascii wide
         // Description: Red Teams and adversaries may leverage [Adsisearcher] to enumerate domain groups for situational awareness and Active Directory Discovery
         // Reference: https://research.splunk.com/endpoint/089c862f-5f83-49b5-b1c8-7e4ff66560c7/
-        $string39_ldap_queries_greyware_tool_keyword = /powershell.{0,1000}\[adsisearcher\].{0,1000}\(objectcategory\=group\).{0,1000}findAll\(\)/ nocase ascii wide
+        $string41_ldap_queries_greyware_tool_keyword = /powershell.{0,1000}\[adsisearcher\].{0,1000}\(objectcategory\=group\).{0,1000}findAll\(\)/ nocase ascii wide
 
     condition:
         any of them
@@ -12108,6 +12151,55 @@ rule lsa_whisperer_greyware_tool_keyword
 }
 
 
+rule LTProxy_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'LTProxy' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "LTProxy"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string1_LTProxy_greyware_tool_keyword = /\/\.ltproxy\.yml/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string2_LTProxy_greyware_tool_keyword = /\/etc\/ltproxy\.yml/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string3_LTProxy_greyware_tool_keyword = /\/LTProxy\.git/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string4_LTProxy_greyware_tool_keyword = /\/tmp\/\.ltproxy_proxychains_/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string5_LTProxy_greyware_tool_keyword = /ac5f344727467b6ad9743b8ffa2646ed73180dbdb97224feec6c54c5160a1984/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string6_LTProxy_greyware_tool_keyword = /ipt2socks\s\-R\s\-n\s9999\s\-j\s50\s\-u\s.{0,1000}\s\-s\s.{0,1000}\s\-l\s/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string7_LTProxy_greyware_tool_keyword = /L\-codes\/LTProxy/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string8_LTProxy_greyware_tool_keyword = /ltproxy\srestart/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string9_LTProxy_greyware_tool_keyword = /ltproxy\sstart/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string10_LTProxy_greyware_tool_keyword = /ltproxy\sstop/ nocase ascii wide
+        // Description: Linux Transparent Proxy (Similar to Proxifiter)
+        // Reference: https://github.com/L-codes/LTProxy
+        $string11_LTProxy_greyware_tool_keyword = /\\LTProxy\-main/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule lyncsmash_greyware_tool_keyword
 {
     meta:
@@ -12159,6 +12251,25 @@ rule Malus_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Malus_VPN_greyware_tool_keyword = /bdlcnpceagnkjnjlbbbcepohejbheilk/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule mega_co_nz_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'mega.co.nz' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "mega.co.nz"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: uploading data to mega cloud
+        // Reference: https://mega.io/
+        $string1_mega_co_nz_greyware_tool_keyword = /\.userstorage\.mega\.co\.nz\/ul\// nocase ascii wide
 
     condition:
         any of them
@@ -13080,6 +13191,44 @@ rule myexternalip_com_greyware_tool_keyword
 }
 
 
+rule myftp_biz_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'myftp.biz' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "myftp.biz"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: dyndns - lots of subdomains associated with malwares - could be used in various ways for both legitimate and malicious activities (malicious mostly)
+        // Reference: https://github.com/hagezi/dns-blocklists/blob/9d6562bddc175b59241d5935531f648cd6b6d9c8/rpz/dyndns.txt#L103
+        $string1_myftp_biz_greyware_tool_keyword = /\.myftp\.biz/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule myftp_org_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'myftp.org' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "myftp.org"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: dyndns - lots of subdomains associated with malwares - myftp.org could be used in various ways for both legitimate and malicious activities (malicious mostly)
+        // Reference: https://github.com/pan-unit42/iocs/blob/master/rat_nest/iocs.csv
+        $string1_myftp_org_greyware_tool_keyword = /\.myftp\.org/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule nbtscan_greyware_tool_keyword
 {
     meta:
@@ -13090,9 +13239,15 @@ rule nbtscan_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Scan for Active Machines and Gather NetBIOS Information
+        // Reference: N/A
+        $string1_nbtscan_greyware_tool_keyword = /nbtscan\s.{0,1000}\..{0,1000}\/24/ nocase ascii wide
         // Description: smb enumeration
         // Reference: https://github.com/charlesroelli/nbtscan
-        $string1_nbtscan_greyware_tool_keyword = /nbtscan\s\-r\s.{0,1000}\/24/ nocase ascii wide
+        $string2_nbtscan_greyware_tool_keyword = /nbtscan\s\-r\s.{0,1000}\/24/ nocase ascii wide
+        // Description: Identify Potential Points for Man-in-the-Middle Attacks
+        // Reference: N/A
+        $string3_nbtscan_greyware_tool_keyword = /nbtscan\s\-s\s\:\s/ nocase ascii wide
 
     condition:
         any of them
@@ -13174,6 +13329,238 @@ rule ncat_greyware_tool_keyword
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string2_ncat_greyware_tool_keyword = /ncat\s.{0,1000}\s\-p\s4444/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Neo_reGeorg_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Neo-reGeorg' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Neo-reGeorg"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string1_Neo_reGeorg_greyware_tool_keyword = /\sneoreg\.py\s/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string2_Neo_reGeorg_greyware_tool_keyword = /\.py\s.{0,1000}\-\-proxy\ssocks5\:\/\// nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string3_Neo_reGeorg_greyware_tool_keyword = /\/neoreg\.py/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string4_Neo_reGeorg_greyware_tool_keyword = /\/Neo\-reGeorg\.git/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string5_Neo_reGeorg_greyware_tool_keyword = /\/NeoreGeorg\.java/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string6_Neo_reGeorg_greyware_tool_keyword = /\/Neo\-reGeorg\/tarball/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string7_Neo_reGeorg_greyware_tool_keyword = /\/Neo\-reGeorg\/zipball/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string8_Neo_reGeorg_greyware_tool_keyword = /\/tunnel\.nosocket\.php/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string9_Neo_reGeorg_greyware_tool_keyword = /\[Ask\sNeoGeorg\]\sNeoGeorg\s/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string10_Neo_reGeorg_greyware_tool_keyword = /005f37654d164e5605ad7180a7af68d82da9b747e6fed34b71f6fda0883e6f74/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string11_Neo_reGeorg_greyware_tool_keyword = /01f7bb1226ad5d0c68b39ab60014b9e9f55ef85c56be7b0faed70d67bfbc13e5/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string12_Neo_reGeorg_greyware_tool_keyword = /0a539ea3eb8e7708241c05a746cf459f027e1bb4ab54e870bbcbe63e3f7a6de9/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string13_Neo_reGeorg_greyware_tool_keyword = /0f0c16e48d436603eff91f1a31043abb24df99f91a26ff8e73577d45b1152de5/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string14_Neo_reGeorg_greyware_tool_keyword = /10a63c922b6d9bec0f3b7a8d755a01b815d81556eb93f2526db0b5a36c597d6e/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string15_Neo_reGeorg_greyware_tool_keyword = /10d4bd7d47330656a50ba2557cd66ed93ea8a0010ef366f34b1a5e20e159297b/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string16_Neo_reGeorg_greyware_tool_keyword = /11c11bef98644223da8b9e1242b046e58a04a844b6c6a6fb88b7818f296ecdb3/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string17_Neo_reGeorg_greyware_tool_keyword = /12324526e79390f63e86cb9b7cebd7029d8da32fc2f73f2486517d0b451da60f/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string18_Neo_reGeorg_greyware_tool_keyword = /213ace4b0c02f038549af071ee3e0033da7e88cd8f809d257b4c9b2dc81b9f4d/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string19_Neo_reGeorg_greyware_tool_keyword = /2fdef205058424a234864a4f77be2f451f1e52608781fb0ec10fdf867d2b4dfb/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string20_Neo_reGeorg_greyware_tool_keyword = /32ea3247b4e572e80e116ae9a9ffb122c0766b0cc546c6122dab07da5aefde16/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string21_Neo_reGeorg_greyware_tool_keyword = /3c139c9ae721f89e61a98294cb486143ee435297beff1a6178cc7347b4ff278e/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string22_Neo_reGeorg_greyware_tool_keyword = /3d735de00aeb9535224e29d0adb6f2fefc79b7a46f76702af0d8eebcd49c1772/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string23_Neo_reGeorg_greyware_tool_keyword = /43791d1689cb309eac4e6e9748f86decf655732c3790d10ec2d30962900d52e2/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string24_Neo_reGeorg_greyware_tool_keyword = /478256ef0c35f13ada15baea0dd8a7e09c40ef2ff2e0a54a83681d920b93ba8a/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string25_Neo_reGeorg_greyware_tool_keyword = /56bf15ccd413e54239dde9103fa9e0bdbdfd5f3788855dbfec3fbe0e6a003b98/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string26_Neo_reGeorg_greyware_tool_keyword = /585ed5d6cb415cd94af39825a85dfec415f92249a8d57b5a6159537720958f42/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string27_Neo_reGeorg_greyware_tool_keyword = /5a5cbc0b756cbda7a9ac64ca5a0ad33899bd3ea9ae42113389c230a164900b74/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string28_Neo_reGeorg_greyware_tool_keyword = /5ab3fd2f7133bb9d297ebdfda1c2cf7af45baf3149b7d29932202e2ccb79c21f/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string29_Neo_reGeorg_greyware_tool_keyword = /695626bd1c10bf40379744a91ceefd71c27261b26b959d87de5c2ec74bced1a4/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string30_Neo_reGeorg_greyware_tool_keyword = /6c4a877eb0a3bc495d7490c2f218678005a10cd6e978a92c497791b980ca8567/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string31_Neo_reGeorg_greyware_tool_keyword = /7cde37e49b52a6ea480783c572a2fd04afcae330251ac65bbbc77b1c37faca6b/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string32_Neo_reGeorg_greyware_tool_keyword = /7ea80cfb998032be5b67dc614fc40087e1e36383e59a46616c9d03405c08af3c/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string33_Neo_reGeorg_greyware_tool_keyword = /806ad9ce802f8e110440ed228eddc40d82dad33ca0feaae1530d1490edb34d90/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string34_Neo_reGeorg_greyware_tool_keyword = /807ed1ebbac824f29a84235afe7522ddbb66bf392a7c1f5ea849a5f0aedf1d20/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string35_Neo_reGeorg_greyware_tool_keyword = /82fab464a4b0e1f1e284ec32370edd5090637c682ba7e7e609f2f5bb95c78c4b/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string36_Neo_reGeorg_greyware_tool_keyword = /8cc5a818d4db91362257001f7bb7995841bf3d83bc8d91e16a4329797b937cac/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string37_Neo_reGeorg_greyware_tool_keyword = /92e23b3baec268e8b8eea8833e0d1aa5c2cf337ca20be4ceb2880d8aaaf89d4a/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string38_Neo_reGeorg_greyware_tool_keyword = /9a468a1e3f8e645593dc25d5cb45d6b640da574e07afcc518e07eb1738a68510/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string39_Neo_reGeorg_greyware_tool_keyword = /9aa4b36654c9a2d7883a745ab791bcfc723ddcf793c4109529c1b8d8bbea41f0/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string40_Neo_reGeorg_greyware_tool_keyword = /9fc57548ab7ea8aed9b35ff5a6ceee11afd5707139f98333381fcc1442bc45aa/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string41_Neo_reGeorg_greyware_tool_keyword = /a10a179116e873452ca3323ce17ae870ea2a240c754b696dcfd3442e7bbc16a7/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string42_Neo_reGeorg_greyware_tool_keyword = /a3f949008272bef1ec57519e2417f80fcdfcb633eda2c0c0e102062ffe37e62f/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string43_Neo_reGeorg_greyware_tool_keyword = /a7c3d70099b1df9cb3165a8b5885fa727a778f3b3526811c0b5f16c30dccc492/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string44_Neo_reGeorg_greyware_tool_keyword = /aa244cce94120eeaef5bb7aa7e11a129662a50ecd4a0d542ae4a425b5757daf7/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string45_Neo_reGeorg_greyware_tool_keyword = /ab7eed3ed5928eb01b0676183186172a6a23711c645ba6f97081efaf3b0d2fec/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string46_Neo_reGeorg_greyware_tool_keyword = /b0c4f83b23c0bd366537a33642050c0ddfb4184d969dbf2e934903873a801953/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string47_Neo_reGeorg_greyware_tool_keyword = /b2b717b196a443ae5421b0e6cb1656d29034ede9c604bf04fec2bddaeba5dcf8/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string48_Neo_reGeorg_greyware_tool_keyword = /baf1e7bdd6feedd6b9144fed16093bd281ce26dc0da57137a5385fc7a5fc498f/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string49_Neo_reGeorg_greyware_tool_keyword = /c09e5a6ac3d8fb135b20e08d1550b54ea0ea84da2bcdaf2dbfa739f607804b88/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string50_Neo_reGeorg_greyware_tool_keyword = /c4183ce1d991cb27ef71b811f373222759494d1cf1db55dccce83405d0d570d3/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string51_Neo_reGeorg_greyware_tool_keyword = /c938afbd5c475a7071dbc1912a4b5c211f7c8bbbae1c2389989c2115a08d7a0d/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string52_Neo_reGeorg_greyware_tool_keyword = /cacc832d9daf18d621c26497f5affd8b6b27cf5e34332b8bd95da127efdbb5e1/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string53_Neo_reGeorg_greyware_tool_keyword = /cb183ce9401cd7ad838bedb22fb49717d5de7da10b8f64781aceb4912d6f5ec8/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string54_Neo_reGeorg_greyware_tool_keyword = /cc1a1ea3b0a719e36037ca340e24d6d574324578267bdfc38c3b4710289ec578/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string55_Neo_reGeorg_greyware_tool_keyword = /cc284e9b0925fd814e4aa3d125804f7cde054863c3c467492a14e8f73a4cbced/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string56_Neo_reGeorg_greyware_tool_keyword = /cd152f7de2ba0b3fc2e6053141b7bf326bca81aed5d5efa709bb10baa801cdd2/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string57_Neo_reGeorg_greyware_tool_keyword = /cm9vdDppcyB0d2VsdmU\=/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string58_Neo_reGeorg_greyware_tool_keyword = /d77577b4a183167f9e8b5f798e3f71fa4f41c81d1db9ce37c68bb6decfbdf737/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string59_Neo_reGeorg_greyware_tool_keyword = /d80046ee572c3222790560fc51c02de131507d5425bed6cecca98bc3f3ca50e9/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string60_Neo_reGeorg_greyware_tool_keyword = /dc57b353d32389a0af8a7ccb2054633ac502d899bb5bc9e656e91849215a57a1/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string61_Neo_reGeorg_greyware_tool_keyword = /debbc69c2926f0062b8243a484cd5710c6ba290f738e26a6e6ff403c3a536843/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string62_Neo_reGeorg_greyware_tool_keyword = /e10eff3227d730806c99dc8ac0f38a2262ed5ab3a86d90b4acb7efbb2d6d2def/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string63_Neo_reGeorg_greyware_tool_keyword = /e7836e1d44fe8ea29276fba8ea5fd5c94a242c2ec8d04850a62625c7792bff46/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string64_Neo_reGeorg_greyware_tool_keyword = /e9894baec4b491e0ee3bce3a760b33546ee03270f9ea6155f5dbebd66d820c11/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string65_Neo_reGeorg_greyware_tool_keyword = /f7b6475de06cdecd9b187a735bb3f960fa56bc12c7205225e0550dd7a7814a34/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string66_Neo_reGeorg_greyware_tool_keyword = /f7c1d9613d4f4a7d5cc193f7a52c83aa3be1abf466de9ef0a9e2b2faaa846a69/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string67_Neo_reGeorg_greyware_tool_keyword = /fa2f44b31d65e2b907ad9a3e1ddf95d9aac53905b53ff2bfeb178a7746b0cafe/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string68_Neo_reGeorg_greyware_tool_keyword = /fdaaa6bd9cbb9875b35f339dbd7b7481bc3aef2e2eb59caa2b77ffbd34ed079b/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string69_Neo_reGeorg_greyware_tool_keyword = /L\-codes\/Neo\-reGeorg/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string70_Neo_reGeorg_greyware_tool_keyword = /NeoGeorg\ssays\,\s\'All\sseems\sfine\'/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string71_Neo_reGeorg_greyware_tool_keyword = /neoreg\.py\sgenerate/ nocase ascii wide
+        // Description: Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+        // Reference: https://github.com/L-codes/Neo-reGeorg
+        $string72_Neo_reGeorg_greyware_tool_keyword = /neoreg\.py\s\-k\s.{0,1000}\s\-u\shttp.{0,1000}\.php/ nocase ascii wide
 
     condition:
         any of them
@@ -14093,12 +14480,33 @@ rule nltest_greyware_tool_keyword
         // Description: enumerate domain trusts with nltest
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string2_nltest_greyware_tool_keyword = /nltest\s\/dclist/ nocase ascii wide
+        // Description: Get the list of domain controllers for the specified domain
+        // Reference: N/A
+        $string3_nltest_greyware_tool_keyword = /nltest\s\/dclist\:/ nocase ascii wide
+        // Description: Dump Domain Trust Information
+        // Reference: N/A
+        $string4_nltest_greyware_tool_keyword = /nltest\s\/domain_trusts\s\/v/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: N/A
-        $string3_nltest_greyware_tool_keyword = /nltest\s\/domain_trusts/ nocase ascii wide
+        $string5_nltest_greyware_tool_keyword = /nltest\s\/domain_trusts/ nocase ascii wide
+        // Description: Force a re-discovery of Domain Controller
+        // Reference: N/A
+        $string6_nltest_greyware_tool_keyword = /nltest\s\/dsgetdc\:.{0,1000}\s\/force/ nocase ascii wide
+        // Description: Force a re-discovery of trusted domains
+        // Reference: N/A
+        $string7_nltest_greyware_tool_keyword = /nltest\s\/dsgetdc\:.{0,1000}\s\/force/ nocase ascii wide
+        // Description: Force a re-authentication on the secure channel
+        // Reference: N/A
+        $string8_nltest_greyware_tool_keyword = /nltest\s\/sc_reset\s\/force/ nocase ascii wide
+        // Description: List information about all trusted domains from a specific server
+        // Reference: N/A
+        $string9_nltest_greyware_tool_keyword = /nltest\s\/server\:.{0,1000}\s\/domain_trusts/ nocase ascii wide
+        // Description: Check all trusted domains of a specific server (verbose mode)
+        // Reference: N/A
+        $string10_nltest_greyware_tool_keyword = /nltest\s\/server\:.{0,1000}\s\/trusted_domains\s\/v/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string4_nltest_greyware_tool_keyword = /nltest\s\-dsgetdc/ nocase ascii wide
+        $string11_nltest_greyware_tool_keyword = /nltest\s\-dsgetdc/ nocase ascii wide
 
     condition:
         any of them
@@ -14325,6 +14733,9 @@ rule ntdsutil_greyware_tool_keyword
         // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
         // Reference: N/A
         $string5_ntdsutil_greyware_tool_keyword = /ntdsutil\.exe\s.{0,1000}ac\si\sntds.{0,1000}ifm.{0,1000}create\sfull\s.{0,1000}temp/ nocase ascii wide
+        // Description: creating a full backup of the Active Directory database and saving it to the \temp directory
+        // Reference: N/A
+        $string6_ntdsutil_greyware_tool_keyword = /The\sdatabase\sengine\screated\sa\snew\sdatabase.{0,1000}temp\\Active\sDirectory\\ntds\.dit/ nocase ascii wide
 
     condition:
         any of them
@@ -15476,57 +15887,63 @@ rule powershell_greyware_tool_keyword
         // Description: list AV products with powershell
         // Reference: N/A
         $string39_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
+        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
+        $string40_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
+        // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
+        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
+        $string41_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string40_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string42_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string41_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string42_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string43_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string44_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
+        $string46_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string45_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string47_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string46_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string48_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string47_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string49_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string48_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string49_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string51_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string50_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string52_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string51_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string53_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string52_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string54_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string53_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
+        $string55_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string54_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
+        $string56_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string55_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string57_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string56_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string58_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -15652,9 +16069,12 @@ rule Procdump_greyware_tool_keyword
         // Description: dump lsass process with procdump
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
         $string2_Procdump_greyware_tool_keyword = /procdump.{0,1000}lsass/ nocase ascii wide
+        // Description: full dump with procdump (often used to dump lsass)
+        // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+        $string3_Procdump_greyware_tool_keyword = /procdump\.exe.{0,1000}\s\-ma/ nocase ascii wide
         // Description: dump lsass process with procdump
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
-        $string3_Procdump_greyware_tool_keyword = /procdump64.{0,1000}lsass/ nocase ascii wide
+        $string4_Procdump_greyware_tool_keyword = /procdump64.{0,1000}lsass/ nocase ascii wide
 
     condition:
         any of them
@@ -15755,6 +16175,94 @@ rule ProxFlow_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_ProxFlow_greyware_tool_keyword = /aakchaleigkohafkfjfjbblobjifikek/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Proxifier_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Proxifier' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Proxifier"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string1_Proxifier_greyware_tool_keyword = /\sstop\sProxifierDrv/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string2_Proxifier_greyware_tool_keyword = /\/Proxifier\.app\/Contents\/MacOS\/Proxifier/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string3_Proxifier_greyware_tool_keyword = /\/Proxifier\.exe/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string4_Proxifier_greyware_tool_keyword = /\/Proxifier\/Proxifier\.app\// nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string5_Proxifier_greyware_tool_keyword = /\/ProxifierPE\.zip/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string6_Proxifier_greyware_tool_keyword = /\/ProxifierSetup\.exe/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string7_Proxifier_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\Proxifier\sPE\\/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string8_Proxifier_greyware_tool_keyword = /\\AppData\\Local\\Temp\\Proxifier\sPE\\/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string9_Proxifier_greyware_tool_keyword = /\\Proxifier\sService\sManager\.lnk/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string10_Proxifier_greyware_tool_keyword = /\\Proxifier\.exe/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string11_Proxifier_greyware_tool_keyword = /\\Proxifier\.lnk/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string12_Proxifier_greyware_tool_keyword = /\\ProxifierDrv\.sys/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string13_Proxifier_greyware_tool_keyword = /\\ProxifierPE\.zip/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string14_Proxifier_greyware_tool_keyword = /\\ProxifierSetup\.exe/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string15_Proxifier_greyware_tool_keyword = /\\ProxifierSetup\.tmp/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string16_Proxifier_greyware_tool_keyword = /\\ProxifierShellExt\.dll/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string17_Proxifier_greyware_tool_keyword = /\\ProxyChecker\.exe/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string18_Proxifier_greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\Proxifier_/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string19_Proxifier_greyware_tool_keyword = /\\Start\sMenu\\Programs\\Proxifier/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string20_Proxifier_greyware_tool_keyword = /\>Proxifier\sSetup\</ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string21_Proxifier_greyware_tool_keyword = /com\.initex\.proxifier\.v3\.macos/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string22_Proxifier_greyware_tool_keyword = /http\:\/\/www\.proxifier\.com\/distr\/last_versions\/ProxifierMac/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string23_Proxifier_greyware_tool_keyword = /http\:\/\/www\.proxifier\.com\/distr\/last_versions\/ProxifierPortable/ nocase ascii wide
+        // Description: allows to proxy connections for programs
+        // Reference: https://www.proxifier.com/download/
+        $string24_Proxifier_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Proxifier/ nocase ascii wide
 
     condition:
         any of them
@@ -26400,23 +26908,26 @@ rule whoami_greyware_tool_keyword
 
     strings:
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
-        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string1_whoami_greyware_tool_keyword = /whoami\s\/all/ nocase ascii wide
+        // Reference: N/A
+        $string1_whoami_greyware_tool_keyword = /\s\-exec\sbypass\s\-nop\s\-c\swhoami/ nocase ascii wide
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string2_whoami_greyware_tool_keyword = /whoami\s\/domain/ nocase ascii wide
+        $string2_whoami_greyware_tool_keyword = /whoami\s\/all/ nocase ascii wide
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string3_whoami_greyware_tool_keyword = /whoami\s\/groups/ nocase ascii wide
+        $string3_whoami_greyware_tool_keyword = /whoami\s\/domain/ nocase ascii wide
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string4_whoami_greyware_tool_keyword = /whoami\s\/priv/ nocase ascii wide
+        $string4_whoami_greyware_tool_keyword = /whoami\s\/groups/ nocase ascii wide
+        // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string5_whoami_greyware_tool_keyword = /whoami\s\/priv/ nocase ascii wide
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string5_whoami_greyware_tool_keyword = /whoami/ nocase ascii wide
+        $string6_whoami_greyware_tool_keyword = /whoami/ nocase ascii wide
         // Description: whoami is a legitimate command used to identify the current user executing the command in a terminal or command prompt.whoami can be used to gather information about the current user's privileges. credentials. and account name. which can then be used for Lateral Movement. privilege escalation. or targeted attacks within the compromised network.
         // Reference: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml
-        $string6_whoami_greyware_tool_keyword = /whoami\.exe.{0,1000}\s\/groups/ nocase ascii wide
+        $string7_whoami_greyware_tool_keyword = /whoami\.exe.{0,1000}\s\/groups/ nocase ascii wide
 
     condition:
         any of them

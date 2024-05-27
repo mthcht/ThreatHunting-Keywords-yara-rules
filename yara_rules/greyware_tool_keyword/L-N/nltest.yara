@@ -14,12 +14,33 @@ rule nltest
         // Description: enumerate domain trusts with nltest
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string2 = /nltest\s\/dclist/ nocase ascii wide
+        // Description: Get the list of domain controllers for the specified domain
+        // Reference: N/A
+        $string3 = /nltest\s\/dclist\:/ nocase ascii wide
+        // Description: Dump Domain Trust Information
+        // Reference: N/A
+        $string4 = /nltest\s\/domain_trusts\s\/v/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: N/A
-        $string3 = /nltest\s\/domain_trusts/ nocase ascii wide
+        $string5 = /nltest\s\/domain_trusts/ nocase ascii wide
+        // Description: Force a re-discovery of Domain Controller
+        // Reference: N/A
+        $string6 = /nltest\s\/dsgetdc\:.{0,1000}\s\/force/ nocase ascii wide
+        // Description: Force a re-discovery of trusted domains
+        // Reference: N/A
+        $string7 = /nltest\s\/dsgetdc\:.{0,1000}\s\/force/ nocase ascii wide
+        // Description: Force a re-authentication on the secure channel
+        // Reference: N/A
+        $string8 = /nltest\s\/sc_reset\s\/force/ nocase ascii wide
+        // Description: List information about all trusted domains from a specific server
+        // Reference: N/A
+        $string9 = /nltest\s\/server\:.{0,1000}\s\/domain_trusts/ nocase ascii wide
+        // Description: Check all trusted domains of a specific server (verbose mode)
+        // Reference: N/A
+        $string10 = /nltest\s\/server\:.{0,1000}\s\/trusted_domains\s\/v/ nocase ascii wide
         // Description: enumerate domain trusts with nltest
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string4 = /nltest\s\-dsgetdc/ nocase ascii wide
+        $string11 = /nltest\s\-dsgetdc/ nocase ascii wide
 
     condition:
         any of them

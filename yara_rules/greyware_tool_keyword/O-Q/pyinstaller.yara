@@ -22,13 +22,16 @@ rule pyinstaller
         $string4 = /pyinstaller\s.{0,1000}\.py/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string5 = /pyinstaller\.exe/ nocase ascii wide
+        $string5 = /pyinstaller.{0,1000}\s\-\-onefile\s\-\-add\-data\s/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string6 = /pyinstaller\/tarball/ nocase ascii wide
+        $string6 = /pyinstaller\.exe/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string7 = /pyinstaller\-script\.py/ nocase ascii wide
+        $string7 = /pyinstaller\/tarball/ nocase ascii wide
+        // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
+        // Reference: https://www.pyinstaller.org/
+        $string8 = /pyinstaller\-script\.py/ nocase ascii wide
 
     condition:
         any of them

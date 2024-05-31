@@ -37,28 +37,40 @@ rule DomainPasswordSpray
         $string9 = /\]\sPassword\sspraying\sis\scomplete/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string10 = /433d59580b95a3e3b82364729aac65643385eb4500c46eae2aab1c0567df03e6/ nocase ascii wide
+        $string10 = /1a3c4069\-8c11\-4336\-bef8\-9a43c0ba60e2/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string11 = /Cancelling\sthe\spassword\sspray\./ nocase ascii wide
+        $string11 = /433d59580b95a3e3b82364729aac65643385eb4500c46eae2aab1c0567df03e6/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string12 = /dafthack\/DomainPasswordSpray/ nocase ascii wide
+        $string12 = /433d59580b95a3e3b82364729aac65643385eb4500c46eae2aab1c0567df03e6/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string13 = /Cancelling\sthe\spassword\sspray\./ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string14 = /dafthack\/DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string13 = /DomainPasswordSpray/ nocase ascii wide
+        $string15 = /DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string14 = /DomainPasswordSpray\.ps1/ nocase ascii wide
+        $string16 = /DomainPasswordSpray\.ps1/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string15 = /Get\-DomainUserList\s\-Domain\s.{0,1000}\s\-RemoveDisabled\s/ nocase ascii wide
+        $string17 = /DomainPasswordSpray\.psm1/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string16 = /Invoke\-DomainPasswordSpray/ nocase ascii wide
+        $string18 = /Get\-DomainUserList\s\-Domain\s.{0,1000}\s\-RemoveDisabled\s/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string19 = /Invoke\-DomainPasswordSpray/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string20 = /mdavis332\/DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string17 = /PasswordSpray\s/ nocase ascii wide
+        $string21 = /PasswordSpray\s/ nocase ascii wide
 
     condition:
         any of them

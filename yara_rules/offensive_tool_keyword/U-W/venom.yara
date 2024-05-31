@@ -76,28 +76,13 @@ rule Venom
         $string22 = /agent_linux_x64\s\-rhost\s.{0,1000}\s\-rport\s/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string23 = /d57894d047c6589b7baf7d8745523fe56197a09ffd33e5f577227c2c5a5a7adc/ nocase ascii wide
+        $string23 = /Venom\sAdmin\sNode\sStart/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string24 = /df6296b27eb1e94fd1fbf0508d4ae9aaabd000598e2e5dc89c4b2928db7ba301/ nocase ascii wide
+        $string24 = /Venom\\agent\\agent\.go/ nocase ascii wide
         // Description: Venom - A Multi-hop Proxy for Penetration Testers
         // Reference: https://github.com/Dliv3/Venom
-        $string25 = /Dliv3\/Venom/ nocase ascii wide
-        // Description: Venom - A Multi-hop Proxy for Penetration Testers
-        // Reference: https://github.com/Dliv3/Venom
-        $string26 = /ring04h\#s5\.go/ nocase ascii wide
-        // Description: Venom - A Multi-hop Proxy for Penetration Testers
-        // Reference: https://github.com/Dliv3/Venom
-        $string27 = /setdes\slinux\sx64\sblahblahblah/ nocase ascii wide
-        // Description: Venom - A Multi-hop Proxy for Penetration Testers
-        // Reference: https://github.com/Dliv3/Venom
-        $string28 = /Venom\sAdmin\sNode\sStart/ nocase ascii wide
-        // Description: Venom - A Multi-hop Proxy for Penetration Testers
-        // Reference: https://github.com/Dliv3/Venom
-        $string29 = /Venom\\agent\\agent\.go/ nocase ascii wide
-        // Description: Venom - A Multi-hop Proxy for Penetration Testers
-        // Reference: https://github.com/Dliv3/Venom
-        $string30 = /You\scan\sexecute\scommands\sin\sthis\sshell\s\:D/ nocase ascii wide
+        $string25 = /You\scan\sexecute\scommands\sin\sthis\sshell\s\:D/ nocase ascii wide
 
     condition:
         any of them

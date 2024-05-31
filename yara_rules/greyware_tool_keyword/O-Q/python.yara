@@ -8,15 +8,18 @@ rule python
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: suspicious way of exeuting code
+        // Reference: https://x.com/Ax_Sharma/status/1795813203500322953/photo/4
+        $string1 = /\s\,exec\(__import__\(\'base64\'\)\.b64decode\(\"/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string1 = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/bash/ nocase ascii wide
+        $string2 = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/bash/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string2 = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/sh/ nocase ascii wide
+        $string3 = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/sh/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string3 = /\s\-c\s\'import\spty\;pty\.spawn\(\\\"\/bin\/sh/ nocase ascii wide
+        $string4 = /\s\-c\s\'import\spty\;pty\.spawn\(\\\"\/bin\/sh/ nocase ascii wide
 
     condition:
         any of them

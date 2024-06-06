@@ -65,27 +65,24 @@ rule RunasCs
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
         $string19 = /RunasCreateProcessAsUserW/ nocase ascii wide
-        // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
-        // Reference: https://github.com/antonioCoco/RunasCs
+        // Description: RunasCs - Csharp and open version of windows builtin runas.exe
+        // Reference: https://github.com/antonioCoco/RunasCs/
         $string20 = /RunasCs\.exe/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string21 = /RunasCs\.exe/ nocase ascii wide
-        // Description: RunasCs - Csharp and open version of windows builtin runas.exe
-        // Reference: https://github.com/antonioCoco/RunasCs/
-        $string22 = /RunasCs\.zip/ nocase ascii wide
+        $string21 = /RunasCs\.zip/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
+        $string22 = /RunasCs_net2\.exe/ nocase ascii wide
+        // Description: RunasCs - Csharp and open version of windows builtin runas.exe
+        // Reference: https://github.com/antonioCoco/RunasCs/
         $string23 = /RunasCs_net2\.exe/ nocase ascii wide
-        // Description: RunasCs - Csharp and open version of windows builtin runas.exe
-        // Reference: https://github.com/antonioCoco/RunasCs/
-        $string24 = /RunasCs_net2\.exe/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string25 = /RunasCsMain/ nocase ascii wide
+        $string24 = /RunasCsMain/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string26 = /RunasCs\-master/ nocase ascii wide
+        $string25 = /RunasCs\-master/ nocase ascii wide
 
     condition:
         any of them

@@ -10253,6 +10253,31 @@ rule gt_greyware_tool_keyword
 }
 
 
+rule guerrillamail_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'guerrillamail' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "guerrillamail"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: using the API of a disposable email address to use anytime - could be abused by malicious actors
+        // Reference: https://www.guerrillamail.com
+        $string1_guerrillamail_greyware_tool_keyword = /http\:\/\/api\.guerrillamail\.com\/ajax\.php\?/ nocase ascii wide
+        // Description: disposable email address to use anytime.
+        // Reference: https://www.guerrillamail.com
+        $string2_guerrillamail_greyware_tool_keyword = /https\:\/\/www\.guerrillamail\.com\/compose/ nocase ascii wide
+        // Description: disposable email address to use anytime.
+        // Reference: https://www.guerrillamail.com
+        $string3_guerrillamail_greyware_tool_keyword = /https\:\/\/www\.guerrillamail\.com\/inbox/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Guru_VPN__and__Proxy_greyware_tool_keyword
 {
     meta:
@@ -11588,6 +11613,64 @@ rule kaseya_VSA_greyware_tool_keyword
 }
 
 
+rule killProcessPOC_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'killProcessPOC' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "killProcessPOC"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string1_killProcessPOC_greyware_tool_keyword = /\/killProcessPOC\.git/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string2_killProcessPOC_greyware_tool_keyword = /\\\\\\\\\.\\\\aswSP_ArPot0/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string3_killProcessPOC_greyware_tool_keyword = /\\\\\\\\\.\\\\aswSP_ArPot1/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string4_killProcessPOC_greyware_tool_keyword = /\\\\\\\\\.\\\\aswSP_ArPot2/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string5_killProcessPOC_greyware_tool_keyword = /\\\\\\\\\.\\\\aswSP_ArPot3/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string6_killProcessPOC_greyware_tool_keyword = /\\\\\\\\\.\\\\aswSP_Avar/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string7_killProcessPOC_greyware_tool_keyword = /\\killProcessPOC/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string8_killProcessPOC_greyware_tool_keyword = /55ab03a0f7e3ce2c13664db76e5e0b6768cb66d88971b6bc6caf577831a77a23/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string9_killProcessPOC_greyware_tool_keyword = /sc\.exe\screate\saswSP_ArPot1/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string10_killProcessPOC_greyware_tool_keyword = /sc\.exe\screate\saswSP_ArPot2/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string11_killProcessPOC_greyware_tool_keyword = /sc\.exe\screate\saswSP_ArPot3/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string12_killProcessPOC_greyware_tool_keyword = /sc\.exe\screate\saswSP_ArPots/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string13_killProcessPOC_greyware_tool_keyword = /sc\.exe\sstart\saswSP_ArPot/ nocase ascii wide
+        // Description: use  Avast (aswArPot.sys) to kill process - exploited by MONTI ransomware
+        // Reference: https://github.com/timwhitez/killProcessPOC
+        $string14_killProcessPOC_greyware_tool_keyword = /timwhitez\/killProcessPOC/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule ldap_queries_greyware_tool_keyword
 {
     meta:
@@ -11655,72 +11738,75 @@ rule ldap_queries_greyware_tool_keyword
         // Description: Enumerate all of the domain controllers for all domains in a forest
         // Reference: N/A
         $string19_ldap_queries_greyware_tool_keyword = /\(Get\-ADForest\)\.Domains\s\|\s\%\{\sGet\-ADDomainController\s\-Filter\s.{0,1000}\s\-Server\s\$__ldap_queries_greyware_tool_keyword\s\}/ nocase ascii wide
+        // Description: used by Rubeus and S4UTomato tools
+        // Reference: N/A
+        $string20_ldap_queries_greyware_tool_keyword = /\(msds\-supportedencryptiontypes\=0\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.803\:\=4\)\)\)/ nocase ascii wide
         // Description: Query to find service accounts which are typically high-privileged and targeted for privilege escalation
         // Reference: https://github.com/mthcht/ThreatHunting-Keywords
-        $string20_ldap_queries_greyware_tool_keyword = /\(objectCategory\=person\)\(objectClass\=user\)\(serviceAccount\=TRUE\)/ nocase ascii wide
+        $string21_ldap_queries_greyware_tool_keyword = /\(objectCategory\=person\)\(objectClass\=user\)\(serviceAccount\=TRUE\)/ nocase ascii wide
         // Description: Enumerate Domain Admins
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string21_ldap_queries_greyware_tool_keyword = /\(objectclass\=group\)\(samaccountname\=domain\sadmins\)/ nocase ascii wide
+        $string22_ldap_queries_greyware_tool_keyword = /\(objectclass\=group\)\(samaccountname\=domain\sadmins\)/ nocase ascii wide
         // Description: Accounts Trusted for Delegation
         // Reference: https://gist.github.com/jsecurity101/9c7e94f95b8d90f9252d64949562ba5d
-        $string22_ldap_queries_greyware_tool_keyword = /\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)/ nocase ascii wide
+        $string23_ldap_queries_greyware_tool_keyword = /\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=524288\)/ nocase ascii wide
         // Description: enumeration of Domain Password Policies
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string23_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutDuration/ nocase ascii wide
+        $string24_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutDuration/ nocase ascii wide
         // Description: enumeration of Domain Password Policies
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string24_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutThreshold/ nocase ascii wide
+        $string25_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}lockoutThreshold/ nocase ascii wide
         // Description: enumeration of Domain Password Policies
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string25_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}minPwdLength/ nocase ascii wide
+        $string26_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}minPwdLength/ nocase ascii wide
         // Description: enumeration of Domain Admins group members
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string26_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$__ldap_queries_greyware_tool_keyword\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
+        $string27_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$__ldap_queries_greyware_tool_keyword\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
         // Description: get LDAP properties for password settings directly
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string27_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
+        $string28_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
         // Description: find user descriptions in Active Directory:
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string28_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users_ldap_queries_greyware_tool_keyword\s\=\s\$searchUsers_ldap_queries_greyware_tool_keyword\.FindAll\(\)\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\=\s\$users_ldap_queries_greyware_tool_keyword\.Properties\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\|\sWhere\-Object\s\{\$__ldap_queries_greyware_tool_keyword\.description\}/ nocase ascii wide
+        $string29_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users_ldap_queries_greyware_tool_keyword\s\=\s\$searchUsers_ldap_queries_greyware_tool_keyword\.FindAll\(\)\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\=\s\$users_ldap_queries_greyware_tool_keyword\.Properties\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\|\sWhere\-Object\s\{\$__ldap_queries_greyware_tool_keyword\.description\}/ nocase ascii wide
         // Description: find all disabled user accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string29_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\"/ nocase ascii wide
+        $string30_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\"/ nocase ascii wide
         // Description: get a count of all inter domain trust accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string30_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2560\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"/ nocase ascii wide
+        $string31_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2560\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"/ nocase ascii wide
         // Description: Detection of all accounts with 'Password Not Required'
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string31_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
+        $string32_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)/ nocase ascii wide
         // Description: Enumerate all Domain Controllers
         // Reference: https://web.archive.org/web/20240109000256/https://cyberdom.blog/2024/01/07/defender-for-identity-hunting-for-ldap/
-        $string32_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(primaryGroupID\=516\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string33_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=computer\)\(primaryGroupID\=516\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: Enumerate all accounts that do not require a password
         // Reference: https://jsecurity101.medium.com/uncovering-adversarial-ldap-tradecraft-658b2deca384
-        $string33_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\)\'\)\.FindAll\(\)/ nocase ascii wide
+        $string34_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\'\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=32\)\)\'\)\.FindAll\(\)/ nocase ascii wide
         // Description: ADSI query to retrieve all active user accounts with non-expiring passwords
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string34_ldap_queries_greyware_tool_keyword = /\[adsisearcher\].{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=66048\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)/ nocase ascii wide
+        $string35_ldap_queries_greyware_tool_keyword = /\[adsisearcher\].{0,1000}\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=66048\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)/ nocase ascii wide
         // Description: Discover all Domain Controller in the domain using ADSI
         // Reference: https://adsecurity.org/?p=299
-        $string35_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\.DomainControllers/ nocase ascii wide
+        $string36_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\.DomainControllers/ nocase ascii wide
         // Description: Discover all Global Catalogs in the forest using ADSI
         // Reference: https://adsecurity.org/?p=299
-        $string36_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.GlobalCatalogs/ nocase ascii wide
+        $string37_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.GlobalCatalogs/ nocase ascii wide
         // Description: query for the primary domain controller within the forest
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string37_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.RootDomain\.PDCRoleOwner\.Name/ nocase ascii wide
+        $string38_ldap_queries_greyware_tool_keyword = /\[System\.DirectoryServices\.ActiveDirectory\.Forest\]\:\:GetCurrentForest\(\)\.RootDomain\.PDCRoleOwner\.Name/ nocase ascii wide
         // Description: cmdlets to get computer information about Domain Controllers
         // Reference: https://adsecurity.org/?p=299
-        $string38_ldap_queries_greyware_tool_keyword = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\"516\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
+        $string39_ldap_queries_greyware_tool_keyword = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\"516\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
         // Description: identifying accounts with 'Password Not Required
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string39_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$__ldap_queries_greyware_tool_keyword\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$__ldap_queries_greyware_tool_keyword\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
+        $string40_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$__ldap_queries_greyware_tool_keyword\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$__ldap_queries_greyware_tool_keyword\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
         // Description: querying accounts that have not been logged into for over 90 days
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string40_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(passwordlastset\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(enabled\s\-eq\s\$True_ldap_queries_greyware_tool_keyword\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false_ldap_queries_greyware_tool_keyword\)\s\-and\s\(whencreated\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\}/ nocase ascii wide
+        $string41_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(passwordlastset\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(enabled\s\-eq\s\$True_ldap_queries_greyware_tool_keyword\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false_ldap_queries_greyware_tool_keyword\)\s\-and\s\(whencreated\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\}/ nocase ascii wide
         // Description: Red Teams and adversaries may leverage [Adsisearcher] to enumerate domain groups for situational awareness and Active Directory Discovery
         // Reference: https://research.splunk.com/endpoint/089c862f-5f83-49b5-b1c8-7e4ff66560c7/
-        $string41_ldap_queries_greyware_tool_keyword = /powershell.{0,1000}\[adsisearcher\].{0,1000}\(objectcategory\=group\).{0,1000}findAll\(\)/ nocase ascii wide
+        $string42_ldap_queries_greyware_tool_keyword = /powershell.{0,1000}\[adsisearcher\].{0,1000}\(objectcategory\=group\).{0,1000}findAll\(\)/ nocase ascii wide
 
     condition:
         any of them
@@ -12232,6 +12318,25 @@ rule macchanger_greyware_tool_keyword
         // Description: changing mac address with macchanger
         // Reference: N/A
         $string1_macchanger_greyware_tool_keyword = /macchanger\s\-r\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule maildrop_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'maildrop' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "maildrop"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: disposable email address to use anytime.
+        // Reference: https://maildrop.cc/
+        $string1_maildrop_greyware_tool_keyword = /https\:\/\/maildrop\.cc\/inbox\/\?mailbox\=/ nocase ascii wide
 
     condition:
         any of them
@@ -12993,6 +13098,25 @@ rule meshcentral_greyware_tool_keyword
 }
 
 
+rule Microsoft_Recall_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Microsoft Recall' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Microsoft Recall"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: data from the Recall feature in Windows 11 - recall is enable on the computer
+        // Reference: N/A
+        $string1_Microsoft_Recall_greyware_tool_keyword = /\\AppData\\Local\\CoreAIPlatform\.00\\UKP\\.{0,1000}\\ukg\.db/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule mkdir_greyware_tool_keyword
 {
     meta:
@@ -13066,12 +13190,12 @@ rule MpCmdRun_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: Wipe currently stored definitions
-        // Reference: N/A
-        $string1_MpCmdRun_greyware_tool_keyword = /MpCmdRun\.exe\s\-RemoveDefinitions\s\-All/ nocase ascii wide
         // Description: Defense evasion technique disable windows defender
         // Reference: N/A
-        $string2_MpCmdRun_greyware_tool_keyword = /MpCmdRun\.exe.{0,1000}\s\-disable/ nocase ascii wide
+        $string1_MpCmdRun_greyware_tool_keyword = /MpCmdRun\.exe.{0,1000}\s\-disable/ nocase ascii wide
+        // Description: Wipe currently stored definitions
+        // Reference: N/A
+        $string2_MpCmdRun_greyware_tool_keyword = /MpCmdRun\.exe.{0,1000}\s\-RemoveDefinitions\s\-All/ nocase ascii wide
 
     condition:
         any of them
@@ -14293,6 +14417,12 @@ rule ngrok_greyware_tool_keyword
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
         $string26_ngrok_greyware_tool_keyword = /tunnel\.us\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string27_ngrok_greyware_tool_keyword = /http\:\/\/.{0,1000}\.ngrok\.io/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string28_ngrok_greyware_tool_keyword = /https\:\/\/.{0,1000}\.ngrok\.io/ nocase ascii wide
 
     condition:
         any of them
@@ -16725,13 +16855,16 @@ rule pyinstaller_greyware_tool_keyword
         $string4_pyinstaller_greyware_tool_keyword = /pyinstaller\s.{0,1000}\.py/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string5_pyinstaller_greyware_tool_keyword = /pyinstaller\.exe/ nocase ascii wide
+        $string5_pyinstaller_greyware_tool_keyword = /pyinstaller.{0,1000}\s\-\-onefile\s\-\-add\-data\s/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string6_pyinstaller_greyware_tool_keyword = /pyinstaller\/tarball/ nocase ascii wide
+        $string6_pyinstaller_greyware_tool_keyword = /pyinstaller\.exe/ nocase ascii wide
         // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
         // Reference: https://www.pyinstaller.org/
-        $string7_pyinstaller_greyware_tool_keyword = /pyinstaller\-script\.py/ nocase ascii wide
+        $string7_pyinstaller_greyware_tool_keyword = /pyinstaller\/tarball/ nocase ascii wide
+        // Description: PyInstaller bundles a Python application and all its dependencies into a single package executable.
+        // Reference: https://www.pyinstaller.org/
+        $string8_pyinstaller_greyware_tool_keyword = /pyinstaller\-script\.py/ nocase ascii wide
 
     condition:
         any of them
@@ -16942,15 +17075,18 @@ rule python_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: suspicious way of exeuting code
+        // Reference: https://x.com/Ax_Sharma/status/1795813203500322953/photo/4
+        $string1_python_greyware_tool_keyword = /\s\,exec\(__import__\(\'base64\'\)\.b64decode\(\"/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string1_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/bash/ nocase ascii wide
+        $string2_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/bash/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string2_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/sh/ nocase ascii wide
+        $string3_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\"\/bin\/sh/ nocase ascii wide
         // Description: interactive shell
         // Reference: N/A
-        $string3_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\\\"\/bin\/sh/ nocase ascii wide
+        $string4_python_greyware_tool_keyword = /\s\-c\s\'import\spty\;pty\.spawn\(\\\"\/bin\/sh/ nocase ascii wide
 
     condition:
         any of them
@@ -22561,268 +22697,274 @@ rule SimpleHelp_greyware_tool_keyword
         $string14_SimpleHelp_greyware_tool_keyword = /\\remoteaccess\-jar\-with\-dependencies\.jar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string15_SimpleHelp_greyware_tool_keyword = /\\SafeBoot\\Network\\SimpleHelp\sServer/ nocase ascii wide
+        $string15_SimpleHelp_greyware_tool_keyword = /\\SafeBoot\\Network\\ShTemporaryService/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string16_SimpleHelp_greyware_tool_keyword = /\\Services\\SimpleHelp\sServer/ nocase ascii wide
+        $string16_SimpleHelp_greyware_tool_keyword = /\\SafeBoot\\Network\\SimpleHelp\sServer/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string17_SimpleHelp_greyware_tool_keyword = /\\simplegateway\.service\"/ nocase ascii wide
+        $string17_SimpleHelp_greyware_tool_keyword = /\\Services\\SimpleHelp\sServer/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string18_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\sTechnicianEmbedExample\.html/ nocase ascii wide
+        $string18_SimpleHelp_greyware_tool_keyword = /\\simplegateway\.service\"/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string19_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\.RemoteWork\.127_0_0_1/ nocase ascii wide
+        $string19_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\sTechnicianEmbedExample\.html/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string20_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\.Technician\.127_0_0_1/ nocase ascii wide
+        $string20_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\.RemoteWork\.127_0_0_1/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string21_SimpleHelp_greyware_tool_keyword = /\\simplehelper64\.exe/ nocase ascii wide
+        $string21_SimpleHelp_greyware_tool_keyword = /\\SimpleHelp\.Technician\.127_0_0_1/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string22_SimpleHelp_greyware_tool_keyword = /\\simplehelp\-rw\\shell/ nocase ascii wide
+        $string22_SimpleHelp_greyware_tool_keyword = /\\simplehelper64\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string23_SimpleHelp_greyware_tool_keyword = /\\simplehelpuninstall\.exe/ nocase ascii wide
+        $string23_SimpleHelp_greyware_tool_keyword = /\\simplehelp\-rw\\shell/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string24_SimpleHelp_greyware_tool_keyword = /\\SimpleService\.exe/ nocase ascii wide
+        $string24_SimpleHelp_greyware_tool_keyword = /\\simplehelpuninstall\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string25_SimpleHelp_greyware_tool_keyword = /\\StopSimpleGatewayService\.exe/ nocase ascii wide
+        $string25_SimpleHelp_greyware_tool_keyword = /\\SimpleService\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string26_SimpleHelp_greyware_tool_keyword = /\\winpty\-agent64\.exe/ nocase ascii wide
+        $string26_SimpleHelp_greyware_tool_keyword = /\\StopSimpleGatewayService\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string27_SimpleHelp_greyware_tool_keyword = /bin\\Remote\sAccessLauncher\.exe/ nocase ascii wide
+        $string27_SimpleHelp_greyware_tool_keyword = /\\winpty\-agent64\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string28_SimpleHelp_greyware_tool_keyword = /Elevate.{0,1000}\\elev_win\.exe/ nocase ascii wide
+        $string28_SimpleHelp_greyware_tool_keyword = /\>SimpleHelp\sLtd\</ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string29_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\sLauncher\"/ nocase ascii wide
+        $string29_SimpleHelp_greyware_tool_keyword = /bin\\Remote\sAccessLauncher\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string30_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\sUpdater\"/ nocase ascii wide
+        $string30_SimpleHelp_greyware_tool_keyword = /Elevate.{0,1000}\\elev_win\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string31_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\"/ nocase ascii wide
+        $string31_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\sLauncher\"/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string32_SimpleHelp_greyware_tool_keyword = /Manage\sRemote\sAccess\sService\.exe/ nocase ascii wide
+        $string32_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\sUpdater\"/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string33_SimpleHelp_greyware_tool_keyword = /Program\sFiles\\SimpleHelp/ nocase ascii wide
+        $string33_SimpleHelp_greyware_tool_keyword = /firewall\sadd\srule\s\"name\=SH\sRemote\sAccess\sService\"/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string34_SimpleHelp_greyware_tool_keyword = /ProgramData\\JWrapper\-Remote\sAccess\\.{0,1000}\.exe/ nocase ascii wide
+        $string34_SimpleHelp_greyware_tool_keyword = /Manage\sRemote\sAccess\sService\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string35_SimpleHelp_greyware_tool_keyword = /Remote\sAccessECompatibility\.exe/ nocase ascii wide
+        $string35_SimpleHelp_greyware_tool_keyword = /Program\sFiles\\SimpleHelp/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string36_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32arm\-offline\.tar/ nocase ascii wide
+        $string36_SimpleHelp_greyware_tool_keyword = /ProgramData\\JWrapper\-Remote\sAccess\\.{0,1000}\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string37_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32arm\-online\.tar/ nocase ascii wide
+        $string37_SimpleHelp_greyware_tool_keyword = /Remote\sAccessECompatibility\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string38_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32\-offline\.tar/ nocase ascii wide
+        $string38_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32arm\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string39_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32\-online\.tar/ nocase ascii wide
+        $string39_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32arm\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string40_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64arm\-offline\.tar/ nocase ascii wide
+        $string40_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string41_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64arm\-online\.tar/ nocase ascii wide
+        $string41_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux32\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string42_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64\-offline\.tar/ nocase ascii wide
+        $string42_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64arm\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string43_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64\-online\.tar/ nocase ascii wide
+        $string43_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64arm\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string44_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-intel\-offline\.dmg/ nocase ascii wide
+        $string44_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string45_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-intel\-online\.dmg/ nocase ascii wide
+        $string45_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-linux64\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string46_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-offline\.dmg/ nocase ascii wide
+        $string46_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-intel\-offline\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string47_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-online\.dmg/ nocase ascii wide
+        $string47_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-intel\-online\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string48_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows32\-offline\.exe/ nocase ascii wide
+        $string48_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-offline\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string49_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows32\-online\.exe/ nocase ascii wide
+        $string49_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-macos\-online\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string50_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows64\-offline\.exe/ nocase ascii wide
+        $string50_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows32\-offline\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string51_SimpleHelp_greyware_tool_keyword = /remote\saccess\-windows64\-online\.exe/ nocase ascii wide
+        $string51_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows32\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string52_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows64\-online\.exe/ nocase ascii wide
+        $string52_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows64\-offline\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string53_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-java\-online\.jar/ nocase ascii wide
+        $string53_SimpleHelp_greyware_tool_keyword = /remote\saccess\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string54_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32arm\-offline\.tar/ nocase ascii wide
+        $string54_SimpleHelp_greyware_tool_keyword = /Remote\sAccess\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string55_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32arm\-online\.tar/ nocase ascii wide
+        $string55_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-java\-online\.jar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string56_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32\-offline\.tar/ nocase ascii wide
+        $string56_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32arm\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string57_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32\-online\.tar/ nocase ascii wide
+        $string57_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32arm\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string58_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64arm\-offline\.tar/ nocase ascii wide
+        $string58_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string59_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64arm\-online\.tar/ nocase ascii wide
+        $string59_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux32\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string60_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64\-offline\.tar/ nocase ascii wide
+        $string60_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64arm\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string61_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64\-online\.tar/ nocase ascii wide
+        $string61_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64arm\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string62_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-intel\-offline\.dmg/ nocase ascii wide
+        $string62_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string63_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-intel\-online\.dmg/ nocase ascii wide
+        $string63_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-linux64\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string64_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-offline\.dmg/ nocase ascii wide
+        $string64_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-intel\-offline\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string65_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-online\.dmg/ nocase ascii wide
+        $string65_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-intel\-online\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string66_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows32\-offline\.exe/ nocase ascii wide
+        $string66_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-offline\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string67_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows32\-online\.exe/ nocase ascii wide
+        $string67_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-macos\-online\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string68_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows64\-offline\.exe/ nocase ascii wide
+        $string68_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows32\-offline\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string69_SimpleHelp_greyware_tool_keyword = /remote\ssupport\-windows64\-online\.exe/ nocase ascii wide
+        $string69_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows32\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string70_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows64\-online\.exe/ nocase ascii wide
+        $string70_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows64\-offline\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string71_SimpleHelp_greyware_tool_keyword = /remote\swork\-windows64\-online\.exe/ nocase ascii wide
+        $string71_SimpleHelp_greyware_tool_keyword = /remote\ssupport\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string72_SimpleHelp_greyware_tool_keyword = /Remote\sWork\-windows64\-online\.exe/ nocase ascii wide
+        $string72_SimpleHelp_greyware_tool_keyword = /Remote\sSupport\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string73_SimpleHelp_greyware_tool_keyword = /SimpleHelp\s\-\ssimple\-help\.com/ nocase ascii wide
+        $string73_SimpleHelp_greyware_tool_keyword = /remote\swork\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string74_SimpleHelp_greyware_tool_keyword = /simplehelp\sremote\swork\.exe/ nocase ascii wide
+        $string74_SimpleHelp_greyware_tool_keyword = /Remote\sWork\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string75_SimpleHelp_greyware_tool_keyword = /simplehelp\sremote\sworkwinlauncher\.exe/ nocase ascii wide
+        $string75_SimpleHelp_greyware_tool_keyword = /SimpleHelp\s\-\ssimple\-help\.com/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string76_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sRemote\sWorkWinLauncher\.exe/ nocase ascii wide
+        $string76_SimpleHelp_greyware_tool_keyword = /simplehelp\sremote\swork\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string77_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\.exe/ nocase ascii wide
+        $string77_SimpleHelp_greyware_tool_keyword = /simplehelp\sremote\sworkwinlauncher\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string78_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnician\.exe/ nocase ascii wide
+        $string78_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sRemote\sWorkWinLauncher\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string79_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-java\-online\.jar/ nocase ascii wide
+        $string79_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string80_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32arm\-offline\.tar/ nocase ascii wide
+        $string80_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnician\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string81_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32arm\-online\.tar/ nocase ascii wide
+        $string81_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-java\-online\.jar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string82_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32\-offline\.tar/ nocase ascii wide
+        $string82_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32arm\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string83_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32\-online\.tar/ nocase ascii wide
+        $string83_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32arm\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string84_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64arm\-offline\.tar/ nocase ascii wide
+        $string84_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string85_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64arm\-online\.tar/ nocase ascii wide
+        $string85_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux32\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string86_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64\-offline\.tar/ nocase ascii wide
+        $string86_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64arm\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string87_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64\-online\.tar/ nocase ascii wide
+        $string87_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64arm\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string88_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-intel\-offline\.dmg/ nocase ascii wide
+        $string88_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64\-offline\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string89_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-intel\-online\.dmg/ nocase ascii wide
+        $string89_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-linux64\-online\.tar/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string90_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-offline\.dmg/ nocase ascii wide
+        $string90_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-intel\-offline\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string91_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-online\.dmg/ nocase ascii wide
+        $string91_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-intel\-online\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string92_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows32\-offline\.exe/ nocase ascii wide
+        $string92_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-offline\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string93_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows32\-online\.exe/ nocase ascii wide
+        $string93_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-macos\-online\.dmg/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string94_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows64\-offline\.exe/ nocase ascii wide
+        $string94_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows32\-offline\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string95_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnician\-windows64\-online\.exe/ nocase ascii wide
+        $string95_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows32\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string96_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows64\-online\.exe/ nocase ascii wide
+        $string96_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows64\-offline\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string97_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnicianwinlauncher\.exe/ nocase ascii wide
+        $string97_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnician\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string98_SimpleHelp_greyware_tool_keyword = /SimpleHelp\.exe/ nocase ascii wide
+        $string98_SimpleHelp_greyware_tool_keyword = /SimpleHelp\sTechnician\-windows64\-online\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string99_SimpleHelp_greyware_tool_keyword = /simplehelp\.technician\.127_0_0_1/ nocase ascii wide
+        $string99_SimpleHelp_greyware_tool_keyword = /simplehelp\stechnicianwinlauncher\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string100_SimpleHelp_greyware_tool_keyword = /SimpleHelp\-allplatforms\.zip/ nocase ascii wide
+        $string100_SimpleHelp_greyware_tool_keyword = /SimpleHelp\.exe/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string101_SimpleHelp_greyware_tool_keyword = /simplehelpcustomer\.exe/ nocase ascii wide
+        $string101_SimpleHelp_greyware_tool_keyword = /simplehelp\.technician\.127_0_0_1/ nocase ascii wide
         // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
         // Reference: simple-help.com
-        $string102_SimpleHelp_greyware_tool_keyword = /SimpleHelp\-install\-64\.exe/ nocase ascii wide
+        $string102_SimpleHelp_greyware_tool_keyword = /SimpleHelp\-allplatforms\.zip/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string103_SimpleHelp_greyware_tool_keyword = /simplehelpcustomer\.exe/ nocase ascii wide
+        // Description: SimpleHelp is an RMM tool that has been exploited by attackers to gain unauthorized remote access 
+        // Reference: simple-help.com
+        $string104_SimpleHelp_greyware_tool_keyword = /SimpleHelp\-install\-64\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -23196,49 +23338,58 @@ rule softperfect_networkscanner_greyware_tool_keyword
         $string2_softperfect_networkscanner_greyware_tool_keyword = /\snetscan\.exe\s/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string3_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range\:.{0,1000}\s\/auto\:.{0,1000}\./ nocase ascii wide
+        $string3_softperfect_networkscanner_greyware_tool_keyword = /\snetscan64\.exe\s/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string4_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/hide\s\/range\:all/ nocase ascii wide
+        $string4_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s.{0,1000}\s\/hide\s.{0,1000}\s\/range\:.{0,1000}\s\/auto\:.{0,1000}\./ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string5_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/wakeall/ nocase ascii wide
+        $string5_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/hide\s\/range\:all/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string6_softperfect_networkscanner_greyware_tool_keyword = /\/netscan\.exe/ nocase ascii wide
+        $string6_softperfect_networkscanner_greyware_tool_keyword = /\.exe\s\/wakeall/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string7_softperfect_networkscanner_greyware_tool_keyword = /\/netscan_linux\.tar\.gz/ nocase ascii wide
+        $string7_softperfect_networkscanner_greyware_tool_keyword = /\/netscan\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string8_softperfect_networkscanner_greyware_tool_keyword = /\/netscan_portable\.zip/ nocase ascii wide
+        $string8_softperfect_networkscanner_greyware_tool_keyword = /\/netscan_linux\.tar\.gz/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string9_softperfect_networkscanner_greyware_tool_keyword = /\/netscan_setup\.exe/ nocase ascii wide
+        $string9_softperfect_networkscanner_greyware_tool_keyword = /\/netscan_portable\.zip/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string10_softperfect_networkscanner_greyware_tool_keyword = /\\netscan\.exe/ nocase ascii wide
+        $string10_softperfect_networkscanner_greyware_tool_keyword = /\/netscan_setup\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string11_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_linux\.tar\.gz/ nocase ascii wide
+        $string11_softperfect_networkscanner_greyware_tool_keyword = /\/netscan64\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string12_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_portable\.zip/ nocase ascii wide
+        $string12_softperfect_networkscanner_greyware_tool_keyword = /\\netscan\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string13_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_portable\\/ nocase ascii wide
+        $string13_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_linux\.tar\.gz/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string14_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_setup\.exe/ nocase ascii wide
+        $string14_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_portable\.zip/ nocase ascii wide
+        // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
+        // Reference: https://www.softperfect.com/products/networkscanner/
+        $string15_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_portable\\/ nocase ascii wide
+        // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
+        // Reference: https://www.softperfect.com/products/networkscanner/
+        $string16_softperfect_networkscanner_greyware_tool_keyword = /\\netscan_setup\.exe/ nocase ascii wide
+        // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
+        // Reference: https://www.softperfect.com/products/networkscanner/
+        $string17_softperfect_networkscanner_greyware_tool_keyword = /\\netscan64\.exe/ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com.cach3.com/board/read.php%3F12,10134,12202.html
-        $string15_softperfect_networkscanner_greyware_tool_keyword = /\<Data\sName\=\"RelativeTargetName\"\>delete\.me\</ nocase ascii wide
+        $string18_softperfect_networkscanner_greyware_tool_keyword = /\<Data\sName\=\"RelativeTargetName\"\>delete\.me\</ nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string16_softperfect_networkscanner_greyware_tool_keyword = /netscan\.exe\s\// nocase ascii wide
+        $string19_softperfect_networkscanner_greyware_tool_keyword = /netscan\.exe\s\// nocase ascii wide
         // Description: SoftPerfect Network Scanner can ping computers scan ports discover shared folders and retrieve practically any information about network devices via WMI SNMP HTTP SSH and PowerShell
         // Reference: https://www.softperfect.com/products/networkscanner/
-        $string17_softperfect_networkscanner_greyware_tool_keyword = /SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe/ nocase ascii wide
+        $string20_softperfect_networkscanner_greyware_tool_keyword = /SoftPerfect_.{0,1000}Patch_Keygen_v2.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -24823,6 +24974,28 @@ rule telnet_greyware_tool_keyword
 }
 
 
+rule temp_mail_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'temp-mail' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "temp-mail"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: using the API of a disposable email address to use anytime - could be abused by malicious actors
+        // Reference: temp-mail.org
+        $string1_temp_mail_greyware_tool_keyword = /https\:\/\/privatix\-temp\-mail\-v1\.p\.rapidapi\.com\/request\/domains\// nocase ascii wide
+        // Description: using the API of a disposable email address to use anytime - could be abused by malicious actors
+        // Reference: temp-mail.org
+        $string2_temp_mail_greyware_tool_keyword = /https\:\/\/privatix\-temp\-mail\-v1\.p\.rapidapi\.com\/request\/mail\/id\/null\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule temp_sh_greyware_tool_keyword
 {
     meta:
@@ -25059,6 +25232,25 @@ rule tmpwatch_greyware_tool_keyword
         // Description: Equation Group hack tool set command exploitation- tmpwatch - removes files which haven't been accessed for a period of time
         // Reference: https://linux.die.net/man/8/tmpwatch
         $string4_tmpwatch_greyware_tool_keyword = /if\s\[\s\-f\s\/tmp\/tmpwatch\s\]\s.{0,1000}\sthen/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule TotalRecall_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'TotalRecall' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "TotalRecall"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: extracts and displays data from the Recall feature in Windows 11
+        // Reference: https://github.com/xaitax/TotalRecall
+        $string1_TotalRecall_greyware_tool_keyword = /\\AppData\\Local\\CoreAIPlatform\.00\\UKP\\.{0,1000}\\ukg\.db/ nocase ascii wide
 
     condition:
         any of them
@@ -28864,6 +29056,25 @@ rule _1clickVPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1__1clickVPN_greyware_tool_keyword = /fcfhplploccackoneaefokcmbjfbkenj/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule _1secmail_com_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool '1secmail.com' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "1secmail.com"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: using the API of 1secmail (temporary email service) could be abused by malicious actors - observed in SafeBreach-Labs/DoubleDrive tool
+        // Reference: https://www.1secmail.com/
+        $string1__1secmail_com_greyware_tool_keyword = /www\.1secmail\.com\/api\/v1\/\?action\=/ nocase ascii wide
 
     condition:
         any of them

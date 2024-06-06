@@ -86,6 +86,12 @@ rule ngrok
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
         $string26 = /tunnel\.us\.ngrok\.com/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string27 = /http\:\/\/.{0,1000}\.ngrok\.io/ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
+        $string28 = /https\:\/\/.{0,1000}\.ngrok\.io/ nocase ascii wide
 
     condition:
         any of them

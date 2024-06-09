@@ -37,7 +37,7 @@ Example of the json output file using `-o` or `--output`:
 
 ## Integrated with bincapz
 
-Enumerate binaries capabilities with [bincapz](https://github.com/chainguard-dev/bincapz) and this project rules:
+Enumerates program capabilities and malicious behaviors with [bincapz](https://github.com/chainguard-dev/bincapz) and this project rules:
 `bincapz -third-party -all -stats myfolder`
 
 

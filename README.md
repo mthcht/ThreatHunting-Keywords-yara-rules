@@ -31,4 +31,9 @@ Example of the json output file using `-o` or `--output`:
 
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/37dc6e05-52c7-4778-bd22-62b960569fd0)
 
+## Integrated with bincapz
+
+Enumerate binaries capabilities with [bincapz](https://github.com/chainguard-dev/bincapz) and this project rules:
+`bincapz -third-party -all -stats`
+
 

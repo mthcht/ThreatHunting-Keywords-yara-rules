@@ -2,12 +2,18 @@
 
 ![B9lGW1697885670](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/98dfefe9-f915-4dc7-bb72-d8a9118cf0d8)
 
+Yara rules for Threat Hunting sessions
+
 All the detection patterns from the [threathunting-keywords](https://github.com/mthcht/ThreatHunting-Keywords) project are automatically organized in yara rules for each tool and keyword type.
 - 🛠️ **offensive tool keyword**: These keywords relate to offensive tools or exhibit high confidence of malicious intent. It's crucial that these terms are relevant and reliable in detecting potential threats (low false positive rate).
 - 🛠️ **greyware tool keyword**: Keywords in this category correspond to 'legitimate' tools that are abused by malicious actors. As these tools also have legitimate uses, the potential for false positives is inherently higher. It's important to interpret these results with the understanding that not all detections may signify malicious activity
 - 🛠️ **signature keyword**: These keywords may not directly associate with tools but may include security product signature names, specific strings, or words significant in threat detection.
 
-Organized in alphabetical order to bypass the GitHub limitation of 1000 files per directory.
+- `all.yara`:  Contains all the rules
+- `offensive_tools.yara`:  all the offensive tools rules 
+- `greyware_tools.yara`:  all the greyware tools (more false positives expected - triage necessary)
+
+a sperated rule file exist for each tool, organized in alphabetical order to bypass the GitHub limitation of 1000 files per directory.
 
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda53ec2-28cb-4f16-bbb9-36f5afba922c)
 
@@ -28,5 +34,10 @@ Example of the json output file using `-o` or `--output`:
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/64cf98a8-dd5c-45de-946d-a9243d570b92)
 
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/37dc6e05-52c7-4778-bd22-62b960569fd0)
+
+## Integrated with bincapz
+
+Enumerates program capabilities and malicious behaviors with [bincapz](https://github.com/chainguard-dev/bincapz) and this project rules:
+`bincapz -third-party -all -stats myfolder`
 
 

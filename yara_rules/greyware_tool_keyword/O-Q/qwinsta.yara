@@ -10,7 +10,13 @@ rule qwinsta
     strings:
         // Description: enumerate rdp session on a remote server
         // Reference: N/A
-        $string1 = /qwinsta\s\/server\:/ nocase ascii wide
+        $string1 = /cmd\s\/c\s.{0,1000}qwinsta/ nocase ascii wide
+        // Description: enumerate rdp session on a remote server
+        // Reference: N/A
+        $string2 = /cmd\.exe.{0,1000}qwinsta/ nocase ascii wide
+        // Description: enumerate rdp session on a remote server
+        // Reference: N/A
+        $string3 = /qwinsta\s\/server\:/ nocase ascii wide
 
     condition:
         any of them

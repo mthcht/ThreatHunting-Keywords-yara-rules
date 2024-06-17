@@ -1776,6 +1776,97 @@ rule Ammyy_Admin_greyware_tool_keyword
 }
 
 
+rule AmperageKit_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'AmperageKit' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AmperageKit"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string1_AmperageKit_greyware_tool_keyword = /\/Amperage\.exe/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string2_AmperageKit_greyware_tool_keyword = /\/AmperageKit\.git/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string3_AmperageKit_greyware_tool_keyword = /\/AmperageKit\/releases\// nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string4_AmperageKit_greyware_tool_keyword = /\\Amperage\.exe/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string5_AmperageKit_greyware_tool_keyword = /\\Amperage\\Program\.cs/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string6_AmperageKit_greyware_tool_keyword = /\\Amperage_v2024\.5\.31_arm64\.zip/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string7_AmperageKit_greyware_tool_keyword = /\\Amperage_v2024\.6\.1_arm64\.zip/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string8_AmperageKit_greyware_tool_keyword = /\\AmperageAIXSysRemove/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string9_AmperageKit_greyware_tool_keyword = /\\AmperageHwReqDetour/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string10_AmperageKit_greyware_tool_keyword = /\\AmperageKit\.sln/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string11_AmperageKit_greyware_tool_keyword = /\\ProgramData\\Amperage/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string12_AmperageKit_greyware_tool_keyword = /327F3F26\-182F\-4E58\-ABEA\-A0CEDBCA0FCD/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string13_AmperageKit_greyware_tool_keyword = /3bdf7c5f0c87c94b461668137a3e7cbf757d59dafc7a063362c34d17f2f33e61/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string14_AmperageKit_greyware_tool_keyword = /7334543f2f3555690c9a4995cf1d8e83beb9fa45e6aa147c49114a4ef89670b8/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string15_AmperageKit_greyware_tool_keyword = /75dce532b65a7c7644a626196a8af9d8370e163e802847505fb033a6290fb4a5/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string16_AmperageKit_greyware_tool_keyword = /7931404e96b6aff52bc81a852f1f545f0cd07712d648099ec0618f4e66a1807f/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string17_AmperageKit_greyware_tool_keyword = /80C7245C\-B926\-4CEB\-BA5B\-5353736137A8/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string18_AmperageKit_greyware_tool_keyword = /8e454334de0de74a6e53ee1d26e24cd2b0f41427922d9e92e6d49cf5db942a3c/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string19_AmperageKit_greyware_tool_keyword = /A3454AF1\-12AF\-4952\-B26D\-FF0930DB779E/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string20_AmperageKit_greyware_tool_keyword = /Amperage\s\-\sRecall\ssetup\stool\sfor\sunsupported\shardware/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string21_AmperageKit_greyware_tool_keyword = /cd1c54a8510c1e09d55868e12872aa54f9dc9ade95d70f08a173d29f6d676fde/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string22_AmperageKit_greyware_tool_keyword = /d84efd06178700a83d135862d6c7419dce2e12df92c78850dc7cc5b1da482abd/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string23_AmperageKit_greyware_tool_keyword = /ed0375afd9b26b18fd9b72bbb416dbf8bec289bf135facf4b7ba5cd2b1d86208/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string24_AmperageKit_greyware_tool_keyword = /Removing\sAIX\spackage\sfrom\sall\sstandard\susers/ nocase ascii wide
+        // Description: enabling Recall in Windows 11 version 24H2 on unsupported devices
+        // Reference: https://github.com/thebookisclosed/AmperageKit
+        $string25_AmperageKit_greyware_tool_keyword = /thebookisclosed\/AmperageKit/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule anonfiles_com_greyware_tool_keyword
 {
     meta:
@@ -2216,6 +2307,397 @@ rule attrib_greyware_tool_keyword
 }
 
 
+rule AutoHotkey_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'AutoHotkey' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AutoHotkey"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string1_AutoHotkey_greyware_tool_keyword = /\/AutoHotkey\.exe/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string2_AutoHotkey_greyware_tool_keyword = /\/AutoHotkey\.git/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string3_AutoHotkey_greyware_tool_keyword = /\/AutoHotkey\/releases\/download\// nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string4_AutoHotkey_greyware_tool_keyword = /\/AutoHotkey_.{0,1000}\.zip/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string5_AutoHotkey_greyware_tool_keyword = /\/AutoHotkey64\.exe/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string6_AutoHotkey_greyware_tool_keyword = /\\AutoHotkey\.dll/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string7_AutoHotkey_greyware_tool_keyword = /\\AutoHotkey\.exe/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string8_AutoHotkey_greyware_tool_keyword = /\\AutoHotkey_.{0,1000}\.zip/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string9_AutoHotkey_greyware_tool_keyword = /\\AutoHotkey64\.exe/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string10_AutoHotkey_greyware_tool_keyword = /\\AutoHotkey\-main/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string11_AutoHotkey_greyware_tool_keyword = /\\AutoHotkeyx\.sln/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string12_AutoHotkey_greyware_tool_keyword = /04eb8295af197da058cec5a2b78b8b7f6bcee7299cbadebf68dc6837968c5bb0/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string13_AutoHotkey_greyware_tool_keyword = /0759be5242a162707b9738226af1a163a15fc6e0105dd88765a52e056ac136c4/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string14_AutoHotkey_greyware_tool_keyword = /0c9f95a64d12580994ffbdd1ba90e8e020a97056d06615c3e6ced6001a7beea4/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string15_AutoHotkey_greyware_tool_keyword = /0d0811072bcce0b852fe3b5da38b12fdbc8e91a419df88c0ff6b09ba0fcb4ca4/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string16_AutoHotkey_greyware_tool_keyword = /107fd4550d60e934e88f65b15a00c8eca224f279ed593288d5ad9743ef7f35a4/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string17_AutoHotkey_greyware_tool_keyword = /15285219ad07eaa012de59c3001b67f65fd7382d913fde559219ab1f180d6fcc/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string18_AutoHotkey_greyware_tool_keyword = /1578e1c16807f4f9c02cf9d284cf774ad4725b55f114dae0778a2f29ff9e2c47/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string19_AutoHotkey_greyware_tool_keyword = /16089612f48695d4bb779fc1eb56596d264a54443ba461e8b9c4df9afa7cbcab/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string20_AutoHotkey_greyware_tool_keyword = /178f4b8888441e6970682416279fb99a5ffb2844136440becd66a8c62091e435/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string21_AutoHotkey_greyware_tool_keyword = /1c8697533f19519535ac3679b54beb9632476b3f13adf0d58708b6c4db55e310/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string22_AutoHotkey_greyware_tool_keyword = /1d9e35fcbf660435ec27cf36a00e87d80928f36e8edb2d7728abaa00585dac08/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string23_AutoHotkey_greyware_tool_keyword = /207fea03708f1ba8c8e61f30170d799495736726d1853d7d4150a5ffffa14013/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string24_AutoHotkey_greyware_tool_keyword = /20878974725227ec21e88d6e91c9ed2615981faa9ab9ee9821268008fd0cb1c7/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string25_AutoHotkey_greyware_tool_keyword = /20d41f5fcfa4f3d61c533a9e21a019f0bca0bd8012a6528ccdf2621749a122ab/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string26_AutoHotkey_greyware_tool_keyword = /24351cf8346262f0dcb4bab290b55ee65de503921906f13dfd106ef259d5fb7f/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string27_AutoHotkey_greyware_tool_keyword = /25ce0fa078c6603a909bb391c1cb4eb891554b29ad275beea47042962576f4ff/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string28_AutoHotkey_greyware_tool_keyword = /2afc21c42cca8caf03b00e22e95592ff6cbeb6ef64bd816eb9d32ed260818cb6/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string29_AutoHotkey_greyware_tool_keyword = /2c5626009786be43363b7ab1c2cca6a7b0eb57bdf6c40464f2abe874341b0485/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string30_AutoHotkey_greyware_tool_keyword = /2cd1b00947abe2df2cba3997d7bdd5a9043ebe598987f0e9cade0aceb73f9edd/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string31_AutoHotkey_greyware_tool_keyword = /2df6d9782b8656772c842c22b6582ee91782bde800f345491a71eb72c294e6fc/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string32_AutoHotkey_greyware_tool_keyword = /2e57c62a9fe28ddf0a4da23123c2622652dde869c366f6f1da6ff8bf78dd50c7/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string33_AutoHotkey_greyware_tool_keyword = /2e980bd99add2b0859b0bd6586dddcd688e1f8588ef6c9bf5922674e947a6dc6/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string34_AutoHotkey_greyware_tool_keyword = /2f58a372dc62e70149bd29621cb76049c438204127426299b9a8bdcff002c23a/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string35_AutoHotkey_greyware_tool_keyword = /314215d36ba200db6ce4ea71ff15203b3b048203621329269801c6c27042ba7c/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string36_AutoHotkey_greyware_tool_keyword = /31bd31d107caf59b48fcdc9af0f428d80aafb0e1a7166b32aa047b3b495d8457/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string37_AutoHotkey_greyware_tool_keyword = /3225d34d16ecfb04fca67e9ed68230ebcbe65bafe70b12ca0c687a039ebe0851/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string38_AutoHotkey_greyware_tool_keyword = /36d16c928a88a7a600fb6d3599f13e1b601c79b0eafd7cb1e2dde43d42893d0f/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string39_AutoHotkey_greyware_tool_keyword = /38b5790e1fd1bea17231a3a55e701217ebde42428046e029f609b1d1734c7140/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string40_AutoHotkey_greyware_tool_keyword = /38c646e446ecfec33fded951544ee72eab17433e43c997e9c56bd7ccf1d7aaa4/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string41_AutoHotkey_greyware_tool_keyword = /39037993\-9571\-4DF2\-8E39\-CD2909043574/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string42_AutoHotkey_greyware_tool_keyword = /3a2f34f529cd12950c905d2c68637bb071a12ebd0c00dd887d807fe6c23de762/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string43_AutoHotkey_greyware_tool_keyword = /3d064459b1bd3505d03217197c2dfa4db9efc0e9f71e6caaf1706ab8697b9a03/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string44_AutoHotkey_greyware_tool_keyword = /3eb961a803189e9d9d3195464a55acf9eebcd5f626c7e176c906b9639f43169e/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string45_AutoHotkey_greyware_tool_keyword = /3f1b1ca2800dbae254969ed5365848e4fbcf8725ec68d265c40318fe7e3d51a3/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string46_AutoHotkey_greyware_tool_keyword = /3ff847c73e2ab0d5f1f1440046cd001d25639793a352d9558b24708d77ac3127/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string47_AutoHotkey_greyware_tool_keyword = /411ea6ded074b7a3e461672d528e2a8e80bddcbaddcba7a2addbc4399e44d140/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string48_AutoHotkey_greyware_tool_keyword = /487413ff39c7aa044e1b5ab8a0047d6ef7c9c25550fec4d91e8a0a97fd1282ac/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string49_AutoHotkey_greyware_tool_keyword = /49a48e879f7480238d2fe17520ac19afe83685aac0b886719f9e1eac818b75cc/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string50_AutoHotkey_greyware_tool_keyword = /4c517113f22937a313921b73c9b25463cc7ed0b77d9cf42b08b6443184e52e90/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string51_AutoHotkey_greyware_tool_keyword = /4de829c7a5e19e8578b398793c952c1ea1a3a1df54f354f46ff140a4932da53f/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string52_AutoHotkey_greyware_tool_keyword = /4e07de6f89b7dd371735d0360afc61ac21d19ea7c4b3f020e2e1a6b17b61432c/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string53_AutoHotkey_greyware_tool_keyword = /4e1e3123dd85d3ac65a0803b08dd89b9b12b5a00b9f566782855332d03e5fe26/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string54_AutoHotkey_greyware_tool_keyword = /510a833bdd0f896cc398eaae4ff475f5b7cfe37649efbf647b50d21e442394b9/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string55_AutoHotkey_greyware_tool_keyword = /52a8249970f72966d7fae76ffc7fd4009ce4100e92ece3fd6c409c61943af492/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string56_AutoHotkey_greyware_tool_keyword = /5eefcfc824818b2cdefcdf6719f5db13a4800434146f0b90ca3a30e2ad6e737f/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string57_AutoHotkey_greyware_tool_keyword = /60d86368165d01d88709d304757abcc642b0c165379438023fb3bc791a5b749f/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string58_AutoHotkey_greyware_tool_keyword = /62613da1a6ac28989c8b3a7076bb90af9c9361cacd76c695c381140c1d9182db/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string59_AutoHotkey_greyware_tool_keyword = /62734d219f14a942986e62d6c0fef0c2315bc84acd963430aed788c36e67e1ff/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string60_AutoHotkey_greyware_tool_keyword = /69b21d5a3d2bcc2b2b075d275a38f551997c45f28c9504995ede406aa101bead/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string61_AutoHotkey_greyware_tool_keyword = /6f3663f7cdd25063c8c8728f5d9b07813ced8780522fd1f124ba539e2854215f/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string62_AutoHotkey_greyware_tool_keyword = /6fe778623ef31eb224b4aeff3eaa73aef6d76c091fcb328782046e1ec44969d5/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string63_AutoHotkey_greyware_tool_keyword = /700d65fb0b7653666b1ba1b3911f97ec9a6c6af647083dafd8609ffcf5499b4b/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string64_AutoHotkey_greyware_tool_keyword = /704cd5aaaf2ad78e31ce1b7e13ff87c7b5e97bc5e2ef55188525eb7c96a53232/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string65_AutoHotkey_greyware_tool_keyword = /7237594482ea47498b240d39ca8e94e3c635dc66fb4989db47739a8a420e6fc2/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string66_AutoHotkey_greyware_tool_keyword = /7350f50c3fc022d217821e6f416497820e6216a714c5ee859af1f36be9b740d7/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string67_AutoHotkey_greyware_tool_keyword = /76EFDEE3\-81CF\-4ADA\-94DC\-EA5509FF6FFC/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string68_AutoHotkey_greyware_tool_keyword = /79d6da35083dc0008ed1da0396c561994822b84bc679d7d6193cd70b1ddce0ef/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string69_AutoHotkey_greyware_tool_keyword = /7a0dfa37846ead5afe73e4a8525eb1738d3b52c608291ba37088b0c037abde58/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string70_AutoHotkey_greyware_tool_keyword = /7b71b013061e80d7fa52560b061e142f9d7abf38d847da9d6871a90f8cbdc293/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string71_AutoHotkey_greyware_tool_keyword = /7e570c5aa02fb16d74433033fdcdd74f890d8eac26b9b94d24f600c9e48feacc/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string72_AutoHotkey_greyware_tool_keyword = /876dc6fecb7587bc98ed1702f11e01f19f7c56cd9703c76b7722e914e143280c/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string73_AutoHotkey_greyware_tool_keyword = /88c5d386c60a15d9758570e8b261f6b1d23248bd37d32b98cdf83ebc5223a266/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string74_AutoHotkey_greyware_tool_keyword = /8dc4871ac544d2cd0ff7ccd84b8862eaf9ba0af18bd5b71e29146b17e4b13783/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string75_AutoHotkey_greyware_tool_keyword = /8e596f227367e273468b5833ab4169b6994bbfc5c1a2a3b85796a769f9444836/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string76_AutoHotkey_greyware_tool_keyword = /8e61b9221dd7aeab8c362c7d580eec35e192317bb8c645909e0ce95b91c1332a/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string77_AutoHotkey_greyware_tool_keyword = /8f0ddf90f4cc44499bbeb0f2d3ff298cd5e5d206ca759535495ee767e83b6023/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string78_AutoHotkey_greyware_tool_keyword = /8f28c38a0b2af6ac96c4a7e1a2c0f296b2410f845d9aca8487843a1edac4271d/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string79_AutoHotkey_greyware_tool_keyword = /9195ca93854a739d434ec0ce62ef7b6fa159402624cd49b41a5ad1f3ad8f138b/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string80_AutoHotkey_greyware_tool_keyword = /95142d0b33c50fe5fcdd5d9d1a1ec7951bf662b06f09d83438410cba625aa411/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string81_AutoHotkey_greyware_tool_keyword = /96af0b4438274122ca3a69e9556e91c3d2f05af16e74890dee567eebe3ac101a/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string82_AutoHotkey_greyware_tool_keyword = /975722db63d783f39f712552dbed318d5e4e7e4a68c5822ad44edf79ba0afd5b/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string83_AutoHotkey_greyware_tool_keyword = /9871de1742c1132c9b3171c4ae970e66b6ebe3a6cf31c35db881a32e33cc4016/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string84_AutoHotkey_greyware_tool_keyword = /98ba5fe44ef68256a7e5692d45f2ad434b64eece32859ce3723803f36a6e4d55/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string85_AutoHotkey_greyware_tool_keyword = /99eb1eb28b32a783c6619409988dc8fc70ecc9d1ebc05f286ec4c503d4853cbf/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string86_AutoHotkey_greyware_tool_keyword = /99ed8964fc153ac4984eb94f82bd51b2eda463d6483bb3e7e97d6d2b69b71196/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string87_AutoHotkey_greyware_tool_keyword = /9b8c27cbcbae9c1ec6fe4265c15a9122806b0b0bf9d1173c499d7d2ccb714e17/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string88_AutoHotkey_greyware_tool_keyword = /9c8b1aecaf1bdded80bec98ec5ab5b9b9754cbce9439dd9eacc7d1774d1438f8/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string89_AutoHotkey_greyware_tool_keyword = /9f229bb988451fb20a2a307f6d6e598822a8e9bfa69dcf4b31fd67a7f7f4d3ad/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string90_AutoHotkey_greyware_tool_keyword = /9f829612db928e5c7e7b08a9bf596b908d09c4f242b7454802e87dd2c2dc3f89/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string91_AutoHotkey_greyware_tool_keyword = /a1c31dc6e3e65461a52bb7f161f8c48e807ccd91d34f3382574d66314eac538d/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string92_AutoHotkey_greyware_tool_keyword = /a32362b2769cb3cd8caa10722c50208b7170fe82d3663e85425df416422b4d22/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string93_AutoHotkey_greyware_tool_keyword = /a6e07cccc0d66a5894500a057fe92440f1e372bda4856f148244ba369bf521de/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string94_AutoHotkey_greyware_tool_keyword = /a7db865b054314d253293a1f427d3a155da5164060804aac431020e26a40e1ad/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string95_AutoHotkey_greyware_tool_keyword = /af7b8e60b4b54f5f85e6b207ac51926cb076aa4319b8e4c72e59b98c85818cae/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string96_AutoHotkey_greyware_tool_keyword = /AutoHotkey\/AutoHotkey/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string97_AutoHotkey_greyware_tool_keyword = /AutoHotkeySC\.bin/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string98_AutoHotkey_greyware_tool_keyword = /AutoHotkeyx\.sln/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string99_AutoHotkey_greyware_tool_keyword = /AutoHotkeyx\.vcxproj/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string100_AutoHotkey_greyware_tool_keyword = /b04b1dc45652c59f82cecc30cf9aea76e5a1bd6cc3fecc450cef67cbcd825f06/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string101_AutoHotkey_greyware_tool_keyword = /b0943f704ffc3830b8b900408b94e7a27434602dd34e9a831f81730bee4631a2/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string102_AutoHotkey_greyware_tool_keyword = /b5a13819d673e09534661f3f1c2f85f4cac71f020b8a6a64586ba829e2cd3fd4/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string103_AutoHotkey_greyware_tool_keyword = /b75fa5157fd2ff049b07259fde91ab3605f737827fb64fcbc373e2bd1779bb5d/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string104_AutoHotkey_greyware_tool_keyword = /c\:\\debug_clipboard_formats\.txt/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string105_AutoHotkey_greyware_tool_keyword = /c36dd14fc322e1846a793797b758f5b0fb554f7f058da6a333c86f27cbf9ec01/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string106_AutoHotkey_greyware_tool_keyword = /c584ab8fbfa1702c36bab98e6e07b05585402ec00c2e44c245a9bd879ca049f0/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string107_AutoHotkey_greyware_tool_keyword = /d67778ebd40bff99e1f248b1612d64f70191632b64af60ea53403d2550f2d640/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string108_AutoHotkey_greyware_tool_keyword = /d71ba928d2755294ac049a66949606ee82e0e0a7bbb87760ae9fd1bcf24c0b8c/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string109_AutoHotkey_greyware_tool_keyword = /d7646ca3a26760fe5633288d79d7b6a44cfc19a85c5315f94e0861963f1c601e/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string110_AutoHotkey_greyware_tool_keyword = /dbf3490648efe876bd9a98d53e4d9110bf5e02a3914c0dd4b2a48db4a09799b5/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string111_AutoHotkey_greyware_tool_keyword = /dffda71c77c271cafc2f77aa007daea58f32a3562da3a3b924701117c058a336/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string112_AutoHotkey_greyware_tool_keyword = /e0e5f40f9ebdbdbb29d6084e448401335ae802bdfdbe3604abcabbb92baa0d35/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string113_AutoHotkey_greyware_tool_keyword = /e16e14a5902618298c24b6b6a2503d83d435bd647dcbdc2a20fa5f7285c57168/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string114_AutoHotkey_greyware_tool_keyword = /e27a87c132686f3e27675a53a2bce7c65328ac148ed2d7e11aefd657224d7d20/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string115_AutoHotkey_greyware_tool_keyword = /e51ba62ce6bfed434f3402945a9aa89f4b312076dfc597b5cae6f25ea0525bc8/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string116_AutoHotkey_greyware_tool_keyword = /e85105a9dafcfb10b38227ad4657d329e7ac579a19740e71e1a121919832c2a3/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string117_AutoHotkey_greyware_tool_keyword = /e9f3756f811224b3500981a136dae2ddd79987a510c9f389b67168a7fa494fa8/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string118_AutoHotkey_greyware_tool_keyword = /eac0df3ecfc829ba940a7323d21b688896758df43df086ed0e886c68d6003d22/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string119_AutoHotkey_greyware_tool_keyword = /f33996eaa68e8a7a5f5a6156b44af666049769bd021979a6ffb9abb29b45ea2b/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string120_AutoHotkey_greyware_tool_keyword = /f5d2887adeaa87f28d30174552b1ec976d302e7c804faa3e8ce74ddb0dda6c78/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string121_AutoHotkey_greyware_tool_keyword = /f815e34b79e1357b7defc86d467077293f56b4cac373394c01a66adabacf3350/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string122_AutoHotkey_greyware_tool_keyword = /f8b3dcc1c49da62b5302c64901e03eb6f15f0904fdf24e795bd8545e32d31604/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string123_AutoHotkey_greyware_tool_keyword = /f8c6eec28f90ec093e1b22cebe727abd2d408015f19944c9f2fea68d79a85673/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string124_AutoHotkey_greyware_tool_keyword = /f90226225d8c33b99efb6901942b695ca8e75d68a0ccf6000c1f0857b1b39251/ nocase ascii wide
+        // Description: AutoHotkey - macro-creation and automation-oriented scripting utility for Windows
+        // Reference: https://github.com/AutoHotkey/AutoHotkey
+        $string125_AutoHotkey_greyware_tool_keyword = /www\.autohotkey\.com\/download\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule AutoIt_greyware_tool_keyword
 {
     meta:
@@ -2384,6 +2866,58 @@ rule Azino_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Azino_VPN_greyware_tool_keyword = /iolonopooapdagdemdoaihahlfkncfgg/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Azure_Storage_Explorer_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Azure Storage Explorer' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Azure Storage Explorer"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string1_Azure_Storage_Explorer_greyware_tool_keyword = /\/Microsoft\sAzure\sStorage\sExplorer\.app/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string2_Azure_Storage_Explorer_greyware_tool_keyword = /\/Microsoft\sAzure\sStorage\sExplorer\.zip/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string3_Azure_Storage_Explorer_greyware_tool_keyword = /\\Microsoft\sAzure\sStorage\sExplorer\.zip/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string4_Azure_Storage_Explorer_greyware_tool_keyword = /\>Microsoft\sAzure\sStorage\sExplorer\sSetup\</ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string5_Azure_Storage_Explorer_greyware_tool_keyword = /\>Microsoft\sAzure\sStorage\sExplorer\</ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string6_Azure_Storage_Explorer_greyware_tool_keyword = /036a9029e3b883ded8de9d9bdde3f63dd86d3403b7ed767b1efc3037c9d37bc4/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string7_Azure_Storage_Explorer_greyware_tool_keyword = /7fa49a08d05a3616b5a24f52645d76c4496c37f5060a6bd4a648f534c4e85ae0/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string8_Azure_Storage_Explorer_greyware_tool_keyword = /c798b2aedc7a74f0daf51eb216aae8cb48b45f208b0409916442b1d61d2ad2ef/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string9_Azure_Storage_Explorer_greyware_tool_keyword = /com\.microsoft\.StorageExplorer/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string10_Azure_Storage_Explorer_greyware_tool_keyword = /Microsoft\sAzure\sStorage\sExplorer\.app\/Contents\// nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string11_Azure_Storage_Explorer_greyware_tool_keyword = /StorageExplorer\-linux\-x64\.tar\.gz/ nocase ascii wide
+        // Description: legitimate microsoft software - threat actors have been abusing Azure Storage Explorer for Data Exfiltration
+        // Reference: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+        $string12_Azure_Storage_Explorer_greyware_tool_keyword = /StorageExplorer\-windows\-x64\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -3135,7 +3669,10 @@ rule browser_lol_greyware_tool_keyword
         $string2_browser_lol_greyware_tool_keyword = /\.srv\.browser\.lol/ nocase ascii wide
         // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
         // Reference: https://browser.lol
-        $string3_browser_lol_greyware_tool_keyword = /https\:\/\/browser\.lol\/vnc\?server\=/ nocase ascii wide
+        $string3_browser_lol_greyware_tool_keyword = /browser\.lol\/create/ nocase ascii wide
+        // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
+        // Reference: https://browser.lol
+        $string4_browser_lol_greyware_tool_keyword = /https\:\/\/browser\.lol\/vnc\?server\=/ nocase ascii wide
 
     condition:
         any of them
@@ -3890,6 +4427,59 @@ rule crowbar_greyware_tool_keyword
         // Description: Tunnel TCP over a plain HTTP session
         // Reference: https://github.com/q3k/crowbar
         $string34_crowbar_greyware_tool_keyword = /useradd\s\-rm\scrowbar/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule crowdstrike_falcon_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'crowdstrike falcon' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "crowdstrike falcon"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: suspicious commands executed remotly by crowdstrike agent
+        // Reference: N/A
+        $string1_crowdstrike_falcon_greyware_tool_keyword = /runscript\s\-raw\=\`\`\`curl\s/ nocase ascii wide
+        // Description: suspicious commands executed remotly by crowdstrike agent
+        // Reference: N/A
+        $string2_crowdstrike_falcon_greyware_tool_keyword = /runscript\s\-raw\=\`\`\`whoami/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule csvde_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'csvde' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "csvde"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: exports data from Active Directory Domain Services (AD DS) using files that store data in the comma-separated value (CSV) format
+        // Reference: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732101(v=ws.11)
+        $string1_csvde_greyware_tool_keyword = /csvde\s\-f\s/ nocase ascii wide
+        // Description: exports data from Active Directory Domain Services (AD DS) using files that store data in the comma-separated value (CSV) format
+        // Reference: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732101(v=ws.11)
+        $string2_csvde_greyware_tool_keyword = /csvde\s\-r\s.{0,1000}\s\-f\s/ nocase ascii wide
+        // Description: exports data from Active Directory Domain Services (AD DS) using files that store data in the comma-separated value (CSV) format
+        // Reference: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732101(v=ws.11)
+        $string3_csvde_greyware_tool_keyword = /csvde\.exe\s\-f\s/ nocase ascii wide
+        // Description: exports data from Active Directory Domain Services (AD DS) using files that store data in the comma-separated value (CSV) format
+        // Reference: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732101(v=ws.11)
+        $string4_csvde_greyware_tool_keyword = /csvde\.exe\s\-r\s.{0,1000}\s\-f\s/ nocase ascii wide
+        // Description: exports data from Active Directory Domain Services (AD DS) using files that store data in the comma-separated value (CSV) format
+        // Reference: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732101(v=ws.11)
+        $string5_csvde_greyware_tool_keyword = /csvde\.exe\"\s\-f\s/ nocase ascii wide
 
     condition:
         any of them
@@ -5214,6 +5804,49 @@ rule dir_greyware_tool_keyword
         // Description: threat actors searched for Active Directory related DLLs in directories
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
         $string1_dir_greyware_tool_keyword = /\sdir\s\/s\s.{0,1000}\/\sMicrosoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule discord_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'discord' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "discord"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string1_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.bat/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string2_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.exe/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string3_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.hta/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string4_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.iso/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string5_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.jar/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string6_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.msi/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string7_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.py/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string8_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.vbs/ nocase ascii wide
+        // Description: Downloading discord executables and archives attachments
+        // Reference: N/A
+        $string9_discord_greyware_tool_keyword = /https\:\/\/media\.discordapp\.net\/attachments\/.{0,1000}\.zip/ nocase ascii wide
 
     condition:
         any of them
@@ -7953,12 +8586,12 @@ rule Get_WmiObject_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: Get logged on user on remote host with Get-WmiObject
-        // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string1_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\s\?ComputerName\s.{0,1000}\s\?Class\sWin32_ComputerSystem\s\|\s.{0,1000}\sUserName/ nocase ascii wide
         // Description: Get SCCM server with Get-WmiObject
         // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string2_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\s\-class\sSMS_Authority\s\-namespace\sroot\\CCM/ nocase ascii wide
+        $string1_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\s\-class\sSMS_Authority\s\-namespace\sroot\\CCM/ nocase ascii wide
+        // Description: Get all users
+        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
+        $string2_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\s\-Namespace\s\"root\\directory\\ldap\"\s\-Class\sds_user\s/ nocase ascii wide
         // Description: Get logged on user on remote host with Get-WmiObject
         // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
         $string3_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\swin32_loggedonuser\s\-ComputerName\s/ nocase ascii wide
@@ -8665,6 +9298,28 @@ rule go_http_tunnel_greyware_tool_keyword
         // Description: Fast and secure tunnels over HTTP/2
         // Reference: https://github.com/mmatczuk/go-http-tunnel
         $string45_go_http_tunnel_greyware_tool_keyword = /tunneld\s\-tlsCrt\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule gofile_io_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'gofile.io' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "gofile.io"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: legitimate service abused by lots of stealer to exfiltrate data
+        // Reference: https://gofile.io
+        $string1_gofile_io_greyware_tool_keyword = /\.gofile\.io\/uploadFile/ nocase ascii wide
+        // Description: legitimate service abused by lots of stealer to exfiltrate data
+        // Reference: https://gofile.io
+        $string2_gofile_io_greyware_tool_keyword = /api\.gofile\.io\/getServer/ nocase ascii wide
 
     condition:
         any of them
@@ -13745,155 +14400,188 @@ rule net_greyware_tool_keyword
         // Reference: N/A
         $string5_net_greyware_tool_keyword = /\\net1\ssessions/ nocase ascii wide
         // Description: Query users from domain admins in current domain
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string6_net_greyware_tool_keyword = /net\sgroup\s\"Domain\sAdmins\"\s\/domain/ nocase ascii wide
+        // Reference: N/A
+        $string6_net_greyware_tool_keyword = /net\s\sgroup\s\"domain\sadmins\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string7_net_greyware_tool_keyword = /net\s\sgroup\s\"Domain\sComputers\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string8_net_greyware_tool_keyword = /net\s\sgroup\s\"domain\scomputers\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string9_net_greyware_tool_keyword = /net\s\sgroup\s\"enterprise\sadmins\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string10_net_greyware_tool_keyword = /net\sgroup\s\"Domain\sAdmins\"\s\/domain/ nocase ascii wide
+        // Description: List PCs connected to the domain
+        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
+        $string11_net_greyware_tool_keyword = /net\sgroup\s\"domain\scomputers\"\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string7_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string12_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string8_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string13_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string9_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string14_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string10_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string15_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: Query Domain Comtrollers Computers in the current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string11_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\/domain/ nocase ascii wide
+        $string16_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string12_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string17_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string13_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string18_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string14_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string19_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string15_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string20_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string16_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string21_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string17_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string22_net_greyware_tool_keyword = /net\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs
-        $string18_net_greyware_tool_keyword = /net\sgroup\s\/domain\s.{0,1000}Domain\sAdmins/ nocase ascii wide
+        $string23_net_greyware_tool_keyword = /net\sgroup\s\/domain\s.{0,1000}Domain\sAdmins/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string19_net_greyware_tool_keyword = /net\sgroup\sadministrators\s\/domain/ nocase ascii wide
+        $string24_net_greyware_tool_keyword = /net\sgroup\sadministrators\s\/domain/ nocase ascii wide
         // Description: discover local admins group
         // Reference: N/A
-        $string20_net_greyware_tool_keyword = /net\slocalgroup\sadmin/ nocase ascii wide
+        $string25_net_greyware_tool_keyword = /net\slocalgroup\sadmin/ nocase ascii wide
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string21_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1_net_greyware_tool_keyword/ nocase ascii wide
+        $string26_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1_net_greyware_tool_keyword/ nocase ascii wide
         // Description: manipulation of an hidden local account with the net command
         // Reference: N/A
-        $string22_net_greyware_tool_keyword = /net\suser\s.{0,1000}\$.{0,1000}\s\// nocase ascii wide
+        $string27_net_greyware_tool_keyword = /net\suser\s.{0,1000}\$.{0,1000}\s\// nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string23_net_greyware_tool_keyword = /net\sview\s\/all\s\/domain/ nocase ascii wide
+        $string28_net_greyware_tool_keyword = /net\sview\s\/all\s\/domain/ nocase ascii wide
+        // Description: display all domain names on the network
+        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
+        $string29_net_greyware_tool_keyword = /net\sview\s\/domain/ nocase ascii wide
         // Description: adding a user to a privileged group. This action can be used by adversaries to maintain unauthorized access or escalate privileges within the targeted environment.
         // Reference: N/A
-        $string24_net_greyware_tool_keyword = /net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain/ nocase ascii wide
+        $string30_net_greyware_tool_keyword = /net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string25_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string31_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string26_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string32_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string27_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string33_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string28_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string34_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string29_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string35_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string30_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string36_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string31_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string37_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string32_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string38_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string33_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string39_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string34_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string40_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string41_net_greyware_tool_keyword = /net1\s\sgroup\s\"domain\sadmins\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string42_net_greyware_tool_keyword = /net1\s\sgroup\s\"Domain\sComputers\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string43_net_greyware_tool_keyword = /net1\s\sgroup\s\"domain\scomputers\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string44_net_greyware_tool_keyword = /net1\s\sgroup\s\"enterprise\sadmins\"\s\/domain/ nocase ascii wide
+        // Description: Query users from domain admins in current domain
+        // Reference: N/A
+        $string45_net_greyware_tool_keyword = /net1\sgroup\s\"Domain\sAdmins\"\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string35_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string46_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string36_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string47_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string37_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string48_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string38_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string49_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string39_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string50_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string40_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string51_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string41_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string52_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string42_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string53_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string43_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string54_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string44_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string55_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string45_net_greyware_tool_keyword = /net1\slocalgroup\sadmin/ nocase ascii wide
+        $string56_net_greyware_tool_keyword = /net1\slocalgroup\sadmin/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string46_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string57_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string47_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string58_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string48_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string59_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string49_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string60_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string50_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string61_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string51_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string62_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string52_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string63_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string53_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string64_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string54_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string65_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string55_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string66_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
 
     condition:
         any of them
@@ -13999,33 +14687,36 @@ rule netsh_greyware_tool_keyword
         // Description: Disable Windows Firewall
         // Reference: N/A
         $string5_netsh_greyware_tool_keyword = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
+        // Description: show all firewall rules config
+        // Reference: N/A
+        $string6_netsh_greyware_tool_keyword = /netsh\sfirewall\sshow\sconfig/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string6_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,1000}\sconnectport\=.{0,1000}\sconnectaddress\=/ nocase ascii wide
+        $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,1000}\sconnectport\=.{0,1000}\sconnectaddress\=/ nocase ascii wide
         // Description: The actor has used the following commands to enable port forwarding [T1090] on the host
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string7_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
+        $string8_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
         // Description: attempt to remove port proxy configurations
         // Reference: https://media.defense.gov/2024/Feb/07/2003389936/-1/-1/0/JOINT-GUIDANCE-IDENTIFYING-AND-MITIGATING-LOTL.PDF
-        $string8_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
+        $string9_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string9_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        $string10_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string10_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string11_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sall/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string11_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        $string12_netsh_greyware_tool_keyword = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string12_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string13_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string13_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string14_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string14_netsh_greyware_tool_keyword = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string15_netsh_greyware_tool_keyword = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
 
     condition:
         any of them
@@ -14604,15 +15295,15 @@ rule nltest_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: enumerate domain trusts with nltest
-        // Reference: N/A
-        $string1_nltest_greyware_tool_keyword = /nltest\s\/all_trusts/ nocase ascii wide
-        // Description: enumerate domain trusts with nltest
-        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string2_nltest_greyware_tool_keyword = /nltest\s\/dclist/ nocase ascii wide
         // Description: Get the list of domain controllers for the specified domain
         // Reference: N/A
-        $string3_nltest_greyware_tool_keyword = /nltest\s\/dclist\:/ nocase ascii wide
+        $string1_nltest_greyware_tool_keyword = /nltest\s\s\/dclist\:/ nocase ascii wide
+        // Description: enumerate domain trusts with nltest
+        // Reference: N/A
+        $string2_nltest_greyware_tool_keyword = /nltest\s\/all_trusts/ nocase ascii wide
+        // Description: enumerate domain trusts with nltest
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string3_nltest_greyware_tool_keyword = /nltest\s\/dclist/ nocase ascii wide
         // Description: Dump Domain Trust Information
         // Reference: N/A
         $string4_nltest_greyware_tool_keyword = /nltest\s\/domain_trusts\s\/v/ nocase ascii wide
@@ -14956,6 +15647,73 @@ rule OPENVPN_greyware_tool_keyword
 }
 
 
+rule OshiUpload_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'OshiUpload' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "OshiUpload"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string1_OshiUpload_greyware_tool_keyword = /\soshi\.at\s/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string2_OshiUpload_greyware_tool_keyword = /\s\-\-socks5\-hostname\s127\.0\.0\.1\:9050/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string3_OshiUpload_greyware_tool_keyword = /\/oshi_run\.pl/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string4_OshiUpload_greyware_tool_keyword = /\/OshiUpload\.git/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string5_OshiUpload_greyware_tool_keyword = /\[info\]\sTCP\supload\sserver\sstarted\s\(tcp\.pl\)/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string6_OshiUpload_greyware_tool_keyword = /1640fb593deccf72c27363463e6001a1ced831f423b00c8687555115f9365bec/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string7_OshiUpload_greyware_tool_keyword = /5ety7tpkim5me6eszuwcje7bmy25pbtrjtue7zkqqgziljwqy3rrikqd\.onion/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string8_OshiUpload_greyware_tool_keyword = /ADMIN_BASICAUTH_PASSWORDHASH\s\=\sf52fbd32b2b3b86ff88ef6c490628285f482af15ddcb29541f94bcf526a3f6c7/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string9_OshiUpload_greyware_tool_keyword = /ADMIN_ROUTE\s\=\s\/SuPeRsEcReTuRl\// nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string10_OshiUpload_greyware_tool_keyword = /https\:\/\/oshi\.at\// nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string11_OshiUpload_greyware_tool_keyword = /hypnotoad\s\-s\swebapp\.pl\s\&\&\ssleep\s5/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string12_OshiUpload_greyware_tool_keyword = /oshi\.at\/onion/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string13_OshiUpload_greyware_tool_keyword = /oshiatwowvdbshka\.onion/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string14_OshiUpload_greyware_tool_keyword = /OshiUpload\/app/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string15_OshiUpload_greyware_tool_keyword = /OshiUpload\-master\.zip/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string16_OshiUpload_greyware_tool_keyword = /reverse_proxy_tcp\.txt/ nocase ascii wide
+        // Description: Ephemeral file sharing engine
+        // Reference: https://github.com/somenonymous/OshiUpload
+        $string17_OshiUpload_greyware_tool_keyword = /somenonymous\/OshiUpload/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule PAExec_greyware_tool_keyword
 {
     meta:
@@ -15115,6 +15873,40 @@ rule pastebin_greyware_tool_keyword
         // Description: pastebin POST url - abused by malwares to exfiltrate informations
         // Reference: pastebin.com
         $string3_pastebin_greyware_tool_keyword = /pastebin\.com.{0,1000}api\/api_post\.php/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule pcunlocker_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'pcunlocker' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "pcunlocker"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Reset and unlock forgotten Windows login password
+        // Reference: https://www.pcunlocker.com/
+        $string1_pcunlocker_greyware_tool_keyword = /\/download\/pcunlocker/ nocase ascii wide
+        // Description: Reset and unlock forgotten Windows login password
+        // Reference: https://www.pcunlocker.com/
+        $string2_pcunlocker_greyware_tool_keyword = /\/pcunlocker\.iso/ nocase ascii wide
+        // Description: Reset and unlock forgotten Windows login password
+        // Reference: https://www.pcunlocker.com/
+        $string3_pcunlocker_greyware_tool_keyword = /\/pcunlocker_trial\.zip/ nocase ascii wide
+        // Description: Reset and unlock forgotten Windows login password
+        // Reference: https://www.pcunlocker.com/
+        $string4_pcunlocker_greyware_tool_keyword = /\\pcunlocker\.iso/ nocase ascii wide
+        // Description: Reset and unlock forgotten Windows login password
+        // Reference: https://www.pcunlocker.com/
+        $string5_pcunlocker_greyware_tool_keyword = /\\pcunlocker_trial\.zip/ nocase ascii wide
+        // Description: Reset and unlock forgotten Windows login password
+        // Reference: https://www.pcunlocker.com/
+        $string6_pcunlocker_greyware_tool_keyword = /pcunlocker_ent_trial\.zip/ nocase ascii wide
 
     condition:
         any of them
@@ -15900,180 +16692,186 @@ rule powershell_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
+        // Reference: N/A
+        $string1_powershell_greyware_tool_keyword = /\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string1_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
+        $string2_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string2_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
+        $string3_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string3_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=hidden/ nocase ascii wide
+        $string4_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=hidden/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string4_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=\shidden/ nocase ascii wide
+        $string5_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=\shidden/ nocase ascii wide
         // Description: command aiming to hide a file.  It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string5_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=hidden/ nocase ascii wide
+        $string6_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=hidden/ nocase ascii wide
         // Description: adding a DNS over HTTPS server with powershell
         // Reference: https://learn.microsoft.com/en-us/powershell/module/dnsclient/add-dnsclientdohserveraddress?view=windowsserver2022-ps
-        $string6_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
+        $string7_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
         // Description: Exclude powershell from defender detections
         // Reference: N/A
-        $string7_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
+        $string8_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
         // Description: allows all users to access all computers with a specified configuration
         // Reference: N/A
-        $string8_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
+        $string9_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
         // Description: Deletes contents of recycle bin
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string9_powershell_greyware_tool_keyword = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
+        $string10_powershell_greyware_tool_keyword = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
+        // Description: enables WinRM
+        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
+        $string11_powershell_greyware_tool_keyword = /enable\-psremoting\s\-force/ nocase ascii wide
         // Description: Find machine where the user has admin privs
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string10_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
+        $string12_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string11_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
+        $string13_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string12_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
+        $string14_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string13_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
+        $string15_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
         // Description: set the DNS server configuration
         // Reference: N/A
-        $string14_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
+        $string16_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
         // Description: Powerview Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string15_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
+        $string17_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
         // Description: PowerView get Locally logged users on a machine
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string16_powershell_greyware_tool_keyword = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
+        $string18_powershell_greyware_tool_keyword = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
         // Description: Gets the status of antimalware software on the computer.
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string17_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
+        $string19_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
         // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
         // Reference: N/A
-        $string18_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
+        $string20_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
         // Description: PowerView Find users with SPN
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string19_powershell_greyware_tool_keyword = /Get\-NetUser\s\-SPN/ nocase ascii wide
+        $string21_powershell_greyware_tool_keyword = /Get\-NetUser\s\-SPN/ nocase ascii wide
         // Description: Find local admins on the domain machines
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string20_powershell_greyware_tool_keyword = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
+        $string22_powershell_greyware_tool_keyword = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
         // Description: Check local admin access for the current user where the targets are found
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string21_powershell_greyware_tool_keyword = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
+        $string23_powershell_greyware_tool_keyword = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string22_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
+        $string24_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string23_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
+        $string25_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
         // Description: hiding a user from the login screen by modifying a specific registry key
         // Reference: N/A
-        $string24_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        $string26_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string25_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
+        $string27_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string26_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
+        $string28_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string27_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string29_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string28_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
+        $string30_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string29_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string31_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string30_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string32_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string31_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
+        $string33_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string32_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
+        $string34_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string33_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string35_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string34_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string36_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string35_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string36_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
+        $string38_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string37_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string39_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string38_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string40_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: list AV products with powershell
         // Reference: N/A
-        $string39_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string40_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
+        $string42_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string41_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string42_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string43_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string44_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        $string46_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string45_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        $string47_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string46_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
+        $string48_powershell_greyware_tool_keyword = /\[Environment\]\:\:UserName/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string47_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string49_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string48_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string49_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string51_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string50_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string52_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string51_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string53_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string52_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string54_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string53_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string55_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string54_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string56_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string55_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
+        $string57_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-TrustedToAuth/ nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string56_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
+        $string58_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string57_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string59_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string58_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string60_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -17379,7 +18177,13 @@ rule qwinsta_greyware_tool_keyword
     strings:
         // Description: enumerate rdp session on a remote server
         // Reference: N/A
-        $string1_qwinsta_greyware_tool_keyword = /qwinsta\s\/server\:/ nocase ascii wide
+        $string1_qwinsta_greyware_tool_keyword = /cmd\s\/c\s.{0,1000}qwinsta/ nocase ascii wide
+        // Description: enumerate rdp session on a remote server
+        // Reference: N/A
+        $string2_qwinsta_greyware_tool_keyword = /cmd\.exe.{0,1000}qwinsta/ nocase ascii wide
+        // Description: enumerate rdp session on a remote server
+        // Reference: N/A
+        $string3_qwinsta_greyware_tool_keyword = /qwinsta\s\/server\:/ nocase ascii wide
 
     condition:
         any of them
@@ -17510,6 +18314,28 @@ rule Radmin_greyware_tool_keyword
         // Description: Radmin is a remote control program that lets you work on another computer through your own
         // Reference: https://www.radmin.com/download/
         $string38_Radmin_greyware_tool_keyword = /Stop\sRadmin\sServer\.lnk/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule ransomware_notes_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'ransomware_notes' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "ransomware_notes"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: detection patterns retrieved in ransomware notes archives
+        // Reference: https://github.com/threatlabz/ransomware_notes
+        $string1_ransomware_notes_greyware_tool_keyword = /https\:\/\/gofile\.io\/d\// nocase ascii wide
+        // Description: detection patterns retrieved in ransomware notes archives
+        // Reference: https://github.com/threatlabz/ransomware_notes
+        $string2_ransomware_notes_greyware_tool_keyword = /https\:\/\/tox\.chat\/download\.html/ nocase ascii wide
 
     condition:
         any of them
@@ -18370,16 +19196,19 @@ rule rclone_greyware_tool_keyword
         $string4_rclone_greyware_tool_keyword = /\\rclone\.exe/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string5_rclone_greyware_tool_keyword = /rclone\scopy\s.{0,1000}\:/ nocase ascii wide
+        $string5_rclone_greyware_tool_keyword = /rclone\s\scopy\s.{0,1000}\:/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string6_rclone_greyware_tool_keyword = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
+        $string6_rclone_greyware_tool_keyword = /rclone\scopy\s.{0,1000}\:/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string7_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\scopy\s.{0,1000}\:/ nocase ascii wide
+        $string7_rclone_greyware_tool_keyword = /rclone\.exe\sconfig\screate\sremote\smega\suser\s/ nocase ascii wide
         // Description: rclone abused by threat actors for data exfiltration
         // Reference: https://github.com/rclone/rclone
-        $string8_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\s\-l\s.{0,1000}\s.{0,1000}\:/ nocase ascii wide
+        $string8_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\scopy\s.{0,1000}\:/ nocase ascii wide
+        // Description: rclone abused by threat actors for data exfiltration
+        // Reference: https://github.com/rclone/rclone
+        $string9_rclone_greyware_tool_keyword = /rclone\.exe.{0,1000}\s\-l\s.{0,1000}\s.{0,1000}\:/ nocase ascii wide
 
     condition:
         any of them
@@ -18526,6 +19355,25 @@ rule rdpwrap_greyware_tool_keyword
         // Description: RDP Wrapper Library used by malwares
         // Reference: https://github.com/stascorp/rdpwrap
         $string37_rdpwrap_greyware_tool_keyword = /stascorp\/rdpwrap/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule rdrleakdiag_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'rdrleakdiag' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "rdrleakdiag"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Microsoft Windows resource leak diagnostic tool potentially dumping lsass process
+        // Reference: https://lolbas-project.github.io/lolbas/Binaries/Rdrleakdiag/
+        $string1_rdrleakdiag_greyware_tool_keyword = /rdrleakdiag\.exe\s\/p\s.{0,1000}\s\/o\s.{0,1000}\s\/fullmemdmp\s\/wait\s1/ nocase ascii wide
 
     condition:
         any of them
@@ -25008,10 +25856,13 @@ rule temp_sh_greyware_tool_keyword
     strings:
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string1_temp_sh_greyware_tool_keyword = /https\:\/\/temp\.sh\/.{0,1000}\// nocase ascii wide
+        $string1_temp_sh_greyware_tool_keyword = /http\:\/\/temp\.sh\/.{0,1000}\// nocase ascii wide
         // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
         // Reference: https://twitter.com/mthcht/status/1660953897622544384
-        $string2_temp_sh_greyware_tool_keyword = /https\:\/\/temp\.sh\/upload/ nocase ascii wide
+        $string2_temp_sh_greyware_tool_keyword = /https\:\/\/temp\.sh\/.{0,1000}\// nocase ascii wide
+        // Description: Interesting observation on the file-sharing platform preferences derived from the negotiations chats with LockBit victims
+        // Reference: https://twitter.com/mthcht/status/1660953897622544384
+        $string3_temp_sh_greyware_tool_keyword = /https\:\/\/temp\.sh\/upload/ nocase ascii wide
 
     condition:
         any of them
@@ -26470,6 +27321,28 @@ rule Urban_Shield_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Urban_Shield_greyware_tool_keyword = /almalgbpmcfpdaopimbdchdliminoign/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule usaupload_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'usaupload' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "usaupload"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: uploading files to usaupload
+        // Reference: https://usaupload.com/
+        $string1_usaupload_greyware_tool_keyword = /https\:\/\/usaupload\.com\/account\/ajax\/load_files/ nocase ascii wide
+        // Description: uploading files to usaupload
+        // Reference: https://usaupload.com/
+        $string2_usaupload_greyware_tool_keyword = /https\:\/\/usaupload\.com\/account\/ajax\/uploader/ nocase ascii wide
 
     condition:
         any of them
@@ -28037,72 +28910,84 @@ rule wmic_greyware_tool_keyword
         // Description: The actor has executed WMIC commands [T1047] to create a copy of the ntds.dit file and SYSTEM registry hive using ntdsutil.exe
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
         $string7_wmic_greyware_tool_keyword = /ac\si\sntds.{0,1000}\\\\127\.0\.0\.1\\ADMIN\$\\/ nocase ascii wide
+        // Description: suspicious lateral movement command executing payload from suspicious directories
+        // Reference: N/A
+        $string8_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\"C\:\\programdata\\/ nocase ascii wide
+        // Description: suspicious lateral movement command executing payload from suspicious directories
+        // Reference: N/A
+        $string9_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\"C\:\\Temp\\/ nocase ascii wide
+        // Description: suspicious lateral movement command executing payload from suspicious directories
+        // Reference: N/A
+        $string10_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\"C\:\\users\\.{0,1000}\\AppData\\Local\\Temp/ nocase ascii wide
+        // Description: suspicious lateral movement command executing payload from suspicious directories
+        // Reference: N/A
+        $string11_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\"C\:\\users\\Public/ nocase ascii wide
         // Description: gather information about Windows OS version and licensing on the hosts
         // Reference: https://thedfirreport.com/2023/05/22/icedid-macro-ends-in-nokoyawa-ransomware/
-        $string8_wmic_greyware_tool_keyword = /cmd\.exe\s\/C\swmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sos\sget\scaption/ nocase ascii wide
+        $string12_wmic_greyware_tool_keyword = /cmd\.exe\s\/C\swmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sos\sget\scaption/ nocase ascii wide
         // Description: Enable WinRM remotely with wmic
         // Reference: N/A
-        $string9_wmic_greyware_tool_keyword = /process\scall\screate\s\"powershell\senable\-psremoting\s\-force\"/ nocase ascii wide
+        $string13_wmic_greyware_tool_keyword = /process\scall\screate\s\"powershell\senable\-psremoting\s\-force\"/ nocase ascii wide
         // Description: WMIC suspicious transfer 
         // Reference: N/A
-        $string10_wmic_greyware_tool_keyword = /start\swmic\s\/node\:\@C\:\\.{0,1000}\.txt\s\/user\:.{0,1000}\/password\:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
+        $string14_wmic_greyware_tool_keyword = /start\swmic\s\/node\:\@C\:\\.{0,1000}\.txt\s\/user\:.{0,1000}\/password\:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string11_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s\{\$__wmic_greyware_tool_keyword\.Delete\(\)\;/ nocase ascii wide
+        $string15_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s\{\$__wmic_greyware_tool_keyword\.Delete\(\)\;/ nocase ascii wide
         // Description: Lateral Movement with wmic
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string12_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user\:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
+        $string16_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user\:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
         // Description: Execute file hosted over SMB on remote system with specified credential
         // Reference: N/A
-        $string13_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sprocess\scall\screate\s\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string17_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sprocess\scall\screate\s\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Remotely start RDP with wmic
         // Reference: N/A
-        $string14_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
+        $string18_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\"0\"\scall\sSetAllowTSConnections\s\"1\"/ nocase ascii wide
         // Description: get the currently logged user with wmic
         // Reference: N/A
-        $string15_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
+        $string19_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
         // Description: get the currently logged user with wmic
         // Reference: N/A
-        $string16_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
+        $string20_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
         // Description: get domain name with wmic
         // Reference: N/A
-        $string17_wmic_greyware_tool_keyword = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
+        $string21_wmic_greyware_tool_keyword = /wmic\scomputersystem\sget\sdomain/ nocase ascii wide
         // Description: The actor has executed WMIC commands [T1047] to create a copy of the ntds.dit file and SYSTEM registry hive using ntdsutil.exe
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string18_wmic_greyware_tool_keyword = /wmic\sprocess\scall\screate.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\sifm.{0,1000}create\sfull/ nocase ascii wide
+        $string22_wmic_greyware_tool_keyword = /wmic\sprocess\scall\screate.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\sifm.{0,1000}create\sfull/ nocase ascii wide
         // Description: list all running processes and their command lines on a Windows system
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string19_wmic_greyware_tool_keyword = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
+        $string23_wmic_greyware_tool_keyword = /wmic\sprocess\sget\scommandline\s\-all/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string20_wmic_greyware_tool_keyword = /wmic\sservice\sbrief/ nocase ascii wide
+        $string24_wmic_greyware_tool_keyword = /wmic\sservice\sbrief/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string21_wmic_greyware_tool_keyword = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string25_wmic_greyware_tool_keyword = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string22_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
+        $string26_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string23_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
+        $string27_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string24_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        $string28_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string25_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string29_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string26_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
+        $string30_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
         // Description: call cmd.exe with wmic
         // Reference: N/A
-        $string27_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
+        $string31_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string28_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string32_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string29_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+        $string33_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
 
     condition:
         any of them
@@ -29188,93 +30073,105 @@ rule __greyware_tool_keyword
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
         $string2___greyware_tool_keyword = /\/keygen\.exe/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string3___greyware_tool_keyword = /\/PAYMENTS\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string3___greyware_tool_keyword = /\\1\.bat/ nocase ascii wide
+        $string4___greyware_tool_keyword = /\\1\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string4___greyware_tool_keyword = /\\1\.dll/ nocase ascii wide
+        $string5___greyware_tool_keyword = /\\1\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string5___greyware_tool_keyword = /\\1\.exe/ nocase ascii wide
+        $string6___greyware_tool_keyword = /\\1\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string6___greyware_tool_keyword = /\\2\.bat/ nocase ascii wide
+        $string7___greyware_tool_keyword = /\\2\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string7___greyware_tool_keyword = /\\2\.dll/ nocase ascii wide
+        $string8___greyware_tool_keyword = /\\2\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string8___greyware_tool_keyword = /\\2\.exe/ nocase ascii wide
+        $string9___greyware_tool_keyword = /\\2\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string9___greyware_tool_keyword = /\\3\.bat/ nocase ascii wide
+        $string10___greyware_tool_keyword = /\\3\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string10___greyware_tool_keyword = /\\3\.dll/ nocase ascii wide
+        $string11___greyware_tool_keyword = /\\3\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string11___greyware_tool_keyword = /\\3\.exe/ nocase ascii wide
+        $string12___greyware_tool_keyword = /\\3\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string12___greyware_tool_keyword = /\\4\.bat/ nocase ascii wide
+        $string13___greyware_tool_keyword = /\\4\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string13___greyware_tool_keyword = /\\4\.dll/ nocase ascii wide
+        $string14___greyware_tool_keyword = /\\4\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string14___greyware_tool_keyword = /\\4\.exe/ nocase ascii wide
+        $string15___greyware_tool_keyword = /\\4\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string15___greyware_tool_keyword = /\\5\.bat/ nocase ascii wide
+        $string16___greyware_tool_keyword = /\\5\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string16___greyware_tool_keyword = /\\5\.dll/ nocase ascii wide
+        $string17___greyware_tool_keyword = /\\5\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string17___greyware_tool_keyword = /\\5\.exe/ nocase ascii wide
+        $string18___greyware_tool_keyword = /\\5\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string18___greyware_tool_keyword = /\\6\.bat/ nocase ascii wide
+        $string19___greyware_tool_keyword = /\\6\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string19___greyware_tool_keyword = /\\6\.dll/ nocase ascii wide
+        $string20___greyware_tool_keyword = /\\6\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string20___greyware_tool_keyword = /\\6\.exe/ nocase ascii wide
+        $string21___greyware_tool_keyword = /\\6\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string21___greyware_tool_keyword = /\\7\.bat/ nocase ascii wide
+        $string22___greyware_tool_keyword = /\\7\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string22___greyware_tool_keyword = /\\7\.dll/ nocase ascii wide
+        $string23___greyware_tool_keyword = /\\7\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string23___greyware_tool_keyword = /\\7\.exe/ nocase ascii wide
+        $string24___greyware_tool_keyword = /\\7\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string24___greyware_tool_keyword = /\\8\.bat/ nocase ascii wide
+        $string25___greyware_tool_keyword = /\\8\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string25___greyware_tool_keyword = /\\8\.dll/ nocase ascii wide
+        $string26___greyware_tool_keyword = /\\8\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string26___greyware_tool_keyword = /\\8\.exe/ nocase ascii wide
+        $string27___greyware_tool_keyword = /\\8\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string27___greyware_tool_keyword = /\\9\.bat/ nocase ascii wide
+        $string28___greyware_tool_keyword = /\\9\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string28___greyware_tool_keyword = /\\9\.dll/ nocase ascii wide
+        $string29___greyware_tool_keyword = /\\9\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string29___greyware_tool_keyword = /\\9\.exe/ nocase ascii wide
+        $string30___greyware_tool_keyword = /\\9\.exe/ nocase ascii wide
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
-        $string30___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
+        $string31___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string32___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string33___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string34___greyware_tool_keyword = /\\PAYMENTS\.exe/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string31___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string35___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

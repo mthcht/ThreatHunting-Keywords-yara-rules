@@ -23,33 +23,36 @@ rule netsh
         // Description: Disable Windows Firewall
         // Reference: N/A
         $string5 = /netsh\sfirewall\sset\sopmode\sdisable/ nocase ascii wide
+        // Description: show all firewall rules config
+        // Reference: N/A
+        $string6 = /netsh\sfirewall\sshow\sconfig/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string6 = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,1000}\sconnectport\=.{0,1000}\sconnectaddress\=/ nocase ascii wide
+        $string7 = /netsh\sinterface\sportproxy\sadd\sv4tov4\slistenport\=.{0,1000}\sconnectport\=.{0,1000}\sconnectaddress\=/ nocase ascii wide
         // Description: The actor has used the following commands to enable port forwarding [T1090] on the host
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string7 = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
+        $string8 = /netsh\sinterface\sportproxy\sadd\sv4tov4.{0,1000}listenaddress\=.{0,1000}\slistenport\=.{0,1000}connectaddress\=.{0,1000}connectport/ nocase ascii wide
         // Description: attempt to remove port proxy configurations
         // Reference: https://media.defense.gov/2024/Feb/07/2003389936/-1/-1/0/JOINT-GUIDANCE-IDENTIFYING-AND-MITIGATING-LOTL.PDF
-        $string8 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
+        $string9 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenaddress\=0\.0\.0\.0\slistenport\=/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string9 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
+        $string10 = /netsh\sinterface\sportproxy\sdelete\sv4tov4\slistenport\=/ nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string10 = /netsh\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string11 = /netsh\sinterface\sportproxy\sshow\sall/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string11 = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
+        $string12 = /netsh\sinterface\sportproxy\sshow\sv4tov4/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string12 = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string13 = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string13 = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string14 = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string14 = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string15 = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
 
     condition:
         any of them

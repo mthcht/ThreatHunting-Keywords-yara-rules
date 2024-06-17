@@ -25,40 +25,70 @@ rule reverst
         $string5 = /\/etc\/reverst\// nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string6 = /\/quic\-go\/quic\-go\/http3/ nocase ascii wide
+        $string6 = /\/etc\/reverst\// nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string7 = /\/reverst\.git/ nocase ascii wide
+        $string7 = /\/quic\-go\/quic\-go\/http3/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string8 = /\/usr\/local\/bin\/reverst/ nocase ascii wide
+        $string8 = /\/reverst\.git/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string9 = /1d2c6cbd5fc288ffb92db49344a394eba6d3418df04bd6178007a33b8d82178e/ nocase ascii wide
+        $string9 = /\/reverst\.git/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string10 = /flipt\-io\/reverst/ nocase ascii wide
+        $string10 = /\/usr\/local\/bin\/reverst/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string11 = /go\.flipt\.io\/reverst\// nocase ascii wide
+        $string11 = /\/usr\/local\/bin\/reverst/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string12 = /REVERST_CERTIFICATE_PATH/ nocase ascii wide
+        $string12 = /1d2c6cbd5fc288ffb92db49344a394eba6d3418df04bd6178007a33b8d82178e/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string13 = /REVERST_LOG/ nocase ascii wide
+        $string13 = /1d2c6cbd5fc288ffb92db49344a394eba6d3418df04bd6178007a33b8d82178e/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string14 = /REVERST_PRIVATE_KEY_PATH/ nocase ascii wide
+        $string14 = /Bearer\sc29tZWludmFsaWQ6Y29tYmluYXRpb24\=/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string15 = /REVERST_SERVER_NAME/ nocase ascii wide
+        $string15 = /flipt\-io\/reverst/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string16 = /REVERST_TUNNEL_ADDRESS/ nocase ascii wide
+        $string16 = /flipt\-io\/reverst/ nocase ascii wide
         // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
         // Reference: https://github.com/flipt-io/reverst
-        $string17 = /REVERST_TUNNEL_GROUPS/ nocase ascii wide
+        $string17 = /go\srun\s\.\/cmd\/reverst\// nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string18 = /go\.flipt\.io\/reverst\// nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string19 = /go\.flipt\.io\/reverst\// nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string20 = /reverst\s.{0,1000}\-\-tunnel\-address\s/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string21 = /REVERST_CERTIFICATE_PATH/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string22 = /REVERST_LOG/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string23 = /REVERST_PRIVATE_KEY_PATH/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string24 = /REVERST_SERVER_NAME/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string25 = /REVERST_TUNNEL_ADDRESS/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string26 = /REVERST_TUNNEL_GROUPS/ nocase ascii wide
+        // Description: Reverse Tunnels in Go over HTTP/3 and QUIC
+        // Reference: https://github.com/flipt-io/reverst
+        $string27 = /ZXZpbG1vcnR5Om11bHRpdmVyc2U\=/ nocase ascii wide
 
     condition:
         any of them

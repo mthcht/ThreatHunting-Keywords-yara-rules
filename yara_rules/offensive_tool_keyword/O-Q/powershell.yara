@@ -125,9 +125,12 @@ rule powershell
         // Description: disable powershell logging
         // Reference: N/A
         $string39 = /Set\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\"\s\-Name\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        // Description: Windows Defender evasion add an exclusion directory for your shady stuff
+        // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
+        $string40 = /Set\-MpPreference\s\-ExclusionPath\s.{0,1000}\s\-DisableRealtimeMonitoring/ nocase ascii wide
         // Description: deployment of a payload through a PowerShell stager using bits to download
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string40 = /powershell\.exe\s\-nop\s\-c\s\"start\-job\s.{0,1000}Import\-Module\sBitsTransfer.{0,1000}\$env\:temp.{0,1000}GetRandomFileName\(\).{0,1000}Start\-BitsTransfer\s\-Source\s\'http.{0,1000}Remove\-Item.{0,1000}Receive\-Job/ nocase ascii wide
+        $string41 = /powershell\.exe\s\-nop\s\-c\s\"start\-job\s.{0,1000}Import\-Module\sBitsTransfer.{0,1000}\$env\:temp.{0,1000}GetRandomFileName\(\).{0,1000}Start\-BitsTransfer\s\-Source\s\'http.{0,1000}Remove\-Item.{0,1000}Receive\-Job/ nocase ascii wide
 
     condition:
         any of them

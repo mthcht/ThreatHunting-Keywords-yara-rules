@@ -10,19 +10,19 @@ rule spinningteacup
     strings:
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string1 = /\.py\s.{0,1000}\.vba\s.{0,1000}\.vba\s\s\-\-wordlistpath\s.{0,1000}\s\-\-encodestring/ nocase ascii wide
+        $string1 = /\sspinningteacup\.py/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string2 = /\sspinningteacup\.py/ nocase ascii wide
+        $string2 = /\svbarandomizer\.py/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string3 = /\svbarandomizer\.py/ nocase ascii wide
+        $string3 = /\"This\sis\sa\smacro\sobfuscating\sframework\"/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string4 = /\"This\sis\sa\smacro\sobfuscating\sframework\"/ nocase ascii wide
+        $string4 = /\.py\s.{0,1000}\.vba\s.{0,1000}\.vba\s\s\-\-norandomvariables\s\-\-math/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
-        $string5 = /\.py\s.{0,1000}\.vba\s.{0,1000}\.vba\s\s\-\-norandomvariables\s\-\-math/ nocase ascii wide
+        $string5 = /\.py\s.{0,1000}\.vba\s.{0,1000}\.vba\s\s\-\-wordlistpath\s.{0,1000}\s\-\-encodestring/ nocase ascii wide
         // Description: identify different parts of a vba script and perform substitutions
         // Reference: https://github.com/trustedsec/The_Shelf
         $string6 = /\.py\s.{0,1000}\.vba\s.{0,1000}\.vba\s\-\-randomcuts\s5\s10\s\-\-norandomint/ nocase ascii wide

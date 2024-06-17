@@ -8,15 +8,15 @@ rule nltest
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: enumerate domain trusts with nltest
-        // Reference: N/A
-        $string1 = /nltest\s\/all_trusts/ nocase ascii wide
-        // Description: enumerate domain trusts with nltest
-        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string2 = /nltest\s\/dclist/ nocase ascii wide
         // Description: Get the list of domain controllers for the specified domain
         // Reference: N/A
-        $string3 = /nltest\s\/dclist\:/ nocase ascii wide
+        $string1 = /nltest\s\s\/dclist\:/ nocase ascii wide
+        // Description: enumerate domain trusts with nltest
+        // Reference: N/A
+        $string2 = /nltest\s\/all_trusts/ nocase ascii wide
+        // Description: enumerate domain trusts with nltest
+        // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+        $string3 = /nltest\s\/dclist/ nocase ascii wide
         // Description: Dump Domain Trust Information
         // Reference: N/A
         $string4 = /nltest\s\/domain_trusts\s\/v/ nocase ascii wide

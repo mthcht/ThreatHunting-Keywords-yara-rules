@@ -14,93 +14,105 @@ rule _
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
         $string2 = /\/keygen\.exe/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string3 = /\/PAYMENTS\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string3 = /\\1\.bat/ nocase ascii wide
+        $string4 = /\\1\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string4 = /\\1\.dll/ nocase ascii wide
+        $string5 = /\\1\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string5 = /\\1\.exe/ nocase ascii wide
+        $string6 = /\\1\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string6 = /\\2\.bat/ nocase ascii wide
+        $string7 = /\\2\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string7 = /\\2\.dll/ nocase ascii wide
+        $string8 = /\\2\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string8 = /\\2\.exe/ nocase ascii wide
+        $string9 = /\\2\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string9 = /\\3\.bat/ nocase ascii wide
+        $string10 = /\\3\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string10 = /\\3\.dll/ nocase ascii wide
+        $string11 = /\\3\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string11 = /\\3\.exe/ nocase ascii wide
+        $string12 = /\\3\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string12 = /\\4\.bat/ nocase ascii wide
+        $string13 = /\\4\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string13 = /\\4\.dll/ nocase ascii wide
+        $string14 = /\\4\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string14 = /\\4\.exe/ nocase ascii wide
+        $string15 = /\\4\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string15 = /\\5\.bat/ nocase ascii wide
+        $string16 = /\\5\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string16 = /\\5\.dll/ nocase ascii wide
+        $string17 = /\\5\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string17 = /\\5\.exe/ nocase ascii wide
+        $string18 = /\\5\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string18 = /\\6\.bat/ nocase ascii wide
+        $string19 = /\\6\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string19 = /\\6\.dll/ nocase ascii wide
+        $string20 = /\\6\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string20 = /\\6\.exe/ nocase ascii wide
+        $string21 = /\\6\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string21 = /\\7\.bat/ nocase ascii wide
+        $string22 = /\\7\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string22 = /\\7\.dll/ nocase ascii wide
+        $string23 = /\\7\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string23 = /\\7\.exe/ nocase ascii wide
+        $string24 = /\\7\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string24 = /\\8\.bat/ nocase ascii wide
+        $string25 = /\\8\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string25 = /\\8\.dll/ nocase ascii wide
+        $string26 = /\\8\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string26 = /\\8\.exe/ nocase ascii wide
+        $string27 = /\\8\.exe/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string27 = /\\9\.bat/ nocase ascii wide
+        $string28 = /\\9\.bat/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string28 = /\\9\.dll/ nocase ascii wide
+        $string29 = /\\9\.dll/ nocase ascii wide
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
-        $string29 = /\\9\.exe/ nocase ascii wide
+        $string30 = /\\9\.exe/ nocase ascii wide
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
-        $string30 = /\\keygen\.exe/ nocase ascii wide
+        $string31 = /\\keygen\.exe/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string32 = /\\PAYMENT\.hta/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string33 = /\\PAYMENT\.hta/ nocase ascii wide
+        // Description: suspicious file name - has been used by threat actors
+        // Reference: N/A
+        $string34 = /\\PAYMENTS\.exe/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string31 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string35 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

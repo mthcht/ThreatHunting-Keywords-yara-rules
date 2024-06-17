@@ -16,7 +16,10 @@ rule browser_lol
         $string2 = /\.srv\.browser\.lol/ nocase ascii wide
         // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
         // Reference: https://browser.lol
-        $string3 = /https\:\/\/browser\.lol\/vnc\?server\=/ nocase ascii wide
+        $string3 = /browser\.lol\/create/ nocase ascii wide
+        // Description: Virtual Browser - Safely visit blocked or risky websites - can be used to bypass network restrictions within a corporate environment
+        // Reference: https://browser.lol
+        $string4 = /https\:\/\/browser\.lol\/vnc\?server\=/ nocase ascii wide
 
     condition:
         any of them

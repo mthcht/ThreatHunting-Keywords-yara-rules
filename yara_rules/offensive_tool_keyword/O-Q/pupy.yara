@@ -151,346 +151,346 @@ rule pupy
         $string47 = /\/domcachedump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string48 = /\/domcachedump\.py/ nocase ascii wide
+        $string48 = /\/exploit_suggester\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string49 = /\/exploit_suggester\.py/ nocase ascii wide
+        $string49 = /\/interactive_shell\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string50 = /\/interactive_shell\.py/ nocase ascii wide
+        $string50 = /\/LaZagne\/Windows\// nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string51 = /\/interactive_shell\.py/ nocase ascii wide
+        $string51 = /\/linux_stealth\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string52 = /\/LaZagne\/Windows\// nocase ascii wide
+        $string52 = /\/memory_exec\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string53 = /\/linux_stealth\.py/ nocase ascii wide
+        $string53 = /\/mimipy\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string54 = /\/memory_exec\.py/ nocase ascii wide
+        $string54 = /\/mouselogger\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string55 = /\/mimipy\.py/ nocase ascii wide
+        $string55 = /\/n1nj4sec\/pupy/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string56 = /\/mimipy\.py/ nocase ascii wide
+        $string56 = /\/nbnsspoof\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string57 = /\/mouselogger\.py/ nocase ascii wide
+        $string57 = /\/netcreds\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string58 = /\/mouselogger\.py/ nocase ascii wide
+        $string58 = /\/netcreds\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string59 = /\/n1nj4sec\/pupy/ nocase ascii wide
+        $string59 = /\/obfs3\/obfs3\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string60 = /\/nbnsspoof\.py/ nocase ascii wide
+        $string60 = /\/port_scan\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string61 = /\/netcreds\.py/ nocase ascii wide
+        $string61 = /\/powerloader\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string62 = /\/netcreds\.py/ nocase ascii wide
+        $string62 = /\/ps1_oneliner\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string63 = /\/obfs3\/obfs3\.py/ nocase ascii wide
+        $string63 = /\/pupwinutils\/.{0,1000}\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string64 = /\/port_scan\.py/ nocase ascii wide
+        $string64 = /\/pupy\/.{0,1000}\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string65 = /\/powerloader\.py/ nocase ascii wide
+        $string65 = /\/pupy\/commands\// nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string66 = /\/ps1_oneliner\.py/ nocase ascii wide
+        $string66 = /\/pupy\/external\/creddump7/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string67 = /\/pupwinutils\/.{0,1000}\.py/ nocase ascii wide
+        $string67 = /\/pupy\/memimporter\// nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string68 = /\/pupy\/.{0,1000}\.py/ nocase ascii wide
+        $string68 = /\/pupy\/output\/pupyx64.{0,1000}\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string69 = /\/pupy\/commands\// nocase ascii wide
+        $string69 = /\/pupy\/pupygen\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string70 = /\/pupy\/external\/creddump7/ nocase ascii wide
+        $string70 = /\/pupy_load\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string71 = /\/pupy\/memimporter\// nocase ascii wide
+        $string71 = /\/PupyCmd\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string72 = /\/pupy\/output\/pupyx64.{0,1000}\.exe/ nocase ascii wide
+        $string72 = /\/PupyCompile\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string73 = /\/pupy\/pupygen\.py/ nocase ascii wide
+        $string73 = /\/pupygen\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string74 = /\/pupy_load\./ nocase ascii wide
+        $string74 = /\/pupylib\/payloads\// nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string75 = /\/PupyCmd\.py/ nocase ascii wide
+        $string75 = /\/PupyOffload\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string76 = /\/PupyCompile\.py/ nocase ascii wide
+        $string76 = /\/pupyps\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string77 = /\/pupygen\.py/ nocase ascii wide
+        $string77 = /\/PupyServer\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string78 = /\/pupylib\/payloads\// nocase ascii wide
+        $string78 = /\/PupyService\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string79 = /\/PupyOffload\.py/ nocase ascii wide
+        $string79 = /\/pupysh\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string80 = /\/pupyps\.py/ nocase ascii wide
+        $string80 = /\/pupysh\.sh/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string81 = /\/PupyServer\.py/ nocase ascii wide
+        $string81 = /\/PupyTriggers\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string82 = /\/PupyService\.py/ nocase ascii wide
+        $string82 = /\/PupyWeb\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string83 = /\/pupysh\.py/ nocase ascii wide
+        $string83 = /\/pupyx64\.dll/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string84 = /\/pupysh\.sh/ nocase ascii wide
+        $string84 = /\/pupyx64\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string85 = /\/PupyTriggers\.py/ nocase ascii wide
+        $string85 = /\/pupyx64d\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string86 = /\/PupyWeb\.py/ nocase ascii wide
+        $string86 = /\/pupyx86\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string87 = /\/pupyx64\.dll/ nocase ascii wide
+        $string87 = /\/pupyx86d\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string88 = /\/pupyx64\.exe/ nocase ascii wide
+        $string88 = /\/pwdump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string89 = /\/pupyx64d\.exe/ nocase ascii wide
+        $string89 = /\/py_oneliner\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string90 = /\/pupyx86\.exe/ nocase ascii wide
+        $string90 = /\/Python\-dynload\-os\.h/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string91 = /\/pupyx86d\.exe/ nocase ascii wide
+        $string91 = /\/share_enum\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string92 = /\/pwdump\.py/ nocase ascii wide
+        $string92 = /\/shell_exec\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string93 = /\/py_oneliner\.py/ nocase ascii wide
+        $string93 = /\/smbspider\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string94 = /\/Python\-dynload\-os\.h/ nocase ascii wide
+        $string94 = /\/socks5proxy\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string95 = /\/share_enum\.py/ nocase ascii wide
+        $string95 = /\/transports\/scramblesuit\/.{0,1000}\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string96 = /\/shell_exec\.py/ nocase ascii wide
+        $string96 = /\/usniper\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string97 = /\/smbspider\.py/ nocase ascii wide
+        $string97 = /\/utils\/obfuscate\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string98 = /\/socks5proxy\.py/ nocase ascii wide
+        $string98 = /\/WinPwnage/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string99 = /\/transports\/scramblesuit\/.{0,1000}\.py/ nocase ascii wide
+        $string99 = /\[\+\]\sBuild\spupysh\senvironment\s/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string100 = /\/usniper\.py/ nocase ascii wide
+        $string100 = /\\clear_logs\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string101 = /\/utils\/obfuscate\.py/ nocase ascii wide
+        $string101 = /\\creddump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string102 = /\/WinPwnage/ nocase ascii wide
+        $string102 = /\\dns\-dump\.ps1/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string103 = /\[\+\]\sBuild\spupysh\senvironment\s/ nocase ascii wide
+        $string103 = /\\domcachedump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string104 = /\\clear_logs\.py/ nocase ascii wide
+        $string104 = /\\domcachedump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string105 = /\\creddump\.py/ nocase ascii wide
+        $string105 = /\\exploit_suggester\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string106 = /\\dns\-dump\.ps1/ nocase ascii wide
+        $string106 = /\\mimipy\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string107 = /\\domcachedump\.py/ nocase ascii wide
+        $string107 = /\\mouselogger\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string108 = /\\domcachedump\.py/ nocase ascii wide
+        $string108 = /\\nbnsspoof\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string109 = /\\exploit_suggester\.py/ nocase ascii wide
+        $string109 = /\\netcreds\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string110 = /\\mimipy\.py/ nocase ascii wide
+        $string110 = /\\port_scan\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string111 = /\\mouselogger\.py/ nocase ascii wide
+        $string111 = /\\pupwinutils\\/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string112 = /\\nbnsspoof\.py/ nocase ascii wide
+        $string112 = /\\pupy\\external\\creddump7/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string113 = /\\netcreds\.py/ nocase ascii wide
+        $string113 = /\\pupyx64\.dll/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string114 = /\\port_scan\.py/ nocase ascii wide
+        $string114 = /\\pupyx64\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string115 = /\\pupwinutils\\/ nocase ascii wide
+        $string115 = /\\pupyx64d\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string116 = /\\pupy\\external\\creddump7/ nocase ascii wide
+        $string116 = /\\pupyx86\.dll/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string117 = /\\pupyx64\.dll/ nocase ascii wide
+        $string117 = /\\pupyx86\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string118 = /\\pupyx64\.exe/ nocase ascii wide
+        $string118 = /\\pupyx86d\.exe/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string119 = /\\pupyx64d\.exe/ nocase ascii wide
+        $string119 = /\\pwdump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string120 = /\\pupyx86\.dll/ nocase ascii wide
+        $string120 = /\\socks5proxy\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string121 = /\\pupyx86\.exe/ nocase ascii wide
+        $string121 = /\\windows\\all\\winpwnage/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string122 = /\\pupyx86d\.exe/ nocase ascii wide
+        $string122 = /\\windows\\creddump/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string123 = /\\pwdump\.py/ nocase ascii wide
+        $string123 = /_generate_bind_payloads_password/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string124 = /\\socks5proxy\.py/ nocase ascii wide
+        $string124 = /_generate_scramblesuit_passwd/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string125 = /\\windows\\all\\winpwnage/ nocase ascii wide
+        $string125 = /_METERPRETER_BASE_INJECT_H/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string126 = /\\windows\\creddump/ nocase ascii wide
+        $string126 = /07aa565057af859bc4956df913246b3b5fe39e86823666d6ba77aa98a697b02a/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string127 = /_generate_bind_payloads_password/ nocase ascii wide
+        $string127 = /10de4ed7588b4a7e75d01bb69f0b602b0c298a2f9f993a6a8f4e2248031699fb/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string128 = /_generate_scramblesuit_passwd/ nocase ascii wide
+        $string128 = /18eeee347539926baae88b3bec52025a00b404301f60a8cbf4d77156fcfaf782/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string129 = /_METERPRETER_BASE_INJECT_H/ nocase ascii wide
+        $string129 = /237f52a3509094464bb92f82a4908a60c7a4cc9db9748f0cc254e75311bb8b0d/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string130 = /07aa565057af859bc4956df913246b3b5fe39e86823666d6ba77aa98a697b02a/ nocase ascii wide
+        $string130 = /2a8b77cd55cc43d79d9c4475cc9287360f6fd3dc47a07f83ff33853de1652f7d/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string131 = /10de4ed7588b4a7e75d01bb69f0b602b0c298a2f9f993a6a8f4e2248031699fb/ nocase ascii wide
+        $string131 = /3000b91468e3961b4e1a9ecd07007bfe02f50033d0d4a71dfb4e5b1de778bd13/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string132 = /18eeee347539926baae88b3bec52025a00b404301f60a8cbf4d77156fcfaf782/ nocase ascii wide
+        $string132 = /335628fdb196d750906961db6ce9ec4c35fb7c16f6883c441c6c620468e273c1/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string133 = /237f52a3509094464bb92f82a4908a60c7a4cc9db9748f0cc254e75311bb8b0d/ nocase ascii wide
+        $string133 = /35678541d1d3a394875f58f3add9b097f445dc15de0a720318da1db4d1de06e8/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string134 = /2a8b77cd55cc43d79d9c4475cc9287360f6fd3dc47a07f83ff33853de1652f7d/ nocase ascii wide
+        $string134 = /63dcdf6e5eb8252ec73b58bde6249db9d38272dc6870074d2569f7431a1ab32f/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string135 = /3000b91468e3961b4e1a9ecd07007bfe02f50033d0d4a71dfb4e5b1de778bd13/ nocase ascii wide
+        $string135 = /6b6aede14ee7f52374cf3fbc5d790afa32f23dc0791514ce26306514e4a22ee4/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string136 = /335628fdb196d750906961db6ce9ec4c35fb7c16f6883c441c6c620468e273c1/ nocase ascii wide
+        $string136 = /7c6f4b0023b62103aa803d4ddfe2736ed80f2911f7556ef16abc3be04674697b/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string137 = /35678541d1d3a394875f58f3add9b097f445dc15de0a720318da1db4d1de06e8/ nocase ascii wide
+        $string137 = /aa3939fc357723135870d5036b12a67097b03309/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string138 = /63dcdf6e5eb8252ec73b58bde6249db9d38272dc6870074d2569f7431a1ab32f/ nocase ascii wide
+        $string138 = /b501b1a7f5d1ca09fa28d4c2d9e839a5d7e8a9f336d3698c947cac13b02a599a/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string139 = /6b6aede14ee7f52374cf3fbc5d790afa32f23dc0791514ce26306514e4a22ee4/ nocase ascii wide
+        $string139 = /bcfe13901d4207db340d957052cd5175e24481a5e2c5fc15d119fadedc664755/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string140 = /7c6f4b0023b62103aa803d4ddfe2736ed80f2911f7556ef16abc3be04674697b/ nocase ascii wide
+        $string140 = /bypassuac_registry\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string141 = /aa3939fc357723135870d5036b12a67097b03309/ nocase ascii wide
+        $string141 = /bypassuac_token_imp\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string142 = /b501b1a7f5d1ca09fa28d4c2d9e839a5d7e8a9f336d3698c947cac13b02a599a/ nocase ascii wide
+        $string142 = /c439db633c51838ba79ec999e0f5b4533379b94d2afeb5944fd15250fa5a86de/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string143 = /bcfe13901d4207db340d957052cd5175e24481a5e2c5fc15d119fadedc664755/ nocase ascii wide
+        $string143 = /cachedump\.py\s\// nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string144 = /bypassuac_registry\./ nocase ascii wide
+        $string144 = /ce70b1200ce76360dec6129189daa260779901d01f150868c9f19ec6cea77b36/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string145 = /bypassuac_token_imp\./ nocase ascii wide
+        $string145 = /Collect\ssecurity\stokens\sfrom\spipe\sserver\s\(\\\\\\\\\.\\\\pipe\\\\catcher\)/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string146 = /c439db633c51838ba79ec999e0f5b4533379b94d2afeb5944fd15250fa5a86de/ nocase ascii wide
+        $string146 = /compress_encode_obfs/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string147 = /cachedump\.py\s\// nocase ascii wide
+        $string147 = /ConvertFrom\-UACValue/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string148 = /ce70b1200ce76360dec6129189daa260779901d01f150868c9f19ec6cea77b36/ nocase ascii wide
+        $string148 = /create\-workspace\.py\s\-E\sdocker\s\-P.{0,1000}\/pupyws/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string149 = /Collect\ssecurity\stokens\sfrom\spipe\sserver\s\(\\\\\\\\\.\\\\pipe\\\\catcher\)/ nocase ascii wide
+        $string149 = /creddump\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string150 = /compress_encode_obfs/ nocase ascii wide
+        $string150 = /d02161cdc91cdee273f8b6e47f98a322756847ae3b5f4efe6d439fa5e13f9039/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string151 = /create\-workspace\.py\s\-E\sdocker\s\-P.{0,1000}\/pupyws/ nocase ascii wide
+        $string151 = /dotnet_serve_payload/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string152 = /creddump\.py/ nocase ascii wide
+        $string152 = /eb6a95c5c92ae3923ae07b80feac9e215f68eaff1289303063fa575a92c27967/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string153 = /d02161cdc91cdee273f8b6e47f98a322756847ae3b5f4efe6d439fa5e13f9039/ nocase ascii wide
+        $string153 = /eb87d686b9a040238e563add68fb05c2776f52332c4798cae372638af3c7fca0/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string154 = /dotnet_serve_payload/ nocase ascii wide
+        $string154 = /echo\:iex\(\[System\.Text\.Encoding\]\:\:ASCII\.GetString\(/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string155 = /eb6a95c5c92ae3923ae07b80feac9e215f68eaff1289303063fa575a92c27967/ nocase ascii wide
+        $string155 = /exploit_suggester\s\s/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string156 = /eb87d686b9a040238e563add68fb05c2776f52332c4798cae372638af3c7fca0/ nocase ascii wide
+        $string156 = /exploit_suggester\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string157 = /echo\:iex\(\[System\.Text\.Encoding\]\:\:ASCII\.GetString\(/ nocase ascii wide
+        $string157 = /exposed_get_password/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string158 = /exploit_suggester\s\s/ nocase ascii wide
+        $string158 = /fa7eba4a7edb75f644eace116b7072d9edddfa0af672bd99091d9035b974ba21/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string159 = /exploit_suggester\.py/ nocase ascii wide
+        $string159 = /Find\-GPOComputerAdmin/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string160 = /exposed_get_password/ nocase ascii wide
+        $string160 = /Find\-InterestingFile/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string161 = /fa7eba4a7edb75f644eace116b7072d9edddfa0af672bd99091d9035b974ba21/ nocase ascii wide
+        $string161 = /Find\-LocalAdminAccess/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
         $string162 = /Find\-LocalAdminAccess/ nocase ascii wide
@@ -508,202 +508,235 @@ rule pupy
         $string166 = /generateInjectBinFile/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string167 = /Get\-ExploitableSystem\./ nocase ascii wide
+        $string167 = /Get\-ExploitableSystem/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string168 = /import\sPupyConfig/ nocase ascii wide
+        $string168 = /Get\-ExploitableSystem\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string169 = /Import\-DllImports\s\-PEInfo\s/ nocase ascii wide
+        $string169 = /import\sPupyConfig/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string170 = /Import\-DllInRemoteProcess/ nocase ascii wide
+        $string170 = /Import\-DllImports\s\-PEInfo\s/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string171 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
+        $string171 = /Import\-DllInRemoteProcess/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string172 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
+        $string172 = /Invoke\-ACLScanner/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string173 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
+        $string173 = /Invoke\-DowngradeAccount/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string174 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
+        $string174 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string175 = /Invoke\-ReflectivePEInjection\./ nocase ascii wide
+        $string175 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string176 = /Invoke\-StealthUserHunter/ nocase ascii wide
+        $string176 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string177 = /loot_memory\.py/ nocase ascii wide
+        $string177 = /Invoke\-EventHunter/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string178 = /nbnsspoof\.py/ nocase ascii wide
+        $string178 = /Invoke\-FileFinder/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string179 = /pack_py_payload/ nocase ascii wide
+        $string179 = /Invoke\-ProcessHunter/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string180 = /privesc_checker/ nocase ascii wide
+        $string180 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string181 = /privesc_checker\.py/ nocase ascii wide
+        $string181 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string182 = /privesc_checker\.py/ nocase ascii wide
+        $string182 = /Invoke\-ReflectivePEInjection\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string183 = /pupwinutils\.shellcode/ nocase ascii wide
+        $string183 = /Invoke\-ShareFinder/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string184 = /pupy.{0,1000}\/checkvm\.py/ nocase ascii wide
+        $string184 = /Invoke\-StealthUserHunter/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string185 = /pupy\/external\/Inveigh/ nocase ascii wide
+        $string185 = /Invoke\-StealthUserHunter/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string186 = /pupy\/external\/LaZagne/ nocase ascii wide
+        $string186 = /Invoke\-UserHunter/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string187 = /pupy\/external\/linux\-exploit\-suggester/ nocase ascii wide
+        $string187 = /loot_memory\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string188 = /pupy\/external\/mimipy/ nocase ascii wide
+        $string188 = /nbnsspoof\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string189 = /pupy\/external\/pyopus/ nocase ascii wide
+        $string189 = /New\-GPOImmediateTask/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string190 = /pupy\/external\/pywerview/ nocase ascii wide
+        $string190 = /pack_py_payload/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string191 = /pupy\/external\/winpty/ nocase ascii wide
+        $string191 = /privesc_checker/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string192 = /pupy\/external\/WinPwnage/ nocase ascii wide
+        $string192 = /privesc_checker\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string193 = /pupy\/payload_/ nocase ascii wide
+        $string193 = /privesc_checker\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string194 = /pupy\/pupy\/external\/BeRoot/ nocase ascii wide
+        $string194 = /pupwinutils\.shellcode/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string195 = /PupyCmdLoop/ nocase ascii wide
+        $string195 = /pupy.{0,1000}\/checkvm\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string196 = /PupyCredentials\.py/ nocase ascii wide
+        $string196 = /pupy\/external\/Inveigh/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string197 = /PupyDnsCnc\.py/ nocase ascii wide
+        $string197 = /pupy\/external\/LaZagne/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string198 = /PupyDnsCommandServerHandler/ nocase ascii wide
+        $string198 = /pupy\/external\/linux\-exploit\-suggester/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string199 = /pupygen\.py\s/ nocase ascii wide
+        $string199 = /pupy\/external\/mimipy/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string200 = /PupyKCPSocketStream/ nocase ascii wide
+        $string200 = /pupy\/external\/pyopus/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string201 = /pupylib\.payloads\.ps1/ nocase ascii wide
+        $string201 = /pupy\/external\/pywerview/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string202 = /PupyLoaderTemplate\./ nocase ascii wide
+        $string202 = /pupy\/external\/winpty/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string203 = /PupyOffloadDNS/ nocase ascii wide
+        $string203 = /pupy\/external\/WinPwnage/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string204 = /PupyOffloadSocket/ nocase ascii wide
+        $string204 = /pupy\/payload_/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string205 = /PupySocketStream\.py/ nocase ascii wide
+        $string205 = /pupy\/pupy\/external\/BeRoot/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string206 = /PupyVirtualStream\.py/ nocase ascii wide
+        $string206 = /PupyCmdLoop/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string207 = /pyexec\s\-c\s/ nocase ascii wide
+        $string207 = /PupyCredentials\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string208 = /pyexec\s\-\-file/ nocase ascii wide
+        $string208 = /PupyDnsCnc\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string209 = /ReflectiveDllInjection\./ nocase ascii wide
+        $string209 = /PupyDnsCommandServerHandler/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string210 = /ReflectiveLoader\.c/ nocase ascii wide
+        $string210 = /pupygen\.py\s/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string211 = /ReflectiveLoader\.h/ nocase ascii wide
+        $string211 = /PupyKCPSocketStream/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string212 = /registry_hijacking_eventvwr/ nocase ascii wide
+        $string212 = /pupylib\.payloads\.ps1/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string213 = /registry_hijacking_fodhelper/ nocase ascii wide
+        $string213 = /PupyLoaderTemplate\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string214 = /rubber_ducky\.py/ nocase ascii wide
+        $string214 = /PupyOffloadDNS/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string215 = /run\s.{0,1000}\spyshell/ nocase ascii wide
+        $string215 = /PupyOffloadSocket/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string216 = /run\sandroid_cam\s/ nocase ascii wide
+        $string216 = /PupySocketStream\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string217 = /run\s\-\-bg\sshell_exec/ nocase ascii wide
+        $string217 = /PupyVirtualStream\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string218 = /run\sinteractive_shell/ nocase ascii wide
+        $string218 = /pyexec\s\-c\s/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string219 = /run\skeylogger/ nocase ascii wide
+        $string219 = /pyexec\s\-\-file/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string220 = /run\smemory_exec\s.{0,1000}\./ nocase ascii wide
+        $string220 = /ReflectiveDllInjection\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string221 = /run\smouselogger/ nocase ascii wide
+        $string221 = /ReflectiveLoader\.c/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string222 = /run\spyexec\s/ nocase ascii wide
+        $string222 = /ReflectiveLoader\.h/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string223 = /run\sshell_exec\s/ nocase ascii wide
+        $string223 = /registry_hijacking_eventvwr/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string224 = /run\sshellcode_exec/ nocase ascii wide
+        $string224 = /registry_hijacking_fodhelper/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string225 = /send_ps1_payload/ nocase ascii wide
+        $string225 = /rubber_ducky\.py/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string226 = /serve_ps1_payload/ nocase ascii wide
+        $string226 = /run\s.{0,1000}\spyshell/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string227 = /shellcode_exec\.py/ nocase ascii wide
+        $string227 = /run\sandroid_cam\s/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string228 = /smbspider\s/ nocase ascii wide
+        $string228 = /run\s\-\-bg\sshell_exec/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string229 = /start_nbnsspoof/ nocase ascii wide
+        $string229 = /run\sinteractive_shell/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string230 = /webcamsnap\s\-v/ nocase ascii wide
+        $string230 = /run\skeylogger/ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string231 = /winpwnage\.functions/ nocase ascii wide
+        $string231 = /run\smemory_exec\s.{0,1000}\./ nocase ascii wide
         // Description: Pupy is a  C2 and post-exploitation framework written in python and C
         // Reference: https://github.com/n1nj4sec/pupy
-        $string232 = /pupysh/ nocase ascii wide
+        $string232 = /run\smouselogger/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string233 = /run\spyexec\s/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string234 = /run\sshell_exec\s/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string235 = /run\sshellcode_exec/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string236 = /send_ps1_payload/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string237 = /serve_ps1_payload/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string238 = /shellcode_exec\.py/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string239 = /smbspider\s/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string240 = /start_nbnsspoof/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string241 = /webcamsnap\s\-v/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string242 = /winpwnage\.functions/ nocase ascii wide
+        // Description: Pupy is a  C2 and post-exploitation framework written in python and C
+        // Reference: https://github.com/n1nj4sec/pupy
+        $string243 = /pupysh/ nocase ascii wide
 
     condition:
         any of them

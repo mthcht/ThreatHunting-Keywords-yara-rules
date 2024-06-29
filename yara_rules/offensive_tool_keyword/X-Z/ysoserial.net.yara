@@ -103,7 +103,7 @@ rule ysoserial_net
         $string31 = /ysoserial\-.{0,1000}\.zip/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
-        $string32 = /ysoserial\.exe\s/ nocase ascii wide
+        $string32 = /ysoserial\.exe/ nocase ascii wide
         // Description: Deserialization payload generator for a variety of .NET formatters
         // Reference: https://github.com/pwntester/ysoserial.net
         $string33 = /ysoserial\.net/ nocase ascii wide

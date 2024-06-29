@@ -212,9 +212,6 @@ rule covenant
         // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
         // Reference: https://github.com/cobbr/Covenant
         $string68 = /BypassUAC\s/ nocase ascii wide
-        // Description: Covenant commands - Covenant is a collaborative .NET C2 framework for red teamers
-        // Reference: https://github.com/cobbr/Covenant
-        $string69 = /ShellCmd\s/ nocase ascii wide
 
     condition:
         any of them

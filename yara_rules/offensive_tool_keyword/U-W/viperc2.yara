@@ -416,11 +416,11 @@ rule viperc2
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
         $string136 = /Persistence_WinlogonHelperDLL_Windows\.py/ nocase ascii wide
-        // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
-        // Reference: https://github.com/FunnyWolf/vipermsf
-        $string137 = /portScanWithService\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython
+        $string137 = /portScanWithService\.py/ nocase ascii wide
+        // Description: vipermsf Metasploit - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
+        // Reference: https://github.com/FunnyWolf/vipermsf
         $string138 = /portScanWithService\.py/ nocase ascii wide
         // Description: viperpython backend - Viper is a graphical intranet penetration tool which modularizes and weaponizes the tactics and technologies commonly used in the process of Intranet penetration
         // Reference: https://github.com/FunnyWolf/viperpython

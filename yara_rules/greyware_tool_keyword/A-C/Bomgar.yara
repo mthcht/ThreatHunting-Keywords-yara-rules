@@ -67,37 +67,37 @@ rule Bomgar
         $string19 = /\\programdata\\bomgar\-scc\-/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string20 = /\>Remote\sSupport\sCustomer\sClient\<\/Data\>/ nocase ascii wide
+        $string20 = /\>Bomgar\sCorporation\<\/Data\>/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string21 = /\>Representative\sConsole\<\/Data\>/ nocase ascii wide
+        $string21 = /\>Remote\sSupport\sCustomer\sClient\<\/Data\>/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string22 = /beyondtrustcloud\.com\\Software\\Qt6/ nocase ascii wide
+        $string22 = /\>Representative\sConsole\<\/Data\>/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string23 = /bomgar\-rdp\.exe/ nocase ascii wide
+        $string23 = /beyondtrustcloud\.com\\Software\\Qt6/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string24 = /\'Company\'\>BeyondTrust\<\/Data\>/ nocase ascii wide
+        $string24 = /bomgar\-rdp\.exe/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string25 = /\'Company\'\>bomgar\<\/Data\>/ nocase ascii wide
+        $string25 = /\'Company\'\>BeyondTrust\<\/Data\>/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string26 = /eval\-.{0,1000}\.beyondtrustcloud\.com/ nocase ascii wide
+        $string26 = /\'Company\'\>bomgar\<\/Data\>/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string27 = /license\.bomgar\.com/ nocase ascii wide
+        $string27 = /eval\-.{0,1000}\.beyondtrustcloud\.com/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string28 = /\'TaskName\'\>\\Bomgar\sTask\s/ nocase ascii wide
+        $string28 = /license\.bomgar\.com/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string29 = /To\:\sAll\sRepresentatives\s\sFrom\:\sRemote\sSupport\s.{0,1000}\shas\sadded\sa\snote\sto\sthis\ssession\./ nocase ascii wide
+        $string29 = /\'TaskName\'\>\\Bomgar\sTask\s/ nocase ascii wide
         // Description: Bomgar beyoundtrust Remote access software - abused by attackers
         // Reference: https://www.beyondtrust.com/
-        $string30 = /\>Bomgar\sCorporation\<\/Data\>/ nocase ascii wide
+        $string30 = /To\:\sAll\sRepresentatives\s\sFrom\:\sRemote\sSupport\s.{0,1000}\shas\sadded\sa\snote\sto\sthis\ssession\./ nocase ascii wide
 
     condition:
         any of them

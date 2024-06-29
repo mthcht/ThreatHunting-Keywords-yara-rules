@@ -32,12 +32,21 @@ rule sc
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
         $string8 = /sc\sstart\sRemoteRegistry/ nocase ascii wide
+        // Description: Stop EventLog service
+        // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
+        $string9 = /sc\sstop\seventlog/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string9 = /sc\sstop\sMBAMProtection/ nocase ascii wide
+        $string10 = /sc\sstop\sMBAMProtection/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string10 = /sc\sstop\sMBAMService/ nocase ascii wide
+        $string11 = /sc\sstop\sMBAMService/ nocase ascii wide
+        // Description: Stop Bits service
+        // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
+        $string12 = /sc\.exe\sstop\sbits/ nocase ascii wide
+        // Description: Stop EventLog service
+        // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
+        $string13 = /sc\.exe\sstop\seventlog/ nocase ascii wide
 
     condition:
         any of them

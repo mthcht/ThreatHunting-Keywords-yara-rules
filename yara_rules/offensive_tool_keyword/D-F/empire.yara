@@ -11,357 +11,357 @@ rule empire
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
         $string1 = /\s\$FodHelperPath/ nocase ascii wide
-        // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
-        // Reference: https://github.com/EmpireProject/Empire
-        $string2 = /\s\\Temp\\blah\.exe/ nocase ascii wide
         // Description: empire agent.ps1 arguments.Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string3 = /\s\-AgentDelay\s/ nocase ascii wide
+        $string2 = /\s\-AgentDelay\s/ nocase ascii wide
         // Description: empire agent.ps1 arguments.Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string4 = /\s\-AgentJitter\s/ nocase ascii wide
+        $string3 = /\s\-AgentJitter\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string5 = /\s\-bootkey\s/ nocase ascii wide
+        $string4 = /\s\-bootkey\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string6 = /\s\-ChildPath\s.{0,1000}fodhelper\.exe/ nocase ascii wide
+        $string5 = /\s\-ChildPath\s.{0,1000}fodhelper\.exe/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string7 = /\s\-ChildPath\s.{0,1000}sdclt\.exe/ nocase ascii wide
+        $string6 = /\s\-ChildPath\s.{0,1000}sdclt\.exe/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string8 = /\s\-CollectionMethod\sstealth/ nocase ascii wide
+        $string7 = /\s\-CollectionMethod\sstealth/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string9 = /\s\-ComputerName\s\-ServiceEXE\s/ nocase ascii wide
+        $string8 = /\s\-ComputerName\s\-ServiceEXE\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string10 = /\s\-ConType\sbind\s/ nocase ascii wide
+        $string9 = /\s\-ConType\sbind\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string11 = /\s\-ConType\sreverse\s/ nocase ascii wide
+        $string10 = /\s\-ConType\sreverse\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string12 = /\s\-CShardDLLBytes/ nocase ascii wide
+        $string11 = /\s\-CShardDLLBytes/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string13 = /\s\-DllName\s.{0,1000}\s\-FunctionName\s/ nocase ascii wide
+        $string12 = /\s\-DllName\s.{0,1000}\s\-FunctionName\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string14 = /\s\-Domain\s.{0,1000}\s\-SMB1\s/ nocase ascii wide
+        $string13 = /\s\-Domain\s.{0,1000}\s\-SMB1\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string15 = /\s\-DoNotPersistImmediately\s/ nocase ascii wide
+        $string14 = /\s\-DoNotPersistImmediately\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string16 = /\s\-DumpCerts\s/ nocase ascii wide
+        $string15 = /\s\-DumpCerts\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string17 = /\s\-DumpCreds\s/ nocase ascii wide
+        $string16 = /\s\-DumpCreds\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string18 = /\s\-ElevatedPersistenceOption\s/ nocase ascii wide
+        $string17 = /\s\-ElevatedPersistenceOption\s/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string19 = /\sempire\.arguments/ nocase ascii wide
+        $string18 = /\sempire\.arguments/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string20 = /\sempire\.client\./ nocase ascii wide
+        $string19 = /\sempire\.client\./ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string21 = /\sempire\.py/ nocase ascii wide
+        $string20 = /\sempire\.py/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string22 = /\s\-Enumerate\s.{0,1000}\s\-Module\s/ nocase ascii wide
+        $string21 = /\s\-Enumerate\s.{0,1000}\s\-Module\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string23 = /\s\-ExeArguments\s/ nocase ascii wide
+        $string22 = /\s\-ExeArguments\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string24 = /\s\-FullPrivs\s.{0,1000}\s/ nocase ascii wide
+        $string23 = /\s\-FullPrivs\s.{0,1000}\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string25 = /\s\-GHUser\s.{0,1000}\s\-GHRepo\s/ nocase ascii wide
+        $string24 = /\s\-GHUser\s.{0,1000}\s\-GHRepo\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string26 = /\s\-Hosts\s.{0,1000}\s\-TopPorts\s/ nocase ascii wide
+        $string25 = /\s\-Hosts\s.{0,1000}\s\-TopPorts\s/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string27 = /\shttp_malleable/ nocase ascii wide
+        $string26 = /\shttp_malleable/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string28 = /\s\-ImpersonateUser\s/ nocase ascii wide
+        $string27 = /\s\-ImpersonateUser\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string29 = /\s\-ImportDllPathPtr\s/ nocase ascii wide
+        $string28 = /\s\-ImportDllPathPtr\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string30 = /\sInveigh\-/ nocase ascii wide
+        $string29 = /\sInveigh\-/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string31 = /\s\-JMXConsole\s\-AppName\s/ nocase ascii wide
+        $string30 = /\s\-JMXConsole\s\-AppName\s/ nocase ascii wide
         // Description: empire agent.ps1 arguments.Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string32 = /\s\-KillDate\s/ nocase ascii wide
+        $string31 = /\s\-KillDate\s/ nocase ascii wide
         // Description: empire agent.ps1 arguments.Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string33 = /\s\-KillDays\s/ nocase ascii wide
+        $string32 = /\s\-KillDays\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string34 = /\s\-LLMNRTTL\s/ nocase ascii wide
+        $string33 = /\s\-LLMNRTTL\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string35 = /\s\-LNKPath\s.{0,1000}\s\-EncScript\s/ nocase ascii wide
+        $string34 = /\s\-LNKPath\s.{0,1000}\s\-EncScript\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string36 = /\s\-mDNSTTL\s/ nocase ascii wide
+        $string35 = /\s\-mDNSTTL\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string37 = /\s\-NBNSTTL\s/ nocase ascii wide
+        $string36 = /\s\-NBNSTTL\s/ nocase ascii wide
         // Description: empire agent.ps1 arguments.Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string38 = /\s\-NoBase64\s/ nocase ascii wide
+        $string37 = /\s\-NoBase64\s/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string39 = /\s\-NoP\s\-sta\s\-NonI\s\-W\sHidden\s\-Enc\s/ nocase ascii wide
+        $string38 = /\s\-NoP\s\-sta\s\-NonI\s\-W\sHidden\s\-Enc\s/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string40 = /\s\-p\s1337\:1337\s\-p\s5000\:5000/ nocase ascii wide
+        $string39 = /\s\-p\s1337\:1337\s\-p\s5000\:5000/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string41 = /\s\-PasswordList\s/ nocase ascii wide
+        $string40 = /\s\-PasswordList\s/ nocase ascii wide
         // Description: Empire scripts arguments. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string42 = /\s\-payload\s.{0,1000}\-Lhost\s.{0,1000}\-Lport/ nocase ascii wide
+        $string41 = /\s\-payload\s.{0,1000}\-Lhost\s.{0,1000}\-Lport/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string43 = /\s\-PayloadPath\s/ nocase ascii wide
+        $string42 = /\s\-PayloadPath\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string44 = /\s\-PEPath\s.{0,1000}\s\-ExeArgs\s/ nocase ascii wide
+        $string43 = /\s\-PEPath\s.{0,1000}\s\-ExeArgs\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string45 = /\s\-PermanentWMI\s/ nocase ascii wide
+        $string44 = /\s\-PermanentWMI\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string46 = /\s\-PersistenceScriptName\s/ nocase ascii wide
+        $string45 = /\s\-PersistenceScriptName\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string47 = /\s\-PersistentScriptFilePath\s/ nocase ascii wide
+        $string46 = /\s\-PersistentScriptFilePath\s/ nocase ascii wide
         // Description: The Empire Multiuser GUI is a graphical interface to the Empire post-exploitation Framework
         // Reference: https://github.com/EmpireProject/Empire-GUI
-        $string48 = /\s\-\-port\s1337/ nocase ascii wide
+        $string47 = /\s\-\-port\s1337/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string49 = /\s\-Registry\s\-AtStartup\s/ nocase ascii wide
+        $string48 = /\s\-Registry\s\-AtStartup\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string50 = /\s\-RemoteDllHandle\s/ nocase ascii wide
+        $string49 = /\s\-RemoteDllHandle\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string51 = /\s\-RevToSelf\s/ nocase ascii wide
+        $string50 = /\s\-RevToSelf\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string52 = /\s\-Rhost\s.{0,1000}\s\-WARFile\shttp/ nocase ascii wide
+        $string51 = /\s\-Rhost\s.{0,1000}\s\-WARFile\shttp/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string53 = /\s\-Rhosts\s.{0,1000}\s\-Password\s.{0,1000}\s\-Directory\s.{0,1000}\s\-Dictionary\s/ nocase ascii wide
+        $string52 = /\s\-Rhosts\s.{0,1000}\s\-Password\s.{0,1000}\s\-Directory\s.{0,1000}\s\-Dictionary\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string54 = /\s\-Rhosts\s.{0,1000}\s\-Path\s.{0,1000}\.txt\s\-Port\s/ nocase ascii wide
+        $string53 = /\s\-Rhosts\s.{0,1000}\s\-Path\s.{0,1000}\.txt\s\-Port\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string55 = /\s\-ScheduledTask\s\-OnIdle\s/ nocase ascii wide
+        $string54 = /\s\-ScheduledTask\s\-OnIdle\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string56 = /\s\-ServiceName\s.{0,1000}\s\-PipeName\s/ nocase ascii wide
+        $string55 = /\s\-ServiceName\s.{0,1000}\s\-PipeName\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string57 = /\s\-SiteListFilePath\s.{0,1000}\s\-B64Pass\s/ nocase ascii wide
+        $string56 = /\s\-SiteListFilePath\s.{0,1000}\s\-B64Pass\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string58 = /\s\-SpooferIP\s/ nocase ascii wide
+        $string57 = /\s\-SpooferIP\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string59 = /\s\-Target\s.{0,1000}\s\-AllDomain\s/ nocase ascii wide
+        $string58 = /\s\-Target\s.{0,1000}\s\-AllDomain\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string60 = /\s\-Target\s.{0,1000}\s\-InitialGrooms\s/ nocase ascii wide
+        $string59 = /\s\-Target\s.{0,1000}\s\-InitialGrooms\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string61 = /\s\-Target\s.{0,1000}\s\-Shellcode\s/ nocase ascii wide
+        $string60 = /\s\-Target\s.{0,1000}\s\-Shellcode\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string62 = /\s\-type\suser\s\-search\s.{0,1000}\s\-DomainController\s.{0,1000}\s\-Credential\s.{0,1000}\s\-list\syes/ nocase ascii wide
+        $string61 = /\s\-type\suser\s\-search\s.{0,1000}\s\-DomainController\s.{0,1000}\s\-Credential\s.{0,1000}\s\-list\syes/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string63 = /\s\-Username\s.{0,1000}\s\-Hash\s.{0,1000}\s\-Command\s/ nocase ascii wide
+        $string62 = /\s\-Username\s.{0,1000}\s\-Hash\s.{0,1000}\s\-Command\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string64 = /\s\-UserPersistenceOption\s/ nocase ascii wide
+        $string63 = /\s\-UserPersistenceOption\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string65 = /\s\-VaultElementPtr\s/ nocase ascii wide
+        $string64 = /\s\-VaultElementPtr\s/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string66 = /\swindows\/csharp_exe/ nocase ascii wide
+        $string65 = /\swindows\/csharp_exe/ nocase ascii wide
         // Description: empire agent.ps1 arguments.Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string67 = /\s\-WorkingHours\s/ nocase ascii wide
+        $string66 = /\s\-WorkingHours\s/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string68 = /\sYour\spayload\shas\sbeen\sdelivered/ nocase ascii wide
+        $string67 = /\sYour\spayload\shas\sbeen\sdelivered/ nocase ascii wide
         // Description: Starkiller is a Frontend for Powershell Empire. It is a web application written in VueJS
         // Reference: https://github.com/BC-SECURITY/Starkiller
-        $string69 = /\/\/localhost\:1337/ nocase ascii wide
+        $string68 = /\/\/localhost\:1337/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string70 = /\/api\/admin\/shutdown\?token\=/ nocase ascii wide
+        $string69 = /\/api\/admin\/shutdown\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string71 = /\/api\/agents\/.{0,1000}\/kill\?token\=/ nocase ascii wide
+        $string70 = /\/api\/agents\/.{0,1000}\/kill\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string72 = /\/api\/agents\/all\/kill\?token\=/ nocase ascii wide
+        $string71 = /\/api\/agents\/all\/kill\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string73 = /\/api\/agents\/all\/shell\?token\=/ nocase ascii wide
+        $string72 = /\/api\/agents\/all\/shell\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string74 = /\/api\/agents\/CXPLDTZCKFNT3SLT\/shell\?/ nocase ascii wide
+        $string73 = /\/api\/agents\/CXPLDTZCKFNT3SLT\/shell\?/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string75 = /\/api\/agents\/stale\?token\=/ nocase ascii wide
+        $string74 = /\/api\/agents\/stale\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string76 = /\/api\/agents\/XMY2H2ZPFWNPGEAP\?token\=/ nocase ascii wide
+        $string75 = /\/api\/agents\/XMY2H2ZPFWNPGEAP\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string77 = /\/api\/listeners\/all\?token\=/ nocase ascii wide
+        $string76 = /\/api\/listeners\/all\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string78 = /\/api\/modules\/collection\/.{0,1000}\?token\=/ nocase ascii wide
+        $string77 = /\/api\/modules\/collection\/.{0,1000}\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string79 = /\/api\/modules\/credentials.{0,1000}\?token\=/ nocase ascii wide
+        $string78 = /\/api\/modules\/credentials.{0,1000}\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string80 = /\/api\/reporting\/agent\/initial\?token\=/ nocase ascii wide
+        $string79 = /\/api\/reporting\/agent\/initial\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string81 = /\/api\/reporting\/msg\/.{0,1000}\?token\=/ nocase ascii wide
+        $string80 = /\/api\/reporting\/msg\/.{0,1000}\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string82 = /\/api\/reporting\/type\/checkin\?token\=/ nocase ascii wide
+        $string81 = /\/api\/reporting\/type\/checkin\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string83 = /\/api\/stagers\/dll\?token\=/ nocase ascii wide
+        $string82 = /\/api\/stagers\/dll\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string84 = /\/api\/stagers\?token\=/ nocase ascii wide
+        $string83 = /\/api\/stagers\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string85 = /\/api\/users\/1\/disable\?token\=/ nocase ascii wide
+        $string84 = /\/api\/users\/1\/disable\?token\=/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string86 = /\/api\/v2\/starkiller/ nocase ascii wide
+        $string85 = /\/api\/v2\/starkiller/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string87 = /\/client\/generated\-stagers\// nocase ascii wide
+        $string86 = /\/client\/generated\-stagers\// nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string88 = /\/data\/empire\.db/ nocase ascii wide
+        $string87 = /\/data\/empire\.db/ nocase ascii wide
         // Description: Starkiller is a Frontend for Powershell Empire. It is a web application written in VueJS
         // Reference: https://github.com/BC-SECURITY/Starkiller
-        $string89 = /\/download\-stager\.js/ nocase ascii wide
+        $string88 = /\/download\-stager\.js/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string90 = /\/ducky\.py/ nocase ascii wide
+        $string89 = /\/ducky\.py/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string91 = /\/Empire\.git/ nocase ascii wide
+        $string90 = /\/Empire\.git/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string92 = /\/empire\/client\// nocase ascii wide
+        $string91 = /\/empire\/client\// nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string93 = /\/empire\:latest/ nocase ascii wide
+        $string92 = /\/empire\:latest/ nocase ascii wide
         // Description: The Empire Multiuser GUI is a graphical interface to the Empire post-exploitation Framework
         // Reference: https://github.com/EmpireProject/Empire-GUI
-        $string94 = /\/EmpireProject/ nocase ascii wide
+        $string93 = /\/EmpireProject/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string95 = /\/evilhost\:/ nocase ascii wide
+        $string94 = /\/evilhost\:/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string96 = /\/hop\.php/ nocase ascii wide
+        $string95 = /\/hop\.php/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string97 = /\/HTTP\-Login\.ps1/ nocase ascii wide
+        $string96 = /\/HTTP\-Login\.ps1/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string98 = /\/Invoke\-RunAs\.ps1/ nocase ascii wide
+        $string97 = /\/Invoke\-RunAs\.ps1/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string99 = /\/lateral_movement\// nocase ascii wide
+        $string98 = /\/lateral_movement\// nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string100 = /\/lateral_movement\/.{0,1000}\.ps1/ nocase ascii wide
+        $string99 = /\/lateral_movement\/.{0,1000}\.ps1/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string101 = /\/MailRaider\.ps1/ nocase ascii wide
+        $string100 = /\/MailRaider\.ps1/ nocase ascii wide
         // Description: Empire commands. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string102 = /\/network\/bloodhound3/ nocase ascii wide
+        $string101 = /\/network\/bloodhound3/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string103 = /\/persistence\/.{0,1000}\.ps1/ nocase ascii wide
+        $string102 = /\/persistence\/.{0,1000}\.ps1/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string104 = /\/persistence\/.{0,1000}\.psm1/ nocase ascii wide
+        $string103 = /\/persistence\/.{0,1000}\.psm1/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string105 = /\/privesc\// nocase ascii wide
+        $string104 = /\/privesc\// nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string106 = /\/ps\-empire/ nocase ascii wide
+        $string105 = /\/ps\-empire/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string107 = /\/ReferenceSourceLibraries\/Sharpire/ nocase ascii wide
+        $string106 = /\/ReferenceSourceLibraries\/Sharpire/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string108 = /\/server\/common\/stagers\.py/ nocase ascii wide
+        $string107 = /\/server\/common\/stagers\.py/ nocase ascii wide
         // Description: Empire executable paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string109 = /\/situational_awareness\/.{0,1000}\.exe/ nocase ascii wide
+        $string108 = /\/situational_awareness\/.{0,1000}\.exe/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string110 = /\/situational_awareness\/.{0,1000}\.ps1/ nocase ascii wide
+        $string109 = /\/situational_awareness\/.{0,1000}\.ps1/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string111 = /\/smb\/psexec\.rb/ nocase ascii wide
+        $string110 = /\/smb\/psexec\.rb/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string112 = /\/stagers\/.{0,1000}\.ps1/ nocase ascii wide
+        $string111 = /\/stagers\/.{0,1000}\.ps1/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
-        $string113 = /\/stagers\/CSharpPS/ nocase ascii wide
+        $string112 = /\/stagers\/CSharpPS/ nocase ascii wide
         // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string114 = /\/tools\/psexec\.rb/ nocase ascii wide
+        $string113 = /\/tools\/psexec\.rb/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string115 = /\/trollsploit\// nocase ascii wide
+        $string114 = /\/trollsploit\// nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string116 = /\/x64_slim\.dll/ nocase ascii wide
+        $string115 = /\/x64_slim\.dll/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string117 = /\/xar\-1\.5\.2\.tar\.gz/ nocase ascii wide
+        $string116 = /\/xar\-1\.5\.2\.tar\.gz/ nocase ascii wide
         // Description: Empire scripts paths. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
         // Reference: https://github.com/EmpireProject/Empire
-        $string118 = /\\hijackers\\/ nocase ascii wide
+        $string117 = /\\hijackers\\/ nocase ascii wide
+        // Description: Empire scripts functions. Empire is an open source. cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python. the post-exploitation agents are written in pure PowerShell for Windows and Python for Linux/macOS. Empire was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries
+        // Reference: https://github.com/EmpireProject/Empire
+        $string118 = /\\Temp\\blah\.exe/ nocase ascii wide
         // Description: Empire is a post-exploitation and adversary emulation framework that is used to aid Red Teams and Penetration Testers.
         // Reference: https://github.com/BC-SECURITY/Empire
         $string119 = /1337.{0,1000}\/api\/agents\/.{0,1000}\/results\?token\=/ nocase ascii wide

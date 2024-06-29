@@ -57,10 +57,10 @@ rule godpotato
         // Reference: https://github.com/BeichenDream/GodPotato
         $string16 = /GodPotato\-NET35\.exe/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
-        // Reference: https://github.com/BeichenDream/GodPotato
+        // Reference: https://github.com/weaselsec/GodPotato-Aggressor-Script
         $string17 = /GodPotato\-NET4\.exe/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
-        // Reference: https://github.com/weaselsec/GodPotato-Aggressor-Script
+        // Reference: https://github.com/BeichenDream/GodPotato
         $string18 = /GodPotato\-NET4\.exe/ nocase ascii wide
         // Description: GodPotato is an advanced privilege escalation tool that utilizes research on DCOM and builds upon years of Potato techniques. It enables privilege escalation to NT AUTHORITY\SYSTEM on Windows systems from 2012 to 2022 by leveraging the ImpersonatePrivilege permission. It addresses limitations of previous Potato versions and can run on almost any Windows OS by exploiting rpcss vulnerabilities.
         // Reference: https://github.com/BeichenDream/GodPotato

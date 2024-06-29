@@ -11,10 +11,10 @@ rule reverse_shell_generator
         // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string1 = /\sperl\-reverse\-shell\s\-\s/ nocase ascii wide
-        // Description: Hosted Reverse Shell generator with a ton of functionality
+        // Description: Reverse Shell Generator
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string2 = /\sreverse_shell_generator/ nocase ascii wide
-        // Description: Reverse Shell Generator
+        // Description: Hosted Reverse Shell generator with a ton of functionality
         // Reference: https://github.com/0dayCTF/reverse-shell-generator
         $string3 = /\sreverse_shell_generator/ nocase ascii wide
         // Description: Reverse Shell Generator

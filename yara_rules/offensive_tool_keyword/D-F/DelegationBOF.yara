@@ -35,9 +35,6 @@ rule DelegationBOF
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
         $string9 = /IcebreakerSecurity\/DelegationBOF/ nocase ascii wide
-        // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings. Currently. it supports RBCD. Constrained. Constrained w/Protocol Transition. and Unconstrained Delegation checks.
-        // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string10 = /get\-delegation\s/ nocase ascii wide
 
     condition:
         any of them

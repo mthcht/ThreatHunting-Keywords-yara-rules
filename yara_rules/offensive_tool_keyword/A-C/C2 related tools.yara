@@ -320,9 +320,6 @@ rule C2_related_tools
         // Description: Cooolis-ms is a code execution tool that includes Metasploit Payload Loader. Cobalt Strike External C2 Loader. and Reflective DLL injection. Its positioning is to avoid some codes that we will execute and contain characteristics in static killing. and help red team personnel It is more convenient and quick to switch from the Web container environment to the C2 environment for further work.
         // Reference: https://github.com/Rvn0xsy/Cooolis-ms
         $string104 = /YmxvY2s9MTAw/ nocase ascii wide
-        // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
-        // Reference: https://github.com/med0x2e/SigFlip
-        $string105 = /SigFlip\s/ nocase ascii wide
 
     condition:
         any of them

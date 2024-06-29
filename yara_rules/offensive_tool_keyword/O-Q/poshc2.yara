@@ -521,18 +521,15 @@ rule poshc2
         // Description: pipe name from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
         $string171 = /\\jaccdpqnvbrrxlaf/ nocase ascii wide
-        // Description: pipe name from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
-        // Reference: https://github.com/nettitude/PoshC2
-        $string172 = /\\Posh/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string173 = /posh\s\-u\s/ nocase ascii wide
+        $string172 = /posh\s\-u\s/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string174 = /runof\s.{0,1000}\.o/ nocase ascii wide
+        $string173 = /runof\s.{0,1000}\.o/ nocase ascii wide
         // Description: keywords from poshc2 usage - a proxy aware C2 framework used to aid red teamers with post-exploitation and Lateral Movement.
         // Reference: https://github.com/nettitude/PoshC2
-        $string175 = /runpe\s.{0,1000}\.exe/ nocase ascii wide
+        $string174 = /runpe\s.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them

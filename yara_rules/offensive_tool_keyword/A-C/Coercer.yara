@@ -22,28 +22,28 @@ rule Coercer
         $string4 = /\s\-\-only\-known\-exploit\-paths/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string5 = /\/coercer\.egg\-info/ nocase ascii wide
+        $string5 = /\sPodalirius\s\(\@podalirius_\)/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string6 = /\/Coercer\.git/ nocase ascii wide
+        $string6 = /\/coercer\.egg\-info/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string7 = /\/Coercer\.py/ nocase ascii wide
+        $string7 = /\/Coercer\.git/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string8 = /\/Coercer\/.{0,1000}\.py/ nocase ascii wide
+        $string8 = /\/Coercer\.py/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string9 = /\\\\\\\\\.\\\\.{0,1000}\\\\.{0,1000}\\\\.{0,1000}\\\\smile\.txt\\/ nocase ascii wide
+        $string9 = /\/Coercer\/.{0,1000}\.py/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string10 = /\\coercer\.exe/ nocase ascii wide
+        $string10 = /\\\\\\\\\.\\\\.{0,1000}\\\\.{0,1000}\\\\.{0,1000}\\\\smile\.txt\\/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string11 = /\\Coercer\.py/ nocase ascii wide
+        $string11 = /\\coercer\.exe/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
-        $string12 = /Author\s\s\s\s\s\s\s\s\s\s\s\s\s\:\sPodalirius\s\(\@podalirius_\)/ nocase ascii wide
+        $string12 = /\\Coercer\.py/ nocase ascii wide
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
         $string13 = /cbbadc6ef65c597a7cd81e6f98758815d35ac0530367d87341dd0618b5c7359b/ nocase ascii wide

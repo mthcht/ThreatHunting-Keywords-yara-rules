@@ -268,43 +268,37 @@ rule bruteratel
         $string86 = /wmispawn\sselect/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string87 = /grab_token\s/ nocase ascii wide
+        $string87 = /impersonate\s.{0,1000}\\/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string88 = /impersonate\s.{0,1000}\\/ nocase ascii wide
+        $string88 = /kerberoast\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string89 = /kerberoast\s/ nocase ascii wide
+        $string89 = /list_exports\s.{0,1000}\.dll/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string90 = /list_exports\s.{0,1000}\.dll/ nocase ascii wide
+        $string90 = /make_token\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string91 = /make_token\s/ nocase ascii wide
+        $string91 = /memdump\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string92 = /memdump\s/ nocase ascii wide
+        $string92 = /memex\s\/.{0,1000}\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string93 = /memex\s\/.{0,1000}\.exe/ nocase ascii wide
+        $string93 = /memhunt\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string94 = /memhunt\s/ nocase ascii wide
+        $string94 = /psgrep\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string95 = /ps_ex\s/ nocase ascii wide
+        $string95 = /samdump\s/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string96 = /psgrep\s/ nocase ascii wide
+        $string96 = /set_child\s.{0,1000}\.exe/ nocase ascii wide
         // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
         // Reference: https://bruteratel.com/
-        $string97 = /samdump\s/ nocase ascii wide
-        // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
-        // Reference: https://bruteratel.com/
-        $string98 = /set_child\s.{0,1000}\.exe/ nocase ascii wide
-        // Description: A Customized Command and Control Center for Red Team and Adversary Simulation
-        // Reference: https://bruteratel.com/
-        $string99 = /sharescan\s.{0,1000}\.txt/ nocase ascii wide
+        $string97 = /sharescan\s.{0,1000}\.txt/ nocase ascii wide
 
     condition:
         any of them

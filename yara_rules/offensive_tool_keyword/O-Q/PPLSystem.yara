@@ -16,25 +16,25 @@ rule PPLSystem
         $string2 = /\/pplsystem\.exe/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string3 = /\[\+\]\sRemote\sCOM\ssecret\s\:\s/ nocase ascii wide
+        $string3 = /\/PPLSystem\.git/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string4 = /\\pplsystem\.exe/ nocase ascii wide
+        $string4 = /\[\+\]\sRemote\sCOM\ssecret\s\:\s/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string5 = /\\PPLSystem\-main/ nocase ascii wide
+        $string5 = /\\pplsystem\.exe/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string6 = /531870bd9f59ac799dfa6573472db1966cd3a9f8ece84d2f2e409e4384770b4a/ nocase ascii wide
+        $string6 = /\\PPLSystem\-main/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string7 = /Live\sDump\sCapture\sDump\sData\sAPI\sended\.\sNT\sStatus\:\sSTATUS_SUCCESS\./ nocase ascii wide
+        $string7 = /531870bd9f59ac799dfa6573472db1966cd3a9f8ece84d2f2e409e4384770b4a/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string8 = /pplsystem\.exe\s/ nocase ascii wide
+        $string8 = /Live\sDump\sCapture\sDump\sData\sAPI\sended\.\sNT\sStatus\:\sSTATUS_SUCCESS\./ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
-        $string9 = /\/PPLSystem\.git/ nocase ascii wide
+        $string9 = /pplsystem\.exe\s/ nocase ascii wide
         // Description: creates a livedump of the machine through NtDebugSystemControl to extract the COM secret and context, to then inject inside this process.
         // Reference: https://github.com/Slowerzs/PPLSystem
         $string10 = /Slowerzs\/PPLSystem/ nocase ascii wide

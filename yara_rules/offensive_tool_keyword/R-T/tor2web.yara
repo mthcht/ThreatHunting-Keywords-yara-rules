@@ -91,82 +91,82 @@ rule tor2web
         $string27 = /href\=\"\"\/\"\"\>tor2web\<\/a\>/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string28 = /info\@tor2web\.org/ nocase ascii wide
+        $string28 = /http\:\/\/tor2web\./ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string29 = /install\-tor2web\.sh/ nocase ascii wide
+        $string29 = /https\:\/\/tor2web\./ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string30 = /lists\.tor2web\.org/ nocase ascii wide
+        $string30 = /info\@tor2web\.org/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string31 = /OFTC\/tor2web\// nocase ascii wide
+        $string31 = /install\-tor2web\.sh/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string32 = /remote_get_tor_exits_list\(/ nocase ascii wide
+        $string32 = /lists\.tor2web\.org/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string33 = /spawnT2W\(/ nocase ascii wide
+        $string33 = /OFTC\/tor2web\// nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string34 = /Start\sthe\sTor2web\sproxy/ nocase ascii wide
+        $string34 = /remote_get_tor_exits_list\(/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string35 = /Starting\stor\s\(via\ssystemctl\)/ nocase ascii wide
+        $string35 = /spawnT2W\(/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string36 = /tor2web\sstart/ nocase ascii wide
+        $string36 = /Start\sthe\sTor2web\sproxy/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string37 = /tor2web\sstop/ nocase ascii wide
+        $string37 = /Starting\stor\s\(via\ssystemctl\)/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string38 = /tor2web\.pid/ nocase ascii wide
+        $string38 = /tor2web\sstart/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string39 = /tor2web\.service/ nocase ascii wide
+        $string39 = /tor2web\sstop/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string40 = /tor2web\/Tor2web/ nocase ascii wide
+        $string40 = /tor2web\.pid/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string41 = /tor2web_notification_form/ nocase ascii wide
+        $string41 = /tor2web\.service/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string42 = /tor2web\-cert\.pem/ nocase ascii wide
+        $string42 = /tor2web\/Tor2web/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string43 = /tor2web\-default\.conf/ nocase ascii wide
+        $string43 = /tor2web_notification_form/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string44 = /tor2web\-dh\.pem/ nocase ascii wide
+        $string44 = /tor2web\-cert\.pem/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string45 = /tor2web\-globaleaks\.conf/ nocase ascii wide
+        $string45 = /tor2web\-default\.conf/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string46 = /tor2web\-hidden/ nocase ascii wide
+        $string46 = /tor2web\-dh\.pem/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string47 = /tor2web\-intermediate\.pem/ nocase ascii wide
+        $string47 = /tor2web\-globaleaks\.conf/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string48 = /tor2web\-key\.pem/ nocase ascii wide
+        $string48 = /tor2web\-hidden/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string49 = /tor2web\-visible/ nocase ascii wide
+        $string49 = /tor2web\-intermediate\.pem/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string50 = /update\-rc\.d\stor2web\sdefaults/ nocase ascii wide
+        $string50 = /tor2web\-key\.pem/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string51 = /www\.tor2web\.org/ nocase ascii wide
+        $string51 = /tor2web\-visible/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string52 = /http\:\/\/tor2web\./ nocase ascii wide
+        $string52 = /update\-rc\.d\stor2web\sdefaults/ nocase ascii wide
         // Description: Tor2web is an HTTP proxy software that enables access to Tor Hidden Services by mean of common web browsers
         // Reference: https://github.com/tor2web/Tor2web
-        $string53 = /https\:\/\/tor2web\./ nocase ascii wide
+        $string53 = /www\.tor2web\.org/ nocase ascii wide
 
     condition:
         any of them

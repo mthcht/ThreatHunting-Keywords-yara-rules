@@ -191,12 +191,6 @@ rule nimplant
         // Description: A light-weight first-stage C2 implant written in Nim
         // Reference: https://github.com/chvancooten/NimPlant
         $string61 = /zippy\.nim/ nocase ascii wide
-        // Description: user agent default field - A light-weight first-stage C2 implant written in Nim
-        // Reference: https://github.com/chvancooten/NimPlant
-        $string62 = /nimplant/ nocase ascii wide
-        // Description: A light-weight first-stage C2 implant written in Nim
-        // Reference: https://github.com/chvancooten/NimPlant
-        $string63 = /nimplant\s/ nocase ascii wide
 
     condition:
         any of them

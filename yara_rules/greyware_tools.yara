@@ -1715,6 +1715,61 @@ rule AlanFramework_greyware_tool_keyword
 }
 
 
+rule Alpemix_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Alpemix' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Alpemix"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string1_Alpemix_greyware_tool_keyword = /\/Alpemix\.zip/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string2_Alpemix_greyware_tool_keyword = /\/Apemix\.exe/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string3_Alpemix_greyware_tool_keyword = /\\Alpemix\.ini/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string4_Alpemix_greyware_tool_keyword = /\\Alpemix\.zip/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string5_Alpemix_greyware_tool_keyword = /\\Apemix\.exe/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string6_Alpemix_greyware_tool_keyword = /\\CurrentControlSet\\Services\\AlpemixSrvcx/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string7_Alpemix_greyware_tool_keyword = /\<Alpemix\>/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string8_Alpemix_greyware_tool_keyword = /\<AlpemixWEB\>/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string9_Alpemix_greyware_tool_keyword = /\<Teknopars\sBilisim\>/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string10_Alpemix_greyware_tool_keyword = /3660fe9f10b94d38fecaea009e6625850a46b1d47bb7788fc47f286c1008e2ec/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string11_Alpemix_greyware_tool_keyword = /6badff5495258b349559b9d2154ffcc7a435828dd57c4caf1c79f5d0ff9eb675/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string12_Alpemix_greyware_tool_keyword = /c5e68c5635bed872ce6ac0c2be5395cc15c2dbaa5f0052b86575cdd0b762902e/ nocase ascii wide
+        // Description: connect to your unattended PC from anywhere
+        // Reference: https://www.alpemix.com/
+        $string13_Alpemix_greyware_tool_keyword = /serverinfo\.alpemix\.com/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule Ammyy_Admin_greyware_tool_keyword
 {
     meta:
@@ -2069,6 +2124,128 @@ rule anymailfinder_greyware_tool_keyword
         // Description: used by attackers to find informations about a company users
         // Reference: https://anymailfinder.com
         $string1_anymailfinder_greyware_tool_keyword = /https\:\/\/anymailfinder\.com\/search\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule AnyplaceControl_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'AnyplaceControl' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AnyplaceControl"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string1_AnyplaceControl_greyware_tool_keyword = /\/anyplace\-control\/data2\/.{0,1000}\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string2_AnyplaceControl_greyware_tool_keyword = /\\Anyplace\sControl\s\-\sAdmin\.lnk/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string3_AnyplaceControl_greyware_tool_keyword = /\\Anyplace\sControl\\/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string4_AnyplaceControl_greyware_tool_keyword = /\\anyplace\-control\.ini/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string5_AnyplaceControl_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\zmstage\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string6_AnyplaceControl_greyware_tool_keyword = /\\AppData\\Roaming\\Anyplace\sControl/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string7_AnyplaceControl_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Anyplace\sControl/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string8_AnyplaceControl_greyware_tool_keyword = /\\ProgramData\\Anyplace\sControl\s/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string9_AnyplaceControl_greyware_tool_keyword = /\>Anyplace\sControl\sSoftware\</ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string10_AnyplaceControl_greyware_tool_keyword = /a2fa034d006bdbc3ee2a15e55eb647f8097355c288a858da1e309fe8ac1cf0a3/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string11_AnyplaceControl_greyware_tool_keyword = /AnyplaceControlInstall\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string12_AnyplaceControl_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\Anyplace\sControl/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyplace-control[.]com
+        $string13_AnyplaceControl_greyware_tool_keyword = /www\.anyplace\-control\.com\/install/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule anyviewer_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'anyviewer' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "anyviewer"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string1_anyviewer_greyware_tool_keyword = /\/AnyViewerSetup\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string2_anyviewer_greyware_tool_keyword = /\\AnyViewerSetup\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string3_anyviewer_greyware_tool_keyword = /\\AnyViewerSetup\.tmp/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string4_anyviewer_greyware_tool_keyword = /\\logs\\RCService\.txt/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string5_anyviewer_greyware_tool_keyword = /\>AnyViewer\sSetup\</ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string6_anyviewer_greyware_tool_keyword = /\>AnyViewer\</ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string7_anyviewer_greyware_tool_keyword = /0de968ffd4a6c60413cac739dccb1b162f8f93f3db754728fde8738e52706fa4/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string8_anyviewer_greyware_tool_keyword = /334ec9e7d937c42e8ef12f9d4ec90862ecc5410c06442393a38390b34886aa59/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string9_anyviewer_greyware_tool_keyword = /a\.aomeisoftware\.com/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string10_anyviewer_greyware_tool_keyword = /AnyViewer\\audio_sniffer\.dll/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string11_anyviewer_greyware_tool_keyword = /AnyViewer\\AVCore\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string12_anyviewer_greyware_tool_keyword = /AnyViewer\\RCService\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string13_anyviewer_greyware_tool_keyword = /AnyViewer\\ScreanCap\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string14_anyviewer_greyware_tool_keyword = /AnyViewer\\SplashWin\.exe/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string15_anyviewer_greyware_tool_keyword = /controlserver\.anyviewer\.com/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string16_anyviewer_greyware_tool_keyword = /https\:\/\/ip138\.com\/iplookup\.asp\?ip\=.{0,1000}\&action\=2/ nocase ascii wide
+        // Description: access your unattended PC from anywhere
+        // Reference: www.anyviewer.com
+        $string17_anyviewer_greyware_tool_keyword = /Program\sFiles\s\(x86\)\\AnyViewer/ nocase ascii wide
 
     condition:
         any of them
@@ -2847,6 +3024,116 @@ rule AutoSUID_greyware_tool_keyword
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string40_AutoSUID_greyware_tool_keyword = /xargs\s\-a\s\/dev\/null\ssh\s\-p/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule auvik_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'auvik' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "auvik"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: cloud-based network management software
+        // Reference: https://www.auvik.com/
+        $string1_auvik_greyware_tool_keyword = /\>Auvik\sNetworks\sInc\.\</ nocase ascii wide
+        // Description: cloud-based network management software
+        // Reference: https://www.auvik.com/
+        $string2_auvik_greyware_tool_keyword = /auvik\.agent\.exe/ nocase ascii wide
+        // Description: cloud-based network management software
+        // Reference: https://www.auvik.com/
+        $string3_auvik_greyware_tool_keyword = /AuvikService\.exe/ nocase ascii wide
+        // Description: cloud-based network management software
+        // Reference: https://www.auvik.com/
+        $string4_auvik_greyware_tool_keyword = /https\:\/\/.{0,1000}\.my\.auvik\.com\// nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule aweray_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'aweray' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "aweray"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string1_aweray_greyware_tool_keyword = /\.aweray\.net/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string2_aweray_greyware_tool_keyword = /\/Aweray_Remote_.{0,1000}\.exe/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string3_aweray_greyware_tool_keyword = /\/Aweray_Remote_.{0,1000}\.zip/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string4_aweray_greyware_tool_keyword = /\\Aweray\sRemote\.lnk/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string5_aweray_greyware_tool_keyword = /\\Aweray_Remote_.{0,1000}\.exe/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string6_aweray_greyware_tool_keyword = /\\Aweray_Remote_.{0,1000}\.zip/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string7_aweray_greyware_tool_keyword = /\\AweSun\.exe/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string8_aweray_greyware_tool_keyword = /\\Program\sFiles\\Aweray/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string9_aweray_greyware_tool_keyword = /\\Software\\AweSun\\SunLogin\\SunloginClient/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string10_aweray_greyware_tool_keyword = /\>AweRay\sLimited\</ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string11_aweray_greyware_tool_keyword = /\>AweRay\sPte\.\sLtd\.\</ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string12_aweray_greyware_tool_keyword = /\>AweSun\.exe\</ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string13_aweray_greyware_tool_keyword = /\>AweSun\</ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string14_aweray_greyware_tool_keyword = /asapi\.aweray\.net/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string15_aweray_greyware_tool_keyword = /as\-tk\.aweray\.com/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string16_aweray_greyware_tool_keyword = /as\-tk\.aweray\.com\/track/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string17_aweray_greyware_tool_keyword = /Aweray_Remote\.exe/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string18_aweray_greyware_tool_keyword = /awerayimg\.com/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string19_aweray_greyware_tool_keyword = /client\-api\.aweray\.com/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string20_aweray_greyware_tool_keyword = /https\:\/\/sun\.aweray\.com\/.{0,1000}\/download/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string21_aweray_greyware_tool_keyword = /install\.bat\sAweSun/ nocase ascii wide
+        // Description: all-in-one secure remote access control and support solution
+        // Reference: sun.aweray.com
+        $string22_aweray_greyware_tool_keyword = /netsh\s\sadvfirewall\sfirewall\s.{0,1000}\srule\sname\=\"AweSun/ nocase ascii wide
 
     condition:
         any of them
@@ -12180,88 +12467,91 @@ rule kaseya_VSA_greyware_tool_keyword
         $string29_kaseya_VSA_greyware_tool_keyword = /KASEYA\sHOLDINGS\sINC\./ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string30_kaseya_VSA_greyware_tool_keyword = /PCMonitorCfg\.dll/ nocase ascii wide
+        $string30_kaseya_VSA_greyware_tool_keyword = /managedsupport\.kaseya\.net/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string31_kaseya_VSA_greyware_tool_keyword = /PCMonitorClient\.dll/ nocase ascii wide
+        $string31_kaseya_VSA_greyware_tool_keyword = /PCMonitorCfg\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string32_kaseya_VSA_greyware_tool_keyword = /PCMonitorEng\.dll/ nocase ascii wide
+        $string32_kaseya_VSA_greyware_tool_keyword = /PCMonitorClient\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string33_kaseya_VSA_greyware_tool_keyword = /PCMonitorManager\.exe/ nocase ascii wide
+        $string33_kaseya_VSA_greyware_tool_keyword = /PCMonitorEng\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
         $string34_kaseya_VSA_greyware_tool_keyword = /PCMonitorManager\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string35_kaseya_VSA_greyware_tool_keyword = /PCMONITORMANAGER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string35_kaseya_VSA_greyware_tool_keyword = /PCMonitorManager\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string36_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.exe/ nocase ascii wide
+        $string36_kaseya_VSA_greyware_tool_keyword = /PCMONITORMANAGER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
         $string37_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string38_kaseya_VSA_greyware_tool_keyword = /PCMONITORSRV\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string38_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string39_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.InstallState/ nocase ascii wide
+        $string39_kaseya_VSA_greyware_tool_keyword = /PCMONITORSRV\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string40_kaseya_VSA_greyware_tool_keyword = /PCMonitorTypes\.dll/ nocase ascii wide
+        $string40_kaseya_VSA_greyware_tool_keyword = /PCMonitorSrv\.InstallState/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string41_kaseya_VSA_greyware_tool_keyword = /pcmontask\.exe\s/ nocase ascii wide
+        $string41_kaseya_VSA_greyware_tool_keyword = /PCMonitorTypes\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string42_kaseya_VSA_greyware_tool_keyword = /PCMONTASK\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string42_kaseya_VSA_greyware_tool_keyword = /pcmontask\.exe\s/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string43_kaseya_VSA_greyware_tool_keyword = /pcmrdp\-client\.dll/ nocase ascii wide
+        $string43_kaseya_VSA_greyware_tool_keyword = /PCMONTASK\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string44_kaseya_VSA_greyware_tool_keyword = /Program\sFiles\\VSA\sX\\/ nocase ascii wide
+        $string44_kaseya_VSA_greyware_tool_keyword = /pcmrdp\-client\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string45_kaseya_VSA_greyware_tool_keyword = /ProgramData\\Kaseya\\/ nocase ascii wide
+        $string45_kaseya_VSA_greyware_tool_keyword = /Program\sFiles\\VSA\sX\\/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string46_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop\.exe\s/ nocase ascii wide
+        $string46_kaseya_VSA_greyware_tool_keyword = /ProgramData\\Kaseya\\/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string47_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop_x64\s\(1\)\.msi/ nocase ascii wide
+        $string47_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop\.exe\s/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string48_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop_x64\.msi/ nocase ascii wide
+        $string48_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop_x64\s\(1\)\.msi/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string49_kaseya_VSA_greyware_tool_keyword = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
+        $string49_kaseya_VSA_greyware_tool_keyword = /RemoteDesktop_x64\.msi/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string50_kaseya_VSA_greyware_tool_keyword = /SC\s\sQUERYEX\s\"VSAX\"/ nocase ascii wide
+        $string50_kaseya_VSA_greyware_tool_keyword = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string51_kaseya_VSA_greyware_tool_keyword = /\'ServiceName\'\>VSA\sX\<\/Data\>/ nocase ascii wide
+        $string51_kaseya_VSA_greyware_tool_keyword = /SC\s\sQUERYEX\s\"VSAX\"/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string52_kaseya_VSA_greyware_tool_keyword = /\'ServiceName\'\>VSAX\<\/Data\>/ nocase ascii wide
+        $string52_kaseya_VSA_greyware_tool_keyword = /\'ServiceName\'\>VSA\sX\<\/Data\>/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string53_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sManager/ nocase ascii wide
+        $string53_kaseya_VSA_greyware_tool_keyword = /\'ServiceName\'\>VSAX\<\/Data\>/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string54_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sRemote\sControl\'/ nocase ascii wide
+        $string54_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sManager/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string55_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sService\'/ nocase ascii wide
+        $string55_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sRemote\sControl\'/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string56_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sUser\sAgent\'/ nocase ascii wide
+        $string56_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sService\'/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string57_kaseya_VSA_greyware_tool_keyword = /vsxrc\-client\.dll/ nocase ascii wide
+        $string57_kaseya_VSA_greyware_tool_keyword = /\'VSA\sX\sUser\sAgent\'/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string58_kaseya_VSA_greyware_tool_keyword = /vsxrc\-client\.dll/ nocase ascii wide
 
     condition:
         any of them
@@ -12525,6 +12815,154 @@ rule Lethean_Proxy_VPN_greyware_tool_keyword
         // Description: External VPN usage within coporate network
         // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
         $string1_Lethean_Proxy_VPN_greyware_tool_keyword = /aigmfoeogfnljhnofglledbhhfegannp/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule level_io_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'level.io' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "level.io"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string1_level_io_greyware_tool_keyword = /\s\.\/level\-darwin\-bundle\-amd64\.pkg/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string2_level_io_greyware_tool_keyword = /\s\.\/level\-linux\-amd64\s/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string3_level_io_greyware_tool_keyword = /\s\.\/level\-linux\-arm64\s/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string4_level_io_greyware_tool_keyword = /\s\/F\s\/TN\s\"Level\\Level\sWatchdog\"/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string5_level_io_greyware_tool_keyword = /\sdownloads\.level\.io/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string6_level_io_greyware_tool_keyword = /\"message\"\:\"ably\sconnection\sstate\:\sCONNECTED\"\}/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string7_level_io_greyware_tool_keyword = /\$env_level_io_greyware_tool_keyword\:LEVEL_API_KEY\s\=\s\".{0,1000}\"\;/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string8_level_io_greyware_tool_keyword = /\$tempFile_level_io_greyware_tool_keyword\s\=\sJoin\-Path\s\(\[System\.IO\.Path\]\:\:GetTempPath\(\)\)\s\"install_windows\.exe\"\;/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string9_level_io_greyware_tool_keyword = /\/etc\/level\/config\.yaml/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string10_level_io_greyware_tool_keyword = /\/level\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string11_level_io_greyware_tool_keyword = /\/level\-windows\-arm64\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string12_level_io_greyware_tool_keyword = /\/usr\/local\/bin\/level/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string13_level_io_greyware_tool_keyword = /\/var\/lib\/level\/level\.db/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string14_level_io_greyware_tool_keyword = /\/var\/lib\/level\/level\.log/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string15_level_io_greyware_tool_keyword = /\\level\.exe.{0,1000}\-\-check\-service/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string16_level_io_greyware_tool_keyword = /\\level\-remote\-control\-ffmpeg\.exe\.download/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string17_level_io_greyware_tool_keyword = /\\level\-windows\-amd64\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string18_level_io_greyware_tool_keyword = /\\level\-windows\-arm64\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string19_level_io_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Level\\/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string20_level_io_greyware_tool_keyword = /\\Program\sFiles\\Level\\level\.db/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string21_level_io_greyware_tool_keyword = /\\Program\sFiles\\Level\\osqueryi\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string22_level_io_greyware_tool_keyword = /\\Program\sFiles\\Level\\winpty\.dll/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string23_level_io_greyware_tool_keyword = /\\Program\sFiles\\Level\\winpty\-agent\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string24_level_io_greyware_tool_keyword = /\\Temp\\install_windows\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string25_level_io_greyware_tool_keyword = /\<\\Level\\Level\sWatchdog\>/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string26_level_io_greyware_tool_keyword = /\>Level\sSoftware\,\sInc\.\</ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string27_level_io_greyware_tool_keyword = /\>Remote\sdevice\smanagement\s\-\shttps\:\/\/level\.io\</ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string28_level_io_greyware_tool_keyword = /37B9B43761672219E98BFA826E7AF17E799592BC57ACBC4AAC38DAF5EFAAF653/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string29_level_io_greyware_tool_keyword = /3DDF7FBB35EC90BCF15E723F1445EEB71E71C9757243EFEC1CEB4E74A10A1D9F/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string30_level_io_greyware_tool_keyword = /agents\.level\.io/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string31_level_io_greyware_tool_keyword = /builds\.level\.io/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string32_level_io_greyware_tool_keyword = /https\:\/\/app\.level\.io\/devices/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string33_level_io_greyware_tool_keyword = /https\:\/\/docs\.level\.io\/1\.0\/admin\-guides\/level\-watchdog\-task/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string34_level_io_greyware_tool_keyword = /https\:\/\/downloads\.level\.io\/install_linux\.sh/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string35_level_io_greyware_tool_keyword = /https\:\/\/downloads\.level\.io\/install_mac_os\.sh/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string36_level_io_greyware_tool_keyword = /https\:\/\/downloads\.level\.io\/install_windows\.exe/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string37_level_io_greyware_tool_keyword = /https\:\/\/downloads\.level\.io\/stable\/level\-linux\-amd64/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string38_level_io_greyware_tool_keyword = /LEVEL_API_KEY\=.{0,1000}\sbash\s\-c\s\"\$\(curl\s\-L\s/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string39_level_io_greyware_tool_keyword = /logs\.logdna\.com/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string40_level_io_greyware_tool_keyword = /netsh\s\sadvfirewall\sfirewall\sadd\srule\sname\=\\\"Level\sAgent\\\"/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string41_level_io_greyware_tool_keyword = /online\.level\.io/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string42_level_io_greyware_tool_keyword = /Program\sFiles\\Level\\level\.log/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string43_level_io_greyware_tool_keyword = /realtime\.ably\.io/ nocase ascii wide
+        // Description: Level is reinventing remote monitoring and management
+        // Reference: https://level.io/
+        $string44_level_io_greyware_tool_keyword = /rest\.ably\.io/ nocase ascii wide
 
     condition:
         any of them

@@ -97,88 +97,91 @@ rule kaseya_VSA
         $string29 = /KASEYA\sHOLDINGS\sINC\./ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string30 = /PCMonitorCfg\.dll/ nocase ascii wide
+        $string30 = /managedsupport\.kaseya\.net/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string31 = /PCMonitorClient\.dll/ nocase ascii wide
+        $string31 = /PCMonitorCfg\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string32 = /PCMonitorEng\.dll/ nocase ascii wide
+        $string32 = /PCMonitorClient\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string33 = /PCMonitorManager\.exe/ nocase ascii wide
+        $string33 = /PCMonitorEng\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
         $string34 = /PCMonitorManager\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string35 = /PCMONITORMANAGER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string35 = /PCMonitorManager\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string36 = /PCMonitorSrv\.exe/ nocase ascii wide
+        $string36 = /PCMONITORMANAGER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
         $string37 = /PCMonitorSrv\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string38 = /PCMONITORSRV\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string38 = /PCMonitorSrv\.exe/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string39 = /PCMonitorSrv\.InstallState/ nocase ascii wide
+        $string39 = /PCMONITORSRV\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string40 = /PCMonitorTypes\.dll/ nocase ascii wide
+        $string40 = /PCMonitorSrv\.InstallState/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string41 = /pcmontask\.exe\s/ nocase ascii wide
+        $string41 = /PCMonitorTypes\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string42 = /PCMONTASK\.EXE\-.{0,1000}\.pf/ nocase ascii wide
+        $string42 = /pcmontask\.exe\s/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string43 = /pcmrdp\-client\.dll/ nocase ascii wide
+        $string43 = /PCMONTASK\.EXE\-.{0,1000}\.pf/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string44 = /Program\sFiles\\VSA\sX\\/ nocase ascii wide
+        $string44 = /pcmrdp\-client\.dll/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string45 = /ProgramData\\Kaseya\\/ nocase ascii wide
+        $string45 = /Program\sFiles\\VSA\sX\\/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string46 = /RemoteDesktop\.exe\s/ nocase ascii wide
+        $string46 = /ProgramData\\Kaseya\\/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string47 = /RemoteDesktop_x64\s\(1\)\.msi/ nocase ascii wide
+        $string47 = /RemoteDesktop\.exe\s/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string48 = /RemoteDesktop_x64\.msi/ nocase ascii wide
+        $string48 = /RemoteDesktop_x64\s\(1\)\.msi/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string49 = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
+        $string49 = /RemoteDesktop_x64\.msi/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string50 = /SC\s\sQUERYEX\s\"VSAX\"/ nocase ascii wide
+        $string50 = /SC\s\sQUERYEX\s\"PC\sMonitor\"/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string51 = /\'ServiceName\'\>VSA\sX\<\/Data\>/ nocase ascii wide
+        $string51 = /SC\s\sQUERYEX\s\"VSAX\"/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string52 = /\'ServiceName\'\>VSAX\<\/Data\>/ nocase ascii wide
+        $string52 = /\'ServiceName\'\>VSA\sX\<\/Data\>/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string53 = /\'VSA\sX\sManager/ nocase ascii wide
+        $string53 = /\'ServiceName\'\>VSAX\<\/Data\>/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string54 = /\'VSA\sX\sRemote\sControl\'/ nocase ascii wide
+        $string54 = /\'VSA\sX\sManager/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string55 = /\'VSA\sX\sService\'/ nocase ascii wide
+        $string55 = /\'VSA\sX\sRemote\sControl\'/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string56 = /\'VSA\sX\sUser\sAgent\'/ nocase ascii wide
+        $string56 = /\'VSA\sX\sService\'/ nocase ascii wide
         // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
         // Reference: https://www.kaseya.com/products/vsa/
-        $string57 = /vsxrc\-client\.dll/ nocase ascii wide
+        $string57 = /\'VSA\sX\sUser\sAgent\'/ nocase ascii wide
+        // Description: Kaseya VSA (Virtual System Administrator) is a cloud-based IT management and remote monitoring software designed for managed service providers (MSPs) and IT departments -it is abused by attackers
+        // Reference: https://www.kaseya.com/products/vsa/
+        $string58 = /vsxrc\-client\.dll/ nocase ascii wide
 
     condition:
         any of them

@@ -3211,6 +3211,85 @@ rule Azure_Storage_Explorer_greyware_tool_keyword
 }
 
 
+rule BarracudaRMM_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'BarracudaRMM' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "BarracudaRMM"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string1_BarracudaRMM_greyware_tool_keyword = /\.apitest\.barracudamsp\.com/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string2_BarracudaRMM_greyware_tool_keyword = /\/Applications\/Managed\sWorkplace\/Onsite\sManager\/logs\// nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string3_BarracudaRMM_greyware_tool_keyword = /\\BRMM_2024\.1\-Release/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string4_BarracudaRMM_greyware_tool_keyword = /\\MWDiagnosticCollector\.exe/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string5_BarracudaRMM_greyware_tool_keyword = /\\MWDiagnosticCollectorResult_.{0,1000}\.zip/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string6_BarracudaRMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Barracuda\sRMM\\/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string7_BarracudaRMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\Level\sPlatforms\\/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string8_BarracudaRMM_greyware_tool_keyword = /\\Program\sFiles\\Barracuda\sRMM\\/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string9_BarracudaRMM_greyware_tool_keyword = /\\Program\sFiles\\Level\sPlatforms\\/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string10_BarracudaRMM_greyware_tool_keyword = /\\ProgramData\\Barracuda\sMSP\\/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string11_BarracudaRMM_greyware_tool_keyword = /\\SOFTWARE\\Level\sPlatforms\\Managed\sWorkplace\\/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string12_BarracudaRMM_greyware_tool_keyword = /\>Barracuda\sMSP\</ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string13_BarracudaRMM_greyware_tool_keyword = /\>Barracuda\sNetworks\,\sInc\./ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string14_BarracudaRMM_greyware_tool_keyword = /\>Barracuda\sRMM\sSetup\sAutoRun\</ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string15_BarracudaRMM_greyware_tool_keyword = /\>Barracuda\sRMM\sSetup\</ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string16_BarracudaRMM_greyware_tool_keyword = /\>Barracuda\sRMM.{0,1000}\</ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string17_BarracudaRMM_greyware_tool_keyword = /\>LPI\sLevel\sPlatforms\</ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string18_BarracudaRMM_greyware_tool_keyword = /Barracuda\sRMM\sOnsite\sManager\s\-\sInstallShield\sWizard/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string19_BarracudaRMM_greyware_tool_keyword = /Barracuda\sRMM\sOnsite\sManager\.msi/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string20_BarracudaRMM_greyware_tool_keyword = /rmm\.barracudamsp\.com/ nocase ascii wide
+        // Description: Deliver remote support services - formely AVG
+        // Reference: https://www.barracudamsp.com/products/rmm/barracuda-rmm
+        $string21_BarracudaRMM_greyware_tool_keyword = /whatsmyip\.ccrmm\.avg\.com/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule _base64_greyware_tool_keyword
 {
     meta:
@@ -4464,6 +4543,127 @@ rule cobaltstrike_greyware_tool_keyword
         // Description: If cobaltstrike uses execute-assembly there is a chance that a file will be created in the UsageLogs logs
         // Reference: https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/
         $string1_cobaltstrike_greyware_tool_keyword = /\\AppData\\Local\\Microsoft\\CLR_.{0,1000}\\UsageLogs\\.{0,1000}\.exe\.log/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule ComodoRMM_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'ComodoRMM' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "ComodoRMM"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string1_ComodoRMM_greyware_tool_keyword = /\.comodo\.com\/static\/frontend\/static\-pages\/enroll\-wizard\/token/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string2_ComodoRMM_greyware_tool_keyword = /\/RemoteControlSetup\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string3_ComodoRMM_greyware_tool_keyword = /\/tmp\/.{0,1000}\/enroll\.sh/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string4_ComodoRMM_greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\.service/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string5_ComodoRMM_greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\-linux/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string6_ComodoRMM_greyware_tool_keyword = /\\AppData\\Local\\Temp\\ITarian_Remote_Access_/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string7_ComodoRMM_greyware_tool_keyword = /\\AppData\\Local\\Temp\\Remote_Control_by_Itarian/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string8_ComodoRMM_greyware_tool_keyword = /\\ComodoRemoteControl\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string9_ComodoRMM_greyware_tool_keyword = /\\CurrentControlSet\\Services\\ItsmRsp/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string10_ComodoRMM_greyware_tool_keyword = /\\CurrentControlSet\\Services\\ITSMService/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string11_ComodoRMM_greyware_tool_keyword = /\\CurrentControlSet\\Services\\RmmService/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string12_ComodoRMM_greyware_tool_keyword = /\\ITarian\sRemote\sAccess\.lnk/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string13_ComodoRMM_greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmagent\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string14_ComodoRMM_greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmservice\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string15_ComodoRMM_greyware_tool_keyword = /\\itarian\\endpoint\smanager\\rhost\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string16_ComodoRMM_greyware_tool_keyword = /\\ITarian\\RemoteControl/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string17_ComodoRMM_greyware_tool_keyword = /\\ITarian_Remote_Access_.{0,1000}\.log/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string18_ComodoRMM_greyware_tool_keyword = /\\ITarianRemoteAccess\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string19_ComodoRMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\Endpoint\sManager\\/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string20_ComodoRMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\RemoteControl\\/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string21_ComodoRMM_greyware_tool_keyword = /\\Remote_Control_by_ITarian_.{0,1000}\.log/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string22_ComodoRMM_greyware_tool_keyword = /\\remotecontrol\\rcontrol\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string23_ComodoRMM_greyware_tool_keyword = /\\remotecontrol\\rviewer\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string24_ComodoRMM_greyware_tool_keyword = /\\RemoteControlbyITarian\s\(3\)\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string25_ComodoRMM_greyware_tool_keyword = /\\RemoteControlbyITarian_\(3\)\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string26_ComodoRMM_greyware_tool_keyword = /\\RemoteControlSetup\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string27_ComodoRMM_greyware_tool_keyword = /\\RmmService\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string28_ComodoRMM_greyware_tool_keyword = /\\SOFTWARE\\ITarian\\RemoteControl/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string29_ComodoRMM_greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\ITarian\\ITSM\\/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string30_ComodoRMM_greyware_tool_keyword = /\>Remote\sControl\sby\sItarian\</ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string31_ComodoRMM_greyware_tool_keyword = /\>RmmService\</ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string32_ComodoRMM_greyware_tool_keyword = /cwn\-log\-collector\-production\-clone\..{0,1000}\.elasticbeanstalk\.com/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string33_ComodoRMM_greyware_tool_keyword = /ITarianRemoteAccessSetup\.exe/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string34_ComodoRMM_greyware_tool_keyword = /Linux\sITSM\sAgent\/.{0,1000}\s\-e\s\/tmp\/install\.sh\s/ nocase ascii wide
+        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
+        // Reference: https://one.comodo.com/
+        $string35_ComodoRMM_greyware_tool_keyword = /mdmsupport\.comodo\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -14305,27 +14505,48 @@ rule mshta_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: using forfiles and mshta likely to evade detection and execute malicious code. It combines file enumeration with scripting and HTML-based execution which is commonly seen in malware or sophisticated attacks
+        // Reference: N/A
+        $string1_mshta_greyware_tool_keyword = /forfiles\.exe.{0,1000}\s\/p\s.{0,1000}\s\/m\s.{0,1000}\s\/c\s.{0,1000}powershell\s\.\smshta/ nocase ascii wide
+        // Description: executing from public folder
+        // Reference: N/A
+        $string2_mshta_greyware_tool_keyword = /mshta\s\"C\:\\Users\\Public\\/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string1_mshta_greyware_tool_keyword = /mshta\shttp.{0,1000}\.hta/ nocase ascii wide
+        $string3_mshta_greyware_tool_keyword = /mshta\shttp.{0,1000}\.hta/ nocase ascii wide
+        // Description: downloading from tinyurl
+        // Reference: N/A
+        $string4_mshta_greyware_tool_keyword = /mshta\shttps\:\/\/tinyurl\.com\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string2_mshta_greyware_tool_keyword = /mshta\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
+        $string5_mshta_greyware_tool_keyword = /mshta\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
+        // Description: Invoking a scriptlet file hosted remotely
+        // Reference: N/A
+        $string6_mshta_greyware_tool_keyword = /mshta\sjavascript\:a\=\(GetObject\(\"script\:http.{0,1000}\.sct.{0,1000}\)\)\.Exec\(\)\;close\(\)\;/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string3_mshta_greyware_tool_keyword = /mshta\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
+        $string7_mshta_greyware_tool_keyword = /mshta\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
+        // Description: downloading from tinyurl
+        // Reference: N/A
+        $string8_mshta_greyware_tool_keyword = /mshta\.exe\shttps\:\/\/tinyurl\.com\// nocase ascii wide
+        // Description: Invoking a scriptlet file hosted remotely
+        // Reference: N/A
+        $string9_mshta_greyware_tool_keyword = /mshta\.exe\sjavascript\:a\=\(GetObject\(\"script\:http.{0,1000}\.sct.{0,1000}\)\)\.Exec\(\)\;close\(\)\;/ nocase ascii wide
+        // Description: executing from public folder
+        // Reference: N/A
+        $string10_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\s\"C\:\\Users\\Public\\/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string4_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttp\:\/\// nocase ascii wide
+        $string11_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttp\:\/\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string5_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttps\:\/\// nocase ascii wide
+        $string12_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\shttps\:\/\// nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string6_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
+        $string13_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\sjavascript\:.{0,1000}script\:https\:/ nocase ascii wide
         // Description: mshta abused by attackers
         // Reference: https://lolbas-project.github.io/lolbas/Binaries/Mshta/
-        $string7_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
+        $string14_mshta_greyware_tool_keyword = /mshta\.exe.{0,1000}\svbscript\:Close\(Execute\(.{0,1000}script\:https\:\/\/.{0,1000}\.sct/ nocase ascii wide
 
     condition:
         any of them
@@ -14897,135 +15118,489 @@ rule net_greyware_tool_keyword
         // Description: discover local admins group
         // Reference: N/A
         $string25_net_greyware_tool_keyword = /net\slocalgroup\sadmin/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string26_net_greyware_tool_keyword = /net\sstop\s\"Sophos\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string27_net_greyware_tool_keyword = /net\sstop\s\"SQL\sBackups\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string28_net_greyware_tool_keyword = /net\sstop\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string29_net_greyware_tool_keyword = /net\sstop\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string30_net_greyware_tool_keyword = /net\sstop\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string31_net_greyware_tool_keyword = /net\sstop\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string32_net_greyware_tool_keyword = /net\sstop\s\"Zoolz\s2\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string33_net_greyware_tool_keyword = /net\sstop\sacronisagent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string34_net_greyware_tool_keyword = /net\sstop\sAcronisAgent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string35_net_greyware_tool_keyword = /net\sstop\sacrsch2svc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string36_net_greyware_tool_keyword = /net\sstop\sAcrSch2Svc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string37_net_greyware_tool_keyword = /net\sstop\sagntsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string38_net_greyware_tool_keyword = /net\sstop\sAntivirus/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string39_net_greyware_tool_keyword = /net\sstop\sARSM\s\/y/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string40_net_greyware_tool_keyword = /net\sstop\sarsm/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string41_net_greyware_tool_keyword = /net\sstop\sAVP/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string42_net_greyware_tool_keyword = /net\sstop\sbackp/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string43_net_greyware_tool_keyword = /net\sstop\sbackup/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string44_net_greyware_tool_keyword = /net\sstop\sBackupExec/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string45_net_greyware_tool_keyword = /net\sstop\sBackupExecAgent/ nocase ascii wide
         // Description: Wannacry Ransomware & NOODLERAT behavior
         // Reference: https://www.virustotal.com/gui/file/cde4ca499282045eecd4fc15ac80a232294556a59b3c8c8a7a593e8333cfd3c7/behavior
-        $string26_net_greyware_tool_keyword = /net\sstop\sbadrv/ nocase ascii wide
+        $string46_net_greyware_tool_keyword = /net\sstop\sbadrv/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string47_net_greyware_tool_keyword = /net\sstop\sbedbg\s\/y/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string48_net_greyware_tool_keyword = /net\sstop\scbservi/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string49_net_greyware_tool_keyword = /net\sstop\scbvscserv/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string50_net_greyware_tool_keyword = /net\sstop\sDCAgent/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string51_net_greyware_tool_keyword = /net\sstop\sEhttpSrv/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string52_net_greyware_tool_keyword = /net\sstop\sekrn/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string53_net_greyware_tool_keyword = /net\sstop\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string54_net_greyware_tool_keyword = /net\sstop\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string55_net_greyware_tool_keyword = /net\sstop\sEsgShKernel/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string56_net_greyware_tool_keyword = /net\sstop\sESHASRV/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string57_net_greyware_tool_keyword = /net\sstop\sFA_Scheduler/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string58_net_greyware_tool_keyword = /net\sstop\sIMAP4Svc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string59_net_greyware_tool_keyword = /net\sstop\sKAVFS/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string60_net_greyware_tool_keyword = /net\sstop\sKAVFSGT/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string61_net_greyware_tool_keyword = /net\sstop\skavfsslp/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string62_net_greyware_tool_keyword = /net\sstop\sklnagent/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string63_net_greyware_tool_keyword = /net\sstop\smacmnsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string64_net_greyware_tool_keyword = /net\sstop\smasvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string65_net_greyware_tool_keyword = /net\sstop\sMBAMService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string66_net_greyware_tool_keyword = /net\sstop\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string67_net_greyware_tool_keyword = /net\sstop\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string68_net_greyware_tool_keyword = /net\sstop\sMcAfeeFramework/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string69_net_greyware_tool_keyword = /net\sstop\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string70_net_greyware_tool_keyword = /net\sstop\sMcShield/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string71_net_greyware_tool_keyword = /net\sstop\smfefire/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string72_net_greyware_tool_keyword = /net\sstop\smfemms/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string73_net_greyware_tool_keyword = /net\sstop\smfevtp/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string74_net_greyware_tool_keyword = /net\sstop\smozyprobackup/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string75_net_greyware_tool_keyword = /net\sstop\sMsDtsServer/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string76_net_greyware_tool_keyword = /net\sstop\sMsDtsServer100/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string77_net_greyware_tool_keyword = /net\sstop\sMsDtsServer110/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string78_net_greyware_tool_keyword = /net\sstop\smsftesql\$PROD_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string79_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SQL_2008_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string80_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SYSTEM_BGC_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string81_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPS_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string82_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPSAMA_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string83_net_greyware_tool_keyword = /net\sstop\sMSSQL\$BKUPEXEC_net_greyware_tool_keyword/ nocase ascii wide
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string27_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1_net_greyware_tool_keyword/ nocase ascii wide
+        $string84_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string85_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ECWDB2_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string86_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTICEMGT_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string87_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTTICEBGC_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string88_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROD_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string89_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROFXENGAGEMENT_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string90_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SBSMONITORING_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string91_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SHAREPOINT_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string92_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SOPHOS_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string93_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQL_2008_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string94_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQLEXPRESS_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string95_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SYSTEM_BGC_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string96_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPS_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string97_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPSAMA_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string98_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string99_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string100_net_greyware_tool_keyword = /net\sstop\ssacsvr/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string101_net_greyware_tool_keyword = /net\sstop\sSAVAdminService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string102_net_greyware_tool_keyword = /net\sstop\sSAVService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string103_net_greyware_tool_keyword = /net\sstop\sshadowprotectsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string104_net_greyware_tool_keyword = /net\sstop\sShMonitor/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string105_net_greyware_tool_keyword = /net\sstop\sSmcinst/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string106_net_greyware_tool_keyword = /net\sstop\sSmcService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string107_net_greyware_tool_keyword = /net\sstop\ssms_site_sql_backup/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string108_net_greyware_tool_keyword = /net\sstop\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string109_net_greyware_tool_keyword = /net\sstop\ssophossps/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string110_net_greyware_tool_keyword = /net\sstop\sspxservice/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string111_net_greyware_tool_keyword = /net\sstop\ssqbcoreservice/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string112_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$SOPH_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string113_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string114_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string115_net_greyware_tool_keyword = /net\sstop\sstc_endpt_svc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string116_net_greyware_tool_keyword = /net\sstop\sstop\sSepMasterService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string117_net_greyware_tool_keyword = /net\sstop\ssvcGenericHost/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string118_net_greyware_tool_keyword = /net\sstop\sswi_filter/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string119_net_greyware_tool_keyword = /net\sstop\sswi_service/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string120_net_greyware_tool_keyword = /net\sstop\sswi_update/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string121_net_greyware_tool_keyword = /net\sstop\sswi_update_64/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string122_net_greyware_tool_keyword = /net\sstop\sTmCCSF/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string123_net_greyware_tool_keyword = /net\sstop\stmlisten/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string124_net_greyware_tool_keyword = /net\sstop\sTrueKey/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string125_net_greyware_tool_keyword = /net\sstop\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string126_net_greyware_tool_keyword = /net\sstop\sTrueKeyServiceHel/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string127_net_greyware_tool_keyword = /net\sstop\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string128_net_greyware_tool_keyword = /net\sstop\sVeeamBackupSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string129_net_greyware_tool_keyword = /net\sstop\sVeeamBrokerSvc\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string130_net_greyware_tool_keyword = /net\sstop\sVeeamCatalogSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string131_net_greyware_tool_keyword = /net\sstop\sVeeamCloudSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string132_net_greyware_tool_keyword = /net\sstop\sVeeamDeploymentService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string133_net_greyware_tool_keyword = /net\sstop\sVeeamDeploySvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string134_net_greyware_tool_keyword = /net\sstop\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string135_net_greyware_tool_keyword = /net\sstop\sVeeamEnterpriseManagerSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string136_net_greyware_tool_keyword = /net\sstop\sVeeamHvIntegrationSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string137_net_greyware_tool_keyword = /net\sstop\sVeeamMountSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string138_net_greyware_tool_keyword = /net\sstop\sVeeamNFSSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string139_net_greyware_tool_keyword = /net\sstop\sVeeamRESTSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string140_net_greyware_tool_keyword = /net\sstop\sVeeamTransportSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string141_net_greyware_tool_keyword = /net\sstop\svsnapvss/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string142_net_greyware_tool_keyword = /net\sstop\svssvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string143_net_greyware_tool_keyword = /net\sstop\swbengine/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string144_net_greyware_tool_keyword = /net\sstop\swbengine/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string145_net_greyware_tool_keyword = /net\sstop\sWRSVC/ nocase ascii wide
         // Description: manipulation of an hidden local account with the net command
         // Reference: N/A
-        $string28_net_greyware_tool_keyword = /net\suser\s.{0,1000}\$.{0,1000}\s\// nocase ascii wide
+        $string146_net_greyware_tool_keyword = /net\suser\s.{0,1000}\$.{0,1000}\s\// nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string29_net_greyware_tool_keyword = /net\sview\s\/all\s\/domain/ nocase ascii wide
+        $string147_net_greyware_tool_keyword = /net\sview\s\/all\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string30_net_greyware_tool_keyword = /net\sview\s\/domain/ nocase ascii wide
+        $string148_net_greyware_tool_keyword = /net\sview\s\/domain/ nocase ascii wide
         // Description: adding a user to a privileged group. This action can be used by adversaries to maintain unauthorized access or escalate privileges within the targeted environment.
         // Reference: N/A
-        $string31_net_greyware_tool_keyword = /net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain/ nocase ascii wide
+        $string149_net_greyware_tool_keyword = /net.{0,1000}\sgroup\sAdministrator.{0,1000}\s\/add\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string32_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string150_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string33_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string151_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string34_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string152_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string35_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string153_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string36_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string154_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string37_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string155_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string38_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string156_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string39_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string157_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string40_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string158_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string41_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string159_net_greyware_tool_keyword = /net\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string42_net_greyware_tool_keyword = /net1\s\sgroup\s\"domain\sadmins\"\s\/domain/ nocase ascii wide
+        $string160_net_greyware_tool_keyword = /net1\s\sgroup\s\"domain\sadmins\"\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string43_net_greyware_tool_keyword = /net1\s\sgroup\s\"Domain\sComputers\"\s\/domain/ nocase ascii wide
+        $string161_net_greyware_tool_keyword = /net1\s\sgroup\s\"Domain\sComputers\"\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string44_net_greyware_tool_keyword = /net1\s\sgroup\s\"domain\scomputers\"\s\/domain/ nocase ascii wide
+        $string162_net_greyware_tool_keyword = /net1\s\sgroup\s\"domain\scomputers\"\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string45_net_greyware_tool_keyword = /net1\s\sgroup\s\"enterprise\sadmins\"\s\/domain/ nocase ascii wide
+        $string163_net_greyware_tool_keyword = /net1\s\sgroup\s\"enterprise\sadmins\"\s\/domain/ nocase ascii wide
         // Description: Query users from domain admins in current domain
         // Reference: N/A
-        $string46_net_greyware_tool_keyword = /net1\sgroup\s\"Domain\sAdmins\"\s\/domain/ nocase ascii wide
+        $string164_net_greyware_tool_keyword = /net1\sgroup\s\"Domain\sAdmins\"\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string47_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string165_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string48_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string166_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string49_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string167_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string50_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string168_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string51_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string169_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string52_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string170_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string53_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string171_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string54_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string172_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string55_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string173_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string56_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string174_net_greyware_tool_keyword = /net1\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: showing users in a privileged group. 
         // Reference: N/A
-        $string57_net_greyware_tool_keyword = /net1\slocalgroup\sadmin/ nocase ascii wide
+        $string175_net_greyware_tool_keyword = /net1\slocalgroup\sadmin/ nocase ascii wide
         // Description: Wannacry Ransomware & NOODLERAT behavior
         // Reference: https://www.virustotal.com/gui/file/cde4ca499282045eecd4fc15ac80a232294556a59b3c8c8a7a593e8333cfd3c7/behavior
-        $string58_net_greyware_tool_keyword = /net1\sstop\sbadrv/ nocase ascii wide
+        $string176_net_greyware_tool_keyword = /net1\sstop\sbadrv/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string59_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string177_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Account\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string60_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string178_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Backup\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string61_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
+        $string179_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sComputers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string62_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
+        $string180_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Domain\sControllers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string63_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string181_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Enterprise\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string64_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
+        $string182_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Exchange\sTrusted\sSubsystem.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string65_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
+        $string183_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Microsoft\sExchange\sServers.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string66_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string184_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Print\sOperators.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string67_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
+        $string185_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Schema\sAdmins.{0,1000}\s\/domain/ nocase ascii wide
         // Description: display all domain names on the network
         // Reference: N/A
-        $string68_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
+        $string186_net_greyware_tool_keyword = /net1\.exe.{0,1000}\sgroup\s.{0,1000}Server\sOperators.{0,1000}\s\/domain/ nocase ascii wide
 
     condition:
         any of them
@@ -15155,12 +15730,15 @@ rule netsh_greyware_tool_keyword
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
         $string13_netsh_greyware_tool_keyword = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        // Description: capturing a network trace with netsh
+        // Reference: N/A
+        $string14_netsh_greyware_tool_keyword = /netsh\.exe\strace\sstart\smaxSize\=1\sfileMode\=single\scapture\=yes\straceFile\=.{0,1000}\\TEMP.{0,1000}\.etl/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string14_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string15_netsh_greyware_tool_keyword = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string15_netsh_greyware_tool_keyword = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string16_netsh_greyware_tool_keyword = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
 
     condition:
         any of them
@@ -15207,13 +15785,16 @@ rule netstat_greyware_tool_keyword
     strings:
         // Description: Adversaries may attempt to execute recon commands
         // Reference: N/A
-        $string1_netstat_greyware_tool_keyword = /netstat\s\-ano/ nocase ascii wide
-        // Description: View all active TCP connections and the TCP and UDP ports the host is listening on.
-        // Reference: N/A
-        $string2_netstat_greyware_tool_keyword = /netstat\s\-ant/ nocase ascii wide
+        $string1_netstat_greyware_tool_keyword = /netsat\s\-naop/ nocase ascii wide
         // Description: Adversaries may attempt to execute recon commands
         // Reference: N/A
-        $string3_netstat_greyware_tool_keyword = /NETSTAT\.EXE.{0,1000}\s\-ano/ nocase ascii wide
+        $string2_netstat_greyware_tool_keyword = /netstat\s\-ano/ nocase ascii wide
+        // Description: View all active TCP connections and the TCP and UDP ports the host is listening on.
+        // Reference: N/A
+        $string3_netstat_greyware_tool_keyword = /netstat\s\-ant/ nocase ascii wide
+        // Description: Adversaries may attempt to execute recon commands
+        // Reference: N/A
+        $string4_netstat_greyware_tool_keyword = /NETSTAT\.EXE.{0,1000}\s\-ano/ nocase ascii wide
 
     condition:
         any of them
@@ -16042,6 +16623,65 @@ rule openssh_server_greyware_tool_keyword
         // Description: Install OpenSSH Server service on windows - abused by attacker for persistant control
         // Reference: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell#install-openssh-for-windows
         $string1_openssh_server_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule openssh_portable_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'openssh-portable' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "openssh-portable"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string1_openssh_portable_greyware_tool_keyword = /\\\\pipe\\\\openssh\-ssh\-agent/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string2_openssh_portable_greyware_tool_keyword = /\\OpenSSHTestTasks\\/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string3_openssh_portable_greyware_tool_keyword = /\\pipe\\openssh\-ssh\-agent/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string4_openssh_portable_greyware_tool_keyword = /\\Software\\OpenSSH\\DefaultShell/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string5_openssh_portable_greyware_tool_keyword = /install\-sshd\.ps1/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string6_openssh_portable_greyware_tool_keyword = /net\sstart\sssh\-agent/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string7_openssh_portable_greyware_tool_keyword = /New\-Service\s\-Name\ssshd/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Openssh_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Openssh' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Openssh"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Install OpenSSH Server service on windows - abused by attacker for persistant control
+        // Reference: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell#install-openssh-for-windows
+        $string1_Openssh_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
+        // Description: monitoring openssh usage
+        // Reference: https://github.com/PowerShell/openssh-portable
+        $string2_Openssh_greyware_tool_keyword = /Import\-Module\s.{0,1000}\\OpenSSHUtils/ nocase ascii wide
 
     condition:
         any of them
@@ -17139,189 +17779,564 @@ rule powershell_greyware_tool_keyword
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: obfuscation techniques with powershell
+        // Reference: N/A
+        $string1_powershell_greyware_tool_keyword = /\s\-ep\sBypass\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
+        // Description: obfuscation techniques with powershell
+        // Reference: N/A
+        $string2_powershell_greyware_tool_keyword = /\s\-ep\sUnrestricted\s\-nop\sfunction\s.{0,1000}\[System\.Security\.Cryptography\.Aes\]\:\:Create\(\).{0,1000}\.CreateDecryptor\(\).{0,1000}\.TransformFinalBlock.{0,1000}\[System\.Text\.Encoding\]\:\:Utf8\.GetString/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string1_powershell_greyware_tool_keyword = /\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string3_powershell_greyware_tool_keyword = /\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string2_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
+        $string4_powershell_greyware_tool_keyword = /\[System\.Environment\]\:\:GetEnvironmentVariable\(\'username\'\)/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string3_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
+        $string5_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=\shidden/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string4_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=hidden/ nocase ascii wide
+        $string6_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\+\=hidden/ nocase ascii wide
         // Description: command aiming to hide a file. It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string5_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=\shidden/ nocase ascii wide
+        $string7_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=\shidden/ nocase ascii wide
         // Description: command aiming to hide a file.  It can be performed with  powershell on a WINDOWS machine with command option =hidden
         // Reference: N/A
-        $string6_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=hidden/ nocase ascii wide
+        $string8_powershell_greyware_tool_keyword = /\\powershell\.exe.{0,1000}\s\=hidden/ nocase ascii wide
         // Description: adding a DNS over HTTPS server with powershell
         // Reference: https://learn.microsoft.com/en-us/powershell/module/dnsclient/add-dnsclientdohserveraddress?view=windowsserver2022-ps
-        $string7_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
+        $string9_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
         // Description: add exclusions for defender
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string8_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\s\@\(\$env_powershell_greyware_tool_keyword\:UserProfile\,\s\$env_powershell_greyware_tool_keyword\:ProgramData\)\s\-ExclusionExtension\s\'\.exe\'\s\-Force/ nocase ascii wide
+        $string10_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\s\@\(\$env_powershell_greyware_tool_keyword\:UserProfile\,\s\$env_powershell_greyware_tool_keyword\:ProgramData\)\s\-ExclusionExtension\s\'\.exe\'\s\-Force/ nocase ascii wide
         // Description: Exclude powershell from defender detections
         // Reference: N/A
-        $string9_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
+        $string11_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
         // Description: allows all users to access all computers with a specified configuration
         // Reference: N/A
-        $string10_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
+        $string12_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
+        // Description: install openssh server (critical on DC - must not be installed)
+        // Reference: N/A
+        $string13_powershell_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
         // Description: Deletes contents of recycle bin
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string11_powershell_greyware_tool_keyword = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
+        $string14_powershell_greyware_tool_keyword = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
         // Description: enables WinRM
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string12_powershell_greyware_tool_keyword = /enable\-psremoting\s\-force/ nocase ascii wide
+        $string15_powershell_greyware_tool_keyword = /enable\-psremoting\s\-force/ nocase ascii wide
         // Description: Find machine where the user has admin privs
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string13_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
+        $string16_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string14_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
+        $string17_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string15_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
+        $string18_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string16_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string19_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string17_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string20_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string18_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string21_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string19_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string22_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string20_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string23_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string21_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string24_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string22_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
+        $string25_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
         // Description: set the DNS server configuration
         // Reference: N/A
-        $string23_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
+        $string26_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string24_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string27_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
         // Description: Powerview Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string25_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
+        $string28_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string26_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
+        $string29_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
         // Description: PowerView get Locally logged users on a machine
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string27_powershell_greyware_tool_keyword = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
+        $string30_powershell_greyware_tool_keyword = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
         // Description: Gets the status of antimalware software on the computer.
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string28_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
+        $string31_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
         // Description: get defender AV exclusions
         // Reference: N/A
-        $string29_powershell_greyware_tool_keyword = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
+        $string32_powershell_greyware_tool_keyword = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string30_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string33_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
         // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
         // Reference: N/A
-        $string31_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
+        $string34_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
         // Description: PowerView Find users with SPN
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string32_powershell_greyware_tool_keyword = /Get\-NetUser\s\-SPN/ nocase ascii wide
+        $string35_powershell_greyware_tool_keyword = /Get\-NetUser\s\-SPN/ nocase ascii wide
         // Description: delete shadow copies
         // Reference: https://rexorvc0.com/2024/06/19/Akira-The-Old-New-Style-Crime/
-        $string33_powershell_greyware_tool_keyword = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
+        $string36_powershell_greyware_tool_keyword = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
         // Description: Find local admins on the domain machines
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string34_powershell_greyware_tool_keyword = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
         // Description: Check local admin access for the current user where the targets are found
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string35_powershell_greyware_tool_keyword = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
+        $string38_powershell_greyware_tool_keyword = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string36_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
+        $string39_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string37_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
+        $string40_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
         // Description: hiding a user from the login screen by modifying a specific registry key
         // Reference: N/A
-        $string38_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        // Description: allowing SSH incoming connections (critical on DC)
+        // Reference: N/A
+        $string42_powershell_greyware_tool_keyword = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string39_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string40_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string41_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string42_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
+        $string46_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string43_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string47_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string44_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string48_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string45_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
+        $string49_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string46_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string47_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string51_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string48_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string52_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string49_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
+        $string53_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string50_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
+        $string54_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string51_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string55_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string52_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string56_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: list AV products with powershell
         // Reference: N/A
-        $string53_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        $string57_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string54_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
+        $string58_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string55_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
+        $string59_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
+        // Description: Disable IPS
+        // Reference: N/A
+        $string60_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string56_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string61_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string57_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string62_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string58_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        $string63_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string59_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        $string64_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        // Description: openssh server is used (critical on DC - must not be installed)
+        // Reference: N/A
+        $string65_powershell_greyware_tool_keyword = /Set\-Service\s\-Name\ssshd\s\-StartupType\s\'Automatic\'/ nocase ascii wide
+        // Description: openssh server is used (critical on DC - must not be installed)
+        // Reference: N/A
+        $string66_powershell_greyware_tool_keyword = /Start\-Service\ssshd/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string67_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Sophos\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string68_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"SQL\sBackups\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string69_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string70_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string71_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string72_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string73_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Zoolz\s2\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string74_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sacronisagent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string75_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAcronisAgent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string76_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sacrsch2svc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string77_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAcrSch2Svc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string78_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sagntsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string79_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAntivirus/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string80_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sARSM\s\/y/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string81_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sarsm/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string82_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAVP/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string83_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbackp/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string84_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbackup/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string85_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sBackupExec/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string86_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sBackupExecAgent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string87_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbedbg\s\/y/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string88_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\scbservi/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string89_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\scbvscserv/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string90_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sDCAgent/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string91_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEhttpSrv/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string92_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sekrn/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string93_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string94_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string95_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEsgShKernel/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string96_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sESHASRV/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string97_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sFA_Scheduler/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string98_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sIMAP4Svc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string99_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sKAVFS/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string100_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sKAVFSGT/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string101_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\skavfsslp/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string102_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sklnagent/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string103_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smacmnsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string104_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smasvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string105_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBAMService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string106_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string107_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string108_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeFramework/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string109_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string110_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcShield/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string111_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfefire/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string112_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfemms/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string113_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfevtp/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string114_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smozyprobackup/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string115_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string116_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer100/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string117_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string118_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string119_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string120_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string121_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string122_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string123_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string124_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string125_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string126_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string127_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string128_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string129_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string130_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string131_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string132_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string133_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string134_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string135_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string136_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string137_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string138_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string139_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string140_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSAVAdminService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string141_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSAVService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string142_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sshadowprotectsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string143_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sShMonitor/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string144_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSmcinst/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string145_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSmcService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string146_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssms_site_sql_backup/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string147_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string148_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssophossps/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string149_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sspxservice/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string150_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string151_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string152_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string153_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string154_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string155_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstop\sSepMasterService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string156_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssvcGenericHost/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string157_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_filter/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string158_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_service/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string159_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_update/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string160_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_update_64/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string161_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTmCCSF/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string162_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\stmlisten/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string163_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKey/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string164_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string165_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyServiceHel/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string166_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string167_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamBackupSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string168_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamBrokerSvc\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string169_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamCatalogSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string170_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamCloudSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string171_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploymentService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string172_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string173_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string174_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamEnterpriseManagerSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string175_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamHvIntegrationSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string176_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamMountSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string177_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamNFSSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string178_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamRESTSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string179_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamTransportSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string180_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svsnapvss/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string181_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svssvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string182_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string183_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string184_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sWRSVC/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string60_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string185_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string61_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string186_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -26402,6 +27417,163 @@ rule takeown_greyware_tool_keyword
 }
 
 
+rule taskkill_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'taskkill' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "taskkill"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: killing lsass process
+        // Reference: https://x.com/malmoeb/status/1741114854037987437
+        $string1_taskkill_greyware_tool_keyword = /taskkill\s\/F\s\/IM\slsass\.exe/ nocase ascii wide
+        // Description: evade EDR/AV by repairing with msiexec and killing the process
+        // Reference: https://badoption.eu/blog/2024/03/23/cortex.html
+        $string2_taskkill_greyware_tool_keyword = /taskkill\s\/F\s\/IM\smsiexec\.exe/ nocase ascii wide
+        // Description: stopping Backup Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string3_taskkill_greyware_tool_keyword = /taskkill\s\/im\sagntsvc\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Network Management
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string4_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sCNTAoSMgr\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string5_taskkill_greyware_tool_keyword = /taskkill\s\/im\sdbeng50\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string6_taskkill_greyware_tool_keyword = /taskkill\s\/im\sdbsnmp\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Encryption Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string7_taskkill_greyware_tool_keyword = /taskkill\s\/im\sencsvc\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string8_taskkill_greyware_tool_keyword = /taskkill\s\/im\sexcel\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Browser Configuration
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string9_taskkill_greyware_tool_keyword = /taskkill\s\/im\sfirefoxconfig\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string10_taskkill_greyware_tool_keyword = /taskkill\s\/im\sinfopath\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string11_taskkill_greyware_tool_keyword = /taskkill\s\/im\sisqlplussvc\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Antivirus
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string12_taskkill_greyware_tool_keyword = /taskkill\s\/IM\smbamtray\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string13_taskkill_greyware_tool_keyword = /taskkill\s\/im\smsaccess\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string14_taskkill_greyware_tool_keyword = /taskkill\s\/im\smsftesql\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string15_taskkill_greyware_tool_keyword = /taskkill\s\/im\smspub\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Remote Desktop Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string16_taskkill_greyware_tool_keyword = /taskkill\s\/im\smydesktopqos\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Remote Desktop Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string17_taskkill_greyware_tool_keyword = /taskkill\s\/im\smydesktopservice\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string18_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string19_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\-nt\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string20_taskkill_greyware_tool_keyword = /taskkill\s\/im\smysqld\-opt\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Antivirus
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string21_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sNtrtsc/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string22_taskkill_greyware_tool_keyword = /taskkill\s\/im\socautoupds\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string23_taskkill_greyware_tool_keyword = /taskkill\s\/im\socomm\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string24_taskkill_greyware_tool_keyword = /taskkill\s\/im\socssd\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string25_taskkill_greyware_tool_keyword = /taskkill\s\/im\sonenote\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string26_taskkill_greyware_tool_keyword = /taskkill\s\/im\soracle\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Email Client
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string27_taskkill_greyware_tool_keyword = /taskkill\s\/im\soutlook\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Antivirus
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string28_taskkill_greyware_tool_keyword = /taskkill\s\/IM\sPccNTMon\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string29_taskkill_greyware_tool_keyword = /taskkill\s\/im\spowerpnt\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Antivirus
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string30_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssavfmsesp\.exe\s\/f/ nocase ascii wide
+        // Description: stopping Database Backup
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string31_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqbcoreservice\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string32_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlagent\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string33_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlbrowser\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Database Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string34_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssqlservr\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Synchronization Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string35_taskkill_greyware_tool_keyword = /taskkill\s\/im\ssynctime\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Email Client Configuration
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string36_taskkill_greyware_tool_keyword = /taskkill\s\/im\stbirdconfig\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Email Client
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string37_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthebat\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Email Client
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string38_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthebat64\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Email Client
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string39_taskkill_greyware_tool_keyword = /taskkill\s\/im\sthunderbird\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Antivirus
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string40_taskkill_greyware_tool_keyword = /taskkill\s\/IM\stmlisten\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string41_taskkill_greyware_tool_keyword = /taskkill\s\/im\svisio\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Office Application
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string42_taskkill_greyware_tool_keyword = /taskkill\s\/im\swinword\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Text Editor
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string43_taskkill_greyware_tool_keyword = /taskkill\s\/im\swordpad\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Financial Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string44_taskkill_greyware_tool_keyword = /taskkill\s\/im\sxfssvccon\.exe\s\/F/ nocase ascii wide
+        // Description: stopping Backup Service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string45_taskkill_greyware_tool_keyword = /taskkill\s\/im\szoolz\.exe\s\/F/ nocase ascii wide
+        // Description: killing lsass process
+        // Reference: https://x.com/malmoeb/status/1741114854037987437
+        $string46_taskkill_greyware_tool_keyword = /taskkill\.exe\s\/F\s\/IM\slsass\.exe/ nocase ascii wide
+        // Description: evade EDR/AV by repairing with msiexec and killing the process
+        // Reference: https://badoption.eu/blog/2024/03/23/cortex.html
+        $string47_taskkill_greyware_tool_keyword = /taskkill\.exe\s\/F\s\/IM\smsiexec\.exe/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule tasklist_greyware_tool_keyword
 {
     meta:
@@ -26596,13 +27768,16 @@ rule teamviewer_greyware_tool_keyword
         $string48_teamviewer_greyware_tool_keyword = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string49_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
+        $string49_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string50_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        $string50_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string51_teamviewer_greyware_tool_keyword = /teamviewervpn\.sys/ nocase ascii wide
+        $string51_teamviewer_greyware_tool_keyword = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
+        // Reference: https://www.teamviewer.com/
+        $string52_teamviewer_greyware_tool_keyword = /teamviewervpn\.sys/ nocase ascii wide
 
     condition:
         any of them
@@ -29416,76 +30591,79 @@ rule wireshark_greyware_tool_keyword
     strings:
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string1_wireshark_greyware_tool_keyword = /dl\.wireshark\.org/ nocase ascii wide
+        $string1_wireshark_greyware_tool_keyword = /bin\/wireshark/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string2_wireshark_greyware_tool_keyword = /dumpcap\s\-/ nocase ascii wide
+        $string2_wireshark_greyware_tool_keyword = /dl\.wireshark\.org/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string3_wireshark_greyware_tool_keyword = /install\stshark/ nocase ascii wide
+        $string3_wireshark_greyware_tool_keyword = /dumpcap\s\-/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string4_wireshark_greyware_tool_keyword = /libwireshark16/ nocase ascii wide
+        $string4_wireshark_greyware_tool_keyword = /install\stshark/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string5_wireshark_greyware_tool_keyword = /libwireshark\-data/ nocase ascii wide
+        $string5_wireshark_greyware_tool_keyword = /libwireshark16/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string6_wireshark_greyware_tool_keyword = /libwireshark\-dev/ nocase ascii wide
+        $string6_wireshark_greyware_tool_keyword = /libwireshark\-data/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string7_wireshark_greyware_tool_keyword = /libwiretap13/ nocase ascii wide
+        $string7_wireshark_greyware_tool_keyword = /libwireshark\-dev/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string8_wireshark_greyware_tool_keyword = /\-\-no\-promiscuous\-mode/ nocase ascii wide
+        $string8_wireshark_greyware_tool_keyword = /libwiretap13/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string9_wireshark_greyware_tool_keyword = /sharkd\s\-a\stcp\:/ nocase ascii wide
+        $string9_wireshark_greyware_tool_keyword = /\-\-no\-promiscuous\-mode/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string10_wireshark_greyware_tool_keyword = /tshark\s.{0,1000}\-i\s/ nocase ascii wide
+        $string10_wireshark_greyware_tool_keyword = /sharkd\s\-a\stcp\:/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string11_wireshark_greyware_tool_keyword = /tshark\s\-f\s/ nocase ascii wide
+        $string11_wireshark_greyware_tool_keyword = /tshark\s.{0,1000}\-i\s/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string12_wireshark_greyware_tool_keyword = /tshark\s\-Q/ nocase ascii wide
+        $string12_wireshark_greyware_tool_keyword = /tshark\s\-f\s/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string13_wireshark_greyware_tool_keyword = /tshark\s\-r\s/ nocase ascii wide
+        $string13_wireshark_greyware_tool_keyword = /tshark\s\-Q/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string14_wireshark_greyware_tool_keyword = /tshark.{0,1000}\.deb/ nocase ascii wide
+        $string14_wireshark_greyware_tool_keyword = /tshark\s\-r\s/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string15_wireshark_greyware_tool_keyword = /Wireshark/ nocase ascii wide
+        $string15_wireshark_greyware_tool_keyword = /tshark.{0,1000}\.deb/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string16_wireshark_greyware_tool_keyword = /wireshark.{0,1000}\.deb/ nocase ascii wide
+        $string16_wireshark_greyware_tool_keyword = /Wireshark/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string17_wireshark_greyware_tool_keyword = /Wireshark.{0,1000}\.dmg/ nocase ascii wide
+        $string17_wireshark_greyware_tool_keyword = /wireshark.{0,1000}\.deb/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string18_wireshark_greyware_tool_keyword = /wireshark\-.{0,1000}\.tar\.xz/ nocase ascii wide
+        $string18_wireshark_greyware_tool_keyword = /Wireshark.{0,1000}\.dmg/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string19_wireshark_greyware_tool_keyword = /wireshark\-common/ nocase ascii wide
+        $string19_wireshark_greyware_tool_keyword = /wireshark\-.{0,1000}\.tar\.xz/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string20_wireshark_greyware_tool_keyword = /wireshark\-dev/ nocase ascii wide
+        $string20_wireshark_greyware_tool_keyword = /wireshark\-common/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string21_wireshark_greyware_tool_keyword = /wireshark\-gtk/ nocase ascii wide
+        $string21_wireshark_greyware_tool_keyword = /wireshark\-dev/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string22_wireshark_greyware_tool_keyword = /WiresharkPortable64/ nocase ascii wide
+        $string22_wireshark_greyware_tool_keyword = /wireshark\-gtk/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string23_wireshark_greyware_tool_keyword = /wireshark\-qt/ nocase ascii wide
+        $string23_wireshark_greyware_tool_keyword = /WiresharkPortable64/ nocase ascii wide
         // Description: Wireshark is a network protocol analyzer.
         // Reference: https://www.wireshark.org/
-        $string24_wireshark_greyware_tool_keyword = /Wireshark\-win.{0,1000}\.exe/ nocase ascii wide
+        $string24_wireshark_greyware_tool_keyword = /wireshark\-qt/ nocase ascii wide
+        // Description: Wireshark is a network protocol analyzer.
+        // Reference: https://www.wireshark.org/
+        $string25_wireshark_greyware_tool_keyword = /Wireshark\-win.{0,1000}\.exe/ nocase ascii wide
 
     condition:
         any of them
@@ -29884,33 +31062,87 @@ rule wmic_greyware_tool_keyword
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
         $string25_wmic_greyware_tool_keyword = /wmic\sservice\sbrief/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string26_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'\%veeam\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string27_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'acronisagent\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string28_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'acrsch2svc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string29_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'agntsvc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string30_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'arsm\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string31_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'backp\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string32_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'backup\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string33_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'cbservi\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string34_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'cbvscserv\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string35_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'shadowprotectsvc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string36_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'spxservice\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string37_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'sqbcoreservice\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string38_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'stc_endpt_svc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string39_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'storagecraft\simagemanager\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string40_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'veeam\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string41_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'vsnapvss\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string42_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'vssvc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string43_wmic_greyware_tool_keyword = /wmic\sservice\swhere\s\"name\slike\s\'wbengine\%\'\"\scall\sstopservice/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string26_wmic_greyware_tool_keyword = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string44_wmic_greyware_tool_keyword = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string27_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
+        $string45_wmic_greyware_tool_keyword = /wmic\sshadowcopy\sdelete/ nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string28_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
+        $string46_wmic_greyware_tool_keyword = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string29_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        $string47_wmic_greyware_tool_keyword = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string30_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string48_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string31_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
+        $string49_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
         // Description: call cmd.exe with wmic
         // Reference: N/A
-        $string32_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
+        $string50_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string33_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string51_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string34_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+        $string52_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
 
     condition:
         any of them

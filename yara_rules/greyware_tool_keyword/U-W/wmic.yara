@@ -83,33 +83,87 @@ rule wmic
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
         $string25 = /wmic\sservice\sbrief/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string26 = /wmic\sservice\swhere\s\"name\slike\s\'\%veeam\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string27 = /wmic\sservice\swhere\s\"name\slike\s\'acronisagent\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string28 = /wmic\sservice\swhere\s\"name\slike\s\'acrsch2svc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string29 = /wmic\sservice\swhere\s\"name\slike\s\'agntsvc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string30 = /wmic\sservice\swhere\s\"name\slike\s\'arsm\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string31 = /wmic\sservice\swhere\s\"name\slike\s\'backp\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string32 = /wmic\sservice\swhere\s\"name\slike\s\'backup\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string33 = /wmic\sservice\swhere\s\"name\slike\s\'cbservi\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string34 = /wmic\sservice\swhere\s\"name\slike\s\'cbvscserv\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string35 = /wmic\sservice\swhere\s\"name\slike\s\'shadowprotectsvc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string36 = /wmic\sservice\swhere\s\"name\slike\s\'spxservice\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string37 = /wmic\sservice\swhere\s\"name\slike\s\'sqbcoreservice\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string38 = /wmic\sservice\swhere\s\"name\slike\s\'stc_endpt_svc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string39 = /wmic\sservice\swhere\s\"name\slike\s\'storagecraft\simagemanager\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string40 = /wmic\sservice\swhere\s\"name\slike\s\'veeam\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string41 = /wmic\sservice\swhere\s\"name\slike\s\'vsnapvss\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string42 = /wmic\sservice\swhere\s\"name\slike\s\'vssvc\%\'\"\scall\sstopservice/ nocase ascii wide
+        // Description: stopping backup service
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string43 = /wmic\sservice\swhere\s\"name\slike\s\'wbengine\%\'\"\scall\sstopservice/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string26 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string44 = /wmic\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string27 = /wmic\sshadowcopy\sdelete/ nocase ascii wide
+        $string45 = /wmic\sshadowcopy\sdelete/ nocase ascii wide
         // Description: User Enumeration
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string28 = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
+        $string46 = /wmic\suseraccount\sget\s\/ALL\s\/format\:csv/ nocase ascii wide
         // Description: wmic discovery commands abused by attackers
         // Reference: N/A
-        $string29 = /wmic\svolume\slist\sbrief/ nocase ascii wide
+        $string47 = /wmic\svolume\slist\sbrief/ nocase ascii wide
         // Description: list AV products with wmic
         // Reference: N/A
-        $string30 = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+        $string48 = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
         // Description: Execute a .EXE file stored as an Alternate Data Stream (ADS)
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string31 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
+        $string49 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
         // Description: call cmd.exe with wmic
         // Reference: N/A
-        $string32 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
+        $string50 = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string33 = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+        $string51 = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string34 = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+        $string52 = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
 
     condition:
         any of them

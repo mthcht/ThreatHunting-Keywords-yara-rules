@@ -94,10 +94,13 @@ rule Powerpick
         $string28 = /Invoke\-PSInject/ nocase ascii wide
         // Description: allowing the execution of Powershell functionality without the use of Powershell.exe
         // Reference: https://github.com/PowerShellEmpire/PowerTools
-        $string29 = /PowerShellRunner_dll_len/ nocase ascii wide
+        $string29 = /powerpick\sGet\-/ nocase ascii wide
         // Description: allowing the execution of Powershell functionality without the use of Powershell.exe
         // Reference: https://github.com/PowerShellEmpire/PowerTools
-        $string30 = /sharppick\.exe\s/ nocase ascii wide
+        $string30 = /PowerShellRunner_dll_len/ nocase ascii wide
+        // Description: allowing the execution of Powershell functionality without the use of Powershell.exe
+        // Reference: https://github.com/PowerShellEmpire/PowerTools
+        $string31 = /sharppick\.exe\s/ nocase ascii wide
 
     condition:
         any of them

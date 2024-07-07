@@ -154,13 +154,16 @@ rule teamviewer
         $string48 = /TeamViewer15_Logfile\.log/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string49 = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
+        $string49 = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string50 = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        $string50 = /TeamViewerMeetingAddinShim\.dll/ nocase ascii wide
         // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
         // Reference: https://www.teamviewer.com/
-        $string51 = /teamviewervpn\.sys/ nocase ascii wide
+        $string51 = /TeamViewerMeetingAddinShim64\.dll/ nocase ascii wide
+        // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
+        // Reference: https://www.teamviewer.com/
+        $string52 = /teamviewervpn\.sys/ nocase ascii wide
 
     condition:
         any of them

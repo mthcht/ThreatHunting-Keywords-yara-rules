@@ -58,118 +58,121 @@ rule SharpUp
         $string16 = /\.exe\sAlwaysInstallElevated/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string17 = /\.exe\sCachedGPPPassword/ nocase ascii wide
+        $string17 = /\.exe\saudit\sModifiableServices/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string18 = /\.exe\sDomainGPPPassword/ nocase ascii wide
+        $string18 = /\.exe\sCachedGPPPassword/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string19 = /\.exe\sHijackablePaths/ nocase ascii wide
+        $string19 = /\.exe\sDomainGPPPassword/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string20 = /\.exe\sMcAfeeSitelistFiles/ nocase ascii wide
+        $string20 = /\.exe\sHijackablePaths/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string21 = /\.exe\sModifiableScheduledTask/ nocase ascii wide
+        $string21 = /\.exe\sMcAfeeSitelistFiles/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string22 = /\.exe\sModifiableServiceBinaries/ nocase ascii wide
+        $string22 = /\.exe\sModifiableScheduledTask/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string23 = /\.exe\sModifiableServiceRegistryKeys/ nocase ascii wide
+        $string23 = /\.exe\sModifiableServiceBinaries/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string24 = /\.exe\sModifiableServices/ nocase ascii wide
+        $string24 = /\.exe\sModifiableServiceRegistryKeys/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string25 = /\.exe\sProcessDLLHijack/ nocase ascii wide
+        $string25 = /\.exe\sModifiableServices/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string26 = /\.exe\sRegistryAutoLogons/ nocase ascii wide
+        $string26 = /\.exe\sProcessDLLHijack/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string27 = /\.exe\sRegistryAutoruns/ nocase ascii wide
+        $string27 = /\.exe\sRegistryAutoLogons/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string28 = /\.exe\sTokenPrivileges/ nocase ascii wide
+        $string28 = /\.exe\sRegistryAutoruns/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string29 = /\.exe\sUnattendedInstallFiles/ nocase ascii wide
+        $string29 = /\.exe\sTokenPrivileges/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string30 = /\.exe\sUnquotedServicePath/ nocase ascii wide
+        $string30 = /\.exe\sUnattendedInstallFiles/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string31 = /\/SharpUp\.git/ nocase ascii wide
+        $string31 = /\.exe\sUnquotedServicePath/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string32 = /\[\!\]\sModifialbe\sscheduled\stasks\swere\snot\sevaluated\sdue\sto\spermissions/ nocase ascii wide
+        $string32 = /\/SharpUp\.git/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string33 = /\[\+\]\sHijackable\sDLL\:\s/ nocase ascii wide
+        $string33 = /\[\!\]\sModifialbe\sscheduled\stasks\swere\snot\sevaluated\sdue\sto\spermissions/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string34 = /\[\+\]\sPotenatially\sHijackable\sDLL\:\s/ nocase ascii wide
+        $string34 = /\[\+\]\sHijackable\sDLL\:\s/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string35 = /\\AlwaysInstallElevated\.cs/ nocase ascii wide
+        $string35 = /\[\+\]\sPotenatially\sHijackable\sDLL\:\s/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string36 = /\\CachedGPPPassword\.cs/ nocase ascii wide
+        $string36 = /\\AlwaysInstallElevated\.cs/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string37 = /\\DomainGPPPassword\.cs/ nocase ascii wide
+        $string37 = /\\CachedGPPPassword\.cs/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string38 = /\\HijackablePaths\.cs/ nocase ascii wide
+        $string38 = /\\DomainGPPPassword\.cs/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string39 = /\\ProcessDLLHijack\.cs/ nocase ascii wide
+        $string39 = /\\HijackablePaths\.cs/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string40 = /\\SharpUp\.csproj/ nocase ascii wide
+        $string40 = /\\ProcessDLLHijack\.cs/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string41 = /\\SharpUp\.sln/ nocase ascii wide
+        $string41 = /\\SharpUp\.csproj/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string42 = /\\SharpUp\\/ nocase ascii wide
+        $string42 = /\\SharpUp\.sln/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string43 = /\\SharpUp\-master/ nocase ascii wide
+        $string43 = /\\SharpUp\\/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string44 = /\\UnquotedServicePath\.cs/ nocase ascii wide
+        $string44 = /\\SharpUp\-master/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string45 = /\]\sCompleted\sPrivesc\sChecks\sin\s/ nocase ascii wide
+        $string45 = /\\UnquotedServicePath\.cs/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string46 = /\=\=\=\sSharpUp\:\sRunning\sPrivilege\sEscalation\sChecks\s\=\=\=/ nocase ascii wide
+        $string46 = /\]\sCompleted\sPrivesc\sChecks\sin\s/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string47 = /Already\sin\shigh\sintegrity\,\sno\sneed\sto\sprivesc\!/ nocase ascii wide
+        $string47 = /\=\=\=\sSharpUp\:\sRunning\sPrivilege\sEscalation\sChecks\s\=\=\=/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string48 = /FDD654F5\-5C54\-4D93\-BF8E\-FAF11B00E3E9/ nocase ascii wide
+        $string48 = /Already\sin\shigh\sintegrity\,\sno\sneed\sto\sprivesc\!/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string49 = /GhostPack\/SharpUp/ nocase ascii wide
+        $string49 = /FDD654F5\-5C54\-4D93\-BF8E\-FAF11B00E3E9/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string50 = /In\smedium\sintegrity\sbut\suser\sis\sa\slocal\sadministrator\-\sUAC\scan\sbe\sbypassed/ nocase ascii wide
+        $string50 = /GhostPack\/SharpUp/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string51 = /ParseGPPPasswordFromXml/ nocase ascii wide
+        $string51 = /In\smedium\sintegrity\sbut\suser\sis\sa\slocal\sadministrator\-\sUAC\scan\sbe\sbypassed/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string52 = /SharpUp\.exe/ nocase ascii wide
+        $string52 = /ParseGPPPasswordFromXml/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string53 = /using\sSharpUp\.Classes/ nocase ascii wide
+        $string53 = /SharpUp\.exe/ nocase ascii wide
         // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
         // Reference: https://github.com/GhostPack/SharpUp
-        $string54 = /using\sstatic\sSharpUp\.Utilities/ nocase ascii wide
+        $string54 = /using\sSharpUp\.Classes/ nocase ascii wide
+        // Description: SharpUp is a C# port of various PowerUp functionality. Currently. only the most common checks have been ported. no weaponization functions have yet been implemented.
+        // Reference: https://github.com/GhostPack/SharpUp
+        $string55 = /using\sstatic\sSharpUp\.Utilities/ nocase ascii wide
 
     condition:
         any of them

@@ -28,31 +28,37 @@ rule ThreatCheck
         $string6 = /\\NimBlackout/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string7 = /C\:\\Temp\\file\.exe/ nocase ascii wide
+        $string7 = /3EC9B9A8\-0AFE\-44A7\-8B95\-7F60E750F042/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string8 = /NimBlackout.{0,1000}\.exe/ nocase ascii wide
+        $string8 = /76f677acfe19ca1e1e39c391e4923dc38e1e3f752097c5808c171c1d5228194e/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string9 = /NimBlackout\./ nocase ascii wide
+        $string9 = /C\:\\Temp\\file\.exe/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string10 = /NimBlackout\-main/ nocase ascii wide
+        $string10 = /NimBlackout.{0,1000}\.exe/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string11 = /rasta\-mouse\/ThreatCheck/ nocase ascii wide
+        $string11 = /NimBlackout\./ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string12 = /ThreatCheck\.csproj/ nocase ascii wide
+        $string12 = /NimBlackout\-main/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string13 = /ThreatCheck\.csproj/ nocase ascii wide
+        $string13 = /rasta\-mouse\/ThreatCheck/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string14 = /ThreatCheck\.exe/ nocase ascii wide
+        $string14 = /ThreatCheck\.csproj/ nocase ascii wide
         // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
         // Reference: https://github.com/rasta-mouse/ThreatCheck
-        $string15 = /ThreatCheck\-master/ nocase ascii wide
+        $string15 = /ThreatCheck\.csproj/ nocase ascii wide
+        // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
+        // Reference: https://github.com/rasta-mouse/ThreatCheck
+        $string16 = /ThreatCheck\.exe/ nocase ascii wide
+        // Description: Identifies the bytes that Microsoft Defender / AMSI Consumer flags on
+        // Reference: https://github.com/rasta-mouse/ThreatCheck
+        $string17 = /ThreatCheck\-master/ nocase ascii wide
 
     condition:
         any of them

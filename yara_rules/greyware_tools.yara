@@ -32312,21 +32312,36 @@ rule __greyware_tool_keyword
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
         $string30___greyware_tool_keyword = /\\9\.exe/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string31___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.bat/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string32___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.cmd/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string33___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.hta/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string34___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.ps1/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string35___greyware_tool_keyword = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
-        $string31___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
+        $string36___greyware_tool_keyword = /\\keygen\.exe/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string32___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
+        $string37___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string33___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
+        $string38___greyware_tool_keyword = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string34___greyware_tool_keyword = /\\PAYMENTS\.exe/ nocase ascii wide
+        $string39___greyware_tool_keyword = /\\PAYMENTS\.exe/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string35___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string40___greyware_tool_keyword = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

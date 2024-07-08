@@ -98,21 +98,36 @@ rule _
         // Description: Suspicious file names - One caracter executables often used by threat actors (warning false positives)
         // Reference: N/A
         $string30 = /\\9\.exe/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string31 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.bat/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string32 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.cmd/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string33 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.hta/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string34 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.ps1/ nocase ascii wide
+        // Description: script in startup location
+        // Reference: N/A
+        $string35 = /\\AppData\\Roaming\\Microsoft\\Windows\\Start\sMenu\\Programs\\Startup\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: generic suspicious keyword keygen.exe observed in multiple cracked software often packed with malwares
         // Reference: N/A
-        $string31 = /\\keygen\.exe/ nocase ascii wide
+        $string36 = /\\keygen\.exe/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string32 = /\\PAYMENT\.hta/ nocase ascii wide
+        $string37 = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string33 = /\\PAYMENT\.hta/ nocase ascii wide
+        $string38 = /\\PAYMENT\.hta/ nocase ascii wide
         // Description: suspicious file name - has been used by threat actors
         // Reference: N/A
-        $string34 = /\\PAYMENTS\.exe/ nocase ascii wide
+        $string39 = /\\PAYMENTS\.exe/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string35 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string40 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

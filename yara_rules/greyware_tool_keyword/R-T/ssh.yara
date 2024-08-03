@@ -29,9 +29,12 @@ rule ssh
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
         $string7 = /Local\:\scrc32\scompensation\sattack/ nocase ascii wide
+        // Description: Binding to port 445 on Windows with ssh - useful for NTLM relaying
+        // Reference: https://x.com/0x64616e/status/1817149974724956286
+        $string8 = /ssh\.exe\s\-L\s0\.0\.0\.0\:445\:127\.0\.0\.1\:445\s/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string8 = /unexpected\sbytes\sremain\safter\sdecoding/ nocase ascii wide
+        $string9 = /unexpected\sbytes\sremain\safter\sdecoding/ nocase ascii wide
 
     condition:
         any of them

@@ -13,49 +13,82 @@ rule chaos
         $string1 = /\schaos\.exe\s/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string2 = /\sSQLITE_DATABASE\=chaos/ nocase ascii wide
+        $string2 = /\sSQLITE_DATABASE\=chaos\s/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string3 = /\/CHAOS\.git/ nocase ascii wide
+        $string3 = /\sSQLITE_DATABASE\=chaos/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string4 = /\/CHAOS\-5\.0\.1\.zip/ nocase ascii wide
+        $string4 = /\/CHAOS\.git/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string5 = /\/chaos\-container\:\/database\// nocase ascii wide
+        $string5 = /\/CHAOS\-5\.0\.1\.zip/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string6 = /\\chaos\.exe/ nocase ascii wide
+        $string6 = /\/chaos\-container\:\/database\// nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string7 = /\\CHAOS\-5\.0\.1\.zip/ nocase ascii wide
+        $string7 = /\\chaos\.exe/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string8 = /\\CHAOS\-master\.zip/ nocase ascii wide
+        $string8 = /\\CHAOS\-5\.0\.1\.zip/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string9 = /c\:\/chaos\-container\:\/database\// nocase ascii wide
+        $string9 = /\\CHAOS\-master\.zip/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string10 = /3ec15909c169e37f1173d567cb4729f592002826ac0a0f5bf5e820af47195e78/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string11 = /401ab31450e32d265a189983c56a0f7f947b15fe3559c08773275f6c1e6625ce/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string12 = /48a61f194676d3b3f1aef3410eabda1ab57448f1966a91a2d1be5af02a2c77c8/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string13 = /630cf7ac06f7286e926cfaf1b2ca5105a7caaee6627837da5f71d5b44302f992/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string14 = /7c4650646cf661efd5ad7dc45f6237f6aa0cc28e81163ce1e3a7b86841cbd5f8/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string15 = /7f994093b3133e5450cd89d4a9cc39cceca8bbcce8845665f86b4d7eb9998d61/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string16 = /bfca678c800832025fe5e7c59bdf9bc3a2a62c77e7b689b943fee2821c2fec19/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string17 = /c\:\/chaos\-container\:\/database\// nocase ascii wide
         // Description: Chaos ransomware behavior
         // Reference: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/17/the-chaos-ransomware-can-be-ravaging
-        $string10 = /C\:\\Users\\.{0,1000}\\AppData\\Roaming\\svchost\.exe/ nocase ascii wide
+        $string18 = /C\:\\Users\\.{0,1000}\\AppData\\Roaming\\svchost\.exe/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string11 = /chaos.{0,1000}persistence_enable/ nocase ascii wide
+        $string19 = /CHAOS\s\(Remote\sAdministration\sTool\)/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string12 = /go\srun\scmd\/chaos\/main\.go/ nocase ascii wide
+        $string20 = /chaos.{0,1000}persistence_enable/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string13 = /md\sc\:\\chaos\-container/ nocase ascii wide
+        $string21 = /docker.{0,1000}\/chaos\-container\:\/temp\// nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string14 = /tiagorlampert\/CHAOS/ nocase ascii wide
+        $string22 = /ec2a250f026c030d36c1f1d021816176a7a9a8f62f56673b418bca9154c5a3f1/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string15 = /tiagorlampert\/chaos\:latest/ nocase ascii wide
+        $string23 = /go\srun\scmd\/chaos\/main\.go/ nocase ascii wide
         // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
         // Reference: https://github.com/tiagorlampert/CHAOS
-        $string16 = /tiagorlampert\@gmail\.com/ nocase ascii wide
+        $string24 = /md\sc\:\\chaos\-container/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string25 = /tiagorlampert\/CHAOS/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string26 = /tiagorlampert\/chaos\:latest/ nocase ascii wide
+        // Description: CHAOS is a free and open-source Remote Administration Tool that allow generate binaries to control remote operating systems
+        // Reference: https://github.com/tiagorlampert/CHAOS
+        $string27 = /tiagorlampert\@gmail\.com/ nocase ascii wide
 
     condition:
         any of them

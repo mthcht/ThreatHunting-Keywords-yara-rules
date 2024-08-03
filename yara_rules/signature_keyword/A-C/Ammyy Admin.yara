@@ -16,10 +16,13 @@ rule Ammyy_Admin
         $string2 = /PUA\:Win32\/AmmyyAdmin/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: https://www.ammyy.com
-        $string3 = /SPR\/Ammyy\.R/ nocase ascii wide
+        $string3 = /RemoteAccess\:Win32\/AmmyAdmin/ nocase ascii wide
+        // Description: Antiviurs signature_keyword
+        // Reference: https://www.ammyy.com
+        $string4 = /SPR\/Ammyy\.R/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string4 = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
+        $string5 = /Win32\.PUA\.AmmyyAdmin/ nocase ascii wide
 
     condition:
         any of them

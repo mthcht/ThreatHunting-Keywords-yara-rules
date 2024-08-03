@@ -8,9 +8,12 @@ rule bitsadmin
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: bitsadmin obfuscation observed used by attackers
+        // Reference: N/A
+        $string1 = /b\^i\^t\^s\^a\^d\^min\^\s\/t\^ra\^n\^s\^f\^e\^r\^\s\^\/\^d\^o\^w\^n\^l\^o\^a\^d/ nocase ascii wide
         // Description: bitsadmin suspicious transfer
         // Reference: N/A
-        $string1 = /bitsadmin\s\/transfer\sdebjob\s\/download\s\/priority\snormal\s\\.{0,1000}\\C\$\\Windows\\.{0,1000}\.dll/ nocase ascii wide
+        $string2 = /bitsadmin\s\/transfer\sdebjob\s\/download\s\/priority\snormal\s\\.{0,1000}\\C\$\\Windows\\.{0,1000}\.dll/ nocase ascii wide
 
     condition:
         any of them

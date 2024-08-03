@@ -59,6 +59,9 @@ rule localtonet
         // Description: LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet
         // Reference: https://github.com/engineseller/localtonet
         $string17 = /queue\.localtonet\.com/ nocase ascii wide
+        // Description: LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet
+        // Reference: https://github.com/engineseller/localtonet
+        $string18 = /seq\.localtonet\.com\/api/ nocase ascii wide
 
     condition:
         any of them

@@ -1441,100 +1441,103 @@ rule sliver
         $string477 = /Sliver\sC2\sSession/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string478 = /sliver\.service/ nocase ascii wide
+        $string478 = /Sliver\simplant/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string479 = /sliver\.sh\/install/ nocase ascii wide
+        $string479 = /sliver\.service/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string480 = /sliver\/\.sliver/ nocase ascii wide
+        $string480 = /sliver\.sh\/install/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string481 = /sliver\:sliver/ nocase ascii wide
+        $string481 = /sliver\/\.sliver/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string482 = /sliver_pcap_parser\.py/ nocase ascii wide
+        $string482 = /sliver\:sliver/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string483 = /sliver\-bof\-dev\-quickstart\.md/ nocase ascii wide
+        $string483 = /sliver_pcap_parser\.py/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string484 = /sliver\-client\.exe/ nocase ascii wide
+        $string484 = /sliver\-bof\-dev\-quickstart\.md/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string485 = /sliver\-client\.log/ nocase ascii wide
+        $string485 = /sliver\-client\.exe/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string486 = /sliver\-client_linux/ nocase ascii wide
+        $string486 = /sliver\-client\.log/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string487 = /sliver\-client_macos/ nocase ascii wide
+        $string487 = /sliver\-client_linux/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string488 = /sliver\-client_windows\.exe/ nocase ascii wide
+        $string488 = /sliver\-client_macos/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string489 = /sliver\-dns/ nocase ascii wide
+        $string489 = /sliver\-client_windows\.exe/ nocase ascii wide
+        // Description: Sliver is an open source cross-platform adversary emulation/red team framework
+        // Reference: https://github.com/BishopFox/sliver
+        $string490 = /sliver\-dns/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/trustedsec/SliverKeylogger
-        $string490 = /SliverKeylogger/ nocase ascii wide
+        $string491 = /SliverKeylogger/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string491 = /sliverpb/ nocase ascii wide
+        $string492 = /sliverpb/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string492 = /sliverpb\.Download/ nocase ascii wide
+        $string493 = /sliverpb\.Download/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string493 = /sliverpb\.Services/ nocase ascii wide
+        $string494 = /sliverpb\.Services/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string494 = /sliverpb\.Shell/ nocase ascii wide
-        // Description: Sliver is an open source cross-platform adversary emulation/red team framework
-        // Reference: https://github.com/BishopFox/sliver
-        $string495 = /sliver\-server\sdaemon/ nocase ascii wide
+        $string495 = /sliverpb\.Shell/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
         $string496 = /sliver\-server\sdaemon/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string497 = /sliver\-server\soperator\s/ nocase ascii wide
+        $string497 = /sliver\-server\sdaemon/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string498 = /sliver\-server\sunpack\s\-\-force/ nocase ascii wide
+        $string498 = /sliver\-server\soperator\s/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string499 = /sliver\-server\./ nocase ascii wide
+        $string499 = /sliver\-server\sunpack\s\-\-force/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string500 = /sliver\-server\.exe/ nocase ascii wide
+        $string500 = /sliver\-server\./ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string501 = /sliver\-server\-linux\.zip/ nocase ascii wide
+        $string501 = /sliver\-server\.exe/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string502 = /sliver\-server\-macos\.zip/ nocase ascii wide
+        $string502 = /sliver\-server\-linux\.zip/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string503 = /sliver\-server\-windows\.zip/ nocase ascii wide
+        $string503 = /sliver\-server\-macos\.zip/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string504 = /StageListenerCmd/ nocase ascii wide
+        $string504 = /sliver\-server\-windows\.zip/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string505 = /Successfully\sconnected\sto\ssliver\slistener/ nocase ascii wide
+        $string505 = /StageListenerCmd/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string506 = /systemctl\sstart\ssliver/ nocase ascii wide
+        $string506 = /Successfully\sconnected\sto\ssliver\slistener/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string507 = /testing.{0,1000}\stesting.{0,1000}\s1.{0,1000}\s2.{0,1000}\s3\s/ nocase ascii wide
+        $string507 = /systemctl\sstart\ssliver/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string508 = /The\simplant\scommand\sallows\susers\sto\srun\scommands\son\sslivers\sfrom\stheir/ nocase ascii wide
+        $string508 = /testing.{0,1000}\stesting.{0,1000}\s1.{0,1000}\s2.{0,1000}\s3\s/ nocase ascii wide
         // Description: Sliver is an open source cross-platform adversary emulation/red team framework
         // Reference: https://github.com/BishopFox/sliver
-        $string509 = /UseBeaconCmd/ nocase ascii wide
+        $string509 = /The\simplant\scommand\sallows\susers\sto\srun\scommands\son\sslivers\sfrom\stheir/ nocase ascii wide
+        // Description: Sliver is an open source cross-platform adversary emulation/red team framework
+        // Reference: https://github.com/BishopFox/sliver
+        $string510 = /UseBeaconCmd/ nocase ascii wide
 
     condition:
         any of them

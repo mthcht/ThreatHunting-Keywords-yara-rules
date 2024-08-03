@@ -496,28 +496,31 @@ rule merlin
         $string162 = /Ne0nd0g\/merlin/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string163 = /rpc\.Merlin\.Exe/ nocase ascii wide
+        $string163 = /Out\-Minidump\s/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string164 = /rpc\.Merlin\.RunAs/ nocase ascii wide
+        $string164 = /rpc\.Merlin\.Exe/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string165 = /russel\.vantuyl\@gmail\.com/ nocase ascii wide
+        $string165 = /rpc\.Merlin\.RunAs/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string166 = /SafetyKatz\.json/ nocase ascii wide
+        $string166 = /russel\.vantuyl\@gmail\.com/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string167 = /shellcodeInjection\.json/ nocase ascii wide
+        $string167 = /SafetyKatz\.json/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string168 = /ShellProfilePersistence\.json/ nocase ascii wide
+        $string168 = /shellcodeInjection\.json/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string169 = /SPN\:SharpRoast\.exe/ nocase ascii wide
+        $string169 = /ShellProfilePersistence\.json/ nocase ascii wide
         // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
         // Reference: https://github.com/Ne0nd0g/merlin
-        $string170 = /srv\.\(MerlinServer\)\.Exe/ nocase ascii wide
+        $string170 = /SPN\:SharpRoast\.exe/ nocase ascii wide
+        // Description: Merlin is a post-exploit Command & Control (C2) tool also known as a Remote Access Tool (RAT)
+        // Reference: https://github.com/Ne0nd0g/merlin
+        $string171 = /srv\.\(MerlinServer\)\.Exe/ nocase ascii wide
 
     condition:
         any of them

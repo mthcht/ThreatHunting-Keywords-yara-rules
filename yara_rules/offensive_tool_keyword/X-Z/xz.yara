@@ -29,10 +29,10 @@ rule xz
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise
         // Reference: https://securelist.com/xz-backdoor-story-part-1/112354/
         $string7 = /605861f833fc181c7cdcabd5577ddb8989bea332648a8f498b4eef89b8f85ad4/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string8 = /654c673c177a2a06c2b240ee07f81dc9096b1626f82855dc67722a5e10bbf6a1/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string9 = /654c673c177a2a06c2b240ee07f81dc9096b1626f82855dc67722a5e10bbf6a1/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
@@ -44,31 +44,31 @@ rule xz
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string12 = /91ae5ce613fa82b7764401fb12fb8977a0b3c78325faa16f30abeb3dfbe9c71a/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string13 = /b83ee6d62e5e159fa0a16fcad953862a1d567abc5c60aa35dc02aac7efc87870/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string14 = /b83ee6d62e5e159fa0a16fcad953862a1d567abc5c60aa35dc02aac7efc87870/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise
         // Reference: https://securelist.com/xz-backdoor-story-part-1/112354/
         $string15 = /c86c8f8a69c07fbec8dd650c6604bf0c9876261f/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string16 = /d2d99c2dcb17923e9ce1d91e16491527edcdd945aa68e54d83bc6fc927274b05/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string17 = /d2d99c2dcb17923e9ce1d91e16491527edcdd945aa68e54d83bc6fc927274b05/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string18 = /d44d0425769fa2e0b6875e5ca25d45b251bbe98870c6b9bef34f7cea9f84c9c3/ nocase ascii wide
-        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
-        // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
-        $string19 = /d44d0425769fa2e0b6875e5ca25d45b251bbe98870c6b9bef34f7cea9f84c9c3/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
-        $string20 = /ece869c6e359a650da3a82c8d26239bde4293a591c0d634815595129654665ae/ nocase ascii wide
+        $string19 = /d44d0425769fa2e0b6875e5ca25d45b251bbe98870c6b9bef34f7cea9f84c9c3/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2
+        // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
+        $string20 = /ece869c6e359a650da3a82c8d26239bde4293a591c0d634815595129654665ae/ nocase ascii wide
+        // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://x.com/cyb3rops/status/1776924344481984944
         // Reference: https://www.openwall.com/lists/oss-security/2024/03/29/4
         $string21 = /ece869c6e359a650da3a82c8d26239bde4293a591c0d634815595129654665ae/ nocase ascii wide
         // Description: backdoor in upstream xz/liblzma leading to ssh server compromise - rule author: @cyb3rops - link: https://github.com/Neo23x0/signature-base/blob/07daba7eb7bc44e6f73e199c6b9892241ab1b3d7/yara/bkdr_xz_util_cve_2024_3094.yar#L2

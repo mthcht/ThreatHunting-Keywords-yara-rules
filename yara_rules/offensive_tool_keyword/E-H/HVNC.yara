@@ -28,43 +28,58 @@ rule HVNC
         $string6 = /\\HVNC\-main\.zip/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string7 = /5C3AD9AC\-C62C\-4AA8\-BAE2\-9AF920A652E3/ nocase ascii wide
+        $string7 = /095a6fc6a2c9647417df017fa70b182abcc68b97a8addd4e25cf302f6f2e98e4/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string8 = /FFE5AD77\-8AF4\-4A3F\-8CE7\-6BDC45565F07/ nocase ascii wide
+        $string8 = /3791fe80848940a320ef55ec49c9a23fffcb1b97977d0a6140df61efc6533829/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string9 = /g_hDesk\s\=\sFuncs\:\:pOpenDesktopA\(g_desktopName/ nocase ascii wide
+        $string9 = /5C3AD9AC\-C62C\-4AA8\-BAE2\-9AF920A652E3/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string10 = /github\.com\/rossja\/TinyNuke/ nocase ascii wide
+        $string10 = /6003ae86c0abcc19ae6c799724e679762ed37934ab6b5c3064f65988df64a242/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string11 = /HiddenDesktop\.cpp/ nocase ascii wide
+        $string11 = /69ad04521e133db1e34347ec9a6ecb8ea3f90272c77ce2471c3145ac33fad13b/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string12 = /HiddenDesktop\.exe/ nocase ascii wide
+        $string12 = /FFE5AD77\-8AF4\-4A3F\-8CE7\-6BDC45565F07/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string13 = /HiddenDesktop_ControlWindow/ nocase ascii wide
+        $string13 = /g_hDesk\s\=\sFuncs\:\:pOpenDesktopA\(g_desktopName/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string14 = /HVNC\s\-\sTinynuke\sClone/ nocase ascii wide
+        $string14 = /github\.com\/rossja\/TinyNuke/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string15 = /\'M\'\,\s\'E\'\,\s\'L\'\,\s\'T\'\,\s\'E\'\,\s\'D\'\,\s0/ nocase ascii wide
+        $string15 = /HiddenDesktop\.cpp/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string16 = /melted\@xmpp\.jp/ nocase ascii wide
+        $string16 = /HiddenDesktop\.exe/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string17 = /Meltedd\/HVNC/ nocase ascii wide
+        $string17 = /HiddenDesktop_ControlWindow/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string18 = /Starting\sHVNC\sServer/ nocase ascii wide
+        $string18 = /HVNC\s\-\sTinynuke\sClone\s\[Melted\@HF\]/ nocase ascii wide
         // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
         // Reference: https://github.com/Meltedd/HVNC
-        $string19 = /t\.me\/Melteddd/ nocase ascii wide
+        $string19 = /HVNC\s\-\sTinynuke\sClone/ nocase ascii wide
+        // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
+        // Reference: https://github.com/Meltedd/HVNC
+        $string20 = /\'M\'\,\s\'E\'\,\s\'L\'\,\s\'T\'\,\s\'E\'\,\s\'D\'\,\s0/ nocase ascii wide
+        // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
+        // Reference: https://github.com/Meltedd/HVNC
+        $string21 = /melted\@xmpp\.jp/ nocase ascii wide
+        // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
+        // Reference: https://github.com/Meltedd/HVNC
+        $string22 = /Meltedd\/HVNC/ nocase ascii wide
+        // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
+        // Reference: https://github.com/Meltedd/HVNC
+        $string23 = /Starting\sHVNC\sServer/ nocase ascii wide
+        // Description: Standalone HVNC Client & Server Coded in C++ (Modified Tinynuke)
+        // Reference: https://github.com/Meltedd/HVNC
+        $string24 = /t\.me\/Melteddd/ nocase ascii wide
 
     condition:
         any of them

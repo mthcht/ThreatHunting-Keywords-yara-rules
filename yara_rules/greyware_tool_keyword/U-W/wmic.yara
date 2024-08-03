@@ -164,6 +164,9 @@ rule wmic
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
         $string52 = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+        // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
+        // Reference: N/A
+        $string53 = /WMIC\.exe\sshadowcopy\swhere\s.{0,1000}ID\=.{0,1000}\sdelete/ nocase ascii wide
 
     condition:
         any of them

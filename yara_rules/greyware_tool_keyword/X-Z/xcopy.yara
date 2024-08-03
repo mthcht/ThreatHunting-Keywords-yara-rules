@@ -8,9 +8,12 @@ rule xcopy
         rule_category = "greyware_tool_keyword"
 
     strings:
+        // Description: command used by Doina trojan
+        // Reference: N/A
+        $string1 = /cmd\s\/c\sxcopy\s\/s\s\/i\s\/h\s\/e\s\/q\s\/y\s\/d/ nocase ascii wide
         // Description: command abused by attackers - exfiltraiton to remote host with xcopy
         // Reference: N/A
-        $string1 = /xcopy\sc\:\\.{0,1000}\s\\\\.{0,1000}\\c\$/ nocase ascii wide
+        $string2 = /xcopy\sc\:\\.{0,1000}\s\\\\.{0,1000}\\c\$/ nocase ascii wide
 
     condition:
         any of them

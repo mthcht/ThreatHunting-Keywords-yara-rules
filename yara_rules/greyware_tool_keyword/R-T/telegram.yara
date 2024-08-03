@@ -10,7 +10,10 @@ rule telegram
     strings:
         // Description: telegram API usage -given the increasing adoption of Telegram by malware for command and control (C2) operations. it's essential to monitor and restrict its usage within corporate networks and on company devices
         // Reference: api.telegram.org
-        $string1 = /api\.telegram\.org/ nocase ascii wide
+        $string1 = /\\AppData\\Roaming\\Telegram\sDesktop\\tdata/ nocase ascii wide
+        // Description: telegram API usage -given the increasing adoption of Telegram by malware for command and control (C2) operations. it's essential to monitor and restrict its usage within corporate networks and on company devices
+        // Reference: api.telegram.org
+        $string2 = /api\.telegram\.org/ nocase ascii wide
 
     condition:
         any of them

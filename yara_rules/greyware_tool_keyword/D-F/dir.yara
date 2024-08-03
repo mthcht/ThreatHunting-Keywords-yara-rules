@@ -11,6 +11,12 @@ rule dir
         // Description: threat actors searched for Active Directory related DLLs in directories
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
         $string1 = /\sdir\s\/s\s.{0,1000}\/\sMicrosoft\.ActiveDirectory\.Management\.dll/ nocase ascii wide
+        // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
+        // Reference: https://github.com/peass-ng/PEASS-ng
+        $string2 = /dir\s\/b\/a\s\%appdata\%\\Microsoft\\Credentials\\\s2\>nul/ nocase ascii wide
+        // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
+        // Reference: https://github.com/peass-ng/PEASS-ng
+        $string3 = /dir\s\/b\/a\s\%localappdata\%\\Microsoft\\Credentials\\\s2\>nul/ nocase ascii wide
 
     condition:
         any of them

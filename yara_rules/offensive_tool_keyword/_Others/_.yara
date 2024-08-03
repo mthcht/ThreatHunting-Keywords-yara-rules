@@ -299,15 +299,18 @@ rule _
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
         $string97 = /\\Appdata\\.{0,1000}\\kitty\.exe/ nocase ascii wide
+        // Description: known executable in strange location - used by multiple malwares
+        // Reference: N/A
+        $string98 = /\\Start\sMenu\\Programs\\Startup\\svchost\.exe/ nocase ascii wide
         // Description: dll file in public user folder
         // Reference: https://detect.fyi/rhysida-ransomware-and-the-detection-opportunities-3599e9a02bb2
-        $string98 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
+        $string99 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string99 = /\-pentest/ nocase ascii wide
+        $string100 = /\-pentest/ nocase ascii wide
         // Description: windows exploit keyword often used in poc exploit github repo or could be a file name or folder
         // Reference: N/A
-        $string100 = /Windows\sExploit/ nocase ascii wide
+        $string101 = /Windows\sExploit/ nocase ascii wide
 
     condition:
         any of them

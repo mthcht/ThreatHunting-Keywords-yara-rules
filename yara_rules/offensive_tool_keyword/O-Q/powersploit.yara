@@ -85,172 +85,178 @@ rule PowerSploit
         $string25 = /Get\-ExploitableSystem/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string26 = /Get\-GPPPassword/ nocase ascii wide
+        $string26 = /Get\-GPPAutologon\s/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string27 = /Get\-Keystrokes\s/ nocase ascii wide
+        $string27 = /Get\-GPPAutologon\./ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string28 = /Get\-Keystrokes/ nocase ascii wide
+        $string28 = /Get\-GPPPassword/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string29 = /Get\-LastLoggedOn/ nocase ascii wide
+        $string29 = /Get\-Keystrokes\s/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string30 = /Get\-ModifiableRegistryAutoRun/ nocase ascii wide
+        $string30 = /Get\-Keystrokes/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string31 = /Get\-ModifiableScheduledTaskFile/ nocase ascii wide
+        $string31 = /Get\-LastLoggedOn/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string32 = /Get\-ModifiableService/ nocase ascii wide
+        $string32 = /Get\-ModifiableRegistryAutoRun/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string33 = /Get\-NetDomainController/ nocase ascii wide
+        $string33 = /Get\-ModifiableScheduledTaskFile/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string34 = /Get\-NetDomainTrust/ nocase ascii wide
+        $string34 = /Get\-ModifiableService/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string35 = /Get\-NetFileServer/ nocase ascii wide
+        $string35 = /Get\-NetDomainController/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string36 = /Get\-NetGPO\s\-UserIdentity\s/ nocase ascii wide
+        $string36 = /Get\-NetDomainTrust/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string37 = /Get\-NetGPOGroup/ nocase ascii wide
+        $string37 = /Get\-NetFileServer/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string38 = /Get\-NetLocalGroup/ nocase ascii wide
+        $string38 = /Get\-NetGPO\s\-UserIdentity\s/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string39 = /Get\-NetLoggedon/ nocase ascii wide
+        $string39 = /Get\-NetGPOGroup/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string40 = /Get\-NetRDPSession/ nocase ascii wide
+        $string40 = /Get\-NetLocalGroup/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string41 = /Get\-RegistryAlwaysInstallElevated/ nocase ascii wide
+        $string41 = /Get\-NetLoggedon/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string42 = /Get\-VaultCredential/ nocase ascii wide
+        $string42 = /Get\-NetRDPSession/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string43 = /Get\-VolumeShadowCopy/ nocase ascii wide
+        $string43 = /Get\-RegistryAlwaysInstallElevated/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string44 = /Invoke\-ACLScanner/ nocase ascii wide
+        $string44 = /Get\-VaultCredential/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string45 = /Invoke\-CheckLocalAdminAccess/ nocase ascii wide
+        $string45 = /Get\-VolumeShadowCopy/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string46 = /Invoke\-CredentialInjection/ nocase ascii wide
+        $string46 = /Invoke\-ACLScanner/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string47 = /Invoke\-CredentialInjection\.ps1/ nocase ascii wide
+        $string47 = /Invoke\-CheckLocalAdminAccess/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string48 = /Invoke\-CredentialInjection\.ps1/ nocase ascii wide
+        $string48 = /Invoke\-CredentialInjection/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string49 = /Invoke\-DllInjection/ nocase ascii wide
+        $string49 = /Invoke\-CredentialInjection\.ps1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string50 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
+        $string50 = /Invoke\-CredentialInjection\.ps1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string51 = /Invoke\-EventHunter/ nocase ascii wide
+        $string51 = /Invoke\-DllInjection/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string52 = /Invoke\-FileFinder/ nocase ascii wide
+        $string52 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string53 = /Invoke\-MapDomainTrust/ nocase ascii wide
+        $string53 = /Invoke\-EventHunter/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string54 = /Invoke\-Mimikatz/ nocase ascii wide
+        $string54 = /Invoke\-FileFinder/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string55 = /Invoke\-NinjaCopy/ nocase ascii wide
+        $string55 = /Invoke\-MapDomainTrust/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string56 = /Invoke\-Portscan/ nocase ascii wide
+        $string56 = /Invoke\-Mimikatz/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string57 = /Invoke\-PrivescAudit/ nocase ascii wide
+        $string57 = /Invoke\-NinjaCopy/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string58 = /Invoke\-ProcessHunter/ nocase ascii wide
+        $string58 = /Invoke\-Portscan/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string59 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
+        $string59 = /Invoke\-PrivescAudit/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string60 = /Invoke\-ServiceAbuse/ nocase ascii wide
+        $string60 = /Invoke\-ProcessHunter/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string61 = /Invoke\-ShareFinder/ nocase ascii wide
+        $string61 = /Invoke\-ReflectivePEInjection/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string62 = /Invoke\-Shellcode/ nocase ascii wide
+        $string62 = /Invoke\-ServiceAbuse/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string63 = /Invoke\-Shellcode\.ps1/ nocase ascii wide
+        $string63 = /Invoke\-ShareFinder/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string64 = /Invoke\-TokenManipulation/ nocase ascii wide
+        $string64 = /Invoke\-Shellcode/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string65 = /Invoke\-UserHunter/ nocase ascii wide
+        $string65 = /Invoke\-Shellcode\.ps1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string66 = /Invoke\-WmiCommand\s/ nocase ascii wide
+        $string66 = /Invoke\-TokenManipulation/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string67 = /Mount\-VolumeShadowCopy/ nocase ascii wide
+        $string67 = /Invoke\-UserHunter/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string68 = /Naughty\-Script\.ps1/ nocase ascii wide
+        $string68 = /Invoke\-WmiCommand\s/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string69 = /New\-ElevatedPersistenceOption/ nocase ascii wide
+        $string69 = /Mount\-VolumeShadowCopy/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string70 = /New\-UserPersistenceOption/ nocase ascii wide
+        $string70 = /Naughty\-Script\.ps1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string71 = /New\-VolumeShadowCopy/ nocase ascii wide
+        $string71 = /New\-ElevatedPersistenceOption/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string72 = /Persistence\.psm1/ nocase ascii wide
+        $string72 = /New\-UserPersistenceOption/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string73 = /PowerShell_PoC\.zip/ nocase ascii wide
+        $string73 = /New\-VolumeShadowCopy/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string74 = /PowerSploit\./ nocase ascii wide
+        $string74 = /Persistence\.psm1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string75 = /Privesc\.psm1/ nocase ascii wide
+        $string75 = /PowerShell_PoC\.zip/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string76 = /Privesc\.tests\.ps1/ nocase ascii wide
+        $string76 = /PowerSploit\./ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string77 = /Remove\-VolumeShadowCopy/ nocase ascii wide
+        $string77 = /Privesc\.psm1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string78 = /RevertToSelf\swas\ssuccessful/ nocase ascii wide
+        $string78 = /Privesc\.tests\.ps1/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string79 = /Test\-ServiceDaclPermission/ nocase ascii wide
+        $string79 = /Remove\-VolumeShadowCopy/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string80 = /Write\-HijackDll/ nocase ascii wide
+        $string80 = /RevertToSelf\swas\ssuccessful/ nocase ascii wide
         // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
         // Reference: https://github.com/PowerShellMafia/PowerSploit
-        $string81 = /Write\-UserAddMSI/ nocase ascii wide
+        $string81 = /Test\-ServiceDaclPermission/ nocase ascii wide
+        // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
+        // Reference: https://github.com/PowerShellMafia/PowerSploit
+        $string82 = /Write\-HijackDll/ nocase ascii wide
+        // Description: PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts
+        // Reference: https://github.com/PowerShellMafia/PowerSploit
+        $string83 = /Write\-UserAddMSI/ nocase ascii wide
 
     condition:
         any of them

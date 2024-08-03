@@ -40,40 +40,43 @@ rule Atera
         $string10 = /\\TEMP\\AteraUpgradeAgentPackage\\/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string11 = /acontrol\.atera\.com/ nocase ascii wide
+        $string11 = /\>Atera\sNetworks\</ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string12 = /agent\-api\.atera\.com/ nocase ascii wide
+        $string12 = /acontrol\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string13 = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
+        $string13 = /agent\-api\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string14 = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
+        $string14 = /AgentPackageInternalPooler\\log\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string15 = /AlphaControlAgent\.CloudLogsManager\+\<\>/ nocase ascii wide
+        $string15 = /AgentPackageRunCommandInteractive\\log\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string16 = /atera_del\.bat/ nocase ascii wide
+        $string16 = /AlphaControlAgent\.CloudLogsManager\+\<\>/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string17 = /atera_del2\.bat/ nocase ascii wide
+        $string17 = /atera_del\.bat/ nocase ascii wide
+        // Description: control remote machines- abused by threat actors
+        // Reference: N/A
+        $string18 = /atera_del2\.bat/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string18 = /AteraAgent.{0,1000}AgentPackageRunCommandInteractive\.exe/ nocase ascii wide
+        $string19 = /AteraAgent.{0,1000}AgentPackageRunCommandInteractive\.exe/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string19 = /AteraSetupLog\.txt/ nocase ascii wide
+        $string20 = /AteraSetupLog\.txt/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string20 = /http.{0,1000}\/agent\-api\-.{0,1000}\.atera\.com/ nocase ascii wide
+        $string21 = /http.{0,1000}\/agent\-api\-.{0,1000}\.atera\.com/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string21 = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
+        $string22 = /Monitoring\s\&\sManagement\sAgent\sby\sATERA/ nocase ascii wide
         // Description: control remote machines- abused by threat actors
         // Reference: N/A
-        $string22 = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
+        $string23 = /SOFTWARE\\ATERA\sNetworks\\AlphaAgent/ nocase ascii wide
 
     condition:
         any of them

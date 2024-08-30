@@ -17,10 +17,10 @@ rule mortar
         // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
         // Reference: https://github.com/0xsp-SRD/mortar
         $string3 = /\/mortar\.git/ nocase ascii wide
-        // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
+        // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)
         // Reference: https://github.com/0xsp-SRD/mortar
         $string4 = /\/mortar\/releases\/download\/v2\/encryptor/ nocase ascii wide
-        // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)
+        // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
         // Reference: https://github.com/0xsp-SRD/mortar
         $string5 = /\/mortar\/releases\/download\/v2\/encryptor/ nocase ascii wide
         // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)
@@ -41,10 +41,10 @@ rule mortar
         // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
         // Reference: https://github.com/0xsp-SRD/mortar
         $string11 = /\\pipe\\moj_ML_ntsvcs\s/ nocase ascii wide
-        // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
+        // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)
         // Reference: https://github.com/0xsp-SRD/mortar
         $string12 = /0xsp\-SRD\/mortar/ nocase ascii wide
-        // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)
+        // Description: red teaming evasion technique to defeat and divert detection and prevention of security products.Mortar Loader performs encryption and decryption of selected binary inside the memory streams and execute it directly with out writing any malicious indicator into the hard-drive. Mortar is able to bypass modern anti-virus products and advanced XDR solutions
         // Reference: https://github.com/0xsp-SRD/mortar
         $string13 = /0xsp\-SRD\/mortar/ nocase ascii wide
         // Description: evasion technique to defeat and divert detection and prevention of security products (AV/EDR/XDR)

@@ -10,7 +10,22 @@ rule LAPSToolkit
     strings:
         // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
         // Reference: https://github.com/leoloobeek/LAPSToolkit
-        $string1 = /LAPSToolkit/ nocase ascii wide
+        $string1 = /\/LAPSToolkit\.git/ nocase ascii wide
+        // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
+        // Reference: https://github.com/leoloobeek/LAPSToolkit
+        $string2 = /cd05b7676886e560400643e3852e64483cee95f4741ec8a930c7b1f68479835a/ nocase ascii wide
+        // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
+        // Reference: https://github.com/leoloobeek/LAPSToolkit
+        $string3 = /Find\-LAPSDelegatedGroups\s/ nocase ascii wide
+        // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
+        // Reference: https://github.com/leoloobeek/LAPSToolkit
+        $string4 = /LAPSToolkit/ nocase ascii wide
+        // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
+        // Reference: https://github.com/leoloobeek/LAPSToolkit
+        $string5 = /LAPSToolkit\.ps1/ nocase ascii wide
+        // Description: Functions written in PowerShell that leverage PowerView to audit and attack Active Directory environments that have deployed Microsofts Local Administrator Password Solution (LAPS). It includes finding groups specifically delegated by sysadmins. finding users with All Extended Rights that can view passwords. and viewing all computers with LAPS enabled
+        // Reference: https://github.com/leoloobeek/LAPSToolkit
+        $string6 = /leoloobeek\/LAPSToolkit/ nocase ascii wide
 
     condition:
         any of them

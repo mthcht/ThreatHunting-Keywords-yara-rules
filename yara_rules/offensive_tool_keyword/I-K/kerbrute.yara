@@ -88,61 +88,64 @@ rule kerbrute
         $string26 = /has\sno\spre\sauth\srequired\.\sDumping\shash\sto\scrack\soffline\:/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string27 = /kerbrute\s\-/ nocase ascii wide
+        $string27 = /install\skerbrute/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string28 = /kerbrute\suserenum\s/ nocase ascii wide
+        $string28 = /kerbrute\s\-/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string29 = /kerbrute.{0,1000}bruteforce/ nocase ascii wide
+        $string29 = /kerbrute\suserenum\s/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string30 = /kerbrute\.go/ nocase ascii wide
+        $string30 = /kerbrute.{0,1000}bruteforce/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string31 = /kerbrute\/cmd/ nocase ascii wide
+        $string31 = /kerbrute\.go/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string32 = /kerbrute\/util/ nocase ascii wide
+        $string32 = /kerbrute\/cmd/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string33 = /kerbrute_.{0,1000}\.exe/ nocase ascii wide
+        $string33 = /kerbrute\/util/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string34 = /kerbrute_darwin_386/ nocase ascii wide
+        $string34 = /kerbrute_.{0,1000}\.exe/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string35 = /kerbrute_darwin_amd64/ nocase ascii wide
+        $string35 = /kerbrute_darwin_386/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string36 = /kerbrute_linux/ nocase ascii wide
+        $string36 = /kerbrute_darwin_amd64/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string37 = /kerbrute_windows/ nocase ascii wide
+        $string37 = /kerbrute_linux/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string38 = /kerbrute_windows_386\.exe/ nocase ascii wide
+        $string38 = /kerbrute_windows/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string39 = /kerbrute_windows_amd64\.exe/ nocase ascii wide
+        $string39 = /kerbrute_windows_386\.exe/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string40 = /kerbrute\-master/ nocase ascii wide
+        $string40 = /kerbrute_windows_amd64\.exe/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string41 = /KerbruteSession/ nocase ascii wide
+        $string41 = /kerbrute\-master/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string42 = /passwordspray.{0,1000}\-\-user\-as\-pass/ nocase ascii wide
+        $string42 = /KerbruteSession/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string43 = /passwordspray\.go/ nocase ascii wide
+        $string43 = /passwordspray.{0,1000}\-\-user\-as\-pass/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string44 = /passwordSprayCmd/ nocase ascii wide
+        $string44 = /passwordspray\.go/ nocase ascii wide
         // Description: A tool to perform Kerberos pre-auth bruteforcing
         // Reference: https://github.com/ropnop/kerbrute
-        $string45 = /ropnop\/kerbrute/ nocase ascii wide
+        $string45 = /passwordSprayCmd/ nocase ascii wide
+        // Description: A tool to perform Kerberos pre-auth bruteforcing
+        // Reference: https://github.com/ropnop/kerbrute
+        $string46 = /ropnop\/kerbrute/ nocase ascii wide
 
     condition:
         any of them

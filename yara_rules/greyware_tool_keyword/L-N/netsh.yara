@@ -11,12 +11,12 @@ rule netsh
         // Description: gathering information about network configurations
         // Reference: N/A
         $string1 = /netsh\sadvfirewall\sfirewall\sshow\srule\sname\=all/ nocase ascii wide
-        // Description: Disable Windows Firewall
-        // Reference: N/A
-        $string2 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: script to dismantle complete windows defender protection and even bypass tamper protection  - Disable Windows-Defender Permanently.
         // Reference: https://github.com/swagkarna/Defeat-Defender-V1.2.0
-        $string3 = /netsh\sadvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        $string2 = /netsh\sadvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
+        // Description: Disable Windows Firewall
+        // Reference: N/A
+        $string3 = /NetSh\sAdvfirewall\sset\sallprofiles\sstate\soff/ nocase ascii wide
         // Description: adding a executable in user appdata folder to the allowed programs
         // Reference: https://tria.ge/231006-ydmxjsfe5s/behavioral1/analog?proc=66
         $string4 = /netsh\sfirewall\sadd\sallowedprogram\s\"C\:\\Users\\.{0,1000}\\AppData\\.{0,1000}\.exe\"\s\".{0,1000}\.exe\"\sENABLE/ nocase ascii wide
@@ -50,15 +50,21 @@ rule netsh
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
         $string14 = /netsh\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        // Description: Adds a new rule to the Windows firewall that allows incoming RDP traffic.
+        // Reference: https://www.cisa.gov/sites/default/files/2023-05/aa23-136a_stopransomware_bianlian_ransomware_group_1.pdf
+        $string15 = /netsh\.exe\sadvfirewall\sfirewall\sadd\srule\s\"name\=allow\sRemoteDesktop\"\sdir\=in\s.{0,1000}\slocalport\=.{0,1000}\saction\=allow/ nocase ascii wide
+        // Description: Enables the pre-existing Windows firewall rule group named Remote Desktop. This rule group allows incoming RDP traffic.
+        // Reference: https://www.cisa.gov/sites/default/files/2023-05/aa23-136a_stopransomware_bianlian_ransomware_group_1.pdf
+        $string16 = /netsh\.exe\sadvfirewall\sfirewall\sset\srule\s\"group\=remote\sdesktop\"\snew\senable\=Yes/ nocase ascii wide
         // Description: capturing a network trace with netsh
         // Reference: N/A
-        $string15 = /netsh\.exe\strace\sstart\smaxSize\=1\sfileMode\=single\scapture\=yes\straceFile\=.{0,1000}\\TEMP.{0,1000}\.etl/ nocase ascii wide
+        $string17 = /netsh\.exe\strace\sstart\smaxSize\=1\sfileMode\=single\scapture\=yes\straceFile\=.{0,1000}\\TEMP.{0,1000}\.etl/ nocase ascii wide
         // Description: display saved Wi-Fi profiles including plaintext passwords on a Windows system
         // Reference: N/A
-        $string16 = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
+        $string18 = /netsh\.exe\swlan\sshow\sprofiles\skey\=clear/ nocase ascii wide
         // Description: display all current TCP port redirections configured on the system
         // Reference: N/A
-        $string17 = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
+        $string19 = /netsh\.exe.{0,1000}\sinterface\sportproxy\sshow\sall/ nocase ascii wide
 
     condition:
         any of them

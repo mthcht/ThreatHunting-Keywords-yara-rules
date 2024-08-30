@@ -152,12 +152,15 @@ rule ScreenConnect
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
         $string48 = /ScreenConnect_.{0,1000}_Release\.zip/ nocase ascii wide
-        // Description: control remote servers - abused by threat actors
-        // Reference: screenconnect.com
-        $string49 = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
         // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
         // Reference: https://screenconnect.connectwise.com/download
-        $string50 = /\-web\.screenconnect\.com/ nocase ascii wide
+        $string49 = /ScreenConnectClientNetworkDeployer\.exe/ nocase ascii wide
+        // Description: control remote servers - abused by threat actors
+        // Reference: screenconnect.com
+        $string50 = /server.{0,1000}\-relay\.screenconnect\.com/ nocase ascii wide
+        // Description: ConnectWise Control formerly known as Screenconnect is a remote desktop software application.
+        // Reference: https://screenconnect.connectwise.com/download
+        $string51 = /\-web\.screenconnect\.com/ nocase ascii wide
 
     condition:
         any of them

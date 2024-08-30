@@ -220,271 +220,259 @@ rule meshcentral
         $string70 = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string71 = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
+        $string71 = /CE62CBEE\-DAA8\-4E5E\-AAAA\-1F6FC291AB94/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string72 = /CE5AD78C\-DBDF\-4D81\-9A69\-41B1DF683115/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshAgent
-        $string73 = /CE62CBEE\-DAA8\-4E5E\-AAAA\-1F6FC291AB94/ nocase ascii wide
+        $string72 = /d3e630985cb4b429375d79dd506842da176a9cbe4e0afb992c694cab48f3e7ce/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string74 = /d3e630985cb4b429375d79dd506842da176a9cbe4e0afb992c694cab48f3e7ce/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string75 = /d8445e3bd78bac3cc8f8a3f23b68ab971fb85ff061059f8256e41c6b892374f4/ nocase ascii wide
+        $string73 = /d8445e3bd78bac3cc8f8a3f23b68ab971fb85ff061059f8256e41c6b892374f4/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string76 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
+        $string74 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string75 = /e7e6fcf7d0b2ce3732fbeb5c7e48bb4a2f9f8bbca49ad55d13a57e9abb661481/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string76 = /ff98ae3248a0c2d93b00ec2d426578a3b90aec301883662b8da0fb2a213d60ca/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string77 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
+        $string77 = /https\:\/\/meshcentral\.com\/login/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string78 = /E377F156\-BAED\-4086\-B534\-3CC43164607A/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string79 = /e7e6fcf7d0b2ce3732fbeb5c7e48bb4a2f9f8bbca49ad55d13a57e9abb661481/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string80 = /ff98ae3248a0c2d93b00ec2d426578a3b90aec301883662b8da0fb2a213d60ca/ nocase ascii wide
+        $string78 = /info\.meshcentral\.com/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string81 = /https\:\/\/meshcentral\.com\/login/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string82 = /info\.meshcentral\.com/ nocase ascii wide
+        $string79 = /MESH_AGENT_PORT/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string83 = /MESH_AGENT_PORT/ nocase ascii wide
+        $string80 = /MESH_AGENT_STUN_PORT/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string81 = /MeshAgent\sCrash\sDumps/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string82 = /meshagent\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string83 = /meshagent\.js/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string84 = /MeshAgent\.mpkg/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string85 = /meshagent\.pid/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string86 = /meshagent\.service/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string87 = /meshagent\.zip/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string88 = /meshagent_aarch64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string89 = /meshagent_aarch64\-cortex\-a53/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string90 = /meshagent_alpine\-x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string91 = /meshagent_android\.apk/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string92 = /meshagent_arm/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string93 = /meshagent_arm64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string94 = /meshagent_armhf/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string95 = /meshagent_freebsd_x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string96 = /meshagent_mips/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string97 = /meshagent_mips24kc/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string98 = /meshagent_mipsel24kc/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string99 = /meshagent_openbsd_x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string100 = /meshagent_openwrt_x86_64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string101 = /meshagent_osx64\.msh/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string102 = /meshagent_osx64_LaunchDaemon/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string103 = /meshagent_osx\-arm\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string104 = /meshagent_osx\-universal\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string105 = /meshagent_osx\-x86\-32/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string106 = /meshagent_osx\-x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string107 = /meshagent_pogo/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string108 = /meshagent_poky/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string109 = /meshagent_poky64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string110 = /meshagent_x86/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string111 = /meshagent_x86\-64/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string112 = /meshagent32\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string113 = /meshagent64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string114 = /MeshAgent\-Android\-x86/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string115 = /meshagentarm64\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string116 = /MeshAgent\-ChromeOS/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string117 = /MeshAgent\-Linux\-ARM\-PlugPC/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string118 = /MeshAgent\-Linux\-XEN\-x86\-32/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string119 = /MeshAgent\-NodeJS/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string120 = /MeshAgentOSXPackager\.zip/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string121 = /MeshAgent\-WinMinCore\-Console\-x86\-32\.exe/ nocase ascii wide
+        // Description: MeshCentral is a full computer management web site - abused by attackers
+        // Reference: https://github.com/Ylianst/MeshCentral
+        $string122 = /MeshAgent\-WinMinCore\-Service\-x86\-64\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string84 = /MESH_AGENT_STUN_PORT/ nocase ascii wide
+        $string123 = /Meshcentral\s\-\sWebRTC\sSample\sServer/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string85 = /MeshAgent\sCrash\sDumps/ nocase ascii wide
+        $string124 = /MeshCentral\sHTTP\sserver\sport\s/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string86 = /meshagent\.exe/ nocase ascii wide
+        $string125 = /MeshCentral\sSatellite\scould\snot\screate\sa\s802\.1x\sprofile\sfor\sthis\sdevice/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string87 = /meshagent\.js/ nocase ascii wide
+        $string126 = /MeshCentral\sServer\sTCP\sports/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string88 = /MeshAgent\.mpkg/ nocase ascii wide
+        $string127 = /MeshCentral\sServer\sUDP\sports/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string89 = /meshagent\.pid/ nocase ascii wide
+        $string128 = /meshcentral\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string90 = /meshagent\.service/ nocase ascii wide
+        $string129 = /meshcentral\.serverstats/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string91 = /meshagent\.zip/ nocase ascii wide
+        $string130 = /MeshCentralAssistant\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string92 = /meshagent_aarch64/ nocase ascii wide
+        $string131 = /MeshCentralInstaller\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string93 = /meshagent_aarch64\-cortex\-a53/ nocase ascii wide
+        $string132 = /meshcentralinstaller\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string94 = /meshagent_alpine\-x86\-64/ nocase ascii wide
+        $string133 = /meshcentral\-plugins\.db/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string95 = /meshagent_android\.apk/ nocase ascii wide
+        $string134 = /MeshCentralRoot\-/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string96 = /meshagent_arm/ nocase ascii wide
+        $string135 = /MeshCentralRouter\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string97 = /meshagent_arm64/ nocase ascii wide
+        $string136 = /MeshCentralServer\.njsproj/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string98 = /meshagent_armhf/ nocase ascii wide
+        $string137 = /meshcentral\-smbios\.db/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string99 = /meshagent_freebsd_x86\-64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string100 = /meshagent_mips/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string101 = /meshagent_mips24kc/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string102 = /meshagent_mipsel24kc/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string103 = /meshagent_openbsd_x86\-64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string104 = /meshagent_openwrt_x86_64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string105 = /meshagent_osx64\.msh/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string106 = /meshagent_osx64_LaunchDaemon/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string107 = /meshagent_osx\-arm\-64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string108 = /meshagent_osx\-universal\-64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string109 = /meshagent_osx\-x86\-32/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string110 = /meshagent_osx\-x86\-64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string111 = /meshagent_pogo/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string112 = /meshagent_poky/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string113 = /meshagent_poky64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string114 = /meshagent_x86/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string115 = /meshagent_x86\-64/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string116 = /meshagent32\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string117 = /meshagent64\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string118 = /MeshAgent\-Android\-x86/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string119 = /meshagentarm64\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string120 = /MeshAgent\-ChromeOS/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string121 = /MeshAgent\-Linux\-ARM\-PlugPC/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string122 = /MeshAgent\-Linux\-XEN\-x86\-32/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string123 = /MeshAgent\-NodeJS/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string124 = /MeshAgentOSXPackager\.zip/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string125 = /MeshAgent\-WinMinCore\-Console\-x86\-32\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string126 = /MeshAgent\-WinMinCore\-Service\-x86\-64\.exe/ nocase ascii wide
+        $string138 = /MeshCmd64\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string127 = /Meshcentral\s\-\sWebRTC\sSample\sServer/ nocase ascii wide
+        $string139 = /meshcmdService\.run/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string128 = /MeshCentral\sHTTP\sserver\sport\s/ nocase ascii wide
+        $string140 = /MeshCmd\-signed\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string129 = /MeshCentral\sSatellite\scould\snot\screate\sa\s802\.1x\sprofile\sfor\sthis\sdevice/ nocase ascii wide
+        $string141 = /meshcommander\sinstall/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string130 = /MeshCentral\sServer\sTCP\sports/ nocase ascii wide
+        $string142 = /meshcommander\sstart/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string131 = /MeshCentral\sServer\sUDP\sports/ nocase ascii wide
+        $string143 = /meshcommander\sstop/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string132 = /meshcentral\.exe/ nocase ascii wide
+        $string144 = /meshcommander\suninstall/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string133 = /meshcentral\.serverstats/ nocase ascii wide
+        $string145 = /MeshConsole64\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string134 = /MeshCentralAssistant\.exe/ nocase ascii wide
+        $string146 = /MeshConsoleARM64\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string135 = /MeshCentralInstaller\.exe/ nocase ascii wide
+        $string147 = /meshinstall\-initd\.sh/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string136 = /meshcentralinstaller\.exe/ nocase ascii wide
+        $string148 = /meshinstall\-linux\.sh/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string137 = /meshcentral\-plugins\.db/ nocase ascii wide
+        $string149 = /MeshService\.exe/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string138 = /MeshCentralRoot\-/ nocase ascii wide
+        $string150 = /rootcert\.meshcentral\.com/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string139 = /MeshCentralRouter\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string140 = /MeshCentralServer\.njsproj/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string141 = /meshcentral\-smbios\.db/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string142 = /MeshCmd64\.exe/ nocase ascii wide
+        $string151 = /swarm\.meshcentral\.com/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string143 = /meshcmdService\.run/ nocase ascii wide
+        $string152 = /Uploading\sMeshCommander/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string144 = /MeshCmd\-signed\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string145 = /meshcommander\sinstall/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string146 = /meshcommander\sstart/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string147 = /meshcommander\sstop/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string148 = /meshcommander\suninstall/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string149 = /MeshConsole64\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string150 = /MeshConsoleARM64\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string151 = /meshinstall\-initd\.sh/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string152 = /meshinstall\-linux\.sh/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string153 = /MeshService\.exe/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string154 = /rootcert\.meshcentral\.com/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string155 = /swarm\.meshcentral\.com/ nocase ascii wide
+        $string153 = /wss\:\/\/meshcentral\.com/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshAgent
-        $string156 = /Uploading\sMeshCommander/ nocase ascii wide
+        $string154 = /Ylianst\/MeshAgent/ nocase ascii wide
         // Description: MeshCentral is a full computer management web site - abused by attackers
         // Reference: https://github.com/Ylianst/MeshCentral
-        $string157 = /wss\:\/\/meshcentral\.com/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshAgent
-        $string158 = /Ylianst\/MeshAgent/ nocase ascii wide
-        // Description: MeshCentral is a full computer management web site - abused by attackers
-        // Reference: https://github.com/Ylianst/MeshCentral
-        $string159 = /Ylianst\/MeshCentral/ nocase ascii wide
+        $string155 = /Ylianst\/MeshCentral/ nocase ascii wide
 
     condition:
         any of them

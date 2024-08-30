@@ -67,10 +67,7 @@ rule BypassCredGuard
         $string19 = /F1527C49\-CA1F\-4994\-BB9D\-E20DD2C607FD/ nocase ascii wide
         // Description: Credential Guard Bypass Via Patching Wdigest Memory
         // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string20 = /F1527C49\-CA1F\-4994\-BB9D\-E20DD2C607FD/ nocase ascii wide
-        // Description: Credential Guard Bypass Via Patching Wdigest Memory
-        // Reference: https://github.com/wh0amitz/BypassCredGuard
-        $string21 = /wh0amitz\/BypassCredGuard/ nocase ascii wide
+        $string20 = /wh0amitz\/BypassCredGuard/ nocase ascii wide
 
     condition:
         any of them

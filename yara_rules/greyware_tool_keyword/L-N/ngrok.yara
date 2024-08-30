@@ -70,31 +70,34 @@ rule ngrok
         $string20 = /ngrok\stcp\s/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string21 = /ngrokd\.ngrok\.com/ nocase ascii wide
+        $string21 = /ngrok\,\sInc\./ nocase ascii wide
+        // Description: ngrok - abused by attackers for C2 usage
+        // Reference: https://github.com/inconshreveable/ngrok
+        $string22 = /ngrokd\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string22 = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
+        $string23 = /tcp\:\/\/0\.tcp\.ngrok\.io\:/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string23 = /tunnel\.ap\.ngrok\.com/ nocase ascii wide
+        $string24 = /tunnel\.ap\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string24 = /tunnel\.au\.ngrok\.com/ nocase ascii wide
+        $string25 = /tunnel\.au\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string25 = /tunnel\.eu\.ngrok\.com/ nocase ascii wide
+        $string26 = /tunnel\.eu\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string26 = /tunnel\.in\.ngrok\.com/ nocase ascii wide
+        $string27 = /tunnel\.in\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string27 = /tunnel\.jp\.ngrok\.com/ nocase ascii wide
+        $string28 = /tunnel\.jp\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string28 = /tunnel\.sa\.ngrok\.com/ nocase ascii wide
+        $string29 = /tunnel\.sa\.ngrok\.com/ nocase ascii wide
         // Description: ngrok - abused by attackers for C2 usage
         // Reference: https://github.com/inconshreveable/ngrok
-        $string29 = /tunnel\.us\.ngrok\.com/ nocase ascii wide
+        $string30 = /tunnel\.us\.ngrok\.com/ nocase ascii wide
 
     condition:
         any of them

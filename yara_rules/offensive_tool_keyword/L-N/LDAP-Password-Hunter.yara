@@ -44,10 +44,10 @@ rule LDAP_Password_Hunter
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string12 = /INSERT\sINTO\sLDAPHUNTERFINDINGS\s/ nocase ascii wide
-        // Description: Password Hunter in Active Directory
+        // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string13 = /kerberos\-ldap\-password\-hunter\.sh/ nocase ascii wide
-        // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
+        // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string14 = /kerberos\-ldap\-password\-hunter\.sh/ nocase ascii wide
         // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
@@ -71,10 +71,10 @@ rule LDAP_Password_Hunter
         // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string21 = /Please\sbe\ssure\simpacket\sand\sldapsearch\sare\sinstalled\sand\syour\s\/etc\/krb5\.conf/ nocase ascii wide
-        // Description: Password Hunter in Active Directory
+        // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string22 = /Please\sbe\ssure\simpacket\sis\sinstalled\sin\syour\ssystem/ nocase ascii wide
-        // Description: LDAP Password Hunter is a tool which wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database
+        // Description: Password Hunter in Active Directory
         // Reference: https://github.com/oldboy21/LDAP-Password-Hunter
         $string23 = /Please\sbe\ssure\simpacket\sis\sinstalled\sin\syour\ssystem/ nocase ascii wide
         // Description: Password Hunter in Active Directory

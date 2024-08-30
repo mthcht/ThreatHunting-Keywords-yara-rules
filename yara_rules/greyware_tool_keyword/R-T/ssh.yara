@@ -29,12 +29,18 @@ rule ssh
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
         $string7 = /Local\:\scrc32\scompensation\sattack/ nocase ascii wide
+        // Description: modification of the sshd configuration file - couldbe an attacker establishing persistence or a legitimate admin behavior
+        // Reference: https://x.com/mthcht/status/1827714529687658796
+        $string8 = /nano\s\/etc\/ssh\/sshd_config/ nocase ascii wide
         // Description: Binding to port 445 on Windows with ssh - useful for NTLM relaying
         // Reference: https://x.com/0x64616e/status/1817149974724956286
-        $string8 = /ssh\.exe\s\-L\s0\.0\.0\.0\:445\:127\.0\.0\.1\:445\s/ nocase ascii wide
+        $string9 = /ssh\.exe\s\-L\s0\.0\.0\.0\:445\:127\.0\.0\.1\:445\s/ nocase ascii wide
         // Description: Detects suspicious SSH / SSHD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
         // Reference: https://github.com/ossec/ossec-hids/blob/master/etc/rules/sshd_rules.xml
-        $string9 = /unexpected\sbytes\sremain\safter\sdecoding/ nocase ascii wide
+        $string10 = /unexpected\sbytes\sremain\safter\sdecoding/ nocase ascii wide
+        // Description: modification of the sshd configuration file - couldbe an attacker establishing persistence or a legitimate admin behavior
+        // Reference: https://x.com/mthcht/status/1827714529687658796
+        $string11 = /vim\s\/etc\/ssh\/sshd_config/ nocase ascii wide
 
     condition:
         any of them

@@ -44,6 +44,12 @@ rule AsyncRAT_C_Sharp
         // Description: Open-Source Remote Administration Tool For Windows C# (RAT)
         // Reference: https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp
         $string12 = /C3C49F45\-2589\-4E04\-9C50\-71B6035C14AE/ nocase ascii wide
+        // Description: user agent NIKMOK observed in AsyncRAT sample
+        // Reference: https://x.com/g0njxa/status/1829177645348860120
+        $string13 = /Hp6kvaq9BCyI/ nocase ascii wide
+        // Description: user agent NIKMOK observed in AsyncRAT sample
+        // Reference: https://x.com/g0njxa/status/1829177645348860120
+        $string14 = /User\-Agent.{0,1000}NIKMOK/ nocase ascii wide
 
     condition:
         any of them

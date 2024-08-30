@@ -149,16 +149,16 @@ rule Antivirus_Signature
         // Description: AV signature for exploitation tools
         // Reference: N/A
         $string47 = /HackTool\:VBS/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
+        // Description: AV signature for exploitation tools
         // Reference: N/A
         $string48 = /HackTool\:Win32/ nocase ascii wide
-        // Description: AV signature for exploitation tools
-        // Reference: N/A
-        $string49 = /HackTool\:Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword
         // Reference: N/A
-        $string50 = /HackTool\:Win64/ nocase ascii wide
+        $string49 = /HackTool\:Win32/ nocase ascii wide
         // Description: AV signature for exploitation tools
+        // Reference: N/A
+        $string50 = /HackTool\:Win64/ nocase ascii wide
+        // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string51 = /HackTool\:Win64/ nocase ascii wide
         // Description: Antiviurs signature_keyword
@@ -209,10 +209,10 @@ rule Antivirus_Signature
         // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string67 = /Ransom\:Linux\/BlackBasta/ nocase ascii wide
-        // Description: Antiviurs signature_keyword
+        // Description: AV signature for exploitation tools
         // Reference: N/A
         $string68 = /Ransom\:Win32/ nocase ascii wide
-        // Description: AV signature for exploitation tools
+        // Description: Antiviurs signature_keyword
         // Reference: N/A
         $string69 = /Ransom\:Win32/ nocase ascii wide
         // Description: Antiviurs signature_keyword

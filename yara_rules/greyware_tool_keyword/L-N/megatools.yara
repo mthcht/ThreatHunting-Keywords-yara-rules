@@ -13,19 +13,22 @@ rule megatools
         $string1 = /\/megatools\.exe/ nocase ascii wide
         // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
         // Reference: https://github.com/megous/megatools
-        $string2 = /\\megatools\-.{0,1000}\-win64\\/ nocase ascii wide
+        $string2 = /\\\.megatools\.cache/ nocase ascii wide
         // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
         // Reference: https://github.com/megous/megatools
-        $string3 = /\\megatools\.exe/ nocase ascii wide
+        $string3 = /\\megatools\-.{0,1000}\-win64\\/ nocase ascii wide
         // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
         // Reference: https://github.com/megous/megatools
-        $string4 = /\\Users\\.{0,1000}\\AppData\\Local\\Temp\\.{0,1000}\.megatools\.cache/ nocase ascii wide
+        $string4 = /\\megatools\.exe/ nocase ascii wide
         // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
         // Reference: https://github.com/megous/megatools
-        $string5 = /megatools\scopy\s\-l\s.{0,1000}\s\-r\s/ nocase ascii wide
+        $string5 = /\\Users\\.{0,1000}\\AppData\\Local\\Temp\\.{0,1000}\.megatools\.cache/ nocase ascii wide
         // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
         // Reference: https://github.com/megous/megatools
-        $string6 = /megatools\sput\s/ nocase ascii wide
+        $string6 = /megatools\scopy\s\-l\s.{0,1000}\s\-r\s/ nocase ascii wide
+        // Description: Megatools is a collection of free and open source programs for accessing Mega service from a command line. Abused by attackers for data exfiltration
+        // Reference: https://github.com/megous/megatools
+        $string7 = /megatools\sput\s/ nocase ascii wide
 
     condition:
         any of them

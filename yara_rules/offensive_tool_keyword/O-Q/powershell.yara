@@ -101,39 +101,39 @@ rule powershell
         // Description: disable powershell logging
         // Reference: N/A
         $string31 = /New\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-PropertyType\sDWord\s\-Value\s0/ nocase ascii wide
-        // Description: disable powershell logging
-        // Reference: N/A
-        $string32 = /reg\sadd\s.{0,1000}\sEnableModuleLogging\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
-        // Description: disable powershell logging
-        // Reference: N/A
-        $string33 = /reg\sadd\s.{0,1000}\sEnableScriptBlockLogging\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
-        // Description: Delete powershell history
-        // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string34 = /Remove\-Item\s\(Get\-PSreadlineOption\)\.HistorySavePath/ nocase ascii wide
-        // Description: the threat actor deleted the SD value within the Tree registry path (hide scheduled task creation)
-        // Reference: https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/
-        $string35 = /Remove\-ItemProperty\s.{0,1000}HKLM\:\\SOFTWARE\\YourSoftware\\Schedule\\TaskCache\\Tree\\.{0,1000}\s\-Name\s.{0,1000}SD/ nocase ascii wide
-        // Description: Defense evasion technique
-        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string36 = /rundll32\.exe\sC\:\\Users\\Public\\/ nocase ascii wide
-        // Description: credential dumping activity
-        // Reference: https://www.trendmicro.com/en_us/research/22/g/analyzing-penetration-testing-tools-that-threat-actors-use-to-br.html
-        $string37 = /rundll32\.exe\sC\:\\windows\\System32\\comsvcs\.dll\sMiniDump\s\(Get\-Process\slsass\)\.id/ nocase ascii wide
-        // Description: disable powershell logging
-        // Reference: N/A
-        $string38 = /Set\-ItemProperty\s.{0,1000}\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
-        // Description: disable powershell logging
-        // Reference: N/A
-        $string39 = /Set\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-Value\s0/ nocase ascii wide
-        // Description: disable powershell logging
-        // Reference: N/A
-        $string40 = /Set\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\"\s\-Name\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
-        // Description: Windows Defender evasion add an exclusion directory for your shady stuff
-        // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string41 = /Set\-MpPreference\s\-ExclusionPath\s.{0,1000}\s\-DisableRealtimeMonitoring/ nocase ascii wide
         // Description: deployment of a payload through a PowerShell stager using bits to download
         // Reference: https://thedfirreport.com/2023/09/25/from-screenconnect-to-hive-ransomware-in-61-hours/
-        $string42 = /powershell\.exe\s\-nop\s\-c\s\"start\-job\s.{0,1000}Import\-Module\sBitsTransfer.{0,1000}\$env\:temp.{0,1000}GetRandomFileName\(\).{0,1000}Start\-BitsTransfer\s\-Source\s\'http.{0,1000}Remove\-Item.{0,1000}Receive\-Job/ nocase ascii wide
+        $string32 = /powershell\.exe\s\-nop\s\-c\s\"start\-job\s.{0,1000}Import\-Module\sBitsTransfer.{0,1000}\$env\:temp.{0,1000}GetRandomFileName\(\).{0,1000}Start\-BitsTransfer\s\-Source\s\'http.{0,1000}Remove\-Item.{0,1000}Receive\-Job/ nocase ascii wide
+        // Description: disable powershell logging
+        // Reference: N/A
+        $string33 = /reg\sadd\s.{0,1000}\sEnableModuleLogging\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
+        // Description: disable powershell logging
+        // Reference: N/A
+        $string34 = /reg\sadd\s.{0,1000}\sEnableScriptBlockLogging\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
+        // Description: Delete powershell history
+        // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
+        $string35 = /Remove\-Item\s\(Get\-PSreadlineOption\)\.HistorySavePath/ nocase ascii wide
+        // Description: the threat actor deleted the SD value within the Tree registry path (hide scheduled task creation)
+        // Reference: https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/
+        $string36 = /Remove\-ItemProperty\s.{0,1000}HKLM\:\\SOFTWARE\\YourSoftware\\Schedule\\TaskCache\\Tree\\.{0,1000}\s\-Name\s.{0,1000}SD/ nocase ascii wide
+        // Description: Defense evasion technique
+        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
+        $string37 = /rundll32\.exe\sC\:\\Users\\Public\\/ nocase ascii wide
+        // Description: credential dumping activity
+        // Reference: https://www.trendmicro.com/en_us/research/22/g/analyzing-penetration-testing-tools-that-threat-actors-use-to-br.html
+        $string38 = /rundll32\.exe\sC\:\\windows\\System32\\comsvcs\.dll\sMiniDump\s\(Get\-Process\slsass\)\.id/ nocase ascii wide
+        // Description: disable powershell logging
+        // Reference: N/A
+        $string39 = /Set\-ItemProperty\s.{0,1000}\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        // Description: disable powershell logging
+        // Reference: N/A
+        $string40 = /Set\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-Value\s0/ nocase ascii wide
+        // Description: disable powershell logging
+        // Reference: N/A
+        $string41 = /Set\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\"\s\-Name\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        // Description: Windows Defender evasion add an exclusion directory for your shady stuff
+        // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
+        $string42 = /Set\-MpPreference\s\-ExclusionPath\s.{0,1000}\s\-DisableRealtimeMonitoring/ nocase ascii wide
 
     condition:
         any of them

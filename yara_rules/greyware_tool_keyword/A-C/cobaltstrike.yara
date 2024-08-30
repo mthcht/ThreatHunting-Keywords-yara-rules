@@ -11,6 +11,9 @@ rule cobaltstrike
         // Description: If cobaltstrike uses execute-assembly there is a chance that a file will be created in the UsageLogs logs
         // Reference: https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/
         $string1 = /\\AppData\\Local\\Microsoft\\CLR_.{0,1000}\\UsageLogs\\.{0,1000}\.exe\.log/ nocase ascii wide
+        // Description: potential malleable Cobalt Strike profiles behavior
+        // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
+        $string2 = /cmd\.exe\s\/c\secho\s.{0,1000}\s\>\s\\\\\.\\pipe\\/ nocase ascii wide
 
     condition:
         any of them

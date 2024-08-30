@@ -166,40 +166,37 @@ rule sish
         $string52 = /e4b3511a69efba9f59592c41a87992f7e23fb6ea45d18eca6ab19bbbb7bb6d6f/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string53 = /eb0d8e4273608c13b5957ac047f911442b3d55527e20097cd038e120f01df5ae/ nocase ascii wide
+        $string53 = /f3b1c8cf0abdaad743182c96258f5e88a8522004724a781596e6663565e5c456/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string54 = /f3b1c8cf0abdaad743182c96258f5e88a8522004724a781596e6663565e5c456/ nocase ascii wide
+        $string54 = /ff800e89edecbd936169c78cbac4a524da8dd91c922c9909f5f6115bdc898716/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string55 = /ff800e89edecbd936169c78cbac4a524da8dd91c922c9909f5f6115bdc898716/ nocase ascii wide
+        $string55 = /hereiam\.tuns\.sh/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string56 = /hereiam\.tuns\.sh/ nocase ascii wide
+        $string56 = /https\:\/\/.{0,1000}\.tuns\.sh/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string57 = /https\:\/\/.{0,1000}\.tuns\.sh/ nocase ascii wide
+        $string57 = /https\:\/\/docs\.ssi\.sh\// nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string58 = /https\:\/\/docs\.ssi\.sh\// nocase ascii wide
+        $string58 = /https\:\/\/pico\.sh\/tuns/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string59 = /https\:\/\/pico\.sh\/tuns/ nocase ascii wide
+        $string59 = /https\:\/\/tuns\.sh/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string60 = /https\:\/\/tuns\.sh/ nocase ascii wide
+        $string60 = /ssh\s\-p\s2222\s\-R\s.{0,1000}\:80\:localhost\:8080\stuns\.sh/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string61 = /ssh\s\-p\s2222\s\-R\s.{0,1000}\:80\:localhost\:8080\stuns\.sh/ nocase ascii wide
+        $string61 = /ssh\s\-p\s2222\s\-R\s80\:localhost\:8080\stuns\.sh/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string62 = /ssh\s\-p\s2222\s\-R\s80\:localhost\:8080\stuns\.sh/ nocase ascii wide
+        $string62 = /ssh\s\-p\s2222\stuns\.sh/ nocase ascii wide
         // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
         // Reference: https://github.com/antoniomika/sish
-        $string63 = /ssh\s\-p\s2222\stuns\.sh/ nocase ascii wide
-        // Description: An open source serveo/ngrok alternative. HTTP(S)/WS(S)/TCP Tunnels to localhost using only SSH
-        // Reference: https://github.com/antoniomika/sish
-        $string64 = /testing\.ssi\.sh/ nocase ascii wide
+        $string63 = /testing\.ssi\.sh/ nocase ascii wide
 
     condition:
         any of them

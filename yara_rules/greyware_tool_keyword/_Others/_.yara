@@ -170,18 +170,21 @@ rule _
         // Description: reversed string for obfuscation
         // Reference: N/A
         $string54 = /gnirotinoMemitlaeRelbasiD/ nocase ascii wide
+        // Description: allows users to create a unique URL to collect and inspect HTTP requests. It is commonly used for debugging webhooks - it can also be abused by attackers for verifying the reachability and effectiveness of their payloads
+        // Reference: http://requestbin.net
+        $string55 = /https\:\/\/requestbin\.net\/r\// nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string55 = /llawerifvda\shsten/ nocase ascii wide
+        $string56 = /llawerifvda\shsten/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string56 = /niB\.elcyceR\$/ nocase ascii wide
+        $string57 = /niB\.elcyceR\$/ nocase ascii wide
         // Description: reversed string for obfuscation
         // Reference: N/A
-        $string57 = /teSlortnoCtnerruC/ nocase ascii wide
+        $string58 = /teSlortnoCtnerruC/ nocase ascii wide
         // Description: Suspicious tlds with suspicious file types
         // Reference: N/A
-        $string58 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
+        $string59 = /https\:\/\/.{0,1000}\.xyz\/.{0,1000}\.ps1/ nocase ascii wide
 
     condition:
         any of them

@@ -11,21 +11,24 @@ rule attrib
         // Description: command aiming to hide a file.  It can be performed with attrib.exe on a WINDOWS machine with command option +h 
         // Reference: N/A
         $string1 = /\\attrib\.exe.{0,1000}\s\+H\s/ nocase ascii wide
+        // Description: hide evidence of RDP connections
+        // Reference: https://github.com/xiaoy-sec/Pentest_Note/blob/52156f816f0c2497c25343c2e872130193acca80/wiki/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/Windows%E6%8F%90%E6%9D%83/RDP%26Firewall/%E5%88%A0%E9%99%A4%E7%97%95%E8%BF%B9.md?plain=1#L4
+        $string2 = /attrib\s.{0,1000}\.rdp\s\-s\s\-h/ nocase ascii wide
         // Description: defense evasion - hidding in suspicious directory
         // Reference: N/A
-        $string2 = /attrib\s\+s\s\+h\s\/D\s\"C\:\\Program\sFiles\\Windows\sNT\\/ nocase ascii wide
+        $string3 = /attrib\s\+s\s\+h\s\/D\s\"C\:\\Program\sFiles\\Windows\sNT\\/ nocase ascii wide
         // Description: defense evasion - hidding in suspicious directory
         // Reference: N/A
-        $string3 = /attrib\s\+s\s\+h\s\/D\s\"C\:\\users\\Public\\/ nocase ascii wide
+        $string4 = /attrib\s\+s\s\+h\s\/D\s\"C\:\\users\\Public\\/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string4 = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide
+        $string5 = /attrib\s\+s\s\+h\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string5 = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
+        $string6 = /echo\s\[\.ShellClassInfo\]\s\>\sdesktop\.ini/ nocase ascii wide
         // Description: NTLM Leak via Desktop.ini
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string6 = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
+        $string7 = /echo\sIconResource\=\\\\.{0,1000}\\.{0,1000}\s\>\>\sdesktop\.ini/ nocase ascii wide
 
     condition:
         any of them

@@ -104,9 +104,6 @@ rule Coercer
         // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
         // Reference: https://github.com/p0dalirius/Coercer
         $string32 = /podalirius\@protonmail\.com/ nocase ascii wide
-        // Description: A python script to automatically coerce a Windows server to authenticate on an arbitrary machine through many methods.
-        // Reference: https://github.com/p0dalirius/Coercer
-        $string33 = /podalirius\@protonmail\.com/ nocase ascii wide
 
     condition:
         any of them

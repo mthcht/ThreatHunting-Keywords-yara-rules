@@ -38,9 +38,6 @@ rule ldeep
         // Description: In-depth ldap enumeration utility
         // Reference: https://github.com/franc-pentest/ldeep
         $string10 = /ldeep_dump_users_enabled\.lst/ nocase ascii wide
-        // Description: In-depth ldap enumeration utility
-        // Reference: https://github.com/franc-pentest/ldeep
-        $string11 = /ldeep\s/ nocase ascii wide
 
     condition:
         any of them

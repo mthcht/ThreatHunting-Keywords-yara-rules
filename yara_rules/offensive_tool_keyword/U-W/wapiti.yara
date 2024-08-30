@@ -113,9 +113,6 @@ rule wapiti
         // Description: Web vulnerability scanner written in Python3
         // Reference: https://github.com/wapiti-scanner/wapiti
         $string35 = /xxePayloads\.ini/ nocase ascii wide
-        // Description: Web vulnerability scanner written in Python3
-        // Reference: https://github.com/wapiti-scanner/wapiti
-        $string36 = /wapiti\s\-/ nocase ascii wide
 
     condition:
         any of them

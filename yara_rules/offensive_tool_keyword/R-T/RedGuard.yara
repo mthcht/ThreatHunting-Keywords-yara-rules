@@ -28,25 +28,25 @@ rule RedGuard
         $string6 = /\/wikiZ\/RedGuard/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string7 = /866e5289337ab033f89bc57c5274c7ca/ nocase ascii wide
+        $string7 = /\\RedGuard\s\-/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string8 = /OverrideLHOST\s360\.com/ nocase ascii wide
+        $string8 = /866e5289337ab033f89bc57c5274c7ca/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string9 = /RedGuard\.log/ nocase ascii wide
+        $string9 = /OverrideLHOST\s360\.com/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string10 = /RedGuard\/core/ nocase ascii wide
+        $string10 = /RedGuard\.log/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string11 = /RedGuard_x64\.exe/ nocase ascii wide
+        $string11 = /RedGuard\/core/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string12 = /RedGuard_x86\.exe/ nocase ascii wide
+        $string12 = /RedGuard_x64\.exe/ nocase ascii wide
         // Description: RedGuard is a C2 front flow control tool.Can avoid Blue Teams.AVs.EDRs check.
         // Reference: https://github.com/wikiZ/RedGuard
-        $string13 = /RedGuard\s\-/ nocase ascii wide
+        $string13 = /RedGuard_x86\.exe/ nocase ascii wide
 
     condition:
         any of them

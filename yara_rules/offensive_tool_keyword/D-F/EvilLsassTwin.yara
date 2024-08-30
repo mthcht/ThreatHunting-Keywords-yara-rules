@@ -65,34 +65,34 @@ rule EvilLsassTwin
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string19 = /CreateFile\(\"twin\.txt\"/ nocase ascii wide
-        // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
+        // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string20 = /EvilLsassTwin\.exe/ nocase ascii wide
-        // Description: Dumping lsass
-        // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string21 = /EvilLsassTwin\.exe/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string22 = /EvilLsassTwin\.nim/ nocase ascii wide
+        $string21 = /EvilLsassTwin\.exe/ nocase ascii wide
         // Description: Dumping lsass
+        // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
+        $string22 = /EvilLsassTwin\.nim/ nocase ascii wide
+        // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string23 = /EvilLsassTwin\.nim/ nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string24 = /EvilTwin\.bin/ nocase ascii wide
-        // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
+        // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string25 = /EvilTwin\.dmp/ nocase ascii wide
         // Description: Dumping lsass
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string26 = /EvilTwin\.dmp/ nocase ascii wide
-        // Description: Dumping lsass
-        // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string27 = /EvilTwin\.dmp/ nocase ascii wide
         // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
-        $string28 = /EvilTwinServer\.nim/ nocase ascii wide
+        $string27 = /EvilTwin\.dmp/ nocase ascii wide
         // Description: Dumping lsass
+        // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
+        $string28 = /EvilTwinServer\.nim/ nocase ascii wide
+        // Description: attempt to duplicate open handles to LSASS. If this fails it will obtain a handle to LSASS through the NtGetNextProcess function instead of OpenProcess/NtOpenProcess.
         // Reference: https://github.com/RePRGM/Nimperiments/tree/main/EvilLsassTwin
         $string29 = /EvilTwinServer\.nim/ nocase ascii wide
         // Description: Dumping lsass

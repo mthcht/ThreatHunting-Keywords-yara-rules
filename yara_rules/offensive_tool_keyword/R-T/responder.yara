@@ -150,10 +150,10 @@ rule responder
         // Reference: https://github.com/lgandx/Responder-Windows/
         $string47 = /f8a603588cb91acf4c4a745f74326d202f4d63243fefaf048e1076174a18a50a/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
-        // Reference: https://github.com/SpiderLabs/Responder
+        // Reference: https://github.com/lgandx/Responder-Windows/
         $string48 = /files\/BindShell\.exe/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
-        // Reference: https://github.com/lgandx/Responder-Windows/
+        // Reference: https://github.com/SpiderLabs/Responder
         $string49 = /files\/BindShell\.exe/ nocase ascii wide
         // Description: LLMNR. NBT-NS and MDNS poisoner
         // Reference: https://github.com/SpiderLabs/Responder

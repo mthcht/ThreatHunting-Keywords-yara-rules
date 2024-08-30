@@ -28,13 +28,28 @@ rule FileZilla
         $string6 = /\\FileZilla_Server_/ nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
-        $string7 = /download\.filezilla\-project\.org/ nocase ascii wide
+        $string7 = /\\Program\sFiles\\FileZilla\sFTP\sClient\\/ nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
-        $string8 = /Software\\FileZilla/ nocase ascii wide
+        $string8 = /\\Program\sFiles\\FileZilla\sServer/ nocase ascii wide
         // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
         // Reference: https://filezilla-project.org/
-        $string9 = /Win32\/FileZilla_BundleInstaller/ nocase ascii wide
+        $string9 = /\\Software\\WOW6432Node\\FileZilla\sClient/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string10 = /\>FileZilla\sFTP\sClient\</ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string11 = /\>FileZilla\sServer\</ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string12 = /download\.filezilla\-project\.org/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string13 = /Software\\FileZilla/ nocase ascii wide
+        // Description: FileZilla admintool used by threat actors for persistence and data exfiltration
+        // Reference: https://filezilla-project.org/
+        $string14 = /Win32\/FileZilla_BundleInstaller/ nocase ascii wide
 
     condition:
         any of them

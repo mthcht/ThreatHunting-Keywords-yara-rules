@@ -28,19 +28,16 @@ rule ThunderShell
         $string6 = /scripts.{0,1000}Search\-EventForUser\.ps1/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string7 = /ThunderShell/ nocase ascii wide
+        $string7 = /ThunderShell\.git/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string8 = /ThunderShell\.git/ nocase ascii wide
+        $string8 = /ThunderShell\.py/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string9 = /ThunderShell\.py/ nocase ascii wide
+        $string9 = /ThunderShell\-master\.zip/ nocase ascii wide
         // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
         // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string10 = /ThunderShell\-master\.zip/ nocase ascii wide
-        // Description: ThunderShell is a C# RAT that communicates via HTTP requests. All the network traffic is encrypted using a second layer of RC4 to avoid SSL interception and defeat network detection on the target system. RC4 is a weak cipher and is used to help obfuscate the traffic. HTTPS options should be used to provide integrity and strong encryption.
-        // Reference: https://github.com/Mr-Un1k0d3r/ThunderShell
-        $string11 = /YaWNdpwplLwycqWQDCyruhAFsYjWjnBA/ nocase ascii wide
+        $string10 = /YaWNdpwplLwycqWQDCyruhAFsYjWjnBA/ nocase ascii wide
 
     condition:
         any of them

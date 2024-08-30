@@ -37,10 +37,16 @@ rule powercat
         $string9 = /besimorhino\/powercat/ nocase ascii wide
         // Description: Netcat - The powershell version
         // Reference: https://github.com/besimorhino/powercat
-        $string10 = /powercat\s\-c\s/ nocase ascii wide
+        $string10 = /f75cca99da6b3693e3310767256f62228a4451435e4f4301fa7dc95bef9c92ff/ nocase ascii wide
         // Description: Netcat - The powershell version
         // Reference: https://github.com/besimorhino/powercat
-        $string11 = /powercat\s\-l\s/ nocase ascii wide
+        $string11 = /powercat\s\-c\s/ nocase ascii wide
+        // Description: Netcat - The powershell version
+        // Reference: https://github.com/besimorhino/powercat
+        $string12 = /powercat\s\-l\s/ nocase ascii wide
+        // Description: Netcat - The powershell version
+        // Reference: https://github.com/besimorhino/powercat
+        $string13 = /Write\-Verbose\s\(\"Listening\son\s\[0\.0\.0\.0\]\sport/ nocase ascii wide
 
     condition:
         any of them

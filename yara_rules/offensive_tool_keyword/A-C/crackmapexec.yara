@@ -311,12 +311,12 @@ rule crackmapexec
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
         $string101 = /cme\-windows\-latest\-.{0,1000}\.zip/ nocase ascii wide
-        // Description: A swiss army knife for pentesting networks
-        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string102 = /CrackMapExec/ nocase ascii wide
         // Description: crackmapexec execution name. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct Lateral Movement through targeted networks 
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string103 = /crackmapexec/ nocase ascii wide
+        $string102 = /crackmapexec/ nocase ascii wide
+        // Description: A swiss army knife for pentesting networks
+        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
+        $string103 = /CrackMapExec/ nocase ascii wide
         // Description: windows default copiled executable name for crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct Lateral Movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
         $string104 = /crackmapexec\.exe/ nocase ascii wide
@@ -363,13 +363,13 @@ rule crackmapexec
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
         $string118 = /handlekatz\.py/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
-        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string119 = /hook\-lsassy\.py/ nocase ascii wide
-        // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string120 = /hook\-lsassy\.py/ nocase ascii wide
+        $string119 = /hook\-lsassy\.py/ nocase ascii wide
         // Description: hook script for lsassy from crackmapexec. CrackMapExec or CME is a post-exploitation tool developed in Python and designed for penetration testing against networks. CrackMapExec collects Active Directory information to conduct Lateral Movement through targeted networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
+        $string120 = /hook\-lsassy\.py/ nocase ascii wide
+        // Description: A swiss army knife for pentesting networks
+        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
         $string121 = /hook\-lsassy\.py/ nocase ascii wide
         // Description: A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec

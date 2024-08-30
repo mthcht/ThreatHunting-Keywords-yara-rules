@@ -292,7 +292,7 @@ rule pypykatz
         $string94 = /spnroast_.{0,1000}\.txt/ nocase ascii wide
         // Description: Mimikatz implementation in pure Python
         // Reference: https://github.com/skelsec/pypykatz
-        $string95 = /tasklist\s\/fi\s.{0,1000}Imagename\seq\slsass\.exe.{0,1000}\s\|\sfind\s.{0,1000}lsass/ nocase ascii wide
+        $string95 = /tasklist\s\/fi\s.{0,1000}Imagename\seq\slsass\.exe/ nocase ascii wide
         // Description: Mimikatz implementation in pure Python
         // Reference: https://github.com/skelsec/pypykatz
         $string96 = /tspkg\/decryptor\.py/ nocase ascii wide

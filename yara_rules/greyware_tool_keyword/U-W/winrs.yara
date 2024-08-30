@@ -10,7 +10,13 @@ rule winrs
     strings:
         // Description: WinRS for Lateral Movement
         // Reference: N/A
-        $string1 = /winrs\s\-r\:.{0,1000}whoami/ nocase ascii wide
+        $string1 = /winrs\s\-r\:.{0,1000}cmd\s\/c\s/ nocase ascii wide
+        // Description: WinRS for Lateral Movement
+        // Reference: N/A
+        $string2 = /winrs\s\-r\:.{0,1000}powershell\s\-/ nocase ascii wide
+        // Description: WinRS for Lateral Movement
+        // Reference: N/A
+        $string3 = /winrs\s\-r\:.{0,1000}whoami/ nocase ascii wide
 
     condition:
         any of them

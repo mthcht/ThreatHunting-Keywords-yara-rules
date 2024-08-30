@@ -11,21 +11,24 @@ rule wevtutil
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
         $string1 = /cmd.{0,1000}\swevtutil\.exe\scl\s/ nocase ascii wide
+        // Description: loops through event logs using wevtutil.exe to prepare to clear them
+        // Reference: https://github.com/CCob/Shwmae
+        $string2 = /for\s\/F\s\"tokens\=.{0,1000}\"\s\%\%G\sin\s\(\'wevtutil\.exe\sel\'\)\sDO\s\(call\s\:do_clear\s\"\%\%G\"\)/ nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string2 = /wevtutil\scl\s/ nocase ascii wide
+        $string3 = /wevtutil\scl\s/ nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string3 = /wevtutil\sclear\-log/ nocase ascii wide
+        $string4 = /wevtutil\sclear\-log/ nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string4 = /wevtutil\.exe\scl\s/ nocase ascii wide
+        $string5 = /wevtutil\.exe\scl\s/ nocase ascii wide
         // Description: adversaries can delete specific event logs or clear their contents. erasing potentially valuable information that could aid in detection. incident response. or forensic investigations. This tactic aims to hinder forensic analysis efforts and make it more challenging for defenders to reconstruct the timeline of events or identify malicious activities.
         // Reference: N/A
-        $string5 = /wevtutil\.exe\sclear\-log/ nocase ascii wide
+        $string6 = /wevtutil\.exe\sclear\-log/ nocase ascii wide
         // Description: disable a specific eventlog
         // Reference: N/A
-        $string6 = /wevtutil\.exe\ssl\s.{0,1000}\s\/e\:false/ nocase ascii wide
+        $string7 = /wevtutil\.exe\ssl\s.{0,1000}\s\/e\:false/ nocase ascii wide
 
     condition:
         any of them

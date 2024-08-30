@@ -53,528 +53,540 @@ rule powershell
         // Description: Deletes contents of recycle bin
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
         $string15 = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
-        // Description: enables WinRM
-        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string16 = /enable\-psremoting\s\-force/ nocase ascii wide
-        // Description: Find machine where the user has admin privs
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string17 = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
-        // Description: alternativeto whoami
-        // Reference: N/A
-        $string18 = /gci\senv\:USERNAME/ nocase ascii wide
-        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
-        // Reference: https://github.com/ice-wzl/wmiexec2
-        $string19 = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
-        // Description: AD Module Enumerate computers with Unconstrained Delegation
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string20 = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
-        // Description: AD Module Search for a particular string in attributes (admin)
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string21 = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
-        // Description: AD Module Enumerate principals with Constrained Delegation enabled
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string22 = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
-        // Description: Enumerate shadow security principals mapped to a high priv group
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string23 = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
-        // Description: AD module Enumerate users
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string24 = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
-        // Description: AD Module Enumerate computers with Unconstrained Delegation
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string25 = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
-        // Description: AppLocker Get AppLocker policy
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string26 = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
-        // Description: set the DNS server configuration
-        // Reference: N/A
-        $string27 = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
-        // Description: AD Module Enumerate principals with Constrained Delegation enabled
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string28 = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
-        // Description: Powerview Enumerate users
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string29 = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
-        // Description: AD Module GroupPolicy - List of GPO in the domain
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string30 = /Get\-GPO\s\-All/ nocase ascii wide
-        // Description: PowerView get Locally logged users on a machine
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string31 = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
-        // Description: Gets the status of antimalware software on the computer.
-        // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string32 = /Get\-MpComputerStatus/ nocase ascii wide
-        // Description: get defender AV exclusions
-        // Reference: N/A
-        $string33 = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
-        // Description: Find groups in the current domain (PowerView)
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string34 = /Get\-NetGroup\s\-FullData/ nocase ascii wide
-        // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
-        // Reference: N/A
-        $string35 = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
-        // Description: PowerView Find users with SPN
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string36 = /Get\-NetUser\s\-SPN/ nocase ascii wide
-        // Description: delete shadow copies
-        // Reference: https://rexorvc0.com/2024/06/19/Akira-The-Old-New-Style-Crime/
-        $string37 = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
-        // Description: Find local admins on the domain machines
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string38 = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
-        // Description: Check local admin access for the current user where the targets are found
-        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string39 = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
-        // Description: C2 server to connect to a victim machine via reverse shell
-        // Reference: https://github.com/reveng007/C2_Server
-        $string40 = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
-        // Description: alternativeto whoami
-        // Reference: N/A
-        $string41 = /ls\senv\:USERNAME/ nocase ascii wide
-        // Description: hiding a user from the login screen by modifying a specific registry key
-        // Reference: N/A
-        $string42 = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
-        // Description: allowing SSH incoming connections (critical on DC)
-        // Reference: N/A
-        $string43 = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
-        // Description: Powershell reverse shell
-        // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string44 = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
-        // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
-        // Reference: https://github.com/Pennyw0rth/NetExec
-        $string45 = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
-        // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
-        // Reference: N/A
-        $string46 = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
-        // Description: Windows Defender tampering technique 
-        // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string47 = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
-        // Description: Adversaries may attempt to execute powershell script from known accessible location
-        // Reference: N/A
-        $string48 = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
-        // Description: downloading from IP without domain name
-        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string49 = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
-        // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
-        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string50 = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
-        // Description: CrackMapExec behavior
-        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string51 = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
-        // Description: downloading from IP without domain name
-        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string52 = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
-        // Description: downloading from IP without domain name
-        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string53 = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
-        // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
-        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string54 = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
-        // Description: CrackMapExec behavior
-        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string55 = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
-        // Description: downloading from IP without domain name
-        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string56 = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
-        // Description: downloading from IP without domain name
-        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string57 = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
-        // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
-        // Reference: N/A
-        $string58 = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
-        // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
-        // Reference: N/A
-        $string59 = /Remove\-ItemProperty\s\-Path.{0,1000}\s\-Name\sMRUList\s/ nocase ascii wide
-        // Description: list AV products with powershell
-        // Reference: N/A
-        $string60 = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
-        // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
-        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string61 = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
-        // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
-        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string62 = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
-        // Description: Disable IPS
-        // Reference: N/A
-        $string63 = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true/ nocase ascii wide
-        // Description: Disable scanning all downloaded files and attachments
-        // Reference: N/A
-        $string64 = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true/ nocase ascii wide
-        // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
-        // Reference: N/A
-        $string65 = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true/ nocase ascii wide
-        // Description: Disable AMSI (set to 0 to enable)
-        // Reference: N/A
-        $string66 = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
-        // Description: exclude exe file extensions from AV detections
-        // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string67 = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
-        // Description: openssh server is used (critical on DC - must not be installed)
-        // Reference: N/A
-        $string68 = /Set\-Service\s\-Name\ssshd\s\-StartupType\s\'Automatic\'/ nocase ascii wide
-        // Description: openssh server is used (critical on DC - must not be installed)
-        // Reference: N/A
-        $string69 = /Start\-Service\ssshd/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string70 = /Stop\-Process\s\-Name\s\"Sophos\s/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string71 = /Stop\-Process\s\-Name\s\"SQL\sBackups\"/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string72 = /Stop\-Process\s\-Name\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string73 = /Stop\-Process\s\-Name\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string74 = /Stop\-Process\s\-Name\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string75 = /Stop\-Process\s\-Name\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string76 = /Stop\-Process\s\-Name\s\"Zoolz\s2\sService\"/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string77 = /Stop\-Process\s\-Name\sacronisagent/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string78 = /Stop\-Process\s\-Name\sAcronisAgent/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string79 = /Stop\-Process\s\-Name\sacrsch2svc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string80 = /Stop\-Process\s\-Name\sAcrSch2Svc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string81 = /Stop\-Process\s\-Name\sagntsvc/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string82 = /Stop\-Process\s\-Name\sAntivirus/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string83 = /Stop\-Process\s\-Name\sARSM\s\/y/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string84 = /Stop\-Process\s\-Name\sarsm/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string85 = /Stop\-Process\s\-Name\sAVP/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string86 = /Stop\-Process\s\-Name\sbackp/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string87 = /Stop\-Process\s\-Name\sbackup/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string88 = /Stop\-Process\s\-Name\sBackupExec/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string89 = /Stop\-Process\s\-Name\sBackupExecAgent/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string90 = /Stop\-Process\s\-Name\sbedbg\s\/y/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string91 = /Stop\-Process\s\-Name\scbservi/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string92 = /Stop\-Process\s\-Name\scbvscserv/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string93 = /Stop\-Process\s\-Name\sDCAgent/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string94 = /Stop\-Process\s\-Name\sEhttpSrv/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string95 = /Stop\-Process\s\-Name\sekrn/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string96 = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string97 = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string98 = /Stop\-Process\s\-Name\sEsgShKernel/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string99 = /Stop\-Process\s\-Name\sESHASRV/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string100 = /Stop\-Process\s\-Name\sFA_Scheduler/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string101 = /Stop\-Process\s\-Name\sIMAP4Svc/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string102 = /Stop\-Process\s\-Name\sKAVFS/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string103 = /Stop\-Process\s\-Name\sKAVFSGT/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string104 = /Stop\-Process\s\-Name\skavfsslp/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string105 = /Stop\-Process\s\-Name\sklnagent/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string106 = /Stop\-Process\s\-Name\smacmnsvc/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string107 = /Stop\-Process\s\-Name\smasvc/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string108 = /Stop\-Process\s\-Name\sMBAMService/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string109 = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string110 = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string111 = /Stop\-Process\s\-Name\sMcAfeeFramework/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string112 = /Stop\-Process\s\-Name\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string113 = /Stop\-Process\s\-Name\sMcShield/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string114 = /Stop\-Process\s\-Name\smfefire/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string115 = /Stop\-Process\s\-Name\smfemms/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string116 = /Stop\-Process\s\-Name\smfevtp/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string117 = /Stop\-Process\s\-Name\smozyprobackup/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string118 = /Stop\-Process\s\-Name\sMsDtsServer/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string119 = /Stop\-Process\s\-Name\sMsDtsServer100/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string120 = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string121 = /Stop\-Process\s\-Name\smsftesql\$PROD/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string122 = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string123 = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string124 = /Stop\-Process\s\-Name\sMSOLAP\$TPS/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string125 = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string126 = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string127 = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string128 = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string129 = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string130 = /Stop\-Process\s\-Name\sMSSQL\$PROD/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string131 = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string132 = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string133 = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string134 = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string135 = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string136 = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string137 = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string138 = /Stop\-Process\s\-Name\sMSSQL\$TPS/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string139 = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string140 = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string141 = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string142 = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string143 = /Stop\-Process\s\-Name\sSAVAdminService/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string144 = /Stop\-Process\s\-Name\sSAVService/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string145 = /Stop\-Process\s\-Name\sshadowprotectsvc/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string146 = /Stop\-Process\s\-Name\sShMonitor/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string147 = /Stop\-Process\s\-Name\sSmcinst/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string148 = /Stop\-Process\s\-Name\sSmcService/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string149 = /Stop\-Process\s\-Name\ssms_site_sql_backup/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string150 = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string151 = /Stop\-Process\s\-Name\ssophossps/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string152 = /Stop\-Process\s\-Name\sspxservice/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string153 = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string154 = /Stop\-Process\s\-Name\sSQLAgent\$SOPH/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string155 = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string156 = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string157 = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string158 = /Stop\-Process\s\-Name\sstop\sSepMasterService/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string159 = /Stop\-Process\s\-Name\ssvcGenericHost/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string160 = /Stop\-Process\s\-Name\sswi_filter/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string161 = /Stop\-Process\s\-Name\sswi_service/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string162 = /Stop\-Process\s\-Name\sswi_update/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string163 = /Stop\-Process\s\-Name\sswi_update_64/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string164 = /Stop\-Process\s\-Name\sTmCCSF/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string165 = /Stop\-Process\s\-Name\stmlisten/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string166 = /Stop\-Process\s\-Name\sTrueKey/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string167 = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string168 = /Stop\-Process\s\-Name\sTrueKeyServiceHel/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string169 = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string170 = /Stop\-Process\s\-Name\sVeeamBackupSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string171 = /Stop\-Process\s\-Name\sVeeamBrokerSvc\s/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string172 = /Stop\-Process\s\-Name\sVeeamCatalogSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string173 = /Stop\-Process\s\-Name\sVeeamCloudSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string174 = /Stop\-Process\s\-Name\sVeeamDeploymentService/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string175 = /Stop\-Process\s\-Name\sVeeamDeploySvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string176 = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string177 = /Stop\-Process\s\-Name\sVeeamEnterpriseManagerSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string178 = /Stop\-Process\s\-Name\sVeeamHvIntegrationSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string179 = /Stop\-Process\s\-Name\sVeeamMountSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string180 = /Stop\-Process\s\-Name\sVeeamNFSSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string181 = /Stop\-Process\s\-Name\sVeeamRESTSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string182 = /Stop\-Process\s\-Name\sVeeamTransportSvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string183 = /Stop\-Process\s\-Name\svsnapvss/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string184 = /Stop\-Process\s\-Name\svssvc/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string185 = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
-        // Description: stopping backup services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string186 = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
-        // Description: stopping AV services
-        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string187 = /Stop\-Process\s\-Name\sWRSVC/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string188 = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string16 = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        // Description: Copy file to startup via Powershell
+        // Reference: N/A
+        $string17 = /copy\-item\s.{0,1000}\\roaming\\microsoft\\windows\\start\smenu\\programs\\startup/ nocase ascii wide
+        // Description: enables WinRM
+        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
+        $string18 = /enable\-psremoting\s\-force/ nocase ascii wide
+        // Description: Find machine where the user has admin privs
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string19 = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
+        // Description: alternativeto whoami
+        // Reference: N/A
+        $string20 = /gci\senv\:USERNAME/ nocase ascii wide
+        // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
+        // Reference: https://github.com/ice-wzl/wmiexec2
+        $string21 = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
+        // Description: AD Module Enumerate computers with Unconstrained Delegation
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string22 = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
+        // Description: AD Module Search for a particular string in attributes (admin)
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string23 = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        // Description: AD Module Enumerate principals with Constrained Delegation enabled
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string24 = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        // Description: Enumerate shadow security principals mapped to a high priv group
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string25 = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        // Description: AD module Enumerate users
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string26 = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        // Description: AD Module Enumerate computers with Unconstrained Delegation
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string27 = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
+        // Description: AppLocker Get AppLocker policy
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string28 = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
+        // Description: set the DNS server configuration
+        // Reference: N/A
+        $string29 = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
+        // Description: AD Module Enumerate principals with Constrained Delegation enabled
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string30 = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        // Description: Powerview Enumerate users
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string31 = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
+        // Description: AD Module GroupPolicy - List of GPO in the domain
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string32 = /Get\-GPO\s\-All/ nocase ascii wide
+        // Description: PowerView get Locally logged users on a machine
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string33 = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
+        // Description: Gets the status of antimalware software on the computer.
+        // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
+        $string34 = /Get\-MpComputerStatus/ nocase ascii wide
+        // Description: get defender AV exclusions
+        // Reference: N/A
+        $string35 = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
+        // Description: Find groups in the current domain (PowerView)
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string36 = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
+        // Reference: N/A
+        $string37 = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
+        // Description: PowerView Find users with SPN
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string38 = /Get\-NetUser\s\-SPN/ nocase ascii wide
+        // Description: delete shadow copies
+        // Reference: https://rexorvc0.com/2024/06/19/Akira-The-Old-New-Style-Crime/
+        $string39 = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
+        // Description: Find local admins on the domain machines
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string40 = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
+        // Description: Check local admin access for the current user where the targets are found
+        // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
+        $string41 = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
+        // Description: C2 server to connect to a victim machine via reverse shell
+        // Reference: https://github.com/reveng007/C2_Server
+        $string42 = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
+        // Description: alternativeto whoami
+        // Reference: N/A
+        $string43 = /ls\senv\:USERNAME/ nocase ascii wide
+        // Description: hiding a user from the login screen by modifying a specific registry key
+        // Reference: N/A
+        $string44 = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        // Description: allowing SSH incoming connections (critical on DC)
+        // Reference: N/A
+        $string45 = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
+        // Description: Powershell reverse shell
+        // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+        $string46 = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
+        // Description: Execution Policy Bypass evasion
+        // Reference: N/A
+        $string47 = /powershell\s\?encodedcommand\s\$env\:PSExecutionPolicyPreference\=\"bypass\"/ nocase ascii wide
+        // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
+        // Reference: https://github.com/Pennyw0rth/NetExec
+        $string48 = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
+        // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
+        // Reference: N/A
+        $string49 = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        // Description: uninstalls Windows Defender
+        // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
+        $string50 = /powershell\sUninstall\-WindowsFeature\s\-Name\sWindows\-Defender/ nocase ascii wide
+        // Description: Windows Defender tampering technique 
+        // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
+        $string51 = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
+        // Description: Adversaries may attempt to execute powershell script from known accessible location
+        // Reference: N/A
+        $string52 = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        // Description: downloading from IP without domain name
+        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
+        $string53 = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
+        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
+        $string54 = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
+        // Description: CrackMapExec behavior
+        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
+        $string55 = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
+        // Description: downloading from IP without domain name
+        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
+        $string56 = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        // Description: downloading from IP without domain name
+        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
+        $string57 = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
+        // Reference: https://github.com/byt3bl33d3r/CrackMapExec
+        $string58 = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
+        // Description: CrackMapExec behavior
+        // Reference: https://github.com/Porchetta-Industries/CrackMapExec
+        $string59 = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
+        // Description: downloading from IP without domain name
+        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
+        $string60 = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        // Description: downloading from IP without domain name
+        // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
+        $string61 = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
+        // Reference: N/A
+        $string62 = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
+        // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
+        // Reference: N/A
+        $string63 = /Remove\-ItemProperty\s\-Path.{0,1000}\s\-Name\sMRUList\s/ nocase ascii wide
+        // Description: list AV products with powershell
+        // Reference: N/A
+        $string64 = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        // Description: AMSI bypass obfuscation pattern
+        // Reference: N/A
+        $string65 = /S\`eT\-It\`em\s\(\s\'V\'\+\'aR\'\s\+\s\s\'IA\'\s\+\s\(\'blE\:1\'\+\'q2\'\)/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string189 = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string66 = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
+        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
+        $string67 = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
+        // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
+        // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
+        $string68 = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
+        // Description: Disable IPS
+        // Reference: N/A
+        $string69 = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true/ nocase ascii wide
+        // Description: Disable scanning all downloaded files and attachments
+        // Reference: N/A
+        $string70 = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true/ nocase ascii wide
+        // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
+        // Reference: N/A
+        $string71 = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true/ nocase ascii wide
+        // Description: Disable AMSI (set to 0 to enable)
+        // Reference: N/A
+        $string72 = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        // Description: exclude exe file extensions from AV detections
+        // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
+        $string73 = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        // Description: openssh server is used (critical on DC - must not be installed)
+        // Reference: N/A
+        $string74 = /Set\-Service\s\-Name\ssshd\s\-StartupType\s\'Automatic\'/ nocase ascii wide
+        // Description: openssh server is used (critical on DC - must not be installed)
+        // Reference: N/A
+        $string75 = /Start\-Service\ssshd/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string76 = /Stop\-Process\s\-Name\s\"Sophos\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string77 = /Stop\-Process\s\-Name\s\"SQL\sBackups\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string78 = /Stop\-Process\s\-Name\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string79 = /Stop\-Process\s\-Name\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string80 = /Stop\-Process\s\-Name\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string81 = /Stop\-Process\s\-Name\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string82 = /Stop\-Process\s\-Name\s\"Zoolz\s2\sService\"/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string83 = /Stop\-Process\s\-Name\sacronisagent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string84 = /Stop\-Process\s\-Name\sAcronisAgent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string85 = /Stop\-Process\s\-Name\sacrsch2svc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string86 = /Stop\-Process\s\-Name\sAcrSch2Svc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string87 = /Stop\-Process\s\-Name\sagntsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string88 = /Stop\-Process\s\-Name\sAntivirus/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string89 = /Stop\-Process\s\-Name\sARSM\s\/y/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string90 = /Stop\-Process\s\-Name\sarsm/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string91 = /Stop\-Process\s\-Name\sAVP/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string92 = /Stop\-Process\s\-Name\sbackp/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string93 = /Stop\-Process\s\-Name\sbackup/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string94 = /Stop\-Process\s\-Name\sBackupExec/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string95 = /Stop\-Process\s\-Name\sBackupExecAgent/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string96 = /Stop\-Process\s\-Name\sbedbg\s\/y/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string97 = /Stop\-Process\s\-Name\scbservi/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string98 = /Stop\-Process\s\-Name\scbvscserv/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string99 = /Stop\-Process\s\-Name\sDCAgent/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string100 = /Stop\-Process\s\-Name\sEhttpSrv/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string101 = /Stop\-Process\s\-Name\sekrn/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string102 = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string103 = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string104 = /Stop\-Process\s\-Name\sEsgShKernel/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string105 = /Stop\-Process\s\-Name\sESHASRV/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string106 = /Stop\-Process\s\-Name\sFA_Scheduler/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string107 = /Stop\-Process\s\-Name\sIMAP4Svc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string108 = /Stop\-Process\s\-Name\sKAVFS/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string109 = /Stop\-Process\s\-Name\sKAVFSGT/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string110 = /Stop\-Process\s\-Name\skavfsslp/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string111 = /Stop\-Process\s\-Name\sklnagent/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string112 = /Stop\-Process\s\-Name\smacmnsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string113 = /Stop\-Process\s\-Name\smasvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string114 = /Stop\-Process\s\-Name\sMBAMService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string115 = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string116 = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string117 = /Stop\-Process\s\-Name\sMcAfeeFramework/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string118 = /Stop\-Process\s\-Name\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string119 = /Stop\-Process\s\-Name\sMcShield/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string120 = /Stop\-Process\s\-Name\smfefire/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string121 = /Stop\-Process\s\-Name\smfemms/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string122 = /Stop\-Process\s\-Name\smfevtp/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string123 = /Stop\-Process\s\-Name\smozyprobackup/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string124 = /Stop\-Process\s\-Name\sMsDtsServer/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string125 = /Stop\-Process\s\-Name\sMsDtsServer100/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string126 = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string127 = /Stop\-Process\s\-Name\smsftesql\$PROD/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string128 = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string129 = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string130 = /Stop\-Process\s\-Name\sMSOLAP\$TPS/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string131 = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string132 = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string133 = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string134 = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string135 = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string136 = /Stop\-Process\s\-Name\sMSSQL\$PROD/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string137 = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string138 = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string139 = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string140 = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string141 = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string142 = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string143 = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string144 = /Stop\-Process\s\-Name\sMSSQL\$TPS/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string145 = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string146 = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string147 = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string148 = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string149 = /Stop\-Process\s\-Name\sSAVAdminService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string150 = /Stop\-Process\s\-Name\sSAVService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string151 = /Stop\-Process\s\-Name\sshadowprotectsvc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string152 = /Stop\-Process\s\-Name\sShMonitor/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string153 = /Stop\-Process\s\-Name\sSmcinst/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string154 = /Stop\-Process\s\-Name\sSmcService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string155 = /Stop\-Process\s\-Name\ssms_site_sql_backup/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string156 = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string157 = /Stop\-Process\s\-Name\ssophossps/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string158 = /Stop\-Process\s\-Name\sspxservice/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string159 = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string160 = /Stop\-Process\s\-Name\sSQLAgent\$SOPH/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string161 = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string162 = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string163 = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string164 = /Stop\-Process\s\-Name\sstop\sSepMasterService/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string165 = /Stop\-Process\s\-Name\ssvcGenericHost/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string166 = /Stop\-Process\s\-Name\sswi_filter/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string167 = /Stop\-Process\s\-Name\sswi_service/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string168 = /Stop\-Process\s\-Name\sswi_update/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string169 = /Stop\-Process\s\-Name\sswi_update_64/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string170 = /Stop\-Process\s\-Name\sTmCCSF/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string171 = /Stop\-Process\s\-Name\stmlisten/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string172 = /Stop\-Process\s\-Name\sTrueKey/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string173 = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string174 = /Stop\-Process\s\-Name\sTrueKeyServiceHel/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string175 = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string176 = /Stop\-Process\s\-Name\sVeeamBackupSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string177 = /Stop\-Process\s\-Name\sVeeamBrokerSvc\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string178 = /Stop\-Process\s\-Name\sVeeamCatalogSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string179 = /Stop\-Process\s\-Name\sVeeamCloudSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string180 = /Stop\-Process\s\-Name\sVeeamDeploymentService/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string181 = /Stop\-Process\s\-Name\sVeeamDeploySvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string182 = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string183 = /Stop\-Process\s\-Name\sVeeamEnterpriseManagerSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string184 = /Stop\-Process\s\-Name\sVeeamHvIntegrationSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string185 = /Stop\-Process\s\-Name\sVeeamMountSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string186 = /Stop\-Process\s\-Name\sVeeamNFSSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string187 = /Stop\-Process\s\-Name\sVeeamRESTSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string188 = /Stop\-Process\s\-Name\sVeeamTransportSvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string189 = /Stop\-Process\s\-Name\svsnapvss/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string190 = /Stop\-Process\s\-Name\svssvc/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string191 = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        // Description: stopping backup services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string192 = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        // Description: stopping AV services
+        // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
+        $string193 = /Stop\-Process\s\-Name\sWRSVC/ nocase ascii wide
 
     condition:
         any of them

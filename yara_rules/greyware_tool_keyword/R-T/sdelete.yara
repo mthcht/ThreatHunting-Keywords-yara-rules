@@ -8,13 +8,13 @@ rule sdelete
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: delete one or more files and/or directories, or to cleanse the free space on a logical disk - abused by attackers
+        // Description: SDelete is an application that securely deletes data in a way that makes it unrecoverable.- abused by attackers
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete
         $string1 = /\/sdelete\.exe/ nocase ascii wide
-        // Description: delete one or more files and/or directories, or to cleanse the free space on a logical disk - abused by attackers
+        // Description: SDelete is an application that securely deletes data in a way that makes it unrecoverable.- abused by attackers
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete
         $string2 = /\/SDelete\.zip/ nocase ascii wide
-        // Description: delete one or more files and/or directories, or to cleanse the free space on a logical disk - abused by attackers
+        // Description: SDelete is an application that securely deletes data in a way that makes it unrecoverable.- abused by attackers
         // Reference: https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete
         $string3 = /\/sdelete64\.exe/ nocase ascii wide
         // Description: delete one or more files and/or directories, or to cleanse the free space on a logical disk - abused by attackers

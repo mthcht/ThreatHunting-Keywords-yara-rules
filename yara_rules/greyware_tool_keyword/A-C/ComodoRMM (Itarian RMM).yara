@@ -1,4 +1,4 @@
-rule ComodoRMM_(Itarian_RMM)
+rule ComodoRMM__Itarian_RMM_
 {
     meta:
         description = "Detection patterns for the tool 'ComodoRMM (Itarian RMM)' taken from the ThreatHunting-Keywords github project" 

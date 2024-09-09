@@ -4847,7 +4847,7 @@ rule cobaltstrike_greyware_tool_keyword
 }
 
 
-rule ComodoRMM__greyware_tool_keyword(Itarian_RMM)
+rule ComodoRMM__Itarian_RMM__greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ComodoRMM (Itarian RMM)' taken from the ThreatHunting-Keywords github project" 
@@ -4859,109 +4859,109 @@ rule ComodoRMM__greyware_tool_keyword(Itarian_RMM)
     strings:
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string1_ComodoRMM__greyware_tool_keyword = /\.comodo\.com\/static\/frontend\/static\-pages\/enroll\-wizard\/token/ nocase ascii wide
+        $string1_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\.comodo\.com\/static\/frontend\/static\-pages\/enroll\-wizard\/token/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string2_ComodoRMM__greyware_tool_keyword = /\/RemoteControlSetup\.exe/ nocase ascii wide
+        $string2_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\/RemoteControlSetup\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string3_ComodoRMM__greyware_tool_keyword = /\/tmp\/.{0,1000}\/enroll\.sh/ nocase ascii wide
+        $string3_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\/tmp\/.{0,1000}\/enroll\.sh/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string4_ComodoRMM__greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\.service/ nocase ascii wide
+        $string4_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\.service/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string5_ComodoRMM__greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\-linux/ nocase ascii wide
+        $string5_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\-linux/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string6_ComodoRMM__greyware_tool_keyword = /\\AppData\\Local\\Temp\\ITarian_Remote_Access_/ nocase ascii wide
+        $string6_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\AppData\\Local\\Temp\\ITarian_Remote_Access_/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string7_ComodoRMM__greyware_tool_keyword = /\\AppData\\Local\\Temp\\Remote_Control_by_Itarian/ nocase ascii wide
+        $string7_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\AppData\\Local\\Temp\\Remote_Control_by_Itarian/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string8_ComodoRMM__greyware_tool_keyword = /\\ComodoRemoteControl\.exe/ nocase ascii wide
+        $string8_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\ComodoRemoteControl\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string9_ComodoRMM__greyware_tool_keyword = /\\CurrentControlSet\\Services\\ItsmRsp/ nocase ascii wide
+        $string9_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\CurrentControlSet\\Services\\ItsmRsp/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string10_ComodoRMM__greyware_tool_keyword = /\\CurrentControlSet\\Services\\ITSMService/ nocase ascii wide
+        $string10_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\CurrentControlSet\\Services\\ITSMService/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string11_ComodoRMM__greyware_tool_keyword = /\\CurrentControlSet\\Services\\RmmService/ nocase ascii wide
+        $string11_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\CurrentControlSet\\Services\\RmmService/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string12_ComodoRMM__greyware_tool_keyword = /\\ITarian\sRemote\sAccess\.lnk/ nocase ascii wide
+        $string12_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\ITarian\sRemote\sAccess\.lnk/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string13_ComodoRMM__greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmagent\.exe/ nocase ascii wide
+        $string13_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmagent\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string14_ComodoRMM__greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmservice\.exe/ nocase ascii wide
+        $string14_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmservice\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string15_ComodoRMM__greyware_tool_keyword = /\\itarian\\endpoint\smanager\\rhost\.exe/ nocase ascii wide
+        $string15_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\itarian\\endpoint\smanager\\rhost\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string16_ComodoRMM__greyware_tool_keyword = /\\ITarian\\RemoteControl/ nocase ascii wide
+        $string16_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\ITarian\\RemoteControl/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string17_ComodoRMM__greyware_tool_keyword = /\\ITarian_Remote_Access_.{0,1000}\.log/ nocase ascii wide
+        $string17_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\ITarian_Remote_Access_.{0,1000}\.log/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string18_ComodoRMM__greyware_tool_keyword = /\\ITarianRemoteAccess\.exe/ nocase ascii wide
+        $string18_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\ITarianRemoteAccess\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string19_ComodoRMM__greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\Endpoint\sManager\\/ nocase ascii wide
+        $string19_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\Endpoint\sManager\\/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string20_ComodoRMM__greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\RemoteControl\\/ nocase ascii wide
+        $string20_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\RemoteControl\\/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string21_ComodoRMM__greyware_tool_keyword = /\\Remote_Control_by_ITarian_.{0,1000}\.log/ nocase ascii wide
+        $string21_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\Remote_Control_by_ITarian_.{0,1000}\.log/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string22_ComodoRMM__greyware_tool_keyword = /\\remotecontrol\\rcontrol\.exe/ nocase ascii wide
+        $string22_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\remotecontrol\\rcontrol\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string23_ComodoRMM__greyware_tool_keyword = /\\remotecontrol\\rviewer\.exe/ nocase ascii wide
+        $string23_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\remotecontrol\\rviewer\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string24_ComodoRMM__greyware_tool_keyword = /\\RemoteControlbyITarian\s\(3\)\.exe/ nocase ascii wide
+        $string24_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\RemoteControlbyITarian\s\(3\)\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string25_ComodoRMM__greyware_tool_keyword = /\\RemoteControlbyITarian_\(3\)\.exe/ nocase ascii wide
+        $string25_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\RemoteControlbyITarian_\(3\)\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string26_ComodoRMM__greyware_tool_keyword = /\\RemoteControlSetup\.exe/ nocase ascii wide
+        $string26_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\RemoteControlSetup\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string27_ComodoRMM__greyware_tool_keyword = /\\RmmService\.exe/ nocase ascii wide
+        $string27_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\RmmService\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string28_ComodoRMM__greyware_tool_keyword = /\\SOFTWARE\\ITarian\\RemoteControl/ nocase ascii wide
+        $string28_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\SOFTWARE\\ITarian\\RemoteControl/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string29_ComodoRMM__greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\ITarian\\ITSM\\/ nocase ascii wide
+        $string29_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\ITarian\\ITSM\\/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string30_ComodoRMM__greyware_tool_keyword = /\>Remote\sControl\sby\sItarian\</ nocase ascii wide
+        $string30_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\>Remote\sControl\sby\sItarian\</ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string31_ComodoRMM__greyware_tool_keyword = /\>RmmService\</ nocase ascii wide
+        $string31_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /\>RmmService\</ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string32_ComodoRMM__greyware_tool_keyword = /cwn\-log\-collector\-production\-clone\..{0,1000}\.elasticbeanstalk\.com/ nocase ascii wide
+        $string32_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /cwn\-log\-collector\-production\-clone\..{0,1000}\.elasticbeanstalk\.com/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string33_ComodoRMM__greyware_tool_keyword = /ITarianRemoteAccessSetup\.exe/ nocase ascii wide
+        $string33_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /ITarianRemoteAccessSetup\.exe/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string34_ComodoRMM__greyware_tool_keyword = /Linux\sITSM\sAgent\/.{0,1000}\s\-e\s\/tmp\/install\.sh\s/ nocase ascii wide
+        $string34_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /Linux\sITSM\sAgent\/.{0,1000}\s\-e\s\/tmp\/install\.sh\s/ nocase ascii wide
         // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment (Itarian RMM)
         // Reference: https://one.comodo.com/
-        $string35_ComodoRMM__greyware_tool_keyword = /mdmsupport\.comodo\.com/ nocase ascii wide
+        $string35_ComodoRMM__Itarian_RMM__greyware_tool_keyword = /mdmsupport\.comodo\.com/ nocase ascii wide
 
     condition:
         any of them
@@ -10916,3287 +10916,6 @@ rule FudgeC2_greyware_tool_keyword
         // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
         // Reference: https://github.com/Ziconius/FudgeC2
         $string2_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/localhost\:5001/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule GeoProxy_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'GeoProxy' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "GeoProxy"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_GeoProxy_greyware_tool_keyword = /pooljnboifbodgifngpppfklhifechoe/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Get_WmiObject_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Get-WmiObject' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Get-WmiObject"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Get SCCM server with Get-WmiObject
-        // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string1_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\s\-class\sSMS_Authority\s\-namespace\sroot\\CCM/ nocase ascii wide
-        // Description: Get all users
-        // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string2_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\s\-Namespace\s\"root\\directory\\ldap\"\s\-Class\sds_user\s/ nocase ascii wide
-        // Description: Get logged on user on remote host with Get-WmiObject
-        // Reference: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1
-        $string3_Get_WmiObject_greyware_tool_keyword = /Get\-WmiObject\swin32_loggedonuser\s\-ComputerName\s/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Getcap_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Getcap' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Getcap"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Enumerating File Capabilities with Getcap
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1_Getcap_greyware_tool_keyword = /getcap\s\-r\s\/\s2\>\/dev\/null/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule getent_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'getent' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "getent"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: linux commands abused by attackers - find guid and suid sensitives perm
-        // Reference: N/A
-        $string1_getent_greyware_tool_keyword = /getent\spasswd\s\|\scut\s\-d\:\s\-f1/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule github_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'github' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "github"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string1_github_greyware_tool_keyword = /\/github\.com.{0,1000}\.exe\?raw\=true/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string2_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/archive\/refs\/tags\/.{0,1000}\.zip/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string3_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.7z/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string4_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.apk/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string5_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.app/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string6_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.as/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string7_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.asc/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string8_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.asp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string9_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bash/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string10_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bat/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string11_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.beacon/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string12_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bin/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string13_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.bpl/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string14_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.c/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string15_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.cer/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string16_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.cmd/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string17_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.com/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string18_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.cpp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string19_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.crt/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string20_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.cs/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string21_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.csh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string22_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.dat/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string23_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.dll/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string24_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.docm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string25_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.dos/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string26_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.exe/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string27_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.go/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string28_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.gz/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string29_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.hta/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string30_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.iso/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string31_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.jar/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string32_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.js/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string33_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.lnk/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string34_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.log/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string35_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.mac/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string36_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.mam/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string37_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.msi/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string38_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.msp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string39_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.nexe/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string40_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.nim/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string41_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.otm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string42_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.out/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string43_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.ova/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string44_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pem/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string45_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pfx/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string46_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pl/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string47_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.plx/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string48_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string49_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.ppk/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string50_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.ps1/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string51_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.psm1/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string52_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pub/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string53_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.py/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string54_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pyc/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string55_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.pyo/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string56_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.rar/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string57_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.raw/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string58_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.reg/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string59_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.rgs/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string60_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.RGS/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string61_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.run/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string62_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.scpt/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string63_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.script/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string64_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.sct/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string65_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.sh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string66_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.ssh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string67_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.sys/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string68_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.teamserver/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string69_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.temp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string70_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.tgz/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string71_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.tmp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string72_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.vb/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string73_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.vbs/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string74_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.vbscript/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string75_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.ws/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string76_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.wsf/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string77_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.wsh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string78_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.X86/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string79_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.X86_64/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string80_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.xlam/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string81_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.xlm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string82_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.xlsm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string83_github_greyware_tool_keyword = /\/github\.com\/.{0,1000}\/raw\/main\/.{0,1000}\.zip/ nocase ascii wide
-        // Description: Github executables download initiated - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string84_github_greyware_tool_keyword = /codeload\.github\.com\// nocase ascii wide
-        // Description: Github executables download initiated - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string85_github_greyware_tool_keyword = /objects\.githubusercontent\.com\/github\-production\-release\-asset\-/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string86_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.7z/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string87_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.apk/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string88_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.app/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string89_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.as/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string90_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.asc/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string91_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.asp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string92_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bash/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string93_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bat/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string94_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.beacon/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string95_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bin/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string96_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.bpl/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string97_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.c/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string98_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cer/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string99_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cmd/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string100_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.com/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string101_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cpp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string102_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.crt/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string103_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.cs/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string104_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.csh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string105_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dat/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string106_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dll/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string107_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.docm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string108_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.dos/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string109_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.exe/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string110_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.go/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string111_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.gz/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string112_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.hta/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string113_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.iso/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string114_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.jar/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string115_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.js/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string116_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.lnk/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string117_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.log/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string118_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.mac/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string119_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.mam/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string120_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.msi/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string121_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.msp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string122_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.nexe/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string123_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.nim/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string124_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.otm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string125_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.out/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string126_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ova/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string127_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pem/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string128_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pfx/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string129_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pl/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string130_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.plx/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string131_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string132_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ppk/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string133_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ps1/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string134_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.psm1/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string135_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pub/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string136_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.py/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string137_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pyc/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string138_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.pyo/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string139_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.rar/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string140_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.raw/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string141_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.reg/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string142_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.rgs/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string143_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.RGS/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string144_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.run/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string145_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.scpt/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string146_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.script/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string147_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sct/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string148_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string149_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ssh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string150_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.sys/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string151_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.teamserver/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string152_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.temp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string153_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.tgz/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string154_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.tmp/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string155_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vb/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string156_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vbs/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string157_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.vbscript/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string158_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.ws/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string159_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.wsf/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string160_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.wsh/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string161_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.X86/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string162_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.X86_64/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string163_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlam/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string164_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string165_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.xlsm/ nocase ascii wide
-        // Description: Github raw access content - abused by malwares to retrieve payloads
-        // Reference: https://github.com/
-        $string166_github_greyware_tool_keyword = /raw\.githubusercontent\.com.{0,1000}\.zip/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule go_http_tunnel_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'go-http-tunnel' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "go-http-tunnel"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string1_go_http_tunnel_greyware_tool_keyword = /\stunneld\.service/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string2_go_http_tunnel_greyware_tool_keyword = /\/\.tunneld\/.{0,1000}\.key/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string3_go_http_tunnel_greyware_tool_keyword = /\/go\-http\-tunnel\.git\.git/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string4_go_http_tunnel_greyware_tool_keyword = /\/go\-http\-tunnel\/cmd\// nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string5_go_http_tunnel_greyware_tool_keyword = /\/tunneld\.service/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string6_go_http_tunnel_greyware_tool_keyword = /03cbb2a21105c9aae4fb499ad8fb4898d6c87c7d3a3071eae601bdae8bad19ab/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string7_go_http_tunnel_greyware_tool_keyword = /0a08cac081d32713c5aaa00b04424dcdf2ffcaa7b58620eebc9ee17b5d25ebbf/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string8_go_http_tunnel_greyware_tool_keyword = /0cba4351414f3da3355bc9ab73052e0d36d6f18e513047650dad956fb6344285/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string9_go_http_tunnel_greyware_tool_keyword = /0faad61745a8c559756165ec4bf749c7ee334b815b750dbdc671af2283805739/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string10_go_http_tunnel_greyware_tool_keyword = /1433542e6c771cd59c491558e482ebbc7d40bbaf86190379bb4236067b21d805/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string11_go_http_tunnel_greyware_tool_keyword = /14d18d34c262664246cc1eb46dfe1159fce9b5d0b14d6ba013f08d1d55a6eeb6/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string12_go_http_tunnel_greyware_tool_keyword = /2c183c4c53ddb0419f401cf690f16ccbeefc829f09fafca2a19700665c322cbc/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string13_go_http_tunnel_greyware_tool_keyword = /341e6c79cb6383b166d0f21f77f88735b340195dce8945bf9ff05a3cda1cb9a0/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string14_go_http_tunnel_greyware_tool_keyword = /3daf819f691c66a2216bc047349e5d6ed252aa1393c076cce9f68a1a7bed5b76/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string15_go_http_tunnel_greyware_tool_keyword = /4416b23c351acb1ea86eff2f75926ee7fbb78dea66fe2f01e38e9f81683645e9/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string16_go_http_tunnel_greyware_tool_keyword = /57944ea45f77ef9b4757a95c077b30af638ed72c1399e75356f08cae37a3965f/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string17_go_http_tunnel_greyware_tool_keyword = /5c4247c201d5bfb98cd4021c4cf0dd732c4fa47daeb4c70fcb29f7ddfe1b5760/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string18_go_http_tunnel_greyware_tool_keyword = /616bcf6f1ebc84ce6c2f0469f6c38b08eabef2339dfca03d0782a54ae6cc6024/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string19_go_http_tunnel_greyware_tool_keyword = /6794102a7b3d61dd4344b555ab684f4140d40da9ec0da36b03cd397f1987bb61/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string20_go_http_tunnel_greyware_tool_keyword = /690f31d0d8f473ae1f71a7fbce1e7943d601f6adf2065d22d44162266c88f546/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string21_go_http_tunnel_greyware_tool_keyword = /7f23ac69fa3f519b324bcc33e56272bf1cc9191980bef960a562099844659a3c/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string22_go_http_tunnel_greyware_tool_keyword = /81317db18f63092007326ae6330d704c17d95ff2dfc65fc1922d0f3708ddee6e/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string23_go_http_tunnel_greyware_tool_keyword = /873b15cab88f6d288e02bd71e5cefb1edf0b96dc80a8a0d7d404f4b327c68097/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string24_go_http_tunnel_greyware_tool_keyword = /8eb3e6b0ac776c819158b0127631f860223f5fe80cc7297d01626252562cb866/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string25_go_http_tunnel_greyware_tool_keyword = /8f904a5fd2b5c821121ad0003e3f4021cc5f1c2969d14e64e67ce35721ab6f70/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string26_go_http_tunnel_greyware_tool_keyword = /9684712e7ea18e0e82bbdf8b990173349ac97423ab59b0daa265a222cfbef816/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string27_go_http_tunnel_greyware_tool_keyword = /9dc3c784b09c7e143046fee8b0b96f2b2c92fa95aad96679e0ab79383e20647c/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string28_go_http_tunnel_greyware_tool_keyword = /a11a44666cbdc5c56112cdb109e37c7f4f466f947500efce2192007d553a07f5/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string29_go_http_tunnel_greyware_tool_keyword = /a5dd833c5c1f9ac79705b4fddd9d9e7dde9b25f5bbf79a7dc1c00537f181f47a/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string30_go_http_tunnel_greyware_tool_keyword = /aacf0692bcac39321f5f427164f6807107ae9bc75404a07d009f553710d9bc55/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string31_go_http_tunnel_greyware_tool_keyword = /b3f0715b807f2c31670a389cb430f01423f281d38f44e93d53e5fb2732406173/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string32_go_http_tunnel_greyware_tool_keyword = /bb5f01316e315e4a9039a17dd2358cec0a86cac566638d8ce5e2ce0b5ebc1fbf/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string33_go_http_tunnel_greyware_tool_keyword = /c6b4e0b176b29a3a2bf68e702195cbf72d705f8c6419ac17e7bfd16b18429447/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string34_go_http_tunnel_greyware_tool_keyword = /cbdf3b97f6a72121a00e8f14fd0bbd564aefc6edfde0b9449f1613559678d09f/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string35_go_http_tunnel_greyware_tool_keyword = /cc3badcfbd2bad09f5a4312eabdc50b2d2259cbac5429deb6e53340468c7b7b0/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string36_go_http_tunnel_greyware_tool_keyword = /cde0f088445933eef88c2663bf2684f6e020d30347a7a230658d534c05f4e8d9/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string37_go_http_tunnel_greyware_tool_keyword = /cf418ac948b21bbed8565d6f11419405aa7b25d3c37b8a2b212e85f6aa76d233/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string38_go_http_tunnel_greyware_tool_keyword = /d5e79002815d4d904942d07786fab82492f83912d175804e21c059c00efe3d95/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string39_go_http_tunnel_greyware_tool_keyword = /e7f434888e992b2679e221199354f80eaee1e7c3c546043f37aeefa3fbe252ae/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string40_go_http_tunnel_greyware_tool_keyword = /edb84e2914bb1bd31a213b87aabd387999159093c5c00138cbc8f8f8fdc77fb1/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string41_go_http_tunnel_greyware_tool_keyword = /f0ded25a361ea53de7518a357c03d733d8caf206f7a90a8e3b4d6a29563c9277/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string42_go_http_tunnel_greyware_tool_keyword = /f955157646e94bed38b8e4d6ce6df58489eeb89ebf0d44ffe03b3c4902dc5d4e/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string43_go_http_tunnel_greyware_tool_keyword = /mmatczuk\/go\-http\-tunnel\.git/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string44_go_http_tunnel_greyware_tool_keyword = /tunnel\s\-config\s.{0,1000}tunnel\.yml/ nocase ascii wide
-        // Description: Fast and secure tunnels over HTTP/2
-        // Reference: https://github.com/mmatczuk/go-http-tunnel
-        $string45_go_http_tunnel_greyware_tool_keyword = /tunneld\s\-tlsCrt\s/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule gofile_io_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'gofile.io' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "gofile.io"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: legitimate service abused by lots of stealer to exfiltrate data
-        // Reference: https://gofile.io
-        $string1_gofile_io_greyware_tool_keyword = /\.gofile\.io\/uploadFile/ nocase ascii wide
-        // Description: legitimate service abused by lots of stealer to exfiltrate data
-        // Reference: https://gofile.io
-        $string2_gofile_io_greyware_tool_keyword = /api\.gofile\.io\/getServer/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule golang_c2_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'golang_c2' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "golang_c2"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: C2 written in Go for red teams aka gorfice2k
-        // Reference: https://github.com/m00zh33/golang_c2
-        $string1_golang_c2_greyware_tool_keyword = /http\:\/\/127\.0\.0\.1\:8000\/gate\.html/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Gom_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Gom VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Gom VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Gom_VPN_greyware_tool_keyword = /ckiahbcmlmkpfiijecbpflfahoimklke/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule goMatrixC2_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'goMatrixC2' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "goMatrixC2"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: C2 leveraging Matrix/Element Messaging Platform as Backend to control Implants in goLang.
-        // Reference: https://github.com/n1k7l4i/goMatrixC2
-        $string1_goMatrixC2_greyware_tool_keyword = /https\:\/\/matrix\.org\/_matrix\/client\/r0\/rooms\/.{0,1000}\/send\/m\.room\.message/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Goodsync_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Goodsync' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Goodsync"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string1_Goodsync_greyware_tool_keyword = /\/GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string2_Goodsync_greyware_tool_keyword = /\\CurrentControlSet\\Services\\GsServer/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string3_Goodsync_greyware_tool_keyword = /\\DIRECTORY\\BACKGROUND\\SHELL\\GOODSYNC/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string4_Goodsync_greyware_tool_keyword = /\\GoodSync\-2.{0,1000}\-.{0,1000}\.log/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string5_Goodsync_greyware_tool_keyword = /\\GOODSYNC2GO\.EXE/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string6_Goodsync_greyware_tool_keyword = /\\GOODSYNC2GO\-V.{0,1000}\.EXE/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string7_Goodsync_greyware_tool_keyword = /\\GoodSync\-vsub\-Setup\.exe/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string8_Goodsync_greyware_tool_keyword = /\\gs\-runner\.exe/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string9_Goodsync_greyware_tool_keyword = /\\GS\-SERVER\.EXE/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string10_Goodsync_greyware_tool_keyword = /\\Program\sFiles\\SIBER\sSYSTEMS\\GOODSYNC\\/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string11_Goodsync_greyware_tool_keyword = /\\Siber\sSystems\\GoodSync\\/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string12_Goodsync_greyware_tool_keyword = /\\Users\\.{0,1000}\\AppData\\Local\\GoodSync/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string13_Goodsync_greyware_tool_keyword = /\>GoodSync\</ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string14_Goodsync_greyware_tool_keyword = /\>gs\-runner\.exe\</ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string15_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}gdrive\:\/\/www\.googleapis\.com\/GS_Sync\// nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string16_Goodsync_greyware_tool_keyword = /Copy\sNew\s.{0,1000}sftp\:\/\// nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string17_Goodsync_greyware_tool_keyword = /GoodSync\sServer/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string18_Goodsync_greyware_tool_keyword = /GoodSync\-vsub\-2Go\-Setup\.exe/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string19_Goodsync_greyware_tool_keyword = /mediator\.goodsync\.com/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string20_Goodsync_greyware_tool_keyword = /Program\sFiles\\Siber\sSystems\\GoodSync/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string21_Goodsync_greyware_tool_keyword = /SOFTWARE\\Siber\sSystems\\GoodSync\\Profiles/ nocase ascii wide
-        // Description: GoodSync is a backup and file synchronization program abused by attacker for data exfiltration
-        // Reference: https://www.goodsync.com/
-        $string22_Goodsync_greyware_tool_keyword = /temp.{0,1000}\\gsync\.exe/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Google_Remote_Desktop_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Google Remote Desktop' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Google Remote Desktop"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string1_Google_Remote_Desktop_greyware_tool_keyword = /\schrome\-remote\-desktop\@/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string2_Google_Remote_Desktop_greyware_tool_keyword = /\.chrome\-remote\-desktop\-session/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string3_Google_Remote_Desktop_greyware_tool_keyword = /\/system\/chrome\-remote\-desktop\@/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string4_Google_Remote_Desktop_greyware_tool_keyword = /\\Chrome\sRemote\sDesktop\\host\.json/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string5_Google_Remote_Desktop_greyware_tool_keyword = /\\Google\\Chrome\sRemote\sDesktop\\/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string6_Google_Remote_Desktop_greyware_tool_keyword = /\\pipe\\chrome_remote_desktop/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string7_Google_Remote_Desktop_greyware_tool_keyword = /\\remote_assistance_host\.exe/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string8_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_desktop\.exe/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string9_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_host\.exe/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string10_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_native_messaging_host\.exe/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string11_Google_Remote_Desktop_greyware_tool_keyword = /\\remoting_start_host\.exe/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string12_Google_Remote_Desktop_greyware_tool_keyword = /\<Data\>Product\:\sChrome\sRemote\sDesktop\sHost/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string13_Google_Remote_Desktop_greyware_tool_keyword = /\<Provider\sName\=\"chromoting\"\s\/\>/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string14_Google_Remote_Desktop_greyware_tool_keyword = /Channel\sIP\sfor\sclient\:\s.{0,1000}\@gmail\.com\/chromoting/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string15_Google_Remote_Desktop_greyware_tool_keyword = /Chrome\sremote\sdesktop\sinstallation\scompleted/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string16_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop\.service/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string17_Google_Remote_Desktop_greyware_tool_keyword = /chrome\-remote\-desktop_current_amd64\.deb/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string18_Google_Remote_Desktop_greyware_tool_keyword = /chromeremotedesktophost\.msi/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string19_Google_Remote_Desktop_greyware_tool_keyword = /export\sCHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string20_Google_Remote_Desktop_greyware_tool_keyword = /\-Force\sStop\-Process\s\-Name\sremote_webauthn/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string21_Google_Remote_Desktop_greyware_tool_keyword = /google\-chrome\-stable_current_amd64\.deb/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string22_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/_\/oauthredirect/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string23_Google_Remote_Desktop_greyware_tool_keyword = /https\:\/\/remotedesktop\.google\.com\/headless/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string24_Google_Remote_Desktop_greyware_tool_keyword = /inomeogfingihgjfjlpeplalcfajhgai/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string25_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/access/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string26_Google_Remote_Desktop_greyware_tool_keyword = /remotedesktop\.google\.com\/support/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string27_Google_Remote_Desktop_greyware_tool_keyword = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string28_Google_Remote_Desktop_greyware_tool_keyword = /Stop\-Process\s\-Force\s\-Name\sremote_assistance_host_uiaccess/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string29_Google_Remote_Desktop_greyware_tool_keyword = /Stop\-Process\s\-Force\s\-Name\sremoting_native_messaging_host/ nocase ascii wide
-        // Description: Google Chrome Remote Desktop to access remote computers - abused by attackers
-        // Reference: https://remotedesktop.google.com
-        $string30_Google_Remote_Desktop_greyware_tool_keyword = /SYSLOG_IDENTIFIER\=chrome\-remote\-desktop/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule googleweblight_com_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'googleweblight.com' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "googleweblight.com"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Open Redirect vulnerability being exploited by threat actors in Google Web Light
-        // Reference: https://x.com/1ZRR4H/status/1723062039680000255
-        $string1_googleweblight_com_greyware_tool_keyword = /https\:\/\/googleweblight\.com\/i\?u\=.{0,1000}ipfs\..{0,1000}\.html/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule gost_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'gost' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "gost"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string1_gost_greyware_tool_keyword = /\sgost\.tar\.gz/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string2_gost_greyware_tool_keyword = /\sgost\/cmd\/gost/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string3_gost_greyware_tool_keyword = /\"gost\sinstallation\scompleted\!\"/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string4_gost_greyware_tool_keyword = /\/go\-gost\/core\// nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string5_gost_greyware_tool_keyword = /\/gost\.tar\.gz/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string6_gost_greyware_tool_keyword = /\/gost\/raw\/master\/install\.sh/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string7_gost_greyware_tool_keyword = /\/gost\/releases\/download\/.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string8_gost_greyware_tool_keyword = /\\gost\.tar\.gz/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string9_gost_greyware_tool_keyword = /0276ec0ea830a61275437a98b81224b95712ecac5a7b9850bcbf2444ff46e47a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string10_gost_greyware_tool_keyword = /02838437eb0acf23204585e8c21252b8bb9413dffbfcbfcd0ff9b05735a98ac1/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string11_gost_greyware_tool_keyword = /02bacaa4ba2b64eb019f7b9da5861192bf0e85e4615a299035086decf9da7d06/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string12_gost_greyware_tool_keyword = /047ab1af44f368297bf21b302a2548a556ca4e6c6b721940954e88f43d1cfba5/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string13_gost_greyware_tool_keyword = /06dfa5d139637adf641c5ce926f88aef127165d305af64e655ebaf069c7e3691/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string14_gost_greyware_tool_keyword = /078df1ee57a842cc2395869797ece90a7a6d7158090a84f8b78f41a3072505f6/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string15_gost_greyware_tool_keyword = /0cfc3c9a964253eea12a9d5705ee0ca0967605483f1dca3c6ef28aed5fdc5b30/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string16_gost_greyware_tool_keyword = /0d7f56e583575888e68ce8c945fbd4c05842dceb352ddc7e8beeb86fe0d36861/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string17_gost_greyware_tool_keyword = /0e110e91b09baca32b4fd9e0a972162f36f2e6e7c58bf4ee142bcda7c3411c93/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string18_gost_greyware_tool_keyword = /10168a998e30a4f0d0d175f1aa2d5a533df3d69cf206f04f7d2686afdbe0949f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string19_gost_greyware_tool_keyword = /110ec720cf51d05c3a07ee73534f4c949644920a4760f1ceb8fc09e80172aaf0/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string20_gost_greyware_tool_keyword = /1296cb071a8524b29efc2c955fe2bffb4eaf545823e4dad698fb70344fc48074/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string21_gost_greyware_tool_keyword = /146a734ad8082ac508f0a82c7655f3bfe205f5f19f6c57cbd46ad24ef5b24404/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string22_gost_greyware_tool_keyword = /17eaa4e99dafe4b0cd9d250dccb2d2edb1c204922a58da7322926eb4cc2d6a70/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string23_gost_greyware_tool_keyword = /1912f7bb54e7c5ca2f93c0302a8bb55df6bd4ed8489d92619cfbbe970bb0bd7f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string24_gost_greyware_tool_keyword = /1cd2acf92f240f2672bc390bdd1a0138eb0790732dca5c9f7e0d88f980ccc476/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string25_gost_greyware_tool_keyword = /1d716a8d9312001b2e35f0e9081e4efd60c0204e5bc9ce5728a82d02218ba849/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string26_gost_greyware_tool_keyword = /1da052796a987601ac6085ccbe6957104e3d56656be4b4cfcfbef4796ba8217b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string27_gost_greyware_tool_keyword = /1dc896f509482e7b6892dcd0e4f83cf5417be5f7a9edd1da5afc810f49ebeb6c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string28_gost_greyware_tool_keyword = /1ff7731d1b7af7110f27796e0fecb551cb5067030aa7d87e333d46f3f57f4214/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string29_gost_greyware_tool_keyword = /20c52dac0196b6cad71bcb9f4796ca4db198465e5366345347f64acdcb5ede7a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string30_gost_greyware_tool_keyword = /254cc9b46f64f1ae8150c65632ce0e749dd894b20db9d39313e8030477152add/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string31_gost_greyware_tool_keyword = /25dec6e071fbf271817fa34a76abe61e41e2cb27cc52f25d78488340ccedd190/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string32_gost_greyware_tool_keyword = /2adf13d1d4585ea2efd72e3ffe5d6f9be0a553c66e3d171a0e13f18f7f05d375/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string33_gost_greyware_tool_keyword = /2c344a29ed1d2107554b83137bdcd87db445be709b089520282945d21c755189/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string34_gost_greyware_tool_keyword = /2c9ecb79edd7d06bfec0529052f8fcfc4c9c9add475baa9179f6f9e23c456326/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string35_gost_greyware_tool_keyword = /2dfc1eeac50e3d783d124fa88c3072c2e475d6d95603b85d4774c37e37a76165/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string36_gost_greyware_tool_keyword = /2e8bd529f1452a300c60d13e57b46c35d1c3c2f8b42a4b03ce82fbf78211af49/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string37_gost_greyware_tool_keyword = /2ec1517476a6c8d3a524fba2461233a2f44f7fdc5ee8906aa7bead7514854cc7/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string38_gost_greyware_tool_keyword = /2f36ff1ba8c834c8a47211ccd879acb37f75b1b34cc814c39728c7a190151c97/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string39_gost_greyware_tool_keyword = /2f6d418d6b2a974433581cdb959f6b0f8f305fa48c00ad44dc19a9d7504a4c5f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string40_gost_greyware_tool_keyword = /2f6d418d6b2a974433581cdb959f6b0f8f305fa48c00ad44dc19a9d7504a4c5f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string41_gost_greyware_tool_keyword = /308f03aa9f8e2055a27007bb566fd24068cf518e7042aa000a0bc53b29214c9d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string42_gost_greyware_tool_keyword = /30ff629067623e3bb4a4056527fdc3e9d9c7b2428836445ea58a88c720173296/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string43_gost_greyware_tool_keyword = /3101575fbdbee11b2d4d592f92582489c842f20fab0cb2ade9f2f3a207c202d8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string44_gost_greyware_tool_keyword = /330c1069831f7c60d89436905cb8ac6794d40896e9b8b5e539a2c9876a9cd324/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string45_gost_greyware_tool_keyword = /34abcda5eb491ea4b167e4b2d9aa157adb87f035c1fbcc43aaedb6f9e3018418/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string46_gost_greyware_tool_keyword = /36152e9a1e47217f9aa049b7893acd4cf08098874396ff06b0c52373bedab5fb/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string47_gost_greyware_tool_keyword = /380d521181512fb9f4276d6f8fabbdcce082cee36efe133f68000a153ac3960f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string48_gost_greyware_tool_keyword = /395fe3d081d4bcd031770591913016fd6f5af3e7fdbf29219610acca1da3b6c9/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string49_gost_greyware_tool_keyword = /39f119574d66d00a12ab7ed202bca6e41204bf838fb5f58ca170bdf76beaa445/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string50_gost_greyware_tool_keyword = /3be15a6f8a0de053d4fde83cfba6880cfbbf83566b37c35a6a7ab82a7dfc3441/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string51_gost_greyware_tool_keyword = /3c5d123aea23f54ce965bd72d3019945db3f07524fba2e76e36a6a0efc0d8650/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string52_gost_greyware_tool_keyword = /3f11e922d2e804a34396aab6ec9e7e48a23be82982a90f7b1d407c9b92062991/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string53_gost_greyware_tool_keyword = /40dd6156b4167e4846f1ea091960a88547de9d3986d96a7b9044a934aec61d86/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string54_gost_greyware_tool_keyword = /4363de01f1dfd6b393f889bb916128df95a02bc1df2c294e28a48bd197a685f2/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string55_gost_greyware_tool_keyword = /43ba05d30fa8d86631e5b24dd8eb9a81e189d146a3eb39d6cf230329bce81c8d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string56_gost_greyware_tool_keyword = /450bf298cc66b2d739e6270a9e509eed80026db3551e3754b3810b63db62354e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string57_gost_greyware_tool_keyword = /4549122ba17882aaa89999d170ca7cfe4d2f4d9cc9b6c57961abf276576c9d42/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string58_gost_greyware_tool_keyword = /4585828aa5ae1aec2a5d5bfb371236dc180ed47489a6684d468b8b83a5d300dd/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string59_gost_greyware_tool_keyword = /4600b361c95e232cf152cb7a0e9c004fd8e76e577ced2bae2e063dda12a5c50b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string60_gost_greyware_tool_keyword = /47d38c5f263c1372cb9ce16e921c06cf34911ba15639f6151e07fb47abb296fd/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string61_gost_greyware_tool_keyword = /48174210fbafbc975cb8774bc4fa277aceb5a1ba565deef2df244173a21ecc0a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string62_gost_greyware_tool_keyword = /49e7c86340e6930402911320150a14e5aad183efafb8b56747d97a8a5469a187/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string63_gost_greyware_tool_keyword = /4c8a17db253b2eb5af4596e93f8f766f815546c3b40700e8d88baac680a579a9/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string64_gost_greyware_tool_keyword = /4d66ce63e4917a7e2749a851733faca18a04ab2a289aa5650ca99a7f806a3c7f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string65_gost_greyware_tool_keyword = /4d7fa7fbfca88ec9adb9e227f4049a544acd312dd5c3a4d4f936e053497b7d65/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string66_gost_greyware_tool_keyword = /4ee1ee85ab16e36d6dbc5b4d8795375bb10edab50e451eed5adf69ddd4792575/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string67_gost_greyware_tool_keyword = /52820d7c8b0fad129a6d4d4e631d627dbf63263c0c720569afbc43da085198cb/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string68_gost_greyware_tool_keyword = /546505f3c8cb7cbe041b77cafa77a673bd38285e3de9918825f2f7f4fa773299/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string69_gost_greyware_tool_keyword = /5472468e92c54af495a753b9feb24fa90aa0e0d321bebb9c688fe5c9210a1ae7/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string70_gost_greyware_tool_keyword = /54d32b6689f4ae55b5402f89cca28cdd4889798022d1aee11674a4e506cfc7e5/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string71_gost_greyware_tool_keyword = /557366669af1df330ca6a7f7488ff60b77ac3f99cfc8568a9759ce24d55563e5/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string72_gost_greyware_tool_keyword = /564a0f3db972920e005a53d22f8062e10652bcb9fa9e2ec4218fa16446c2c344/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string73_gost_greyware_tool_keyword = /56affb1b7a635c42aa5009f45a7f2e7a1bf7fcbe6c19a4c66a89872c2f2a991f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string74_gost_greyware_tool_keyword = /58553520765d913785914cb41570a76668b07e43c40d313841f7c03fddc899cd/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string75_gost_greyware_tool_keyword = /5952611ae5f32afa4649c7414dab74436554ca71518ec8bf941041673818a639/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string76_gost_greyware_tool_keyword = /5babcba4005adce8f620995f2a56e5d6bdcf6695f52a539bdaeaff889d47e8b5/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string77_gost_greyware_tool_keyword = /5bd56a5da478c542e8265d5fd15fe8ba90f720bbb6a2649ea6c4ddd5acb77d85/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string78_gost_greyware_tool_keyword = /5c089eabdf1c1446168d69c1efad0fae0d0217d8a671539bf859fe823248850d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string79_gost_greyware_tool_keyword = /5c89234b305a4a87b77598e6c4490a789cf9312575e3490f226a301bbe76d3e9/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string80_gost_greyware_tool_keyword = /5d2fec2dafb0fd853fa2ff9d4b1314fe47470b59ce0b4d2f3e004d8f4b2bb339/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string81_gost_greyware_tool_keyword = /5d80f05f43ad9ed6f6e2ed7ec55dbac0a987e58eac50129772a27ac2ad5ebeff/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string82_gost_greyware_tool_keyword = /5e0426cef7b6c07eb8844af83c77aed5deae6b05e380690f83acbcead46cfe99/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string83_gost_greyware_tool_keyword = /5e08786b4e4cf505b679ee2e3e03922b9886d6876aa406b123b791cd94497ee0/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string84_gost_greyware_tool_keyword = /5ef00c89ac391313af63b02f4f8a1fa5509c6a6bddf98c2299a765548cae5ff8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string85_gost_greyware_tool_keyword = /5fa64857a76906be355e08a22e0183096bc92e63747a216217356daec482bb7d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string86_gost_greyware_tool_keyword = /60cd72287033962ecbbe8c27c7cb84dd7aeabd183a338ca4195a5b5275138076/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string87_gost_greyware_tool_keyword = /62d7b075905119d8ab637df0f4348aca30ede58adacfe6d05cd3951db128ba91/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string88_gost_greyware_tool_keyword = /630206b6d7b631b431907ab292ab6576e73bee49a3da3456b9caaf2ab8c027d0/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string89_gost_greyware_tool_keyword = /6419610ef4957f7d62fdd16b22764a68ff694a612449195b932d169f523ffe20/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string90_gost_greyware_tool_keyword = /6486fce494f85803b4abd3c18cadd14aa65cda411ed3511a598a7628ef2fd1de/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string91_gost_greyware_tool_keyword = /666e400ed79f20f4f846cfe6bbcf9fb90fbff447695d217731ed5f830afb2f3f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string92_gost_greyware_tool_keyword = /66eda7f0e6f85ede326a715db2d5796a163595fdcf8f8c5240b2cfe509ef738e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string93_gost_greyware_tool_keyword = /67402a451ff767c1045a79d5ee001f255f9b5898c67f76cd021c586e0998c0dd/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string94_gost_greyware_tool_keyword = /681f20b796bc6b59048b2eecf7a05884cfb1ea2464a14364f0769a10077bfb5b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string95_gost_greyware_tool_keyword = /6844205e2b4a41577969581d5447a6d0661cf885daacf50092c777ff4f85328b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string96_gost_greyware_tool_keyword = /68715639afd1f47089068f9de486068471fce5fca4a07aef888f960b73b09d56/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string97_gost_greyware_tool_keyword = /68b38ba64f0639f6c5b7c95e2d19676574cf9cfb2034748c46d89811546f3d88/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string98_gost_greyware_tool_keyword = /68b38ba64f0639f6c5b7c95e2d19676574cf9cfb2034748c46d89811546f3d88/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string99_gost_greyware_tool_keyword = /696fa827e966020026d3d380e63529eb5075a608332788bffd1ca2aadb94062e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string100_gost_greyware_tool_keyword = /6a986a22cb9ff63cf0f9c7ac240eada15806a6b1bc86c61242ccb73d8a24ac23/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string101_gost_greyware_tool_keyword = /6eba09a7e386379e173bea81ca5de348bef4c0f024d2efa963ab8d3bb8b37a8e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string102_gost_greyware_tool_keyword = /6edca5b408b075285b85db4ebfe180dc86695c387f5005f58af8c53a7d36b1a8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string103_gost_greyware_tool_keyword = /6edcee9130bc97aac10f1d04e9a3c86b20c38a66c1aeed24c4e2244cddfd98ea/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string104_gost_greyware_tool_keyword = /6ee659ad14046e38ef7a00c2afe4785674015a5ab08cdf78cf40fa2eb11a891e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string105_gost_greyware_tool_keyword = /7455b514720dacb5dadbf5c3cc1a69614ded8375ebe23daf0778441af6da907d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string106_gost_greyware_tool_keyword = /748db6b8df67896f3adf369e785365c439ec5500daaf480e932adbbfd28ac0da/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string107_gost_greyware_tool_keyword = /7521ae02982e13b74da0f4b9781b66394ffe8755b5d8c2dc3c67eedbb8591729/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string108_gost_greyware_tool_keyword = /7535ea41cfd717ec0beb5dbc2671b7c66e1fb34ef904313899946f297d943e6b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string109_gost_greyware_tool_keyword = /75e170822ea113698c86a194968b088f62e391d9f1151f3b3184decdd8d30d35/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string110_gost_greyware_tool_keyword = /772d623dd57c74226010fd7b330a5e6cf7a6b59ae37fc4dc9a6b47fe46756d99/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string111_gost_greyware_tool_keyword = /789b38bc3c55852ece5657fe808a7aec867a151f8a3f7fe648adcd15172e6278/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string112_gost_greyware_tool_keyword = /790bfe46db189eba7c8d9464da34ec62511b9b2f3ef0889162a5682910563875/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string113_gost_greyware_tool_keyword = /79c98d35d02ac92c72aadf48a1ca55e2b7afe5a41ad70e5cf0467c50a84dce22/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string114_gost_greyware_tool_keyword = /7b23bad83e3921e1d9e528b69b7d643b646231e5b736f8588698326c527e31a7/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string115_gost_greyware_tool_keyword = /7c772e7a840bfa0fa04609f6b8b2938acdb565493514d85146ccf589f04cf12a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string116_gost_greyware_tool_keyword = /7cbcaba89fb2dfe22cbeeaf2426379560f015d49f4dad0caf2cd732146d96b84/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string117_gost_greyware_tool_keyword = /7eda8b7dbce7550e3d56092a4f4bdfe23df822c33e9b5cf20ff986946f8882b0/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string118_gost_greyware_tool_keyword = /7f27f414ebe84f189adc68a963c7735d4cef34307a19cd0c21243ec202f9f456/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string119_gost_greyware_tool_keyword = /7ff4e1c0fb6e485d203b3d484b44de78e00caf0c84be600e8ef94062005b7b9b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string120_gost_greyware_tool_keyword = /8067eadec99ed1f3d97a706a29bc7d2713c4d163973b383513cf41641e7c0c8c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string121_gost_greyware_tool_keyword = /8154e009a82ae62f597ac8b9da160feb7d74125987bfa3a65283ec19583a292f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string122_gost_greyware_tool_keyword = /85057ff4c0fc97cb3b9b269c2bdddc0611cdbd7d748c52a2e4d949de9cdfb157/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string123_gost_greyware_tool_keyword = /8579d38432b7652643a84d0fd7edbc78668ca3f91ddc1d78ee8840a7a35fa9b7/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string124_gost_greyware_tool_keyword = /8768fb4f5c0829e3ed696af614ff761ca72b5538bef2073464f57eadc76f5ed4/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string125_gost_greyware_tool_keyword = /87a25f52f233c1176eeeab554a2941f1738a9e86669fb7febe8155d15ddf5530/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string126_gost_greyware_tool_keyword = /884a510aa8274a74bd77d27e5ae3b55c55a55ccc115ef0985d10a69b359e1453/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string127_gost_greyware_tool_keyword = /89af64dd653594b71277b175037995b356d139881c766706a4ab1862250a7f61/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string128_gost_greyware_tool_keyword = /8a1d6e1d9a8494a491c1f2fef92f0243f4d39406fa159b4ecb45428148fcbeb4/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string129_gost_greyware_tool_keyword = /8c1fa8087f1f0542b4b982791b6b403e278a3ff6154ed37a20f6c590054edda4/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string130_gost_greyware_tool_keyword = /8d59755171b977af9ec836990ee55a4d1f17873d7773131267b774b14d121fff/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string131_gost_greyware_tool_keyword = /8e3a219286ad2715712ada61697d622cf5eb597a05bab126546101cc48e0991b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string132_gost_greyware_tool_keyword = /8eef0831a9aa9bbf01ae154c47595b024470c07be4c80b37b73b47590467bc32/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string133_gost_greyware_tool_keyword = /8f1198f114049ac2a556308e557acd1ab0174bf7943b2da160be8f32873f81ea/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string134_gost_greyware_tool_keyword = /90803cb7a60a71766d20b494eb85e92789c3b0f6212f67595540ab706cb734d6/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string135_gost_greyware_tool_keyword = /929081341e76319dc5209b58611cc5304b940bed099b2b63589534d1963afab7/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string136_gost_greyware_tool_keyword = /92d2460414d1b79ae54466442eae7628bbb343c70948e8c2f9afa4d158a0f3ef/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string137_gost_greyware_tool_keyword = /956c78246b4873877ac8e1a0ee7eed3ff7f9068826696f40f8a0577c55c8f184/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string138_gost_greyware_tool_keyword = /96c82ea18a4d63d57c4ae10b16e9761fd7a29f92e0704850783768f561e9b85a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string139_gost_greyware_tool_keyword = /96d4cb5937b2b5a38dbe2721ea427ca64ffcd745ecaace820fb4daa1c322f696/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string140_gost_greyware_tool_keyword = /96e1cc96595bc8486dfef57f78f680c49e7b19d12649d43fc6501d7a599b4657/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string141_gost_greyware_tool_keyword = /96f6e9c220b74cce941797d7019d76343c94e257c21b3e92869c0d124d49eab8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string142_gost_greyware_tool_keyword = /9722e8ce213b1c7571ef7c1df9f5777be11289e3bcf9911e0af45a622b5d50c1/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string143_gost_greyware_tool_keyword = /98b39f9470d2ed0cbf458c04e94dc5762c8b72cf4fb51ba2bf641fdc4462668e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string144_gost_greyware_tool_keyword = /9a22c27e8df3ce1c62a160488a7cddba8c14696c0e0eb406c0c85eab8c243a06/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string145_gost_greyware_tool_keyword = /9a52905fb9c6ed8f3c34111f905d0da5f54dbe6868f10023d5551dd2897e22c4/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string146_gost_greyware_tool_keyword = /9cd1f8564ff1c66d969b01e117e922063213eeaaae20fd5c725cdbf7041e4831/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string147_gost_greyware_tool_keyword = /9eca862c8cb8490e6b853171d95c9db07d3f306b3018b0ee5e567d3346d8b2d5/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string148_gost_greyware_tool_keyword = /a10f6df2968d892ca277eeddb104dce0bda26aaf47b6a29fa37f6ef7b9b4b330/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string149_gost_greyware_tool_keyword = /a37e18adcfa7a9faa14430814c622ad6a321cfa65d53d8ca54fed7a55f7c2806/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string150_gost_greyware_tool_keyword = /a49b64c34c17e2f94a789517960f3438cab8b92f8e21560320be9ef68065c9fa/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string151_gost_greyware_tool_keyword = /a51ca6422305b85196bb505e9f7e3ba390af7cd442254b10753dc2c101ff5165/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string152_gost_greyware_tool_keyword = /a578c81ce8548ef3f5f92a572c15aba6369fe262f19e0bfd74b694b3609380f9/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string153_gost_greyware_tool_keyword = /a5c16b96d4df537cdc307206b955f7808b58fc2fb425a327bcd6e0bccf95c1ba/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string154_gost_greyware_tool_keyword = /a7a2808a64b5ee630b2ce13597623de03ca5d7a27870aa72f3e0f8156f20d10c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string155_gost_greyware_tool_keyword = /a91962e86f2b0b0a3a75a097ad056c5595dce4a66a204d15507d03da6eec699c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string156_gost_greyware_tool_keyword = /a94fff0ac12fea9c27ea48726b7cfa94067884e0c0dff6b1f7abb2ecccee0220/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string157_gost_greyware_tool_keyword = /a95fbce75c24a2262a98fe462872b23207c9c445ac08ea729236d29231ae3562/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string158_gost_greyware_tool_keyword = /a9cc4cc132566b4d7ccf7def13d41d8968697033ca728d29f3eaa09074ade08b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string159_gost_greyware_tool_keyword = /ab6763f2c25e691d68d58da97e7dbedc989cff797e69896e20308bbf65531f90/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string160_gost_greyware_tool_keyword = /ab83898f2137946267913dba2f4f3e0cb43bb418831b58e6e8ecf1d3a8dcc58d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string161_gost_greyware_tool_keyword = /add4bb5104c6fdbb035dd4440efffc28c5b01fa7d333eb42c541f485dee87695/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string162_gost_greyware_tool_keyword = /ae47b091425623f74f010f4ab937cc14b08dc1c815f07626baa20fc03d424a11/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string163_gost_greyware_tool_keyword = /af8851ad2bacdea811ccb1525e7cc6bc73e082034b7c04f6ac5708708ab9f493/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string164_gost_greyware_tool_keyword = /apt\sinstall\sgost/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string165_gost_greyware_tool_keyword = /b19a810320e3d27743080c6732d3ee8caae0c8b747df6001b81b0a1fb226665b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string166_gost_greyware_tool_keyword = /b19a810320e3d27743080c6732d3ee8caae0c8b747df6001b81b0a1fb226665b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string167_gost_greyware_tool_keyword = /b246e5bb88a8e76fe372909c4c3fdaa09d69929ec4d0fd8e373936270a7baa0c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string168_gost_greyware_tool_keyword = /b4c80f3e5fcdf37a0d165af88b219bb2e3ce6b435164e6048b5f1b618b908fea/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string169_gost_greyware_tool_keyword = /b6dd2b211d156dc7295cb5ff0e65eca60ba2d1a86b321ad9bcc4fd37f7ab423f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string170_gost_greyware_tool_keyword = /b6f5c4dc870fdc69d0309c5d5a2a5d48a924a5c14a62b8a13228f071749739b5/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string171_gost_greyware_tool_keyword = /b74f47cf6fd216692dc71832ec8910ddd60b64b08b0aa6593ee83e7c08416f73/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string172_gost_greyware_tool_keyword = /b7e45744a48f5a5db2177b70a0c6741909343d2393045204ebf6c740c50e1de1/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string173_gost_greyware_tool_keyword = /b80fcbbc7283e4737d325cd9566c3269ee97cde42c1377721abab7c45d9e518e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string174_gost_greyware_tool_keyword = /b92dd2f3e8834af0a175dcf8ec3463b7b1012a8f23769fcbe96e4062505bf3b8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string175_gost_greyware_tool_keyword = /bb5f93973ab84243afce3f94f61b49887f275bc88db4e1fd892ab11a9eff7584/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string176_gost_greyware_tool_keyword = /bbab0b5d719860c14954099bbe5f641c3594ffb1ad8d7c91c7895c5bea221964/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string177_gost_greyware_tool_keyword = /be547f029cf462e5654c5d30c3833bdf54cfab966e6287a2f03dfb6c4a16da33/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string178_gost_greyware_tool_keyword = /c11dc344bc262b1034a8cc98fe5f1032b4bc4a6cea372399884746e7fd278944/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string179_gost_greyware_tool_keyword = /c32e4b8d04c97c4ea36989159350bb6b90ec7b7f6328da448be3c94c81e57bfd/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string180_gost_greyware_tool_keyword = /c3d703c8e406f542bb9688a3e31c8164c8a34ff99785e256b2f7da8ae73a85cf/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string181_gost_greyware_tool_keyword = /c3f953d4dd3ae26e5206c1194b1baf5e2d8b8a06778866eb62dbd493db500dc6/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string182_gost_greyware_tool_keyword = /c4cf6a2d28fb9c4fce9337cb06adc5fa69601eec6b2e8d10bc9cd3a211f06e85/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string183_gost_greyware_tool_keyword = /c6599963f89162253d6501a99425525a3406309a757f3515d957d5ff2452dffd/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string184_gost_greyware_tool_keyword = /c685a8322f7e7b2d25860ccdf8432d20f2077fd2f7480fff39f9b7bd4a1da5ba/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string185_gost_greyware_tool_keyword = /c764892be19cdf290c49fc9d421dc1f4f8359a1c1d127c12c3a3f56f7fe199c2/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string186_gost_greyware_tool_keyword = /c7f1a98884e039f619255fc3f5ae2bdd90f6bbe46f00f7a60d72a40e82e4858c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string187_gost_greyware_tool_keyword = /ca9c8dba1b481536626a833232ca6146eb1128f8a4f4c6cb480bb37e771898ea/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string188_gost_greyware_tool_keyword = /cd84694d8b390661c5295f76a523381daaf840c0b3ef16cf02b11086ad8d4028/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string189_gost_greyware_tool_keyword = /cde2bf2225a77d8e5ffded509dbcd87d7445101a67acaf5a533e5884e6240beb/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string190_gost_greyware_tool_keyword = /ce360e6f1b4a634b603f8ac114e938c057bb1cda5141a053d83e16bcfe08e373/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string191_gost_greyware_tool_keyword = /ce3d52dbf87883133296d17bf791fa8a248d7613015bfcae22ae29e0fd0c6ed3/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string192_gost_greyware_tool_keyword = /ce523561aafdc54a24581460262853a579dfeda9653fb88bec95e3752a370118/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string193_gost_greyware_tool_keyword = /d08e1e80fa721e95a7e71a7fed9e2ce0b726207f1e3ee96d809a6f0b34de4c05/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string194_gost_greyware_tool_keyword = /d12a87b47c9213d80b8dfe9626702c953ebbfa92320b01f5f8b42a520a232537/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string195_gost_greyware_tool_keyword = /d38000d3b741f587f2ddaadafcec1b1764a44989115d2c674895366692b0d545/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string196_gost_greyware_tool_keyword = /d4ad1e550ef4d054f3c44601772f9df630323da7b8d28303c649d36659c63e76/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string197_gost_greyware_tool_keyword = /d5257c716525f4cc42778285074e6425b22a272333d08cc75fa27334025b4c90/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string198_gost_greyware_tool_keyword = /d6debc94457abfce0e9fb02187fab3555dcef123591e4b167743d6322f02594a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string199_gost_greyware_tool_keyword = /d83b468e63c93a1496d8205ae9ac103540e23f1bb9410fca97020ab661552e11/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string200_gost_greyware_tool_keyword = /d84969f4cdb8cb0518ecff3a0e9b8de406586afbd3ed9d7307691b375d2eb70b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string201_gost_greyware_tool_keyword = /d86c3884cb7ea73c0fd5e67c49e5375cd30fa5209a46f1bb620c1a8f52964488/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string202_gost_greyware_tool_keyword = /d8cade3974728b8a3221c96a2b4c6beca41f13a2092cfd65deea83be6c78c6a0/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string203_gost_greyware_tool_keyword = /d9bc47b827286a20cdd880d7d1abb2ac7b0bf164bfeab44fcfbbd1fb29f815bf/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string204_gost_greyware_tool_keyword = /dccda6bc37067f48e8efcfdeb8bb67b3a4475ef693bc10228bcba271a24ce5de/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string205_gost_greyware_tool_keyword = /dd1de5874d1287a59c05bcc7c8c298c9efaaf7b3471bc6baf9f3ed645951313d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string206_gost_greyware_tool_keyword = /dd3e4227210af530698b5669fda6ca0e604cf23aeeb5693f9f700aa9bce6256d/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string207_gost_greyware_tool_keyword = /de00ce580104a4afe01a1294a554d922103cf5a048708d022b3c231c5d841779/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string208_gost_greyware_tool_keyword = /e00d839edac7e43f8756ac53d803ea51ca8fdf7b58a888f021d2964ecc3c4351/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string209_gost_greyware_tool_keyword = /e0955f1c4b9c89c926928109a080924c6400136bc2bce8d673ebf42c1d54d510/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string210_gost_greyware_tool_keyword = /e0d8fbe3a59bbf36170e5307ef979b4035784e35c0675ecc9309d35b7000a78e/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string211_gost_greyware_tool_keyword = /e2d664ab3604b082e17dbd728c89bfdb82b5616f92defbe0cec24d94674c5818/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string212_gost_greyware_tool_keyword = /e34406bea3c780144b827a7308a0468c53f773e4da11fb02ebfc91f76ecc754c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string213_gost_greyware_tool_keyword = /e40c9f18d7f47c131876d6ef9a29385802e0d006e75ead9906a980c751fbee16/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string214_gost_greyware_tool_keyword = /e5350eb7c85f40bd5eeb5df8b3cd58805d39b2469a1c1c9817957fbab77e9427/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string215_gost_greyware_tool_keyword = /e59ee7929f1c67c3aae6aa1f31299e0403430e7f25aecbcc572e19db79451d96/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string216_gost_greyware_tool_keyword = /e671c90f050cc03b06a1c976db31a1f2f1a498730c63bb2a29d92c9e47af5f66/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string217_gost_greyware_tool_keyword = /e7e999c455e3e34a8ae2238395af8d0b50dda79499bca470547ffba7ff0c4b39/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string218_gost_greyware_tool_keyword = /e7ff1472a7294417e4f1dcd1c882de9f81f214b3f68f34ef4b8adca5af593c6c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string219_gost_greyware_tool_keyword = /e8b4edf6ac96c960c5462302cbd33c5d4673f2c1f88b6166b79e4766508c658b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string220_gost_greyware_tool_keyword = /e8e3e2c16aee37f48167a81cf38e071e7d0fcfceb2a060c3357f9cbb55fe78b6/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string221_gost_greyware_tool_keyword = /e9ff51cca46583fe8f3ec4077fd863edb916e4d170d491100e4e35d8fa782a14/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string222_gost_greyware_tool_keyword = /ea92bdc7ebb7f0337690db66b44020aca6e1fccc36398b165847848a9f91c6c8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string223_gost_greyware_tool_keyword = /eb74e547aada07218492e1fd08cc0048ff2ab30cc4d5a947122ca6385435f54a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string224_gost_greyware_tool_keyword = /eb8e44c7b95215c53b1bc78a95fa58fc7e8a47eb5d7c2538a5ac7a285857d79b/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string225_gost_greyware_tool_keyword = /ecf0123e2c1131eab2d4deb4ce43f9ffd7be2bf379fef19ed7730ee2ebb586be/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string226_gost_greyware_tool_keyword = /ed19d0c0a65e0eaf321f86f95c1026fbae834876a8431d65609937e56e240ef8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string227_gost_greyware_tool_keyword = /eed97f810223bcf85f69b84040fd3e44e4a4569b4fab06da412c93fed71aef02/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string228_gost_greyware_tool_keyword = /ef1d847561dc29afa96b2e827e7c9a94facb9b6aae2b09ddb33c3c50ab581ae2/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string229_gost_greyware_tool_keyword = /ef37c5075ad3ac56cc95adace9e3686da6448cfcbe8430e997affb263e1cbdd9/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string230_gost_greyware_tool_keyword = /f0d19d73955298f2766e55ff49347e31b2482a3bcba107ccbe38630b1aac355a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string231_gost_greyware_tool_keyword = /f175e055b67f3cbaf4588a9decdb4ed6bf441ea28da502451ddd3da8ca87d390/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string232_gost_greyware_tool_keyword = /f2f4b7576e0e51425fa90f94f272d0163571f90a0ecb8549f8b97dbf89c5255f/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string233_gost_greyware_tool_keyword = /f53753cf2f3d9f2200ae3b959299cbe1153851c534ce19f54daf281fc9238f69/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string234_gost_greyware_tool_keyword = /f669e3b5a2053c74212d0c6f932651dd02fb5c4f5483061999855180b8257fa8/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string235_gost_greyware_tool_keyword = /f6d9c3345d2a1b88d31fd25eeedcf6947ac3e1ca5a693439894ef3c2bb2669f2/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string236_gost_greyware_tool_keyword = /f7f52607771ce2dddde694ebeced6e2dc438a29c8b87cfb93f125db4e968107c/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string237_gost_greyware_tool_keyword = /f891dc701c6d272cbc51bc2975a80e42f80d814f23cda2e9d9c1c005ec216529/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string238_gost_greyware_tool_keyword = /fb540480308fe9d575f799632c7a655ac05f19d6cdb58f5e6ff62a11c7f2ef84/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string239_gost_greyware_tool_keyword = /fc258ceabaf70cc28b8519a46a8045cac406d275707942f88e952621c6c382ec/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string240_gost_greyware_tool_keyword = /fc5f6cc320156278ec6b2f26d97fb4d56a429cb4365b893ce0c9c602ade37b9a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string241_gost_greyware_tool_keyword = /fc6b300edf4c44463e17b8ea10303ee642e4114235fdb0096384f8f3b5f44ce6/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string242_gost_greyware_tool_keyword = /fc97d73cd3ae1d0e0cc492a7b67ef928a59296fd2bebb99e753672b964813895/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string243_gost_greyware_tool_keyword = /fce455e607e33bce8fc0f29bb1bbf34e7a886c39bb48995ee3af25a91f2a57f9/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string244_gost_greyware_tool_keyword = /fdeb3ef3bb907499be9d8fda107426d15ea9535e0f7818a206ded082f31fcbbf/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string245_gost_greyware_tool_keyword = /fe7fb6e885955c83dfa6c9797f277b30971ec4f0261cec7ebbb864408fa02aaa/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string246_gost_greyware_tool_keyword = /ff00ffad183c58baa5252cbdd086257a9ae7b4539a02950eeb3347049e606c5a/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string247_gost_greyware_tool_keyword = /ff4dc01b1bd4ab8682316280bd90cbc15f8cf14eca91e6a5180129b1fd39f2df/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string248_gost_greyware_tool_keyword = /ff5892909fbe28600444bce96bb710aa2d1eaeb69231997ebfa76d40d87fe3ea/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string249_gost_greyware_tool_keyword = /ff63fca9ccb4a827d0b62fc9bdcce683ef8ede7b11f2a0054393e0d061d8d241/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string250_gost_greyware_tool_keyword = /gogost\/gost/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string251_gost_greyware_tool_keyword = /go\-gost\/gost/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string252_gost_greyware_tool_keyword = /gost\s\-L\=.{0,1000}\@/ nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string253_gost_greyware_tool_keyword = /https\:\/\/gost\.run\/tutorials\// nocase ascii wide
-        // Description: GO Simple Tunnel - a simple tunnel written in golang
-        // Reference: https://github.com/go-gost/gost
-        $string254_gost_greyware_tool_keyword = /https\:\/\/gost\.run\/tutorials\/api\/config/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule GoToMyPC_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'GoToMyPC' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "GoToMyPC"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string1_GoToMyPC_greyware_tool_keyword = /\sDownloadServer\=https\:\/\/www\.gotomypc\.com\s/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string2_GoToMyPC_greyware_tool_keyword = /\sgotoopener\:\/\/launch\.getgo\.com\// nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string3_GoToMyPC_greyware_tool_keyword = /\sLoggingServer\=logging\.getgo\.com\sProxyHost\=/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string4_GoToMyPC_greyware_tool_keyword = /\\AppData\\Local\\GoToMyPC\\/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string5_GoToMyPC_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\gosetup\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string6_GoToMyPC_greyware_tool_keyword = /\\AppData\\Local\\Temp\\.{0,1000}\\GoToOpener\.msi/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string7_GoToMyPC_greyware_tool_keyword = /\\Citrix\\GoToMyPc\\FileTransfer\\history/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string8_GoToMyPC_greyware_tool_keyword = /\\Citrix\\GoToMyPc\\GuestInvite/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string9_GoToMyPC_greyware_tool_keyword = /\\g2comm\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string10_GoToMyPC_greyware_tool_keyword = /\\g2fileh\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string11_GoToMyPC_greyware_tool_keyword = /\\g2host\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string12_GoToMyPC_greyware_tool_keyword = /\\g2mainh\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string13_GoToMyPC_greyware_tool_keyword = /\\g2printh\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string14_GoToMyPC_greyware_tool_keyword = /\\g2svc\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string15_GoToMyPC_greyware_tool_keyword = /\\goLoader\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string16_GoToMyPC_greyware_tool_keyword = /\\gosetup\[1\]\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string17_GoToMyPC_greyware_tool_keyword = /\\GoTo\sOpener\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string18_GoToMyPC_greyware_tool_keyword = /\\GoTo\\Logs\\goto\.log/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string19_GoToMyPC_greyware_tool_keyword = /\\gotomon\.dll/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string20_GoToMyPC_greyware_tool_keyword = /\\gotomon_x64\.dll/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string21_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\.cab/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string22_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\\.{0,1000}\\.{0,1000}\\g2ldr\.log/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string23_GoToMyPC_greyware_tool_keyword = /\\gotomypc\\g2pre\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string24_GoToMyPC_greyware_tool_keyword = /\\GoToMyPC\\g2svc\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string25_GoToMyPC_greyware_tool_keyword = /\\gotomypc_3944\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string26_GoToMyPC_greyware_tool_keyword = /\\GoToMyPCCrashHandler\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string27_GoToMyPC_greyware_tool_keyword = /\\GoToOpener\.log/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string28_GoToMyPC_greyware_tool_keyword = /\\GoToOpener\[1\]\.msi/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string29_GoToMyPC_greyware_tool_keyword = /\\ICON_ID_GOTOMYPC/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string30_GoToMyPC_greyware_tool_keyword = /\\Local\\Temp\\LogMeInLogs\\GoToOpenerMsi\\/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string31_GoToMyPC_greyware_tool_keyword = /\\LogMeInLogs\\GoToOpenerMsi/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string32_GoToMyPC_greyware_tool_keyword = /\\novaPDF11OEM\(x64\)\.msi/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string33_GoToMyPC_greyware_tool_keyword = /\\program\sfiles\s\(x86\)\\gotomypc\\g2tray\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string34_GoToMyPC_greyware_tool_keyword = /\\Programs\\GoToMyPC\.lnk/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string35_GoToMyPC_greyware_tool_keyword = /\\WOW6432Node\\Citrix\\GoToMyPc/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string36_GoToMyPC_greyware_tool_keyword = /\\x64\\monblanking\.sys/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string37_GoToMyPC_greyware_tool_keyword = /\<Data\>Installed\sGoToMyPC\<\/Data\>/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string38_GoToMyPC_greyware_tool_keyword = /\=http\:\/\/www\.gotomypc\.com\/downloads\/viewer\s/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string39_GoToMyPC_greyware_tool_keyword = /api\-telemetry\.servers\.getgo\.com/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string40_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoTo\sOpener/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string41_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sCommunications/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string42_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sHost\sLauncher/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string43_GoToMyPC_greyware_tool_keyword = /ApplicationName\'\>GoToMyPC\sViewer/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string44_GoToMyPC_greyware_tool_keyword = /cf3de8f800852490f39fdacbe74627564494235f/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string45_GoToMyPC_greyware_tool_keyword = /G2MScrUtil64\.exe.{0,1000}\/cr/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string46_GoToMyPC_greyware_tool_keyword = /g2mui\.exe.{0,1000}\/cr/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string47_GoToMyPC_greyware_tool_keyword = /GoTo\sMyPC\sInstaller\.exe/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string48_GoToMyPC_greyware_tool_keyword = /GOTO\sMYPC\sINSTALLER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string49_GoToMyPC_greyware_tool_keyword = /GoTo\sOpener\.exe\s/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string50_GoToMyPC_greyware_tool_keyword = /GOTO\sOPENER\.EXE\-.{0,1000}\.pf/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string51_GoToMyPC_greyware_tool_keyword = /Goto\.exe.{0,1000}\?type\=crashpad\-handler/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string52_GoToMyPC_greyware_tool_keyword = /GoToMyPC_Installation\.log/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string53_GoToMyPC_greyware_tool_keyword = /GoToMyPC_Setup\.log/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string54_GoToMyPC_greyware_tool_keyword = /GoToMyPCSetup_x64\.msi/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string55_GoToMyPC_greyware_tool_keyword = /GoToScrUtils\.exe.{0,1000}\/cr/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string56_GoToMyPC_greyware_tool_keyword = /launcher\-rest\-new\.live\.corecollab\.ucc\-prod\.eva\.goto\.com/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string57_GoToMyPC_greyware_tool_keyword = /novaPDF11PrinterDriver\(x64\)\.msi/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string58_GoToMyPC_greyware_tool_keyword = /PollServer\spoll\.gotomypc\.com/ nocase ascii wide
-        // Description: GoToMyPC is remote desktop software that allows users to access computers remotely using a web browser
-        // Reference: https://www.gotomypc.com/
-        $string59_GoToMyPC_greyware_tool_keyword = /ServiceName\'\>GoToMyPC/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule gpg_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'gpg' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "gpg"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: List gpg keys for privilege escalation
-        // Reference: N/A
-        $string1_gpg_greyware_tool_keyword = /gpg\s\-\-list\-keys/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule grep_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'grep' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "grep"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
-        // Reference: N/A
-        $string1_grep_greyware_tool_keyword = /grep\s\-.{0,1000}\s.{0,1000}DBPassword/ nocase ascii wide
-        // Description: search for passwords
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string2_grep_greyware_tool_keyword = /grep\s.{0,1000}password\s\/var\/www/ nocase ascii wide
-        // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
-        // Reference: N/A
-        $string3_grep_greyware_tool_keyword = /grep\s.{0,1000}password\..{0,1000}\s\/etc\/.{0,1000}\.conf/ nocase ascii wide
-        // Description: Look for users with a UID of 0
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string4_grep_greyware_tool_keyword = /grep\s\:0\:\s\/etc\/passwd/ nocase ascii wide
-        // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation.
-        // Reference: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
-        $string5_grep_greyware_tool_keyword = /grep\s\-i\spass\s/ nocase ascii wide
-        // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
-        // Reference: https://gtfobins.github.io/
-        $string6_grep_greyware_tool_keyword = /grep\s\-i\suser\s/ nocase ascii wide
-        // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
-        // Reference: N/A
-        $string7_grep_greyware_tool_keyword = /grep\s\-R\sdb_passwd/ nocase ascii wide
-        // Description: Detects suspicious shell commands indicating the information gathering phase as preparation for the Privilege Escalation. # search for plain text user/passwords
-        // Reference: N/A
-        $string8_grep_greyware_tool_keyword = /grep\s\-roiE\s.{0,1000}password/ nocase ascii wide
-        // Description: search for passwords
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string9_grep_greyware_tool_keyword = /grep.{0,1000}\|pwd\=\|passwd\=\|password\=/ nocase ascii wide
-        // Description: search for passwords
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string10_grep_greyware_tool_keyword = /grep.{0,1000}password\|pwd\|pass/ nocase ascii wide
-        // Description: search for passwords in memory and core dumps
-        // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string11_grep_greyware_tool_keyword = /strings\s\-n\s.{0,1000}\s\/dev\/mem\s\|\sgrep\s\-i\spass/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule greyware_tool_keyword_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'greyware_tool_keyword' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "greyware_tool_keyword"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: TeamViewer Remote is software for remote assistance - control and access to computers and other terminals - abused by attackers
-        // Reference: https://www.teamviewer.com/
-        $string1_greyware_tool_keyword_greyware_tool_keyword = /TeamViewerMeetingAddIn\.dll/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule gsocket_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "gsocket"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string1_gsocket_greyware_tool_keyword = /\sGS_STTY_INIT_HACK/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string2_gsocket_greyware_tool_keyword = /\sgsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string3_gsocket_greyware_tool_keyword = /\sgsocket_.{0,1000}_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string4_gsocket_greyware_tool_keyword = /\snc\s.{0,1000}\.gsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string5_gsocket_greyware_tool_keyword = /\snc\sgsocket\s31337/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string6_gsocket_greyware_tool_keyword = /\s\-\-remote\sgsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string7_gsocket_greyware_tool_keyword = /\s\-\-rm\s\-it\s\-\-name\sgsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string8_gsocket_greyware_tool_keyword = /\sssh\s.{0,1000}\@gsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string9_gsocket_greyware_tool_keyword = /\sstart\sgs\-sshd/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string10_gsocket_greyware_tool_keyword = /\sstatus\sgs\-sshd/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string11_gsocket_greyware_tool_keyword = /\/bin\/gs\-netcat/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string12_gsocket_greyware_tool_keyword = /\/etc\/gsocket\.conf/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string13_gsocket_greyware_tool_keyword = /\/gsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string14_gsocket_greyware_tool_keyword = /\/gsocket\.git/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string15_gsocket_greyware_tool_keyword = /\/gsocket\/releases\/latest/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string16_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string17_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}_x86_64\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string18_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}aarch64\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string19_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}arm\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string20_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}armv6\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string21_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}armv7l\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string22_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}i686\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string23_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mips32\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string24_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mips64\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string25_gsocket_greyware_tool_keyword = /\/gsocket_.{0,1000}mipsel\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string26_gsocket_greyware_tool_keyword = /\/gsocket_dso\.so\./ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string27_gsocket_greyware_tool_keyword = /\/gsocket_latest_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string28_gsocket_greyware_tool_keyword = /\/gsocket\-build/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string29_gsocket_greyware_tool_keyword = /\/gsocket\-deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string30_gsocket_greyware_tool_keyword = /\/gsocket\-pkg\// nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string31_gsocket_greyware_tool_keyword = /\/gsocket\-src/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string32_gsocket_greyware_tool_keyword = /\/gsocket\-tor/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string33_gsocket_greyware_tool_keyword = /\/gs\-portforward\.service/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string34_gsocket_greyware_tool_keyword = /\/gs\-root\-shell\.service/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string35_gsocket_greyware_tool_keyword = /\/lib\/gsocket_.{0,1000}\.so/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string36_gsocket_greyware_tool_keyword = /\/raw\/main\/gsocket\// nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string37_gsocket_greyware_tool_keyword = /\/root\/\.gs_with_tor/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string38_gsocket_greyware_tool_keyword = /\/share\/gsocket\// nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string39_gsocket_greyware_tool_keyword = /\/tools\/gs\-pipe\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string40_gsocket_greyware_tool_keyword = /\/usr\/bin\/gs\-mount/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string41_gsocket_greyware_tool_keyword = /\/usr\/bin\/gs\-netcat/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string42_gsocket_greyware_tool_keyword = /\/usr\/bin\/gsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string43_gsocket_greyware_tool_keyword = /\/usr\/bin\/gs\-sftp/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string44_gsocket_greyware_tool_keyword = /\\gsocket\-.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string45_gsocket_greyware_tool_keyword = /\\gsocket_.{0,1000}_all\.deb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string46_gsocket_greyware_tool_keyword = /\\gsocket_dso\.so\./ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string47_gsocket_greyware_tool_keyword = /\]\sGS\slogin\sdetected\.\sTotal\sUsers\:\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string48_gsocket_greyware_tool_keyword = /\]\sGS\slogout\sdetected\.\sRemaining\sUsers\:\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string49_gsocket_greyware_tool_keyword = /00b5a02c0350f67ee2562d63461f29a2907e3e991b51a0fa3e424b102b1cf552/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string50_gsocket_greyware_tool_keyword = /05fb17382f049ded33be4d8d624a2b3cc246ab0814e44f07352c12e1880079b6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string51_gsocket_greyware_tool_keyword = /06541ed5fb95052dfeda2cc6165732d1c125f9b49ed400f578750b03a67c418f/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string52_gsocket_greyware_tool_keyword = /0a5e1abf70407a1de22cd14107dca8019bab45e8bfe4c45ca1e05e7e8bb92e89/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string53_gsocket_greyware_tool_keyword = /0ca53778e8cf399b1052ba2f500881d04066525b65e8b564360e7b581ac9cf68/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string54_gsocket_greyware_tool_keyword = /0cf7ec1618e87248f23674db07692a63fbd4e945102b143baa5b34d7eebb5977/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string55_gsocket_greyware_tool_keyword = /0da3621a6676dcb4ac7e260ea7280a14d05c9bcc02c0a296a6507172a3cc7bd8/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string56_gsocket_greyware_tool_keyword = /0dd41d5c99202fa4387bb5b9db7ce55236fc913b65e3a9fb58f697d3480f14ef/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string57_gsocket_greyware_tool_keyword = /0e95446bac57b2a3276703c700865bf025f1eac27bc5c9ebcf820c1e351b6732/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string58_gsocket_greyware_tool_keyword = /0f948584d230abb0e870a4e46541cdf4dd8b60f23fa7e031d27cd856bc49b4c4/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string59_gsocket_greyware_tool_keyword = /1106565073956253736\/mEDRS5iY0S4sgUnRh8Q5pC4S54zYwczZhGOwXvR3vKr7YQmA0Ej1\-Ig60Rh4P_TGFq\-m/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string60_gsocket_greyware_tool_keyword = /1160bcaa562e5a40c74e633ec58a2518b110e74b1d3f48bfa06f74f72cf9ff98/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string61_gsocket_greyware_tool_keyword = /11f50c95d4dbcd97d5c76753aa7bc38bb615295f553a4c989015176ac0fa3be3/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string62_gsocket_greyware_tool_keyword = /155c711cf850d024e86f65be8ff0f9e7e0e947c5632350913dadf8cc678909fa/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string63_gsocket_greyware_tool_keyword = /17eb30ef4d91991b265d5d93ab7f4ad6b58d43061a46ba3292142b962be95f7d/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string64_gsocket_greyware_tool_keyword = /1a1be3746ab4055e51557ec20f236da58a4dcbe1a523c8f5a2cd5dc97e699533/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string65_gsocket_greyware_tool_keyword = /1ab1fb9214bf799302b9204b211eec714d0c1fd551ca45adeab8483a350719a3/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string66_gsocket_greyware_tool_keyword = /1ba34d4d223d6a532c194e578a3efc5e8aeae8bf657223614c502e28d84942cf/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string67_gsocket_greyware_tool_keyword = /1d4c6a6ae56e7a9983254e4a31a368ebea653d96277466ffb8127e8ce0b54369/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string68_gsocket_greyware_tool_keyword = /2028fe2f9036b7fd8f192b6c9844acaa40bec1f40cead52c0ebc5defd9255f64/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string69_gsocket_greyware_tool_keyword = /2042b3773e03285939fe7f0d0597a77c8d4958644b1d8a366cc71d384f1e5c30/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string70_gsocket_greyware_tool_keyword = /22f6a8fb8771a0ed253a3652c6852a831b4919b2a677ddb6a6d03cad6a0f76f6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string71_gsocket_greyware_tool_keyword = /22fdc29d790bb072a0bd54651adab4892fb1df1c75fb44388c3d6a0b0506d908/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string72_gsocket_greyware_tool_keyword = /25cf89a0105c08084f05df75a9dcd1c239e3ec07cf5b36413c04d204393b3560/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string73_gsocket_greyware_tool_keyword = /269d5ebc2a387173830bd5aa8f622c4a9787ff60379bcc960febfe950927ae72/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string74_gsocket_greyware_tool_keyword = /2c25e65ae97f9652d4ab24abcc8c75a48e9b0446211feaeb0e8b138176086ef1/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string75_gsocket_greyware_tool_keyword = /2c68f74c83b924d84b0de8e4a75a44964ad5bf934d3b9ba0baec9732b70183de/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string76_gsocket_greyware_tool_keyword = /2e7d5dfd64c9741ef27284fa9e9e20f84da15669b6979daf730974f7da356849/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string77_gsocket_greyware_tool_keyword = /30d80944d6e4ecec3421db4532a9a146f882e381454e2e09ea35845a4da1f9c6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string78_gsocket_greyware_tool_keyword = /37328d4092b0c2cf9e23443a1575078c0a072e0ca39382e27c8e9c177bad2048/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string79_gsocket_greyware_tool_keyword = /3891197c6740b1864b7a01b8d64b917fded55d40516b5e2774c92e92fc2ed5ef/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string80_gsocket_greyware_tool_keyword = /3906359d473ef56efef773c5bcbd0c8f8df1b3f18e90fc0d0c8f4c2112706ea9/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string81_gsocket_greyware_tool_keyword = /3b73d2414403cb76345c4885921348b96a63499c04027df1cba8b9825959bc1e/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string82_gsocket_greyware_tool_keyword = /4104657745ea61b6e8ea8e468968e96bb5b266abedd73d93324ce14113edcdd9/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string83_gsocket_greyware_tool_keyword = /41aad6daa162539ca954357d9477850ccc5c1f3d492fafe09091c7419d35a441/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string84_gsocket_greyware_tool_keyword = /44b40a461af2ad711898a48285e333fbffd459797e4b24b4fde92ddcbb2196ae/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string85_gsocket_greyware_tool_keyword = /453485f59e550e5ad903796a7fd65c0e50c0f3977d635f373eddbc3777d70949/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string86_gsocket_greyware_tool_keyword = /48f6c28eb0f6be7a624095e620820e21cabb7008c14beee1210d930aa3d9ffb6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string87_gsocket_greyware_tool_keyword = /4ad964e61bd5f63da0f48dfdbf4252550a4a8f894bf3c0813b3eb0dab6ac73bf/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string88_gsocket_greyware_tool_keyword = /4ae67074c52164526a351037946fd4deacd275b5fbdea7e49845e9f201ac151d/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string89_gsocket_greyware_tool_keyword = /4b532e80f16904176fc50b312ca8114d8ece3ec594cb34a29d7e5e0d767dca59/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string90_gsocket_greyware_tool_keyword = /4bb77a1ecf1a057a39bd8b6f7b3f349717eac5d32eb87df25e29aceacfa1ec7f/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string91_gsocket_greyware_tool_keyword = /4d6434d5a809c797570c59fd91eecd4f86b85e46cc6a43cf186a10a08db5e844/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string92_gsocket_greyware_tool_keyword = /4E48vR7v8OUJO5OEYkOUUZmF55UOYVqo9l9w2eRS50k\=/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string93_gsocket_greyware_tool_keyword = /4f64f71a7d6b8be79754e7bf2109675ffc8a3e37a4a55b08c95a1b1d25e458e5/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string94_gsocket_greyware_tool_keyword = /512c31ebafb9013dfaf82b0123e088f976d3c1b57658ea60a7c8825a1c4bf7c7/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string95_gsocket_greyware_tool_keyword = /561cc9eca17d61f99abf5fd5257bed4a8bf2d4c8c67ac731f5f067cf5f88e230/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string96_gsocket_greyware_tool_keyword = /561cc9eca17d61f99abf5fd5257bed4a8bf2d4c8c67ac731f5f067cf5f88e230/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string97_gsocket_greyware_tool_keyword = /5a86428ea0c5d6424b44518fe411e2a8c795d201f4a6df3b77b04f2af8f2a911/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string98_gsocket_greyware_tool_keyword = /5b4dd71b0d9ac18c80db2eb0149e56af6b01533ff1e7a28359ca2f61ee0f8c8c/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string99_gsocket_greyware_tool_keyword = /5bbc850a274b933a4e8b0ac7d5bc8b0527c3eddbaee7f8a9389c284f27a6fe14/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string100_gsocket_greyware_tool_keyword = /5d6beae72888b5b7c4d4d6bcef2c37256c736435fd1b08ff642ee4c60a310ea5/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string101_gsocket_greyware_tool_keyword = /5fdc26ee180c18e799e436da359f24c54ebeb91cbb5206b89f3c82b0d28b93b5/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string102_gsocket_greyware_tool_keyword = /628e139e7f12c2e5cac243778c3fe428c878aaf690e64cf650e0be14915eee1e/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string103_gsocket_greyware_tool_keyword = /64a7c5e1ef0e19140bf06ba70e0255f53c67c117ce1b072f46c30a1be44ff671/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string104_gsocket_greyware_tool_keyword = /64f0fda500b2a622279f62bcc86e5282b9e6c5ee8e5ef55380e3a08e55b5ecc8/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string105_gsocket_greyware_tool_keyword = /668718b8b09f631c3f1fa81519b99b83792a2e84d306296997a28db2e4f90d8c/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string106_gsocket_greyware_tool_keyword = /67552b46f859511333d63e26a980b251e458c474243aa2af4c2f697aaea3680f/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string107_gsocket_greyware_tool_keyword = /6a8351ce89e27856e20f04a2500f9a7851ea05113fb6babb4f359aa7a389ca73/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string108_gsocket_greyware_tool_keyword = /6d0156efe079ba8f6fbb009df73332e5dab53955613b1795f09b431cf668163a/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string109_gsocket_greyware_tool_keyword = /70fae385cd6c9bbcc73c17efabd236f0a0bfe00d11b0c9360651ec7e4baf42c2/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string110_gsocket_greyware_tool_keyword = /70fc96e2f1e0cd752068e94fb4f37b3f19d670243921f76b0f2114578151f1e3/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string111_gsocket_greyware_tool_keyword = /74f93a2398222f802089239c9610a21ea5ff34fb81cf6869f58bf5782ea5127f/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string112_gsocket_greyware_tool_keyword = /750b490f1788db4c843135e409ae3175cff1be5c61246341eabdfa135ac6c7e3/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string113_gsocket_greyware_tool_keyword = /75a064400fdf9acdbedb430ed009b961041fa379b4f219304477102f9f3d4281/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string114_gsocket_greyware_tool_keyword = /75f3f565f1024b367a72a934cff9735e3fd9311ce5ad77de20c103cc72442edc/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string115_gsocket_greyware_tool_keyword = /78792f8846332fa4d48b2710fd1d5d0bc6dd1fdbd62fdfed2c9aefa91b486547/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string116_gsocket_greyware_tool_keyword = /7896c394ae338f34d46c51c5403ee41200a3fb1816763a4763c1228a72febe07/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string117_gsocket_greyware_tool_keyword = /78ba173f30785ce45c8aa96e9cd13578d1db9bf48bece39a50617a8a49dd80f6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string118_gsocket_greyware_tool_keyword = /7b1f95fad0a9d54d14ec51545fa5739a6b0764117843a3d468f387cfbe133e6f/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string119_gsocket_greyware_tool_keyword = /7e6e4d4f8d52c0b8ed9b71fa0d0fad11872d1ee4204fc3f4835eb70932047883/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string120_gsocket_greyware_tool_keyword = /813342bc9592e0e2b5672eb84376b59e098cc45929a42c55bdc96750f2abd5f2/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string121_gsocket_greyware_tool_keyword = /840be30a16f12a6c57f8f68233b6aedb9e10e7dda76b1024b74fd660f3a13cd4/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string122_gsocket_greyware_tool_keyword = /850d5195de840280e1638f121743617ad47852109636541bccd20d4cdd953d6b/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string123_gsocket_greyware_tool_keyword = /88552e15e5ce836e9f7f1b12b55ca6b3805641d577fb71663d2c8fc5fb96ce47/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string124_gsocket_greyware_tool_keyword = /8857efba9865de5690af4a3559f4839286cd2083f752ba93c30bd969c6636170/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string125_gsocket_greyware_tool_keyword = /89d3c1ac21486c9deb1a08ac10cc6b722a19801163dad4d8b57c1aa8a18f32b8/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string126_gsocket_greyware_tool_keyword = /8a131449c4f5bffc5ae0cda597df9d17a3dff1d02422c890622c0359ee0a03f1/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string127_gsocket_greyware_tool_keyword = /8c7511cc6dae84071080a37c2842782cc0635f8d32301afebdc818a392a58bc3/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string128_gsocket_greyware_tool_keyword = /90487bd2731d62d51c5bda9ea313fe915fb6ce31fc2c5f54622d780d924da26e/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string129_gsocket_greyware_tool_keyword = /96c7a830d1ec55b1db8892e1d452394cd2a5eb2549003d4428b5d52774637e94/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string130_gsocket_greyware_tool_keyword = /9abd6408e999901f0b7504eb679d0403f49589b7ecaaa5588923daa0bb22f186/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string131_gsocket_greyware_tool_keyword = /9acdf1fd60fb9b5185fab1f18b843757f05f34f73ce947b71498d494a9e30843/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string132_gsocket_greyware_tool_keyword = /9c6804a10a191fe49061ca8022394c3a44fba75e20aa0c1fbf79a07e01f28df5/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string133_gsocket_greyware_tool_keyword = /9d780803519141fc8c14c067688184d7df094190cf74825b6ea6651e7ccd911b/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string134_gsocket_greyware_tool_keyword = /9f6a38018fe8228de57605c35bb927d39418c7793bb935ff0ab5022424d9774a/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string135_gsocket_greyware_tool_keyword = /a1be92f17090edca27bbb0af8e9ac44b97d7a2dd15b66d09e1a6a6b237ace336/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string136_gsocket_greyware_tool_keyword = /a1ce03c2907bdfc7be8ab37b967961a4adb4c2764bbb0f42afea773d1f89f666/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string137_gsocket_greyware_tool_keyword = /a9b13111606ca8ed948030515217c0e1af7cf2af2af8eb034999ff9e3f071b24/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string138_gsocket_greyware_tool_keyword = /apt\sinstall\sgsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string139_gsocket_greyware_tool_keyword = /apt\-get\sinstall\sgsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string140_gsocket_greyware_tool_keyword = /b035dfbf2f3125fbf0d00f86158efbc4a7c7715f03e4d7bcf634dfd16888e965/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string141_gsocket_greyware_tool_keyword = /b3ed38872b50a110a8704d1d2eb4e6e47ed6f2998d1bd08b712f840cc3a4643a/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string142_gsocket_greyware_tool_keyword = /b6e5d9d7d95caf2550fecebcfe6f7c54f1779c6a65547ef342f76446dcbd6c1d/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string143_gsocket_greyware_tool_keyword = /b7890a15dadef8cdedd6580aed94ca26df6ec0eddb009176dba1eef8941ff6e6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string144_gsocket_greyware_tool_keyword = /b938ac4eb603113d3617ddcfeb8fbb32a6bbe54b1419482966b41ee8b1dc05b9/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string145_gsocket_greyware_tool_keyword = /bc7229c619a3af7fd330588286b4e48e7804b1c03427ef9e8bb3b7e2eb0318ce/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string146_gsocket_greyware_tool_keyword = /bd0f5440775fe02946ffc659425427ef167a1dd6d2993606d4376422f8d33bc4/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string147_gsocket_greyware_tool_keyword = /c08ba6e45d3859ecb3cd5df132fb04dcd86913afce15057de03bba9d256de4ef/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string148_gsocket_greyware_tool_keyword = /c2e755a58685ea4f356c897fdc0c9420579f6eae48ac6f27307e8a8b73500cb6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string149_gsocket_greyware_tool_keyword = /c4da631e510a57e39a6e9021a1d3f1d563f59f351bdd84b46e48a0e27e6b9cbb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string150_gsocket_greyware_tool_keyword = /c74f294042ccfc39dec052d9871e6bbd4e69b019a353f6e02947303adeac3794/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string151_gsocket_greyware_tool_keyword = /cc0ced090edf59964428ab7b16b9cf8ce57b8ee21e999ac05e7f4d5d52b5470c/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string152_gsocket_greyware_tool_keyword = /cd672b609691c61005f4c69233abbce538d334db30e809150f8087b7735bfd2e/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string153_gsocket_greyware_tool_keyword = /ce7979010bdb291a0a1884e00e238d9fc3bc27ec7a1d1093be273c22e865f676/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string154_gsocket_greyware_tool_keyword = /cfa25f5e4321a86b2c4f646a63345fb6ac46a7089886354ad82653a47e55be51/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string155_gsocket_greyware_tool_keyword = /cfcad25ab252fbff7fc8a7bbac67915dfce5f76b5738f894fa13afbd5d60a5de/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string156_gsocket_greyware_tool_keyword = /curl\s\-fsSL\shttps\:\/\/gsocket\.io\/x/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string157_gsocket_greyware_tool_keyword = /curl\s\-fsSL\shttps\:\/\/tiny\.cc\/gsinst/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string158_gsocket_greyware_tool_keyword = /d24fe924f62a3bb95319812d67dbdb7e375d60f7baa933eab82070b3c4a11a77/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string159_gsocket_greyware_tool_keyword = /d325c92a9bba538fdbb1c054584ffd0672debaef935dfb27e9d0a6b67649d369/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string160_gsocket_greyware_tool_keyword = /d69430717f07c774cdb8ea58b32b066e99dbf3cbc046e876b8ea73c20a3a6507/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string161_gsocket_greyware_tool_keyword = /d700c8a3a4ecbb1e547b3c14a5a2a3605cabbabc8350284e923982809945694d/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string162_gsocket_greyware_tool_keyword = /d748b4244f359f0d9c46860ea8918940c8cd05e4a65c3ae5b99208d719a3a9c1/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string163_gsocket_greyware_tool_keyword = /d84d9d935f9f3392934ff2613e47032d3120f7c0ac4278a1e88bec65c5316a53/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string164_gsocket_greyware_tool_keyword = /db17fa0b10c60bd01a60f64cf436586c9c6708ad64a1dce8350e13689336d67f/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string165_gsocket_greyware_tool_keyword = /dd226a8ba33f50cd9ca4fedcec4df5c29e6b9841cb8cf2ab2d940bdef8a0a403/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string166_gsocket_greyware_tool_keyword = /de74cc01088879ddf3f7c392345e9229490e06f0cc03c52102b0e94b79c01cfc/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string167_gsocket_greyware_tool_keyword = /dfd2e8d943aab32e5988a886e6ed0a3bb36b5f5c3959fa3fb1281b6f524b16bb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string168_gsocket_greyware_tool_keyword = /e05dfa6b3fc5b59044f4b18ba455d751c5a18948d1d0a032d3a11fb753659faa/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string169_gsocket_greyware_tool_keyword = /e417c3eb936ec35eb80f7cab07aaba0c051f3385d8262eaa93e5e59f52cb60e7/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string170_gsocket_greyware_tool_keyword = /e660765bee5e704c8f15d6a20c14d720c0aea5382fd21123974df9435a3b7bad/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string171_gsocket_greyware_tool_keyword = /e66ba30f8c2e47462d60db7d5bdcb9465fa63c7115a2287d68f57d191ada1b6e/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string172_gsocket_greyware_tool_keyword = /e74e119f6c9d89e2419518395abc0bb44008928d3748b60ea7d02e70b757a75a/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string173_gsocket_greyware_tool_keyword = /e897d08460dbb646108b17a32455d9be51487bee26b48dfef992b7f246d54f1d/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string174_gsocket_greyware_tool_keyword = /e8bcea5769f7121a256a8d690d1eeae2a6040af90d7d97fccfc0379c241df060/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string175_gsocket_greyware_tool_keyword = /eb11e2e1f6611560c9822ca53a829028642a676c2d03bbf86c57e4b41fdcff9e/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string176_gsocket_greyware_tool_keyword = /ec7ac72aea879c8a68fe5cbd38f8be5f37c7b3ee99ca67481331b8eba84f7726/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string177_gsocket_greyware_tool_keyword = /ececdc677eaf4bf46268f4839d825090b16a40d37803c38600bf52bc79e1a363/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string178_gsocket_greyware_tool_keyword = /ef8eb970940d435e07001fccf2ac210f539a9bb09ea1ef146c5f6ff4cc15a402/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string179_gsocket_greyware_tool_keyword = /eff4aa3e27c98422705a19de82c1386d11b9559ded06eed46c26ab82860c0a81/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string180_gsocket_greyware_tool_keyword = /f18bc0dae72814ff2e076c2b61846a35d00575c4e1554f74a4a70a036a15f9c5/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string181_gsocket_greyware_tool_keyword = /f32a57e81fc9d08ca1412e932e8701a45ed35b0213c0da78bee8e65a1c6942e9/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string182_gsocket_greyware_tool_keyword = /f94c9642833e1efd81b07dcb06bf653f61937ae8b7baf69b3731ac1132a66d52/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string183_gsocket_greyware_tool_keyword = /fc0e69e5c2f4ed4cfb830ebb66ba54a86ce95a114603a5fffa42cea8caf3e864/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string184_gsocket_greyware_tool_keyword = /fcea3e6443289fde4faa10d9d892ce4f0c23f90913dbfde6c9f60c825f92150c/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string185_gsocket_greyware_tool_keyword = /fd57273dcd84084b20ad214de3b38c4e5a3f506da7810574d4a68dcdd63176cb/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string186_gsocket_greyware_tool_keyword = /fecf1da09ddb7a5f5ab7cc20c6d542be33193cbc30e5c8c3dd877cee6a682063/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string187_gsocket_greyware_tool_keyword = /GS_SO_TOR_DOMAIN/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string188_gsocket_greyware_tool_keyword = /gs\-full\-pipe\s\-s\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string189_gsocket_greyware_tool_keyword = /gs\-netcat\s\-/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string190_gsocket_greyware_tool_keyword = /gs\-netcat\s.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string191_gsocket_greyware_tool_keyword = /gs\-netcat_freebsd\-x86_64/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string192_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-aarch64/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string193_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-arm/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string194_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-armhf/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string195_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-armv6/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string196_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-armv7l/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string197_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-i686/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string198_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-mips32/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string199_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-mips64/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string200_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-mipsel/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string201_gsocket_greyware_tool_keyword = /gs\-netcat_linux\-x86_64/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string202_gsocket_greyware_tool_keyword = /gs\-netcat_macOS/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string203_gsocket_greyware_tool_keyword = /gs\-netcat_openbsd\-x86_64/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string204_gsocket_greyware_tool_keyword = /gsocket\s\/usr\/sbin\/sshd/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string205_gsocket_greyware_tool_keyword = /gsocket\s\-k\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string206_gsocket_greyware_tool_keyword = /gsocket\sopenvpn\s\-\-/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string207_gsocket_greyware_tool_keyword = /gsocket\sssh\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string208_gsocket_greyware_tool_keyword = /gsocket\.io\/deploy/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string209_gsocket_greyware_tool_keyword = /gsocket\/gsocket\.h/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string210_gsocket_greyware_tool_keyword = /gsocket_macOS\.tar\.gz/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string211_gsocket_greyware_tool_keyword = /GSOCKET_SECRET/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string212_gsocket_greyware_tool_keyword = /GSOCKET_SOCKS_IP/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string213_gsocket_greyware_tool_keyword = /GSOCKET_SOCKS_PORT/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string214_gsocket_greyware_tool_keyword = /gsocket\-relay\/monitor\// nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string215_gsocket_greyware_tool_keyword = /gs\-sftp\s\-l/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string216_gsocket_greyware_tool_keyword = /gs\-sftp\s\-s\sthctestserver/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string217_gsocket_greyware_tool_keyword = /hackerschoice\/gsocket/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string218_gsocket_greyware_tool_keyword = /https\:\/\/gsocket\.io\/install\.sh/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string219_gsocket_greyware_tool_keyword = /Installing\ssystemwide\sremote\saccess\spermanentally/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string220_gsocket_greyware_tool_keyword = /Join\sus\son\sTelegram\s\-\shttps\:\/\/t\.me\/thcorg/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string221_gsocket_greyware_tool_keyword = /Running\:\snetcat\s/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string222_gsocket_greyware_tool_keyword = /socat\s\-\sTCP_LISTEN\:31337/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string223_gsocket_greyware_tool_keyword = /TCP\:gsocket\:31337/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string224_gsocket_greyware_tool_keyword = /Testing\sGlobal\sSocket\sRelay\sNetwork/ nocase ascii wide
-        // Description: The Global Socket Tookit allows two users behind NAT/Firewall to establish a TCP connection with each other. Securely.
-        // Reference: https://github.com/hackerschoice/gsocket
-        $string225_gsocket_greyware_tool_keyword = /wget\s\-qO\-\sgsocket\.io/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule gt_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'gt' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "gt"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string1_gt_greyware_tool_keyword = /\sgt\-win\-x86_64\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string2_gt_greyware_tool_keyword = /\/gt\sserver\s\-c\s\.\/config\.yml/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string3_gt_greyware_tool_keyword = /\/gt\-win\-x86_64\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string4_gt_greyware_tool_keyword = /\/opt\/config\/aonetwork\-client\.yml/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string5_gt_greyware_tool_keyword = /\/opt\/entrypoint\.sh/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string6_gt_greyware_tool_keyword = /\/release\/gt\-win\-x86_64\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string7_gt_greyware_tool_keyword = /\/usr\/bin\/gt\sclient\-c\s/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string8_gt_greyware_tool_keyword = /\/x86_64\-pc\-windows\-msvc\/release\/gt\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string9_gt_greyware_tool_keyword = /\/x86_64\-pc\-windows\-msvc\/release\/gt\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string10_gt_greyware_tool_keyword = /\\gt\-win\-x86_64\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string11_gt_greyware_tool_keyword = /\\x86_64\-pc\-windows\-msvc\\release\\gt\.exe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string12_gt_greyware_tool_keyword = /037be40510a193376a127023deb2fe312d265b5ebc78422879e9126c5d02f2b4/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string13_gt_greyware_tool_keyword = /1a535e15b11923cd368d6b39e1a308b67d7ed2be686d7968aa50e5c3630ea11a/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string14_gt_greyware_tool_keyword = /1f51e236e7e1fbeb8cf38462e17da4d1921aeef093e2990538a4eb1d35554076/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string15_gt_greyware_tool_keyword = /2a17ed79b4a0cb9d1c6345ee3f0d1c6d349a660391345c17e78ceb57a26a32fe/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string16_gt_greyware_tool_keyword = /300161cd89c6094776ad40c08308249c7323c9b19105e09f15ef209f4e1f7980/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string17_gt_greyware_tool_keyword = /56be52735563e73f0cdf9d4e8b52f86ccc5313495eec99c69c6f2bfeb0a08317/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string18_gt_greyware_tool_keyword = /71e29bff6cee7938472b8d16ea5696b4966cb587a266c43257770efffed93aae/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string19_gt_greyware_tool_keyword = /ab894c2ffa7886fe889c4a35b15fc5d5558d11896550d563c299408e6d4da363/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string20_gt_greyware_tool_keyword = /c46ac57304fda332b5c3b027ae3fd0a54917e2b194f0d9f13e6cacfa1f61ff53/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string21_gt_greyware_tool_keyword = /ed1f4ff9004e7065939247b9df3e4d51e08a0c990931e438b733fb4e64b4adf2/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string22_gt_greyware_tool_keyword = /ghcr\.io\/ao\-space\/gt\:client\-dev/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string23_gt_greyware_tool_keyword = /ghcr\.io\/ao\-space\/gt\:server\-dev/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string24_gt_greyware_tool_keyword = /github.{0,1000}ao\-space\/gt/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string25_gt_greyware_tool_keyword = /linux\-amd64\-client\s\-local\shttp\:\/\/127\.0\.0\.1/ nocase ascii wide
-        // Description: Fast WebSocket(s)/HTTP(s)/TCP relay proxy for making tunnels to localhost.
-        // Reference: https://github.com/ao-space/gt
-        $string26_gt_greyware_tool_keyword = /linux\-amd64\-server\s\-addr\s/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule guerrillamail_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'guerrillamail' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "guerrillamail"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: using the API of a disposable email address to use anytime - could be abused by malicious actors
-        // Reference: https://www.guerrillamail.com
-        $string1_guerrillamail_greyware_tool_keyword = /http\:\/\/api\.guerrillamail\.com\/ajax\.php\?/ nocase ascii wide
-        // Description: disposable email address to use anytime.
-        // Reference: https://www.guerrillamail.com
-        $string2_guerrillamail_greyware_tool_keyword = /https\:\/\/www\.guerrillamail\.com\/compose/ nocase ascii wide
-        // Description: disposable email address to use anytime.
-        // Reference: https://www.guerrillamail.com
-        $string3_guerrillamail_greyware_tool_keyword = /https\:\/\/www\.guerrillamail\.com\/inbox/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Guru_VPN__and__Proxy_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Guru VPN & Proxy' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Guru VPN & Proxy"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Guru_VPN__and__Proxy_greyware_tool_keyword = /knajdeaocbpmfghhmijicidfcmdgbdpm/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule hackforums_net_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'hackforums.net' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "hackforums.net"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Hack Forums - a well-known online community frequently referenced in various pieces of malicious code
-        // Reference: hackforums.net
-        $string1_hackforums_net_greyware_tool_keyword = /hackforums\.net\// nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hide_My_IP_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hide My IP VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hide My IP VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hide_My_IP_VPN_greyware_tool_keyword = /keodbianoliadkoelloecbhllnpiocoi/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule HideAll_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'HideAll VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "HideAll VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_HideAll_VPN_greyware_tool_keyword = /amnoibeflfphhplmckdbiajkjaoomgnj/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hideman_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hideman VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hideman VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hideman_VPN_greyware_tool_keyword = /dbdbnchagbkhknegmhgikkleoogjcfge/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule history_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'history' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "history"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Removes the most recently logged command.
-        // Reference: N/A
-        $string1_history_greyware_tool_keyword = /history\s\-d\s\-2\s\&\&\shistory\s\-d\s\-1/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule HMA_VPN_Proxy_Unblocker_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'HMA VPN Proxy Unblocker' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "HMA VPN Proxy Unblocker"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_HMA_VPN_Proxy_Unblocker_greyware_tool_keyword = /poeojclicodamonabcabmapamjkkmnnk/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hola_Free_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hola Free VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hola Free VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hola_Free_VPN_greyware_tool_keyword = /gkojfkhlekighikafcpjkiklfbnlmeio/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hola_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hola VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hola VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hola_VPN_greyware_tool_keyword = /kcdahmgmaagjhocpipbodaokikjkampi/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule homeway_io_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'homeway.io' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "homeway.io"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Expose local servers to the internet
-        // Reference: https://homeway.io/
-        $string1_homeway_io_greyware_tool_keyword = /homeassistant\.local\:8123/ nocase ascii wide
-        // Description: Expose local servers to the internet
-        // Reference: https://homeway.io/
-        $string2_homeway_io_greyware_tool_keyword = /https\:\/\/homeway\.io\/install\.sh/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hotspot_Shield_Elite_VPN_Proxy_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hotspot Shield Elite VPN Proxy' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hotspot Shield Elite VPN Proxy"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hotspot_Shield_Elite_VPN_Proxy_greyware_tool_keyword = /ejkaocphofnobjdedneohbbiilggdlbi/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hotspot_Shield_Free_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hotspot Shield Free VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hotspot Shield Free VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hotspot_Shield_Free_VPN_greyware_tool_keyword = /nlbejmccbhkncgokjcmghpfloaajcffj/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hoxx_VPN_Proxy_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hoxx VPN Proxy' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hoxx VPN Proxy"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hoxx_VPN_Proxy_greyware_tool_keyword = /nbcojefnccbanplpoffopkoepjmhgdgh/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule http_server_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'http.server' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "http.server"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: setup a simple http server
-        // Reference: https://x.com/mthcht/status/1827714529687658796
-        $string1_http_server_greyware_tool_keyword = /python\s\-m\shttp\.server/ nocase ascii wide
-        // Description: setup a simple http server
-        // Reference: https://x.com/mthcht/status/1827714529687658796
-        $string2_http_server_greyware_tool_keyword = /python3\s\-m\shttp\.server/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hub_VPN_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hub VPN' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hub VPN"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Hub_VPN_greyware_tool_keyword = /lneaocagcijjdpkcabeanfpdbmapcjjg/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule Hunter_io_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Hunter.io' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Hunter.io"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
-        // Reference: https://hunter.io/
-        $string1_Hunter_io_greyware_tool_keyword = /curl\shttps\:\/\/api\.hunter\.io\/v2\/domain\-search\?domain\=/ nocase ascii wide
-        // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
-        // Reference: https://hunter.io/
-        $string2_Hunter_io_greyware_tool_keyword = /curl\shttps\:\/\/api\.hunter\.io\/v2\/email\-finder\?domain\=/ nocase ascii wide
-        // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
-        // Reference: https://hunter.io/
-        $string3_Hunter_io_greyware_tool_keyword = /curl\shttps\:\/\/api\.hunter\.io\/v2\/email\-verifier\?email\=/ nocase ascii wide
-        // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
-        // Reference: https://hunter.io/
-        $string4_Hunter_io_greyware_tool_keyword = /https\:\/\/api\.hunter\.io\// nocase ascii wide
-        // Description: used by attacker and pentester while gathering information. Hunter lets you find email addresses in seconds and connect with the people that matter for your business
-        // Reference: https://hunter.io/
-        $string5_Hunter_io_greyware_tool_keyword = /https\:\/\/hunter\.io\// nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule hypertunnel_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'hypertunnel' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "hypertunnel"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string1_hypertunnel_greyware_tool_keyword = /\/hypertunnel\.git/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string2_hypertunnel_greyware_tool_keyword = /\/hypertunnel\-tcp\-relay.{0,1000}\.tar\.gz/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string3_hypertunnel_greyware_tool_keyword = /\/hypertunnel\-tcp\-relay.{0,1000}\.zip/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string4_hypertunnel_greyware_tool_keyword = /23fe91b0f562494d22d23a02a05f35847520170930ceb92cffa6783229b46d78/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string5_hypertunnel_greyware_tool_keyword = /berstend\/hypertunnel/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string6_hypertunnel_greyware_tool_keyword = /https\:\/\/hypertunnel\.ga/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string7_hypertunnel_greyware_tool_keyword = /hypertunnel\.lvh\.me/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string8_hypertunnel_greyware_tool_keyword = /hypertunnel\-server\@latest/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string9_hypertunnel_greyware_tool_keyword = /local\.hypertunnel\.lvh\.me/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string10_hypertunnel_greyware_tool_keyword = /MIIJKgIBAAKCAgEAuvAs1YNtpCaqyG3Rkyutst3uIjzYLQTPWf1v\+OLi3GgzshUB/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string11_hypertunnel_greyware_tool_keyword = /npm\sinstall\shypertunnel\-server/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string12_hypertunnel_greyware_tool_keyword = /packages\/hypertunnel\// nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string13_hypertunnel_greyware_tool_keyword = /packages\/hypertunnel\-server/ nocase ascii wide
-        // Description: Expose any local TCP/IP service on the internet
-        // Reference: https://github.com/berstend/hypertunnel
-        $string14_hypertunnel_greyware_tool_keyword = /packages\/hypertunnel\-tcp\-relay/ nocase ascii wide
 
     condition:
         any of them
@@ -26490,546 +23209,576 @@ rule powershell_greyware_tool_keyword
         // Description: allows all users to access all computers with a specified configuration
         // Reference: N/A
         $string13_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule\s\-UsernName\s\\.{0,1000}\s\-ComputerName\s\\.{0,1000}\s\-ConfigurationName\s\\/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string14_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-ComputerName\s/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string15_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-UserName\s/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string16_powershell_greyware_tool_keyword = /Add\-PswaAuthorizationRule.{0,1000}\-UserName\s/ nocase ascii wide
         // Description: install openssh server (critical on DC - must not be installed)
         // Reference: N/A
-        $string14_powershell_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
+        $string17_powershell_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
         // Description: Deletes contents of recycle bin
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/-OMG-Credz-Plz
-        $string15_powershell_greyware_tool_keyword = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
+        $string18_powershell_greyware_tool_keyword = /Clear\-RecycleBin\s\-Force\s\-ErrorAction\sSilentlyContinue/ nocase ascii wide
         // Description: Jenkins Abuse Without admin access
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string16_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
+        $string19_powershell_greyware_tool_keyword = /cmd\.exe\s\/c\sPowerShell\.exe\s\-Exec\sByPass\s\-Nol\s\-Enc\s/ nocase ascii wide
         // Description: Copy file to startup via Powershell
         // Reference: N/A
-        $string17_powershell_greyware_tool_keyword = /copy\-item\s.{0,1000}\\roaming\\microsoft\\windows\\start\smenu\\programs\\startup/ nocase ascii wide
+        $string20_powershell_greyware_tool_keyword = /copy\-item\s.{0,1000}\\roaming\\microsoft\\windows\\start\smenu\\programs\\startup/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string21_powershell_greyware_tool_keyword = /dism\s\s\/online\s\/enable\-feature\s\/featurename\:IIS\-WebServerRole\s\/all/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string22_powershell_greyware_tool_keyword = /dism\s\s\/online\s\/enable\-feature\s\/featurename\:WindowsPowerShellWebAccess\s\/all/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string23_powershell_greyware_tool_keyword = /dism\.exe.{0,1000}\/enable\-feature.{0,1000}WindowsPowerShellWebAccess\s/ nocase ascii wide
         // Description: enables WinRM
         // Reference: https://github.com/alperenugurlu/AD_Enumeration_Hunt/blob/alperen_ugurlu_hack/AD_Enumeration_Hunt.ps1
-        $string18_powershell_greyware_tool_keyword = /enable\-psremoting\s\-force/ nocase ascii wide
+        $string24_powershell_greyware_tool_keyword = /enable\-psremoting\s\-force/ nocase ascii wide
         // Description: Find machine where the user has admin privs
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string19_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
+        $string25_powershell_greyware_tool_keyword = /Find\-LocalAdminAccess\s\-Verbose/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string20_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
+        $string26_powershell_greyware_tool_keyword = /gci\senv\:USERNAME/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string21_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
+        $string27_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string22_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string28_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string23_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
+        $string29_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string24_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
+        $string30_powershell_greyware_tool_keyword = /Get\-ADObject\s\-Filter\s\{msDS\-AllowedToDelegateTo\s.{0,1000}\s\-Properties\smsDS\-AllowedToDelegateTo/ nocase ascii wide
         // Description: Enumerate shadow security principals mapped to a high priv group
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string25_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
+        $string31_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string26_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string32_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string27_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string33_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string28_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
+        $string34_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
         // Description: set the DNS server configuration
         // Reference: N/A
-        $string29_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
+        $string35_powershell_greyware_tool_keyword = /Get\-DhcpServerv4Scope\s\|\sSet\-DhcpServerv4OptionValue\s\-DnsServer\s/ nocase ascii wide
         // Description: AD Module Enumerate principals with Constrained Delegation enabled
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string30_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
+        $string36_powershell_greyware_tool_keyword = /Get\-DomainComputer\s\-TrustedToAuth/ nocase ascii wide
         // Description: Powerview Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string31_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = /Get\-DomainUser\s\-KerberosPreuthNotRequired\s\-Verbose/ nocase ascii wide
         // Description: AD Module GroupPolicy - List of GPO in the domain
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string32_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
+        $string38_powershell_greyware_tool_keyword = /Get\-GPO\s\-All/ nocase ascii wide
         // Description: PowerView get Locally logged users on a machine
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string33_powershell_greyware_tool_keyword = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
+        $string39_powershell_greyware_tool_keyword = /Get\-LoggedonLocal\s\-ComputerName\s/ nocase ascii wide
         // Description: Gets the status of antimalware software on the computer.
         // Reference: https://thedfirreport.com/2023/02/06/collect-exfiltrate-sleep-repeat/
-        $string34_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
+        $string40_powershell_greyware_tool_keyword = /Get\-MpComputerStatus/ nocase ascii wide
         // Description: get defender AV exclusions
         // Reference: N/A
-        $string35_powershell_greyware_tool_keyword = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
+        $string41_powershell_greyware_tool_keyword = /Get\-MpPreference\s\|\sSelect\-Object\s\-ExpandProperty\sExclusionPath/ nocase ascii wide
         // Description: Find groups in the current domain (PowerView)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string36_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
+        $string42_powershell_greyware_tool_keyword = /Get\-NetGroup\s\-FullData/ nocase ascii wide
         // Description: the command is used to discover the members of a specific domain group DNSAdmins which can provide an adversary with valuable information about the target environment. The knowledge of group members can be exploited by attackers to identify potential targets for privilege escalation or Lateral Movement within the network.
         // Reference: N/A
-        $string37_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
+        $string43_powershell_greyware_tool_keyword = /Get\-NetGroupMember\s\-GroupName\s.{0,1000}DNSAdmins/ nocase ascii wide
         // Description: PowerView Find users with SPN
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string38_powershell_greyware_tool_keyword = /Get\-NetUser\s\-SPN/ nocase ascii wide
+        $string44_powershell_greyware_tool_keyword = /Get\-NetUser\s\-SPN/ nocase ascii wide
         // Description: delete shadow copies
         // Reference: https://rexorvc0.com/2024/06/19/Akira-The-Old-New-Style-Crime/
-        $string39_powershell_greyware_tool_keyword = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
+        $string45_powershell_greyware_tool_keyword = /Get\-WmiObject\sWin32_ShadowCopy\s\|\sRemove\-WmiObject/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string46_powershell_greyware_tool_keyword = /Install\-PswaWebApplication\s\-UseTestCertificate/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string47_powershell_greyware_tool_keyword = /Install\-PswaWebApplication/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string48_powershell_greyware_tool_keyword = /Install\-WindowsFeature\s\-Name\sWeb\-Server\s\-IncludeManagementTools/ nocase ascii wide
+        // Description: enable the PowerShell Web Access featur which could be used for remote access and potential
+        // Reference: https://www.cisa.gov/sites/default/files/2024-08/aa24-241a-iran-based-cyber-actors-enabling-ransomware-attacks-on-us-organizations_0.pdf
+        $string49_powershell_greyware_tool_keyword = /Install\-WindowsFeature\sWindowsPowerShellWebAccess/ nocase ascii wide
         // Description: Find local admins on the domain machines
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string40_powershell_greyware_tool_keyword = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
+        $string50_powershell_greyware_tool_keyword = /Invoke\-EnumerateLocalAdmin\s\-Verbose/ nocase ascii wide
         // Description: Check local admin access for the current user where the targets are found
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string41_powershell_greyware_tool_keyword = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
+        $string51_powershell_greyware_tool_keyword = /Invoke\-UserHunter\s\-CheckAccess/ nocase ascii wide
         // Description: C2 server to connect to a victim machine via reverse shell
         // Reference: https://github.com/reveng007/C2_Server
-        $string42_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
+        $string52_powershell_greyware_tool_keyword = /Invoke\-WebRequest\sifconfig\.me\/ip.{0,1000}Content\.Trim\(\)/ nocase ascii wide
         // Description: alternativeto whoami
         // Reference: N/A
-        $string43_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
+        $string53_powershell_greyware_tool_keyword = /ls\senv\:USERNAME/ nocase ascii wide
         // Description: hiding a user from the login screen by modifying a specific registry key
         // Reference: N/A
-        $string44_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
+        $string54_powershell_greyware_tool_keyword = /New\-ItemProperty\s\-Path\s\"HKLM\:\\Software\\Microsoft\\Windows\sNT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\"\s\-Name\s.{0,1000}\s\-Value\s0\s\-PropertyType\sDword/ nocase ascii wide
         // Description: allowing SSH incoming connections (critical on DC)
         // Reference: N/A
-        $string45_powershell_greyware_tool_keyword = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
+        $string55_powershell_greyware_tool_keyword = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string46_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
+        $string56_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
         // Description: Execution Policy Bypass evasion
         // Reference: N/A
-        $string47_powershell_greyware_tool_keyword = /powershell\s\?encodedcommand\s\$env_powershell_greyware_tool_keyword\:PSExecutionPolicyPreference\=\"bypass\"/ nocase ascii wide
+        $string57_powershell_greyware_tool_keyword = /powershell\s\?encodedcommand\s\$env_powershell_greyware_tool_keyword\:PSExecutionPolicyPreference\=\"bypass\"/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string48_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
+        $string58_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string49_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
+        $string59_powershell_greyware_tool_keyword = /powershell\sNew\-ItemProperty\s\-Path\s.{0,1000}HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\-Name\sDisableAntiSpyware\s\-Value\s1\s\-PropertyType\sDWORD\s\-Force/ nocase ascii wide
         // Description: uninstalls Windows Defender
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string50_powershell_greyware_tool_keyword = /powershell\sUninstall\-WindowsFeature\s\-Name\sWindows\-Defender/ nocase ascii wide
+        $string60_powershell_greyware_tool_keyword = /powershell\sUninstall\-WindowsFeature\s\-Name\sWindows\-Defender/ nocase ascii wide
         // Description: Windows Defender tampering technique 
         // Reference: https://thedfirreport.com/2023/04/03/malicious-iso-file-leads-to-domain-wide-ransomware/
-        $string51_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
+        $string61_powershell_greyware_tool_keyword = /powershell.{0,1000}Uninstall\-WindowsFeature\s\-Name\sWindows\-Defender\-GUI/ nocase ascii wide
         // Description: Adversaries may attempt to execute powershell script from known accessible location
         // Reference: N/A
-        $string52_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
+        $string62_powershell_greyware_tool_keyword = /Powershell\.exe\s\s\-windowstyle\shidden\s\-nop\s\-ExecutionPolicy\sBypass\s\s\-Commmand\s.{0,1000}C\:\\Users\\.{0,1000}\\AppData\\Roaming\\/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string53_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string63_powershell_greyware_tool_keyword = /powershell\.exe\scurl\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string54_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
+        $string64_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string55_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
+        $string65_powershell_greyware_tool_keyword = /powershell\.exe\s\-exec\sbypass\s\-noni\s\-nop\s\-w\s1\s\-C.{0,1000}invoke_obfuscation/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string56_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string66_powershell_greyware_tool_keyword = /powershell\.exe\sInvoke\-WebRequest\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string57_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string67_powershell_greyware_tool_keyword = /powershell\.exe\siwr\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: command pattern used by crackmapexec by default A swiss army knife for pentesting networks
         // Reference: https://github.com/byt3bl33d3r/CrackMapExec
-        $string58_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
+        $string68_powershell_greyware_tool_keyword = /powershell\.exe\s\-noni\s\-nop\s\-w\s1\s\-enc\s/ nocase ascii wide
         // Description: CrackMapExec behavior
         // Reference: https://github.com/Porchetta-Industries/CrackMapExec
-        $string59_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
+        $string69_powershell_greyware_tool_keyword = /powershell\.exe\s\-NoP\s\-NoL\s\-sta\s\-NonI\s\-W\sHidden\s\-Exec\sBypass\s\-Enc\s/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string60_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string70_powershell_greyware_tool_keyword = /powershell\.exe\s\-nop\s\-w\shidden\s\-c\s\"IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'http\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: downloading from IP without domain name
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string61_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
+        $string71_powershell_greyware_tool_keyword = /powershell\.exe\swget\shttp\:\/\/\[0\-9\]\{1\,3\}/ nocase ascii wide
         // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
         // Reference: N/A
-        $string62_powershell_greyware_tool_keyword = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
+        $string72_powershell_greyware_tool_keyword = /reg\sdelete\s.{0,1000}\s\/v\sMRUList\s\/f/ nocase ascii wide
         // Description: attempts to evade defenses or remove traces of activity by deleting MRUList registry keys
         // Reference: N/A
-        $string63_powershell_greyware_tool_keyword = /Remove\-ItemProperty\s\-Path.{0,1000}\s\-Name\sMRUList\s/ nocase ascii wide
+        $string73_powershell_greyware_tool_keyword = /Remove\-ItemProperty\s\-Path.{0,1000}\s\-Name\sMRUList\s/ nocase ascii wide
         // Description: list AV products with powershell
         // Reference: N/A
-        $string64_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
+        $string74_powershell_greyware_tool_keyword = /root\/SecurityCenter2.{0,1000}\s\-ClassName\sAntiVirusProduct/ nocase ascii wide
         // Description: AMSI bypass obfuscation pattern
         // Reference: N/A
-        $string65_powershell_greyware_tool_keyword = /S\`eT\-It\`em\s\(\s\'V\'\+\'aR\'\s\+\s\s\'IA\'\s\+\s\(\'blE\:1\'\+\'q2\'\)/ nocase ascii wide
+        $string75_powershell_greyware_tool_keyword = /S\`eT\-It\`em\s\(\s\'V\'\+\'aR\'\s\+\s\s\'IA\'\s\+\s\(\'blE\:1\'\+\'q2\'\)/ nocase ascii wide
         // Description: AD module Logon Script from remote IP
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string66_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+        $string76_powershell_greyware_tool_keyword = /Set\-ADObject\s\-SamAccountName\s.{0,1000}\s\-PropertyName\sscriptpath\s\-PropertyValue\s.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string67_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
+        $string77_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\s\'/ nocase ascii wide
         // Description: Clearing the clipboard is a deliberate attempt to cover tracks and make the attack less detectable
         // Reference: https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-05-14-IOCs-for-DarkGate-activity.txt
-        $string68_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
+        $string78_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
         // Description: Disable IPS
         // Reference: N/A
-        $string69_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string79_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string70_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string80_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string71_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string81_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
-        $string72_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
+        $string82_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
         // Description: exclude exe file extensions from AV detections
         // Reference: https://github.com/Akabanwa-toma/hacke/blob/aaebb5cb188eb3a17bebfedfbde6b354e5522b92/installer.bat#L29C21-L29C63
-        $string73_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
+        $string83_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-ExclusionExtension\sexe/ nocase ascii wide
         // Description: openssh server is used (critical on DC - must not be installed)
         // Reference: N/A
-        $string74_powershell_greyware_tool_keyword = /Set\-Service\s\-Name\ssshd\s\-StartupType\s\'Automatic\'/ nocase ascii wide
+        $string84_powershell_greyware_tool_keyword = /Set\-Service\s\-Name\ssshd\s\-StartupType\s\'Automatic\'/ nocase ascii wide
         // Description: openssh server is used (critical on DC - must not be installed)
         // Reference: N/A
-        $string75_powershell_greyware_tool_keyword = /Start\-Service\ssshd/ nocase ascii wide
+        $string85_powershell_greyware_tool_keyword = /Start\-Service\ssshd/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string76_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Sophos\s/ nocase ascii wide
+        $string86_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Sophos\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string77_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"SQL\sBackups\"/ nocase ascii wide
+        $string87_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"SQL\sBackups\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string78_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
+        $string88_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"SQLsafe\sBackup\sService\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string79_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
+        $string89_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"storagecraft\simagemanager.{0,1000}\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string80_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
+        $string90_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Symantec\sSystem\sRecovery\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string81_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
+        $string91_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Veeam\sBackup\sCatalog\sData\sService\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string82_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Zoolz\s2\sService\"/ nocase ascii wide
+        $string92_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\s\"Zoolz\s2\sService\"/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string83_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sacronisagent/ nocase ascii wide
+        $string93_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sacronisagent/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string84_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAcronisAgent/ nocase ascii wide
+        $string94_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAcronisAgent/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string85_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sacrsch2svc/ nocase ascii wide
+        $string95_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sacrsch2svc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string86_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAcrSch2Svc/ nocase ascii wide
+        $string96_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAcrSch2Svc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string87_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sagntsvc/ nocase ascii wide
+        $string97_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sagntsvc/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string88_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAntivirus/ nocase ascii wide
+        $string98_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAntivirus/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string89_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sARSM\s\/y/ nocase ascii wide
+        $string99_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sARSM\s\/y/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string90_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sarsm/ nocase ascii wide
+        $string100_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sarsm/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string91_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAVP/ nocase ascii wide
+        $string101_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sAVP/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string92_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbackp/ nocase ascii wide
+        $string102_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbackp/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string93_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbackup/ nocase ascii wide
+        $string103_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbackup/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string94_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sBackupExec/ nocase ascii wide
+        $string104_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sBackupExec/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string95_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sBackupExecAgent/ nocase ascii wide
+        $string105_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sBackupExecAgent/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string96_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbedbg\s\/y/ nocase ascii wide
+        $string106_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sbedbg\s\/y/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string97_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\scbservi/ nocase ascii wide
+        $string107_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\scbservi/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string98_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\scbvscserv/ nocase ascii wide
+        $string108_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\scbvscserv/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string99_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sDCAgent/ nocase ascii wide
+        $string109_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sDCAgent/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string100_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEhttpSrv/ nocase ascii wide
+        $string110_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEhttpSrv/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string101_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sekrn/ nocase ascii wide
+        $string111_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sekrn/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string102_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string112_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPSecurityService.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string103_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string113_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEPUpdateService.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string104_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEsgShKernel/ nocase ascii wide
+        $string114_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sEsgShKernel/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string105_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sESHASRV/ nocase ascii wide
+        $string115_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sESHASRV/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string106_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sFA_Scheduler/ nocase ascii wide
+        $string116_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sFA_Scheduler/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string107_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sIMAP4Svc/ nocase ascii wide
+        $string117_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sIMAP4Svc/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string108_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sKAVFS/ nocase ascii wide
+        $string118_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sKAVFS/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string109_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sKAVFSGT/ nocase ascii wide
+        $string119_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sKAVFSGT/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string110_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\skavfsslp/ nocase ascii wide
+        $string120_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\skavfsslp/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string111_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sklnagent/ nocase ascii wide
+        $string121_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sklnagent/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string112_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smacmnsvc/ nocase ascii wide
+        $string122_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smacmnsvc/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string113_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smasvc/ nocase ascii wide
+        $string123_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smasvc/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string114_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBAMService/ nocase ascii wide
+        $string124_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBAMService/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string115_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string125_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMBEndpointAgent.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string116_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string126_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeEngineService.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string117_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeFramework/ nocase ascii wide
+        $string127_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeFramework/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string118_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
+        $string128_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcAfeeFrameworkMcAfeeFramework/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string119_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcShield/ nocase ascii wide
+        $string129_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMcShield/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string120_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfefire/ nocase ascii wide
+        $string130_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfefire/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string121_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfemms/ nocase ascii wide
+        $string131_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfemms/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string122_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfevtp/ nocase ascii wide
+        $string132_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smfevtp/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string123_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smozyprobackup/ nocase ascii wide
+        $string133_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smozyprobackup/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string124_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer/ nocase ascii wide
+        $string134_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string125_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer100/ nocase ascii wide
+        $string135_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer100/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string126_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
+        $string136_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string127_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string137_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string128_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string138_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string129_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string139_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string130_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string140_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string131_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string141_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string132_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string142_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string133_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string143_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string134_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string144_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string135_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string145_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string136_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string146_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string137_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string147_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string138_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string148_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string139_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string149_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string140_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string150_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string141_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string151_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string142_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string152_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string143_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string153_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string144_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string154_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string145_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string155_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string146_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string156_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string147_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string157_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string148_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
+        $string158_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string149_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSAVAdminService/ nocase ascii wide
+        $string159_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSAVAdminService/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string150_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSAVService/ nocase ascii wide
+        $string160_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSAVService/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string151_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sshadowprotectsvc/ nocase ascii wide
+        $string161_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sshadowprotectsvc/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string152_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sShMonitor/ nocase ascii wide
+        $string162_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sShMonitor/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string153_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSmcinst/ nocase ascii wide
+        $string163_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSmcinst/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string154_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSmcService/ nocase ascii wide
+        $string164_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSmcService/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string155_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssms_site_sql_backup/ nocase ascii wide
+        $string165_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssms_site_sql_backup/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string156_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string166_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSntpService.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string157_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssophossps/ nocase ascii wide
+        $string167_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssophossps/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string158_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sspxservice/ nocase ascii wide
+        $string168_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sspxservice/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string159_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
+        $string169_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string160_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string170_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string161_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string171_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string162_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string172_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string163_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
+        $string173_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string164_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstop\sSepMasterService/ nocase ascii wide
+        $string174_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstop\sSepMasterService/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string165_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssvcGenericHost/ nocase ascii wide
+        $string175_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssvcGenericHost/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string166_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_filter/ nocase ascii wide
+        $string176_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_filter/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string167_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_service/ nocase ascii wide
+        $string177_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_service/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string168_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_update/ nocase ascii wide
+        $string178_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_update/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string169_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_update_64/ nocase ascii wide
+        $string179_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sswi_update_64/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string170_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTmCCSF/ nocase ascii wide
+        $string180_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTmCCSF/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string171_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\stmlisten/ nocase ascii wide
+        $string181_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\stmlisten/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string172_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKey/ nocase ascii wide
+        $string182_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKey/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string173_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string183_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyScheduler.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string174_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyServiceHel/ nocase ascii wide
+        $string184_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sTrueKeyServiceHel/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string175_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
+        $string185_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svapiendpoint.{0,1000}\s\s\s\s\s\s\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string176_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamBackupSvc/ nocase ascii wide
+        $string186_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamBackupSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string177_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamBrokerSvc\s/ nocase ascii wide
+        $string187_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamBrokerSvc\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string178_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamCatalogSvc/ nocase ascii wide
+        $string188_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamCatalogSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string179_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamCloudSvc/ nocase ascii wide
+        $string189_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamCloudSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string180_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploymentService/ nocase ascii wide
+        $string190_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploymentService/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string181_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc/ nocase ascii wide
+        $string191_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string182_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
+        $string192_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamDeploySvc.{0,1000}\s\s\s\s/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string183_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamEnterpriseManagerSvc/ nocase ascii wide
+        $string193_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamEnterpriseManagerSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string184_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamHvIntegrationSvc/ nocase ascii wide
+        $string194_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamHvIntegrationSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string185_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamMountSvc/ nocase ascii wide
+        $string195_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamMountSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string186_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamNFSSvc/ nocase ascii wide
+        $string196_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamNFSSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string187_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamRESTSvc/ nocase ascii wide
+        $string197_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamRESTSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string188_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamTransportSvc/ nocase ascii wide
+        $string198_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sVeeamTransportSvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string189_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svsnapvss/ nocase ascii wide
+        $string199_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svsnapvss/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string190_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svssvc/ nocase ascii wide
+        $string200_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\svssvc/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string191_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        $string201_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string192_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
+        $string202_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\swbengine/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string193_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sWRSVC/ nocase ascii wide
+        $string203_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sWRSVC/ nocase ascii wide
 
     condition:
         any of them
@@ -39616,30 +36365,39 @@ rule sc_greyware_tool_keyword
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
         $string87_sc_greyware_tool_keyword = /sc\sqtriggerinfo\sRemoteRegistry/ nocase ascii wide
+        // Description: creates a backdoor by weakening the security of the Service Control Manager allowing any user to manage services on the machine which can lead to privilege escalation and persistent access by an attacker
+        // Reference: https://x.com/0gtweet/status/1628720819537936386
+        $string88_sc_greyware_tool_keyword = /sc\ssdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
         // Description: start the RemoteRegistry service without Admin privileges
         // Reference: https://twitter.com/splinter_code/status/1715876413474025704
-        $string88_sc_greyware_tool_keyword = /sc\sstart\sRemoteRegistry/ nocase ascii wide
+        $string89_sc_greyware_tool_keyword = /sc\sstart\sRemoteRegistry/ nocase ascii wide
         // Description: Stop EventLog service
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string89_sc_greyware_tool_keyword = /sc\sstop\seventlog/ nocase ascii wide
+        $string90_sc_greyware_tool_keyword = /sc\sstop\seventlog/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string90_sc_greyware_tool_keyword = /sc\sstop\sMBAMProtection/ nocase ascii wide
+        $string91_sc_greyware_tool_keyword = /sc\sstop\sMBAMProtection/ nocase ascii wide
         // Description: stop AV script
         // Reference: https://thedfirreport.com/wp-content/uploads/2023/12/19208-013.png
-        $string91_sc_greyware_tool_keyword = /sc\sstop\sMBAMService/ nocase ascii wide
+        $string92_sc_greyware_tool_keyword = /sc\sstop\sMBAMService/ nocase ascii wide
         // Description: stop AV
         // Reference: N/A
-        $string92_sc_greyware_tool_keyword = /sc\sstop\sSophos\sFile\sScanner\sService/ nocase ascii wide
+        $string93_sc_greyware_tool_keyword = /sc\sstop\sSophos\sFile\sScanner\sService/ nocase ascii wide
+        // Description: creates a backdoor by weakening the security of the Service Control Manager allowing any user to manage services on the machine which can lead to privilege escalation and persistent access by an attacker
+        // Reference: https://x.com/0gtweet/status/1628720819537936386
+        $string94_sc_greyware_tool_keyword = /sc\.exe\ssdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
         // Description: stop AV
         // Reference: N/A
-        $string93_sc_greyware_tool_keyword = /sc\.exe\sstop\s.{0,1000}Sophos\sFile\sScanner\sService/ nocase ascii wide
+        $string95_sc_greyware_tool_keyword = /sc\.exe\sstop\s.{0,1000}Sophos\sFile\sScanner\sService/ nocase ascii wide
         // Description: Stop Bits service
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string94_sc_greyware_tool_keyword = /sc\.exe\sstop\sbits/ nocase ascii wide
+        $string96_sc_greyware_tool_keyword = /sc\.exe\sstop\sbits/ nocase ascii wide
         // Description: Stop EventLog service
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string95_sc_greyware_tool_keyword = /sc\.exe\sstop\seventlog/ nocase ascii wide
+        $string97_sc_greyware_tool_keyword = /sc\.exe\sstop\seventlog/ nocase ascii wide
+        // Description: creates a backdoor by weakening the security of the Service Control Manager allowing any user to manage services on the machine which can lead to privilege escalation and persistent access by an attacker
+        // Reference: https://x.com/0gtweet/status/1628720819537936386
+        $string98_sc_greyware_tool_keyword = /sc\.exe.{0,1000}sdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
 
     condition:
         any of them

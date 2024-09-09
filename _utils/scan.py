@@ -67,6 +67,8 @@ def get_yara_files(yara_path):
         yara_files.append(yara_path)
     return yara_files
         
+
+
 def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
     results = []
     try:
@@ -77,26 +79,37 @@ def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
                 if matches:
                     for match in matches:  # Loop through each match object
                         for string_match in match.strings:  # Loop through each string match inside the match object
-                            string_pattern = patterns.get(string_match[1], 'unknown (error)')
-                            rule_name = str(yara_rule_file)
-                            try:
-                                matched_string_UTF16 = string_match[2].decode('utf-16')
-                            except UnicodeDecodeError:
-                                matched_string_UTF16 = "<Undecodable data>"
+                            # Access the identifier (string ID)
+                            print(f"String ID: {string_match.identifier}")
+                            
+                            # Loop through the instances for this string_match to get the data
+                            for instance in string_match.instances:
+                                print(f"Offset: {instance.offset}")
+                                print(f"Matched data (raw bytes): {instance.matched_data}")
+                                print(f"Matched data (UTF-8 decoded): {instance.matched_data.decode('utf-8', 'ignore')}")
+                                
+                                try:
+                                    utf16_decoded = instance.matched_data.decode('utf-16')
+                                    print(f"Matched data (UTF-16 decoded): {utf16_decoded}")
+                                except UnicodeDecodeError:
+                                    print("UTF-16 decoding failed")
 
-                            result_dict = {
-                                'rule_name': rule_name,
-                                'file_path': str(file_path),
-                                'offset': string_match[0],
-                                'string_id': string_match[1],
-                                'string_pattern': string_pattern,
-                                'matched_string_UTF8': string_match[2].decode('utf-8', 'ignore'),
-                                'matched_string_UTF16': matched_string_UTF16
-                            }
-                            results.append(result_dict)
+                                string_pattern = patterns.get(string_match.identifier, 'unknown (error)')
+                                rule_name = str(yara_rule_file)
 
-                            key = (string_pattern, rule_name, str(file_path))
-                            summary_count[key] = summary_count.get(key, 0) + 1
+                                result_dict = {
+                                    'rule_name': rule_name,
+                                    'file_path': str(file_path),
+                                    'offset': instance.offset,
+                                    'string_id': string_match.identifier,
+                                    'string_pattern': string_pattern,
+                                    'matched_string_UTF8': instance.matched_data.decode('utf-8', 'ignore'),
+                                    'matched_string_UTF16': utf16_decoded if 'utf16_decoded' in locals() else "<Undecodable data>"
+                                }
+                                results.append(result_dict)
+
+                                key = (string_pattern, rule_name, str(file_path))
+                                summary_count[key] = summary_count.get(key, 0) + 1
 
                     formatted_results = json.dumps(results, indent=4)
                     print(formatted_results)
@@ -108,7 +121,8 @@ def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
             print(f"Skipping {file_path}. File size exceeds 64MB.")
     except PermissionError:
         print(f"Permission denied for {file_path}. Skipping.")
-        
+
+   
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scan a file or directory with one or multiple YARA rules")
     parser.add_argument("-y", "--yara", required=True, help="Path to the YARA rule file(s) or directory containing them")

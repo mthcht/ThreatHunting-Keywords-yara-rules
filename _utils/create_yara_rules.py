@@ -51,7 +51,7 @@ def safe_tool_name(tool):
     sanitized_tool = tool
     if tool[0].isdigit() or tool.lower() in yara_reserved_keywords:
         sanitized_tool = f"_{tool}"
-    return sanitized_tool.replace('-','_').replace(' ','_').replace('.','_').replace('&','_and_').replace('$','')
+    return sanitized_tool.replace('-','_').replace(' ','_').replace('.','_').replace('&','_and_').replace('$','').replace('(', '_').replace(')', '_')
 
 def generate_yara_rules(output_directory):
     script_directory = os.path.dirname(os.path.realpath(__file__))

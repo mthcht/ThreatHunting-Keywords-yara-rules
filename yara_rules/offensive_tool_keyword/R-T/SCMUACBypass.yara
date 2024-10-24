@@ -20,24 +20,30 @@ rule SCMUACBypass
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
         $string4 = /\/scmuacbypass\.exe/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string5 = /\/SCMUACBypass\.exe/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string5 = /\/SCMUACBypass\.git/ nocase ascii wide
+        $string6 = /\/SCMUACBypass\.git/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string6 = /\/SCMUACBypass\// nocase ascii wide
+        $string7 = /\/SCMUACBypass\// nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string7 = /\\scmuacbypass\.cpp/ nocase ascii wide
+        $string8 = /\\scmuacbypass\.cpp/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string8 = /\\scmuacbypass\.exe/ nocase ascii wide
+        $string9 = /\\scmuacbypass\.exe/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string10 = /\\SCMUACBypass\.exe/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string9 = /\\SCMUACBypass\\/ nocase ascii wide
+        $string11 = /\\SCMUACBypass\\/ nocase ascii wide
         // Description: SCM UAC Bypass
         // Reference: https://github.com/rasta-mouse/SCMUACBypass
-        $string10 = /UACBypassedService\.exe/ nocase ascii wide
+        $string12 = /UACBypassedService\.exe/ nocase ascii wide
 
     condition:
         any of them

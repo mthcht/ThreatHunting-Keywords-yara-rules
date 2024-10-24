@@ -14,18 +14,30 @@ rule ForgeCert
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
         $string2 = /\s\-\-NewCertPath\s.{0,1000}\.pfx\s\-\-NewCertPassword\s/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string3 = /\/ForgeCert\.exe/ nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string3 = /\/ForgeCert\.git/ nocase ascii wide
+        $string4 = /\/ForgeCert\.git/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string5 = /\\ForgeCert\.exe/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string6 = /\\ForgeCert\.pdb/ nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string4 = /bd346689\-8ee6\-40b3\-858b\-4ed94f08d40a/ nocase ascii wide
+        $string7 = /bd346689\-8ee6\-40b3\-858b\-4ed94f08d40a/ nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string5 = /ForgeCert\-main/ nocase ascii wide
+        $string8 = /ForgeCert\-main/ nocase ascii wide
         // Description: ForgeCert uses the BouncyCastle C# API and a stolen Certificate Authority (CA) certificate + private key to forge certificates for arbitrary users capable of authentication to Active Directory.
         // Reference: https://github.com/GhostPack/ForgeCert
-        $string6 = /GhostPack\/ForgeCert/ nocase ascii wide
+        $string9 = /GhostPack\/ForgeCert/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string10 = /\'Product\'\>ForgeCert/ nocase ascii wide
 
     condition:
         any of them

@@ -14,6 +14,15 @@ rule unset
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string2 = /unset\sHISTFILE/ nocase ascii wide
+        // Description: covering history tracks on linux system
+        // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
+        $string3 = /unset\sHISTFILE/ nocase ascii wide
+        // Description: covering history tracks on linux system
+        // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
+        $string4 = /unset\sHISTFILESIZE/ nocase ascii wide
+        // Description: covering history tracks on linux system
+        // Reference: https://rosesecurity.gitbook.io/red-teaming-ttps/linux
+        $string5 = /unset\sHISTSIZE/ nocase ascii wide
 
     condition:
         any of them

@@ -116,24 +116,30 @@ rule powershell
         // Description: the threat actor deleted the SD value within the Tree registry path (hide scheduled task creation)
         // Reference: https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/
         $string36 = /Remove\-ItemProperty\s.{0,1000}HKLM\:\\SOFTWARE\\YourSoftware\\Schedule\\TaskCache\\Tree\\.{0,1000}\s\-Name\s.{0,1000}SD/ nocase ascii wide
+        // Description: removing powershell console logging to avoid detection
+        // Reference: N/A
+        $string37 = /Remove\-Module\s\-Name\sPsReadline/ nocase ascii wide
         // Description: Defense evasion technique
         // Reference: https://www.trendmicro.com/en_us/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html
-        $string37 = /rundll32\.exe\sC\:\\Users\\Public\\/ nocase ascii wide
+        $string38 = /rundll32\.exe\sC\:\\Users\\Public\\/ nocase ascii wide
         // Description: credential dumping activity
         // Reference: https://www.trendmicro.com/en_us/research/22/g/analyzing-penetration-testing-tools-that-threat-actors-use-to-br.html
-        $string38 = /rundll32\.exe\sC\:\\windows\\System32\\comsvcs\.dll\sMiniDump\s\(Get\-Process\slsass\)\.id/ nocase ascii wide
+        $string39 = /rundll32\.exe\sC\:\\windows\\System32\\comsvcs\.dll\sMiniDump\s\(Get\-Process\slsass\)\.id/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string39 = /Set\-ItemProperty\s.{0,1000}\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        $string40 = /Set\-ItemProperty\s.{0,1000}\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string40 = /Set\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-Value\s0/ nocase ascii wide
+        $string41 = /Set\-ItemProperty\s.{0,1000}\s\"EnableScriptBlockLogging\"\s\-Value\s0/ nocase ascii wide
         // Description: disable powershell logging
         // Reference: N/A
-        $string41 = /Set\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\"\s\-Name\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
+        $string42 = /Set\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging\"\s\-Name\s\"EnableModuleLogging\"\s\-Value\s0/ nocase ascii wide
         // Description: Windows Defender evasion add an exclusion directory for your shady stuff
         // Reference: https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference
-        $string42 = /Set\-MpPreference\s\-ExclusionPath\s.{0,1000}\s\-DisableRealtimeMonitoring/ nocase ascii wide
+        $string43 = /Set\-MpPreference\s\-ExclusionPath\s.{0,1000}\s\-DisableRealtimeMonitoring/ nocase ascii wide
+        // Description: removing powershell console logging to avoid detection
+        // Reference: N/A
+        $string44 = /Set\-PSReadlineOption\s\-HistorySaveStyle\sSaveNothing/ nocase ascii wide
 
     condition:
         any of them

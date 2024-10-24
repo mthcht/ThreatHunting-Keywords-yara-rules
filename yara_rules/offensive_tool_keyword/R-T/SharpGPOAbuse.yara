@@ -26,12 +26,21 @@ rule SharpGPOAbuse
         // Description: SharpGPOAbuse is a .NET application written in C# that can be used to take advantage of a user's edit rights on a Group Policy Object (GPO) in order to compromise the objects that are controlled by that GPO.
         // Reference: https://github.com/FSecureLABS/SharpGPOAbuse
         $string6 = /\sNewLocalAdmin\(/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string7 = /\\SharpGPOAbuse\.pdb/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string8 = /\>SharpGPOAbuse\</ nocase ascii wide
         // Description: SharpGPOAbuse is a .NET application written in C# that can be used to take advantage of a user's edit rights on a Group Policy Object (GPO) in order to compromise the objects that are controlled by that GPO.
         // Reference: https://github.com/FSecureLABS/SharpGPOAbuse
-        $string7 = /SharpGPOAbuse/ nocase ascii wide
+        $string9 = /SharpGPOAbuse/ nocase ascii wide
         // Description: SharpGPOAbuse is a .NET application written in C# that can be used to take advantage of a users edit rights on a Group Policy Object (GPO) in order to compromise the objects that are controlled by that GPO.
         // Reference: https://github.com/FSecureLABS/SharpGPOAbuse
-        $string8 = /SharpGPOAbuse/ nocase ascii wide
+        $string10 = /SharpGPOAbuse/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string11 = /SharpGPOAbuse\.exe/ nocase ascii wide
 
     condition:
         any of them

@@ -17,27 +17,45 @@ rule SharpEfsPotato
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
         $string3 = /\/SharpEfsPotato/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string4 = /\[\+\]\sServer\sconnected\sto\sour\sevil\sRPC\spipe/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string5 = /\[\+\]\sTriggering\sname\spipe\saccess\son\sevil\sPIPE/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string4 = /\\SharpEfsPotato/ nocase ascii wide
+        $string6 = /\\SharpEfsPotato/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string7 = /\\SharpEfsPotato\.pdb/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string8 = /\>SharpEfsPotato\</ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string5 = /AAB4D641\-C310\-4572\-A9C2\-6D12593AB28E/ nocase ascii wide
+        $string9 = /AAB4D641\-C310\-4572\-A9C2\-6D12593AB28E/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string6 = /SharpEfsPotato\sby\s\@bugch3ck/ nocase ascii wide
+        $string10 = /SharpEfsPotato\sby\s\@bugch3ck/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string11 = /SharpEfsPotato\sby\s\@bugch3ck/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string7 = /SharpEfsPotato\.cs/ nocase ascii wide
+        $string12 = /SharpEfsPotato\.cs/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string8 = /SharpEfsPotato\.exe/ nocase ascii wide
+        $string13 = /SharpEfsPotato\.exe/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string14 = /SharpEfsPotato\.exe/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string9 = /SharpEfsPotato\.sln/ nocase ascii wide
+        $string15 = /SharpEfsPotato\.sln/ nocase ascii wide
         // Description: Local privilege escalation from SeImpersonatePrivilege using EfsRpc.
         // Reference: https://github.com/bugch3ck/SharpEfsPotato
-        $string10 = /SharpEfsPotato\-master/ nocase ascii wide
+        $string16 = /SharpEfsPotato\-master/ nocase ascii wide
 
     condition:
         any of them

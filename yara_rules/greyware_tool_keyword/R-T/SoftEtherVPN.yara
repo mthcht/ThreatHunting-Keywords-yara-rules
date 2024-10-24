@@ -103,7 +103,7 @@ rule SoftEtherVPN
         $string31 = /\\vpncmgr\.exe/ nocase ascii wide
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
-        $string32 = /\<SoftEther\sVPN\sProject\sat\sUniversity\sof\sTsukuba\,\sJapan\.\>/ nocase ascii wide
+        $string32 = /\>SoftEther\sVPN\sProject\sat\sUniversity\sof\sTsukuba\,\sJapan\.\</ nocase ascii wide
         // Description: Cross-platform multi-protocol VPN software abused by attackers
         // Reference: https://github.com/SoftEtherVPN/SoftEtherVPN
         $string33 = /\>SoftEther\sVPN\sSetup\s\(Developer\sEdition\)\</ nocase ascii wide

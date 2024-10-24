@@ -1,151 +1,91 @@
-rule CSExec
+rule csexec
 {
     meta:
-        description = "Detection patterns for the tool 'CSExec' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool 'csexec' taken from the ThreatHunting-Keywords github project" 
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "CSExec"
+        tool = "csexec"
         rule_category = "offensive_tool_keyword"
 
     strings:
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string1 = /\s\-\-blockDLLs\s\-\-ruy\-lopez/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string2 = /\sCSExec\.py/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string3 = /\s\-\-dll\s\-\-dllhijack\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string4 = /\s\-\-donut\s\-\-rehash\sn\s\-\-silent\s\-o\s\/tmp\// nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string5 = /\s\-m\svenv\scsexec\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string6 = /\s\-\-no\-ppid\-spoof/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string7 = /\s\-\-no\-sigthief/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string8 = /\s\-pi\s\\\\\\\\\\\\\\\\\.\\\\\\\\pipe\\\\\\\\/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string9 = /\s\-s\sputty\.exe_sig\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string10 = /\s\-sc\sGetSyscallStub\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string11 = /\s\-sc\sSysWhispers3/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string12 = /\s\-\-shellcode\s.{0,1000}\-\-dc\-ip\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string13 = /\s\-\-shellcode\s.{0,1000}\-\-silent/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string14 = /\s\-\-shellcode\s\-\-remoteinject/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string15 = /\s\-\-silent\s\-obf\sNixImports\s\-o\s\/tmp\// nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string16 = /\s\-\-syscalls\sGetSyscallStub/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string17 = /\s\-\-syscalls\sSysWhispers3/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string18 = /\s\-\-syswhispers\s\-\-jump/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string19 = /\/CSExec\.py/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string20 = /\/CSExec\.py\.git/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string21 = /\~\/\.csexec/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string22 = /Attempted\sto\sspawn\sa\ssocks\sproxy\sserver\sat\s0\.0\.0\.0\:/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string23 = /beacon_generate\.py/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string24 = /bof_pack\.py\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string25 = /csexec\/csexec_history/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string26 = /dinjector\s\/i\:.{0,1000}\s\/p\:/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string27 = /dll_generator\.py/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string28 = /keethief\-syscalls/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string29 = /Metro\-Holografix\/CSExec/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string30 = /nanodump_pipe/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string31 = /nanodump\-pipes/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string32 = /NimSyscallLoader\s\-/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string33 = /\-\-noWAIT\s\-\-noFUNC\s\-\-donut\s\-\-rehash\sn\s\-\-silent\s\-o\s\/tmp\// nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string34 = /pypykatz\slsa\sminidump\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string35 = /reflective_assembly_minified\.ps1/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string36 = /reverse_shell_minified\.js/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string37 = /rlwrap\s\-cAr\snc\s\-lvnp\s/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string38 = /secretsdump\s.{0,1000}\-\-silent/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string39 = /sharpsecretsdump/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string40 = /SharpShot\.exe\s\// nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string41 = /temp.{0,1000}lsass_.{0,1000}\.dmp/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string42 = /templates.{0,1000}CSExec\.cs/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string43 = /templates.{0,1000}HIPS_LIPS_processes\.txt/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string44 = /templates.{0,1000}reflective_assembly_minified\.ps1/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string45 = /tmp.{0,1000}lsass_.{0,1000}\.dmp/ nocase ascii wide
-        // Description: An alternative to *exec.py from impacket with some builtin tricks
-        // Reference: https://github.com/Metro-Holografix/CSExec.py
-        $string46 = /utils\/payloads\.db/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string1 = /\/csexec\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string2 = /\/CSExec\.git/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string3 = /\/csexecsvc\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string4 = /\/csexecsvc\-net35\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string5 = /\/csexecsvc\-net40\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string6 = /\/csexecsvc\-net45\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string7 = /\\\\.{0,1000}\\pipe\\psexecsvc/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string8 = /\\csexec\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string9 = /\\csexecsvc\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string10 = /\\csexecsvc\-net35\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string11 = /\\csexecsvc\-net40\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string12 = /\\csexecsvc\-net45\.exe/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string13 = /\>csexec\</ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string14 = /\>csexecsvc\</ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string15 = /41A90A6A\-F9ED\-4A2F\-8448\-D544EC1FD753/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string16 = /41A90A6A\-F9ED\-4A2F\-8448\-D544EC1FD754/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string17 = /41A90A6A\-F9ED\-4A2F\-8448\-D544EC1FD755/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string18 = /58ae9b923139f8bed83bed67aae0bf2e56bfec9901009e61c4e4b6b375050bec/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string19 = /64fc0afc72a37b1071482e9c4725cd35fa2b974c6903cd01124ed7fe9d2c8e27/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string20 = /6d11a3d59602508d435fc3cabba737d7b5d710e2b56b7623e903e59ac3d3f287/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string21 = /73fb2d477ece754ce6ad9239126b69f9dc3dfc95775ef0714a4df26ee7ac4352/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string22 = /F3037587\-1A3B\-41F1\-AA71\-B026EFDB2A35/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string23 = /F3037587\-1A3B\-41F1\-AA71\-B026EFDB2A40/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string24 = /F3037587\-1A3B\-41F1\-AA71\-B026EFDB2A45/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string25 = /malcomvetter\/CSExec/ nocase ascii wide
+        // Description: An implementation of PSExec in C#
+        // Reference: https://github.com/malcomvetter/CSExec
+        $string26 = /This\sis\ssimilar\sto\spsexec\s\-s\s\\/ nocase ascii wide
 
     condition:
         any of them

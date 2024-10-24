@@ -64,10 +64,13 @@ rule DomainPasswordSpray
         $string18 = /Invoke\-DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string19 = /mdavis332\/DomainPasswordSpray/ nocase ascii wide
+        $string19 = /Invoke\-DomainPasswordSpray/ nocase ascii wide
+        // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain.
+        // Reference: https://github.com/dafthack/DomainPasswordSpray
+        $string20 = /mdavis332\/DomainPasswordSpray/ nocase ascii wide
         // Description: DomainPasswordSpray is a tool written in PowerShell to perform a password spray attack against users of a domain. By default it will automatically generate the userlist from the domain. BE VERY CAREFUL NOT TO LOCKOUT ACCOUNTS!
         // Reference: https://github.com/dafthack/DomainPasswordSpray
-        $string20 = /PasswordSpray\s/ nocase ascii wide
+        $string21 = /PasswordSpray\s/ nocase ascii wide
 
     condition:
         any of them

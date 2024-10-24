@@ -20,69 +20,87 @@ rule RunasCs
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
         $string4 = /\/RunasCs\.cs/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string5 = /\/RunasCs\.exe/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string5 = /\/RunasCs\.git/ nocase ascii wide
-        // Description: RunasCs - Csharp and open version of windows builtin runas.exe
-        // Reference: https://github.com/antonioCoco/RunasCs/
         $string6 = /\/RunasCs\.git/ nocase ascii wide
+        // Description: RunasCs - Csharp and open version of windows builtin runas.exe
+        // Reference: https://github.com/antonioCoco/RunasCs/
+        $string7 = /\/RunasCs\.git/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string7 = /\/RunasCs\.zip/ nocase ascii wide
+        $string8 = /\/RunasCs\.zip/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string8 = /\\RunasCs\.cs/ nocase ascii wide
+        $string9 = /\\RunasCs\.cs/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string10 = /\\RunasCs\.exe/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string9 = /antonioCoco\/RunasCs/ nocase ascii wide
+        $string11 = /antonioCoco\/RunasCs/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string10 = /antonioCoco\/RunasCs/ nocase ascii wide
+        $string12 = /antonioCoco\/RunasCs/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string11 = /base64_conversion_commands\.ps1/ nocase ascii wide
+        $string13 = /base64_conversion_commands\.ps1/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string12 = /base64_conversion_commands\.ps1/ nocase ascii wide
+        $string14 = /base64_conversion_commands\.ps1/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string13 = /\-\-bypass\-uac.{0,1000}\-\-logontype/ nocase ascii wide
+        $string15 = /\-\-bypass\-uac.{0,1000}\-\-logontype/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string14 = /cmd\s\/c\s.{0,1000}\s\-\-bypass\-uac/ nocase ascii wide
+        $string16 = /cmd\s\/c\s.{0,1000}\s\-\-bypass\-uac/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string15 = /cmd\s\/c\s.{0,1000}\s\-\-remote\-impersonation/ nocase ascii wide
+        $string17 = /cmd\s\/c\s.{0,1000}\s\-\-remote\-impersonation/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string16 = /CreateProcessAsUser/ nocase ascii wide
+        $string18 = /CreateProcessAsUser/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string17 = /Invoke\-RunasCs/ nocase ascii wide
+        $string19 = /Invoke\-RunasCs/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string18 = /Invoke\-RunasCs/ nocase ascii wide
+        $string20 = /Invoke\-RunasCs/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string21 = /Invoke\-RunasCs/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string22 = /\'Product\'\>RunasCs\</ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string19 = /RunasCreateProcessAsUserW/ nocase ascii wide
+        $string23 = /RunasCreateProcessAsUserW/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string24 = /RunasCs\sv1\.5\s\-\s\@splinter_code/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string25 = /RunasCs.{0,1000}\s\-\-remote\-impersonation/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string20 = /RunasCs\.exe/ nocase ascii wide
+        $string26 = /RunasCs\.exe/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string21 = /RunasCs\.zip/ nocase ascii wide
+        $string27 = /RunasCs\.zip/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string22 = /RunasCs_net2\.exe/ nocase ascii wide
+        $string28 = /RunasCs_net2\.exe/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string23 = /RunasCs_net2\.exe/ nocase ascii wide
+        $string29 = /RunasCs_net2\.exe/ nocase ascii wide
         // Description: RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credential
         // Reference: https://github.com/antonioCoco/RunasCs
-        $string24 = /RunasCsMain/ nocase ascii wide
+        $string30 = /RunasCsMain/ nocase ascii wide
         // Description: RunasCs - Csharp and open version of windows builtin runas.exe
         // Reference: https://github.com/antonioCoco/RunasCs/
-        $string25 = /RunasCs\-master/ nocase ascii wide
+        $string31 = /RunasCs\-master/ nocase ascii wide
 
     condition:
         any of them

@@ -35,39 +35,51 @@ rule SharpRDP
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
         $string9 = /\.WriteLine\(\"SharpRDP\"\)/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string10 = /\/SharpRDP\.exe/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string10 = /\/SharpRDP\.git/ nocase ascii wide
+        $string11 = /\/SharpRDP\.git/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string12 = /\\SharpRDP\.exe/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string13 = /\\SharpRDP\.pdb/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string11 = /\\SharpRDP\\/ nocase ascii wide
+        $string14 = /\\SharpRDP\\/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string15 = /\>SharpRDP\</ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string12 = /0xthirteen\/SharpRDP/ nocase ascii wide
+        $string16 = /0xthirteen\/SharpRDP/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string13 = /Ask\sto\stake\sover\sRDP\ssession\sif\sanother\sused\sis\slogged\sin\s\(workstation\)/ nocase ascii wide
+        $string17 = /Ask\sto\stake\sover\sRDP\ssession\sif\sanother\sused\sis\slogged\sin\s\(workstation\)/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string14 = /b4726b5d0aa21ed0f06326fcf2f9bd0c6171c76b610287a357710174f06dea52/ nocase ascii wide
+        $string18 = /b4726b5d0aa21ed0f06326fcf2f9bd0c6171c76b610287a357710174f06dea52/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string15 = /F1DF1D0F\-FF86\-4106\-97A8\-F95AAF525C54/ nocase ascii wide
+        $string19 = /F1DF1D0F\-FF86\-4106\-97A8\-F95AAF525C54/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string16 = /SharpRDP\..{0,1000}\.dll\.bin/ nocase ascii wide
+        $string20 = /SharpRDP\..{0,1000}\.dll\.bin/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string17 = /SharpRDP\.csproj/ nocase ascii wide
+        $string21 = /SharpRDP\.csproj/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string18 = /SharpRDP\.exe/ nocase ascii wide
+        $string22 = /SharpRDP\.exe/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string19 = /SharpRDP\.sln/ nocase ascii wide
+        $string23 = /SharpRDP\.sln/ nocase ascii wide
         // Description: Remote Desktop Protocol .NET Console Application for Authenticated Command Execution
         // Reference: https://github.com/0xthirteen/SharpRDP
-        $string20 = /SharpRDP\-master/ nocase ascii wide
+        $string24 = /SharpRDP\-master/ nocase ascii wide
 
     condition:
         any of them

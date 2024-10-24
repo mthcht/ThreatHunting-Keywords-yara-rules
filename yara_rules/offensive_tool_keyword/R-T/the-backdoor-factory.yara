@@ -55,22 +55,34 @@ rule the_backdoor_factory
         $string15 = /\\the\-backdoor\-factory\\/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string16 = /LinuxARMLELF32\.py/ nocase ascii wide
+        $string16 = /5b36e42494ab562f7adb9c5dbf17761300050efd24c1c9c61dcb82e5bb628840/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string17 = /loadliba_reverse_tcp\.asm/ nocase ascii wide
+        $string17 = /9d0ff36d92bb6cac9255111b4af63700c5e796fe8233504b4acd1ec4f92bb43f/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string18 = /loadliba_shell\.asm/ nocase ascii wide
+        $string18 = /baf6deb599ee2e6cd817dbc447bdb4ea3cf9a585708c8c585f9a104ffba2b8d9/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string19 = /loadliba_single_shell_reverse_tcp\.asm/ nocase ascii wide
+        $string19 = /d4aae162571f8338f2560eb32b774647fd0f1952d901dd38f8685e42ceeea813/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string20 = /secretsquirrel\/the\-backdoor\-factory/ nocase ascii wide
+        $string20 = /LinuxARMLELF32\.py/ nocase ascii wide
         // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
         // Reference: https://github.com/secretsquirrel/the-backdoor-factory
-        $string21 = /the\-backdoor\-factory\-master/ nocase ascii wide
+        $string21 = /loadliba_reverse_tcp\.asm/ nocase ascii wide
+        // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
+        // Reference: https://github.com/secretsquirrel/the-backdoor-factory
+        $string22 = /loadliba_shell\.asm/ nocase ascii wide
+        // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
+        // Reference: https://github.com/secretsquirrel/the-backdoor-factory
+        $string23 = /loadliba_single_shell_reverse_tcp\.asm/ nocase ascii wide
+        // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
+        // Reference: https://github.com/secretsquirrel/the-backdoor-factory
+        $string24 = /secretsquirrel\/the\-backdoor\-factory/ nocase ascii wide
+        // Description: Patch PE  ELF  Mach-O binaries with shellcode new version in development*
+        // Reference: https://github.com/secretsquirrel/the-backdoor-factory
+        $string25 = /the\-backdoor\-factory\-master/ nocase ascii wide
 
     condition:
         any of them

@@ -20,276 +20,291 @@ rule PowerUpSQL
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
         $string4 = /\s\-Name\sSQLC2AgentPS\s/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string5 = /\sPowerUpSQL\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string5 = /\sSQLC2\.ps1/ nocase ascii wide
+        $string6 = /\sSQLC2\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string6 = /\s\-TaskName\s\"SQLC2AgentPS/ nocase ascii wide
+        $string7 = /\s\-TaskName\s\"SQLC2AgentPS/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string7 = /\sUPDATE\sdbo\.C2Agents/ nocase ascii wide
+        $string8 = /\sUPDATE\sdbo\.C2Agents/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string8 = /\sWHERE\sTABLE_NAME\slike\s\'C2AGENTS\'/ nocase ascii wide
+        $string9 = /\sWHERE\sTABLE_NAME\slike\s\'C2AGENTS\'/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string9 = /\sWHERE\sTABLE_NAME\slike\s\'C2COMMANDS\'/ nocase ascii wide
+        $string10 = /\sWHERE\sTABLE_NAME\slike\s\'C2COMMANDS\'/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string10 = /\$SQLC2Command/ nocase ascii wide
+        $string11 = /\$SQLC2Command/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string12 = /\/PowerUpSQL\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string11 = /\/SQLC2\.ps1/ nocase ascii wide
+        $string13 = /\/SQLC2\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string12 = /\:\\windows\\temp\\blah\.txt/ nocase ascii wide
+        $string14 = /\:\\windows\\temp\\blah\.txt/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string13 = /\[SQLC2\sAgent\sJob\]/ nocase ascii wide
+        $string15 = /\[SQLC2\sAgent\sJob\]/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string14 = /\\Backdoor\.exe/ nocase ascii wide
+        $string16 = /\\Backdoor\.exe/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string15 = /\\evil32\.dll/ nocase ascii wide
+        $string17 = /\\evil32\.dll/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string16 = /\\evil64\.dll/ nocase ascii wide
+        $string18 = /\\evil64\.dll/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string17 = /\\Get\-Credential\.sql/ nocase ascii wide
+        $string19 = /\\Get\-Credential\.sql/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string20 = /\\PowerUpSQL\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string18 = /\\SQLC2\.ps1/ nocase ascii wide
+        $string21 = /\\SQLC2\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string19 = /\\SQLC2CMDS\.dll/ nocase ascii wide
+        $string22 = /\\SQLC2CMDS\.dll/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string20 = /\\Windows\\CurrentVersion\\Uninstall\\SQLC2AgentPS/ nocase ascii wide
+        $string23 = /\\Windows\\CurrentVersion\\Uninstall\\SQLC2AgentPS/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string21 = /\\xp_evil_template\.cpp/ nocase ascii wide
+        $string24 = /\\xp_evil_template\.cpp/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string25 = /\<H1\>PowerUp\sreport\sfor\s/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string22 = /C\:\\temp\\iamahacker\.txt/ nocase ascii wide
+        $string26 = /C\:\\temp\\iamahacker\.txt/ nocase ascii wide
+        // Description: executables for penetration testing Windows Active Directory environments
+        // Reference: https://github.com/jakobfriedl/precompiled-binaries
+        $string27 = /c\:\\windows\\temp\\blah\.txt/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string23 = /Create\-SQLFileCLRDll/ nocase ascii wide
+        $string28 = /Create\-SQLFileCLRDll/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string24 = /Create\-SQLFileXpDll/ nocase ascii wide
+        $string29 = /Create\-SQLFileXpDll/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string25 = /EXECUTE\(\'sp_configure\s\'\'xp_cmdshell\'\'\,1\;reconfigure\;\'/ nocase ascii wide
+        $string30 = /EXECUTE\(\'sp_configure\s\'\'xp_cmdshell\'\'\,1\;reconfigure\;\'/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string26 = /Get\-DomainSpn/ nocase ascii wide
+        $string31 = /Get\-DomainSpn/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string27 = /Get\-MSSQLCredentialPasswords/ nocase ascii wide
+        $string32 = /Get\-MSSQLCredentialPasswords/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string28 = /Get\-SQLC2Agent/ nocase ascii wide
+        $string33 = /Get\-SQLC2Agent/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string29 = /Get\-SQLC2Command\s/ nocase ascii wide
+        $string34 = /Get\-SQLC2Command\s/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string30 = /Get\-SQLC2ComputerNameFromInstance/ nocase ascii wide
+        $string35 = /Get\-SQLC2ComputerNameFromInstance/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string31 = /Get\-SQLC2Connection/ nocase ascii wide
+        $string36 = /Get\-SQLC2Connection/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string32 = /Get\-SQLC2Query/ nocase ascii wide
+        $string37 = /Get\-SQLC2Query/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string33 = /Get\-SQLC2Result/ nocase ascii wide
+        $string38 = /Get\-SQLC2Result/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string34 = /Get\-SQLDomainPasswordsLAPS/ nocase ascii wide
+        $string39 = /Get\-SQLDomainPasswordsLAPS/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string35 = /Get\-SQLFuzzDatabaseName/ nocase ascii wide
+        $string40 = /Get\-SQLFuzzDatabaseName/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string36 = /Get\-SQLFuzzDomainAccount/ nocase ascii wide
+        $string41 = /Get\-SQLFuzzDomainAccount/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string37 = /Get\-SQLFuzzObjectName/ nocase ascii wide
+        $string42 = /Get\-SQLFuzzObjectName/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string38 = /Get\-SQLFuzzServerLogin\'/ nocase ascii wide
+        $string43 = /Get\-SQLFuzzServerLogin\'/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string39 = /Get\-SQLLocalAdminCheck/ nocase ascii wide
+        $string44 = /Get\-SQLLocalAdminCheck/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string40 = /Get\-SQLOleDbProvder/ nocase ascii wide
+        $string45 = /Get\-SQLOleDbProvder/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string41 = /Get\-SQLPersistRegDebugger/ nocase ascii wide
+        $string46 = /Get\-SQLPersistRegDebugger/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string42 = /Get\-SQLPersistRegRun/ nocase ascii wide
+        $string47 = /Get\-SQLPersistRegRun/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string43 = /Get\-SQLPersistTriggerDDL/ nocase ascii wide
+        $string48 = /Get\-SQLPersistTriggerDDL/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string44 = /Get\-SQLRecoverPwAutoLogon/ nocase ascii wide
+        $string49 = /Get\-SQLRecoverPwAutoLogon/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string45 = /Get\-SQLServerCredential/ nocase ascii wide
+        $string50 = /Get\-SQLServerCredential/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string46 = /Get\-SQLServerLinkCrawl/ nocase ascii wide
+        $string51 = /Get\-SQLServerLinkCrawl/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string47 = /Get\-SQLServerLoginDefaultPw/ nocase ascii wide
+        $string52 = /Get\-SQLServerLoginDefaultPw/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string48 = /Get\-SQLServerPasswordHash/ nocase ascii wide
+        $string53 = /Get\-SQLServerPasswordHash/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string49 = /Get\-SQLServerPriv/ nocase ascii wide
+        $string54 = /Get\-SQLServerPriv/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string50 = /Get\-SQLServiceAccount/ nocase ascii wide
+        $string55 = /Get\-SQLServiceAccount/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string51 = /Get\-SQLServiceAccountPwHashes/ nocase ascii wide
+        $string56 = /Get\-SQLServiceAccountPwHashes/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string52 = /Get\-SQLSysadminCheck/ nocase ascii wide
+        $string57 = /Get\-SQLSysadminCheck/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string53 = /Get\-SQLTriggerDdl/ nocase ascii wide
+        $string58 = /Get\-SQLTriggerDdl/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string54 = /Get\-SQLTriggerDml/ nocase ascii wide
+        $string59 = /Get\-SQLTriggerDml/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string55 = /Install\-SQLC2AgentLink/ nocase ascii wide
+        $string60 = /Install\-SQLC2AgentLink/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string56 = /Install\-SQLC2Server/ nocase ascii wide
+        $string61 = /Install\-SQLC2Server/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string57 = /Inveigh\-BruteForce\.ps1/ nocase ascii wide
+        $string62 = /Inveigh\-BruteForce\.ps1/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string58 = /Invoke\-SQLAuditDefaultLoginPw/ nocase ascii wide
+        $string63 = /Invoke\-SQLAuditDefaultLoginPw/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string59 = /Invoke\-SQLAuditPrivAutoExecSp/ nocase ascii wide
+        $string64 = /Invoke\-SQLAuditPrivAutoExecSp/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string60 = /Invoke\-SQLAuditPrivCreateProcedure/ nocase ascii wide
+        $string65 = /Invoke\-SQLAuditPrivCreateProcedure/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string61 = /Invoke\-SQLAuditPrivDbChaining/ nocase ascii wide
+        $string66 = /Invoke\-SQLAuditPrivDbChaining/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string62 = /Invoke\-SQLAuditPrivImpersonateLogin/ nocase ascii wide
+        $string67 = /Invoke\-SQLAuditPrivImpersonateLogin/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string63 = /Invoke\-SQLAuditPrivServerLink/ nocase ascii wide
+        $string68 = /Invoke\-SQLAuditPrivServerLink/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string64 = /Invoke\-SQLAuditPrivTrustworthy/ nocase ascii wide
+        $string69 = /Invoke\-SQLAuditPrivTrustworthy/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string65 = /Invoke\-SQLAuditPrivXpDirtree/ nocase ascii wide
+        $string70 = /Invoke\-SQLAuditPrivXpDirtree/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string66 = /Invoke\-SQLAuditPrivXpFileexit/ nocase ascii wide
+        $string71 = /Invoke\-SQLAuditPrivXpFileexit/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string67 = /Invoke\-SQLAuditSQLiSpExecuteAs/ nocase ascii wide
+        $string72 = /Invoke\-SQLAuditSQLiSpExecuteAs/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string68 = /Invoke\-SQLAuditSQLiSpSigned/ nocase ascii wide
+        $string73 = /Invoke\-SQLAuditSQLiSpSigned/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string69 = /Invoke\-SQLAuditWeakLoginPw/ nocase ascii wide
+        $string74 = /Invoke\-SQLAuditWeakLoginPw/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string70 = /Invoke\-SQLC2Command/ nocase ascii wide
+        $string75 = /Invoke\-SQLC2Command/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string71 = /Invoke\-SQLDumpInfo/ nocase ascii wide
+        $string76 = /Invoke\-SQLDumpInfo/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string72 = /Invoke\-SQLEscalatePriv/ nocase ascii wide
+        $string77 = /Invoke\-SQLEscalatePriv/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string73 = /Invoke\-SQLImpersonateService/ nocase ascii wide
+        $string78 = /Invoke\-SQLImpersonateService/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string74 = /Invoke\-SQLImpersonateServiceCmd/ nocase ascii wide
+        $string79 = /Invoke\-SQLImpersonateServiceCmd/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string75 = /Invoke\-SQLOSCmd/ nocase ascii wide
+        $string80 = /Invoke\-SQLOSCmd/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string76 = /Invoke\-SQLOSCmdAgentJob/ nocase ascii wide
+        $string81 = /Invoke\-SQLOSCmdAgentJob/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string77 = /Invoke\-SQLOSCmdCLR/ nocase ascii wide
+        $string82 = /Invoke\-SQLOSCmdCLR/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string78 = /Invoke\-SQLOSCmdCOle/ nocase ascii wide
+        $string83 = /Invoke\-SQLOSCmdCOle/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string79 = /Invoke\-SQLOSCmdPython/ nocase ascii wide
+        $string84 = /Invoke\-SQLOSCmdPython/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string80 = /Invoke\-SQLOSCmdR/ nocase ascii wide
+        $string85 = /Invoke\-SQLOSCmdR/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string81 = /Invoke\-SqlServer\-Persist\-StartupSp/ nocase ascii wide
+        $string86 = /Invoke\-SqlServer\-Persist\-StartupSp/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string82 = /Invoke\-SqlServer\-Persist\-TriggerLogon/ nocase ascii wide
+        $string87 = /Invoke\-SqlServer\-Persist\-TriggerLogon/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string83 = /Invoke\-SQLUncPathInjection/ nocase ascii wide
+        $string88 = /Invoke\-SQLUncPathInjection/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string84 = /Invoke\-SQLUncPathInjection/ nocase ascii wide
+        $string89 = /Invoke\-SQLUncPathInjection/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string85 = /Invoke\-TokenManipulation/ nocase ascii wide
+        $string90 = /Invoke\-TokenManipulation/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string86 = /New\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\UtilMan\.exe\"\s\-Name\s/ nocase ascii wide
+        $string91 = /New\-ItemProperty\s\-Path\s\"HKLM\:\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\UtilMan\.exe\"\s\-Name\s/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string87 = /PowerUpSQL/ nocase ascii wide
+        $string92 = /PowerUpSQL/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string88 = /Register\-SQLC2Agent/ nocase ascii wide
+        $string93 = /Register\-SQLC2Agent/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string89 = /Remove\-SQLC2Agent/ nocase ascii wide
+        $string94 = /Remove\-SQLC2Agent/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string90 = /Remove\-SQLC2Command/ nocase ascii wide
+        $string95 = /Remove\-SQLC2Command/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string91 = /SQLC2CMDS\.dll/ nocase ascii wide
+        $string96 = /SQLC2CMDS\.dll/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string92 = /Uninstall\-SQLC2AgentPs/ nocase ascii wide
+        $string97 = /Uninstall\-SQLC2AgentPs/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string93 = /Uninstall\-SQLC2Server/ nocase ascii wide
+        $string98 = /Uninstall\-SQLC2Server/ nocase ascii wide
         // Description: PowerUpSQL includes functions that support SQL Server discovery. weak configuration auditing. privilege escalation on scale. and post exploitation actions such as OS command execution. It is intended to be used during internal penetration tests and red team engagements. However. PowerUpSQL also includes many functions that can be used by administrators to quickly inventory the SQL Servers in their ADS domain and perform common threat hunting tasks related to SQL Server.
         // Reference: https://github.com/NetSPI/PowerUpSQL
-        $string94 = /writefile_bcpxpcmdshell\.sql/ nocase ascii wide
+        $string99 = /writefile_bcpxpcmdshell\.sql/ nocase ascii wide
 
     condition:
         any of them

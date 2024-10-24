@@ -20,30 +20,30 @@ rule gophish
         // Description: Open-Source Phishing Toolkit
         // Reference: https://github.com/gophish/gophish
         $string4 = /\/gophish\// nocase ascii wide
-        // Description: Combination of evilginx2 and GoPhish
-        // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string5 = /evilfeed\.go/ nocase ascii wide
-        // Description: Combination of evilginx2 and GoPhish
-        // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string6 = /evilginx\-linux/ nocase ascii wide
-        // Description: Combination of evilginx2 and GoPhish
-        // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string7 = /evilgophish/ nocase ascii wide
         // Description: Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
         // Reference: https://github.com/gophish/gophish
-        $string8 = /gophish.{0,1000}phish\.go/ nocase ascii wide
+        $string5 = /c121f7d62fa5ecd27c3aaae5737a3de8f2e4def0c182058b6dd824aa92351e9c/ nocase ascii wide
+        // Description: Combination of evilginx2 and GoPhish
+        // Reference: https://github.com/fin3ss3g0d/evilgophish
+        $string6 = /evilfeed\.go/ nocase ascii wide
+        // Description: Combination of evilginx2 and GoPhish
+        // Reference: https://github.com/fin3ss3g0d/evilgophish
+        $string7 = /evilginx\-linux/ nocase ascii wide
+        // Description: Combination of evilginx2 and GoPhish
+        // Reference: https://github.com/fin3ss3g0d/evilgophish
+        $string8 = /evilgophish/ nocase ascii wide
+        // Description: Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
+        // Reference: https://github.com/gophish/gophish
+        $string9 = /gophish.{0,1000}phish\.go/ nocase ascii wide
         // Description: Open-Source Phishing Toolkit
         // Reference: https://github.com/gophish/gophish
-        $string9 = /gophish\.go/ nocase ascii wide
+        $string10 = /gophish\.go/ nocase ascii wide
         // Description: Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
         // Reference: https://github.com/gophish/gophish
-        $string10 = /gophish\/gophish/ nocase ascii wide
+        $string11 = /gophish\/gophish/ nocase ascii wide
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string11 = /localhost\:1337/ nocase ascii wide
-        // Description: Combination of evilginx2 and GoPhish
-        // Reference: https://github.com/fin3ss3g0d/evilgophish
-        $string12 = /localhost\:3333/ nocase ascii wide
+        $string12 = /localhost\:1337/ nocase ascii wide
         // Description: Combination of evilginx2 and GoPhish
         // Reference: https://github.com/fin3ss3g0d/evilgophish
         $string13 = /lures\screate\s/ nocase ascii wide

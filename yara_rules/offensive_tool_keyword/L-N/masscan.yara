@@ -46,7 +46,10 @@ rule masscan
         $string12 = /unix\/1\.0\sUPnP\/1\.1\smasscan\// nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string13 = /masscan\s/ nocase ascii wide
+        $string13 = /xterm\s\-e\smasscan/ nocase ascii wide
+        // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
+        // Reference: https://github.com/robertdavidgraham/masscan
+        $string14 = /masscan\s/ nocase ascii wide
 
     condition:
         any of them

@@ -38,12 +38,21 @@ rule mimikatz
         // Description: Mimikatz AV signatures
         // Reference: https://github.com/gentilkiwi/mimikatz
         $string10 = /Win32\.Mimikatz/ nocase ascii wide
+        // Description: mimikatz strings
+        // Reference: https://github.com/gentilkiwi/mimikatz
+        $string11 = /Win32\/Riskware\.Mimikatz/ nocase ascii wide
         // Description: Mimikatz AV signatures
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string11 = /Win64\.Mimikatz/ nocase ascii wide
+        $string12 = /Win64\.Mimikatz/ nocase ascii wide
+        // Description: mimikatz strings
+        // Reference: https://github.com/gentilkiwi/mimikatz
+        $string13 = /Win64\/Riskware\sMimikatz/ nocase ascii wide
+        // Description: mimikatz strings
+        // Reference: https://github.com/gentilkiwi/mimikatz
+        $string14 = /Win64\/Riskware\.Mimikatz/ nocase ascii wide
         // Description: Mimikatz AV signatures
         // Reference: https://github.com/gentilkiwi/mimikatz
-        $string12 = /Win64\/Riskware\.Mimikatz/ nocase ascii wide
+        $string15 = /Win64\/Riskware\.Mimikatz/ nocase ascii wide
 
     condition:
         any of them

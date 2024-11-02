@@ -4604,6 +4604,88 @@ rule btunnel_in_greyware_tool_keyword
 }
 
 
+rule btunnel_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'btunnel' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "btunnel"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string1_btunnel_greyware_tool_keyword = /\/\.btunnel\./ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string2_btunnel_greyware_tool_keyword = /\/btunnel\.exe/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string3_btunnel_greyware_tool_keyword = /\/btunnel\.log/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string4_btunnel_greyware_tool_keyword = /\\\.btunnel\./ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string5_btunnel_greyware_tool_keyword = /\\bored\-tunnel\-client/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string6_btunnel_greyware_tool_keyword = /\\btunnel\.exe/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string7_btunnel_greyware_tool_keyword = /\\btunnel\.log/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string8_btunnel_greyware_tool_keyword = /60e8a9e19b34ca6d9f1847504b7689b3f46b029ab07b4d13c6ccde026d78a0a4/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string9_btunnel_greyware_tool_keyword = /af19236f06140b33ac3c78ae743627ba34dcd89be6d5c8dd22cac7f6eae19774/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string10_btunnel_greyware_tool_keyword = /api\.btunnel\.in/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string11_btunnel_greyware_tool_keyword = /bored\-tunnel\-client_Windows_x86_64\./ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string12_btunnel_greyware_tool_keyword = /btunnel\sdomain\s/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string13_btunnel_greyware_tool_keyword = /btunnel\sfile\s/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string14_btunnel_greyware_tool_keyword = /btunnel\shttp/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string15_btunnel_greyware_tool_keyword = /btunnel\stcp\s\-\-/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string16_btunnel_greyware_tool_keyword = /btunnel\stcp/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string17_btunnel_greyware_tool_keyword = /btunnel\.exe\shttp/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string18_btunnel_greyware_tool_keyword = /eb1395952e6eb92d4f9a2babb56d29ef384d683387c6a990e79d5fe4ba86040f/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string19_btunnel_greyware_tool_keyword = /http\:\/\/tcp\.btunnel\.in/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string20_btunnel_greyware_tool_keyword = /https\:\/\/.{0,1000}\.btunnel\.co\.in/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string21_btunnel_greyware_tool_keyword = /https\:\/\/.{0,1000}\.btunnel\.co\.in/ nocase ascii wide
+        // Description: Btunnel is a publicly accessible reverse proxy
+        // Reference: https://www.btunnel.in
+        $string22_btunnel_greyware_tool_keyword = /https\:\/\/www\.btunnel\.in\/downloads/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule BullVPN_greyware_tool_keyword
 {
     meta:
@@ -4636,6 +4718,28 @@ rule Burntcigar_KillAV_greyware_tool_keyword
         // Description: Scans for process names linked to known antivirus or EDR products - then adds their process IDs to a stack for later termination - often used by attackers
         // Reference: https://www.virustotal.com/gui/file/aeb044d310801d546d10b247164c78afde638a90b6ef2f04e1f40170e54dec03?nocache=1
         $string1_Burntcigar_KillAV_greyware_tool_keyword = /\\\\\\\\\.\\\\aswSP_Avar/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule burrow_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'burrow' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "burrow"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Expose localhost to the internet using a public URL
+        // Reference: https://burrow.io
+        $string1_burrow_greyware_tool_keyword = /https\:\/\/burrow\.io\/.{0,1000}\s\|\sbash\s/ nocase ascii wide
+        // Description: Expose localhost to the internet using a public URL
+        // Reference: https://burrow.io
+        $string2_burrow_greyware_tool_keyword = /https\:\/\/burrow\.io\/tunnels/ nocase ascii wide
 
     condition:
         any of them
@@ -6849,6 +6953,304 @@ rule Dameware_greyware_tool_keyword
         // Description: Solarwind Dameware Remote Control utilities
         // Reference: https://www.solarwinds.com/fr/remote-support-software
         $string279_Dameware_greyware_tool_keyword = /vaults\..{0,1000}\.swi\-rc\.com/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Dataplicity_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Dataplicity' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Dataplicity"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string1_Dataplicity_greyware_tool_keyword = /\/bin\/dataplicity/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string2_Dataplicity_greyware_tool_keyword = /\/dataplicity\.app/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string3_Dataplicity_greyware_tool_keyword = /\/dataplicity\.conf/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string4_Dataplicity_greyware_tool_keyword = /\/dataplicity\.log/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string5_Dataplicity_greyware_tool_keyword = /\/dataplicity\-agent\.git/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string6_Dataplicity_greyware_tool_keyword = /\/dataplicity\-agent\/releases\/download/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string7_Dataplicity_greyware_tool_keyword = /\/etc\/dataplicity/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string8_Dataplicity_greyware_tool_keyword = /\/opt\/dataplicity\// nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string9_Dataplicity_greyware_tool_keyword = /\\dataplicity\.conf/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string10_Dataplicity_greyware_tool_keyword = /\\dataplicity\.log/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string11_Dataplicity_greyware_tool_keyword = /__dataplicity_remote_directory_scan___\.json/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string12_Dataplicity_greyware_tool_keyword = /0380372a475147bed23ba4b24891c843de3d3391f2ee40469a994df38b427115/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string13_Dataplicity_greyware_tool_keyword = /084e9d9e599fdff366099956e1821219c2e0004974fc240a5033d66afed32d36/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string14_Dataplicity_greyware_tool_keyword = /0bbef44b2adaf9275ffdcc5d8a7bb65a31208c3909bde623487caf83680f19c9/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string15_Dataplicity_greyware_tool_keyword = /0dc142c2d3aeb026b3e4c48a625a914cce46ff7746ecf4b0f14e5eec3943e2ac/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string16_Dataplicity_greyware_tool_keyword = /0e0eb55f19ba1ca1758d6a10250d53ba6518180eca89545a90f5cce81a3729b0/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string17_Dataplicity_greyware_tool_keyword = /0f03b1686c53f818f1688e4f39c2856c1407446db1a13d1791e500ce90db5dbe/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string18_Dataplicity_greyware_tool_keyword = /0f99b8c3d94d5252864d53bdba47a9f8ec6c710dbbcaf1070b4467822773d14a/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string19_Dataplicity_greyware_tool_keyword = /1555e71932fad726781cc977ee8cc22fa7eab9d515255c81c1a711668dde5e6d/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string20_Dataplicity_greyware_tool_keyword = /19e8ff4b933c50b4eabdd8dd6bddea9f34ab1d4b1155d3e885ef49ff480a6912/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string21_Dataplicity_greyware_tool_keyword = /1abd5cde54ace5237b1921db031fa2bf01ff61af1025384dd82042b047b3f94f/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string22_Dataplicity_greyware_tool_keyword = /1cc170b0e7ab93a5624909c533cd70df630e60c199ad394b050658d19807537b/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string23_Dataplicity_greyware_tool_keyword = /29d9ce86776a65e5b326487953fe5aa52510855524f9795c9c2034915620019c/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string24_Dataplicity_greyware_tool_keyword = /2d4849ea0fa996daefaa35cd0a3a4f62c49a6aa9b1b493ef2cfb4df2e89acf23/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string25_Dataplicity_greyware_tool_keyword = /33420ebb3630aadbca112f47b772f4557e7a2c94ec6d6e149c94a58647cc4f89/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string26_Dataplicity_greyware_tool_keyword = /3488de41725dc14d6140e5f547836af19402922776413bdd584acd0c9df254e8/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string27_Dataplicity_greyware_tool_keyword = /364440d6c449fbc8befdf3b510891e2d6e99eb5ca4a5d151d1fc5ae8deb6a3e2/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string28_Dataplicity_greyware_tool_keyword = /4351d255c804e04bf047407c30ef1f96fa3930fa4ffb0891d0007d232957a87a/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string29_Dataplicity_greyware_tool_keyword = /4668623f3ac867b7edd563e139dff0bda23393199629d5b8c5499328999ed7ee/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string30_Dataplicity_greyware_tool_keyword = /52f61a3c39aa3f8498648436cb20602f6ddacd0b245ad611cec68057793fb360/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string31_Dataplicity_greyware_tool_keyword = /552d20cf969e7b8503c12566552a70c2956e1476a8b6a24f31056ae3ec6eb2b2/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string32_Dataplicity_greyware_tool_keyword = /55a0a2935fd0577e16c3e6f2b17a29839a6c58e6057830fa0c125945759cf397/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string33_Dataplicity_greyware_tool_keyword = /5772da1ce34daccb2ff7854cc83c6f37321041b8b103d047bdb77e4ecc031113/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string34_Dataplicity_greyware_tool_keyword = /587f5b4be33a2f66eb23329d57ebf8383de3b5ab30096b048bcc0eaf3b9ae310/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string35_Dataplicity_greyware_tool_keyword = /5bfbd898b6368c600e44b9cdff5ec284e4ca7131c2eb0c281c5d641a325b632b/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string36_Dataplicity_greyware_tool_keyword = /6202bf76f1aa853d1b5172902fba67901aa3f00719f3ca5e8c8a57f5819b5797/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string37_Dataplicity_greyware_tool_keyword = /641baf9a4a2bba8174395d76d675682a8d9471ff722d84c1892e9bdd8a03d15d/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string38_Dataplicity_greyware_tool_keyword = /69717f46c90721f550e466c0bd7708bfbc004749d49a784a7ae73cc11cd272e0/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string39_Dataplicity_greyware_tool_keyword = /6a23cc94b17569d60f0fb9f3fb1fac721c5763d85931b399afcc45540b8a1f75/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string40_Dataplicity_greyware_tool_keyword = /6c96dc136639c1bad445138519d0a4737d36195a32d7b36048b4778b0b9a69eb/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string41_Dataplicity_greyware_tool_keyword = /6df1812ceb5b98224890e3b48d458c94a0c486cbeac4f9cde750ef7954d85569/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string42_Dataplicity_greyware_tool_keyword = /6efd0a501a91178a31ae82146c8ed8b1d91b2a62e8e8ea644e80b7562846dbb1/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string43_Dataplicity_greyware_tool_keyword = /765718d9c62be08268c07697433430055a1c212d33d09049e6c4f3207d140b23/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string44_Dataplicity_greyware_tool_keyword = /79214ac3ae4f23ca7fbe8325ef3d0148d06ea39ad95b08182e9e7b0264ad7bc1/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string45_Dataplicity_greyware_tool_keyword = /79463fd2757c244075372066f2c6734c7bad99014ce4d133a73ecab3d4763c66/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string46_Dataplicity_greyware_tool_keyword = /8285531c07766ad9297296d9a466746b3bcafff13ceb39d374422f254f2d00d0/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string47_Dataplicity_greyware_tool_keyword = /8c00683c5e735117c8970664ff145273733c5d53c630489c52461ab3730ed1ea/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string48_Dataplicity_greyware_tool_keyword = /8e300a72a7e181e970c8fd89e9c5678c3083ef72a9ab61378b61b5159c23713d/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string49_Dataplicity_greyware_tool_keyword = /931899dfc6ec5692d5795ff883ccd8353f65ffbbbb4fd2edd7eefd02fe61aa8a/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string50_Dataplicity_greyware_tool_keyword = /937e41a72f88eb49c60782807ff44014c16d4ccf348d4ddd03741124ac7cab8d/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string51_Dataplicity_greyware_tool_keyword = /9697ee3ddb8efa374f1efcdafaf21849173831c6b3ab5eee5d11d551b58778ed/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string52_Dataplicity_greyware_tool_keyword = /9b5afa6ac3aadfbfd33f053fdfd1808175b2e4767503f957e81004b54ff70a25/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string53_Dataplicity_greyware_tool_keyword = /9e0fcc92b00eb9657979f4492584959b702e5d3f3e50c3cdb4a55c76f55693a7/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string54_Dataplicity_greyware_tool_keyword = /9f5839d8901177b6ba08b744d561d51a8c4fb8ae7e492cf2e4408b90e49497df/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string55_Dataplicity_greyware_tool_keyword = /aaf1d0a58fe9fa1978beb4f2ea62fb6082e467b1e14e3f0164a6566d9d2ec6ad/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string56_Dataplicity_greyware_tool_keyword = /ace15d24a354ec662a6e252fed6cf772de113efb57bbb390e1ac1b85f3f4c285/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string57_Dataplicity_greyware_tool_keyword = /api\.dataplicity\.com/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string58_Dataplicity_greyware_tool_keyword = /b2834369b18687b609ec6f0b3fda7dbdf89fb55301b50cf110702995970d13fe/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string59_Dataplicity_greyware_tool_keyword = /b2ef7165622db32fdb1b2117f9393fc549bfe5fe9e7541a619a5707d2179d81e/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string60_Dataplicity_greyware_tool_keyword = /b9a70c3eac6f54cd95d0a61e74e0d12a1c93a21cd5d14d4aab53238e6a8f2236/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string61_Dataplicity_greyware_tool_keyword = /be6180600783794df523f8c180917acc285d3bbf98e9b2edad19175771f390b7/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string62_Dataplicity_greyware_tool_keyword = /bee3b667e865fa5552261f7fa7df260ffae18980c0e827c918180f969fac2b51/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string63_Dataplicity_greyware_tool_keyword = /bit\.ly\/2alyerp/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string64_Dataplicity_greyware_tool_keyword = /c20b795433e8799d5ef176aecd7efab4a3db7849637d8ce5f9fd0cd3ac04590f/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string65_Dataplicity_greyware_tool_keyword = /c2f078339cc05f64a6742db6750142008627e558c1c4680ef266fdb1be836f48/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string66_Dataplicity_greyware_tool_keyword = /c33d855091e67c7d51b7792a1875d2a98268ac8a4b160aca2784d7062077597e/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string67_Dataplicity_greyware_tool_keyword = /c5c796d6c73f103b42ee079472d4717829cd71990ff722de42672a73c80a8d7b/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string68_Dataplicity_greyware_tool_keyword = /cf8ba8220acc8d2af85040b65bd3b8af72a315ce6ba3da1f0d1f73b21cbd3411/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string69_Dataplicity_greyware_tool_keyword = /d1d5d89ce34a0d1683d455a17c9dad480160e4b55bcf82fa231f41c19938b0d3/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string70_Dataplicity_greyware_tool_keyword = /d2fa6048dc937b573fa2320647f97cbef00d74286c9e8f363b97463de92bcd75/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string71_Dataplicity_greyware_tool_keyword = /d36f3421f55defb2882bb80dfb40367335953a7b54d0275c14ca99a2c0c47c6b/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string72_Dataplicity_greyware_tool_keyword = /d55689c6b7dd5abf42d07d297208abc256fcc57fea22d806d16b0d41650dbe70/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string73_Dataplicity_greyware_tool_keyword = /dataplicity\.portforward\.Service/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string74_Dataplicity_greyware_tool_keyword = /dataplicity\.subcommands\.run/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string75_Dataplicity_greyware_tool_keyword = /e29ac4e7c3603251b1d04f9d4ec29809f558efa7b6aff5be6b3c780d145387e3/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string76_Dataplicity_greyware_tool_keyword = /e5866c7ffaffc7c1cfb1ec9c259ca3ba600167bd2907c77cd3c68cd6b647f3a9/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string77_Dataplicity_greyware_tool_keyword = /e7ebcee1c02d30c722b9fbb6d875a8c6ce17525ea2f8b2bd5766c36233af8bc4/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string78_Dataplicity_greyware_tool_keyword = /ead10a59018c96967138f47da9484c577d80caa251a0769cee65910bdfd10fea/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string79_Dataplicity_greyware_tool_keyword = /eca853ac05aff10c633c1e2c7b8edf1e2caf493ddf54145e908049f2f532fe26/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string80_Dataplicity_greyware_tool_keyword = /f02191ca0c8ae1b43bf43bcd075713f1728d96dcfb238b44d812a1864389bf5d/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string81_Dataplicity_greyware_tool_keyword = /f0b3b07c44622aeae797eb9938fa2e1e38736894e4ed99a527c84a1ce0b74475/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string82_Dataplicity_greyware_tool_keyword = /f4fc57d8f4a00945dda67548d12bb77bc69bf24c45b8a724a63e83274d0eca2c/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string83_Dataplicity_greyware_tool_keyword = /f79bf7ee90db6c16f7032a289e49ec0ba08d50f77d35ce78432daeb62a2ffd74/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string84_Dataplicity_greyware_tool_keyword = /f9d54726a0c5ad3cfb56945dd52fd50252afce25700d0156ab37c3cfa05a25a2/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string85_Dataplicity_greyware_tool_keyword = /fa97d200632ae98bce658b921c12db494ad1619223831849665a160d98ed541f/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string86_Dataplicity_greyware_tool_keyword = /fba4a73655b53fa1c5e219689b6173d9b4044d5205308b2cd8a18c9a03356ad9/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string87_Dataplicity_greyware_tool_keyword = /ff03813f317942ddaa673985b0b84069cd74734ca4725f6ad89be3d2f95ffaf3/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string88_Dataplicity_greyware_tool_keyword = /from\sdataplicity\.m2m\./ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string89_Dataplicity_greyware_tool_keyword = /from\slomond\simport\sWebSocket/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string90_Dataplicity_greyware_tool_keyword = /https\:\/\/www\.dataplicity\.com\/.{0,1000}\.py/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string91_Dataplicity_greyware_tool_keyword = /m2m\.dataplicity\.com/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string92_Dataplicity_greyware_tool_keyword = /support\@dataplicity\.com/ nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string93_Dataplicity_greyware_tool_keyword = /USER_AGENT\s\=\s\'Lomond\// nocase ascii wide
+        // Description: enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.
+        // Reference: https://github.com/wildfoundry/dataplicity-agent
+        $string94_Dataplicity_greyware_tool_keyword = /wildfoundry\/dataplicity\-agent/ nocase ascii wide
 
     condition:
         any of them
@@ -17491,6 +17893,170 @@ rule localtunnel_greyware_tool_keyword
         // Description: localtunnel exposes your localhost to the world
         // Reference: https://github.com/localtunnel/localtunnel
         $string18_localtunnel_greyware_tool_keyword = /yarn\sadd\slocaltunnel/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule localtunnels_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'localtunnels' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "localtunnels"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string1_localtunnels_greyware_tool_keyword = /\sinstall\slocaltunnel/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string2_localtunnels_greyware_tool_keyword = /\slocaltunnel\-server/ nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string3_localtunnels_greyware_tool_keyword = /\/localtunnel\.git/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string4_localtunnels_greyware_tool_keyword = /\/localtunnel\-server\.git/ nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string5_localtunnels_greyware_tool_keyword = /37e85dd1f3987fcc566c1b29bda5b94e4b2fd129a39cc7eeba3af7a69a0cdb09/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string6_localtunnels_greyware_tool_keyword = /6f44dd5e572279979a9a59b0186a9fb2805be4c6decbcc438cf2b9d2c17f3a42/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string7_localtunnels_greyware_tool_keyword = /aba729428bafe6508191a79e06c7399a19cf80bf0c382eecca951655aab6e00a/ nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string8_localtunnels_greyware_tool_keyword = /bin\/lt\s\-\-host\shttps\:\/\// nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string9_localtunnels_greyware_tool_keyword = /https\:\/\/.{0,1000}\.localtunnel\.me/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string10_localtunnels_greyware_tool_keyword = /https\:\/\/localtunnel\.me/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string11_localtunnels_greyware_tool_keyword = /localtunnel\.github\.io\/www\// nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string12_localtunnels_greyware_tool_keyword = /localtunnel\/localtunnel/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string13_localtunnels_greyware_tool_keyword = /localtunnel\/nginx/ nocase ascii wide
+        // Description: server for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/server
+        $string14_localtunnels_greyware_tool_keyword = /localtunnel\/server/ nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string15_localtunnels_greyware_tool_keyword = /npm\sinstall\s\-g\slocaltunnel/ nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string16_localtunnels_greyware_tool_keyword = /npm\sinstall\s\-g\slocaltunnel/ nocase ascii wide
+        // Description: client for localtunnel.me - localtunnel exposes your localhost to the world for easy testing and sharing
+        // Reference: https://github.com/localtunnel/localtunnel
+        $string17_localtunnels_greyware_tool_keyword = /npx\slocaltunnel\s\-\-port\s/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule localxpose_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'localxpose' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "localxpose"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string1_localxpose_greyware_tool_keyword = /\.loclx\.io\:/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string2_localxpose_greyware_tool_keyword = /\/.{0,1000}\.loclx\.io/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string3_localxpose_greyware_tool_keyword = /\/loclx\.exe/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string4_localxpose_greyware_tool_keyword = /\/loclx\-windows\-amd64\.zip/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string5_localxpose_greyware_tool_keyword = /\\loclx\.exe/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string6_localxpose_greyware_tool_keyword = /\\loclx\-windows\-amd64\.zip/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string7_localxpose_greyware_tool_keyword = /17a9356024d2fa2ae8f327fc5babc10eb859e0c433e768cd03a50dd9c7880601/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string8_localxpose_greyware_tool_keyword = /33ab2fa30777211450e30c21c45803cdf076cb991f05691bd60aef97a8183e04/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string9_localxpose_greyware_tool_keyword = /api\.localxpose\.io/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string10_localxpose_greyware_tool_keyword = /brew\sinstall\s\-\-cask\slocalxpose/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string11_localxpose_greyware_tool_keyword = /cd1978742a4afdbaaa15bf712d5c90bef4144caa99024df98f6a9ad58043ae85/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string12_localxpose_greyware_tool_keyword = /choco\sinstall\slocalxpose/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string13_localxpose_greyware_tool_keyword = /https\:\/\/localxpose\.io\/download/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string14_localxpose_greyware_tool_keyword = /localxpose\/localxpose/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string15_localxpose_greyware_tool_keyword = /loclx\stunnel\sconfig\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string16_localxpose_greyware_tool_keyword = /loclx\stunnel\shttp\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string17_localxpose_greyware_tool_keyword = /loclx\stunnel\stcp\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string18_localxpose_greyware_tool_keyword = /loclx\stunnel\stls\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string19_localxpose_greyware_tool_keyword = /loclx\stunnel\sudp\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string20_localxpose_greyware_tool_keyword = /loclx\.exe\stunnel\shttp\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string21_localxpose_greyware_tool_keyword = /loclx\.exe\stunnel\stcp\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string22_localxpose_greyware_tool_keyword = /loclx\.exe\stunnel\stls\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string23_localxpose_greyware_tool_keyword = /loclx\.exe\stunnel\sudp\s/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string24_localxpose_greyware_tool_keyword = /loclx\-client\.s3\.amazonaws\.com/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string25_localxpose_greyware_tool_keyword = /npm\sinstall\slocalxpose/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string26_localxpose_greyware_tool_keyword = /snap\sinstall\slocalxpose/ nocase ascii wide
+        // Description: LocalXpose is a reverse proxy that enables you to expose your localhost to the internet
+        // Reference: https://localxpose.io/
+        $string27_localxpose_greyware_tool_keyword = /yarn\sadd\slocalxpose/ nocase ascii wide
 
     condition:
         any of them
@@ -31374,6 +31940,25 @@ rule rderzh_VPN_Proxy_greyware_tool_keyword
 }
 
 
+rule rdp_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'rdp' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "rdp"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: rdp file received in emails - abused by attackers
+        // Reference: https://www.microsoft.com/en-us/security/blog/2024/10/29/midnight-blizzard-conducts-large-scale-spear-phishing-campaign-using-rdp-files
+        $string1_rdp_greyware_tool_keyword = /\\Content\\\.Outlook\\.{0,1000}\\.{0,1000}\.rdp/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
 rule rdpwrap_greyware_tool_keyword
 {
     meta:
@@ -36841,6 +37426,82 @@ rule rundll32_greyware_tool_keyword
         // Description: Rundll32 can be use by Cobalt Strike with StartW function to load DLLs from the command line.
         // Reference: https://github.com/MichaelKoczwara/Awesome-CobaltStrike-Defence
         $string3_rundll32_greyware_tool_keyword = /rundll32.{0,1000}\.dll.{0,1000}StartW/ nocase ascii wide
+
+    condition:
+        any of them
+}
+
+
+rule Rust_Localtunnels_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Rust Localtunnels' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Rust Localtunnels"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string1_Rust_Localtunnels_greyware_tool_keyword = /\/etc\/systemd\/system\/localtunnel\.service/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string2_Rust_Localtunnels_greyware_tool_keyword = /\/localtunnel\-linux\-.{0,1000}\.tar/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string3_Rust_Localtunnels_greyware_tool_keyword = /027e4741b0ffea0c4a7b7d89fe584de5655ac140bc60994df35e0d19565f0817/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string4_Rust_Localtunnels_greyware_tool_keyword = /083d05fd31ebe56b9a6808a1013858db66e784140ab82e0c9c410bb337a7a12d/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string5_Rust_Localtunnels_greyware_tool_keyword = /415737ed99f26da6de88354af631091e63510fe1ad26cf6572878a27f160e10d/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string6_Rust_Localtunnels_greyware_tool_keyword = /4688b505beadf010c8c571386ded7ff67a07fcbc261108b74b6d24b8372f609e/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string7_Rust_Localtunnels_greyware_tool_keyword = /52be14d6204dd665dc3ccf2eb50179111a28cc0d8d473c7eef3b218f94e36b6d/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string8_Rust_Localtunnels_greyware_tool_keyword = /643433c960c261ea697d35970cbeac38e8a66889cff754a613eeb790368e6f37/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string9_Rust_Localtunnels_greyware_tool_keyword = /6571057d649cfccb2d84577c32a83ad5d4f5fac298e72f08a6974cf4a620c7ec/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string10_Rust_Localtunnels_greyware_tool_keyword = /db5dd550a11b68ef48f084413db4cfe87f677cda58c7168f777abfcdc63d6479/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string11_Rust_Localtunnels_greyware_tool_keyword = /e9672eb5f7ced453ef15ebd7a395be9c56c7ce750453883c7bc9e39005035a94/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string12_Rust_Localtunnels_greyware_tool_keyword = /fd4b050e4400d57c5f222ce3647debb140ef6fd3176c576fbbe63f856926aa2e/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string13_Rust_Localtunnels_greyware_tool_keyword = /https\:\/\/crates\.io\/crates\/localtunnel\-client/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string14_Rust_Localtunnels_greyware_tool_keyword = /https\:\/\/crates\.io\/crates\/localtunnel\-server/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string15_Rust_Localtunnels_greyware_tool_keyword = /kaichaosun\/rlt/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string16_Rust_Localtunnels_greyware_tool_keyword = /localtunnel\sclient\s\-\-host\s/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string17_Rust_Localtunnels_greyware_tool_keyword = /localtunnel\sserver\s\-\-domain\s/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string18_Rust_Localtunnels_greyware_tool_keyword = /Server\srunning\sat\shttp\:\/\/localhost\:/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string19_Rust_Localtunnels_greyware_tool_keyword = /use\slocaltunnel_client\:\:/ nocase ascii wide
+        // Description: Localtunnel implementation in Rust - exposes your localhost endpoint to the world
+        // Reference: https://github.com/kaichaosun/rlt
+        $string20_Rust_Localtunnels_greyware_tool_keyword = /use\slocaltunnel_server\:\:/ nocase ascii wide
 
     condition:
         any of them

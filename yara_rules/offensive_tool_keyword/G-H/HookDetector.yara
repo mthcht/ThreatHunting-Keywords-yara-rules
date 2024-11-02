@@ -10,7 +10,7 @@ rule HookDetector
     strings:
         // Description: Detects hooked Native API functions in the current process indicating the presence of EDR
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HookDetector
-        $string1 = /\s.{0,1000}\s0x.{0,1000}\s\-\sHOOK\sDETECTED/ nocase ascii wide
+        $string1 = /\s0x.{0,1000}\s\-\sHOOK\sDETECTED/ nocase ascii wide
         // Description: Detects hooked Native API functions in the current process indicating the presence of EDR
         // Reference: https://github.com/matterpreter/OffensiveCSharp/tree/master/HookDetector
         $string2 = /\/HookDetector\.exe/ nocase ascii wide

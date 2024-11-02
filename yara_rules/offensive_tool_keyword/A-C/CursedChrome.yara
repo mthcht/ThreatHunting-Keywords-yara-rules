@@ -16,58 +16,64 @@ rule CursedChrome
         $string2 = /\/extension_injection\.sh/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string3 = /127\.0\.0\.1\:8118\:8118/ nocase ascii wide
+        $string3 = /\/redirect\-hack\.html\?id\=/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string4 = /A\snew\sbrowser\shas\sconnected\sto\sus\svia\sWebSocket\!/ nocase ascii wide
+        $string4 = /127\.0\.0\.1\:8118/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string5 = /bash\sextension_injection\.sh/ nocase ascii wide
+        $string5 = /A\snew\sbrowser\shas\sconnected\sto\sus\svia\sWebSocket\!/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string6 = /const\ssubscription_id\s\=\s\`TOPROXY_/ nocase ascii wide
+        $string6 = /bash\sextension_injection\.sh/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string7 = /COPY\sanyproxy\/\s\.\/anyproxy\// nocase ascii wide
+        $string7 = /const\ssubscription_id\s\=\s\`TOPROXY_/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string8 = /CursedChrome\sAPI\sserver\sis\snow\slistening\son\sport/ nocase ascii wide
+        $string8 = /COPY\sanyproxy\/\s\.\/anyproxy\// nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string9 = /CursedChrome\sWebSocket\sserver\sis\snow\srunning\son\sport/ nocase ascii wide
+        $string9 = /CursedChrome\sAPI\sserver\sis\snow\slistening\son\sport/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string10 = /CursedChrome\-master\.zip/ nocase ascii wide
+        $string10 = /CursedChrome\sWebSocket\sserver\sis\snow\srunning\son\sport/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string11 = /DATABASE_PASSWORD\:\scursedchrome/ nocase ascii wide
+        $string11 = /CursedChrome\-master\.zip/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string12 = /DATABASE_USER\:\scursedchrome/ nocase ascii wide
+        $string12 = /DATABASE_PASSWORD\:\scursedchrome/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string13 = /docker\simages\s\|\sgrep\scursed/ nocase ascii wide
+        $string13 = /DATABASE_USER\:\scursedchrome/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string14 = /docker\sps\s\-a\s\|\sgrep\scursed/ nocase ascii wide
+        $string14 = /docker\simages\s\|\sgrep\scursed/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string15 = /docker\-compose\sup\scursedchrome/ nocase ascii wide
+        $string15 = /docker\sps\s\-a\s\|\sgrep\scursed/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string16 = /http\:\/\/localhost\:8118/ nocase ascii wide
+        $string16 = /docker\-compose\sup\scursedchrome/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string17 = /logit\(\`New\ssubscriber\:\sTOBROWSER__/ nocase ascii wide
+        $string17 = /http\:\/\/localhost\:8118/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string18 = /mandatoryprogrammer\/CursedChrome/ nocase ascii wide
+        $string18 = /logit\(\`New\ssubscriber\:\sTOBROWSER__/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string19 = /publisher\.publish\(\`TOBROWSER_/ nocase ascii wide
+        $string19 = /mandatoryprogrammer\/CursedChrome/ nocase ascii wide
         // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
         // Reference: https://github.com/mandatoryprogrammer/CursedChrome
-        $string20 = /Wat\,\sthis\sshouldn\'t\shappen\?\sOrphaned\smessage\s\(somebody\smight\sbe\sprobing\syou\!\)\:/ nocase ascii wide
+        $string20 = /new\sWebSocket\(\"ws\:\/\/127\.0\.0\.1\:4343\"\)/ nocase ascii wide
+        // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
+        // Reference: https://github.com/mandatoryprogrammer/CursedChrome
+        $string21 = /publisher\.publish\(\`TOBROWSER_/ nocase ascii wide
+        // Description: Chrome-extension implant that turns victim Chrome browsers into fully-functional HTTP proxies allowing you to browse sites as your victims
+        // Reference: https://github.com/mandatoryprogrammer/CursedChrome
+        $string22 = /Wat\,\sthis\sshouldn\'t\shappen\?\sOrphaned\smessage\s\(somebody\smight\sbe\sprobing\syou\!\)\:/ nocase ascii wide
 
     condition:
         any of them

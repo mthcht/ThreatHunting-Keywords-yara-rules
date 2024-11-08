@@ -151,41 +151,47 @@ def get_yara_files(yara_paths):
 def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
     results = []
     try:
-        if file_path.is_file() and (bypass_limit or file_path.stat().st_size <= MAX_FILE_SIZE):
-            with open(file_path, 'rb') as f:
-                matches = rules.match(data=f.read())
-                if matches:
-                    for match in matches:
-                        for string_match in match.strings:
-                            for instance in string_match.instances:
-                                result_dict = {
-                                    'rule_name': Path(yara_rule_file).name,
-                                    'file_path': str(file_path),
-                                    'offset': instance.offset,
-                                    'string_id': string_match.identifier,
-                                    'string_pattern': patterns.get(string_match.identifier, 'unknown'),
-                                    'matched_string_UTF8': instance.matched_data.decode('utf-8', 'ignore')
-                                }
-                                results.append(result_dict)
-                                key = (patterns.get(string_match.identifier, 'unknown'), Path(yara_rule_file).name, str(file_path))
-                                summary_count[key] = summary_count.get(key, 0) + 1
+        if file_path.is_file():
+            if file_path.stat().st_size > MAX_FILE_SIZE and not bypass_limit:
+                print(f"Skipping {file_path}. File size exceeds 64MB.")
+            elif not (bypass_limit or file_path.stat().st_size <= MAX_FILE_SIZE):
+                print(f"Skipping {file_path}. File size exceeds the specified limit.")
+            else:
+                # Proceed with reading and scanning the file
+                with open(file_path, 'rb') as f:
+                    matches = rules.match(data=f.read())
+                    if matches:
+                        for match in matches:
+                            for string_match in match.strings:
+                                for instance in string_match.instances:
+                                    result_dict = {
+                                        'rule_name': Path(yara_rule_file).name,
+                                        'file_path': str(file_path),
+                                        'offset': instance.offset,
+                                        'string_id': string_match.identifier,
+                                        'string_pattern': patterns.get(string_match.identifier, 'unknown'),
+                                        'matched_string_UTF8': instance.matched_data.decode('utf-8', 'ignore')
+                                    }
+                                    results.append(result_dict)
+                                    key = (patterns.get(string_match.identifier, 'unknown'), Path(yara_rule_file).name, str(file_path))
+                                    summary_count[key] = summary_count.get(key, 0) + 1
 
-                    if results:
-                        formatted_results = json.dumps(results, indent=4)
-                        print(formatted_results)
-                        if out_f:
-                            out_f.write(formatted_results + '\n')
-                    else:
-                        print("... nothing found")
+                        if results:
+                            formatted_results = json.dumps(results, indent=4)
+                            print(formatted_results)
+                            if out_f:
+                                out_f.write(formatted_results + '\n')
+                        else:
+                            print("... nothing found")
         else:
-            print(f"Skipping {file_path}. File size exceeds 64MB or is not a regular file.")
-    except PermissionError as e:
-        print(f"Permission denied for {file_path}: {e}")
-        if args.unlock:
-            print(f"Attempting to unlock the file {file_path}.")
-            unlock_file(str(file_path))
-            print(f"Retrying scan for {file_path} after unlocking.")
-            scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+            print(f"Skipping {file_path}. It is not a regular file.")
+    #except PermissionError as e:
+    #    print(f"Permission denied for {file_path}: {e}")
+    #    if args.unlock:
+    #        print(f"Attempting to unlock the file {file_path}.")
+    #        unlock_file(str(file_path))
+    #        print(f"Retrying scan for {file_path} after unlocking.")
+    #        scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
     except Exception as e:
         print(f"An error occurred while scanning {file_path}: {e}")
 

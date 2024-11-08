@@ -5,6 +5,7 @@ import json
 import re
 import os
 import sys
+import psutil
 from datetime import datetime
 
 banner='''
@@ -32,6 +33,20 @@ def read_yara_patterns(yara_file_path):
                 current_string_id, pattern = match.groups()
                 patterns[current_string_id] = pattern
     return patterns
+
+def unlock_file(file_path):
+    """
+    Unlock a file by terminating processes that are locking it.
+    """
+    for proc in psutil.process_iter(['pid', 'name']):
+        try:
+            for open_file in proc.open_files():
+                if open_file.path == file_path:
+                    print(f"Terminating process {proc.info['name']} (PID: {proc.info['pid']}) locking {file_path}")
+                    proc.terminate()
+                    proc.wait()
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
 
 def scan_large_file_in_chunks(file_path, rules, patterns, out_f=None, chunk_size=MAX_FILE_SIZE):
     results = []
@@ -92,14 +107,31 @@ def scan_files_with_yara(yara_rule_files, targets, output_file=None, extensions=
                 elif target_path.is_dir():
                     for file_path in target_path.rglob('*'):
                         if not extensions or any(file_path.suffix == ext for ext in extensions):
-                            if bypass_limit or file_path.stat().st_size <= MAX_FILE_SIZE:
-                                scan_large_file_in_chunks(file_path, rules, patterns, out_f)
-                            else:
-                                scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+                            try:
+                                if bypass_limit or file_path.stat().st_size <= MAX_FILE_SIZE:
+                                    scan_large_file_in_chunks(file_path, rules, patterns, out_f)
+                                else:
+                                    scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+                            except PermissionError as e:
+                                print(f"Permission denied for {file_path}: {e}")
+                                if args.unlock:
+                                    print(f"Attempting to unlock the file {file_path}.")
+                                    unlock_file(str(file_path))
+                                    print(f"Retrying scan for {file_path} after unlocking.")
+                                    scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+                            except Exception as e:
+                                print(f"An error occurred while scanning {file_path}: {e}")
                 else:
                     print(f"{target} is neither a valid file nor a directory.")
-            except PermissionError:
-                print(f"Permission denied for {target}. Skipping.")
+            except PermissionError as e:
+                print(f"Permission denied for {target_path}: {e}")
+                if args.unlock:
+                    print(f"Attempting to unlock the file {target_path}.")
+                    unlock_file(str(target_path))
+                    print(f"Retrying scan for {target_path} after unlocking.")
+                    scan_files_with_yara([yara_rule_file], [target], output_file, extensions, bypass_limit)
+            except Exception as e:
+                print(f"An unexpected error occurred for {target}: {e}")
 
             if out_f:
                 out_f.close()
@@ -147,8 +179,13 @@ def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
                         print("... nothing found")
         else:
             print(f"Skipping {file_path}. File size exceeds 64MB or is not a regular file.")
-    except PermissionError:
-        print(f"Permission denied for {file_path}. Skipping.")
+    except PermissionError as e:
+        print(f"Permission denied for {file_path}: {e}")
+        if args.unlock:
+            print(f"Attempting to unlock the file {file_path}.")
+            unlock_file(str(file_path))
+            print(f"Retrying scan for {file_path} after unlocking.")
+            scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
     except Exception as e:
         print(f"An error occurred while scanning {file_path}: {e}")
 
@@ -182,6 +219,8 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", help="Path to the output file to save scan results (json format)")
     parser.add_argument("-e", "--extension", help="Comma-separated list of file extensions to filter files for scanning, e.g., '.exe,.dll'")
     parser.add_argument("--bypass_limit", action='store_true', help="Enable scanning for files larger than 64MB by splitting them into chunks")
+
+    parser.add_argument("--unlock", action='store_true', help="Attempt to unlock files if permission is denied")
 
     args = parser.parse_args()
 

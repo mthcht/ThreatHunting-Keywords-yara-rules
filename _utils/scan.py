@@ -61,46 +61,48 @@ def scan_large_file_in_chunks(file_path, rules, patterns, out_f=None, chunk_size
                         out_f.write(formatted_results + '\n')
             offset += chunk_size
 
-def scan_files_with_yara(yara_rule_files, target, output_file=None, extension=None, bypass_limit=False):
+def scan_files_with_yara(yara_rule_files, targets, output_file=None, extensions=None, bypass_limit=False):
     for yara_rule_file in yara_rule_files:
-        print(f"Scanning {target} with rule file {yara_rule_file}")
-        try:
-            rules = yara.compile(filepath=yara_rule_file)
-        except yara.SyntaxError as e:
-            print(f"YARA Syntax Error in {yara_rule_file}: {e}")
-            continue
-        patterns = read_yara_patterns(yara_rule_file)
-        target_path = Path(target)
-
-        if output_file:
+        for target in targets:
+            print(f"Scanning {target} with rule file {yara_rule_file}")
             try:
-                out_f = open(output_file, 'a', encoding='utf-8')
-            except IOError as e:
-                print(f"Failed to open output file {output_file}: {e}")
-                out_f = None
-        else:
-            out_f = None
+                rules = yara.compile(filepath=yara_rule_file)
+            except yara.SyntaxError as e:
+                print(f"YARA Syntax Error in {yara_rule_file}: {e}")
+                continue
+            patterns = read_yara_patterns(yara_rule_file)
+            target_path = Path(target)
 
-        try:
-            if target_path.is_file():
-                if not extension or target_path.suffix == extension:
-                    if bypass_limit and target_path.stat().st_size > MAX_FILE_SIZE:
-                        scan_large_file_in_chunks(target_path, rules, patterns, out_f)
-                    else:
-                        scan_and_output(yara_rule_file, target_path, rules, patterns, out_f)
-            elif target_path.is_dir():
-                for file_path in target_path.rglob('*' + (extension if extension else '')):
-                    if bypass_limit and file_path.stat().st_size > MAX_FILE_SIZE:
-                        scan_large_file_in_chunks(file_path, rules, patterns, out_f)
-                    else:
-                        scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+            if output_file:
+                try:
+                    out_f = open(output_file, 'a', encoding='utf-8')
+                except IOError as e:
+                    print(f"Failed to open output file {output_file}: {e}")
+                    out_f = None
             else:
-                print(f"{target} is neither a valid file nor a directory.")
-        except PermissionError:
-            print(f"Permission denied for {target}. Skipping.")
+                out_f = None
 
-        if out_f:
-            out_f.close()
+            try:
+                if target_path.is_file():
+                    if not extensions or any(target_path.suffix == ext for ext in extensions):
+                        if bypass_limit or target_path.stat().st_size <= MAX_FILE_SIZE:
+                            scan_large_file_in_chunks(target_path, rules, patterns, out_f)
+                        else:
+                            scan_and_output(yara_rule_file, target_path, rules, patterns, out_f)
+                elif target_path.is_dir():
+                    for file_path in target_path.rglob('*'):
+                        if not extensions or any(file_path.suffix == ext for ext in extensions):
+                            if bypass_limit or file_path.stat().st_size <= MAX_FILE_SIZE:
+                                scan_large_file_in_chunks(file_path, rules, patterns, out_f)
+                            else:
+                                scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+                else:
+                    print(f"{target} is neither a valid file nor a directory.")
+            except PermissionError:
+                print(f"Permission denied for {target}. Skipping.")
+
+            if out_f:
+                out_f.close()
 
 def get_yara_files(yara_paths):
     yara_files = []
@@ -117,7 +119,7 @@ def get_yara_files(yara_paths):
 def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
     results = []
     try:
-        if file_path.is_file() and file_path.stat().st_size <= MAX_FILE_SIZE:
+        if file_path.is_file() and (bypass_limit or file_path.stat().st_size <= MAX_FILE_SIZE):
             with open(file_path, 'rb') as f:
                 matches = rules.match(data=f.read())
                 if matches:
@@ -163,37 +165,39 @@ def generate_output_filename(target):
         output_path = Path.cwd() / f"scan_results_{timestamp}.txt"
     return str(output_path)
 
-def validate_target_path(target):
-    target_path = Path(target)
-    if not target_path.exists():
-        print(f"Error: The target path '{target}' does not exist.")
-        sys.exit(1)
-    if not (target_path.is_file() or target_path.is_dir()):
-        print(f"Error: The target path '{target}' is neither a file nor a directory.")
-        sys.exit(1)
+def validate_target_paths(targets):
+    target_paths = [Path(target) for target in targets]
+    for target_path in target_paths:
+        if not target_path.exists():
+            print(f"Error: The target path '{target_path}' does not exist.")
+            sys.exit(1)
+        if not (target_path.is_file() or target_path.is_dir()):
+            print(f"Error: The target path '{target_path}' is neither a file nor a directory.")
+            sys.exit(1)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Scan a file or directory with one or multiple YARA rules")
-    parser.add_argument("-y", "--yara", required=True, nargs='+', help="Path(s) to YARA rule file(s) or directory(ies) containing them")
-    parser.add_argument("-t", "--target", required=True, nargs='+', help="Path(s) to target file(s) or directory(ies) to scan")
+    parser = argparse.ArgumentParser(description="Scan one or multiple files or directories with one or multiple YARA rules")
+    parser.add_argument("-y", "--yara", required=True, help="Comma-separated list of YARA rule file(s) or directory(ies) containing them")
+    parser.add_argument("-t", "--target", required=True, help="Comma-separated list of target file(s) or directory(ies) to scan")
     parser.add_argument("-o", "--output", help="Path to the output file to save scan results (json format)")
-    parser.add_argument("-e", "--extension", help="File extension to filter files for scanning, e.g., '.exe'")
+    parser.add_argument("-e", "--extension", help="Comma-separated list of file extensions to filter files for scanning, e.g., '.exe,.dll'")
     parser.add_argument("--bypass_limit", action='store_true', help="Enable scanning for files larger than 64MB by splitting them into chunks")
 
     args = parser.parse_args()
 
-    yara_files = get_yara_files(args.yara)
+    yara_paths = [yara.strip() for yara in args.yara.split(',')]
+    targets = [target.strip() for target in args.target.split(',')]
+    validate_target_paths(targets)
+    yara_files = get_yara_files(yara_paths)
+
     if not yara_files:
         print("No valid YARA files found.")
         sys.exit(1)
 
-    # Process each target path in the list
-    for target in args.target:
-        validate_target_path(target)
-        output_file = args.output if args.output else generate_output_filename(target)
-        scan_files_with_yara(yara_files, target, output_file, args.extension, args.bypass_limit)
+    extensions = [ext.strip() for ext in args.extension.split(',')] if args.extension else None
+    output_file = args.output if args.output else generate_output_filename(targets[0])
+    scan_files_with_yara(yara_files, targets, output_file, extensions, args.bypass_limit)
 
     print("\n--- Summary of Detections ---")
     for (string_pattern, rule_name, file_path), count in summary_count.items():
         print(f"Count: {count}, Rule File: {rule_name}, Target File: {file_path}, String Pattern: {string_pattern}")
-

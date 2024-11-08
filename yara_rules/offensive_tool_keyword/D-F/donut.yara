@@ -88,37 +88,34 @@ rule donut
         $string26 = /go\-donut\/.{0,1000}\.go/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string27 = /InternetCrackUrl/ nocase ascii wide
+        $string27 = /loader\/inject\.c/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string28 = /loader\/inject\.c/ nocase ascii wide
+        $string28 = /loader\/inject_local\.c/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string29 = /loader\/inject_local\.c/ nocase ascii wide
+        $string29 = /loader_exe_x64\./ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string30 = /loader_exe_x64\./ nocase ascii wide
+        $string30 = /loader_exe_x86\./ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string31 = /loader_exe_x86\./ nocase ascii wide
+        $string31 = /nmake\sinject_local\s/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string32 = /nmake\sinject_local\s/ nocase ascii wide
+        $string32 = /PDONUT_INSTANCE/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string33 = /PDONUT_INSTANCE/ nocase ascii wide
+        $string33 = /ProcessManager\.exe\s\-\-machine\s/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string34 = /ProcessManager\.exe\s\-\-machine\s/ nocase ascii wide
+        $string34 = /ProcessManager\.exe\s\-\-name\sexplorer/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string35 = /ProcessManager\.exe\s\-\-name\sexplorer/ nocase ascii wide
+        $string35 = /therealwover\@protonmail\.com/ nocase ascii wide
         // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
         // Reference: https://github.com/TheWover/donut
-        $string36 = /therealwover\@protonmail\.com/ nocase ascii wide
-        // Description: Donut is a position-independent code that enables in-memory execution of VBScript. JScript. EXE. DLL files and dotNET assemblies. A module created by Donut can either be staged from a HTTP server or embedded directly in the loader itself
-        // Reference: https://github.com/TheWover/donut
-        $string37 = /thewover\/donut/ nocase ascii wide
+        $string36 = /thewover\/donut/ nocase ascii wide
 
     condition:
         any of them

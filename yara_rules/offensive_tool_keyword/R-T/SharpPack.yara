@@ -419,51 +419,48 @@ rule SharpPack
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
         $string137 = /SharpDump\.exe/ nocase ascii wide
-        // Description: SharpPack is a toolkit for insider threat assessments that lets you defeat application whitelisting to execute arbitrary DotNet and PowerShell tools.
-        // Reference: https://github.com/mdsecactivebreach/SharpPack
-        $string138 = /SharpPack/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string139 = /SharpRoast\.exe/ nocase ascii wide
+        $string138 = /SharpRoast\.exe/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string140 = /SharpSploit\sDomain\sEnumeration\sCommands/ nocase ascii wide
+        $string139 = /SharpSploit\sDomain\sEnumeration\sCommands/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string141 = /SharpSploit\.Credentials\./ nocase ascii wide
+        $string140 = /SharpSploit\.Credentials\./ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string142 = /SharpSploit\.Enumeration\./ nocase ascii wide
+        $string141 = /SharpSploit\.Enumeration\./ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string143 = /SharpSploit\.Exe/ nocase ascii wide
+        $string142 = /SharpSploit\.Exe/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string144 = /sharpSploitConsole\.exe/ nocase ascii wide
+        $string143 = /sharpSploitConsole\.exe/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string145 = /SharpSploitConsole_x64\.exe/ nocase ascii wide
+        $string144 = /SharpSploitConsole_x64\.exe/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string146 = /SharpUp\.exe/ nocase ascii wide
+        $string145 = /SharpUp\.exe/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string147 = /Sharpview\.exe/ nocase ascii wide
+        $string146 = /Sharpview\.exe/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string148 = /SharpWMI\.exe\saction\=/ nocase ascii wide
+        $string147 = /SharpWMI\.exe\saction\=/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string149 = /UACEnum\.SCR/ nocase ascii wide
+        $string148 = /UACEnum\.SCR/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string150 = /using\sSharpSploit\.Credentials/ nocase ascii wide
+        $string149 = /using\sSharpSploit\.Credentials/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string151 = /Written\sby\santhemtotheego\s\&\sg0ldengunsec/ nocase ascii wide
+        $string150 = /Written\sby\santhemtotheego\s\&\sg0ldengunsec/ nocase ascii wide
         // Description: collection of C# tools that include functionalities like Kerberoasting - ticket manipulation - Mimikatz - privilege escalation - domain enumeration and more
         // Reference: https://github.com/Lexus89/SharpPack
-        $string152 = /You\sneed\sto\sbe\sin\shigh\sintegrity\sto\sextract\sLSA\ssecrets\!/ nocase ascii wide
+        $string151 = /You\sneed\sto\sbe\sin\shigh\sintegrity\sto\sextract\sLSA\ssecrets\!/ nocase ascii wide
 
     condition:
         any of them

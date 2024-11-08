@@ -37,7 +37,7 @@ rule masscan
         $string9 = /masscan.{0,1000}\s\s\-p/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
-        $string10 = /masscan\.exe	/ nocase ascii wide
+        $string10 = /masscan\.exe\s.{0,1000}/ nocase ascii wide
         // Description: TCP port scanner. spews SYN packets asynchronously. scanning entire Internet in under 5 minutes.
         // Reference: https://github.com/robertdavidgraham/masscan
         $string11 = /robertdavidgraham\/masscan/ nocase ascii wide

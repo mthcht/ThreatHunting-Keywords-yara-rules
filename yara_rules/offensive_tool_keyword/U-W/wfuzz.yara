@@ -70,133 +70,133 @@ rule wfuzz
         $string20 = /\/sql_inj\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string21 = /\/ws\-dirs\.txt/ nocase ascii wide
+        $string21 = /\/wfuzz\s/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string22 = /\/ws\-files\.txt/ nocase ascii wide
+        $string22 = /\/ws\-dirs\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string23 = /\\admin\-panels\.txt/ nocase ascii wide
+        $string23 = /\/ws\-files\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string24 = /\\All_attack\.txt/ nocase ascii wide
+        $string24 = /\\admin\-panels\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string25 = /\\common_pass\.txt/ nocase ascii wide
+        $string25 = /\\All_attack\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string26 = /\\ws\-dirs\.txt/ nocase ascii wide
+        $string26 = /\\common_pass\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string27 = /\\ws\-files\.txt/ nocase ascii wide
+        $string27 = /\\ws\-dirs\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string28 = /buffer_overflow\.py/ nocase ascii wide
+        $string28 = /\\ws\-files\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string29 = /burp_log_.{0,1000}\.log/ nocase ascii wide
+        $string29 = /buffer_overflow\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string30 = /burpitem\.py/ nocase ascii wide
+        $string30 = /burp_log_.{0,1000}\.log/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string31 = /burplog\.py/ nocase ascii wide
+        $string31 = /burpitem\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string32 = /burpstate\.py/ nocase ascii wide
+        $string32 = /burplog\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string33 = /dirTraversal\.txt/ nocase ascii wide
+        $string33 = /burpstate\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string34 = /dirTraversal\-nix\.txt/ nocase ascii wide
+        $string34 = /dirTraversal\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string35 = /dirTraversal\-win\.txt/ nocase ascii wide
+        $string35 = /dirTraversal\-nix\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string36 = /dirwalk\.py/ nocase ascii wide
+        $string36 = /dirTraversal\-win\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string37 = /from\s\.core\simport\sFuzzer/ nocase ascii wide
+        $string37 = /dirwalk\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string38 = /from\s\.wfuzz\simport\s/ nocase ascii wide
+        $string38 = /from\s\.core\simport\sFuzzer/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string39 = /fuzzfactory\.py/ nocase ascii wide
+        $string39 = /from\s\.wfuzz\simport\s/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string40 = /fuzzrequest\.py/ nocase ascii wide
+        $string40 = /fuzzfactory\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string41 = /http\:\/\/127\.0\.0\.1\/FUZZ/ nocase ascii wide
+        $string41 = /fuzzrequest\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string42 = /http\:\/\/wfuzz\.org/ nocase ascii wide
+        $string42 = /http\:\/\/127\.0\.0\.1\/FUZZ/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string43 = /https\:\/\/wfuzz\.readthedocs\.io/ nocase ascii wide
+        $string43 = /http\:\/\/wfuzz\.org/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string44 = /import\swfuzz/ nocase ascii wide
+        $string44 = /https\:\/\/wfuzz\.readthedocs\.io/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string45 = /Injections\/Traversal\.txt/ nocase ascii wide
+        $string45 = /import\swfuzz/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string46 = /Injections\/XSS\.txt/ nocase ascii wide
+        $string46 = /Injections\/Traversal\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string47 = /shodanp\.py/ nocase ascii wide
+        $string47 = /Injections\/XSS\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string48 = /site\-packages\/wfuzz/ nocase ascii wide
+        $string48 = /shodanp\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string49 = /subdomains\-top1million\-20000\.txt/ nocase ascii wide
+        $string49 = /site\-packages\/wfuzz/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string50 = /uname\=FUZZ\&pass\=FUZZ/ nocase ascii wide
+        $string50 = /subdomains\-top1million\-20000\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string51 = /vulns\/apache\.txt/ nocase ascii wide
+        $string51 = /uname\=FUZZ\&pass\=FUZZ/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string52 = /vulns\/iis\.txt/ nocase ascii wide
+        $string52 = /vulns\/apache\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string53 = /vulns\/jrun\.txt/ nocase ascii wide
+        $string53 = /vulns\/iis\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string54 = /vulns\/tomcat\.txt/ nocase ascii wide
+        $string54 = /vulns\/jrun\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string55 = /vulnweb\.com\/FUZZ/ nocase ascii wide
+        $string55 = /vulns\/tomcat\.txt/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string56 = /wfencode\s\-/ nocase ascii wide
+        $string56 = /vulnweb\.com\/FUZZ/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string57 = /wfencode\s\-e\s/ nocase ascii wide
+        $string57 = /wfencode\s\-/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string58 = /wfencode\.bat/ nocase ascii wide
+        $string58 = /wfencode\s\-e\s/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string59 = /wfencode\.py/ nocase ascii wide
+        $string59 = /wfencode\.bat/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string60 = /wfpayload\s\-/ nocase ascii wide
+        $string60 = /wfencode\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string61 = /wfpayload\.bat/ nocase ascii wide
+        $string61 = /wfpayload\s\-/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string62 = /wfpayload\.py/ nocase ascii wide
+        $string62 = /wfpayload\.bat/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
-        $string63 = /wfuzz/ nocase ascii wide
+        $string63 = /wfpayload\.py/ nocase ascii wide
         // Description: Web application fuzzer.
         // Reference: https://github.com/xmendez/wfuzz
         $string64 = /wfuzz\.bat/ nocase ascii wide

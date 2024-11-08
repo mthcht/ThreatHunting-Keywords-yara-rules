@@ -40,277 +40,271 @@ rule _
         $string10 = /\.docx\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string11 = /\.docx\.dll/ nocase ascii wide
+        $string11 = /\.docx\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string12 = /\.docx\.exe/ nocase ascii wide
+        $string12 = /\.docx\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string13 = /\.docx\.htm/ nocase ascii wide
+        $string13 = /\.docx\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string14 = /\.docx\.iso/ nocase ascii wide
+        $string14 = /\.docx\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string15 = /\.docx\.jar/ nocase ascii wide
+        $string15 = /\.docx\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string16 = /\.docx\.js/ nocase ascii wide
+        $string16 = /\.docx\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string17 = /\.docx\.sfx/ nocase ascii wide
+        $string17 = /\.docx\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string18 = /\.docx\.vbs/ nocase ascii wide
+        $string18 = /\.jpg\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string19 = /\.jpg\.exe/ nocase ascii wide
+        $string19 = /\.jpg\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string20 = /\.jpg\.iso/ nocase ascii wide
+        $string20 = /\.pdf\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string21 = /\.pdf\.bat/ nocase ascii wide
+        $string21 = /\.pdf\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string22 = /\.pdf\.dll/ nocase ascii wide
+        $string22 = /\.pdf\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string23 = /\.pdf\.exe/ nocase ascii wide
+        $string23 = /\.pdf\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string24 = /\.pdf\.htm/ nocase ascii wide
+        $string24 = /\.pdf\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string25 = /\.pdf\.iso/ nocase ascii wide
+        $string25 = /\.pdf\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string26 = /\.pdf\.jar/ nocase ascii wide
+        $string26 = /\.pdf\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string27 = /\.pdf\.js/ nocase ascii wide
+        $string27 = /\.pdf\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string28 = /\.pdf\.sfx/ nocase ascii wide
+        $string28 = /\.pdf\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string29 = /\.pdf\.vbs/ nocase ascii wide
+        $string29 = /\.ppt\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string30 = /\.ppt\.bat/ nocase ascii wide
+        $string30 = /\.ppt\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string31 = /\.ppt\.dll/ nocase ascii wide
+        $string31 = /\.ppt\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string32 = /\.ppt\.exe/ nocase ascii wide
+        $string32 = /\.ppt\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string33 = /\.ppt\.htm/ nocase ascii wide
+        $string33 = /\.ppt\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string34 = /\.ppt\.iso/ nocase ascii wide
+        $string34 = /\.ppt\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string35 = /\.ppt\.jar/ nocase ascii wide
+        $string35 = /\.ppt\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string36 = /\.ppt\.js/ nocase ascii wide
+        $string36 = /\.ppt\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string37 = /\.ppt\.sfx/ nocase ascii wide
+        $string37 = /\.ppt\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string38 = /\.ppt\.vbs/ nocase ascii wide
+        $string38 = /\.pptx\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string39 = /\.pptx\.bat/ nocase ascii wide
+        $string39 = /\.pptx\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string40 = /\.pptx\.dll/ nocase ascii wide
+        $string40 = /\.pptx\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string41 = /\.pptx\.exe/ nocase ascii wide
+        $string41 = /\.pptx\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string42 = /\.pptx\.htm/ nocase ascii wide
+        $string42 = /\.pptx\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string43 = /\.pptx\.iso/ nocase ascii wide
+        $string43 = /\.pptx\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string44 = /\.pptx\.jar/ nocase ascii wide
+        $string44 = /\.pptx\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string45 = /\.pptx\.js/ nocase ascii wide
+        $string45 = /\.pptx\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string46 = /\.pptx\.sfx/ nocase ascii wide
+        $string46 = /\.pptx\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string47 = /\.pptx\.vbs/ nocase ascii wide
+        $string47 = /\.rar\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string48 = /\.rar\.exe/ nocase ascii wide
+        $string48 = /\.rar\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string49 = /\.rar\.iso/ nocase ascii wide
+        $string49 = /\.rtf\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string50 = /\.rtf\.bat/ nocase ascii wide
+        $string50 = /\.rtf\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string51 = /\.rtf\.dll/ nocase ascii wide
+        $string51 = /\.rtf\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string52 = /\.rtf\.exe/ nocase ascii wide
+        $string52 = /\.rtf\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string53 = /\.rtf\.htm/ nocase ascii wide
+        $string53 = /\.rtf\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string54 = /\.rtf\.jar/ nocase ascii wide
+        $string54 = /\.rtf\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string55 = /\.rtf\.js/ nocase ascii wide
+        $string55 = /\.rtf\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string56 = /\.rtf\.sfx/ nocase ascii wide
+        $string56 = /\.rtf\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string57 = /\.rtf\.vbs/ nocase ascii wide
+        $string57 = /\.txt\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string58 = /\.txt\.bat/ nocase ascii wide
+        $string58 = /\.txt\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string59 = /\.txt\.dll/ nocase ascii wide
+        $string59 = /\.txt\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string60 = /\.txt\.exe/ nocase ascii wide
+        $string60 = /\.txt\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string61 = /\.txt\.htm/ nocase ascii wide
+        $string61 = /\.txt\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string62 = /\.txt\.iso/ nocase ascii wide
+        $string62 = /\.txt\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string63 = /\.txt\.jar/ nocase ascii wide
+        $string63 = /\.txt\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string64 = /\.txt\.js/ nocase ascii wide
+        $string64 = /\.txt\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string65 = /\.txt\.sfx/ nocase ascii wide
+        $string65 = /\.txt\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string66 = /\.txt\.vbs/ nocase ascii wide
+        $string66 = /\.xls\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string67 = /\.xls\.bat/ nocase ascii wide
+        $string67 = /\.xls\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string68 = /\.xls\.dll/ nocase ascii wide
+        $string68 = /\.xls\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string69 = /\.xls\.exe/ nocase ascii wide
+        $string69 = /\.xls\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string70 = /\.xls\.htm/ nocase ascii wide
+        $string70 = /\.xls\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string71 = /\.xls\.iso/ nocase ascii wide
+        $string71 = /\.xls\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string72 = /\.xls\.jar/ nocase ascii wide
+        $string72 = /\.xls\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string73 = /\.xls\.js/ nocase ascii wide
+        $string73 = /\.xls\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string74 = /\.xls\.sfx/ nocase ascii wide
+        $string74 = /\.xls\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string75 = /\.xls\.vbs/ nocase ascii wide
+        $string75 = /\.xlsx\.bat/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string76 = /\.xlsx\.bat/ nocase ascii wide
+        $string76 = /\.xlsx\.dll/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string77 = /\.xlsx\.dll/ nocase ascii wide
+        $string77 = /\.xlsx\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string78 = /\.xlsx\.exe/ nocase ascii wide
+        $string78 = /\.xlsx\.htm/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string79 = /\.xlsx\.htm/ nocase ascii wide
+        $string79 = /\.xlsx\.iso/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string80 = /\.xlsx\.iso/ nocase ascii wide
+        $string80 = /\.xlsx\.jar/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string81 = /\.xlsx\.jar/ nocase ascii wide
+        $string81 = /\.xlsx\.js/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string82 = /\.xlsx\.js/ nocase ascii wide
+        $string82 = /\.xlsx\.sfx/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string83 = /\.xlsx\.sfx/ nocase ascii wide
+        $string83 = /\.xlsx\.vbs/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string84 = /\.xlsx\.vbs/ nocase ascii wide
+        $string84 = /\.zip\.exe/ nocase ascii wide
         // Description: Suspicious extensions files
         // Reference: N/A
-        $string85 = /\.zip\.exe/ nocase ascii wide
-        // Description: Suspicious extensions files
-        // Reference: N/A
-        $string86 = /\.zip\.iso/ nocase ascii wide
+        $string85 = /\.zip\.iso/ nocase ascii wide
         // Description: keyword observed in multiple backdoor tools
         // Reference: N/A
-        $string87 = /\/BackDoor/ nocase ascii wide
+        $string86 = /\/BackDoor/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string88 = /\/pentest/ nocase ascii wide
+        $string87 = /\/pentest/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string89 = /\:\\users\\public\\.{0,1000}\.bat/ nocase ascii wide
+        $string88 = /\:\\users\\public\\.{0,1000}\.bat/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string90 = /\:\\users\\public\\.{0,1000}\.hta/ nocase ascii wide
+        $string89 = /\:\\users\\public\\.{0,1000}\.hta/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string91 = /\:\\users\\public\\.{0,1000}\.ps1/ nocase ascii wide
+        $string90 = /\:\\users\\public\\.{0,1000}\.ps1/ nocase ascii wide
         // Description: scripts in public user folder
         // Reference: N/A
-        $string92 = /\:\\users\\public\\.{0,1000}\.vbs/ nocase ascii wide
+        $string91 = /\:\\users\\public\\.{0,1000}\.vbs/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string93 = /\\Appdata\\.{0,1000}\\aloy64\.exe/ nocase ascii wide
+        $string92 = /\\Appdata\\.{0,1000}\\aloy64\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string94 = /\\Appdata\\.{0,1000}\\Beacon\.exe/ nocase ascii wide
+        $string93 = /\\Appdata\\.{0,1000}\\Beacon\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string95 = /\\Appdata\\.{0,1000}\\Beacon01\.exe/ nocase ascii wide
+        $string94 = /\\Appdata\\.{0,1000}\\Beacon01\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string96 = /\\Appdata\\.{0,1000}\\Beacon02\.exe/ nocase ascii wide
+        $string95 = /\\Appdata\\.{0,1000}\\Beacon02\.exe/ nocase ascii wide
         // Description: suspicious executable names in suspicious paths related to exploitation tools
         // Reference: N/A
-        $string97 = /\\Appdata\\.{0,1000}\\kitty\.exe/ nocase ascii wide
+        $string96 = /\\Appdata\\.{0,1000}\\kitty\.exe/ nocase ascii wide
         // Description: known executable in strange location - used by multiple malwares
         // Reference: N/A
-        $string98 = /\\Start\sMenu\\Programs\\Startup\\svchost\.exe/ nocase ascii wide
+        $string97 = /\\Start\sMenu\\Programs\\Startup\\svchost\.exe/ nocase ascii wide
         // Description: dll file in public user folder
         // Reference: https://detect.fyi/rhysida-ransomware-and-the-detection-opportunities-3599e9a02bb2
-        $string99 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
+        $string98 = /c\:\\users\\public\\.{0,1000}\.dll/ nocase ascii wide
         // Description: pentest keyword detection. detect potential pentesters using this keyword in file name. repository or command line
         // Reference: N/A
-        $string100 = /\-pentest/ nocase ascii wide
-        // Description: windows exploit keyword often used in poc exploit github repo or could be a file name or folder
-        // Reference: N/A
-        $string101 = /Windows\sExploit/ nocase ascii wide
+        $string99 = /\-pentest/ nocase ascii wide
 
     condition:
         any of them

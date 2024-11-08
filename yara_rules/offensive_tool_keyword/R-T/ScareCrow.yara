@@ -41,9 +41,6 @@ rule ScareCrow
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
         $string11 = /ScareCrow_checksums\.txt/ nocase ascii wide
-        // Description: ScareCrow - Payload creation framework designed around EDR bypass.
-        // Reference: https://github.com/optiv/ScareCrow
-        $string12 = /ScareCrow\s\-/ nocase ascii wide
 
     condition:
         any of them

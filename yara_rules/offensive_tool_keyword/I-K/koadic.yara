@@ -286,64 +286,61 @@ rule koadic
         $string92 = /set\sLFILE\s\// nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string93 = /set\spayload\s/ nocase ascii wide
+        $string93 = /set\szombie\s/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string94 = /set\szombie\s/ nocase ascii wide
+        $string94 = /shellcode_dotnet2js/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string95 = /shellcode_dotnet2js/ nocase ascii wide
+        $string95 = /shellcode_dynwrapx/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string96 = /shellcode_dynwrapx/ nocase ascii wide
+        $string96 = /stager\/js\/bitsadmin\s/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string97 = /stager\/js\/bitsadmin\s/ nocase ascii wide
+        $string97 = /stager\/js\/disk/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string98 = /stager\/js\/disk/ nocase ascii wide
+        $string98 = /stager\/js\/mshta/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string99 = /stager\/js\/mshta/ nocase ascii wide
+        $string99 = /stager\/js\/regsvr\s/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string100 = /stager\/js\/regsvr\s/ nocase ascii wide
+        $string100 = /stager\/js\/rundll32_js\s/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string101 = /stager\/js\/rundll32_js\s/ nocase ascii wide
+        $string101 = /stager\/js\/wmic\s/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string102 = /stager\/js\/wmic\s/ nocase ascii wide
+        $string102 = /SWbemServicesImplant/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string103 = /SWbemServicesImplant/ nocase ascii wide
+        $string103 = /UploadFileImplant/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string104 = /UploadFileImplant/ nocase ascii wide
+        $string104 = /use\simplant\// nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string105 = /use\simplant\// nocase ascii wide
+        $string105 = /use\sstager\// nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string106 = /use\sstager\// nocase ascii wide
+        $string106 = /UserHunterImplant/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string107 = /UserHunterImplant/ nocase ascii wide
+        $string107 = /windows_key\.py/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string108 = /windows_key\.py/ nocase ascii wide
+        $string108 = /wmic\/wmic\.cmd/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string109 = /wmic\/wmic\.cmd/ nocase ascii wide
+        $string109 = /WMICStager/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string110 = /WMICStager/ nocase ascii wide
+        $string110 = /WMIPersistImplant/ nocase ascii wide
         // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
         // Reference: https://github.com/offsecginger/koadic
-        $string111 = /WMIPersistImplant/ nocase ascii wide
-        // Description: Koadic. or COM Command & Control. is a Windows post-exploitation rootkit similar to other penetration testing tools such as Meterpreter and Powershell Empire. The major difference is that Koadic does most of its operations using Windows Script Host (a.k.a. JScript/VBScript). with compatibility in the core to support a default installation of Windows 2000 with no service packs (and potentially even versions of NT4) all the way through Windows 10.
-        // Reference: https://github.com/offsecginger/koadic
-        $string112 = /zerosum0x0.{0,1000}koadic/ nocase ascii wide
+        $string111 = /zerosum0x0.{0,1000}koadic/ nocase ascii wide
 
     condition:
         any of them

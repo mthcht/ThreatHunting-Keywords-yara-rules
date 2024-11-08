@@ -428,1755 +428,1755 @@ rule cobaltstrike
         // Description: Convert Cobalt Strike profiles to modrewrite scripts
         // Reference: https://github.com/threatexpress/cs2modrewrite
         $string140 = /\$C2_SERVER/ nocase ascii wide
-        // Description: C# .Net 5.0 project to build BOF (Beacon Object Files) in mass
-        // Reference: https://github.com/ceramicskate0/BOF-Builder
-        $string141 = /\%comspec\%\s\/k\s.{0,1000}\.bat/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string142 = /\.\/c2lint\s/ nocase ascii wide
+        $string141 = /\.\/c2lint\s/ nocase ascii wide
         // Description: A framework for creating COM-based bypasses utilizing vulnerabilities in Microsoft's WDAPT sensors.
         // Reference: https://github.com/optiv/Dent
-        $string143 = /\.\/Dent\s\-/ nocase ascii wide
+        $string142 = /\.\/Dent\s\-/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string144 = /\.\/manjusaka/ nocase ascii wide
+        $string143 = /\.\/manjusaka/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string145 = /\.\/ScareCrow\s/ nocase ascii wide
+        $string144 = /\.\/ScareCrow\s/ nocase ascii wide
         // Description: SourcePoint is a C2 profile generator for Cobalt Strike command and control servers designed to ensure evasion.
         // Reference: https://github.com/Tylous/SourcePoint
-        $string146 = /\.\/SourcePoint\s/ nocase ascii wide
+        $string145 = /\.\/SourcePoint\s/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string147 = /\.admin\.123456\./ nocase ascii wide
+        $string146 = /\.admin\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string148 = /\.api\.123456\./ nocase ascii wide
+        $string147 = /\.api\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string149 = /\.apps\.123456\./ nocase ascii wide
+        $string148 = /\.apps\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string150 = /\.beta\.123456\./ nocase ascii wide
+        $string149 = /\.beta\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string151 = /\.blog\.123456\./ nocase ascii wide
+        $string150 = /\.blog\.123456\./ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string152 = /\.cobaltstrike/ nocase ascii wide
+        $string151 = /\.cobaltstrike/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
+        // Reference: https://github.com/darkr4y/geacon
+        $string152 = /\.cobaltstrike\.beacon_keys/ nocase ascii wide
+        // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
         $string153 = /\.cobaltstrike\.beacon_keys/ nocase ascii wide
-        // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
-        // Reference: https://github.com/darkr4y/geacon
-        $string154 = /\.cobaltstrike\.beacon_keys/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string155 = /\.com\/dcsync\// nocase ascii wide
+        $string154 = /\.com\/dcsync\// nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string156 = /\.dev\.123456\./ nocase ascii wide
+        $string155 = /\.dev\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string157 = /\.events\.123456\./ nocase ascii wide
+        $string156 = /\.events\.123456\./ nocase ascii wide
         // Description: Persistence by writing/reading shellcode from Event Log
         // Reference: https://github.com/improsec/SharpEventPersist
-        $string158 = /\.exe\s.{0,1000}\s\-eventlog\s.{0,1000}Key\sManagement\sService/ nocase ascii wide
+        $string157 = /\.exe\s.{0,1000}\s\-eventlog\s.{0,1000}Key\sManagement\sService/ nocase ascii wide
         // Description: Persistence by writing/reading shellcode from Event Log
         // Reference: https://github.com/improsec/SharpEventPersist
-        $string159 = /\.exe\s.{0,1000}\s\-\-source\sPersistence/ nocase ascii wide
+        $string158 = /\.exe\s.{0,1000}\s\-\-source\sPersistence/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string160 = /\.feeds\.123456\./ nocase ascii wide
+        $string159 = /\.feeds\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string161 = /\.files\.123456\./ nocase ascii wide
+        $string160 = /\.files\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string162 = /\.forums\.123456\./ nocase ascii wide
+        $string161 = /\.forums\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string163 = /\.ftp\.123456\./ nocase ascii wide
+        $string162 = /\.ftp\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string164 = /\.go\.123456\./ nocase ascii wide
+        $string163 = /\.go\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string165 = /\.groups\.123456\./ nocase ascii wide
+        $string164 = /\.groups\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string166 = /\.help\.123456\./ nocase ascii wide
+        $string165 = /\.help\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string167 = /\.imap\.123456\./ nocase ascii wide
+        $string166 = /\.imap\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string168 = /\.img\.123456\./ nocase ascii wide
+        $string167 = /\.img\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string169 = /\.kb\.123456\./ nocase ascii wide
+        $string168 = /\.kb\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string170 = /\.lists\.123456\./ nocase ascii wide
+        $string169 = /\.lists\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string171 = /\.live\.123456\./ nocase ascii wide
+        $string170 = /\.live\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string172 = /\.m\.123456\./ nocase ascii wide
+        $string171 = /\.m\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string173 = /\.mail\.123456\./ nocase ascii wide
+        $string172 = /\.mail\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string174 = /\.media\.123456\./ nocase ascii wide
+        $string173 = /\.media\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string175 = /\.mobile\.123456\./ nocase ascii wide
+        $string174 = /\.mobile\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string176 = /\.mysql\.123456\./ nocase ascii wide
+        $string175 = /\.mysql\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string177 = /\.news\.123456\./ nocase ascii wide
+        $string176 = /\.news\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string178 = /\.photos\.123456\./ nocase ascii wide
+        $string177 = /\.photos\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string179 = /\.pic\.123456\./ nocase ascii wide
+        $string178 = /\.pic\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string180 = /\.pipename_stager/ nocase ascii wide
+        $string179 = /\.pipename_stager/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string181 = /\.pop\.123456\./ nocase ascii wide
+        $string180 = /\.pop\.123456\./ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string182 = /\.py\s.{0,1000}\s\-\-teamserver\s/ nocase ascii wide
+        $string181 = /\.py\s.{0,1000}\s\-\-teamserver\s/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string183 = /\.py\s127\.0\.0\.1\s50050\slogtracker\spassword/ nocase ascii wide
+        $string182 = /\.py\s127\.0\.0\.1\s50050\slogtracker\spassword/ nocase ascii wide
         // Description: A simple python packer to easily bypass Windows Defender
         // Reference: https://github.com/Unknow101/FuckThatPacker
-        $string184 = /\.py.{0,1000}\s\-\-payload\s.{0,1000}\.ps1/ nocase ascii wide
+        $string183 = /\.py.{0,1000}\s\-\-payload\s.{0,1000}\.ps1/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string185 = /\.py.{0,1000}\s\-service\-name\s.{0,1000}\s\-hashes\s/ nocase ascii wide
+        $string184 = /\.py.{0,1000}\s\-service\-name\s.{0,1000}\s\-hashes\s/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string186 = /\.resources\.123456\./ nocase ascii wide
+        $string185 = /\.resources\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string187 = /\.search\.123456\./ nocase ascii wide
+        $string186 = /\.search\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string188 = /\.secure\.123456\./ nocase ascii wide
+        $string187 = /\.secure\.123456\./ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string189 = /\.sharpgen\s/ nocase ascii wide
+        $string188 = /\.sharpgen\s/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string190 = /\.sites\.123456\./ nocase ascii wide
+        $string189 = /\.sites\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string191 = /\.smtp\.123456\./ nocase ascii wide
+        $string190 = /\.smtp\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string192 = /\.ssl\.123456\./ nocase ascii wide
+        $string191 = /\.ssl\.123456\./ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string193 = /\.stage\.123456\./ nocase ascii wide
+        $string192 = /\.stage\.123456\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string194 = /\.stage\.123456\./ nocase ascii wide
+        $string193 = /\.stage\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string195 = /\.static\.123456\./ nocase ascii wide
+        $string194 = /\.static\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string196 = /\.status\.123456\./ nocase ascii wide
+        $string195 = /\.status\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string197 = /\.store\.123456\./ nocase ascii wide
+        $string196 = /\.store\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string198 = /\.support\.123456\./ nocase ascii wide
+        $string197 = /\.support\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string199 = /\.videos\.123456\./ nocase ascii wide
+        $string198 = /\.videos\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string200 = /\.vpn\.123456\./ nocase ascii wide
+        $string199 = /\.vpn\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string201 = /\.webmail\.123456\./ nocase ascii wide
+        $string200 = /\.webmail\.123456\./ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string202 = /\.wiki\.123456\./ nocase ascii wide
+        $string201 = /\.wiki\.123456\./ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string203 = /\/\.aggressor\.prop/ nocase ascii wide
+        $string202 = /\/\.aggressor\.prop/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string204 = /\/\.ssh\/RAI\.pub/ nocase ascii wide
+        $string203 = /\/\.ssh\/RAI\.pub/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string205 = /\/\/StaticSyscallsDump\// nocase ascii wide
+        $string204 = /\/\/StaticSyscallsDump\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string206 = /\/78dc91f1A716DBBAA9E4E12C884C1CB1C27FFF2BEEED7DF1/ nocase ascii wide
+        $string205 = /\/78dc91f1A716DBBAA9E4E12C884C1CB1C27FFF2BEEED7DF1/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string207 = /\/78dc91f1A716DBBAA9E4E12C884C1CB1C27FFF2BEEED7DF1/ nocase ascii wide
+        $string206 = /\/78dc91f1A716DBBAA9E4E12C884C1CB1C27FFF2BEEED7DF1/ nocase ascii wide
         // Description: Cobalt Strike UDRL for memory scanner evasion.
         // Reference: https://github.com/kyleavery/AceLdr
-        $string208 = /\/AceLdr\.cna/ nocase ascii wide
+        $string207 = /\/AceLdr\.cna/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string209 = /\/adcs_enum\// nocase ascii wide
+        $string208 = /\/adcs_enum\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string210 = /\/adcs_request\/adcs_request\./ nocase ascii wide
+        $string209 = /\/adcs_request\/adcs_request\./ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string211 = /\/adcs_request\/CertCli\./ nocase ascii wide
+        $string210 = /\/adcs_request\/CertCli\./ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string212 = /\/adcs_request\/certenroll\./ nocase ascii wide
+        $string211 = /\/adcs_request\/certenroll\./ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string213 = /\/adcs_request\/CertPol\./ nocase ascii wide
+        $string212 = /\/adcs_request\/CertPol\./ nocase ascii wide
         // Description: Cobalt Strike BOF that Add an admin user
         // Reference: https://github.com/0x3rhy/AddUser-Bof
-        $string214 = /\/AddUser\-Bof\./ nocase ascii wide
+        $string213 = /\/AddUser\-Bof\./ nocase ascii wide
         // Description: Cobalt Strike BOF that Add an admin user
         // Reference: https://github.com/0x3rhy/AddUser-Bof
-        $string215 = /\/AddUser\-Bof\// nocase ascii wide
+        $string214 = /\/AddUser\-Bof\// nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string216 = /\/AggressiveClean\.cna/ nocase ascii wide
+        $string215 = /\/AggressiveClean\.cna/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string217 = /\/aggressor\/.{0,1000}\.java/ nocase ascii wide
+        $string216 = /\/aggressor\/.{0,1000}\.java/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string218 = /\/aggressor\-powerview/ nocase ascii wide
+        $string217 = /\/aggressor\-powerview/ nocase ascii wide
         // Description: Cobaltstrike toolkit
         // Reference: https://github.com/1135/1135-CobaltStrike-ToolKit
-        $string219 = /\/AggressorScripts/ nocase ascii wide
+        $string218 = /\/AggressorScripts/ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string220 = /\/AggressorScripts/ nocase ascii wide
+        $string219 = /\/AggressorScripts/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string221 = /\/AggressorScripts/ nocase ascii wide
+        $string220 = /\/AggressorScripts/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string222 = /\/agscript\s/ nocase ascii wide
+        $string221 = /\/agscript\s/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string223 = /\/agscript\s/ nocase ascii wide
+        $string222 = /\/agscript\s/ nocase ascii wide
         // Description: A protective and Low Level Shellcode Loader that defeats modern EDR systems.
         // Reference: https://github.com/cribdragg3r/Alaris
-        $string224 = /\/Alaris\.sln/ nocase ascii wide
+        $string223 = /\/Alaris\.sln/ nocase ascii wide
         // Description: Bloodhound Attack Path Automation in CobaltStrike
         // Reference: https://github.com/vysecurity/ANGRYPUPPY
-        $string225 = /\/ANGRYPUPPY\.cna/ nocase ascii wide
+        $string224 = /\/ANGRYPUPPY\.cna/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that uses static x64 syscalls to perform a complete in memory dump of a process and send that back through your already existing Beacon communication channel
         // Reference: https://github.com/xforcered/CredBandit
-        $string226 = /\/anthemtotheego\/CredBandit/ nocase ascii wide
+        $string225 = /\/anthemtotheego\/CredBandit/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string227 = /\/artifactor\.py/ nocase ascii wide
+        $string226 = /\/artifactor\.py/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string228 = /\/ase_docker\// nocase ascii wide
+        $string227 = /\/ase_docker\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string229 = /\/asprox\.profile/ nocase ascii wide
+        $string228 = /\/asprox\.profile/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string230 = /\/asprox\.profile/ nocase ascii wide
+        $string229 = /\/asprox\.profile/ nocase ascii wide
         // Description: Cobalt Strike BOF that identifies Attack Surface Reduction (ASR) rules. actions. and exclusion locations
         // Reference: https://github.com/mlcsec/ASRenum-BOF
-        $string231 = /\/ASRenum\.cpp/ nocase ascii wide
+        $string230 = /\/ASRenum\.cpp/ nocase ascii wide
         // Description: Cobalt Strike BOF that identifies Attack Surface Reduction (ASR) rules. actions. and exclusion locations
         // Reference: https://github.com/mlcsec/ASRenum-BOF
-        $string232 = /\/ASRenum\.cs/ nocase ascii wide
+        $string231 = /\/ASRenum\.cs/ nocase ascii wide
         // Description: Cobalt Strike BOF that identifies Attack Surface Reduction (ASR) rules. actions. and exclusion locations
         // Reference: https://github.com/mlcsec/ASRenum-BOF
-        $string233 = /\/ASRenum\-BOF/ nocase ascii wide
+        $string232 = /\/ASRenum\-BOF/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string234 = /\/assets\/bin2uuids_file\.py/ nocase ascii wide
+        $string233 = /\/assets\/bin2uuids_file\.py/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string235 = /\/AttackServers\// nocase ascii wide
+        $string234 = /\/AttackServers\// nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string236 = /\/auth\/cc2_auth\./ nocase ascii wide
+        $string235 = /\/auth\/cc2_auth\./ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string237 = /\/awesome\-pentest/ nocase ascii wide
+        $string236 = /\/awesome\-pentest/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string238 = /\/backoff\.profile/ nocase ascii wide
+        $string237 = /\/backoff\.profile/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string239 = /\/backstab_src\// nocase ascii wide
+        $string238 = /\/backstab_src\// nocase ascii wide
         // Description: A basic implementation of abusing the SeBackupPrivilege via Remote Registry dumping to dump the remote SAM SECURITY AND SYSTEM hives.
         // Reference: https://github.com/m57/cobaltstrike_bofs
-        $string240 = /\/BackupPrivSam\// nocase ascii wide
+        $string239 = /\/BackupPrivSam\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string241 = /\/bazarloader\.profile/ nocase ascii wide
-        // Description: A basic implementation of abusing the SeBackupPrivilege via Remote Registry dumping to dump the remote SAM SECURITY AND SYSTEM hives.
-        // Reference: https://github.com/m57/cobaltstrike_bofs
-        $string242 = /\/beacon\.h/ nocase ascii wide
+        $string240 = /\/bazarloader\.profile/ nocase ascii wide
         // Description: This is a ELF object in memory loader/runner. The goal is to create a single elf loader that can be used to run follow on capabilities across all x86_64 and x86 nix operating systems.
         // Reference: https://github.com/trustedsec/ELFLoader
-        $string243 = /\/beacon_compatibility/ nocase ascii wide
+        $string241 = /\/beacon_compatibility/ nocase ascii wide
         // Description: This is a quick and dirty COFF loader (AKA Beacon Object Files). Currently can run un-modified BOF's so it can be used for testing without a CS agent running it
         // Reference: https://github.com/trustedsec/COFFLoader
-        $string244 = /\/beacon_compatibility\./ nocase ascii wide
+        $string242 = /\/beacon_compatibility\./ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string245 = /\/beacon_funcs\// nocase ascii wide
+        $string243 = /\/beacon_funcs\// nocase ascii wide
         // Description: This aggressor script uses a beacon's note field to indicate the health status of a beacon.
         // Reference: https://github.com/Cobalt-Strike/beacon_health_check
-        $string246 = /\/beacon_health_check\// nocase ascii wide
+        $string244 = /\/beacon_health_check\// nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string247 = /\/beacon_http\// nocase ascii wide
+        $string245 = /\/beacon_http\// nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string248 = /\/beacon_notify\.cna/ nocase ascii wide
+        $string246 = /\/beacon_notify\.cna/ nocase ascii wide
         // Description: This aggressor script uses a beacon's note field to indicate the health status of a beacon.
         // Reference: https://github.com/Cobalt-Strike/beacon_health_check
-        $string249 = /\/beaconhealth\.cna/ nocase ascii wide
+        $string247 = /\/beaconhealth\.cna/ nocase ascii wide
         // Description: Manual Map DLL injection implemented with Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/tomcarver16/BOF-DLL-Inject
-        $string250 = /\/beacon\-injection\// nocase ascii wide
+        $string248 = /\/beacon\-injection\// nocase ascii wide
         // Description: Cobaltstrike beacon object files
         // Reference: https://github.com/realoriginal/beacon-object-file
-        $string251 = /\/beacon\-object\-file/ nocase ascii wide
+        $string249 = /\/beacon\-object\-file/ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string252 = /\/BeaconTool\.java/ nocase ascii wide
+        $string250 = /\/BeaconTool\.java/ nocase ascii wide
         // Description: Cobalt Strike UDRL for memory scanner evasion.
         // Reference: https://github.com/kyleavery/AceLdr
-        $string253 = /\/bin\/AceLdr/ nocase ascii wide
+        $string251 = /\/bin\/AceLdr/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string254 = /\/bin\/Sleeper\.o/ nocase ascii wide
+        $string252 = /\/bin\/Sleeper\.o/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string255 = /\/bluscreenofjeff\// nocase ascii wide
+        $string253 = /\/bluscreenofjeff\// nocase ascii wide
         // Description: Collection of beacon object files for use with Cobalt Strike to facilitate
         // Reference: https://github.com/rookuu/BOFs
-        $string256 = /\/bof\.h/ nocase ascii wide
+        $string254 = /\/bof\.h/ nocase ascii wide
         // Description: A .NET Runtime for Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/CCob/BOF.NET
-        $string257 = /\/BOF\.NET\// nocase ascii wide
+        $string255 = /\/BOF\.NET\// nocase ascii wide
         // Description: Cobalt Strike BOF Files with Nim!
         // Reference: https://github.com/byt3bl33d3r/BOF-Nim
-        $string258 = /\/bof\.nim/ nocase ascii wide
+        $string256 = /\/bof\.nim/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string259 = /\/bof\.x64\.o/ nocase ascii wide
+        $string257 = /\/bof\.x64\.o/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string260 = /\/bof\.x64\.o/ nocase ascii wide
+        $string258 = /\/bof\.x64\.o/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string261 = /\/bof\.x86\.o/ nocase ascii wide
+        $string259 = /\/bof\.x86\.o/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string262 = /\/bof\.x86\.o/ nocase ascii wide
+        $string260 = /\/bof\.x86\.o/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string263 = /\/bof\/bof\.c/ nocase ascii wide
+        $string261 = /\/bof\/bof\.c/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string264 = /\/bof\/bof\.vcxproj/ nocase ascii wide
+        $string262 = /\/bof\/bof\.vcxproj/ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string265 = /\/bof\/IABOF/ nocase ascii wide
+        $string263 = /\/bof\/IABOF/ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string266 = /\/bof\/IAStart\.asm/ nocase ascii wide
+        $string264 = /\/bof\/IAStart\.asm/ nocase ascii wide
         // Description: C# .Net 5.0 project to build BOF (Beacon Object Files) in mass
         // Reference: https://github.com/ceramicskate0/BOF-Builder
-        $string267 = /\/BOF\-Builder/ nocase ascii wide
+        $string265 = /\/BOF\-Builder/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string268 = /\/bof\-collection\// nocase ascii wide
+        $string266 = /\/bof\-collection\// nocase ascii wide
         // Description: A .NET Runtime for Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/CCob/BOF.NET
-        $string269 = /\/BOFNETExamples\// nocase ascii wide
+        $string267 = /\/BOFNETExamples\// nocase ascii wide
         // Description: Dumping SAM / SECURITY / SYSTEM registry hives with a Beacon Object File
         // Reference: https://github.com/EncodeGroup/BOF-RegSave
-        $string270 = /\/BOF\-RegSave/ nocase ascii wide
+        $string268 = /\/BOF\-RegSave/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string271 = /\/BofRunner\.cs/ nocase ascii wide
+        $string269 = /\/BofRunner\.cs/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOFs) for shells and lols
         // Reference: https://github.com/RiccardoAncarani/BOFs
-        $string272 = /\/BOFs\.git/ nocase ascii wide
+        $string270 = /\/BOFs\.git/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string273 = /\/bof\-vs\-template\// nocase ascii wide
+        $string271 = /\/bof\-vs\-template\// nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string274 = /\/bof\-vs\-template\// nocase ascii wide
+        $string272 = /\/bof\-vs\-template\// nocase ascii wide
         // Description: Cobalt Strike BOF that spawns a sacrificial process. injects it with shellcode. and executes payload. Built to evade EDR/UserLand hooks by spawning sacrificial process with Arbitrary Code Guard (ACG). BlockDll. and PPID spoofing.
         // Reference: https://github.com/boku7/spawn
-        $string275 = /\/boku7\/spawn/ nocase ascii wide
+        $string273 = /\/boku7\/spawn/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses handwritten shellcode to return the process Environment strings without touching any DLL's.
         // Reference: https://github.com/boku7/whereami
-        $string276 = /\/boku7\/whereami\// nocase ascii wide
+        $string274 = /\/boku7\/whereami\// nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string277 = /\/BokuLoader\.c/ nocase ascii wide
+        $string275 = /\/BokuLoader\.c/ nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string278 = /\/BokuLoader\.h/ nocase ascii wide
+        $string276 = /\/BokuLoader\.h/ nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string279 = /\/BokuLoader\// nocase ascii wide
+        $string277 = /\/BokuLoader\// nocase ascii wide
         // Description: A .NET Runtime for Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/CCob/BOF.NET
-        $string280 = /\/BooExecutor\.cs/ nocase ascii wide
+        $string278 = /\/BooExecutor\.cs/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string281 = /\/bq1iFEP2\/assert\/dll\// nocase ascii wide
+        $string279 = /\/bq1iFEP2\/assert\/dll\// nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string282 = /\/bq1iFEP2\/assert\/exe\// nocase ascii wide
+        $string280 = /\/bq1iFEP2\/assert\/exe\// nocase ascii wide
         // Description: Cobalt Strike beacon object file that allows you to query and make changes to the Windows Registry
         // Reference: https://github.com/ausecwa/bof-registry
-        $string283 = /\/breg\.x64\.o/ nocase ascii wide
+        $string281 = /\/breg\.x64\.o/ nocase ascii wide
         // Description: Cobalt Strike beacon object file that allows you to query and make changes to the Windows Registry
         // Reference: https://github.com/ausecwa/bof-registry
-        $string284 = /\/breg\.x86\.o/ nocase ascii wide
+        $string282 = /\/breg\.x86\.o/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string285 = /\/build\/encrypted_shellcode/ nocase ascii wide
+        $string283 = /\/build\/encrypted_shellcode/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string286 = /\/build\/formatted_shellcode/ nocase ascii wide
+        $string284 = /\/build\/formatted_shellcode/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string287 = /\/build\/shellcode/ nocase ascii wide
+        $string285 = /\/build\/shellcode/ nocase ascii wide
         // Description: C# .Net 5.0 project to build BOF (Beacon Object Files) in mass
         // Reference: https://github.com/ceramicskate0/BOF-Builder
-        $string288 = /\/BuildBOFs\// nocase ascii wide
+        $string286 = /\/BuildBOFs\// nocase ascii wide
         // Description: Quick python utility I wrote to turn HTTP requests from burp suite into Cobalt Strike Malleable C2 profiles
         // Reference: https://github.com/CodeXTF2/Burp2Malleable
-        $string289 = /\/burpee\.py/ nocase ascii wide
+        $string287 = /\/burpee\.py/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string290 = /\/BUYTHEAPTDETECTORNOW/ nocase ascii wide
+        $string288 = /\/BUYTHEAPTDETECTORNOW/ nocase ascii wide
         // Description: Cobalt Strike plugin for quickly generating anti-kill executable files
         // Reference: https://github.com/hack2fun/BypassAV
-        $string291 = /\/BypassAV\// nocase ascii wide
+        $string289 = /\/BypassAV\// nocase ascii wide
         // Description: bypassAV cobaltstrike shellcode
         // Reference: https://github.com/jas502n/bypassAV-1
-        $string292 = /\/bypassAV\-1\// nocase ascii wide
+        $string290 = /\/bypassAV\-1\// nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string293 = /\/C2concealer/ nocase ascii wide
+        $string291 = /\/C2concealer/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string294 = /\/c2profile\./ nocase ascii wide
+        $string292 = /\/c2profile\./ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string295 = /\/c2profile\.go/ nocase ascii wide
+        $string293 = /\/c2profile\.go/ nocase ascii wide
         // Description: A tool that can perform reverse proxy and cs online without going online
         // Reference: https://github.com/Daybr4ak/C2ReverseProxy
-        $string296 = /\/C2script\// nocase ascii wide
+        $string294 = /\/C2script\// nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string297 = /\/cc2_frp\./ nocase ascii wide
+        $string295 = /\/cc2_frp\./ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string298 = /\/client\/bof\/.{0,1000}\.asm/ nocase ascii wide
+        $string296 = /\/client\/bof\/.{0,1000}\.asm/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string299 = /\/clipboardinject\./ nocase ascii wide
+        $string297 = /\/clipboardinject\./ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string300 = /\/clipboardinject\// nocase ascii wide
+        $string298 = /\/clipboardinject\// nocase ascii wide
         // Description: Cobaltstrike addons to interact with clipboard
         // Reference: https://github.com/DallasFR/Cobalt-Clip
-        $string301 = /\/clipmon\/clipmon\.sln/ nocase ascii wide
+        $string299 = /\/clipmon\/clipmon\.sln/ nocase ascii wide
         // Description: Cobaltstrike addons to interact with clipboard
         // Reference: https://github.com/DallasFR/Cobalt-Clip
-        $string302 = /\/clipmon\/dll\// nocase ascii wide
+        $string300 = /\/clipmon\/dll\// nocase ascii wide
         // Description: Example code for using named pipe output with beacon ReflectiveDLLs
         // Reference: https://github.com/rxwx/cs-rdll-ipc-example
-        $string303 = /\/cna\/pipetest\.cna/ nocase ascii wide
+        $string301 = /\/cna\/pipetest\.cna/ nocase ascii wide
         // Description: Cobaltstrike addons to interact with clipboard
         // Reference: https://github.com/DallasFR/Cobalt-Clip
-        $string304 = /\/cobaltclip\.c/ nocase ascii wide
+        $string302 = /\/cobaltclip\.c/ nocase ascii wide
         // Description: Cobaltstrike addons to interact with clipboard
         // Reference: https://github.com/DallasFR/Cobalt-Clip
-        $string305 = /\/cobaltclip\.o/ nocase ascii wide
+        $string303 = /\/cobaltclip\.o/ nocase ascii wide
         // Description: Cobaltstrike addons to interact with clipboard
         // Reference: https://github.com/DallasFR/Cobalt-Clip
-        $string306 = /\/Cobalt\-Clip\// nocase ascii wide
+        $string304 = /\/Cobalt\-Clip\// nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string307 = /\/cobaltstrike/ nocase ascii wide
+        $string305 = /\/cobaltstrike/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string308 = /\/cobalt\-strike/ nocase ascii wide
+        $string306 = /\/cobalt\-strike/ nocase ascii wide
         // Description: Beacon Object File Loader
         // Reference: https://github.com/Cracked5pider/CoffeeLdr
-        $string309 = /\/CoffeeLdr\.c/ nocase ascii wide
+        $string307 = /\/CoffeeLdr\.c/ nocase ascii wide
         // Description: Beacon Object File Loader
         // Reference: https://github.com/Cracked5pider/CoffeeLdr
-        $string310 = /\/CoffeeLdr\// nocase ascii wide
+        $string308 = /\/CoffeeLdr\// nocase ascii wide
         // Description: This is a quick and dirty COFF loader (AKA Beacon Object Files). Currently can run un-modified BOF's so it can be used for testing without a CS agent running it
         // Reference: https://github.com/trustedsec/COFFLoader
-        $string311 = /\/COFFLoader/ nocase ascii wide
+        $string309 = /\/COFFLoader/ nocase ascii wide
         // Description: Load and execute COFF files and Cobalt Strike BOFs in-memory
         // Reference: https://github.com/Yaxser/COFFLoader2
-        $string312 = /\/COFFLoader2\// nocase ascii wide
+        $string310 = /\/COFFLoader2\// nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string313 = /\/com\/blackh4t\// nocase ascii wide
+        $string311 = /\/com\/blackh4t\// nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string314 = /\/comfoo\.profile/ nocase ascii wide
+        $string312 = /\/comfoo\.profile/ nocase ascii wide
         // Description: C or BOF file to extract WebKit master key to decrypt user cookie. The C code can be used to compile an executable or a bof script for Cobalt Strike.
         // Reference: https://github.com/Mr-Un1k0d3r/Cookie-Graber-BOF
-        $string315 = /\/CookieProcessor\.cs/ nocase ascii wide
+        $string313 = /\/CookieProcessor\.cs/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string316 = /\/core\/browser_darwin\.go/ nocase ascii wide
+        $string314 = /\/core\/browser_darwin\.go/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string317 = /\/core\/browser_linux\.go/ nocase ascii wide
+        $string315 = /\/core\/browser_linux\.go/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string318 = /\/core\/browser_windows\.go/ nocase ascii wide
+        $string316 = /\/core\/browser_windows\.go/ nocase ascii wide
         // Description: Beacon Object File Loader
         // Reference: https://github.com/Cracked5pider/CoffeeLdr
-        $string319 = /\/Cracked5pider\// nocase ascii wide
+        $string317 = /\/Cracked5pider\// nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that uses static x64 syscalls to perform a complete in memory dump of a process and send that back through your already existing Beacon communication channel
         // Reference: https://github.com/xforcered/CredBandit
-        $string320 = /\/credBandit\// nocase ascii wide
+        $string318 = /\/credBandit\// nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string321 = /\/CredEnum\.c/ nocase ascii wide
+        $string319 = /\/CredEnum\.c/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string322 = /\/CredEnum\.cna/ nocase ascii wide
+        $string320 = /\/CredEnum\.cna/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string323 = /\/CredEnum\.h/ nocase ascii wide
+        $string321 = /\/CredEnum\.h/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string324 = /\/CredPrompt\.exe/ nocase ascii wide
+        $string322 = /\/CredPrompt\.exe/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string325 = /\/CredPrompt\/credprompt\.c/ nocase ascii wide
+        $string323 = /\/CredPrompt\/credprompt\.c/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string326 = /\/CrossC2\./ nocase ascii wide
+        $string324 = /\/CrossC2\./ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string327 = /\/CrossC2\// nocase ascii wide
+        $string325 = /\/CrossC2\// nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string328 = /\/CrossC2Kit/ nocase ascii wide
+        $string326 = /\/CrossC2Kit/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string329 = /\/CrossC2Kit\// nocase ascii wide
+        $string327 = /\/CrossC2Kit\// nocase ascii wide
         // Description: Cobaltstrike payload generator
         // Reference: https://github.com/dr0op/CrossNet-Beta
-        $string330 = /\/CrossNet\-Beta\// nocase ascii wide
+        $string328 = /\/CrossNet\-Beta\// nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string331 = /\/crypt0p3g\// nocase ascii wide
+        $string329 = /\/crypt0p3g\// nocase ascii wide
         // Description: Convert Cobalt Strike profiles to modrewrite scripts
         // Reference: https://github.com/threatexpress/cs2modrewrite
-        $string332 = /\/cs2modrewrite\// nocase ascii wide
+        $string330 = /\/cs2modrewrite\// nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string333 = /\/CS\-BOFs\// nocase ascii wide
+        $string331 = /\/CS\-BOFs\// nocase ascii wide
         // Description: C++ WinRM API via Reflective DLL
         // Reference: https://github.com/mez-0/winrmdll
-        $string334 = /\/CSharpWinRM/ nocase ascii wide
+        $string332 = /\/CSharpWinRM/ nocase ascii wide
         // Description: python ShellCode Loader (Cobaltstrike&Metasploit)
         // Reference: https://github.com/OneHone/C--Shellcode
-        $string335 = /\/C\-\-Shellcode/ nocase ascii wide
+        $string333 = /\/C\-\-Shellcode/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string336 = /\/CS\-Loader\.go/ nocase ascii wide
+        $string334 = /\/CS\-Loader\.go/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string337 = /\/CS\-Loader\// nocase ascii wide
+        $string335 = /\/CS\-Loader\// nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string338 = /\/csOnvps\// nocase ascii wide
+        $string336 = /\/csOnvps\// nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors Gray often ginkgo design
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string339 = /\/csOnvps\// nocase ascii wide
+        $string337 = /\/csOnvps\// nocase ascii wide
         // Description: Example code for using named pipe output with beacon ReflectiveDLLs
         // Reference: https://github.com/rxwx/cs-rdll-ipc-example
-        $string340 = /\/cs\-rdll\-ipc\-example\// nocase ascii wide
+        $string338 = /\/cs\-rdll\-ipc\-example\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string341 = /\/CS\-Remote\-OPs\-BOF/ nocase ascii wide
+        $string339 = /\/CS\-Remote\-OPs\-BOF/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string342 = /\/cs\-token\-vault\// nocase ascii wide
+        $string340 = /\/cs\-token\-vault\// nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string343 = /\/curl\.cna/ nocase ascii wide
+        $string341 = /\/curl\.cna/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string344 = /\/curl\.x64\.o/ nocase ascii wide
+        $string342 = /\/curl\.x64\.o/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string345 = /\/curl\.x86\.o/ nocase ascii wide
+        $string343 = /\/curl\.x86\.o/ nocase ascii wide
         // Description: Various Aggressor Scripts I've Created.
         // Reference: https://github.com/offsecginger/AggressorScripts
-        $string346 = /\/custom_payload_generator\// nocase ascii wide
+        $string344 = /\/custom_payload_generator\// nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string347 = /\/CWoNaJLBo\/VTNeWw11212\// nocase ascii wide
+        $string345 = /\/CWoNaJLBo\/VTNeWw11212\// nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string348 = /\/CWoNaJLBo\/VTNeWw11213\// nocase ascii wide
+        $string346 = /\/CWoNaJLBo\/VTNeWw11213\// nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string349 = /\/DCOM\sLateral\sMovement\// nocase ascii wide
+        $string347 = /\/DCOM\sLateral\sMovement\// nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string350 = /\/defender\-exclusions\/.{0,1000}defender/ nocase ascii wide
+        $string348 = /\/defender\-exclusions\/.{0,1000}defender/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string351 = /\/defender\-exclusions\/.{0,1000}exclusion/ nocase ascii wide
+        $string349 = /\/defender\-exclusions\/.{0,1000}exclusion/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string352 = /\/DelegationBOF\// nocase ascii wide
+        $string350 = /\/DelegationBOF\// nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string353 = /\/demo_bof\.c/ nocase ascii wide
+        $string351 = /\/demo_bof\.c/ nocase ascii wide
         // Description: A framework for creating COM-based bypasses utilizing vulnerabilities in Microsoft's WDAPT sensors.
         // Reference: https://github.com/optiv/Dent
-        $string354 = /\/Dent\/.{0,1000}\/Loader\/Loader\.go/ nocase ascii wide
+        $string352 = /\/Dent\/.{0,1000}\/Loader\/Loader\.go/ nocase ascii wide
         // Description: A framework for creating COM-based bypasses utilizing vulnerabilities in Microsoft's WDAPT sensors.
         // Reference: https://github.com/optiv/Dent
-        $string355 = /\/Dent\/Dent\.go/ nocase ascii wide
+        $string353 = /\/Dent\/Dent\.go/ nocase ascii wide
         // Description: A framework for creating COM-based bypasses utilizing vulnerabilities in Microsoft's WDAPT sensors.
         // Reference: https://github.com/optiv/Dent
-        $string356 = /\/Dent\/Loader/ nocase ascii wide
+        $string354 = /\/Dent\/Loader/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string357 = /\/DesertFox\/archive\/.{0,1000}\.zip/ nocase ascii wide
+        $string355 = /\/DesertFox\/archive\/.{0,1000}\.zip/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/anthemtotheego/Detect-Hooks
-        $string358 = /\/detect\-hooks\.c/ nocase ascii wide
+        $string356 = /\/detect\-hooks\.c/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/anthemtotheego/Detect-Hooks
-        $string359 = /\/detect\-hooks\.cna/ nocase ascii wide
+        $string357 = /\/detect\-hooks\.cna/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/anthemtotheego/Detect-Hooks
-        $string360 = /\/detect\-hooks\.h/ nocase ascii wide
+        $string358 = /\/detect\-hooks\.h/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/anthemtotheego/Detect-Hooks
-        $string361 = /\/Detect\-Hooks\// nocase ascii wide
+        $string359 = /\/Detect\-Hooks\// nocase ascii wide
         // Description: A BOF to interact with COM objects associated with the Windows software firewall.
         // Reference: https://github.com/EspressoCake/Firewall_Walker_BOF
-        $string362 = /\/dist\/fw_walk\./ nocase ascii wide
+        $string360 = /\/dist\/fw_walk\./ nocase ascii wide
         // Description: DLL Hijack Search Order Enumeration BOF
         // Reference: https://github.com/EspressoCake/DLL-Hijack-Search-Order-BOF
-        $string363 = /\/DLL\-Hijack/ nocase ascii wide
+        $string361 = /\/DLL\-Hijack/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Loader by Golang
         // Reference: https://github.com/timwhitez/Doge-Loader
-        $string364 = /\/Doge\-Loader\// nocase ascii wide
+        $string362 = /\/Doge\-Loader\// nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string365 = /\/DotNet\/SigFlip/ nocase ascii wide
+        $string363 = /\/DotNet\/SigFlip/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string366 = /\/dukes_apt29\.profile/ nocase ascii wide
+        $string364 = /\/dukes_apt29\.profile/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string367 = /\/dump_lsass\./ nocase ascii wide
+        $string365 = /\/dump_lsass\./ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string368 = /\/dumpert\.c/ nocase ascii wide
+        $string366 = /\/dumpert\.c/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string369 = /\/Dumpert\// nocase ascii wide
+        $string367 = /\/Dumpert\// nocase ascii wide
         // Description: dump lsass
         // Reference: https://github.com/seventeenman/CallBackDump
-        $string370 = /\/dumpXor\.exe/ nocase ascii wide
+        $string368 = /\/dumpXor\.exe/ nocase ascii wide
         // Description: dump lsass
         // Reference: https://github.com/seventeenman/CallBackDump
-        $string371 = /\/dumpXor\/dumpXor/ nocase ascii wide
+        $string369 = /\/dumpXor\/dumpXor/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string372 = /\/ElevateKit\/elevate\./ nocase ascii wide
+        $string370 = /\/ElevateKit\/elevate\./ nocase ascii wide
         // Description: This is a ELF object in memory loader/runner. The goal is to create a single elf loader that can be used to run follow on capabilities across all x86_64 and x86 nix operating systems.
         // Reference: https://github.com/trustedsec/ELFLoader
-        $string373 = /\/ELFLoader\// nocase ascii wide
+        $string371 = /\/ELFLoader\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string374 = /\/emotet\.profile/ nocase ascii wide
+        $string372 = /\/emotet\.profile/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string375 = /\/enableuser\/enableuser\.x64\./ nocase ascii wide
+        $string373 = /\/enableuser\/enableuser\.x64\./ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string376 = /\/enableuser\/enableuser\.x86\./ nocase ascii wide
+        $string374 = /\/enableuser\/enableuser\.x86\./ nocase ascii wide
         // Description: Cobalt Strike BOF to identify processes with the CLR loaded with a goal of identifying SpawnTo / injection candidates.
         // Reference: https://gist.github.com/G0ldenGunSec/8ca0e853dd5637af2881697f8de6aecc
-        $string377 = /\/EnumCLR\.c/ nocase ascii wide
+        $string375 = /\/EnumCLR\.c/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string378 = /\/enumerate\.cna/ nocase ascii wide
+        $string376 = /\/enumerate\.cna/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string379 = /\/Erebus\/.{0,1000}\.dll/ nocase ascii wide
+        $string377 = /\/Erebus\/.{0,1000}\.dll/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string380 = /\/Erebus\/.{0,1000}\.exe/ nocase ascii wide
+        $string378 = /\/Erebus\/.{0,1000}\.exe/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string381 = /\/Erebus\-email\./ nocase ascii wide
+        $string379 = /\/Erebus\-email\./ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string382 = /\/etumbot\.profile/ nocase ascii wide
+        $string380 = /\/etumbot\.profile/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string383 = /\/etw\.cna/ nocase ascii wide
+        $string381 = /\/etw\.cna/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string384 = /\/etw\.x64\./ nocase ascii wide
+        $string382 = /\/etw\.x64\./ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string385 = /\/etw\.x86\./ nocase ascii wide
+        $string383 = /\/etw\.x86\./ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string386 = /\/EventViewerUAC\// nocase ascii wide
+        $string384 = /\/EventViewerUAC\// nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/Octoberfest7/EventViewerUAC_BOF
-        $string387 = /\/EventViewerUAC\// nocase ascii wide
+        $string385 = /\/EventViewerUAC\// nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string388 = /\/evil\.cpp/ nocase ascii wide
+        $string386 = /\/evil\.cpp/ nocase ascii wide
         // Description: New Lateral Movement technique by abusing Windows Perception Simulation Service to achieve DLL hijacking code execution.
         // Reference: https://github.com/netero1010/ServiceMove-BOF
-        $string389 = /\/exports_function_hid\.txt/ nocase ascii wide
+        $string387 = /\/exports_function_hid\.txt/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string390 = /\/fiesta\.profile/ nocase ascii wide
+        $string388 = /\/fiesta\.profile/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string391 = /\/fiesta2\.profile/ nocase ascii wide
+        $string389 = /\/fiesta2\.profile/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string392 = /\/final_shellcode_size\.txt/ nocase ascii wide
+        $string390 = /\/final_shellcode_size\.txt/ nocase ascii wide
         // Description: A Cobalt Strike Beacon Object File (BOF) project which uses direct system calls to enumerate processes for specific loaded modules or process handles.
         // Reference: https://github.com/outflanknl/FindObjects-BOF
-        $string393 = /\/FindModule\.c/ nocase ascii wide
+        $string391 = /\/FindModule\.c/ nocase ascii wide
         // Description: A Cobalt Strike Beacon Object File (BOF) project which uses direct system calls to enumerate processes for specific loaded modules or process handles.
         // Reference: https://github.com/outflanknl/FindObjects-BOF
-        $string394 = /\/FindObjects\.cna/ nocase ascii wide
+        $string392 = /\/FindObjects\.cna/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/anthemtotheego/Detect-Hooks
-        $string395 = /\/Fodetect\-hooksx64/ nocase ascii wide
+        $string393 = /\/Fodetect\-hooksx64/ nocase ascii wide
         // Description: A simple python packer to easily bypass Windows Defender
         // Reference: https://github.com/Unknow101/FuckThatPacker
-        $string396 = /\/FuckThatPacker/ nocase ascii wide
+        $string394 = /\/FuckThatPacker/ nocase ascii wide
         // Description: Cobalt Strike BOF to identify processes with the CLR loaded with a goal of identifying SpawnTo / injection candidates.
         // Reference: https://gist.github.com/G0ldenGunSec/8ca0e853dd5637af2881697f8de6aecc
-        $string397 = /\/G0ldenGunSec\// nocase ascii wide
+        $string395 = /\/G0ldenGunSec\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string398 = /\/gandcrab\.profile/ nocase ascii wide
+        $string396 = /\/gandcrab\.profile/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string399 = /\/geacon\.git/ nocase ascii wide
+        $string397 = /\/geacon\.git/ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string400 = /\/geacon\/.{0,1000}beacon/ nocase ascii wide
+        $string398 = /\/geacon\/.{0,1000}beacon/ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string401 = /\/geacon_pro/ nocase ascii wide
+        $string399 = /\/geacon_pro/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string402 = /\/get\-loggedon\/.{0,1000}\.c/ nocase ascii wide
+        $string400 = /\/get\-loggedon\/.{0,1000}\.c/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string403 = /\/get\-system\/getsystem\.c/ nocase ascii wide
+        $string401 = /\/get\-system\/getsystem\.c/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string404 = /\/GetWebDAVStatus_BOF\// nocase ascii wide
+        $string402 = /\/GetWebDAVStatus_BOF\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string405 = /\/globeimposter\.profile/ nocase ascii wide
+        $string403 = /\/globeimposter\.profile/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string406 = /\/guervild\/BOFs/ nocase ascii wide
+        $string404 = /\/guervild\/BOFs/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string407 = /\/hancitor\.profile/ nocase ascii wide
+        $string405 = /\/hancitor\.profile/ nocase ascii wide
         // Description: A BOF port of the research of @thefLinkk and @codewhitesec
         // Reference: https://github.com/EspressoCake/HandleKatz_BOF
-        $string408 = /\/HandleKatz_BOF/ nocase ascii wide
+        $string406 = /\/HandleKatz_BOF/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string409 = /\/HaryyUser\.exe/ nocase ascii wide
+        $string407 = /\/HaryyUser\.exe/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string410 = /\/havex\.profile/ nocase ascii wide
+        $string408 = /\/havex\.profile/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string411 = /\/HiddenDesktop\.git/ nocase ascii wide
+        $string409 = /\/HiddenDesktop\.git/ nocase ascii wide
         // Description: EarlyBird process hollowing technique (BOF) - Spawns a process in a suspended state. inject shellcode. hijack main thread with APC and execute shellcode
         // Reference: https://github.com/boku7/HOLLOW
-        $string412 = /\/hollow\.x64\./ nocase ascii wide
+        $string410 = /\/hollow\.x64\./ nocase ascii wide
         // Description: Cobalt Strike UDRL for memory scanner evasion.
         // Reference: https://github.com/kyleavery/AceLdr
-        $string413 = /\/hooks\/spoof\.c/ nocase ascii wide
+        $string411 = /\/hooks\/spoof\.c/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string414 = /\/hostenum\.py/ nocase ascii wide
+        $string412 = /\/hostenum\.py/ nocase ascii wide
         // Description: Hou Qing-Advanced AV Evasion Tool For Red Team Ops
         // Reference: https://github.com/Hangingsword/HouQing
-        $string415 = /\/HouQing\/.{0,1000}\/Loader\.go/ nocase ascii wide
+        $string413 = /\/HouQing\/.{0,1000}\/Loader\.go/ nocase ascii wide
         // Description: Cobalt Strike BOF - Bypass AMSI in a remote process with code injection.
         // Reference: https://github.com/boku7/injectAmsiBypass
-        $string416 = /\/injectAmsiBypass\// nocase ascii wide
+        $string414 = /\/injectAmsiBypass\// nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string417 = /\/inject\-assembly\// nocase ascii wide
+        $string415 = /\/inject\-assembly\// nocase ascii wide
         // Description: CobaltStrike BOF - Inject ETW Bypass into Remote Process via Syscalls (HellsGate|HalosGate)
         // Reference: https://github.com/boku7/injectEtwBypass
-        $string418 = /\/injectEtw\./ nocase ascii wide
+        $string416 = /\/injectEtw\./ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string419 = /\/Injection\/clipboard\// nocase ascii wide
+        $string417 = /\/Injection\/clipboard\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string420 = /\/Injection\/conhost\// nocase ascii wide
+        $string418 = /\/Injection\/conhost\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string421 = /\/Injection\/createremotethread\// nocase ascii wide
+        $string419 = /\/Injection\/createremotethread\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string422 = /\/Injection\/ctray\// nocase ascii wide
+        $string420 = /\/Injection\/ctray\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string423 = /\/Injection\/dde\// nocase ascii wide
+        $string421 = /\/Injection\/dde\// nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string424 = /\/Injection\/Injection\.cna/ nocase ascii wide
+        $string422 = /\/Injection\/Injection\.cna/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string425 = /\/Injection\/kernelcallbacktable/ nocase ascii wide
+        $string423 = /\/Injection\/kernelcallbacktable/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string426 = /\/Injection\/ntcreatethread/ nocase ascii wide
+        $string424 = /\/Injection\/ntcreatethread/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string427 = /\/Injection\/ntcreatethread\// nocase ascii wide
+        $string425 = /\/Injection\/ntcreatethread\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string428 = /\/Injection\/ntqueueapcthread/ nocase ascii wide
+        $string426 = /\/Injection\/ntqueueapcthread/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string429 = /\/Injection\/setthreadcontext/ nocase ascii wide
+        $string427 = /\/Injection\/setthreadcontext/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string430 = /\/Injection\/svcctrl\// nocase ascii wide
+        $string428 = /\/Injection\/svcctrl\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string431 = /\/Injection\/tooltip\// nocase ascii wide
+        $string429 = /\/Injection\/tooltip\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string432 = /\/Injection\/uxsubclassinfo/ nocase ascii wide
+        $string430 = /\/Injection\/uxsubclassinfo/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string433 = /\/InlineWhispers/ nocase ascii wide
+        $string431 = /\/InlineWhispers/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string434 = /\/Internals\/Coff\.cs/ nocase ascii wide
+        $string432 = /\/Internals\/Coff\.cs/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string435 = /\/Inveigh\.txt/ nocase ascii wide
+        $string433 = /\/Inveigh\.txt/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string436 = /\/Invoke\-Bof\// nocase ascii wide
+        $string434 = /\/Invoke\-Bof\// nocase ascii wide
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string437 = /\/Invoke\-HostEnum\.ps1/ nocase ascii wide
+        $string435 = /\/Invoke\-HostEnum\.ps1/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string438 = /\/jaff\.profile/ nocase ascii wide
+        $string436 = /\/jaff\.profile/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string439 = /\/jasperloader\.profile/ nocase ascii wide
+        $string437 = /\/jasperloader\.profile/ nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors Gray often ginkgo design
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string440 = /\/K8_CS_.{0,1000}_.{0,1000}\.rar/ nocase ascii wide
+        $string438 = /\/K8_CS_.{0,1000}_.{0,1000}\.rar/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string441 = /\/k8gege\// nocase ascii wide
+        $string439 = /\/k8gege\// nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string442 = /\/k8gege\/scrun\// nocase ascii wide
+        $string440 = /\/k8gege\/scrun\// nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string443 = /\/k8gege520/ nocase ascii wide
+        $string441 = /\/k8gege520/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string444 = /\/kdstab\./ nocase ascii wide
+        $string442 = /\/kdstab\./ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string445 = /\/KDStab\./ nocase ascii wide
+        $string443 = /\/KDStab\./ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string446 = /\/KDStab\// nocase ascii wide
+        $string444 = /\/KDStab\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string447 = /\/Kerbeus\-BOF\.git/ nocase ascii wide
+        $string445 = /\/Kerbeus\-BOF\.git/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string448 = /\/Kerbeus\-BOF\// nocase ascii wide
+        $string446 = /\/Kerbeus\-BOF\// nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string449 = /\/KernelMii\.c/ nocase ascii wide
+        $string447 = /\/KernelMii\.c/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string450 = /\/Koh\/.{0,1000}\.cs/ nocase ascii wide
+        $string448 = /\/Koh\/.{0,1000}\.cs/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string451 = /\/kronos\.profile/ nocase ascii wide
+        $string449 = /\/kronos\.profile/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string452 = /\/Ladon\.go/ nocase ascii wide
+        $string450 = /\/Ladon\.go/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string453 = /\/Ladon\.ps1/ nocase ascii wide
+        $string451 = /\/Ladon\.ps1/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string454 = /\/Ladon\.py/ nocase ascii wide
+        $string452 = /\/Ladon\.py/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string455 = /\/Ladon\/Ladon\./ nocase ascii wide
+        $string453 = /\/Ladon\/Ladon\./ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string456 = /\/Ladon\/obj\/x86/ nocase ascii wide
+        $string454 = /\/Ladon\/obj\/x86/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string457 = /\/LadonGo\// nocase ascii wide
+        $string455 = /\/LadonGo\// nocase ascii wide
         // Description: Project to enumerate proxy configurations and generate shellcode from CobaltStrike
         // Reference: https://github.com/EncodeGroup/AggressiveProxy
-        $string458 = /\/LetMeOutSharp\// nocase ascii wide
+        $string456 = /\/LetMeOutSharp\// nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string459 = /\/lib\/ipLookupHelper\.py/ nocase ascii wide
+        $string457 = /\/lib\/ipLookupHelper\.py/ nocase ascii wide
         // Description: A protective and Low Level Shellcode Loader that defeats modern EDR systems.
         // Reference: https://github.com/cribdragg3r/Alaris
-        $string460 = /\/loader\/x64\/Release\/loader\.exe/ nocase ascii wide
+        $string458 = /\/loader\/x64\/Release\/loader\.exe/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string461 = /\/loadercrypt_.{0,1000}\.php/ nocase ascii wide
+        $string459 = /\/loadercrypt_.{0,1000}\.php/ nocase ascii wide
         // Description: Cobaltstrike toolkit
         // Reference: https://github.com/1135/1135-CobaltStrike-ToolKit
-        $string462 = /\/logs\/.{0,1000}\/becon_.{0,1000}\.log/ nocase ascii wide
+        $string460 = /\/logs\/.{0,1000}\/becon_.{0,1000}\.log/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string463 = /\/logs\/beacon_log/ nocase ascii wide
+        $string461 = /\/logs\/beacon_log/ nocase ascii wide
         // Description: Cobalt Strike beacon object file that allows you to query and make changes to the Windows Registry
         // Reference: https://github.com/ausecwa/bof-registry
-        $string464 = /\/lpBunny\/bof\-registry/ nocase ascii wide
+        $string462 = /\/lpBunny\/bof\-registry/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string465 = /\/lsass\/beacon\.h/ nocase ascii wide
+        $string463 = /\/lsass\/beacon\.h/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string466 = /\/magnitude\.profile/ nocase ascii wide
+        $string464 = /\/magnitude\.profile/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string467 = /\/malleable\-c2/ nocase ascii wide
+        $string465 = /\/malleable\-c2/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string468 = /\/manjusaka\/plugins/ nocase ascii wide
+        $string466 = /\/manjusaka\/plugins/ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/MemReader_BoF
-        $string469 = /\/MemReader_BoF\// nocase ascii wide
+        $string467 = /\/MemReader_BoF\// nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string470 = /\/mimipenguin\.c/ nocase ascii wide
+        $string468 = /\/mimipenguin\.c/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string471 = /\/mimipenguin\// nocase ascii wide
+        $string469 = /\/mimipenguin\// nocase ascii wide
         // Description: This is a ELF object in memory loader/runner. The goal is to create a single elf loader that can be used to run follow on capabilities across all x86_64 and x86 nix operating systems.
         // Reference: https://github.com/trustedsec/ELFLoader
-        $string472 = /\/minimal_elf\.h/ nocase ascii wide
+        $string470 = /\/minimal_elf\.h/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string473 = /\/Misc\/donut\.exe/ nocase ascii wide
+        $string471 = /\/Misc\/donut\.exe/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) Conversion of the Mockingjay Process Injection Technique
         // Reference: https://github.com/ewby/Mockingjay_BOF
-        $string474 = /\/Mockingjay_BOF\.git/ nocase ascii wide
+        $string472 = /\/Mockingjay_BOF\.git/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string475 = /\/Modules\/Exitservice\/uinit\.exe/ nocase ascii wide
+        $string473 = /\/Modules\/Exitservice\/uinit\.exe/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string476 = /\/Mr\-Un1k0d3r\// nocase ascii wide
+        $string474 = /\/Mr\-Un1k0d3r\// nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string477 = /\/Native\/SigFlip\// nocase ascii wide
+        $string475 = /\/Native\/SigFlip\// nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string478 = /\/nccgroup\/nccfsas\// nocase ascii wide
+        $string476 = /\/nccgroup\/nccfsas\// nocase ascii wide
         // Description: Strstr with user-supplied needle and filename as a BOF.
         // Reference: https://github.com/EspressoCake/Needle_Sift_BOF
-        $string479 = /\/Needle_Sift_BOF\// nocase ascii wide
+        $string477 = /\/Needle_Sift_BOF\// nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string480 = /\/nettitude\/RunOF\// nocase ascii wide
+        $string478 = /\/nettitude\/RunOF\// nocase ascii wide
         // Description: Use windows api to add users which can be used when net is unavailable
         // Reference: https://github.com/lengjibo/NetUser
-        $string481 = /\/NetUser\.cpp/ nocase ascii wide
+        $string479 = /\/NetUser\.cpp/ nocase ascii wide
         // Description: Use windows api to add users which can be used when net is unavailable
         // Reference: https://github.com/lengjibo/NetUser
-        $string482 = /\/NetUser\.exe/ nocase ascii wide
+        $string480 = /\/NetUser\.exe/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string483 = /\/netuserenum\// nocase ascii wide
+        $string481 = /\/netuserenum\// nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string484 = /\/Network\/PortScan\// nocase ascii wide
+        $string482 = /\/Network\/PortScan\// nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string485 = /\/No\-Consolation\.git/ nocase ascii wide
+        $string483 = /\/No\-Consolation\.git/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string486 = /\/ntlmrelayx\// nocase ascii wide
+        $string484 = /\/ntlmrelayx\// nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string487 = /\/oab\-parse\/mspack\..{0,1000}\.dll/ nocase ascii wide
+        $string485 = /\/oab\-parse\/mspack\..{0,1000}\.dll/ nocase ascii wide
         // Description: .NET Assembly to Retrieve Outlook Calendar Details
         // Reference: https://github.com/OG-Sadpanda/SharpCalendar
-        $string488 = /\/OG\-Sadpanda\// nocase ascii wide
+        $string486 = /\/OG\-Sadpanda\// nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string489 = /\/On_Demand_C2\// nocase ascii wide
+        $string487 = /\/On_Demand_C2\// nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string490 = /\/opt\/implant\// nocase ascii wide
+        $string488 = /\/opt\/implant\// nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string491 = /\/opt\/rai\// nocase ascii wide
+        $string489 = /\/opt\/rai\// nocase ascii wide
         // Description: A framework for creating COM-based bypasses utilizing vulnerabilities in Microsoft's WDAPT sensors.
         // Reference: https://github.com/optiv/Dent
-        $string492 = /\/optiv\/Dent\// nocase ascii wide
+        $string490 = /\/optiv\/Dent\// nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string493 = /\/oscp\.profile/ nocase ascii wide
+        $string491 = /\/oscp\.profile/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string494 = /\/outflanknl\// nocase ascii wide
+        $string492 = /\/outflanknl\// nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string495 = /\/output\/payloads\// nocase ascii wide
+        $string493 = /\/output\/payloads\// nocase ascii wide
         // Description: Aggressor script to integrate Phant0m with Cobalt Strike
         // Reference: https://github.com/p292/Phant0m_cobaltstrike
-        $string496 = /\/p292\/Phant0m/ nocase ascii wide
+        $string494 = /\/p292\/Phant0m/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string497 = /\/package\/portscan\/.{0,1000}\.go/ nocase ascii wide
+        $string495 = /\/package\/portscan\/.{0,1000}\.go/ nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string498 = /\/password\/mimipenguin\// nocase ascii wide
+        $string496 = /\/password\/mimipenguin\// nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string499 = /\/payload_scripts/ nocase ascii wide
+        $string497 = /\/payload_scripts/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string500 = /\/payload_scripts\/artifact/ nocase ascii wide
+        $string498 = /\/payload_scripts\/artifact/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string501 = /\/PersistBOF\// nocase ascii wide
+        $string499 = /\/PersistBOF\// nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string502 = /\/PhishingServer\// nocase ascii wide
+        $string500 = /\/PhishingServer\// nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string503 = /\/pitty_tiger\.profile/ nocase ascii wide
+        $string501 = /\/pitty_tiger\.profile/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string504 = /\/PoolPartyBof\.c/ nocase ascii wide
+        $string502 = /\/PoolPartyBof\.c/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string505 = /\/PoolPartyBof\.git/ nocase ascii wide
+        $string503 = /\/PoolPartyBof\.git/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string506 = /\/PoolPartyBof\.x64\.o/ nocase ascii wide
+        $string504 = /\/PoolPartyBof\.x64\.o/ nocase ascii wide
         // Description: Cobalt Strike BOF that spawns a sacrificial process. injects it with shellcode. and executes payload. Built to evade EDR/UserLand hooks by spawning sacrificial process with Arbitrary Code Guard (ACG). BlockDll. and PPID spoofing.
         // Reference: https://github.com/boku7/spawn
-        $string507 = /\/popCalc\.bin/ nocase ascii wide
+        $string505 = /\/popCalc\.bin/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string508 = /\/PortBender\// nocase ascii wide
+        $string506 = /\/PortBender\// nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string509 = /\/portscan\.cna/ nocase ascii wide
+        $string507 = /\/portscan\.cna/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string510 = /\/POSeidon\.profile/ nocase ascii wide
+        $string508 = /\/POSeidon\.profile/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string511 = /\/PowerView\.cna/ nocase ascii wide
+        $string509 = /\/PowerView\.cna/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string512 = /\/PowerView3\.cna/ nocase ascii wide
+        $string510 = /\/PowerView3\.cna/ nocase ascii wide
         // Description: Simple BOF to read the protection level of a process
         // Reference: https://github.com/rasta-mouse/PPEnum
-        $string513 = /\/PPEnum\// nocase ascii wide
+        $string511 = /\/PPEnum\// nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string514 = /\/ppldump\./ nocase ascii wide
+        $string512 = /\/ppldump\./ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string515 = /\/PPLDump_BOF\// nocase ascii wide
+        $string513 = /\/PPLDump_BOF\// nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string516 = /\/PrintMonitorDll\./ nocase ascii wide
+        $string514 = /\/PrintMonitorDll\./ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string517 = /\/PrintMonitorDll\// nocase ascii wide
+        $string515 = /\/PrintMonitorDll\// nocase ascii wide
         // Description: Reflection dll implementation of PrintSpoofer used in conjunction with Cobalt Strike
         // Reference: https://github.com/crisprss/PrintSpoofer
-        $string518 = /\/PrintSpoofer\// nocase ascii wide
+        $string516 = /\/PrintSpoofer\// nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string519 = /\/PrivilegeEscalation\// nocase ascii wide
+        $string517 = /\/PrivilegeEscalation\// nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string520 = /\/proberbyte\.go/ nocase ascii wide
+        $string518 = /\/proberbyte\.go/ nocase ascii wide
         // Description: DLL Hijack Search Order Enumeration BOF
         // Reference: https://github.com/EspressoCake/DLL-Hijack-Search-Order-BOF
-        $string521 = /\/Proxy_Def_File_Generator\.cna/ nocase ascii wide
+        $string519 = /\/Proxy_Def_File_Generator\.cna/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string522 = /\/putter\.profile/ nocase ascii wide
+        $string520 = /\/putter\.profile/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string523 = /\/pyasn1\// nocase ascii wide
+        $string521 = /\/pyasn1\// nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string524 = /\/pycobalt\-/ nocase ascii wide
+        $string522 = /\/pycobalt\-/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string525 = /\/pycobalt\// nocase ascii wide
+        $string523 = /\/pycobalt\// nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string526 = /\/pystinger\.zip/ nocase ascii wide
+        $string524 = /\/pystinger\.zip/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string527 = /\/qakbot\.profile/ nocase ascii wide
+        $string525 = /\/qakbot\.profile/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string528 = /\/quantloader\.profile/ nocase ascii wide
+        $string526 = /\/quantloader\.profile/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string529 = /\/RAI\.git/ nocase ascii wide
+        $string527 = /\/RAI\.git/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string530 = /\/ramnit\.profile/ nocase ascii wide
+        $string528 = /\/ramnit\.profile/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string531 = /\/ratankba\.profile/ nocase ascii wide
+        $string529 = /\/ratankba\.profile/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string532 = /\/raw_shellcode_size\.txt/ nocase ascii wide
+        $string530 = /\/raw_shellcode_size\.txt/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string533 = /\/RC4Payload32\.txt/ nocase ascii wide
+        $string531 = /\/RC4Payload32\.txt/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string534 = /\/RCStep\/CSSG\// nocase ascii wide
+        $string532 = /\/RCStep\/CSSG\// nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/Readfile_BoF
-        $string535 = /\/readfile_bof\./ nocase ascii wide
+        $string533 = /\/readfile_bof\./ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/Readfile_BoF
-        $string536 = /\/Readfile_BoF\// nocase ascii wide
+        $string534 = /\/Readfile_BoF\// nocase ascii wide
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string537 = /\/red\-team\-scripts/ nocase ascii wide
+        $string535 = /\/red\-team\-scripts/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string538 = /\/RedWarden\.git/ nocase ascii wide
+        $string536 = /\/RedWarden\.git/ nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string539 = /\/RegistryPersistence\.c/ nocase ascii wide
+        $string537 = /\/RegistryPersistence\.c/ nocase ascii wide
         // Description: Cobalt Strike Aggressor Script that Performs System/AV/EDR Recon
         // Reference: https://github.com/optiv/Registry-Recon
-        $string540 = /\/Registry\-Recon\// nocase ascii wide
+        $string538 = /\/Registry\-Recon\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string541 = /\/Remote\/adcs_request\// nocase ascii wide
+        $string539 = /\/Remote\/adcs_request\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string542 = /\/Remote\/office_tokens\// nocase ascii wide
+        $string540 = /\/Remote\/office_tokens\// nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string543 = /\/Remote\/procdump\// nocase ascii wide
+        $string541 = /\/Remote\/procdump\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string544 = /\/Remote\/ProcessDestroy\// nocase ascii wide
+        $string542 = /\/Remote\/ProcessDestroy\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string545 = /\/Remote\/ProcessListHandles\// nocase ascii wide
+        $string543 = /\/Remote\/ProcessListHandles\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string546 = /\/Remote\/schtaskscreate\// nocase ascii wide
+        $string544 = /\/Remote\/schtaskscreate\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string547 = /\/Remote\/schtasksrun\// nocase ascii wide
+        $string545 = /\/Remote\/schtasksrun\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string548 = /\/Remote\/setuserpass\// nocase ascii wide
+        $string546 = /\/Remote\/setuserpass\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string549 = /\/Remote\/setuserpass\// nocase ascii wide
+        $string547 = /\/Remote\/setuserpass\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string550 = /\/Remote\/unexpireuser\// nocase ascii wide
+        $string548 = /\/Remote\/unexpireuser\// nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string551 = /\/remotereg\.c/ nocase ascii wide
+        $string549 = /\/remotereg\.c/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string552 = /\/remotereg\.o/ nocase ascii wide
+        $string550 = /\/remotereg\.o/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string553 = /\/RunOF\/RunOF\// nocase ascii wide
+        $string551 = /\/RunOF\/RunOF\// nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string554 = /\/runshellcode\./ nocase ascii wide
+        $string552 = /\/runshellcode\./ nocase ascii wide
         // Description: C# binary with embeded golang hack-browser-data
         // Reference: https://github.com/S3cur3Th1sSh1t/Sharp-HackBrowserData
-        $string555 = /\/S3cur3Th1sSh1t\// nocase ascii wide
+        $string553 = /\/S3cur3Th1sSh1t\// nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string556 = /\/saefko\.profile/ nocase ascii wide
+        $string554 = /\/saefko\.profile/ nocase ascii wide
         // Description: A framework for creating COM-based bypasses utilizing vulnerabilities in Microsoft's WDAPT sensors.
         // Reference: https://github.com/optiv/Dent
-        $string557 = /\/ScareCrow\s\-I\s/ nocase ascii wide
+        $string555 = /\/ScareCrow\s\-I\s/ nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string558 = /\/ScRunHex\.py/ nocase ascii wide
+        $string556 = /\/ScRunHex\.py/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string559 = /\/searchsploit/ nocase ascii wide
+        $string557 = /\/searchsploit/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string560 = /\/Seatbelt\.txt/ nocase ascii wide
+        $string558 = /\/Seatbelt\.txt/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string561 = /\/secinject\.c/ nocase ascii wide
+        $string559 = /\/secinject\.c/ nocase ascii wide
         // Description: BOF implementation of the research by @jonasLyk and the drafted PoC from @LloydLabs
         // Reference: https://github.com/EspressoCake/Self_Deletion_BOF
-        $string562 = /\/self_delete\.cna/ nocase ascii wide
+        $string560 = /\/self_delete\.cna/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string563 = /\/SeriousSam\.sln/ nocase ascii wide
+        $string561 = /\/SeriousSam\.sln/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string564 = /\/serverscan\/CobaltStrike/ nocase ascii wide
+        $string562 = /\/serverscan\/CobaltStrike/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string565 = /\/serverscan_Air/ nocase ascii wide
+        $string563 = /\/serverscan_Air/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string566 = /\/serverscan_pro/ nocase ascii wide
+        $string564 = /\/serverscan_pro/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string567 = /\/ServerScanForLinux\// nocase ascii wide
+        $string565 = /\/ServerScanForLinux\// nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string568 = /\/ServerScanForWindows\// nocase ascii wide
+        $string566 = /\/ServerScanForWindows\// nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string569 = /\/ServerScanForWindows\/PE/ nocase ascii wide
+        $string567 = /\/ServerScanForWindows\/PE/ nocase ascii wide
         // Description: New Lateral Movement technique by abusing Windows Perception Simulation Service to achieve DLL hijacking code execution.
         // Reference: https://github.com/netero1010/ServiceMove-BOF
-        $string570 = /\/ServiceMove\-BOF\// nocase ascii wide
+        $string568 = /\/ServiceMove\-BOF\// nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string571 = /\/Services\/TransitEXE\.exe/ nocase ascii wide
+        $string569 = /\/Services\/TransitEXE\.exe/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string572 = /\/setuserpass\.x64\./ nocase ascii wide
+        $string570 = /\/setuserpass\.x64\./ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string573 = /\/setuserpass\.x86\./ nocase ascii wide
+        $string571 = /\/setuserpass\.x86\./ nocase ascii wide
         // Description: .NET Assembly to Retrieve Outlook Calendar Details
         // Reference: https://github.com/OG-Sadpanda/SharpCalendar
-        $string574 = /\/SharpCalendar\/.{0,1000}\./ nocase ascii wide
+        $string572 = /\/SharpCalendar\/.{0,1000}\./ nocase ascii wide
         // Description: C# alternative to the linux cat command... Prints file contents to console. For use with Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpCat
-        $string575 = /\/SharpCat\// nocase ascii wide
+        $string573 = /\/SharpCat\// nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string576 = /\/SharpCompile\// nocase ascii wide
+        $string574 = /\/SharpCompile\// nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string577 = /\/sharpcompile_.{0,1000}\./ nocase ascii wide
+        $string575 = /\/sharpcompile_.{0,1000}\./ nocase ascii wide
         // Description: SharpCradle is a tool designed to help penetration testers or red teams download and execute .NET binaries into memory.
         // Reference: https://github.com/anthemtotheego/SharpCradle
-        $string578 = /\/SharpCradle\// nocase ascii wide
+        $string576 = /\/SharpCradle\// nocase ascii wide
         // Description: Read the contents of DOCX files using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpSword
-        $string579 = /\/SharpSword\/SharpSword/ nocase ascii wide
+        $string577 = /\/SharpSword\/SharpSword/ nocase ascii wide
         // Description: ShellCode_Loader - Msf&CobaltStrike Antivirus ShellCode loader. Shellcode_encryption - Antivirus Shellcode encryption generation tool. currently tested for Antivirus 360 & Huorong & Computer Manager & Windows Defender (other antivirus software not tested).
         // Reference: https://github.com/Axx8/ShellCode_Loader
-        $string580 = /\/ShellCode_Loader/ nocase ascii wide
+        $string578 = /\/ShellCode_Loader/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string581 = /\/shspawnas\// nocase ascii wide
+        $string579 = /\/shspawnas\// nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string582 = /\/sigflip\.x64\./ nocase ascii wide
+        $string580 = /\/sigflip\.x64\./ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string583 = /\/sigflip\.x86\./ nocase ascii wide
+        $string581 = /\/sigflip\.x86\./ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string584 = /\/SigLoader\.go/ nocase ascii wide
+        $string582 = /\/SigLoader\.go/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string585 = /\/SigLoader\// nocase ascii wide
+        $string583 = /\/SigLoader\// nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string586 = /\/SilentClean\.exe/ nocase ascii wide
+        $string584 = /\/SilentClean\.exe/ nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string587 = /\/SilentClean\/SilentClean\/.{0,1000}\.cs/ nocase ascii wide
+        $string585 = /\/SilentClean\/SilentClean\/.{0,1000}\.cs/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string588 = /\/silentdump\.c/ nocase ascii wide
+        $string586 = /\/silentdump\.c/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string589 = /\/silentdump\.h/ nocase ascii wide
+        $string587 = /\/silentdump\.h/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string590 = /\/sleep_python_bridge\// nocase ascii wide
+        $string588 = /\/sleep_python_bridge\// nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string591 = /\/Sleeper\/Sleeper\.cna/ nocase ascii wide
+        $string589 = /\/Sleeper\/Sleeper\.cna/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string592 = /\/sleepmask\.cna/ nocase ascii wide
+        $string590 = /\/sleepmask\.cna/ nocase ascii wide
         // Description: Cobalt Strike BOF that spawns a sacrificial process. injects it with shellcode. and executes payload. Built to evade EDR/UserLand hooks by spawning sacrificial process with Arbitrary Code Guard (ACG). BlockDll. and PPID spoofing.
         // Reference: https://github.com/boku7/spawn
-        $string593 = /\/spawn\.git/ nocase ascii wide
+        $string591 = /\/spawn\.git/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string594 = /\/spoolsystem\/SpoolTrigger\// nocase ascii wide
+        $string592 = /\/spoolsystem\/SpoolTrigger\// nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string595 = /\/Spray\-AD\./ nocase ascii wide
+        $string593 = /\/Spray\-AD\./ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string596 = /\/Spray\-AD\// nocase ascii wide
+        $string594 = /\/Spray\-AD\// nocase ascii wide
         // Description: Collection of Beacon Object Files (BOF) for Cobalt Strike
         // Reference: https://github.com/crypt0p3g/bof-collection
-        $string597 = /\/src\/Sleeper\.cpp/ nocase ascii wide
+        $string595 = /\/src\/Sleeper\.cpp/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string598 = /\/StaticSyscallsAPCSpawn\// nocase ascii wide
+        $string596 = /\/StaticSyscallsAPCSpawn\// nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string599 = /\/StaticSyscallsInject\// nocase ascii wide
+        $string597 = /\/StaticSyscallsInject\// nocase ascii wide
         // Description: Cobalt Strike kit for Persistence
         // Reference: https://github.com/0xthirteen/StayKit
-        $string600 = /\/StayKit\.cna/ nocase ascii wide
+        $string598 = /\/StayKit\.cna/ nocase ascii wide
         // Description: Cobalt Strike kit for Persistence
         // Reference: https://github.com/0xthirteen/StayKit
-        $string601 = /\/Staykit\/StayKit\./ nocase ascii wide
+        $string599 = /\/Staykit\/StayKit\./ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string602 = /\/striker\.py/ nocase ascii wide
+        $string600 = /\/striker\.py/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string603 = /\/string_of_paerls\.profile/ nocase ascii wide
+        $string601 = /\/string_of_paerls\.profile/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string604 = /\/suspendresume\.x64/ nocase ascii wide
+        $string602 = /\/suspendresume\.x64/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string605 = /\/suspendresume\.x86/ nocase ascii wide
+        $string603 = /\/suspendresume\.x86/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string606 = /\/SweetPotato_CS/ nocase ascii wide
+        $string604 = /\/SweetPotato_CS/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string607 = /\/SyscallsInject\// nocase ascii wide
+        $string605 = /\/SyscallsInject\// nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string608 = /\/taidoor\.profile/ nocase ascii wide
+        $string606 = /\/taidoor\.profile/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string609 = /\/tcpshell\.py/ nocase ascii wide
+        $string607 = /\/tcpshell\.py/ nocase ascii wide
         // Description: teamserver cobaltstrike
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string610 = /\/teamserver\.service/ nocase ascii wide
+        $string608 = /\/teamserver\.service/ nocase ascii wide
         // Description: Manual Map DLL injection implemented with Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/tomcarver16/BOF-DLL-Inject
-        $string611 = /\/test32\.dll/ nocase ascii wide
+        $string609 = /\/test32\.dll/ nocase ascii wide
         // Description: Manual Map DLL injection implemented with Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/tomcarver16/BOF-DLL-Inject
-        $string612 = /\/test64\.dll/ nocase ascii wide
+        $string610 = /\/test64\.dll/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string613 = /\/tests\/test\-bof\.ps1/ nocase ascii wide
+        $string611 = /\/tests\/test\-bof\.ps1/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string614 = /\/tevora\-threat\/PowerView/ nocase ascii wide
+        $string612 = /\/tevora\-threat\/PowerView/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string615 = /\/tgtParse\.py/ nocase ascii wide
+        $string613 = /\/tgtParse\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string616 = /\/tgtParse\/tgtParse\./ nocase ascii wide
+        $string614 = /\/tgtParse\/tgtParse\./ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string617 = /\/ticketConverter\.exe/ nocase ascii wide
+        $string615 = /\/ticketConverter\.exe/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string618 = /\/TikiLoader\// nocase ascii wide
+        $string616 = /\/TikiLoader\// nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string619 = /\/TikiSpawn\./ nocase ascii wide
+        $string617 = /\/TikiSpawn\./ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string620 = /\/TikiSpawn\// nocase ascii wide
+        $string618 = /\/TikiSpawn\// nocase ascii wide
         // Description: Beacon Object File to delete token privileges and lower the integrity level to untrusted for a specified process
         // Reference: https://github.com/nick-frischkorn/TokenStripBOF
-        $string621 = /\/TokenStripBOF/ nocase ascii wide
+        $string619 = /\/TokenStripBOF/ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string622 = /\/tools\/BeaconTool\// nocase ascii wide
+        $string620 = /\/tools\/BeaconTool\// nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string623 = /\/Tools\/spoolsystem\// nocase ascii wide
+        $string621 = /\/Tools\/spoolsystem\// nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string624 = /\/Tools\/Squeak\/Squeak/ nocase ascii wide
+        $string622 = /\/Tools\/Squeak\/Squeak/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string625 = /\/trick_ryuk\.profile/ nocase ascii wide
+        $string623 = /\/trick_ryuk\.profile/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string626 = /\/trickbot\.profile/ nocase ascii wide
+        $string624 = /\/trickbot\.profile/ nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string627 = /\/UAC\-SilentClean\// nocase ascii wide
+        $string625 = /\/UAC\-SilentClean\// nocase ascii wide
         // Description: Remove API hooks from a Beacon process.
         // Reference: https://github.com/Cobalt-Strike/unhook-bof
-        $string628 = /\/unhook\-bof/ nocase ascii wide
+        $string626 = /\/unhook\-bof/ nocase ascii wide
         // Description: Remove API hooks from a Beacon process.
         // Reference: https://github.com/rsmudge/unhook-bof
-        $string629 = /\/unhook\-bof/ nocase ascii wide
+        $string627 = /\/unhook\-bof/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string630 = /\/UTWOqVQ132\// nocase ascii wide
+        $string628 = /\/UTWOqVQ132\// nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string631 = /\/vssenum\// nocase ascii wide
+        $string629 = /\/vssenum\// nocase ascii wide
         // Description: A Beacon Object File (BOF) for Cobalt Strike which uses direct system calls to enable WDigest credential caching.
         // Reference: https://github.com/outflanknl/WdToggle
-        $string632 = /\/WdToggle\.c/ nocase ascii wide
+        $string630 = /\/WdToggle\.c/ nocase ascii wide
         // Description: A Beacon Object File (BOF) for Cobalt Strike which uses direct system calls to enable WDigest credential caching.
         // Reference: https://github.com/outflanknl/WdToggle
-        $string633 = /\/WdToggle\.h/ nocase ascii wide
+        $string631 = /\/WdToggle\.h/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string634 = /\/webshell\/.{0,1000}\.aspx/ nocase ascii wide
+        $string632 = /\/webshell\/.{0,1000}\.aspx/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string635 = /\/webshell\/.{0,1000}\.jsp/ nocase ascii wide
+        $string633 = /\/webshell\/.{0,1000}\.jsp/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string636 = /\/webshell\/.{0,1000}\.php/ nocase ascii wide
+        $string634 = /\/webshell\/.{0,1000}\.php/ nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string637 = /\/wifidump\.c/ nocase ascii wide
+        $string635 = /\/wifidump\.c/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string638 = /\/WindowsVault\.cna/ nocase ascii wide
+        $string636 = /\/WindowsVault\.cna/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string639 = /\/WindowsVault\.h/ nocase ascii wide
+        $string637 = /\/WindowsVault\.h/ nocase ascii wide
         // Description: C++ WinRM API via Reflective DLL
         // Reference: https://github.com/mez-0/winrmdll
-        $string640 = /\/winrm\.cpp/ nocase ascii wide
+        $string638 = /\/winrm\.cpp/ nocase ascii wide
         // Description: C++ WinRM API via Reflective DLL
         // Reference: https://github.com/mez-0/winrmdll
-        $string641 = /\/winrmdll/ nocase ascii wide
+        $string639 = /\/winrmdll/ nocase ascii wide
         // Description: C++ WinRM API via Reflective DLL
         // Reference: https://github.com/mez-0/winrmdll
-        $string642 = /\/winrm\-reflective\-dll\// nocase ascii wide
+        $string640 = /\/winrm\-reflective\-dll\// nocase ascii wide
         // Description: Winsocket for Cobalt Strike.
         // Reference: https://github.com/WKL-Sec/Winsocky
-        $string643 = /\/Winsocky\.git/ nocase ascii wide
+        $string641 = /\/Winsocky\.git/ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string644 = /\/WMI\sLateral\sMovement\// nocase ascii wide
+        $string642 = /\/WMI\sLateral\sMovement\// nocase ascii wide
         // Description: Cobaltstrike payload generator
         // Reference: https://github.com/dr0op/CrossNet-Beta
-        $string645 = /\/wwlib\/lolbins\// nocase ascii wide
+        $string643 = /\/wwlib\/lolbins\// nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string646 = /\/xen\-mimi\.ps1/ nocase ascii wide
+        $string644 = /\/xen\-mimi\.ps1/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Loader by Golang
         // Reference: https://github.com/timwhitez/Doge-Loader
-        $string647 = /\/xor\/stager\.txt/ nocase ascii wide
+        $string645 = /\/xor\/stager\.txt/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Loader by Golang
         // Reference: https://github.com/timwhitez/Doge-Loader
-        $string648 = /\/xor\/xor\.go/ nocase ascii wide
+        $string646 = /\/xor\/xor\.go/ nocase ascii wide
         // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
         // Reference: https://github.com/boku7/xPipe
-        $string649 = /\/xPipe\// nocase ascii wide
+        $string647 = /\/xPipe\// nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string650 = /\/yanghaoi\/_CNA/ nocase ascii wide
+        $string648 = /\/yanghaoi\/_CNA/ nocase ascii wide
         // Description: Cobalt Strike BOF zerologon exploit
         // Reference: https://github.com/rsmudge/ZeroLogon-BOF
-        $string651 = /\/zerologon\.cna/ nocase ascii wide
+        $string649 = /\/zerologon\.cna/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string652 = /\[\'spawnto\'\]/ nocase ascii wide
+        $string650 = /\[\'spawnto\'\]/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string653 = /\\\\\.\\pipe\\bypassuac/ nocase ascii wide
+        $string651 = /\\\\\.\\pipe\\bypassuac/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string654 = /\\\\\.\\pipe\\hashdump/ nocase ascii wide
+        $string652 = /\\\\\.\\pipe\\hashdump/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string655 = /\\\\\.\\pipe\\keylogger/ nocase ascii wide
+        $string653 = /\\\\\.\\pipe\\keylogger/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string656 = /\\\\\.\\pipe\\mimikatz/ nocase ascii wide
+        $string654 = /\\\\\.\\pipe\\mimikatz/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string657 = /\\\\\.\\pipe\\netview/ nocase ascii wide
+        $string655 = /\\\\\.\\pipe\\netview/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string658 = /\\\\\.\\pipe\\PIPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ nocase ascii wide
+        $string656 = /\\\\\.\\pipe\\PIPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string659 = /\\\\\.\\pipe\\portscan/ nocase ascii wide
+        $string657 = /\\\\\.\\pipe\\portscan/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string660 = /\\\\\.\\pipe\\screenshot/ nocase ascii wide
+        $string658 = /\\\\\.\\pipe\\screenshot/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string661 = /\\\\\.\\pipe\\sshagent/ nocase ascii wide
+        $string659 = /\\\\\.\\pipe\\sshagent/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string662 = /\\\\\\\\\.\\\\pipe\\\\bypassuac/ nocase ascii wide
+        $string660 = /\\\\\\\\\.\\\\pipe\\\\bypassuac/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string663 = /\\\\\\\\\.\\\\pipe\\\\hashdump/ nocase ascii wide
+        $string661 = /\\\\\\\\\.\\\\pipe\\\\hashdump/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string664 = /\\\\\\\\\.\\\\pipe\\\\keylogger/ nocase ascii wide
+        $string662 = /\\\\\\\\\.\\\\pipe\\\\keylogger/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string665 = /\\\\\\\\\.\\\\pipe\\\\mimikatz/ nocase ascii wide
+        $string663 = /\\\\\\\\\.\\\\pipe\\\\mimikatz/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string666 = /\\\\\\\\\.\\\\pipe\\\\netview/ nocase ascii wide
+        $string664 = /\\\\\\\\\.\\\\pipe\\\\netview/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string667 = /\\\\\\\\\.\\\\pipe\\\\PIPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ nocase ascii wide
+        $string665 = /\\\\\\\\\.\\\\pipe\\\\PIPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string668 = /\\\\\\\\\.\\\\pipe\\\\portscan/ nocase ascii wide
+        $string666 = /\\\\\\\\\.\\\\pipe\\\\portscan/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string669 = /\\\\\\\\\.\\\\pipe\\\\screenshot/ nocase ascii wide
+        $string667 = /\\\\\\\\\.\\\\pipe\\\\screenshot/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string670 = /\\\\\\\\\.\\\\pipe\\\\sshagent/ nocase ascii wide
+        $string668 = /\\\\\\\\\.\\\\pipe\\\\sshagent/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string671 = /\\\\GetWebDAVStatus\.exe/ nocase ascii wide
+        $string669 = /\\\\GetWebDAVStatus\.exe/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string672 = /\\\\pipe\\\\DAV\sRPC\sSERVICE/ nocase ascii wide
+        $string670 = /\\\\pipe\\\\DAV\sRPC\sSERVICE/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string673 = /\\8e8988b257e9dd2ea44ff03d44d26467b7c9ec16/ nocase ascii wide
+        $string671 = /\\8e8988b257e9dd2ea44ff03d44d26467b7c9ec16/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string674 = /\\asreproasting\.c/ nocase ascii wide
+        $string672 = /\\asreproasting\.c/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string675 = /\\beacon\.exe/ nocase ascii wide
+        $string673 = /\\beacon\.exe/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string676 = /\\CrossC2\./ nocase ascii wide
+        $string674 = /\\CrossC2\./ nocase ascii wide
         // Description: Cobaltstrike payload generator
         // Reference: https://github.com/dr0op/CrossNet-Beta
-        $string677 = /\\CROSSNET\\CROSSNET\\/ nocase ascii wide
+        $string675 = /\\CROSSNET\\CROSSNET\\/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string678 = /\\dumpert\./ nocase ascii wide
+        $string676 = /\\dumpert\./ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string679 = /\\Dumpert\\/ nocase ascii wide
+        $string677 = /\\Dumpert\\/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string680 = /\\DumpShellcode/ nocase ascii wide
+        $string678 = /\\DumpShellcode/ nocase ascii wide
         // Description: dump lsass
         // Reference: https://github.com/seventeenman/CallBackDump
-        $string681 = /\\dumpXor\.exe/ nocase ascii wide
+        $string679 = /\\dumpXor\.exe/ nocase ascii wide
         // Description: dump lsass
         // Reference: https://github.com/seventeenman/CallBackDump
-        $string682 = /\\dumpXor\\x64\\/ nocase ascii wide
+        $string680 = /\\dumpXor\\x64\\/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string683 = /\\ELF\\portscan/ nocase ascii wide
+        $string681 = /\\ELF\\portscan/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string684 = /\\ELF\\serverscan/ nocase ascii wide
+        $string682 = /\\ELF\\serverscan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string685 = /\\evil\.dll/ nocase ascii wide
+        $string683 = /\\evil\.dll/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string686 = /\\geacon\\tools\\BeaconTool\\/ nocase ascii wide
+        $string684 = /\\geacon\\tools\\BeaconTool\\/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string687 = /\\GetWebDAVStatus\\/ nocase ascii wide
+        $string685 = /\\GetWebDAVStatus\\/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string688 = /\\GetWebDAVStatus_x64/ nocase ascii wide
+        $string686 = /\\GetWebDAVStatus_x64/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string689 = /\\HackBrowserData/ nocase ascii wide
+        $string687 = /\\HackBrowserData/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string690 = /\\HiddenDesktop\\/ nocase ascii wide
+        $string688 = /\\HiddenDesktop\\/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string691 = /\\HostEnum\.ps1/ nocase ascii wide
+        $string689 = /\\HostEnum\.ps1/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string692 = /\\kdstab\.exe/ nocase ascii wide
+        $string690 = /\\kdstab\.exe/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string693 = /\\kerberoasting\.c/ nocase ascii wide
+        $string691 = /\\kerberoasting\.c/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string694 = /\\Kerbeus\-BOF\\/ nocase ascii wide
+        $string692 = /\\Kerbeus\-BOF\\/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string695 = /\\Koh\.exe/ nocase ascii wide
+        $string693 = /\\Koh\.exe/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string696 = /\\Koh\.pdb/ nocase ascii wide
+        $string694 = /\\Koh\.pdb/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string697 = /\\Koh\\Koh\./ nocase ascii wide
+        $string695 = /\\Koh\\Koh\./ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string698 = /\\Ladon\.exe/ nocase ascii wide
+        $string696 = /\\Ladon\.exe/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string699 = /\\Ladon\.ps1/ nocase ascii wide
+        $string697 = /\\Ladon\.ps1/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string700 = /\\LogonScreen\.exe/ nocase ascii wide
+        $string698 = /\\LogonScreen\.exe/ nocase ascii wide
         // Description: Collection of beacon object files for use with Cobalt Strike to facilitate
         // Reference: https://github.com/rookuu/BOFs
-        $string701 = /\\lsass\.dmp/ nocase ascii wide
+        $string699 = /\\lsass\.dmp/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) Conversion of the Mockingjay Process Injection Technique
         // Reference: https://github.com/ewby/Mockingjay_BOF
-        $string702 = /\\Mockingjay_BOF\./ nocase ascii wide
+        $string700 = /\\Mockingjay_BOF\./ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string703 = /\\No\-Consolation\\source\\/ nocase ascii wide
+        $string701 = /\\No\-Consolation\\source\\/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string704 = /\\portbender\./ nocase ascii wide
+        $string702 = /\\portbender\./ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string705 = /\\PowerView\.cna/ nocase ascii wide
+        $string703 = /\\PowerView\.cna/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string706 = /\\PowerView\.exe/ nocase ascii wide
+        $string704 = /\\PowerView\.exe/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string707 = /\\PowerView\.ps1/ nocase ascii wide
+        $string705 = /\\PowerView\.ps1/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string708 = /\\PowerView3\./ nocase ascii wide
+        $string706 = /\\PowerView3\./ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string709 = /\\RunBOF\.exe/ nocase ascii wide
+        $string707 = /\\RunBOF\.exe/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string710 = /\\RunOF\.exe/ nocase ascii wide
+        $string708 = /\\RunOF\.exe/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string711 = /\\RunOF\\bin\\/ nocase ascii wide
+        $string709 = /\\RunOF\\bin\\/ nocase ascii wide
         // Description: Dumping SAM / SECURITY / SYSTEM registry hives with a Beacon Object File
         // Reference: https://github.com/EncodeGroup/BOF-RegSave
-        $string712 = /\\samantha\.txt/ nocase ascii wide
+        $string710 = /\\samantha\.txt/ nocase ascii wide
         // Description: Cobalt Strike kit for Lateral Movement
         // Reference: https://github.com/0xthirteen/MoveKit
-        $string713 = /\\SharpMove\.exe/ nocase ascii wide
+        $string711 = /\\SharpMove\.exe/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string714 = /\\SigFlip\.exe/ nocase ascii wide
+        $string712 = /\\SigFlip\.exe/ nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string715 = /\\SilentClean\.exe/ nocase ascii wide
+        $string713 = /\\SilentClean\.exe/ nocase ascii wide
         // Description: Cobalt Strike kit for Persistence
         // Reference: https://github.com/0xthirteen/StayKit
-        $string716 = /\\StayKit\.cna/ nocase ascii wide
+        $string714 = /\\StayKit\.cna/ nocase ascii wide
         // Description: Dumping SAM / SECURITY / SYSTEM registry hives with a Beacon Object File
         // Reference: https://github.com/EncodeGroup/BOF-RegSave
-        $string717 = /\\systemic\.txt/ nocase ascii wide
+        $string715 = /\\systemic\.txt/ nocase ascii wide
         // Description: tamper scheduled task with a binary
         // Reference: https://github.com/RiccardoAncarani/TaskShell
-        $string718 = /\\TASKSHELL\.EXE/ nocase ascii wide
+        $string716 = /\\TASKSHELL\.EXE/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string719 = /\\TikiCompiler\.txt/ nocase ascii wide
+        $string717 = /\\TikiCompiler\.txt/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string720 = /\\TikiService\.exe/ nocase ascii wide
+        $string718 = /\\TikiService\.exe/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string721 = /\\TikiSpawn\./ nocase ascii wide
+        $string719 = /\\TikiSpawn\./ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string722 = /\\tikispawn\.xml/ nocase ascii wide
+        $string720 = /\\tikispawn\.xml/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string723 = /\\TikiTorch\\Aggressor/ nocase ascii wide
+        $string721 = /\\TikiTorch\\Aggressor/ nocase ascii wide
+        // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
+        // Reference: https://github.com/boku7/xPipe
+        $string722 = /\\xpipe\.c/ nocase ascii wide
+        // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
+        // Reference: https://github.com/boku7/xPipe
+        $string723 = /\\xpipe\.o/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
         $string724 = /\]\scompile\sgeacon\swith\sthe\spublic\skey\sfrom\s\.beacon_keys/ nocase ascii wide
@@ -3638,3462 +3638,3390 @@ rule cobaltstrike
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
         $string1210 = /dllinject\s/ nocase ascii wide
-        // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string1211 = /dllload\s/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1212 = /dns_beacon_beacon/ nocase ascii wide
+        $string1211 = /dns_beacon_beacon/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1213 = /dns_beacon_dns_idle/ nocase ascii wide
+        $string1212 = /dns_beacon_dns_idle/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1214 = /dns_beacon_dns_sleep/ nocase ascii wide
+        $string1213 = /dns_beacon_dns_sleep/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1215 = /dns_beacon_dns_stager_prepend/ nocase ascii wide
+        $string1214 = /dns_beacon_dns_stager_prepend/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1216 = /dns_beacon_dns_stager_subhost/ nocase ascii wide
+        $string1215 = /dns_beacon_dns_stager_subhost/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1217 = /dns_beacon_dns_ttl/ nocase ascii wide
+        $string1216 = /dns_beacon_dns_ttl/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1218 = /dns_beacon_get_A/ nocase ascii wide
+        $string1217 = /dns_beacon_get_A/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1219 = /dns_beacon_get_TXT/ nocase ascii wide
+        $string1218 = /dns_beacon_get_TXT/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1220 = /dns_beacon_maxdns/ nocase ascii wide
+        $string1219 = /dns_beacon_maxdns/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1221 = /dns_beacon_ns_response/ nocase ascii wide
+        $string1220 = /dns_beacon_ns_response/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1222 = /dns_beacon_put_metadata/ nocase ascii wide
+        $string1221 = /dns_beacon_put_metadata/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1223 = /dns_beacon_put_output/ nocase ascii wide
+        $string1222 = /dns_beacon_put_output/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1224 = /dns_redir\.sh\s/ nocase ascii wide
+        $string1223 = /dns_redir\.sh\s/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
+        $string1224 = /dns_stager_prepend/ nocase ascii wide
+        // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
+        // Reference: https://www.cobaltstrike.com/
         $string1225 = /dns_stager_prepend/ nocase ascii wide
-        // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string1226 = /dns_stager_prepend/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1227 = /\'dns_stager_prepend\'/ nocase ascii wide
+        $string1226 = /\'dns_stager_prepend\'/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1228 = /dns_stager_subhost/ nocase ascii wide
+        $string1227 = /dns_stager_subhost/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1229 = /dns_stager_subhost/ nocase ascii wide
+        $string1228 = /dns_stager_subhost/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1230 = /\'dns_stager_subhost\'/ nocase ascii wide
+        $string1229 = /\'dns_stager_subhost\'/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1231 = /dns\-beacon\s/ nocase ascii wide
+        $string1230 = /dns\-beacon\s/ nocase ascii wide
         // Description: Cobaltstrike payload generator
         // Reference: https://github.com/dr0op/CrossNet-Beta
-        $string1232 = /dnspayload\.bin/ nocase ascii wide
+        $string1231 = /dnspayload\.bin/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1233 = /do_attack\(/ nocase ascii wide
+        $string1232 = /do_attack\(/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Loader by Golang
         // Reference: https://github.com/timwhitez/Doge-Loader
-        $string1234 = /Doge\-Loader.{0,1000}xor\.go/ nocase ascii wide
+        $string1233 = /Doge\-Loader.{0,1000}xor\.go/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string1235 = /douknowwhoami\?d/ nocase ascii wide
+        $string1234 = /douknowwhoami\?d/ nocase ascii wide
         // Description: Cobaltstrike payload generator
         // Reference: https://github.com/dr0op/CrossNet-Beta
-        $string1236 = /dr0op\/CrossNet/ nocase ascii wide
+        $string1235 = /dr0op\/CrossNet/ nocase ascii wide
         // Description: A tool that can perform reverse proxy and cs online without going online
         // Reference: https://github.com/Daybr4ak/C2ReverseProxy
-        $string1237 = /DReverseProxy\.git/ nocase ascii wide
+        $string1236 = /DReverseProxy\.git/ nocase ascii wide
         // Description: A tool that can perform reverse proxy and cs online without going online
         // Reference: https://github.com/Daybr4ak/C2ReverseProxy
-        $string1238 = /DReverseServer\.go/ nocase ascii wide
+        $string1237 = /DReverseServer\.go/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1239 = /drop_malleable_unknown_/ nocase ascii wide
+        $string1238 = /drop_malleable_unknown_/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1240 = /drop_malleable_with_invalid_/ nocase ascii wide
+        $string1239 = /drop_malleable_with_invalid_/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1241 = /drop_malleable_without_/ nocase ascii wide
+        $string1240 = /drop_malleable_without_/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1242 = /dropper32\.exe/ nocase ascii wide
+        $string1241 = /dropper32\.exe/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1243 = /dropper64\.exe/ nocase ascii wide
+        $string1242 = /dropper64\.exe/ nocase ascii wide
         // Description: Beacon Object File (BOF) Creation Helper
         // Reference: https://github.com/dtmsecurity/bof_helper
-        $string1244 = /dtmsecurity\/bof_helper/ nocase ascii wide
+        $string1243 = /dtmsecurity\/bof_helper/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string1245 = /Dumpert\.bin/ nocase ascii wide
+        $string1244 = /Dumpert\.bin/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string1246 = /Dumpert\.exe/ nocase ascii wide
+        $string1245 = /Dumpert\.exe/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string1247 = /Dumpert\-Aggressor/ nocase ascii wide
-        // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
-        // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1248 = /DumpProcessByName/ nocase ascii wide
+        $string1246 = /Dumpert\-Aggressor/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1249 = /DumpShellcode\.exe/ nocase ascii wide
+        $string1247 = /DumpShellcode\.exe/ nocase ascii wide
         // Description: dump lsass
         // Reference: https://github.com/seventeenman/CallBackDump
-        $string1250 = /dumpXor\.exe\s/ nocase ascii wide
+        $string1248 = /dumpXor\.exe\s/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string1251 = /EasyPersistent\.cna/ nocase ascii wide
+        $string1249 = /EasyPersistent\.cna/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string1252 = /ebdf64076861a73d92416c6203d50dd25f4c991372f7d47e7146e29ab41a6892/ nocase ascii wide
+        $string1250 = /ebdf64076861a73d92416c6203d50dd25f4c991372f7d47e7146e29ab41a6892/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1253 = /elevate\sjuicypotato\s/ nocase ascii wide
+        $string1251 = /elevate\sjuicypotato\s/ nocase ascii wide
         // Description: Reflection dll implementation of PrintSpoofer used in conjunction with Cobalt Strike
         // Reference: https://github.com/crisprss/PrintSpoofer
-        $string1254 = /elevate\sPrintspoofer/ nocase ascii wide
+        $string1252 = /elevate\sPrintspoofer/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1255 = /elevate\ssvc\-exe\s/ nocase ascii wide
+        $string1253 = /elevate\ssvc\-exe\s/ nocase ascii wide
         // Description: This is a ELF object in memory loader/runner. The goal is to create a single elf loader that can be used to run follow on capabilities across all x86_64 and x86 nix operating systems.
         // Reference: https://github.com/trustedsec/ELFLoader
-        $string1256 = /ELFLoader\.c/ nocase ascii wide
+        $string1254 = /ELFLoader\.c/ nocase ascii wide
         // Description: This is a ELF object in memory loader/runner. The goal is to create a single elf loader that can be used to run follow on capabilities across all x86_64 and x86 nix operating systems.
         // Reference: https://github.com/trustedsec/ELFLoader
-        $string1257 = /ELFLoader\.h/ nocase ascii wide
+        $string1255 = /ELFLoader\.h/ nocase ascii wide
         // Description: This is a ELF object in memory loader/runner. The goal is to create a single elf loader that can be used to run follow on capabilities across all x86_64 and x86 nix operating systems.
         // Reference: https://github.com/trustedsec/ELFLoader
-        $string1258 = /ELFLoader\.out/ nocase ascii wide
+        $string1256 = /ELFLoader\.out/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1259 = /empire\sAttackServers/ nocase ascii wide
+        $string1257 = /empire\sAttackServers/ nocase ascii wide
         // Description: Project to enumerate proxy configurations and generate shellcode from CobaltStrike
         // Reference: https://github.com/EncodeGroup/AggressiveProxy
-        $string1260 = /EncodeGroup\/AggressiveProxy/ nocase ascii wide
+        $string1258 = /EncodeGroup\/AggressiveProxy/ nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string1261 = /EncodeGroup\/UAC\-SilentClean/ nocase ascii wide
+        $string1259 = /EncodeGroup\/UAC\-SilentClean/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string1262 = /encrypt\/encryptFile\.go/ nocase ascii wide
+        $string1260 = /encrypt\/encryptFile\.go/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string1263 = /encrypt\/encryptUrl\.go/ nocase ascii wide
+        $string1261 = /encrypt\/encryptUrl\.go/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1264 = /EncryptShellcode\(/ nocase ascii wide
+        $string1262 = /EncryptShellcode\(/ nocase ascii wide
         // Description: Use windows api to add users which can be used when net is unavailable
         // Reference: https://github.com/lengjibo/NetUser
-        $string1265 = /engjibo\/NetUser/ nocase ascii wide
+        $string1263 = /engjibo\/NetUser/ nocase ascii wide
         // Description: Cobalt Strike BOF to identify processes with the CLR loaded with a goal of identifying SpawnTo / injection candidates.
         // Reference: https://gist.github.com/G0ldenGunSec/8ca0e853dd5637af2881697f8de6aecc
-        $string1266 = /EnumCLR\.exe/ nocase ascii wide
+        $string1264 = /EnumCLR\.exe/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string1267 = /Erebus\/.{0,1000}spacerunner/ nocase ascii wide
+        $string1265 = /Erebus\/.{0,1000}spacerunner/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1268 = /EspressoCake\/PPLDump_BOF/ nocase ascii wide
+        $string1266 = /EspressoCake\/PPLDump_BOF/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1269 = /EventAggregation\.dll\.bak/ nocase ascii wide
+        $string1267 = /EventAggregation\.dll\.bak/ nocase ascii wide
         // Description: Bloodhound Attack Path Automation in CobaltStrike
         // Reference: https://github.com/vysecurity/ANGRYPUPPY
-        $string1270 = /eventspy\.cna/ nocase ascii wide
+        $string1268 = /eventspy\.cna/ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string1271 = /EventSub\-Aggressor\./ nocase ascii wide
+        $string1269 = /EventSub\-Aggressor\./ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string1272 = /EventViewerUAC\./ nocase ascii wide
+        $string1270 = /EventViewerUAC\./ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/Octoberfest7/EventViewerUAC_BOF
-        $string1273 = /EventViewerUAC\./ nocase ascii wide
+        $string1271 = /EventViewerUAC\./ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string1274 = /EventViewerUAC\.x64/ nocase ascii wide
+        $string1272 = /EventViewerUAC\.x64/ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string1275 = /EventViewerUAC\.x86/ nocase ascii wide
+        $string1273 = /EventViewerUAC\.x86/ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/Octoberfest7/EventViewerUAC_BOF
-        $string1276 = /EventViewerUAC_BOF/ nocase ascii wide
+        $string1274 = /EventViewerUAC_BOF/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1277 = /eventvwr_elevator/ nocase ascii wide
+        $string1275 = /eventvwr_elevator/ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/Octoberfest7/EventViewerUAC_BOF
-        $string1278 = /EVUAC\s.{0,1000}\.exe/ nocase ascii wide
+        $string1276 = /EVUAC\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) Conversion of the Mockingjay Process Injection Technique
         // Reference: https://github.com/ewby/Mockingjay_BOF
-        $string1279 = /ewby\/Mockingjay_BOF/ nocase ascii wide
+        $string1277 = /ewby\/Mockingjay_BOF/ nocase ascii wide
         // Description: A Visual Studio template used to create Cobalt Strike BOFs
         // Reference: https://github.com/securifybv/Visual-Studio-BOF-template
-        $string1280 = /example\-bof\.sln/ nocase ascii wide
+        $string1278 = /example\-bof\.sln/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1281 = /execmethod.{0,1000}PowerPick/ nocase ascii wide
+        $string1279 = /execmethod.{0,1000}PowerPick/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1282 = /execmethod.{0,1000}PowerShell/ nocase ascii wide
+        $string1280 = /execmethod.{0,1000}PowerShell/ nocase ascii wide
         // Description: InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
         // Reference: https://github.com/anthemtotheego/InlineExecute-Assembly
-        $string1283 = /execute_bof\s/ nocase ascii wide
+        $string1281 = /execute_bof\s/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string1284 = /execute\-assembly\s.{0,1000}\.exe\s/ nocase ascii wide
+        $string1282 = /execute\-assembly\s.{0,1000}\.exe\s/ nocase ascii wide
         // Description: Cobalt Strike kit for Persistence
         // Reference: https://github.com/0xthirteen/StayKit
-        $string1285 = /executepersistence/ nocase ascii wide
+        $string1283 = /executepersistence/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1286 = /Export\-PowerViewCSV/ nocase ascii wide
+        $string1284 = /Export\-PowerViewCSV/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1287 = /extract_reflective_loader/ nocase ascii wide
+        $string1285 = /extract_reflective_loader/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1288 = /Fiesta\sExploit\sKit/ nocase ascii wide
+        $string1286 = /Fiesta\sExploit\sKit/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string1289 = /FileControler\/FileControler_x64\.dll/ nocase ascii wide
+        $string1287 = /FileControler\/FileControler_x64\.dll/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string1290 = /FileControler\/FileControler_x86\.dll/ nocase ascii wide
+        $string1288 = /FileControler\/FileControler_x86\.dll/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1291 = /find_payload\(/ nocase ascii wide
+        $string1289 = /find_payload\(/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1292 = /findgpocomputeradmin/ nocase ascii wide
+        $string1290 = /findgpocomputeradmin/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1293 = /Find\-GPOComputerAdmin/ nocase ascii wide
+        $string1291 = /Find\-GPOComputerAdmin/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1294 = /Find\-InterestingDomainAcl/ nocase ascii wide
+        $string1292 = /Find\-InterestingDomainAcl/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1295 = /findinterestingdomainsharefile/ nocase ascii wide
+        $string1293 = /findinterestingdomainsharefile/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1296 = /Find\-InterestingDomainShareFile/ nocase ascii wide
+        $string1294 = /Find\-InterestingDomainShareFile/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1297 = /findlocaladminaccess/ nocase ascii wide
+        $string1295 = /findlocaladminaccess/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1298 = /findlocaladminaccess/ nocase ascii wide
+        $string1296 = /findlocaladminaccess/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1299 = /Find\-LocalAdminAccess/ nocase ascii wide
+        $string1297 = /Find\-LocalAdminAccess/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1300 = /Find\-LocalAdminAccess/ nocase ascii wide
+        $string1298 = /Find\-LocalAdminAccess/ nocase ascii wide
         // Description: A Cobalt Strike Beacon Object File (BOF) project which uses direct system calls to enumerate processes for specific loaded modules or process handles.
         // Reference: https://github.com/outflanknl/FindObjects-BOF
-        $string1301 = /FindModule\s.{0,1000}\.dll/ nocase ascii wide
+        $string1299 = /FindModule\s.{0,1000}\.dll/ nocase ascii wide
         // Description: A Cobalt Strike Beacon Object File (BOF) project which uses direct system calls to enumerate processes for specific loaded modules or process handles.
         // Reference: https://github.com/outflanknl/FindObjects-BOF
-        $string1302 = /FindObjects\-BOF/ nocase ascii wide
+        $string1300 = /FindObjects\-BOF/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1303 = /FindProcessTokenAndDuplicate/ nocase ascii wide
+        $string1301 = /FindProcessTokenAndDuplicate/ nocase ascii wide
         // Description: A Cobalt Strike Beacon Object File (BOF) project which uses direct system calls to enumerate processes for specific loaded modules or process handles.
         // Reference: https://github.com/outflanknl/FindObjects-BOF
-        $string1304 = /FindProcHandle\s.{0,1000}lsass/ nocase ascii wide
+        $string1302 = /FindProcHandle\s.{0,1000}lsass/ nocase ascii wide
         // Description: A BOF to interact with COM objects associated with the Windows software firewall.
         // Reference: https://github.com/EspressoCake/Firewall_Walker_BOF
-        $string1305 = /Firewall_Walker_BOF/ nocase ascii wide
+        $string1303 = /Firewall_Walker_BOF/ nocase ascii wide
         // Description: A cobaltstrike shellcode loader - past domestic mainstream antivirus software
         // Reference: https://github.com/YDHCUI/csload.net
-        $string1306 = /fishing_with_hollowing/ nocase ascii wide
+        $string1304 = /fishing_with_hollowing/ nocase ascii wide
         // Description: LSASS Dumping With Foreign Handles
         // Reference: https://github.com/alfarom256/BOF-ForeignLsass
-        $string1307 = /foreign_access\.cna/ nocase ascii wide
+        $string1305 = /foreign_access\.cna/ nocase ascii wide
         // Description: LSASS Dumping With Foreign Handles
         // Reference: https://github.com/alfarom256/BOF-ForeignLsass
-        $string1308 = /foreign_lsass\s.{0,1000}\s/ nocase ascii wide
+        $string1306 = /foreign_lsass\s.{0,1000}\s/ nocase ascii wide
         // Description: LSASS Dumping With Foreign Handles
         // Reference: https://github.com/alfarom256/BOF-ForeignLsass
-        $string1309 = /foreign_lsass\.c/ nocase ascii wide
+        $string1307 = /foreign_lsass\.c/ nocase ascii wide
         // Description: LSASS Dumping With Foreign Handles
         // Reference: https://github.com/alfarom256/BOF-ForeignLsass
-        $string1310 = /foreign_lsass\.x64/ nocase ascii wide
+        $string1308 = /foreign_lsass\.x64/ nocase ascii wide
         // Description: LSASS Dumping With Foreign Handles
         // Reference: https://github.com/alfarom256/BOF-ForeignLsass
-        $string1311 = /foreign_lsass\.x86/ nocase ascii wide
+        $string1309 = /foreign_lsass\.x86/ nocase ascii wide
         // Description: InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
         // Reference: https://github.com/anthemtotheego/InlineExecute-Assembly
-        $string1312 = /\-\-format\-string\sziiiiizzzb\s.{0,1000}\s/ nocase ascii wide
+        $string1310 = /\-\-format\-string\sziiiiizzzb\s.{0,1000}\s/ nocase ascii wide
         // Description: InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
         // Reference: https://github.com/anthemtotheego/InlineExecute-Assembly
-        $string1313 = /\-\-format\-string\sziiiiizzzib\s/ nocase ascii wide
+        $string1311 = /\-\-format\-string\sziiiiizzzib\s/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1314 = /fortra\/No\-Consolation/ nocase ascii wide
+        $string1312 = /fortra\/No\-Consolation/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1315 = /fucksetuptools/ nocase ascii wide
+        $string1313 = /fucksetuptools/ nocase ascii wide
         // Description: A simple python packer to easily bypass Windows Defender
         // Reference: https://github.com/Unknow101/FuckThatPacker
-        $string1316 = /FuckThatPacker\./ nocase ascii wide
+        $string1314 = /FuckThatPacker\./ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string1317 = /FunnyWolf\/pystinger/ nocase ascii wide
+        $string1315 = /FunnyWolf\/pystinger/ nocase ascii wide
         // Description: A BOF to interact with COM objects associated with the Windows software firewall.
         // Reference: https://github.com/EspressoCake/Firewall_Walker_BOF
-        $string1318 = /fw_walk\sdisable/ nocase ascii wide
+        $string1316 = /fw_walk\sdisable/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string1319 = /G0ldenGunSec\/GetWebDAVStatus/ nocase ascii wide
+        $string1317 = /G0ldenGunSec\/GetWebDAVStatus/ nocase ascii wide
         // Description: LiquidSnake is a tool that allows operators to perform fileless Lateral Movement using WMI Event Subscriptions and GadgetToJScript
         // Reference: https://github.com/RiccardoAncarani/LiquidSnake
-        $string1320 = /GadgetToJScript\.exe\s\-a\s/ nocase ascii wide
+        $string1318 = /GadgetToJScript\.exe\s\-a\s/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string1321 = /Gality369\/CS\-Loader/ nocase ascii wide
+        $string1319 = /Gality369\/CS\-Loader/ nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string1322 = /gather\/keylogger/ nocase ascii wide
+        $string1320 = /gather\/keylogger/ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string1323 = /geacon.{0,1000}\/cmd\// nocase ascii wide
+        $string1321 = /geacon.{0,1000}\/cmd\// nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1324 = /genCrossC2\./ nocase ascii wide
+        $string1322 = /genCrossC2\./ nocase ascii wide
         // Description: beacon generator
         // Reference: https://github.com/eddiezab/aggressor-scripts/tree/master
-        $string1325 = /generate_beacon/ nocase ascii wide
+        $string1323 = /generate_beacon/ nocase ascii wide
         // Description: beacon generator
         // Reference: https://github.com/eddiezab/aggressor-scripts/tree/master
-        $string1326 = /generate\-rotating\-beacon\./ nocase ascii wide
+        $string1324 = /generate\-rotating\-beacon\./ nocase ascii wide
         // Description: Cobalt Strike script for ScareCrow payloads intergration (EDR/AV evasion)
         // Reference: https://github.com/GeorgePatsias/ScareCrow-CobaltStrike
-        $string1327 = /GeorgePatsias\/ScareCrow/ nocase ascii wide
+        $string1325 = /GeorgePatsias\/ScareCrow/ nocase ascii wide
         // Description: This aggressor script uses a beacon's note field to indicate the health status of a beacon.
         // Reference: https://github.com/Cobalt-Strike/beacon_health_check
-        $string1328 = /get_BeaconHealthCheck_settings/ nocase ascii wide
+        $string1326 = /get_BeaconHealthCheck_settings/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1329 = /get_dns_dnsidle/ nocase ascii wide
+        $string1327 = /get_dns_dnsidle/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1330 = /get_dns_sleep/ nocase ascii wide
+        $string1328 = /get_dns_sleep/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string1331 = /get_password_policy\.x64\./ nocase ascii wide
+        $string1329 = /get_password_policy\.x64\./ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string1332 = /get_password_policy\.x86\./ nocase ascii wide
+        $string1330 = /get_password_policy\.x86\./ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1333 = /get_post_ex_pipename_list/ nocase ascii wide
+        $string1331 = /get_post_ex_pipename_list/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1334 = /get_post_ex_spawnto_x/ nocase ascii wide
+        $string1332 = /get_post_ex_spawnto_x/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1335 = /get_process_inject_allocator/ nocase ascii wide
+        $string1333 = /get_process_inject_allocator/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1336 = /get_process_inject_bof_allocator/ nocase ascii wide
+        $string1334 = /get_process_inject_bof_allocator/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1337 = /get_process_inject_execute/ nocase ascii wide
+        $string1335 = /get_process_inject_execute/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1338 = /get_stage_allocator/ nocase ascii wide
+        $string1336 = /get_stage_allocator/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1339 = /get_stage_magic_mz_64/ nocase ascii wide
+        $string1337 = /get_stage_magic_mz_64/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1340 = /get_stage_magic_mz_86/ nocase ascii wide
+        $string1338 = /get_stage_magic_mz_86/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1341 = /get_stage_magic_pe/ nocase ascii wide
+        $string1339 = /get_stage_magic_pe/ nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string1342 = /get_virtual_Hook_address/ nocase ascii wide
+        $string1340 = /get_virtual_Hook_address/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1343 = /getAggressorClient/ nocase ascii wide
+        $string1341 = /getAggressorClient/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string1344 = /Get\-BeaconAPI/ nocase ascii wide
+        $string1342 = /Get\-BeaconAPI/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1345 = /Get\-CachedRDPConnection/ nocase ascii wide
+        $string1343 = /Get\-CachedRDPConnection/ nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string1346 = /getCrossC2Beacon/ nocase ascii wide
+        $string1344 = /getCrossC2Beacon/ nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string1347 = /getCrossC2Site/ nocase ascii wide
+        $string1345 = /getCrossC2Site/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1348 = /getdomainspnticket/ nocase ascii wide
+        $string1346 = /getdomainspnticket/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1349 = /Get\-DomainSPNTicket/ nocase ascii wide
+        $string1347 = /Get\-DomainSPNTicket/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1350 = /getexploitablesystem/ nocase ascii wide
+        $string1348 = /getexploitablesystem/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1351 = /Get\-ExploitableSystem/ nocase ascii wide
+        $string1349 = /Get\-ExploitableSystem/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1352 = /GetHijackableDllName/ nocase ascii wide
+        $string1350 = /GetHijackableDllName/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string1353 = /GetNTLMChallengeBase64/ nocase ascii wide
+        $string1351 = /GetNTLMChallengeBase64/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string1354 = /GetShellcode\(/ nocase ascii wide
+        $string1352 = /GetShellcode\(/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string1355 = /GetWebDAVStatus\.csproj/ nocase ascii wide
+        $string1353 = /GetWebDAVStatus\.csproj/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string1356 = /GetWebDAVStatus\.sln/ nocase ascii wide
+        $string1354 = /GetWebDAVStatus\.sln/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string1357 = /GetWebDAVStatus_DotNet/ nocase ascii wide
+        $string1355 = /GetWebDAVStatus_DotNet/ nocase ascii wide
         // Description: Determine if the WebClient Service (WebDAV) is running on a remote system
         // Reference: https://github.com/G0ldenGunSec/GetWebDAVStatus
-        $string1358 = /GetWebDAVStatus_x64\.o/ nocase ascii wide
+        $string1356 = /GetWebDAVStatus_x64\.o/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1359 = /getwmiregcachedrdpconnection/ nocase ascii wide
+        $string1357 = /getwmiregcachedrdpconnection/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1360 = /Get\-WMIRegCachedRDPConnection/ nocase ascii wide
+        $string1358 = /Get\-WMIRegCachedRDPConnection/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1361 = /getwmireglastloggedon/ nocase ascii wide
+        $string1359 = /getwmireglastloggedon/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1362 = /Get\-WMIRegLastLoggedOn/ nocase ascii wide
+        $string1360 = /Get\-WMIRegLastLoggedOn/ nocase ascii wide
         // Description: A protective and Low Level Shellcode Loader that defeats modern EDR systems.
         // Reference: https://github.com/cribdragg3r/Alaris
-        $string1363 = /gexplorer\.exe/ nocase ascii wide
+        $string1361 = /gexplorer\.exe/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1364 = /GhostPack\/Koh/ nocase ascii wide
+        $string1362 = /GhostPack\/Koh/ nocase ascii wide
         // Description: Cobalt Strike kit for Lateral Movement
         // Reference: https://github.com/0xthirteen/MoveKit
-        $string1365 = /github.{0,1000}\/MoveKit\.git/ nocase ascii wide
+        $string1363 = /github.{0,1000}\/MoveKit\.git/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1366 = /github\.com\/k8gege/ nocase ascii wide
+        $string1364 = /github\.com\/k8gege/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string1367 = /github\.com\/rasta\-mouse\// nocase ascii wide
+        $string1365 = /github\.com\/rasta\-mouse\// nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string1368 = /github\.com\/SpiderLabs\// nocase ascii wide
+        $string1366 = /github\.com\/SpiderLabs\// nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1369 = /gloxec\/CrossC2/ nocase ascii wide
+        $string1367 = /gloxec\/CrossC2/ nocase ascii wide
         // Description: bypassAV cobaltstrike shellcode
         // Reference: https://github.com/jas502n/bypassAV-1
-        $string1370 = /go_shellcode_encode\.py/ nocase ascii wide
+        $string1368 = /go_shellcode_encode\.py/ nocase ascii wide
         // Description: bypassAV cobaltstrike shellcode
         // Reference: https://github.com/jas502n/bypassAV-1
-        $string1371 = /go\-shellcode\.py/ nocase ascii wide
+        $string1369 = /go\-shellcode\.py/ nocase ascii wide
         // Description: generate shellcode
         // Reference: https://github.com/fcre1938/goShellCodeByPassVT
-        $string1372 = /goShellCodeByPassVT/ nocase ascii wide
+        $string1370 = /goShellCodeByPassVT/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string1373 = /hackbrowersdata\.cna/ nocase ascii wide
+        $string1371 = /hackbrowersdata\.cna/ nocase ascii wide
         // Description: C# binary with embeded golang hack-browser-data
         // Reference: https://github.com/S3cur3Th1sSh1t/Sharp-HackBrowserData
-        $string1374 = /hack\-browser\-data\// nocase ascii wide
+        $string1372 = /hack\-browser\-data\// nocase ascii wide
         // Description: A BOF port of the research of @thefLinkk and @codewhitesec
         // Reference: https://github.com//EspressoCake/HandleKatz_BOF
-        $string1375 = /handlekatz\.x64\./ nocase ascii wide
+        $string1373 = /handlekatz\.x64\./ nocase ascii wide
         // Description: A BOF port of the research of @thefLinkk and @codewhitesec
         // Reference: https://github.com//EspressoCake/HandleKatz_BOF
-        $string1376 = /handlekatz_bof\./ nocase ascii wide
+        $string1374 = /handlekatz_bof\./ nocase ascii wide
         // Description: Hou Qing-Advanced AV Evasion Tool For Red Team Ops
         // Reference: https://github.com/Hangingsword/HouQing
-        $string1377 = /Hangingsword\/HouQing/ nocase ascii wide
+        $string1375 = /Hangingsword\/HouQing/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1378 = /hd\-launch\-cmd\s/ nocase ascii wide
+        $string1376 = /hd\-launch\-cmd\s/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1379 = /headers\/exploit\.h/ nocase ascii wide
+        $string1377 = /headers\/exploit\.h/ nocase ascii wide
         // Description: A BOF port of the research of @thefLinkk and @codewhitesec
         // Reference: https://github.com//EspressoCake/HandleKatz_BOF
-        $string1380 = /headers\/HandleKatz\.h/ nocase ascii wide
+        $string1378 = /headers\/HandleKatz\.h/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string1381 = /Henkru\/cs\-token\-vault/ nocase ascii wide
+        $string1379 = /Henkru\/cs\-token\-vault/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1382 = /Hidden\.Desktop\.mp4/ nocase ascii wide
+        $string1380 = /Hidden\.Desktop\.mp4/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1383 = /HiddenDesktop\s.{0,1000}\s/ nocase ascii wide
+        $string1381 = /HiddenDesktop\s.{0,1000}\s/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1384 = /HiddenDesktop\./ nocase ascii wide
+        $string1382 = /HiddenDesktop\./ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1385 = /HiddenDesktop\.x64\.bin/ nocase ascii wide
+        $string1383 = /HiddenDesktop\.x64\.bin/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1386 = /HiddenDesktop\.x86\.bin/ nocase ascii wide
+        $string1384 = /HiddenDesktop\.x86\.bin/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1387 = /HiddenDesktop\.zip/ nocase ascii wide
+        $string1385 = /HiddenDesktop\.zip/ nocase ascii wide
         // Description: DLL Hijack Search Order Enumeration BOF
         // Reference: https://github.com/EspressoCake/DLL-Hijack-Search-Order-BOF
-        $string1388 = /hijack_hunter\s/ nocase ascii wide
+        $string1386 = /hijack_hunter\s/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1389 = /hijack_remote_thread/ nocase ascii wide
+        $string1387 = /hijack_remote_thread/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string1390 = /HiveJack\-Console\.exe/ nocase ascii wide
+        $string1388 = /HiveJack\-Console\.exe/ nocase ascii wide
         // Description: EarlyBird process hollowing technique (BOF) - Spawns a process in a suspended state. inject shellcode. hijack main thread with APC and execute shellcode
         // Reference: https://github.com/boku7/HOLLOW
-        $string1391 = /hollow\s.{0,1000}\.exe\s.{0,1000}\.bin/ nocase ascii wide
+        $string1389 = /hollow\s.{0,1000}\.exe\s.{0,1000}\.bin/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string1392 = /hollower\.Hollow\(/ nocase ascii wide
+        $string1390 = /hollower\.Hollow\(/ nocase ascii wide
         // Description: Hou Qing-Advanced AV Evasion Tool For Red Team Ops
         // Reference: https://github.com/Hangingsword/HouQing
-        $string1393 = /houqingv1\.0\.zip/ nocase ascii wide
+        $string1391 = /houqingv1\.0\.zip/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1394 = /html\/js\/beacons\.js/ nocase ascii wide
+        $string1392 = /html\/js\/beacons\.js/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string1395 = /http.{0,1000}\/zha0gongz1/ nocase ascii wide
+        $string1393 = /http.{0,1000}\/zha0gongz1/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string1396 = /http.{0,1000}\:3200\/manjusaka/ nocase ascii wide
+        $string1394 = /http.{0,1000}\:3200\/manjusaka/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string1397 = /http.{0,1000}\:801\/bq1iFEP2/ nocase ascii wide
+        $string1395 = /http.{0,1000}\:801\/bq1iFEP2/ nocase ascii wide
         // Description: Hou Qing-Advanced AV Evasion Tool For Red Team Ops
         // Reference: https://github.com/Hangingsword/HouQing
-        $string1398 = /http\:\/\/127\.0\.0\.1\:8000\/1\.jpg/ nocase ascii wide
+        $string1396 = /http\:\/\/127\.0\.0\.1\:8000\/1\.jpg/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1399 = /http_stager_client_header/ nocase ascii wide
+        $string1397 = /http_stager_client_header/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1400 = /http_stager_server_append/ nocase ascii wide
+        $string1398 = /http_stager_server_append/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1401 = /http_stager_server_header/ nocase ascii wide
+        $string1399 = /http_stager_server_header/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1402 = /http_stager_server_prepend/ nocase ascii wide
+        $string1400 = /http_stager_server_prepend/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1403 = /http_stager_uri_x64/ nocase ascii wide
+        $string1401 = /http_stager_uri_x64/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1404 = /http_stager_uri_x86/ nocase ascii wide
+        $string1402 = /http_stager_uri_x86/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1405 = /http1\.x64\.bin/ nocase ascii wide
+        $string1403 = /http1\.x64\.bin/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1406 = /http1\.x64\.dll/ nocase ascii wide
+        $string1404 = /http1\.x64\.dll/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1407 = /httpattack\.py/ nocase ascii wide
+        $string1405 = /httpattack\.py/ nocase ascii wide
         // Description: Cobaltstrike payload generator
         // Reference: https://github.com/dr0op/CrossNet-Beta
-        $string1408 = /httppayload\.bin/ nocase ascii wide
+        $string1406 = /httppayload\.bin/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1409 = /http\-redwarden/ nocase ascii wide
+        $string1407 = /http\-redwarden/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1410 = /httprelayclient\.py/ nocase ascii wide
+        $string1408 = /httprelayclient\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1411 = /httprelayserver\.py/ nocase ascii wide
+        $string1409 = /httprelayserver\.py/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1412 = /\'http\-stager\'/ nocase ascii wide
+        $string1410 = /\'http\-stager\'/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1413 = /HVNC\sServer\.exe/ nocase ascii wide
+        $string1411 = /HVNC\sServer\.exe/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string1414 = /HVNC\\\sServer/ nocase ascii wide
+        $string1412 = /HVNC\\\sServer/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string1415 = /IcebreakerSecurity\/DelegationBOF/ nocase ascii wide
+        $string1413 = /IcebreakerSecurity\/DelegationBOF/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1416 = /IcebreakerSecurity\/PersistBOF/ nocase ascii wide
+        $string1414 = /IcebreakerSecurity\/PersistBOF/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1417 = /imapattack\.py/ nocase ascii wide
+        $string1415 = /imapattack\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1418 = /imaprelayclient\.py/ nocase ascii wide
+        $string1416 = /imaprelayclient\.py/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1419 = /impacket\./ nocase ascii wide
+        $string1417 = /impacket\./ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1420 = /ImpersonateLocalService/ nocase ascii wide
+        $string1418 = /ImpersonateLocalService/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files (BOFs) written in rust with rust core and alloc.
         // Reference: https://github.com/wumb0/rust_bof
-        $string1421 = /import\spe\.OBJExecutable/ nocase ascii wide
+        $string1419 = /import\spe\.OBJExecutable/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1422 = /include\sbeacon\.h/ nocase ascii wide
+        $string1420 = /include\sbeacon\.h/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1423 = /include\sinjection\.c/ nocase ascii wide
+        $string1421 = /include\sinjection\.c/ nocase ascii wide
         // Description: Cobalt Strike BOF - Bypass AMSI in a remote process with code injection.
         // Reference: https://github.com/boku7/injectAmsiBypass
-        $string1424 = /inject\-amsiBypass\s/ nocase ascii wide
+        $string1422 = /inject\-amsiBypass\s/ nocase ascii wide
         // Description: Cobalt Strike BOF - Bypass AMSI in a remote process with code injection.
         // Reference: https://github.com/boku7/injectAmsiBypass
-        $string1425 = /inject\-amsiBypass\./ nocase ascii wide
+        $string1423 = /inject\-amsiBypass\./ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string1426 = /inject\-assembly\s/ nocase ascii wide
+        $string1424 = /inject\-assembly\s/ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string1427 = /inject\-assembly\.cna/ nocase ascii wide
+        $string1425 = /inject\-assembly\.cna/ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string1428 = /injectassembly\.x64\.bin/ nocase ascii wide
+        $string1426 = /injectassembly\.x64\.bin/ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string1429 = /injectassembly\.x64\.o/ nocase ascii wide
+        $string1427 = /injectassembly\.x64\.o/ nocase ascii wide
         // Description: CobaltStrike BOF - Inject ETW Bypass into Remote Process via Syscalls (HellsGate|HalosGate)
         // Reference: https://github.com/boku7/injectEtwBypass
-        $string1430 = /injectEtwBypass/ nocase ascii wide
+        $string1428 = /injectEtwBypass/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string1431 = /InjectShellcode/ nocase ascii wide
+        $string1429 = /InjectShellcode/ nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string1432 = /inline\-execute\s/ nocase ascii wide
+        $string1430 = /inline\-execute\s/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses handwritten shellcode to return the process Environment strings without touching any DLL's.
         // Reference: https://github.com/boku7/whereami
-        $string1433 = /inline\-execute.{0,1000}whereami\.x64/ nocase ascii wide
+        $string1431 = /inline\-execute.{0,1000}whereami\.x64/ nocase ascii wide
         // Description: InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
         // Reference: https://github.com/anthemtotheego/InlineExecute-Assembly
-        $string1434 = /InlineExecute\-Assembly/ nocase ascii wide
+        $string1432 = /InlineExecute\-Assembly/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string1435 = /InlineWhispers\.py/ nocase ascii wide
+        $string1433 = /InlineWhispers\.py/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string1436 = /InlineWhispers2/ nocase ascii wide
+        $string1434 = /InlineWhispers2/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1437 = /install\simpacket/ nocase ascii wide
+        $string1435 = /install\simpacket/ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string1438 = /InvokeBloodHound/ nocase ascii wide
+        $string1436 = /InvokeBloodHound/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string1439 = /Invoke\-Bof\s/ nocase ascii wide
+        $string1437 = /Invoke\-Bof\s/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string1440 = /Invoke\-Bof\.ps1/ nocase ascii wide
+        $string1438 = /Invoke\-Bof\.ps1/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1441 = /invokechecklocaladminaccess/ nocase ascii wide
+        $string1439 = /invokechecklocaladminaccess/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1442 = /Invoke\-CheckLocalAdminAccess/ nocase ascii wide
+        $string1440 = /Invoke\-CheckLocalAdminAccess/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1443 = /invokeenumeratelocaladmin/ nocase ascii wide
+        $string1441 = /invokeenumeratelocaladmin/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1444 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
+        $string1442 = /Invoke\-EnumerateLocalAdmin/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1445 = /Invoke\-EnvBypass\./ nocase ascii wide
+        $string1443 = /Invoke\-EnvBypass\./ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1446 = /Invoke\-EventVwrBypass/ nocase ascii wide
+        $string1444 = /Invoke\-EventVwrBypass/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1447 = /invokefilefinder/ nocase ascii wide
+        $string1445 = /invokefilefinder/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1448 = /Invoke\-FileFinder/ nocase ascii wide
+        $string1446 = /Invoke\-FileFinder/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script function and alias to perform some rudimentary Windows host enumeration with Beacon built-in commands
         // Reference: https://github.com/threatexpress/red-team-scripts
-        $string1449 = /Invoke\-HostEnum\s\-/ nocase ascii wide
+        $string1447 = /Invoke\-HostEnum\s\-/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1450 = /invokekerberoast/ nocase ascii wide
+        $string1448 = /invokekerberoast/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1451 = /Invoke\-Kerberoast/ nocase ascii wide
+        $string1449 = /Invoke\-Kerberoast/ nocase ascii wide
         // Description: powershell function used with cobaltstrike to kill parent process
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1452 = /Invoke\-ParentalKilling/ nocase ascii wide
+        $string1450 = /Invoke\-ParentalKilling/ nocase ascii wide
         // Description: Aggressor script to integrate Phant0m with Cobalt Strike
         // Reference: https://github.com/p292/Phant0m_cobaltstrike
-        $string1453 = /Invoke\-Phant0m/ nocase ascii wide
+        $string1451 = /Invoke\-Phant0m/ nocase ascii wide
         // Description: Aggressor script to integrate Phant0m with Cobalt Strike
         // Reference: https://github.com/p292/Phant0m_cobaltstrike
-        $string1454 = /Invoke\-Phant0m\.ps1/ nocase ascii wide
+        $string1452 = /Invoke\-Phant0m\.ps1/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1455 = /invokeprocesshunter/ nocase ascii wide
+        $string1453 = /invokeprocesshunter/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1456 = /Invoke\-ProcessHunter/ nocase ascii wide
+        $string1454 = /Invoke\-ProcessHunter/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1457 = /invokereverttoself/ nocase ascii wide
+        $string1455 = /invokereverttoself/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1458 = /Invoke\-RevertToSelf/ nocase ascii wide
+        $string1456 = /Invoke\-RevertToSelf/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1459 = /invokesharefinder/ nocase ascii wide
+        $string1457 = /invokesharefinder/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1460 = /Invoke\-ShareFinder/ nocase ascii wide
+        $string1458 = /Invoke\-ShareFinder/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1461 = /invokestealthuserhunter/ nocase ascii wide
+        $string1459 = /invokestealthuserhunter/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1462 = /Invoke\-StealthUserHunter/ nocase ascii wide
+        $string1460 = /Invoke\-StealthUserHunter/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1463 = /invokeuserhunter/ nocase ascii wide
+        $string1461 = /invokeuserhunter/ nocase ascii wide
         // Description: PowerView menu for Cobalt Strike
         // Reference: https://github.com/tevora-threat/aggressor-powerview
-        $string1464 = /Invoke\-UserHunter/ nocase ascii wide
+        $string1462 = /Invoke\-UserHunter/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1465 = /Invoke\-WScriptBypassUAC/ nocase ascii wide
+        $string1463 = /Invoke\-WScriptBypassUAC/ nocase ascii wide
         // Description: bypassAV cobaltstrike shellcode
         // Reference: https://github.com/jas502n/bypassAV-1
-        $string1466 = /jas502n\/bypassAV/ nocase ascii wide
+        $string1464 = /jas502n\/bypassAV/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string1467 = /java\s\-jar\sBeaconTool\.jar/ nocase ascii wide
+        $string1465 = /java\s\-jar\sBeaconTool\.jar/ nocase ascii wide
         // Description: Practice Go programming and implement CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string1468 = /java\s\-jar\sBeaconTool\.jar/ nocase ascii wide
+        $string1466 = /java\s\-jar\sBeaconTool\.jar/ nocase ascii wide
         // Description: A .NET Runtime for Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/CCob/BOF.NET
-        $string1469 = /Job\skilled\sand\sconsole\sdrained/ nocase ascii wide
+        $string1467 = /Job\skilled\sand\sconsole\sdrained/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string1470 = /jquery\-c2\..{0,1000}\.profile/ nocase ascii wide
+        $string1468 = /jquery\-c2\..{0,1000}\.profile/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1471 = /jump\spsexec_psh/ nocase ascii wide
+        $string1469 = /jump\spsexec_psh/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1472 = /jump\spsexec64/ nocase ascii wide
+        $string1470 = /jump\spsexec64/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1473 = /jump\swinrm\s/ nocase ascii wide
+        $string1471 = /jump\swinrm\s/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1474 = /jump\swinrm/ nocase ascii wide
+        $string1472 = /jump\swinrm/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1475 = /jump\-exec\sscshell/ nocase ascii wide
+        $string1473 = /jump\-exec\sscshell/ nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string1476 = /K8_CS_.{0,1000}\.rar/ nocase ascii wide
+        $string1474 = /K8_CS_.{0,1000}\.rar/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1477 = /k8gege\.org\// nocase ascii wide
+        $string1475 = /k8gege\.org\// nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1478 = /k8gege\/Ladon/ nocase ascii wide
+        $string1476 = /k8gege\/Ladon/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1479 = /K8Ladon\.sln/ nocase ascii wide
+        $string1477 = /K8Ladon\.sln/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1480 = /KaliLadon\./ nocase ascii wide
+        $string1478 = /KaliLadon\./ nocase ascii wide
         // Description: Achieve execution using a custom keyboard layout
         // Reference: https://github.com/NtQuerySystemInformation/CustomKeyboardLayoutPersistence
-        $string1481 = /KBDPAYLOAD\.dll/ nocase ascii wide
+        $string1479 = /KBDPAYLOAD\.dll/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1482 = /kdstab\s.{0,1000}\s\/CHECK/ nocase ascii wide
+        $string1480 = /kdstab\s.{0,1000}\s\/CHECK/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1483 = /kdstab\s.{0,1000}\s\/CLOSE/ nocase ascii wide
+        $string1481 = /kdstab\s.{0,1000}\s\/CLOSE/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1484 = /kdstab\s.{0,1000}\s\/DRIVER/ nocase ascii wide
+        $string1482 = /kdstab\s.{0,1000}\s\/DRIVER/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1485 = /kdstab\s.{0,1000}\s\/KILL/ nocase ascii wide
+        $string1483 = /kdstab\s.{0,1000}\s\/KILL/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1486 = /kdstab\s.{0,1000}\s\/LIST/ nocase ascii wide
+        $string1484 = /kdstab\s.{0,1000}\s\/LIST/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1487 = /kdstab\s.{0,1000}\s\/NAME/ nocase ascii wide
+        $string1485 = /kdstab\s.{0,1000}\s\/NAME/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1488 = /kdstab\s.{0,1000}\s\/PID/ nocase ascii wide
+        $string1486 = /kdstab\s.{0,1000}\s\/PID/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1489 = /kdstab\s.{0,1000}\s\/SERVICE/ nocase ascii wide
+        $string1487 = /kdstab\s.{0,1000}\s\/SERVICE/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1490 = /kdstab\s.{0,1000}\s\/STRIP/ nocase ascii wide
+        $string1488 = /kdstab\s.{0,1000}\s\/STRIP/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1491 = /kdstab\s.{0,1000}\s\/UNLOAD/ nocase ascii wide
+        $string1489 = /kdstab\s.{0,1000}\s\/UNLOAD/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1492 = /kdstab\.cna/ nocase ascii wide
+        $string1490 = /kdstab\.cna/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1493 = /kerberoasting\.x64/ nocase ascii wide
+        $string1491 = /kerberoasting\.x64/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1494 = /Kerberos\sabuse\s\(kerbeus\sBOF\)/ nocase ascii wide
+        $string1492 = /Kerberos\sabuse\s\(kerbeus\sBOF\)/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string1495 = /kerberos.{0,1000}\.kirbi/ nocase ascii wide
+        $string1493 = /kerberos.{0,1000}\.kirbi/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1496 = /Kerbeus\s.{0,1000}\sby\sRalfHacker/ nocase ascii wide
+        $string1494 = /Kerbeus\s.{0,1000}\sby\sRalfHacker/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1497 = /kerbeus_cs\.cna/ nocase ascii wide
+        $string1495 = /kerbeus_cs\.cna/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1498 = /kerbeus_havoc\.py/ nocase ascii wide
+        $string1496 = /kerbeus_havoc\.py/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1499 = /Kerbeus\-BOF\-main/ nocase ascii wide
+        $string1497 = /Kerbeus\-BOF\-main/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1500 = /kernelcallbacktable\.x64/ nocase ascii wide
+        $string1498 = /kernelcallbacktable\.x64/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1501 = /kernelcallbacktable\.x64/ nocase ascii wide
+        $string1499 = /kernelcallbacktable\.x64/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1502 = /kernelcallbacktable\.x86/ nocase ascii wide
+        $string1500 = /kernelcallbacktable\.x86/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1503 = /kernelcallbacktable\.x86/ nocase ascii wide
+        $string1501 = /kernelcallbacktable\.x86/ nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string1504 = /KernelMii\.cna/ nocase ascii wide
+        $string1502 = /KernelMii\.cna/ nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string1505 = /KernelMii\.x64\.exe/ nocase ascii wide
+        $string1503 = /KernelMii\.x64\.exe/ nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string1506 = /KernelMii\.x64\.o/ nocase ascii wide
+        $string1504 = /KernelMii\.x64\.o/ nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string1507 = /KernelMii\.x86\.exe/ nocase ascii wide
+        $string1505 = /KernelMii\.x86\.exe/ nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string1508 = /KernelMii\.x86\.o/ nocase ascii wide
+        $string1506 = /KernelMii\.x86\.o/ nocase ascii wide
         // Description: Beacon Object File implementation of pwn1sher's KillDefender
         // Reference: https://github.com/Octoberfest7/KillDefender_BOF
-        $string1509 = /killdefender\scheck/ nocase ascii wide
+        $string1507 = /killdefender\scheck/ nocase ascii wide
         // Description: Beacon Object File implementation of pwn1sher's KillDefender
         // Reference: https://github.com/Octoberfest7/KillDefender_BOF
-        $string1510 = /killdefender\skill/ nocase ascii wide
+        $string1508 = /killdefender\skill/ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1511 = /KillDefender\.x64/ nocase ascii wide
+        $string1509 = /KillDefender\.x64/ nocase ascii wide
         // Description: Beacon Object File implementation of pwn1sher's KillDefender
         // Reference: https://github.com/Octoberfest7/KillDefender_BOF
-        $string1512 = /KillDefender\.x64\./ nocase ascii wide
+        $string1510 = /KillDefender\.x64\./ nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1513 = /killdefender_bof/ nocase ascii wide
+        $string1511 = /killdefender_bof/ nocase ascii wide
         // Description: Beacon Object File implementation of pwn1sher's KillDefender
         // Reference: https://github.com/Octoberfest7/KillDefender_BOF
-        $string1514 = /KillDefender_BOF/ nocase ascii wide
+        $string1512 = /KillDefender_BOF/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1515 = /kirbi\.tickets/ nocase ascii wide
+        $string1513 = /kirbi\.tickets/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1516 = /koh\sfilter\sadd\sSID/ nocase ascii wide
+        $string1514 = /koh\sfilter\sadd\sSID/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1517 = /koh\sfilter\slist/ nocase ascii wide
+        $string1515 = /koh\sfilter\slist/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1518 = /koh\sfilter\sremove\sSID/ nocase ascii wide
+        $string1516 = /koh\sfilter\sremove\sSID/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1519 = /koh\sfilter\sreset/ nocase ascii wide
+        $string1517 = /koh\sfilter\sreset/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1520 = /koh\sgroups\sLUID/ nocase ascii wide
+        $string1518 = /koh\sgroups\sLUID/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1521 = /koh\simpersonate\sLUID/ nocase ascii wide
+        $string1519 = /koh\simpersonate\sLUID/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1522 = /koh\srelease\sall/ nocase ascii wide
+        $string1520 = /koh\srelease\sall/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1523 = /koh\srelease\sLUID/ nocase ascii wide
+        $string1521 = /koh\srelease\sLUID/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1524 = /Koh\.exe\scapture/ nocase ascii wide
+        $string1522 = /Koh\.exe\scapture/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1525 = /Koh\.exe\slist/ nocase ascii wide
+        $string1523 = /Koh\.exe\slist/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string1526 = /Koh\.exe\smonitor/ nocase ascii wide
+        $string1524 = /Koh\.exe\smonitor/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1527 = /krb_asktgs\s\// nocase ascii wide
+        $string1525 = /krb_asktgs\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1528 = /krb_asktgt\s\// nocase ascii wide
+        $string1526 = /krb_asktgt\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1529 = /krb_asreproasting/ nocase ascii wide
+        $string1527 = /krb_asreproasting/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1530 = /krb_changepw\s\// nocase ascii wide
+        $string1528 = /krb_changepw\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1531 = /krb_cross_s4u\s\// nocase ascii wide
+        $string1529 = /krb_cross_s4u\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1532 = /krb_describe\s\// nocase ascii wide
+        $string1530 = /krb_describe\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1533 = /krb_dump\s\// nocase ascii wide
+        $string1531 = /krb_dump\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1534 = /krb_hash\s\/password/ nocase ascii wide
+        $string1532 = /krb_hash\s\/password/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1535 = /krb_klist\s\// nocase ascii wide
+        $string1533 = /krb_klist\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1536 = /krb_ptt\s\/ticket\:/ nocase ascii wide
+        $string1534 = /krb_ptt\s\/ticket\:/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1537 = /krb_purge\s\// nocase ascii wide
+        $string1535 = /krb_purge\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1538 = /krb_renew\s\/ticket\:/ nocase ascii wide
+        $string1536 = /krb_renew\s\/ticket\:/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1539 = /krb_s4u\s\// nocase ascii wide
+        $string1537 = /krb_s4u\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1540 = /krb_tgtdeleg\s\// nocase ascii wide
+        $string1538 = /krb_tgtdeleg\s\// nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1541 = /krb_tgtdeleg\(.{0,1000}\)/ nocase ascii wide
+        $string1539 = /krb_tgtdeleg\(.{0,1000}\)/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1542 = /krb_triage\s\// nocase ascii wide
+        $string1540 = /krb_triage\s\// nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1543 = /krb5\/kerberosv5\.py/ nocase ascii wide
+        $string1541 = /krb5\/kerberosv5\.py/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1544 = /krbasktgt\s\// nocase ascii wide
+        $string1542 = /krbasktgt\s\// nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1545 = /krbcredccache\.py/ nocase ascii wide
+        $string1543 = /krbcredccache\.py/ nocase ascii wide
         // Description: Cobalt Strike UDRL for memory scanner evasion.
         // Reference: https://github.com/kyleavery/AceLdr
-        $string1546 = /kyleavery\/AceLdr/ nocase ascii wide
+        $string1544 = /kyleavery\/AceLdr/ nocase ascii wide
         // Description: Inject .NET assemblies into an existing process
         // Reference: https://github.com/kyleavery/inject-assembly
-        $string1547 = /kyleavery\/inject\-assembly/ nocase ascii wide
+        $string1545 = /kyleavery\/inject\-assembly/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1548 = /Ladon\s.{0,1000}\sAllScan/ nocase ascii wide
+        $string1546 = /Ladon\s.{0,1000}\sAllScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1549 = /Ladon\s.{0,1000}\sCiscoScan/ nocase ascii wide
+        $string1547 = /Ladon\s.{0,1000}\sCiscoScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1550 = /Ladon\s.{0,1000}\sOnlineIP/ nocase ascii wide
+        $string1548 = /Ladon\s.{0,1000}\sOnlineIP/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1551 = /Ladon\s.{0,1000}\sOnlinePC/ nocase ascii wide
+        $string1549 = /Ladon\s.{0,1000}\sOnlinePC/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1552 = /Ladon\s.{0,1000}\sOsScan/ nocase ascii wide
+        $string1550 = /Ladon\s.{0,1000}\sOsScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1553 = /Ladon\s.{0,1000}\sOxidScan/ nocase ascii wide
+        $string1551 = /Ladon\s.{0,1000}\sOxidScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1554 = /Ladon\s.{0,1000}\.txt\s/ nocase ascii wide
+        $string1552 = /Ladon\s.{0,1000}\.txt\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1555 = /Ladon\s.{0,1000}DeBase64/ nocase ascii wide
+        $string1553 = /Ladon\s.{0,1000}DeBase64/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1556 = /Ladon\s.{0,1000}FtpScan/ nocase ascii wide
+        $string1554 = /Ladon\s.{0,1000}FtpScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1557 = /Ladon\s.{0,1000}LdapScan/ nocase ascii wide
+        $string1555 = /Ladon\s.{0,1000}LdapScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1558 = /Ladon\s.{0,1000}SMBGhost/ nocase ascii wide
+        $string1556 = /Ladon\s.{0,1000}SMBGhost/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1559 = /Ladon\s.{0,1000}SmbHashScan/ nocase ascii wide
+        $string1557 = /Ladon\s.{0,1000}SmbHashScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1560 = /Ladon\s.{0,1000}SmbScan/ nocase ascii wide
+        $string1558 = /Ladon\s.{0,1000}SmbScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1561 = /Ladon\s.{0,1000}SshScan/ nocase ascii wide
+        $string1559 = /Ladon\s.{0,1000}SshScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1562 = /Ladon\s.{0,1000}TomcatScan/ nocase ascii wide
+        $string1560 = /Ladon\s.{0,1000}TomcatScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1563 = /Ladon\s.{0,1000}VncScan/ nocase ascii wide
+        $string1561 = /Ladon\s.{0,1000}VncScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1564 = /Ladon\s.{0,1000}WebScan/ nocase ascii wide
+        $string1562 = /Ladon\s.{0,1000}WebScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1565 = /Ladon\s.{0,1000}WinrmScan/ nocase ascii wide
+        $string1563 = /Ladon\s.{0,1000}WinrmScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1566 = /Ladon\s.{0,1000}WmiHashScan/ nocase ascii wide
+        $string1564 = /Ladon\s.{0,1000}WmiHashScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1567 = /Ladon\s.{0,1000}WmiScan/ nocase ascii wide
+        $string1565 = /Ladon\s.{0,1000}WmiScan/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1568 = /Ladon\sActiveAdmin/ nocase ascii wide
+        $string1566 = /Ladon\sActiveAdmin/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1569 = /Ladon\sActiveGuest/ nocase ascii wide
+        $string1567 = /Ladon\sActiveGuest/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1570 = /Ladon\sAdiDnsDump\s/ nocase ascii wide
+        $string1568 = /Ladon\sAdiDnsDump\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1571 = /Ladon\sat\sc\:/ nocase ascii wide
+        $string1569 = /Ladon\sat\sc\:/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1572 = /Ladon\sAtExec/ nocase ascii wide
+        $string1570 = /Ladon\sAtExec/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1573 = /Ladon\sAutoRun/ nocase ascii wide
+        $string1571 = /Ladon\sAutoRun/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1574 = /Ladon\sBadPotato/ nocase ascii wide
+        $string1572 = /Ladon\sBadPotato/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1575 = /Ladon\sBypassUAC/ nocase ascii wide
+        $string1573 = /Ladon\sBypassUAC/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1576 = /Ladon\sCheckDoor/ nocase ascii wide
+        $string1574 = /Ladon\sCheckDoor/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1577 = /Ladon\sClslog/ nocase ascii wide
+        $string1575 = /Ladon\sClslog/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1578 = /Ladon\sCmdDll\s/ nocase ascii wide
+        $string1576 = /Ladon\sCmdDll\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1579 = /Ladon\scmdline/ nocase ascii wide
+        $string1577 = /Ladon\scmdline/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1580 = /Ladon\sCVE\-/ nocase ascii wide
+        $string1578 = /Ladon\sCVE\-/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1581 = /Ladon\sDirList/ nocase ascii wide
+        $string1579 = /Ladon\sDirList/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1582 = /Ladon\sDraytekExp/ nocase ascii wide
+        $string1580 = /Ladon\sDraytekExp/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1583 = /Ladon\sDumpLsass/ nocase ascii wide
+        $string1581 = /Ladon\sDumpLsass/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1584 = /Ladon\sEnableDotNet/ nocase ascii wide
+        $string1582 = /Ladon\sEnableDotNet/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1585 = /Ladon\sEnumProcess/ nocase ascii wide
+        $string1583 = /Ladon\sEnumProcess/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1586 = /Ladon\sEnumShare/ nocase ascii wide
+        $string1584 = /Ladon\sEnumShare/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1587 = /Ladon\sExploit/ nocase ascii wide
+        $string1585 = /Ladon\sExploit/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1588 = /Ladon\sFindIP\s/ nocase ascii wide
+        $string1586 = /Ladon\sFindIP\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1589 = /Ladon\sFirefoxCookie/ nocase ascii wide
+        $string1587 = /Ladon\sFirefoxCookie/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1590 = /Ladon\sFirefoxHistory/ nocase ascii wide
+        $string1588 = /Ladon\sFirefoxHistory/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1591 = /Ladon\sFirefoxPwd/ nocase ascii wide
+        $string1589 = /Ladon\sFirefoxPwd/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1592 = /Ladon\sForExec\s/ nocase ascii wide
+        $string1590 = /Ladon\sForExec\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1593 = /Ladon\sFtpDownLoad\s/ nocase ascii wide
+        $string1591 = /Ladon\sFtpDownLoad\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1594 = /Ladon\sFtpServer\s/ nocase ascii wide
+        $string1592 = /Ladon\sFtpServer\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1595 = /Ladon\sGetDomainIP/ nocase ascii wide
+        $string1593 = /Ladon\sGetDomainIP/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1596 = /Ladon\sgethtml\s/ nocase ascii wide
+        $string1594 = /Ladon\sgethtml\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1597 = /Ladon\sGetPipe/ nocase ascii wide
+        $string1595 = /Ladon\sGetPipe/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1598 = /Ladon\sGetSystem/ nocase ascii wide
+        $string1596 = /Ladon\sGetSystem/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1599 = /Ladon\sIISdoor/ nocase ascii wide
+        $string1597 = /Ladon\sIISdoor/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1600 = /Ladon\sIISpwd/ nocase ascii wide
+        $string1598 = /Ladon\sIISpwd/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1601 = /Ladon\sMssqlCmd\s/ nocase ascii wide
+        $string1599 = /Ladon\sMssqlCmd\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1602 = /Ladon\snetsh\s/ nocase ascii wide
+        $string1600 = /Ladon\snetsh\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1603 = /Ladon\snoping\s/ nocase ascii wide
+        $string1601 = /Ladon\snoping\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1604 = /Ladon\sOpen3389/ nocase ascii wide
+        $string1602 = /Ladon\sOpen3389/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1605 = /Ladon\sPowerCat\s/ nocase ascii wide
+        $string1603 = /Ladon\sPowerCat\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1606 = /Ladon\sPrintNightmare/ nocase ascii wide
+        $string1604 = /Ladon\sPrintNightmare/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1607 = /Ladon\spsexec/ nocase ascii wide
+        $string1605 = /Ladon\spsexec/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1608 = /Ladon\sQueryAdmin/ nocase ascii wide
+        $string1606 = /Ladon\sQueryAdmin/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1609 = /Ladon\sRdpHijack/ nocase ascii wide
+        $string1607 = /Ladon\sRdpHijack/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1610 = /Ladon\sReadFile\s/ nocase ascii wide
+        $string1608 = /Ladon\sReadFile\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1611 = /Ladon\sRegAuto/ nocase ascii wide
+        $string1609 = /Ladon\sRegAuto/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1612 = /Ladon\sReverseHttps/ nocase ascii wide
+        $string1610 = /Ladon\sReverseHttps/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1613 = /Ladon\sReverseTcp\s/ nocase ascii wide
+        $string1611 = /Ladon\sReverseTcp\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1614 = /Ladon\sRevShell\-/ nocase ascii wide
+        $string1612 = /Ladon\sRevShell\-/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1615 = /Ladon\sRunas/ nocase ascii wide
+        $string1613 = /Ladon\sRunas/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1616 = /Ladon\sRunPS\s/ nocase ascii wide
+        $string1614 = /Ladon\sRunPS\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1617 = /Ladon\ssc\s/ nocase ascii wide
+        $string1615 = /Ladon\ssc\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1618 = /Ladon\sSetSignAuth/ nocase ascii wide
+        $string1616 = /Ladon\sSetSignAuth/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1619 = /Ladon\sSmbExec\s/ nocase ascii wide
+        $string1617 = /Ladon\sSmbExec\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1620 = /Ladon\sSniffer/ nocase ascii wide
+        $string1618 = /Ladon\sSniffer/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1621 = /Ladon\sSshExec\s/ nocase ascii wide
+        $string1619 = /Ladon\sSshExec\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1622 = /Ladon\sSweetPotato/ nocase ascii wide
+        $string1620 = /Ladon\sSweetPotato/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1623 = /Ladon\sTcpServer\s/ nocase ascii wide
+        $string1621 = /Ladon\sTcpServer\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1624 = /Ladon\sUdpServer/ nocase ascii wide
+        $string1622 = /Ladon\sUdpServer/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1625 = /Ladon\sWebShell/ nocase ascii wide
+        $string1623 = /Ladon\sWebShell/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1626 = /Ladon\swhoami/ nocase ascii wide
+        $string1624 = /Ladon\swhoami/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1627 = /Ladon\sWifiPwd/ nocase ascii wide
+        $string1625 = /Ladon\sWifiPwd/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1628 = /Ladon\swmiexec/ nocase ascii wide
+        $string1626 = /Ladon\swmiexec/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1629 = /Ladon\sWmiExec2\s/ nocase ascii wide
+        $string1627 = /Ladon\sWmiExec2\s/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1630 = /Ladon\sXshellPwd/ nocase ascii wide
+        $string1628 = /Ladon\sXshellPwd/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1631 = /Ladon\sZeroLogon/ nocase ascii wide
+        $string1629 = /Ladon\sZeroLogon/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1632 = /Ladon40\sBypassUAC/ nocase ascii wide
+        $string1630 = /Ladon40\sBypassUAC/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1633 = /Ladon911.{0,1000}\.ps1/ nocase ascii wide
+        $string1631 = /Ladon911.{0,1000}\.ps1/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1634 = /Ladon911\.exe/ nocase ascii wide
+        $string1632 = /Ladon911\.exe/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1635 = /Ladon911_.{0,1000}\.rar/ nocase ascii wide
+        $string1633 = /Ladon911_.{0,1000}\.rar/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1636 = /LadonExp\.exe/ nocase ascii wide
+        $string1634 = /LadonExp\.exe/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1637 = /LadonGUI\.exe/ nocase ascii wide
+        $string1635 = /LadonGUI\.exe/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1638 = /LadonLib\.rar/ nocase ascii wide
+        $string1636 = /LadonLib\.rar/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string1639 = /LadonStudy\.exe/ nocase ascii wide
+        $string1637 = /LadonStudy\.exe/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1640 = /lastpass\.x86/ nocase ascii wide
+        $string1638 = /lastpass\.x86/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1641 = /lastpass\/process_lp_files\.py/ nocase ascii wide
+        $string1639 = /lastpass\/process_lp_files\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1642 = /ldap_shell\.py/ nocase ascii wide
+        $string1640 = /ldap_shell\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1643 = /ldapattack\.py/ nocase ascii wide
+        $string1641 = /ldapattack\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1644 = /ldaprelayclient\.py/ nocase ascii wide
+        $string1642 = /ldaprelayclient\.py/ nocase ascii wide
         // Description: Beacon Object File & C# project to check LDAP signing
         // Reference: https://github.com/cube0x0/LdapSignCheck
-        $string1645 = /LdapSignCheck\.exe/ nocase ascii wide
+        $string1643 = /LdapSignCheck\.exe/ nocase ascii wide
         // Description: Beacon Object File & C# project to check LDAP signing
         // Reference: https://github.com/cube0x0/LdapSignCheck
-        $string1646 = /LdapSignCheck\.Natives/ nocase ascii wide
+        $string1644 = /LdapSignCheck\.Natives/ nocase ascii wide
         // Description: Beacon Object File & C# project to check LDAP signing
         // Reference: https://github.com/cube0x0/LdapSignCheck
-        $string1647 = /LdapSignCheck\.sln/ nocase ascii wide
+        $string1645 = /LdapSignCheck\.sln/ nocase ascii wide
         // Description: Beacon Object File & C# project to check LDAP signing
         // Reference: https://github.com/cube0x0/LdapSignCheck
-        $string1648 = /ldapsigncheck\.x64\./ nocase ascii wide
+        $string1646 = /ldapsigncheck\.x64\./ nocase ascii wide
         // Description: Beacon Object File & C# project to check LDAP signing
         // Reference: https://github.com/cube0x0/LdapSignCheck
-        $string1649 = /ldapsigncheck\.x86\./ nocase ascii wide
+        $string1647 = /ldapsigncheck\.x86\./ nocase ascii wide
         // Description: Project to enumerate proxy configurations and generate shellcode from CobaltStrike
         // Reference: https://github.com/EncodeGroup/AggressiveProxy
-        $string1650 = /LetMeOutSharp\./ nocase ascii wide
+        $string1648 = /LetMeOutSharp\./ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files (BOFs) written in rust with rust core and alloc.
         // Reference: https://github.com/wumb0/rust_bof
-        $string1651 = /libs\/bofalloc/ nocase ascii wide
+        $string1649 = /libs\/bofalloc/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files (BOFs) written in rust with rust core and alloc.
         // Reference: https://github.com/wumb0/rust_bof
-        $string1652 = /libs\/bofentry/ nocase ascii wide
+        $string1650 = /libs\/bofentry/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files (BOFs) written in rust with rust core and alloc.
         // Reference: https://github.com/wumb0/rust_bof
-        $string1653 = /libs\/bofhelper/ nocase ascii wide
+        $string1651 = /libs\/bofhelper/ nocase ascii wide
         // Description: LiquidSnake is a tool that allows operators to perform fileless Lateral Movement using WMI Event Subscriptions and GadgetToJScript
         // Reference: https://github.com/RiccardoAncarani/LiquidSnake
-        $string1654 = /LiquidSnake\.exe/ nocase ascii wide
+        $string1652 = /LiquidSnake\.exe/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1655 = /llsrpc_\#\#/ nocase ascii wide
+        $string1653 = /llsrpc_\#\#/ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/MemReader_BoF
-        $string1656 = /load\saggressor\sscript/ nocase ascii wide
+        $string1654 = /load\saggressor\sscript/ nocase ascii wide
         // Description: POC tool to convert CobaltStrike BOF files to raw shellcode
         // Reference: https://github.com/FalconForceTeam/BOF2shellcode
-        $string1657 = /load_sc\.exe\s.{0,1000}\.bin/ nocase ascii wide
+        $string1655 = /load_sc\.exe\s.{0,1000}\.bin/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string1658 = /Load\-BeaconParameters/ nocase ascii wide
+        $string1656 = /Load\-BeaconParameters/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string1659 = /Load\-Bof\(/ nocase ascii wide
+        $string1657 = /Load\-Bof\(/ nocase ascii wide
         // Description: A protective and Low Level Shellcode Loader that defeats modern EDR systems.
         // Reference: https://github.com/cribdragg3r/Alaris
-        $string1660 = /loader\/loader\/loader\.c/ nocase ascii wide
+        $string1658 = /loader\/loader\/loader\.c/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1661 = /localS4U2Proxy\.tickets/ nocase ascii wide
+        $string1659 = /localS4U2Proxy\.tickets/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1662 = /logToBeaconLog/ nocase ascii wide
+        $string1660 = /logToBeaconLog/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1663 = /lsarpc_\#\#/ nocase ascii wide
+        $string1661 = /lsarpc_\#\#/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1664 = /Magnitude\sExploit\sKit/ nocase ascii wide
+        $string1662 = /Magnitude\sExploit\sKit/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1665 = /main_air_service\-probes\.go/ nocase ascii wide
+        $string1663 = /main_air_service\-probes\.go/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1666 = /main_pro_service\-probes\.go/ nocase ascii wide
+        $string1664 = /main_pro_service\-probes\.go/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1667 = /makebof\.bat/ nocase ascii wide
+        $string1665 = /makebof\.bat/ nocase ascii wide
         // Description: Cobaltstrike toolkit
         // Reference: https://github.com/1135/1135-CobaltStrike-ToolKit
-        $string1668 = /Malleable\sC2\sFiles/ nocase ascii wide
+        $string1666 = /Malleable\sC2\sFiles/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string1669 = /Malleable\sPE\/Stage/ nocase ascii wide
+        $string1667 = /Malleable\sPE\/Stage/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1670 = /malleable_redirector\.py/ nocase ascii wide
+        $string1668 = /malleable_redirector\.py/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1671 = /malleable_redirector_hidden_api_endpoint/ nocase ascii wide
+        $string1669 = /malleable_redirector_hidden_api_endpoint/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1672 = /Malleable\-C2\-Profiles/ nocase ascii wide
+        $string1670 = /Malleable\-C2\-Profiles/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1673 = /Malleable\-C2\-Randomizer/ nocase ascii wide
+        $string1671 = /Malleable\-C2\-Randomizer/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1674 = /Malleable\-C2\-Randomizer/ nocase ascii wide
+        $string1672 = /Malleable\-C2\-Randomizer/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1675 = /malleable\-redirector\-config/ nocase ascii wide
+        $string1673 = /malleable\-redirector\-config/ nocase ascii wide
         // Description: Manual Map DLL injection implemented with Cobalt Strike's Beacon Object Files
         // Reference: https://github.com/tomcarver16/BOF-DLL-Inject
-        $string1676 = /mandllinject\s/ nocase ascii wide
+        $string1674 = /mandllinject\s/ nocase ascii wide
         // Description: CACTUSTORCH: Payload Generation for Adversary Simulations
         // Reference: https://github.com/mdsecactivebreach/CACTUSTORCH
-        $string1677 = /mdsecactivebreach\/CACTUSTORCH/ nocase ascii wide
+        $string1675 = /mdsecactivebreach\/CACTUSTORCH/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string1678 = /med0x2e\/SigFlip/ nocase ascii wide
+        $string1676 = /med0x2e\/SigFlip/ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/MemReader_BoF
-        $string1679 = /memreader\s.{0,1000}access_token/ nocase ascii wide
+        $string1677 = /memreader\s.{0,1000}access_token/ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/MemReader_BoF
-        $string1680 = /MemReader_BoF\./ nocase ascii wide
+        $string1678 = /MemReader_BoF\./ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1681 = /meterpreter\./ nocase ascii wide
+        $string1679 = /meterpreter\./ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1682 = /metsrv\.dll/ nocase ascii wide
+        $string1680 = /metsrv\.dll/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1683 = /mgeeky\/RedWarden/ nocase ascii wide
+        $string1681 = /mgeeky\/RedWarden/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1684 = /mimipenguin\.cna/ nocase ascii wide
+        $string1682 = /mimipenguin\.cna/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1685 = /mimipenguin\.so/ nocase ascii wide
+        $string1683 = /mimipenguin\.so/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1686 = /mimipenguin_x32\.so/ nocase ascii wide
+        $string1684 = /mimipenguin_x32\.so/ nocase ascii wide
         // Description: Collection of beacon object files for use with Cobalt Strike to facilitate
         // Reference: https://github.com/rookuu/BOFs
-        $string1687 = /minidump_add_memory_block/ nocase ascii wide
+        $string1685 = /minidump_add_memory_block/ nocase ascii wide
         // Description: Collection of beacon object files for use with Cobalt Strike to facilitate
         // Reference: https://github.com/rookuu/BOFs
-        $string1688 = /minidump_add_memory64_block/ nocase ascii wide
-        // Description: Collection of beacon object files for use with Cobalt Strike to facilitate
-        // Reference: https://github.com/rookuu/BOFs
-        $string1689 = /minidumpwritedump/ nocase ascii wide
-        // Description: Proof of concept Beacon Object File (BOF) that uses static x64 syscalls to perform a complete in memory dump of a process and send that back through your already existing Beacon communication channel
-        // Reference: https://github.com/xforcered/CredBandit
-        $string1690 = /MiniDumpWriteDump/ nocase ascii wide
+        $string1686 = /minidump_add_memory64_block/ nocase ascii wide
         // Description: Cobalt Strike kit for Persistence
         // Reference: https://github.com/0xthirteen/StayKit
-        $string1691 = /miscbackdoorlnkhelp/ nocase ascii wide
+        $string1687 = /miscbackdoorlnkhelp/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) Conversion of the Mockingjay Process Injection Technique
         // Reference: https://github.com/ewby/Mockingjay_BOF
-        $string1692 = /Mockingjay_BOF\.sln/ nocase ascii wide
+        $string1688 = /Mockingjay_BOF\.sln/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) Conversion of the Mockingjay Process Injection Technique
         // Reference: https://github.com/ewby/Mockingjay_BOF
-        $string1693 = /Mockingjay_BOF\-main/ nocase ascii wide
+        $string1689 = /Mockingjay_BOF\-main/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1694 = /mojo_\#\#/ nocase ascii wide
+        $string1690 = /mojo_\#\#/ nocase ascii wide
         // Description: C# binary with embeded golang hack-browser-data
         // Reference: https://github.com/S3cur3Th1sSh1t/Sharp-HackBrowserData
-        $string1695 = /moonD4rk\/HackBrowserData/ nocase ascii wide
+        $string1691 = /moonD4rk\/HackBrowserData/ nocase ascii wide
         // Description: Cobalt Strike kit for Lateral Movement
         // Reference: https://github.com/0xthirteen/MoveKit
-        $string1696 = /MoveKit\-master\.zip/ nocase ascii wide
+        $string1692 = /MoveKit\-master\.zip/ nocase ascii wide
         // Description: Cobalt Strike kit for Lateral Movement
         // Reference: https://github.com/0xthirteen/MoveKit
-        $string1697 = /move\-msbuild\s.{0,1000}\shttp\smove\.csproj/ nocase ascii wide
+        $string1693 = /move\-msbuild\s.{0,1000}\shttp\smove\.csproj/ nocase ascii wide
         // Description: Cobalt Strike kit for Lateral Movement
         // Reference: https://github.com/0xthirteen/MoveKit
-        $string1698 = /move\-pre\-custom\-file\s.{0,1000}\.exe\s/ nocase ascii wide
+        $string1694 = /move\-pre\-custom\-file\s.{0,1000}\.exe\s/ nocase ascii wide
         // Description: backdoor c2
         // Reference: https://github.com/wahyuhadi/beacon-c2-go
-        $string1699 = /msfvemonpayload/ nocase ascii wide
+        $string1695 = /msfvemonpayload/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1700 = /mssqlattack\.py/ nocase ascii wide
+        $string1696 = /mssqlattack\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1701 = /mssqlrelayclient\.py/ nocase ascii wide
+        $string1697 = /mssqlrelayclient\.py/ nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string1702 = /my_dump_my_pe/ nocase ascii wide
+        $string1698 = /my_dump_my_pe/ nocase ascii wide
         // Description: Strstr with user-supplied needle and filename as a BOF.
         // Reference: https://github.com/EspressoCake/Needle_Sift_BOF
-        $string1703 = /needle_sift\.x64/ nocase ascii wide
+        $string1699 = /needle_sift\.x64/ nocase ascii wide
         // Description: Strstr with user-supplied needle and filename as a BOF.
         // Reference: https://github.com/EspressoCake/Needle_Sift_BOF
-        $string1704 = /needlesift\.cna/ nocase ascii wide
+        $string1700 = /needlesift\.cna/ nocase ascii wide
         // Description: Cobalt Strike BOF for quser.exe implementation using Windows API
         // Reference: https://github.com/netero1010/Quser-BOF
-        $string1705 = /netero1010\/Quser\-BOF/ nocase ascii wide
+        $string1701 = /netero1010\/Quser\-BOF/ nocase ascii wide
         // Description: New Lateral Movement technique by abusing Windows Perception Simulation Service to achieve DLL hijacking code execution.
         // Reference: https://github.com/netero1010/ServiceMove-BOF
-        $string1706 = /netero1010\/ServiceMove\-BOF/ nocase ascii wide
+        $string1702 = /netero1010\/ServiceMove\-BOF/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1707 = /netlogon_\#\#/ nocase ascii wide
+        $string1703 = /netlogon_\#\#/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string1708 = /netuser_enum/ nocase ascii wide
+        $string1704 = /netuser_enum/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string1709 = /netview_enum/ nocase ascii wide
+        $string1705 = /netview_enum/ nocase ascii wide
         // Description: Use windows api to add users which can be used when net is unavailable
         // Reference: https://github.com/lengjibo/NetUser
-        $string1710 = /NoApiUser\.exe/ nocase ascii wide
+        $string1706 = /NoApiUser\.exe/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1711 = /noconsolation\s\/tmp\// nocase ascii wide
+        $string1707 = /noconsolation\s\/tmp\// nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1712 = /noconsolation\s\-\-local\s.{0,1000}cmd\.exe/ nocase ascii wide
+        $string1708 = /noconsolation\s\-\-local\s.{0,1000}cmd\.exe/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1713 = /noconsolation\s\-\-local\s.{0,1000}powershell\.exe/ nocase ascii wide
+        $string1709 = /noconsolation\s\-\-local\s.{0,1000}powershell\.exe/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1714 = /No\-Consolation\.cna/ nocase ascii wide
+        $string1710 = /No\-Consolation\.cna/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1715 = /NoConsolation\.x64\.o/ nocase ascii wide
+        $string1711 = /NoConsolation\.x64\.o/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1716 = /NoConsolation\.x86\.o/ nocase ascii wide
+        $string1712 = /NoConsolation\.x86\.o/ nocase ascii wide
         // Description: This is a Beacon Object File (BOF) that executes unmanaged PEs inline and retrieves their output without allocating a console (i.e spawning conhost.exe)
         // Reference: https://github.com/fortra/No-Consolation
-        $string1717 = /No\-Consolation\-main/ nocase ascii wide
+        $string1713 = /No\-Consolation\-main/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1718 = /normal\/randomized\.profile/ nocase ascii wide
+        $string1714 = /normal\/randomized\.profile/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1719 = /ntcreatethread\.x64/ nocase ascii wide
+        $string1715 = /ntcreatethread\.x64/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1720 = /ntcreatethread\.x86/ nocase ascii wide
+        $string1716 = /ntcreatethread\.x86/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string1721 = /oab\-parse\.py/ nocase ascii wide
+        $string1717 = /oab\-parse\.py/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1722 = /obscuritylabs\/ase\:latest/ nocase ascii wide
+        $string1718 = /obscuritylabs\/ase\:latest/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1723 = /obscuritylabs\/RAI\// nocase ascii wide
+        $string1719 = /obscuritylabs\/RAI\// nocase ascii wide
         // Description: BOF combination of KillDefender and Backstab
         // Reference: https://github.com/Octoberfest7/KDStab
-        $string1724 = /Octoberfest7\/KDStab/ nocase ascii wide
+        $string1720 = /Octoberfest7\/KDStab/ nocase ascii wide
         // Description: C# alternative to the linux cat command... Prints file contents to console. For use with Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpCat
-        $string1725 = /OG\-Sadpanda\/SharpCat/ nocase ascii wide
+        $string1721 = /OG\-Sadpanda\/SharpCat/ nocase ascii wide
         // Description: Read the contents of DOCX files using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpSword
-        $string1726 = /OG\-Sadpanda\/SharpSword/ nocase ascii wide
+        $string1722 = /OG\-Sadpanda\/SharpSword/ nocase ascii wide
         // Description: List/Read contents of Zip files (in memory and without extraction) using CobaltStrike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpZippo
-        $string1727 = /OG\-Sadpanda\/SharpZippo/ nocase ascii wide
+        $string1723 = /OG\-Sadpanda\/SharpZippo/ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string1728 = /On_Demand_C2\./ nocase ascii wide
+        $string1724 = /On_Demand_C2\./ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string1729 = /On\-Demand_C2_BOF\./ nocase ascii wide
+        $string1725 = /On\-Demand_C2_BOF\./ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string1730 = /OnDemandC2Class\.cs/ nocase ascii wide
+        $string1726 = /OnDemandC2Class\.cs/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1731 = /openBeaconBrowser/ nocase ascii wide
+        $string1727 = /openBeaconBrowser/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1732 = /openBeaconBrowser/ nocase ascii wide
+        $string1728 = /openBeaconBrowser/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1733 = /openBeaconConsole/ nocase ascii wide
+        $string1729 = /openBeaconConsole/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1734 = /openBeaconConsole/ nocase ascii wide
+        $string1730 = /openBeaconConsole/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1735 = /openBypassUACDialog/ nocase ascii wide
+        $string1731 = /openBypassUACDialog/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1736 = /openBypassUACDialog/ nocase ascii wide
+        $string1732 = /openBypassUACDialog/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1737 = /openGoldenTicketDialog/ nocase ascii wide
+        $string1733 = /openGoldenTicketDialog/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1738 = /openKeystrokeBrowser/ nocase ascii wide
+        $string1734 = /openKeystrokeBrowser/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1739 = /openPayloadGenerator/ nocase ascii wide
+        $string1735 = /openPayloadGenerator/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1740 = /openPayloadGeneratorDialog/ nocase ascii wide
+        $string1736 = /openPayloadGeneratorDialog/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1741 = /openPayloadHelper/ nocase ascii wide
+        $string1737 = /openPayloadHelper/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1742 = /openPortScanner/ nocase ascii wide
+        $string1738 = /openPortScanner/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1743 = /openPortScanner/ nocase ascii wide
+        $string1739 = /openPortScanner/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1744 = /openSpearPhishDialog/ nocase ascii wide
+        $string1740 = /openSpearPhishDialog/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1745 = /openWindowsExecutableStage/ nocase ascii wide
+        $string1741 = /openWindowsExecutableStage/ nocase ascii wide
         // Description: Cobalt Strike Aggressor Script that Performs System/AV/EDR Recon
         // Reference: https://github.com/optiv/Registry-Recon
-        $string1746 = /optiv\/Registry\-Recon/ nocase ascii wide
+        $string1742 = /optiv\/Registry\-Recon/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1747 = /optiv\/ScareCrow/ nocase ascii wide
+        $string1743 = /optiv\/ScareCrow/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string1748 = /Outflank\-Dumpert\./ nocase ascii wide
+        $string1744 = /Outflank\-Dumpert\./ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1749 = /outflanknl\/Recon\-AD/ nocase ascii wide
+        $string1745 = /outflanknl\/Recon\-AD/ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string1750 = /outflanknl\/Spray\-AD/ nocase ascii wide
+        $string1746 = /outflanknl\/Spray\-AD/ nocase ascii wide
         // Description: A Beacon Object File (BOF) for Cobalt Strike which uses direct system calls to enable WDigest credential caching.
         // Reference: https://github.com/outflanknl/WdToggle
-        $string1751 = /outflanknl\/WdToggle/ nocase ascii wide
+        $string1747 = /outflanknl\/WdToggle/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1752 = /Outflank\-Recon\-AD/ nocase ascii wide
+        $string1748 = /Outflank\-Recon\-AD/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1753 = /output\/html\/data\/beacons\.json/ nocase ascii wide
+        $string1749 = /output\/html\/data\/beacons\.json/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1754 = /output\/payloads\// nocase ascii wide
+        $string1750 = /output\/payloads\// nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string1755 = /package\scom\.blackh4t/ nocase ascii wide
+        $string1751 = /package\scom\.blackh4t/ nocase ascii wide
         // Description: CobaltStrike's Beacon in Go
         // Reference: https://github.com/darkr4y/geacon
-        $string1756 = /parse\sthe\s\.beacon_keys\sto\sRSA\sprivate\skey\sand\spublic\skey\sin\spem\sformat/ nocase ascii wide
+        $string1752 = /parse\sthe\s\.beacon_keys\sto\sRSA\sprivate\skey\sand\spublic\skey\sin\spem\sformat/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1757 = /parse_aggressor_properties/ nocase ascii wide
+        $string1753 = /parse_aggressor_properties/ nocase ascii wide
         // Description: A protective and Low Level Shellcode Loader that defeats modern EDR systems.
         // Reference: https://github.com/cribdragg3r/Alaris
-        $string1758 = /parse_shellcode/ nocase ascii wide
+        $string1754 = /parse_shellcode/ nocase ascii wide
         // Description: Cobalt Strike BOF - Bypass AMSI in a remote process with code injection.
         // Reference: https://github.com/boku7/injectAmsiBypass
-        $string1759 = /patchAmsiOpenSession/ nocase ascii wide
+        $string1755 = /patchAmsiOpenSession/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1760 = /payload_bootstrap_hint/ nocase ascii wide
+        $string1756 = /payload_bootstrap_hint/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1761 = /payload_local/ nocase ascii wide
+        $string1757 = /payload_local/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1762 = /payload_scripts\.cna/ nocase ascii wide
+        $string1758 = /payload_scripts\.cna/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1763 = /payload_scripts\/sleepmask/ nocase ascii wide
+        $string1759 = /payload_scripts\/sleepmask/ nocase ascii wide
         // Description: Achieve execution using a custom keyboard layout
         // Reference: https://github.com/NtQuerySystemInformation/CustomKeyboardLayoutPersistence
-        $string1764 = /payload_section\.cpp/ nocase ascii wide
+        $string1760 = /payload_section\.cpp/ nocase ascii wide
         // Description: Achieve execution using a custom keyboard layout
         // Reference: https://github.com/NtQuerySystemInformation/CustomKeyboardLayoutPersistence
-        $string1765 = /payload_section\.hpp/ nocase ascii wide
+        $string1761 = /payload_section\.hpp/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string1766 = /payloadgenerator\.py/ nocase ascii wide
+        $string1762 = /payloadgenerator\.py/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1767 = /Perform\sAS\-REP\sroasting/ nocase ascii wide
+        $string1763 = /Perform\sAS\-REP\sroasting/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1768 = /PersistBOF\.cna/ nocase ascii wide
+        $string1764 = /PersistBOF\.cna/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1769 = /PersistenceBOF\.c/ nocase ascii wide
+        $string1765 = /PersistenceBOF\.c/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1770 = /PersistenceBOF\.exe/ nocase ascii wide
+        $string1766 = /PersistenceBOF\.exe/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1771 = /persist\-ice\-junction\.o/ nocase ascii wide
+        $string1767 = /persist\-ice\-junction\.o/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1772 = /persist\-ice\-monitor\.o/ nocase ascii wide
+        $string1768 = /persist\-ice\-monitor\.o/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1773 = /persist\-ice\-shortcut\.o/ nocase ascii wide
+        $string1769 = /persist\-ice\-shortcut\.o/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1774 = /persist\-ice\-time\.o/ nocase ascii wide
+        $string1770 = /persist\-ice\-time\.o/ nocase ascii wide
         // Description: A BOF to automate common persistence tasks for red teamers
         // Reference: https://github.com/IcebreakerSecurity/PersistBOF
-        $string1775 = /persist\-ice\-xll\.o/ nocase ascii wide
+        $string1771 = /persist\-ice\-xll\.o/ nocase ascii wide
         // Description: Aggressor script to integrate Phant0m with Cobalt Strike
         // Reference: https://github.com/p292/Phant0m_cobaltstrike
-        $string1776 = /Phant0m_cobaltstrike/ nocase ascii wide
+        $string1772 = /Phant0m_cobaltstrike/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1777 = /\'pipename_stager\'/ nocase ascii wide
+        $string1773 = /\'pipename_stager\'/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string1778 = /Pitty\sTiger\sRAT/ nocase ascii wide
+        $string1774 = /Pitty\sTiger\sRAT/ nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string1779 = /\-pk8gege\.org/ nocase ascii wide
+        $string1775 = /\-pk8gege\.org/ nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors Gray often ginkgo design
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string1780 = /pkexec64\.tar\.gz/ nocase ascii wide
+        $string1776 = /pkexec64\.tar\.gz/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string1781 = /plug_getpass_nps\.dll/ nocase ascii wide
+        $string1777 = /plug_getpass_nps\.dll/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string1782 = /plug_katz_nps\.exe/ nocase ascii wide
+        $string1778 = /plug_katz_nps\.exe/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string1783 = /plug_qvte_nps\.exe/ nocase ascii wide
+        $string1779 = /plug_qvte_nps\.exe/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string1784 = /PoolParty\sattack\scompleted\ssuccessfully/ nocase ascii wide
+        $string1780 = /PoolParty\sattack\scompleted\ssuccessfully/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string1785 = /PoolPartyBof\s/ nocase ascii wide
+        $string1781 = /PoolPartyBof\s/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string1786 = /PoolPartyBof\s.{0,1000}\sHTTPSLocal/ nocase ascii wide
+        $string1782 = /PoolPartyBof\s.{0,1000}\sHTTPSLocal/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string1787 = /PoolPartyBof\.cna/ nocase ascii wide
+        $string1783 = /PoolPartyBof\.cna/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string1788 = /PoolPartyBof\-main/ nocase ascii wide
+        $string1784 = /PoolPartyBof\-main/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1789 = /PortBender\sbackdoor/ nocase ascii wide
+        $string1785 = /PortBender\sbackdoor/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1790 = /PortBender\sredirect/ nocase ascii wide
+        $string1786 = /PortBender\sredirect/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1791 = /PortBender\.cna/ nocase ascii wide
+        $string1787 = /PortBender\.cna/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1792 = /PortBender\.cpp/ nocase ascii wide
+        $string1788 = /PortBender\.cpp/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1793 = /portbender\.dll/ nocase ascii wide
+        $string1789 = /portbender\.dll/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1794 = /PortBender\.exe/ nocase ascii wide
+        $string1790 = /PortBender\.exe/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1795 = /PortBender\.h/ nocase ascii wide
+        $string1791 = /PortBender\.h/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1796 = /PortBender\.sln/ nocase ascii wide
+        $string1792 = /PortBender\.sln/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1797 = /PortBender\.zip/ nocase ascii wide
+        $string1793 = /PortBender\.zip/ nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string1798 = /portscan_result\.cna/ nocase ascii wide
+        $string1794 = /portscan_result\.cna/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1799 = /portscan386\s/ nocase ascii wide
+        $string1795 = /portscan386\s/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1800 = /portscan64\s/ nocase ascii wide
+        $string1796 = /portscan64\s/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1801 = /post_ex_amsi_disable/ nocase ascii wide
+        $string1797 = /post_ex_amsi_disable/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1802 = /post_ex_keylogger/ nocase ascii wide
+        $string1798 = /post_ex_keylogger/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1803 = /post_ex_obfuscate/ nocase ascii wide
+        $string1799 = /post_ex_obfuscate/ nocase ascii wide
         // Description: SourcePoint is a C2 profile generator for Cobalt Strike command and control servers designed to ensure evasion.
         // Reference: https://github.com/Tylous/SourcePoint
-        $string1804 = /Post_EX_Process_Name/ nocase ascii wide
+        $string1800 = /Post_EX_Process_Name/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1805 = /post_ex_smartinject/ nocase ascii wide
+        $string1801 = /post_ex_smartinject/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1806 = /post_ex_spawnto_x64/ nocase ascii wide
+        $string1802 = /post_ex_spawnto_x64/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1807 = /post_ex_spawnto_x86/ nocase ascii wide
+        $string1803 = /post_ex_spawnto_x86/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1808 = /powershell_encode_oneliner/ nocase ascii wide
+        $string1804 = /powershell_encode_oneliner/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1809 = /powershell_encode_oneliner/ nocase ascii wide
+        $string1805 = /powershell_encode_oneliner/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1810 = /powershell_encode_stager/ nocase ascii wide
+        $string1806 = /powershell_encode_stager/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1811 = /powershell_encode_stager/ nocase ascii wide
+        $string1807 = /powershell_encode_stager/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1812 = /powershell\-import\s.{0,1000}\.ps1/ nocase ascii wide
+        $string1808 = /powershell\-import\s.{0,1000}\.ps1/ nocase ascii wide
         // Description: Cobalt Strike Aggressor script menu for Powerview/SharpView
         // Reference: https://github.com/tevora-threat/PowerView3-Aggressor
-        $string1813 = /PowerView3\-Aggressor/ nocase ascii wide
+        $string1809 = /PowerView3\-Aggressor/ nocase ascii wide
         // Description: Simple BOF to read the protection level of a process
         // Reference: https://github.com/rasta-mouse/PPEnum
-        $string1814 = /ppenum\.c/ nocase ascii wide
+        $string1810 = /ppenum\.c/ nocase ascii wide
         // Description: Simple BOF to read the protection level of a process
         // Reference: https://github.com/rasta-mouse/PPEnum
-        $string1815 = /ppenum\.exe/ nocase ascii wide
+        $string1811 = /ppenum\.exe/ nocase ascii wide
         // Description: Simple BOF to read the protection level of a process
         // Reference: https://github.com/rasta-mouse/PPEnum
-        $string1816 = /ppenum\.x64\./ nocase ascii wide
+        $string1812 = /ppenum\.x64\./ nocase ascii wide
         // Description: Simple BOF to read the protection level of a process
         // Reference: https://github.com/rasta-mouse/PPEnum
-        $string1817 = /ppenum\.x86\./ nocase ascii wide
+        $string1813 = /ppenum\.x86\./ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1818 = /ppl_dump\.x64/ nocase ascii wide
+        $string1814 = /ppl_dump\.x64/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1819 = /ppldump\s/ nocase ascii wide
+        $string1815 = /ppldump\s/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string1820 = /PPLDump_BOF\./ nocase ascii wide
+        $string1816 = /PPLDump_BOF\./ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1821 = /pplfault\.cna/ nocase ascii wide
+        $string1817 = /pplfault\.cna/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1822 = /PPLFaultDumpBOF/ nocase ascii wide
+        $string1818 = /PPLFaultDumpBOF/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1823 = /PPLFaultPayload\.dll/ nocase ascii wide
+        $string1819 = /PPLFaultPayload\.dll/ nocase ascii wide
         // Description: Takes the original PPLFault and the original included DumpShellcode and combinds it all into a BOF targeting cobalt strike.
         // Reference: https://github.com/trustedsec/PPLFaultDumpBOF
-        $string1824 = /PPLFaultTemp/ nocase ascii wide
+        $string1820 = /PPLFaultTemp/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1825 = /praetorian\.antihacker/ nocase ascii wide
+        $string1821 = /praetorian\.antihacker/ nocase ascii wide
         // Description: PortBender is a TCP port redirection utility that allows a red team operator to redirect inbound traffic 
         // Reference: https://github.com/praetorian-inc/PortBender
-        $string1826 = /praetorian\-inc\/PortBender/ nocase ascii wide
+        $string1822 = /praetorian\-inc\/PortBender/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1827 = /prepareResponseForHiddenAPICall/ nocase ascii wide
+        $string1823 = /prepareResponseForHiddenAPICall/ nocase ascii wide
         // Description: Reflection dll implementation of PrintSpoofer used in conjunction with Cobalt Strike
         // Reference: https://github.com/crisprss/PrintSpoofer
-        $string1828 = /PrintSpoofer\-/ nocase ascii wide
+        $string1824 = /PrintSpoofer\-/ nocase ascii wide
         // Description: Reflection dll implementation of PrintSpoofer used in conjunction with Cobalt Strike
         // Reference: https://github.com/crisprss/PrintSpoofer
-        $string1829 = /PrintSpoofer\./ nocase ascii wide
+        $string1825 = /PrintSpoofer\./ nocase ascii wide
         // Description: A BOF to parse the imports of a provided PE-file. optionally extracting symbols on a per-dll basis.
         // Reference: https://github.com/EspressoCake/DLL_Imports_BOF
-        $string1830 = /process_imports\.cna/ nocase ascii wide
+        $string1826 = /process_imports\.cna/ nocase ascii wide
         // Description: A BOF to parse the imports of a provided PE-file. optionally extracting symbols on a per-dll basis.
         // Reference: https://github.com/EspressoCake/DLL_Imports_BOF
-        $string1831 = /process_imports\.x64/ nocase ascii wide
+        $string1827 = /process_imports\.x64/ nocase ascii wide
         // Description: A BOF to parse the imports of a provided PE-file. optionally extracting symbols on a per-dll basis.
         // Reference: https://github.com/EspressoCake/DLL_Imports_BOF
-        $string1832 = /process_imports_api\s.{0,1000}\.exe/ nocase ascii wide
+        $string1828 = /process_imports_api\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1833 = /process_inject_allocator/ nocase ascii wide
+        $string1829 = /process_inject_allocator/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1834 = /process_inject_bof_allocator/ nocase ascii wide
+        $string1830 = /process_inject_bof_allocator/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1835 = /process_inject_bof_reuse_memory/ nocase ascii wide
+        $string1831 = /process_inject_bof_reuse_memory/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1836 = /process_inject_execute/ nocase ascii wide
+        $string1832 = /process_inject_execute/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1837 = /process_inject_min_alloc/ nocase ascii wide
+        $string1833 = /process_inject_min_alloc/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1838 = /process_inject_startrwx/ nocase ascii wide
+        $string1834 = /process_inject_startrwx/ nocase ascii wide
         // Description: SourcePoint is a C2 profile generator for Cobalt Strike command and control servers designed to ensure evasion.
         // Reference: https://github.com/Tylous/SourcePoint
-        $string1839 = /Process_Inject_Struct/ nocase ascii wide
+        $string1835 = /Process_Inject_Struct/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1840 = /process_inject_transform_x/ nocase ascii wide
+        $string1836 = /process_inject_transform_x/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1841 = /process_inject_userwx/ nocase ascii wide
+        $string1837 = /process_inject_userwx/ nocase ascii wide
         // Description: A Syscall-only BOF file intended to grab process protection attributes. limited to a handful that Red Team operators and pentesters would commonly be interested in.
         // Reference: https://github.com/EspressoCake/Process_Protection_Level_BOF
-        $string1842 = /process_protection_enum\s/ nocase ascii wide
+        $string1838 = /process_protection_enum\s/ nocase ascii wide
         // Description: A BOF port of the research of @thefLinkk and @codewhitesec
         // Reference: https://github.com//EspressoCake/HandleKatz_BOF
-        $string1843 = /process_protection_enum.{0,1000}\.dmp/ nocase ascii wide
+        $string1839 = /process_protection_enum.{0,1000}\.dmp/ nocase ascii wide
         // Description: A Syscall-only BOF file intended to grab process protection attributes. limited to a handful that Red Team operators and pentesters would commonly be interested in.
         // Reference: https://github.com/EspressoCake/Process_Protection_Level_BOF
-        $string1844 = /process_protection_enum\./ nocase ascii wide
+        $string1840 = /process_protection_enum\./ nocase ascii wide
         // Description: A Syscall-only BOF file intended to grab process protection attributes. limited to a handful that Red Team operators and pentesters would commonly be interested in.
         // Reference: https://github.com/EspressoCake/Process_Protection_Level_BOF
-        $string1845 = /Process_Protection_Level_BOF\./ nocase ascii wide
+        $string1841 = /Process_Protection_Level_BOF\./ nocase ascii wide
         // Description: A Syscall-only BOF file intended to grab process protection attributes. limited to a handful that Red Team operators and pentesters would commonly be interested in.
         // Reference: https://github.com/EspressoCake/Process_Protection_Level_BOF
-        $string1846 = /Process_Protection_Level_BOF\// nocase ascii wide
+        $string1842 = /Process_Protection_Level_BOF\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1847 = /ProcessDestroy\.x64/ nocase ascii wide
+        $string1843 = /ProcessDestroy\.x64/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1848 = /ProcessDestroy\.x64\./ nocase ascii wide
+        $string1844 = /ProcessDestroy\.x64\./ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1849 = /ProcessDestroy\.x86/ nocase ascii wide
+        $string1845 = /ProcessDestroy\.x86/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1850 = /ProcessDestroy\.x86\./ nocase ascii wide
+        $string1846 = /ProcessDestroy\.x86\./ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string1851 = /process\-inject\s/ nocase ascii wide
+        $string1847 = /process\-inject\s/ nocase ascii wide
         // Description: SourcePoint is a C2 profile generator for Cobalt Strike command and control servers designed to ensure evasion.
         // Reference: https://github.com/Tylous/SourcePoint
-        $string1852 = /processinject_min_alloc/ nocase ascii wide
+        $string1848 = /processinject_min_alloc/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string1853 = /ProgIDsUACBypass\./ nocase ascii wide
+        $string1849 = /ProgIDsUACBypass\./ nocase ascii wide
         // Description: Project to enumerate proxy configurations and generate shellcode from CobaltStrike
         // Reference: https://github.com/EncodeGroup/AggressiveProxy
-        $string1854 = /Proxy\sShellcode\sHandler/ nocase ascii wide
+        $string1850 = /Proxy\sShellcode\sHandler/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1855 = /proxychains.{0,1000}scshell/ nocase ascii wide
+        $string1851 = /proxychains.{0,1000}scshell/ nocase ascii wide
         // Description: Project to enumerate proxy configurations and generate shellcode from CobaltStrike
         // Reference: https://github.com/EncodeGroup/AggressiveProxy
-        $string1856 = /proxyshellcodeurl/ nocase ascii wide
+        $string1852 = /proxyshellcodeurl/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string1857 = /PSconfusion\.py/ nocase ascii wide
+        $string1853 = /PSconfusion\.py/ nocase ascii wide
         // Description: Bloodhound Attack Path Automation in CobaltStrike
         // Reference: https://github.com/vysecurity/ANGRYPUPPY
-        $string1858 = /PSEXEC_PSH\s/ nocase ascii wide
+        $string1854 = /PSEXEC_PSH\s/ nocase ascii wide
         // Description: bypassAV cobaltstrike shellcode
         // Reference: https://github.com/pureqh/bypassAV
-        $string1859 = /pureqh\/bypassAV/ nocase ascii wide
+        $string1855 = /pureqh\/bypassAV/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string1860 = /pwn1sher\/CS\-BOFs/ nocase ascii wide
+        $string1856 = /pwn1sher\/CS\-BOFs/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1861 = /pycobalt\./ nocase ascii wide
+        $string1857 = /pycobalt\./ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1862 = /pycobalt\/aggressor/ nocase ascii wide
+        $string1858 = /pycobalt\/aggressor/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1863 = /pycobalt_debug_on/ nocase ascii wide
+        $string1859 = /pycobalt_debug_on/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1864 = /pycobalt_path/ nocase ascii wide
+        $string1860 = /pycobalt_path/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1865 = /pycobalt_python/ nocase ascii wide
+        $string1861 = /pycobalt_python/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string1866 = /pycobalt_timeout/ nocase ascii wide
+        $string1862 = /pycobalt_timeout/ nocase ascii wide
         // Description: Quick python utility I wrote to turn HTTP requests from burp suite into Cobalt Strike Malleable C2 profiles
         // Reference: https://github.com/CodeXTF2/Burp2Malleable
-        $string1867 = /pyMalleableC2/ nocase ascii wide
+        $string1863 = /pyMalleableC2/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string1868 = /pystinger_for_darkshadow/ nocase ascii wide
+        $string1864 = /pystinger_for_darkshadow/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1869 = /python\sscshell/ nocase ascii wide
+        $string1865 = /python\sscshell/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string1870 = /python2\?\?\/generator\.py/ nocase ascii wide
+        $string1866 = /python2\?\?\/generator\.py/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string1871 = /python2\?\?\/PyLoader\.py/ nocase ascii wide
+        $string1867 = /python2\?\?\/PyLoader\.py/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1872 = /python3\sscshell/ nocase ascii wide
+        $string1868 = /python3\sscshell/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string1873 = /python3\?\?\/generator\.py/ nocase ascii wide
+        $string1869 = /python3\?\?\/generator\.py/ nocase ascii wide
         // Description: CS anti-killing including python version and C version
         // Reference: https://github.com/Gality369/CS-Loader
-        $string1874 = /python3\?\?\/PyLoader\.py/ nocase ascii wide
+        $string1870 = /python3\?\?\/PyLoader\.py/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string1875 = /QUAPCInjectAsSystem/ nocase ascii wide
+        $string1871 = /QUAPCInjectAsSystem/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string1876 = /QUAPCInjectElevated/ nocase ascii wide
+        $string1872 = /QUAPCInjectElevated/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string1877 = /QUAPCInjectFakecmd/ nocase ascii wide
+        $string1873 = /QUAPCInjectFakecmd/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string1878 = /QUAPCInjectFakecmd/ nocase ascii wide
+        $string1874 = /QUAPCInjectFakecmd/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string1879 = /QUAPCInjectWithoutPid/ nocase ascii wide
+        $string1875 = /QUAPCInjectWithoutPid/ nocase ascii wide
         // Description: Cobalt Strike BOF for quser.exe implementation using Windows API
         // Reference: https://github.com/netero1010/Quser-BOF
-        $string1880 = /quser\.x64\.o/ nocase ascii wide
+        $string1876 = /quser\.x64\.o/ nocase ascii wide
         // Description: Cobalt Strike BOF for quser.exe implementation using Windows API
         // Reference: https://github.com/netero1010/Quser-BOF
-        $string1881 = /quser\.x86\.o/ nocase ascii wide
+        $string1877 = /quser\.x86\.o/ nocase ascii wide
         // Description: ShellCode_Loader - Msf&CobaltStrike Antivirus ShellCode loader. Shellcode_encryption - Antivirus Shellcode encryption generation tool. currently tested for Antivirus 360 & Huorong & Computer Manager & Windows Defender (other antivirus software not tested).
         // Reference: https://github.com/Axx8/ShellCode_Loader
-        $string1882 = /QXh4OEF4eDhBeHg4QXh4OA\=\=/ nocase ascii wide
+        $string1878 = /QXh4OEF4eDhBeHg4QXh4OA\=\=/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1883 = /RAI\/ase_docker/ nocase ascii wide
+        $string1879 = /RAI\/ase_docker/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1884 = /rai\-attack\-servers\./ nocase ascii wide
+        $string1880 = /rai\-attack\-servers\./ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1885 = /rai\-redirector\-dns/ nocase ascii wide
+        $string1881 = /rai\-redirector\-dns/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1886 = /rai\-redirector\-http/ nocase ascii wide
+        $string1882 = /rai\-redirector\-http/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1887 = /RalfHacker\/Kerbeus\-BOF/ nocase ascii wide
+        $string1883 = /RalfHacker\/Kerbeus\-BOF/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1888 = /random_c2_profile/ nocase ascii wide
+        $string1884 = /random_c2_profile/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1889 = /random_c2profile\./ nocase ascii wide
+        $string1885 = /random_c2profile\./ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1890 = /random_user_agent\.params/ nocase ascii wide
+        $string1886 = /random_user_agent\.params/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string1891 = /random_user_agent\.user_agent/ nocase ascii wide
+        $string1887 = /random_user_agent\.user_agent/ nocase ascii wide
         // Description: Simple BOF to read the protection level of a process
         // Reference: https://github.com/rasta-mouse/PPEnum
-        $string1892 = /rasta\-mouse\/PPEnum/ nocase ascii wide
+        $string1888 = /rasta\-mouse\/PPEnum/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string1893 = /rasta\-mouse\/TikiTorch/ nocase ascii wide
+        $string1889 = /rasta\-mouse\/TikiTorch/ nocase ascii wide
         // Description: Use windows api to add users which can be used when net is unavailable
         // Reference: https://github.com/lengjibo/NetUser
-        $string1894 = /rdi_net_user\.cpp/ nocase ascii wide
+        $string1890 = /rdi_net_user\.cpp/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string1895 = /rdphijack\.x64/ nocase ascii wide
+        $string1891 = /rdphijack\.x64/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string1896 = /rdphijack\.x86/ nocase ascii wide
+        $string1892 = /rdphijack\.x86/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses WinStationConnect API to perform local/remote RDP session hijacking.
         // Reference: https://github.com/netero1010/RDPHijack-BOF
-        $string1897 = /RDPHijack\-BOF/ nocase ascii wide
+        $string1893 = /RDPHijack\-BOF/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string1898 = /RdpThief\./ nocase ascii wide
+        $string1894 = /RdpThief\./ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string1899 = /read_cs_teamserver/ nocase ascii wide
+        $string1895 = /read_cs_teamserver/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1900 = /Recon\-AD\-.{0,1000}\.dll/ nocase ascii wide
+        $string1896 = /Recon\-AD\-.{0,1000}\.dll/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1901 = /Recon\-AD\-.{0,1000}\.sln/ nocase ascii wide
+        $string1897 = /Recon\-AD\-.{0,1000}\.sln/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1902 = /Recon\-AD\-.{0,1000}\.vcxproj/ nocase ascii wide
+        $string1898 = /Recon\-AD\-.{0,1000}\.vcxproj/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1903 = /Recon\-AD\-AllLocalGroups/ nocase ascii wide
+        $string1899 = /Recon\-AD\-AllLocalGroups/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1904 = /Recon\-AD\-Domain/ nocase ascii wide
+        $string1900 = /Recon\-AD\-Domain/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1905 = /Recon\-AD\-LocalGroups/ nocase ascii wide
+        $string1901 = /Recon\-AD\-LocalGroups/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1906 = /Recon\-AD\-SPNs/ nocase ascii wide
+        $string1902 = /Recon\-AD\-SPNs/ nocase ascii wide
         // Description: Recon-AD an AD recon tool based on ADSI and reflective DLL s
         // Reference: https://github.com/outflanknl/Recon-AD
-        $string1907 = /Recon\-AD\-Users\./ nocase ascii wide
+        $string1903 = /Recon\-AD\-Users\./ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1908 = /redelk_backend_name_c2/ nocase ascii wide
+        $string1904 = /redelk_backend_name_c2/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1909 = /redelk_backend_name_decoy/ nocase ascii wide
+        $string1905 = /redelk_backend_name_decoy/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1910 = /Red\-Team\-Infrastructure\-Wiki\./ nocase ascii wide
+        $string1906 = /Red\-Team\-Infrastructure\-Wiki\./ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1911 = /RedWarden\.py/ nocase ascii wide
+        $string1907 = /RedWarden\.py/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1912 = /RedWarden\.test/ nocase ascii wide
+        $string1908 = /RedWarden\.test/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1913 = /redwarden_access\.log/ nocase ascii wide
+        $string1909 = /redwarden_access\.log/ nocase ascii wide
         // Description: Cobalt Strike C2 Reverse proxy that fends off Blue Teams. AVs. EDRs. scanners through packet inspection and malleable profile correlation
         // Reference: https://github.com/mgeeky/RedWarden
-        $string1914 = /redwarden_redirector\.log/ nocase ascii wide
+        $string1910 = /redwarden_redirector\.log/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string1915 = /reflective_dll\.dll/ nocase ascii wide
+        $string1911 = /reflective_dll\.dll/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string1916 = /reflective_dll\.x64\.dll/ nocase ascii wide
+        $string1912 = /reflective_dll\.x64\.dll/ nocase ascii wide
         // Description: Example code for using named pipe output with beacon ReflectiveDLLs
         // Reference: https://github.com/rxwx/cs-rdll-ipc-example
-        $string1917 = /ReflectiveDll\.x64\.dll/ nocase ascii wide
+        $string1913 = /ReflectiveDll\.x64\.dll/ nocase ascii wide
         // Description: Example code for using named pipe output with beacon ReflectiveDLLs
         // Reference: https://github.com/rxwx/cs-rdll-ipc-example
-        $string1918 = /ReflectiveDll\.x86\.dll/ nocase ascii wide
+        $string1914 = /ReflectiveDll\.x86\.dll/ nocase ascii wide
         // Description: reflective module for HackBrowserData
         // Reference: https://github.com/idiotc4t/Reflective-HackBrowserData
-        $string1919 = /Reflective\-HackBrowserData/ nocase ascii wide
+        $string1915 = /Reflective\-HackBrowserData/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1920 = /Remote\/lastpass\/lastpass\.x86\./ nocase ascii wide
+        $string1916 = /Remote\/lastpass\/lastpass\.x86\./ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1921 = /Remote\/setuserpass\// nocase ascii wide
+        $string1917 = /Remote\/setuserpass\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1922 = /Remote\/shspawnas/ nocase ascii wide
+        $string1918 = /Remote\/shspawnas/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string1923 = /Remote\/suspendresume\// nocase ascii wide
+        $string1919 = /Remote\/suspendresume\// nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1924 = /remote\-exec\s.{0,1000}jump\s/ nocase ascii wide
+        $string1920 = /remote\-exec\s.{0,1000}jump\s/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string1925 = /remotereg\.cna/ nocase ascii wide
+        $string1921 = /remotereg\.cna/ nocase ascii wide
         // Description: A protective and Low Level Shellcode Loader that defeats modern EDR systems.
         // Reference: https://github.com/cribdragg3r/Alaris
-        $string1926 = /replace_key_iv_shellcode/ nocase ascii wide
+        $string1922 = /replace_key_iv_shellcode/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOFs) for shells and lols
         // Reference: https://github.com/RiccardoAncarani/BOFs
-        $string1927 = /RiccardoAncarani\/BOFs/ nocase ascii wide
+        $string1923 = /RiccardoAncarani\/BOFs/ nocase ascii wide
         // Description: LiquidSnake is a tool that allows operators to perform fileless Lateral Movement using WMI Event Subscriptions and GadgetToJScript
         // Reference: https://github.com/RiccardoAncarani/LiquidSnake
-        $string1928 = /RiccardoAncarani\/LiquidSnake/ nocase ascii wide
+        $string1924 = /RiccardoAncarani\/LiquidSnake/ nocase ascii wide
         // Description: tamper scheduled task with a binary
         // Reference: https://github.com/RiccardoAncarani/TaskShell
-        $string1929 = /RiccardoAncarani\/TaskShell/ nocase ascii wide
+        $string1925 = /RiccardoAncarani\/TaskShell/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string1930 = /rkervella\/CarbonMonoxide/ nocase ascii wide
+        $string1926 = /rkervella\/CarbonMonoxide/ nocase ascii wide
         // Description: Collection of beacon object files for use with Cobalt Strike to facilitate
         // Reference: https://github.com/rookuu/BOFs
-        $string1931 = /rookuu\/BOFs\// nocase ascii wide
+        $string1927 = /rookuu\/BOFs\// nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1932 = /rpcattack\.py/ nocase ascii wide
+        $string1928 = /rpcattack\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1933 = /rpcrelayclient\.py/ nocase ascii wide
+        $string1929 = /rpcrelayclient\.py/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1934 = /rsmudge\/ElevateKit/ nocase ascii wide
+        $string1930 = /rsmudge\/ElevateKit/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1935 = /runasadmin\suac\-cmstplua/ nocase ascii wide
+        $string1931 = /runasadmin\suac\-cmstplua/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string1936 = /runasadmin\suac\-token\-duplication/ nocase ascii wide
+        $string1932 = /runasadmin\suac\-token\-duplication/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string1937 = /RunOF\.exe\s\-/ nocase ascii wide
+        $string1933 = /RunOF\.exe\s\-/ nocase ascii wide
         // Description: A tool to run object files mainly beacon object files (BOF) in .Net.
         // Reference: https://github.com/nettitude/RunOF
-        $string1938 = /RunOF\.Internals/ nocase ascii wide
+        $string1934 = /RunOF\.Internals/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files (BOFs) written in rust with rust core and alloc.
         // Reference: https://github.com/wumb0/rust_bof
-        $string1939 = /rustbof\.cna/ nocase ascii wide
+        $string1935 = /rustbof\.cna/ nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string1940 = /rvrsh3ll\/BOF_Collection/ nocase ascii wide
+        $string1936 = /rvrsh3ll\/BOF_Collection/ nocase ascii wide
         // Description: Example code for using named pipe output with beacon ReflectiveDLLs
         // Reference: https://github.com/rxwx/cs-rdll-ipc-example
-        $string1941 = /rxwx\/cs\-rdll\-ipc\-example/ nocase ascii wide
+        $string1937 = /rxwx\/cs\-rdll\-ipc\-example/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1942 = /s4u\.x64\.c/ nocase ascii wide
+        $string1938 = /s4u\.x64\.c/ nocase ascii wide
         // Description: BOF for Kerberos abuse (an implementation of some important features of the Rubeus)
         // Reference: https://github.com/RalfHacker/Kerbeus-BOF
-        $string1943 = /s4u\.x64\.o/ nocase ascii wide
+        $string1939 = /s4u\.x64\.o/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string1944 = /SafetyKatz\.exe/ nocase ascii wide
+        $string1940 = /SafetyKatz\.exe/ nocase ascii wide
         // Description: Use windows api to add users which can be used when net is unavailable
         // Reference: https://github.com/lengjibo/NetUser
-        $string1945 = /SamAdduser\.exe/ nocase ascii wide
+        $string1941 = /SamAdduser\.exe/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string1946 = /samr_\#\#/ nocase ascii wide
+        $string1942 = /samr_\#\#/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1947 = /ScareCrow.{0,1000}\s\-encryptionmode\s/ nocase ascii wide
+        $string1943 = /ScareCrow.{0,1000}\s\-encryptionmode\s/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1948 = /ScareCrow.{0,1000}\s\-Evasion/ nocase ascii wide
+        $string1944 = /ScareCrow.{0,1000}\s\-Evasion/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1949 = /ScareCrow.{0,1000}\s\-Exec/ nocase ascii wide
+        $string1945 = /ScareCrow.{0,1000}\s\-Exec/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1950 = /ScareCrow.{0,1000}\s\-injection/ nocase ascii wide
+        $string1946 = /ScareCrow.{0,1000}\s\-injection/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1951 = /ScareCrow.{0,1000}\s\-Loader\s.{0,1000}\s/ nocase ascii wide
+        $string1947 = /ScareCrow.{0,1000}\s\-Loader\s.{0,1000}\s/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1952 = /ScareCrow.{0,1000}\s\-noamsi/ nocase ascii wide
+        $string1948 = /ScareCrow.{0,1000}\s\-noamsi/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1953 = /ScareCrow.{0,1000}\s\-noetw/ nocase ascii wide
+        $string1949 = /ScareCrow.{0,1000}\s\-noetw/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1954 = /ScareCrow.{0,1000}\s\-obfu/ nocase ascii wide
+        $string1950 = /ScareCrow.{0,1000}\s\-obfu/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1955 = /ScareCrow.{0,1000}_darwin_amd64/ nocase ascii wide
+        $string1951 = /ScareCrow.{0,1000}_darwin_amd64/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1956 = /ScareCrow.{0,1000}_windows_amd64\.exe/ nocase ascii wide
+        $string1952 = /ScareCrow.{0,1000}_windows_amd64\.exe/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1957 = /ScareCrow.{0,1000}KnownDLL/ nocase ascii wide
+        $string1953 = /ScareCrow.{0,1000}KnownDLL/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1958 = /ScareCrow.{0,1000}ProcessInjection/ nocase ascii wide
+        $string1954 = /ScareCrow.{0,1000}ProcessInjection/ nocase ascii wide
         // Description: Cobalt Strike script for ScareCrow payloads intergration (EDR/AV evasion)
         // Reference: https://github.com/GeorgePatsias/ScareCrow-CobaltStrike
-        $string1959 = /ScareCrow\.cna/ nocase ascii wide
+        $string1955 = /ScareCrow\.cna/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1960 = /ScareCrow\/Cryptor/ nocase ascii wide
+        $string1956 = /ScareCrow\/Cryptor/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1961 = /ScareCrow\/limelighter/ nocase ascii wide
+        $string1957 = /ScareCrow\/limelighter/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1962 = /ScareCrow\/Loader/ nocase ascii wide
+        $string1958 = /ScareCrow\/Loader/ nocase ascii wide
         // Description: ScareCrow - Payload creation framework designed around EDR bypass.
         // Reference: https://github.com/optiv/ScareCrow
-        $string1963 = /ScareCrow\/Utils/ nocase ascii wide
+        $string1959 = /ScareCrow\/Utils/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1964 = /schshell\.cna/ nocase ascii wide
+        $string1960 = /schshell\.cna/ nocase ascii wide
         // Description: A Visual Studio template used to create Cobalt Strike BOFs
         // Reference: https://github.com/securifybv/Visual-Studio-BOF-template
-        $string1965 = /schtask_callback/ nocase ascii wide
+        $string1961 = /schtask_callback/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1966 = /schtasks_elevator/ nocase ascii wide
+        $string1962 = /schtasks_elevator/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string1967 = /schtasks_exploit\s/ nocase ascii wide
+        $string1963 = /schtasks_exploit\s/ nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string1968 = /ScRunBase32\.exe/ nocase ascii wide
+        $string1964 = /ScRunBase32\.exe/ nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string1969 = /ScRunBase32\.py/ nocase ascii wide
+        $string1965 = /ScRunBase32\.py/ nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string1970 = /ScRunBase64\.exe/ nocase ascii wide
+        $string1966 = /ScRunBase64\.exe/ nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string1971 = /ScRunBase64\.py/ nocase ascii wide
+        $string1967 = /ScRunBase64\.py/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1972 = /scshell.{0,1000}XblAuthManager/ nocase ascii wide
+        $string1968 = /scshell.{0,1000}XblAuthManager/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1973 = /SCShell\.exe/ nocase ascii wide
+        $string1969 = /SCShell\.exe/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1974 = /scshell\.py/ nocase ascii wide
+        $string1970 = /scshell\.py/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1975 = /scshellbof\.c/ nocase ascii wide
+        $string1971 = /scshellbof\.c/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1976 = /scshellbof\.o/ nocase ascii wide
+        $string1972 = /scshellbof\.o/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string1977 = /scshellbofx64/ nocase ascii wide
+        $string1973 = /scshellbofx64/ nocase ascii wide
         // Description: Rapid Attack Infrastructure (RAI)
         // Reference: https://github.com/obscuritylabs/RAI
-        $string1978 = /searchsploit_rc/ nocase ascii wide
+        $string1974 = /searchsploit_rc/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string1979 = /Seatbelt\.exe/ nocase ascii wide
+        $string1975 = /Seatbelt\.exe/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1980 = /sec\-inject\s/ nocase ascii wide
+        $string1976 = /sec\-inject\s/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1981 = /secinject\.cna/ nocase ascii wide
+        $string1977 = /secinject\.cna/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1982 = /secinject\.git/ nocase ascii wide
+        $string1978 = /secinject\.git/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1983 = /secinject\.x64/ nocase ascii wide
+        $string1979 = /secinject\.x64/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1984 = /secinject\.x86/ nocase ascii wide
+        $string1980 = /secinject\.x86/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1985 = /secinject\/src/ nocase ascii wide
+        $string1981 = /secinject\/src/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1986 = /secretsdump\..{0,1000}\.pyc/ nocase ascii wide
+        $string1982 = /secretsdump\..{0,1000}\.pyc/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string1987 = /secretsdump\.py/ nocase ascii wide
+        $string1983 = /secretsdump\.py/ nocase ascii wide
         // Description: Section Mapping Process Injection (secinject): Cobalt Strike BOF
         // Reference: https://github.com/apokryptein/secinject
-        $string1988 = /sec\-shinject\s/ nocase ascii wide
+        $string1984 = /sec\-shinject\s/ nocase ascii wide
         // Description: BOF implementation of the research by @jonasLyk and the drafted PoC from @LloydLabs
         // Reference: https://github.com/EspressoCake/Self_Deletion_BOF
-        $string1989 = /self_delete\.x64\.o/ nocase ascii wide
+        $string1985 = /self_delete\.x64\.o/ nocase ascii wide
         // Description: BOF implementation of the research by @jonasLyk and the drafted PoC from @LloydLabs
         // Reference: https://github.com/EspressoCake/Self_Deletion_BOF
-        $string1990 = /Self_Deletion_BOF/ nocase ascii wide
+        $string1986 = /Self_Deletion_BOF/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOFs) for shells and lols
         // Reference: https://github.com/RiccardoAncarani/BOFs
-        $string1991 = /send_shellcode_via_pipe/ nocase ascii wide
+        $string1987 = /send_shellcode_via_pipe/ nocase ascii wide
         // Description: LiquidSnake is a tool that allows operators to perform fileless Lateral Movement using WMI Event Subscriptions and GadgetToJScript
         // Reference: https://github.com/RiccardoAncarani/LiquidSnake
-        $string1992 = /send_shellcode_via_pipe/ nocase ascii wide
+        $string1988 = /send_shellcode_via_pipe/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1993 = /serverscan\.linux\.elf/ nocase ascii wide
+        $string1989 = /serverscan\.linux\.elf/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1994 = /serverscan\.linux\.so/ nocase ascii wide
+        $string1990 = /serverscan\.linux\.so/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1995 = /serverScan\.win\.cna/ nocase ascii wide
+        $string1991 = /serverScan\.win\.cna/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1996 = /serverscan_386\.exe/ nocase ascii wide
+        $string1992 = /serverscan_386\.exe/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1997 = /ServerScan_Air_.{0,1000}\.exe/ nocase ascii wide
+        $string1993 = /ServerScan_Air_.{0,1000}\.exe/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1998 = /ServerScan_Air_.{0,1000}_amd64/ nocase ascii wide
+        $string1994 = /ServerScan_Air_.{0,1000}_amd64/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string1999 = /ServerScan_Air_.{0,1000}_i386/ nocase ascii wide
+        $string1995 = /ServerScan_Air_.{0,1000}_i386/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2000 = /serverscan_air\-probes\.exe/ nocase ascii wide
+        $string1996 = /serverscan_air\-probes\.exe/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2001 = /serverscan_amd64\.exe/ nocase ascii wide
+        $string1997 = /serverscan_amd64\.exe/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2002 = /ServerScan_Pro_.{0,1000}\.exe/ nocase ascii wide
+        $string1998 = /ServerScan_Pro_.{0,1000}\.exe/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2003 = /ServerScan_Pro_.{0,1000}_amd64/ nocase ascii wide
+        $string1999 = /ServerScan_Pro_.{0,1000}_amd64/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2004 = /ServerScan_Pro_.{0,1000}_i386/ nocase ascii wide
+        $string2000 = /ServerScan_Pro_.{0,1000}_i386/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2005 = /serverscan64\s/ nocase ascii wide
+        $string2001 = /serverscan64\s/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2006 = /serverscan64\s.{0,1000}tcp/ nocase ascii wide
+        $string2002 = /serverscan64\s.{0,1000}tcp/ nocase ascii wide
         // Description: ServerScan is a high-concurrency network scanning and service detection tool developed in Golang.
         // Reference: https://github.com/Adminisme/ServerScan
-        $string2007 = /serverscan86\s/ nocase ascii wide
+        $string2003 = /serverscan86\s/ nocase ascii wide
         // Description: New Lateral Movement technique by abusing Windows Perception Simulation Service to achieve DLL hijacking code execution.
         // Reference: https://github.com/netero1010/ServiceMove-BOF
-        $string2008 = /servicemove.{0,1000}hid\.dll/ nocase ascii wide
+        $string2004 = /servicemove.{0,1000}hid\.dll/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2009 = /set\shosts_stage/ nocase ascii wide
+        $string2005 = /set\shosts_stage/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2010 = /set\skeylogger/ nocase ascii wide
+        $string2006 = /set\skeylogger/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2011 = /set\sobfuscate\s/ nocase ascii wide
+        $string2007 = /set\sobfuscate\s/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2012 = /set\spipename\s/ nocase ascii wide
+        $string2008 = /set\spipename\s/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2013 = /set\ssmartinject/ nocase ascii wide
+        $string2009 = /set\ssmartinject/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2014 = /set\suserwx/ nocase ascii wide
+        $string2010 = /set\suserwx/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string2015 = /setc_webshell/ nocase ascii wide
+        $string2011 = /setc_webshell/ nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string2016 = /setLoaderFlagZero/ nocase ascii wide
+        $string2012 = /setLoaderFlagZero/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2017 = /setthreadcontext\.x64/ nocase ascii wide
+        $string2013 = /setthreadcontext\.x64/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2018 = /setthreadcontext\.x86/ nocase ascii wide
+        $string2014 = /setthreadcontext\.x86/ nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string2019 = /setup_obfuscate_xor_key/ nocase ascii wide
+        $string2015 = /setup_obfuscate_xor_key/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2020 = /setup_reflective_loader/ nocase ascii wide
+        $string2016 = /setup_reflective_loader/ nocase ascii wide
         // Description: dump lsass
         // Reference: https://github.com/seventeenman/CallBackDump
-        $string2021 = /seventeenman\/CallBackDump/ nocase ascii wide
+        $string2017 = /seventeenman\/CallBackDump/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string2022 = /ShadowUser\/scvhost\.exe/ nocase ascii wide
-        // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
-        // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2023 = /Sharp\sCompile/ nocase ascii wide
+        $string2018 = /ShadowUser\/scvhost\.exe/ nocase ascii wide
         // Description: .NET Assembly to Retrieve Outlook Calendar Details
         // Reference: https://github.com/OG-Sadpanda/SharpCalendar
-        $string2024 = /SharpCalendar\.exe/ nocase ascii wide
+        $string2019 = /SharpCalendar\.exe/ nocase ascii wide
         // Description: C# alternative to the linux cat command... Prints file contents to console. For use with Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpCat
-        $string2025 = /SharpCat\.exe/ nocase ascii wide
+        $string2020 = /SharpCat\.exe/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2026 = /sharpcompile.{0,1000}\.exe/ nocase ascii wide
+        $string2021 = /sharpcompile.{0,1000}\.exe/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2027 = /sharpCompileHandler/ nocase ascii wide
+        $string2022 = /sharpCompileHandler/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2028 = /SharpCompileServer/ nocase ascii wide
+        $string2023 = /SharpCompileServer/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2029 = /SharpCompileServer\.exe/ nocase ascii wide
+        $string2024 = /SharpCompileServer\.exe/ nocase ascii wide
         // Description: SharpCradle is a tool designed to help penetration testers or red teams download and execute .NET binaries into memory.
         // Reference: https://github.com/anthemtotheego/SharpCradle
-        $string2030 = /SharpCradle.{0,1000}logonpasswords/ nocase ascii wide
+        $string2025 = /SharpCradle.{0,1000}logonpasswords/ nocase ascii wide
         // Description: SharpCradle is a tool designed to help penetration testers or red teams download and execute .NET binaries into memory.
         // Reference: https://github.com/anthemtotheego/SharpCradle
-        $string2031 = /SharpCradle\.exe/ nocase ascii wide
+        $string2026 = /SharpCradle\.exe/ nocase ascii wide
         // Description: Persistence by writing/reading shellcode from Event Log
         // Reference: https://github.com/improsec/SharpEventPersist
-        $string2032 = /SharpEventLoader/ nocase ascii wide
+        $string2027 = /SharpEventLoader/ nocase ascii wide
         // Description: Persistence by writing/reading shellcode from Event Log
         // Reference: https://github.com/improsec/SharpEventPersist
-        $string2033 = /SharpEventPersist/ nocase ascii wide
+        $string2028 = /SharpEventPersist/ nocase ascii wide
         // Description: Read Excel Spreadsheets (XLS/XLSX) using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpExcelibur
-        $string2034 = /SharpExcelibur/ nocase ascii wide
+        $string2029 = /SharpExcelibur/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2035 = /sharp\-exec\s/ nocase ascii wide
+        $string2030 = /sharp\-exec\s/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2036 = /sharp\-fexec\s/ nocase ascii wide
+        $string2031 = /sharp\-fexec\s/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2037 = /SharpGen\.dll/ nocase ascii wide
+        $string2032 = /SharpGen\.dll/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2038 = /sharpgen\.enable_cache/ nocase ascii wide
+        $string2033 = /sharpgen\.enable_cache/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2039 = /sharpgen\.py/ nocase ascii wide
+        $string2034 = /sharpgen\.py/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2040 = /sharpgen\.set_location/ nocase ascii wide
+        $string2035 = /sharpgen\.set_location/ nocase ascii wide
         // Description: C# binary with embeded golang hack-browser-data
         // Reference: https://github.com/S3cur3Th1sSh1t/Sharp-HackBrowserData
-        $string2041 = /Sharp\-HackBrowserData/ nocase ascii wide
+        $string2036 = /Sharp\-HackBrowserData/ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string2042 = /SharpHound\.cna/ nocase ascii wide
+        $string2037 = /SharpHound\.cna/ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string2043 = /SharpHound\.exe/ nocase ascii wide
+        $string2038 = /SharpHound\.exe/ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string2044 = /SharpHound\.ps1/ nocase ascii wide
+        $string2039 = /SharpHound\.ps1/ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string2045 = /Sharphound2\./ nocase ascii wide
+        $string2040 = /Sharphound2\./ nocase ascii wide
         // Description: Aggressor scripts for use with Cobalt Strike 3.0+
         // Reference: https://github.com/C0axx/AggressorScripts
-        $string2046 = /Sharphound\-Aggressor/ nocase ascii wide
+        $string2041 = /Sharphound\-Aggressor/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string2047 = /SharpSCShell/ nocase ascii wide
+        $string2042 = /SharpSCShell/ nocase ascii wide
         // Description: SharpCradle is a tool designed to help penetration testers or red teams download and execute .NET binaries into memory.
         // Reference: https://github.com/anthemtotheego/SharpCradle
-        $string2048 = /SharpSploitConsole_x/ nocase ascii wide
+        $string2043 = /SharpSploitConsole_x/ nocase ascii wide
         // Description: Cobalt Strike kit for Persistence
         // Reference: https://github.com/0xthirteen/StayKit
-        $string2049 = /SharpStay\.exe/ nocase ascii wide
+        $string2044 = /SharpStay\.exe/ nocase ascii wide
         // Description: Read the contents of DOCX files using Cobalt Strike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpSword
-        $string2050 = /SharpSword\.exe/ nocase ascii wide
+        $string2045 = /SharpSword\.exe/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string2051 = /SharpZeroLogon/ nocase ascii wide
+        $string2046 = /SharpZeroLogon/ nocase ascii wide
         // Description: List/Read contents of Zip files (in memory and without extraction) using CobaltStrike's Execute-Assembly
         // Reference: https://github.com/OG-Sadpanda/SharpZippo
-        $string2052 = /SharpZippo\.exe/ nocase ascii wide
+        $string2047 = /SharpZippo\.exe/ nocase ascii wide
         // Description: bypassAV cobaltstrike shellcode
         // Reference: https://github.com/jas502n/bypassAV-1
-        $string2053 = /shell\.exe\s\-s\spayload\.txt/ nocase ascii wide
+        $string2048 = /shell\.exe\s\-s\spayload\.txt/ nocase ascii wide
         // Description: ShellCode_Loader - Msf&CobaltStrike Antivirus ShellCode loader. Shellcode_encryption - Antivirus Shellcode encryption generation tool. currently tested for Antivirus 360 & Huorong & Computer Manager & Windows Defender (other antivirus software not tested).
         // Reference: https://github.com/Axx8/ShellCode_Loader
-        $string2054 = /Shellcode_encryption\.exe/ nocase ascii wide
+        $string2049 = /Shellcode_encryption\.exe/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string2055 = /shellcode_generator\./ nocase ascii wide
+        $string2050 = /shellcode_generator\./ nocase ascii wide
         // Description: Cobalt Strike Shellcode Generator
         // Reference: https://github.com/RCStep/CSSG
-        $string2056 = /shellcode_generator_help\.html/ nocase ascii wide
+        $string2051 = /shellcode_generator_help\.html/ nocase ascii wide
         // Description: ShellCode_Loader - Msf&CobaltStrike Antivirus ShellCode loader. Shellcode_encryption - Antivirus Shellcode encryption generation tool. currently tested for Antivirus 360 & Huorong & Computer Manager & Windows Defender (other antivirus software not tested).
         // Reference: https://github.com/Axx8/ShellCode_Loader
-        $string2057 = /ShellCode_Loader\.py/ nocase ascii wide
+        $string2052 = /ShellCode_Loader\.py/ nocase ascii wide
         // Description: python ShellCode Loader (Cobaltstrike&Metasploit)
         // Reference: https://github.com/OneHone/C--Shellcode
-        $string2058 = /shellcode20\.exe/ nocase ascii wide
+        $string2053 = /shellcode20\.exe/ nocase ascii wide
         // Description: python ShellCode Loader (Cobaltstrike&Metasploit)
         // Reference: https://github.com/OneHone/C--Shellcode
-        $string2059 = /shellcode30\.exe/ nocase ascii wide
+        $string2054 = /shellcode30\.exe/ nocase ascii wide
         // Description: python ShellCode Loader (Cobaltstrike&Metasploit)
         // Reference: https://github.com/OneHone/C--Shellcode
-        $string2060 = /shellcode35\.exe/ nocase ascii wide
+        $string2055 = /shellcode35\.exe/ nocase ascii wide
         // Description: python ShellCode Loader (Cobaltstrike&Metasploit)
         // Reference: https://github.com/OneHone/C--Shellcode
-        $string2061 = /shellcode40\.exe/ nocase ascii wide
+        $string2056 = /shellcode40\.exe/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2062 = /shspawn\sx64\s/ nocase ascii wide
+        $string2057 = /shspawn\sx64\s/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2063 = /shspawn\sx86\s/ nocase ascii wide
+        $string2058 = /shspawn\sx86\s/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string2064 = /SigFlip\.exe\s\-/ nocase ascii wide
+        $string2059 = /SigFlip\.exe\s\-/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string2065 = /SigFlip\.WinTrustData/ nocase ascii wide
+        $string2060 = /SigFlip\.WinTrustData/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string2066 = /SigInject\s.{0,1000}\.dll/ nocase ascii wide
+        $string2061 = /SigInject\s.{0,1000}\.dll/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string2067 = /Sigloader\s.{0,1000}\.dll/ nocase ascii wide
+        $string2062 = /Sigloader\s.{0,1000}\.dll/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string2068 = /SigLoader\/sigloader\.c/ nocase ascii wide
+        $string2063 = /SigLoader\/sigloader\.c/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string2069 = /sigwhatever\.exe/ nocase ascii wide
+        $string2064 = /sigwhatever\.exe/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string2070 = /Silent\sLsass\sDump/ nocase ascii wide
+        $string2065 = /Silent\sLsass\sDump/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files
         // Reference: https://github.com/guervild/BOFs
-        $string2071 = /silentLsassDump/ nocase ascii wide
+        $string2066 = /silentLsassDump/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string2072 = /\-Situational\-Awareness\-BOF/ nocase ascii wide
+        $string2067 = /\-Situational\-Awareness\-BOF/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string2073 = /sleep_python_bridge\.sleepy/ nocase ascii wide
+        $string2068 = /sleep_python_bridge\.sleepy/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string2074 = /sleep_python_bridge\.striker/ nocase ascii wide
+        $string2069 = /sleep_python_bridge\.striker/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string2075 = /sleepmask\.x64\.o/ nocase ascii wide
+        $string2070 = /sleepmask\.x64\.o/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string2076 = /sleepmask\.x86\.o/ nocase ascii wide
+        $string2071 = /sleepmask\.x86\.o/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string2077 = /sleepmask_pivot\.x64\.o/ nocase ascii wide
+        $string2072 = /sleepmask_pivot\.x64\.o/ nocase ascii wide
         // Description: This project is 'bridge' between the sleep and python language. It allows the control of a Cobalt Strike teamserver through python without the need for for the standard GUI client.
         // Reference: https://github.com/Cobalt-Strike/sleep_python_bridge
-        $string2078 = /sleepmask_pivot\.x86\.o/ nocase ascii wide
+        $string2073 = /sleepmask_pivot\.x86\.o/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string2079 = /smb_pipename_stager/ nocase ascii wide
+        $string2074 = /smb_pipename_stager/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2080 = /smbattack\.py/ nocase ascii wide
+        $string2075 = /smbattack\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2081 = /smbrelayclient\.py/ nocase ascii wide
+        $string2076 = /smbrelayclient\.py/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2082 = /smbrelayserver\./ nocase ascii wide
+        $string2077 = /smbrelayserver\./ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2083 = /smtprelayclient\.py/ nocase ascii wide
+        $string2078 = /smtprelayclient\.py/ nocase ascii wide
         // Description: Winsocket for Cobalt Strike.
         // Reference: https://github.com/WKL-Sec/Winsocky
-        $string2084 = /socky\swhoami/ nocase ascii wide
+        $string2079 = /socky\swhoami/ nocase ascii wide
         // Description: SourcePoint is a C2 profile generator for Cobalt Strike command and control servers designed to ensure evasion.
         // Reference: https://github.com/Tylous/SourcePoint
-        $string2085 = /SourcePoint.{0,1000}Loader\.go/ nocase ascii wide
+        $string2080 = /SourcePoint.{0,1000}Loader\.go/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2086 = /source\-teamserver\.sh/ nocase ascii wide
+        $string2081 = /source\-teamserver\.sh/ nocase ascii wide
         // Description: CrossC2 developed based on the Cobalt Strike framework can be used for other cross-platform system control. CrossC2Kit provides some interfaces for users to call to manipulate the CrossC2 Beacon session. thereby extending the functionality of Cobalt Strike.
         // Reference: https://github.com/CrossC2/CrossC2Kit
-        $string2087 = /spawn\/runshellcode/ nocase ascii wide
+        $string2082 = /spawn\/runshellcode/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string2088 = /SpawnTheThing\(/ nocase ascii wide
+        $string2083 = /SpawnTheThing\(/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2089 = /spawnto\s.{0,1000}\.exe/ nocase ascii wide
+        $string2084 = /spawnto\s.{0,1000}\.exe/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string2090 = /\'spawnto_x64\'/ nocase ascii wide
+        $string2085 = /\'spawnto_x64\'/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string2091 = /\'spawnto_x86\'/ nocase ascii wide
+        $string2086 = /\'spawnto_x86\'/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string2092 = /spoolss_\#\#/ nocase ascii wide
+        $string2087 = /spoolss_\#\#/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string2093 = /spoolsystem\sinject/ nocase ascii wide
+        $string2088 = /spoolsystem\sinject/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string2094 = /spoolsystem\sspawn/ nocase ascii wide
+        $string2089 = /spoolsystem\sspawn/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string2095 = /spoolsystem\.cna/ nocase ascii wide
+        $string2090 = /spoolsystem\.cna/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string2096 = /SpoolTrigger\.x64\.dl/ nocase ascii wide
+        $string2091 = /SpoolTrigger\.x64\.dl/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string2097 = /SpoolTrigger\.x64\.dll/ nocase ascii wide
+        $string2092 = /SpoolTrigger\.x64\.dll/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string2098 = /SpoolTrigger\.x86\.dl/ nocase ascii wide
+        $string2093 = /SpoolTrigger\.x86\.dl/ nocase ascii wide
         // Description: Information released publicly by NCC Group's Full Spectrum Attack Simulation (FSAS) team
         // Reference: https://github.com/nccgroup/nccfsas
-        $string2099 = /SpoolTrigger\.x86\.dll/ nocase ascii wide
+        $string2094 = /SpoolTrigger\.x86\.dll/ nocase ascii wide
         // Description: Spectrum Attack Simulation beacons
         // Reference: https://github.com/nccgroup/nccfsas/
-        $string2100 = /SpoolTrigger\\SpoolTrigger\./ nocase ascii wide
+        $string2095 = /SpoolTrigger\\SpoolTrigger\./ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2101 = /Spray\-AD\s/ nocase ascii wide
+        $string2096 = /Spray\-AD\s/ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2102 = /Spray\-AD\.cna/ nocase ascii wide
+        $string2097 = /Spray\-AD\.cna/ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2103 = /Spray\-AD\.dll/ nocase ascii wide
+        $string2098 = /Spray\-AD\.dll/ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2104 = /Spray\-AD\.exe/ nocase ascii wide
+        $string2099 = /Spray\-AD\.exe/ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2105 = /Spray\-AD\.sln/ nocase ascii wide
+        $string2100 = /Spray\-AD\.sln/ nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2106 = /Spray\-AD\\Spray\-AD/ nocase ascii wide
+        $string2101 = /Spray\-AD\\Spray\-AD/ nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2107 = /src\/Remote\/chromeKey\// nocase ascii wide
+        $string2102 = /src\/Remote\/chromeKey\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2108 = /src\/Remote\/lastpass\// nocase ascii wide
+        $string2103 = /src\/Remote\/lastpass\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2109 = /src\/Remote\/sc_config\// nocase ascii wide
+        $string2104 = /src\/Remote\/sc_config\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2110 = /src\/Remote\/sc_create\// nocase ascii wide
+        $string2105 = /src\/Remote\/sc_create\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2111 = /src\/Remote\/sc_delete\// nocase ascii wide
+        $string2106 = /src\/Remote\/sc_delete\// nocase ascii wide
         // Description: Cobaltstrike injection BOFs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2112 = /src\/Remote\/sc_start\// nocase ascii wide
+        $string2107 = /src\/Remote\/sc_start\// nocase ascii wide
         // Description: A Cobalt Strike tool to audit Active Directory user accounts for weak - well known or easy guessable passwords.
         // Reference: https://github.com/outflanknl/Spray-AD
-        $string2113 = /Src\/Spray\-AD/ nocase ascii wide
+        $string2108 = /Src\/Spray\-AD/ nocase ascii wide
         // Description: Cobalt Strike BOF zerologon exploit
         // Reference: https://github.com/rsmudge/ZeroLogon-BOF
-        $string2114 = /src\/zerologon\.c/ nocase ascii wide
+        $string2109 = /src\/zerologon\.c/ nocase ascii wide
         // Description: Remove API hooks from a Beacon process.
         // Reference: https://github.com/rsmudge/unhook-bof
-        $string2115 = /src\\unhook\.c/ nocase ascii wide
+        $string2110 = /src\\unhook\.c/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string2116 = /srvsvc_\#\#/ nocase ascii wide
+        $string2111 = /srvsvc_\#\#/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2117 = /stage\.obfuscate/ nocase ascii wide
+        $string2112 = /stage\.obfuscate/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string2118 = /stage_smartinject/ nocase ascii wide
+        $string2113 = /stage_smartinject/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string2119 = /stage_transform_x64_prepend/ nocase ascii wide
+        $string2114 = /stage_transform_x64_prepend/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string2120 = /stage_transform_x64_strrep1/ nocase ascii wide
+        $string2115 = /stage_transform_x64_strrep1/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string2121 = /stage_transform_x86_prepend/ nocase ascii wide
+        $string2116 = /stage_transform_x86_prepend/ nocase ascii wide
         // Description: Cobalt Strike random C2 Profile generator
         // Reference: https://github.com/threatexpress/random_c2_profile
-        $string2122 = /stage_transform_x86_strrep1/ nocase ascii wide
+        $string2117 = /stage_transform_x86_strrep1/ nocase ascii wide
         // Description: CACTUSTORCH: Payload Generation for Adversary Simulations
         // Reference: https://github.com/mdsecactivebreach/CACTUSTORCH
-        $string2123 = /stageless\spayload/ nocase ascii wide
+        $string2118 = /stageless\spayload/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2124 = /stager_bind_pipe/ nocase ascii wide
+        $string2119 = /stager_bind_pipe/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2125 = /stager_bind_pipe/ nocase ascii wide
+        $string2120 = /stager_bind_pipe/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2126 = /stager_bind_tcp/ nocase ascii wide
+        $string2121 = /stager_bind_tcp/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2127 = /stager_bind_tcp/ nocase ascii wide
+        $string2122 = /stager_bind_tcp/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2128 = /start\sstinger\s/ nocase ascii wide
+        $string2123 = /start\sstinger\s/ nocase ascii wide
         // Description: A set of fully-undetectable process injection techniques abusing Windows Thread Pools
         // Reference: https://github.com/0xEr3bus/PoolPartyBof
-        $string2129 = /Starting\sPoolParty\sattack\sagainst\sprocess\sid\:/ nocase ascii wide
+        $string2124 = /Starting\sPoolParty\sattack\sagainst\sprocess\sid\:/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2130 = /StartProcessFake\(/ nocase ascii wide
+        $string2125 = /StartProcessFake\(/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2131 = /static_syscalls_apc_spawn\s/ nocase ascii wide
+        $string2126 = /static_syscalls_apc_spawn\s/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2132 = /static_syscalls_apc_spawn/ nocase ascii wide
+        $string2127 = /static_syscalls_apc_spawn/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2133 = /static_syscalls_dump/ nocase ascii wide
+        $string2128 = /static_syscalls_dump/ nocase ascii wide
         // Description: StayKit is an extension for Cobalt Strike persistence by leveraging the execute_assembly function with the SharpStay .NET assembly. The aggressor script handles payload creation by reading the template files for a specific execution type.
         // Reference: https://github.com/0xthirteen/StayKit
-        $string2134 = /StayKit\.cna/ nocase ascii wide
+        $string2129 = /StayKit\.cna/ nocase ascii wide
         // Description: StayKit is an extension for Cobalt Strike persistence by leveraging the execute_assembly function with the SharpStay .NET assembly. The aggressor script handles payload creation by reading the template files for a specific execution type.
         // Reference: https://github.com/0xthirteen/StayKit
-        $string2135 = /StayKit\.exe/ nocase ascii wide
+        $string2130 = /StayKit\.exe/ nocase ascii wide
         // Description: StayKit is an extension for Cobalt Strike persistence by leveraging the execute_assembly function with the SharpStay .NET assembly. The aggressor script handles payload creation by reading the template files for a specific execution type.
         // Reference: https://github.com/0xthirteen/StayKit
-        $string2136 = /StayKit\.git/ nocase ascii wide
+        $string2131 = /StayKit\.git/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2137 = /steal_token\(/ nocase ascii wide
+        $string2132 = /steal_token\(/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2138 = /steal_token_access_mask/ nocase ascii wide
+        $string2133 = /steal_token_access_mask/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string2139 = /stinger_client\s\-/ nocase ascii wide
+        $string2134 = /stinger_client\s\-/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string2140 = /stinger_client\.py/ nocase ascii wide
+        $string2135 = /stinger_client\.py/ nocase ascii wide
         // Description: Bypass firewall for traffic forwarding using webshell. Pystinger implements SOCK4 proxy and port mapping through webshell. It can be directly used by metasploit-framework - viper- cobalt strike for session online.
         // Reference: https://github.com/FunnyWolf/pystinger
-        $string2141 = /stinger_server\.exe/ nocase ascii wide
+        $string2136 = /stinger_server\.exe/ nocase ascii wide
         // Description: A Visual Studio template used to create Cobalt Strike BOFs
         // Reference: https://github.com/securifybv/Visual-Studio-BOF-template
-        $string2142 = /strip_bof\.ps1/ nocase ascii wide
+        $string2137 = /strip_bof\.ps1/ nocase ascii wide
         // Description: A Visual Studio template used to create Cobalt Strike BOFs
         // Reference: https://github.com/securifybv/Visual-Studio-BOF-template
-        $string2143 = /strip\-bof\s\-Path\s/ nocase ascii wide
+        $string2138 = /strip\-bof\s\-Path\s/ nocase ascii wide
         // Description: teamserver cobaltstrike
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2144 = /sudo\s\.\/teamserver\s/ nocase ascii wide
+        $string2139 = /sudo\s\.\/teamserver\s/ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2145 = /suspendresume\.x64\./ nocase ascii wide
+        $string2140 = /suspendresume\.x64\./ nocase ascii wide
         // Description: Cobaltstrike Bofs
         // Reference: https://github.com/trustedsec/CS-Remote-OPs-BOF
-        $string2146 = /suspendresume\.x86\./ nocase ascii wide
+        $string2141 = /suspendresume\.x86\./ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string2147 = /SW2_GetSyscallNumber/ nocase ascii wide
+        $string2142 = /SW2_GetSyscallNumber/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string2148 = /SW2_HashSyscall/ nocase ascii wide
+        $string2143 = /SW2_HashSyscall/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string2149 = /SW2_PopulateSyscallList/ nocase ascii wide
+        $string2144 = /SW2_PopulateSyscallList/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string2150 = /SW2_RVA2VA/ nocase ascii wide
+        $string2145 = /SW2_RVA2VA/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string2151 = /SwampThing\.exe/ nocase ascii wide
+        $string2146 = /SwampThing\.exe/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string2152 = /SweetPotato\.cna/ nocase ascii wide
+        $string2147 = /SweetPotato\.cna/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string2153 = /SweetPotato\.csproj/ nocase ascii wide
+        $string2148 = /SweetPotato\.csproj/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string2154 = /SweetPotato\.exe/ nocase ascii wide
+        $string2149 = /SweetPotato\.exe/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string2155 = /SweetPotato\.ImpersonationToken/ nocase ascii wide
+        $string2150 = /SweetPotato\.ImpersonationToken/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string2156 = /SweetPotato\.sln/ nocase ascii wide
+        $string2151 = /SweetPotato\.sln/ nocase ascii wide
         // Description: Syscall BOF to arbitrarily add/detract process token privilege rights.
         // Reference: https://github.com/EspressoCake/Toggle_Token_Privileges_BOF
-        $string2157 = /syscall_disable_priv\s/ nocase ascii wide
+        $string2152 = /syscall_disable_priv\s/ nocase ascii wide
         // Description: Syscall BOF to arbitrarily add/detract process token privilege rights.
         // Reference: https://github.com/EspressoCake/Toggle_Token_Privileges_BOF
-        $string2158 = /syscall_enable_priv\s/ nocase ascii wide
+        $string2153 = /syscall_enable_priv\s/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string2159 = /syscalls\.asm/ nocase ascii wide
+        $string2154 = /syscalls\.asm/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2160 = /syscalls_dump\./ nocase ascii wide
+        $string2155 = /syscalls_dump\./ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2161 = /syscalls_inject\s/ nocase ascii wide
+        $string2156 = /syscalls_inject\s/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2162 = /syscalls_inject\./ nocase ascii wide
+        $string2157 = /syscalls_inject\./ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2163 = /syscalls_shinject\s/ nocase ascii wide
+        $string2158 = /syscalls_shinject\s/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2164 = /syscalls_shspawn\s/ nocase ascii wide
+        $string2159 = /syscalls_shspawn\s/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2165 = /syscalls_spawn\s/ nocase ascii wide
+        $string2160 = /syscalls_spawn\s/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2166 = /syscalls_spawn\./ nocase ascii wide
+        $string2161 = /syscalls_spawn\./ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2167 = /syscallsapcspawn\.x64/ nocase ascii wide
+        $string2162 = /syscallsapcspawn\.x64/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string2168 = /syscalls\-asm\.h/ nocase ascii wide
+        $string2163 = /syscalls\-asm\.h/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2169 = /syscallsdump\.x64/ nocase ascii wide
+        $string2164 = /syscallsdump\.x64/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2170 = /syscallsinject\.x64/ nocase ascii wide
+        $string2165 = /syscallsinject\.x64/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2171 = /syscallsspawn\.x64/ nocase ascii wide
+        $string2166 = /syscallsspawn\.x64/ nocase ascii wide
         // Description: teamserver cobaltstrike
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2172 = /systemctl\senable\steamserver\.service/ nocase ascii wide
+        $string2167 = /systemctl\senable\steamserver\.service/ nocase ascii wide
         // Description: teamserver cobaltstrike
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2173 = /systemctl\sstart\steamserver\.service/ nocase ascii wide
+        $string2168 = /systemctl\sstart\steamserver\.service/ nocase ascii wide
         // Description: teamserver cobaltstrike
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2174 = /systemctl\sstatus\steamserver\.service/ nocase ascii wide
+        $string2169 = /systemctl\sstatus\steamserver\.service/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string2175 = /SysWhispers\.git\s/ nocase ascii wide
+        $string2170 = /SysWhispers\.git\s/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF)
         // Reference: https://github.com/outflanknl/InlineWhispers
-        $string2176 = /syswhispers\.py/ nocase ascii wide
+        $string2171 = /syswhispers\.py/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string2177 = /syswhispers\.py/ nocase ascii wide
+        $string2172 = /syswhispers\.py/ nocase ascii wide
         // Description: Tool for working with Direct System Calls in Cobalt Strike's Beacon Object Files (BOF) via Syswhispers2
         // Reference: https://github.com/Sh0ckFR/InlineWhispers2
-        $string2178 = /SysWhispers2/ nocase ascii wide
+        $string2173 = /SysWhispers2/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2179 = /TailorScan\.exe\s/ nocase ascii wide
+        $string2174 = /TailorScan\.exe\s/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2180 = /TailorScan_darwin/ nocase ascii wide
+        $string2175 = /TailorScan_darwin/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2181 = /TailorScan_freebsd/ nocase ascii wide
+        $string2176 = /TailorScan_freebsd/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2182 = /TailorScan_linux_/ nocase ascii wide
+        $string2177 = /TailorScan_linux_/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2183 = /TailorScan_netbsd_/ nocase ascii wide
+        $string2178 = /TailorScan_netbsd_/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2184 = /TailorScan_openbsd_/ nocase ascii wide
+        $string2179 = /TailorScan_openbsd_/ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2185 = /TailorScan_windows_.{0,1000}\.exe/ nocase ascii wide
+        $string2180 = /TailorScan_windows_.{0,1000}\.exe/ nocase ascii wide
         // Description: tamper scheduled task with a binary
         // Reference: https://github.com/RiccardoAncarani/TaskShell
-        $string2186 = /TaskShell\.exe\s.{0,1000}\s\-b\s.{0,1000}\.exe/ nocase ascii wide
+        $string2181 = /TaskShell\.exe\s.{0,1000}\s\-b\s.{0,1000}\.exe/ nocase ascii wide
         // Description: tamper scheduled task with a binary
         // Reference: https://github.com/RiccardoAncarani/TaskShell
-        $string2187 = /TaskShell\.exe\s.{0,1000}\s\-s\s.{0,1000}SYSTEM/ nocase ascii wide
+        $string2182 = /TaskShell\.exe\s.{0,1000}\s\-s\s.{0,1000}SYSTEM/ nocase ascii wide
         // Description: teamserver cobaltstrike
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2188 = /teamserver\s.{0,1000}\sc2\-profiles\// nocase ascii wide
+        $string2183 = /teamserver\s.{0,1000}\sc2\-profiles\// nocase ascii wide
         // Description: A proof-of-concept Cobalt Strike Reflective Loader which aims to recreate. integrate. and enhance Cobalt Strike's evasion features!
         // Reference: https://github.com/boku7/BokuLoader
-        $string2189 = /teamserver.{0,1000}\sno_evasion\.profile/ nocase ascii wide
+        $string2184 = /teamserver.{0,1000}\sno_evasion\.profile/ nocase ascii wide
         // Description: CobaltStrike4.4 one-click deployment script Randomly generate passwords. keys. port numbers. certificates. etc.. to solve the problem that cs4.x cannot run on Linux and report errors
         // Reference: https://github.com/AlphabugX/csOnvps
-        $string2190 = /TeamServer\.prop/ nocase ascii wide
+        $string2185 = /TeamServer\.prop/ nocase ascii wide
         // Description: LSASS memory dumper using direct system calls and API unhooking.
         // Reference: https://github.com/outflanknl/Dumpert/tree/master/Dumpert-Aggressor
-        $string2191 = /Temp\\dumpert/ nocase ascii wide
+        $string2186 = /Temp\\dumpert/ nocase ascii wide
         // Description: Load any Beacon Object File using Powershell!
         // Reference: https://github.com/airbus-cert/Invoke-Bof
-        $string2192 = /test_invoke_bof\.x64\.o/ nocase ascii wide
+        $string2187 = /test_invoke_bof\.x64\.o/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2193 = /tgtdelegation\s/ nocase ascii wide
+        $string2188 = /tgtdelegation\s/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2194 = /tgtdelegation\.cna/ nocase ascii wide
+        $string2189 = /tgtdelegation\.cna/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2195 = /tgtdelegation\.x64/ nocase ascii wide
+        $string2190 = /tgtdelegation\.x64/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2196 = /tgtdelegation\.x86/ nocase ascii wide
+        $string2191 = /tgtdelegation\.x86/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2197 = /tgtParse\.py\s/ nocase ascii wide
+        $string2192 = /tgtParse\.py\s/ nocase ascii wide
         // Description: Cobalt Strike Python API
         // Reference: https://github.com/dcsync/pycobalt
-        $string2198 = /third_party\/SharpGen/ nocase ascii wide
+        $string2193 = /third_party\/SharpGen/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2199 = /third\-party.{0,1000}winvnc.{0,1000}\.dll/ nocase ascii wide
+        $string2194 = /third\-party.{0,1000}winvnc.{0,1000}\.dll/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/threatexpress/malleable-c2
-        $string2200 = /threatexpress.{0,1000}malleable/ nocase ascii wide
+        $string2195 = /threatexpress.{0,1000}malleable/ nocase ascii wide
         // Description: Convert Cobalt Strike profiles to modrewrite scripts
         // Reference: https://github.com/threatexpress/cs2modrewrite
-        $string2201 = /threatexpress\/cs2modrewrite/ nocase ascii wide
+        $string2196 = /threatexpress\/cs2modrewrite/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2202 = /ticketConverter\.py\s.{0,1000}\.ccache\s/ nocase ascii wide
+        $string2197 = /ticketConverter\.py\s.{0,1000}\.ccache\s/ nocase ascii wide
         // Description: Cobalt Strike (CS) Beacon Object File (BOF) foundation for kernel exploitation using CVE-2021-21551.
         // Reference: https://github.com/tijme/kernel-mii
-        $string2203 = /tijme\/kernel\-mii/ nocase ascii wide
+        $string2198 = /tijme\/kernel\-mii/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2204 = /TikiLoader.{0,1000}Hollower/ nocase ascii wide
+        $string2199 = /TikiLoader.{0,1000}Hollower/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2205 = /TikiLoader\./ nocase ascii wide
+        $string2200 = /TikiLoader\./ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string2206 = /TikiLoader\./ nocase ascii wide
+        $string2201 = /TikiLoader\./ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2207 = /TikiLoader\.dll/ nocase ascii wide
+        $string2202 = /TikiLoader\.dll/ nocase ascii wide
         // Description: EDR Evasion - Combination of SwampThing - TikiTorch
         // Reference: https://github.com/rkervella/CarbonMonoxide
-        $string2208 = /TikiLoader\.dll/ nocase ascii wide
+        $string2203 = /TikiLoader\.dll/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2209 = /TikiLoader\.Injector/ nocase ascii wide
+        $string2204 = /TikiLoader\.Injector/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2210 = /TikiLoader\\TikiLoader/ nocase ascii wide
+        $string2205 = /TikiLoader\\TikiLoader/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2211 = /TikiSpawn\.dll/ nocase ascii wide
+        $string2206 = /TikiSpawn\.dll/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2212 = /TikiSpawn\.exe/ nocase ascii wide
+        $string2207 = /TikiSpawn\.exe/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2213 = /TikiSpawn\.ps1/ nocase ascii wide
+        $string2208 = /TikiSpawn\.ps1/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2214 = /TikiSpawnAs/ nocase ascii wide
+        $string2209 = /TikiSpawnAs/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2215 = /TikiSpawnAsAdmin/ nocase ascii wide
+        $string2210 = /TikiSpawnAsAdmin/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2216 = /TikiSpawnElevated/ nocase ascii wide
+        $string2211 = /TikiSpawnElevated/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2217 = /TikiSpawnWOppid/ nocase ascii wide
+        $string2212 = /TikiSpawnWOppid/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2218 = /TikiSpawnWppid/ nocase ascii wide
+        $string2213 = /TikiSpawnWppid/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2219 = /TikiTorch\.exe/ nocase ascii wide
+        $string2214 = /TikiTorch\.exe/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2220 = /TikiVader\./ nocase ascii wide
+        $string2215 = /TikiVader\./ nocase ascii wide
         // Description: Cobalt Strike Shellcode Loader by Golang
         // Reference: https://github.com/timwhitez/Doge-Loader
-        $string2221 = /timwhitez\/Doge\-Loader/ nocase ascii wide
+        $string2216 = /timwhitez\/Doge\-Loader/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string2222 = /Tmprovider\.dll/ nocase ascii wide
+        $string2217 = /Tmprovider\.dll/ nocase ascii wide
         // Description: Syscall BOF to arbitrarily add/detract process token privilege rights.
         // Reference: https://github.com/EspressoCake/Toggle_Token_Privileges_BOF
-        $string2223 = /toggle_privileges\.cna/ nocase ascii wide
+        $string2218 = /toggle_privileges\.cna/ nocase ascii wide
         // Description: Syscall BOF to arbitrarily add/detract process token privilege rights.
         // Reference: https://github.com/EspressoCake/Toggle_Token_Privileges_BOF
-        $string2224 = /toggle_privileges_bof\./ nocase ascii wide
+        $string2219 = /toggle_privileges_bof\./ nocase ascii wide
         // Description: Syscall BOF to arbitrarily add/detract process token privilege rights.
         // Reference: https://github.com/EspressoCake/Toggle_Token_Privileges_BOF
-        $string2225 = /Toggle_Token_Privileges_BOF/ nocase ascii wide
+        $string2220 = /Toggle_Token_Privileges_BOF/ nocase ascii wide
         // Description: A Beacon Object File (BOF) for Cobalt Strike which uses direct system calls to enable WDigest credential caching.
         // Reference: https://github.com/outflanknl/WdToggle
-        $string2226 = /ToggleWDigest/ nocase ascii wide
+        $string2221 = /ToggleWDigest/ nocase ascii wide
         // Description: Beacon Object File to delete token privileges and lower the integrity level to untrusted for a specified process
         // Reference: https://github.com/nick-frischkorn/TokenStripBOF
-        $string2227 = /TokenStripBOF\/src/ nocase ascii wide
+        $string2222 = /TokenStripBOF\/src/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2228 = /token\-vault\ssteal/ nocase ascii wide
+        $string2223 = /token\-vault\ssteal/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2229 = /token\-vault\.cna/ nocase ascii wide
+        $string2224 = /token\-vault\.cna/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2230 = /token\-vault\.x64\.o/ nocase ascii wide
+        $string2225 = /token\-vault\.x64\.o/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2231 = /token\-vault\.x86\.o/ nocase ascii wide
+        $string2226 = /token\-vault\.x86\.o/ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/MemReader_BoF
-        $string2232 = /trainr3kt\/MemReader_BoF/ nocase ascii wide
+        $string2227 = /trainr3kt\/MemReader_BoF/ nocase ascii wide
         // Description: MemReader Beacon Object File will allow you to search and extract specific strings from a target process memory and return what is found to the beacon output
         // Reference: https://github.com/trainr3kt/Readfile_BoF
-        $string2233 = /trainr3kt\/Readfile_BoF/ nocase ascii wide
+        $string2228 = /trainr3kt\/Readfile_BoF/ nocase ascii wide
         // Description: Cobalt Strike beacon object file implementation for trusted path UAC bypass. The target executable will be called without involving cmd.exe by using DCOM object.
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string2234 = /TrustedPath\-UACBypass\-BOF/ nocase ascii wide
+        $string2229 = /TrustedPath\-UACBypass\-BOF/ nocase ascii wide
         // Description: Modified SweetPotato to work with CobaltStrike v4.0
         // Reference: https://github.com/Tycx2ry/SweetPotato_CS
-        $string2235 = /Tycx2ry\/SweetPotato/ nocase ascii wide
+        $string2230 = /Tycx2ry\/SweetPotato/ nocase ascii wide
         // Description: SourcePoint is a C2 profile generator for Cobalt Strike command and control servers designed to ensure evasion.
         // Reference: https://github.com/Tylous/SourcePoint
-        $string2236 = /Tylous\/SourcePoint/ nocase ascii wide
+        $string2231 = /Tylous\/SourcePoint/ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string2237 = /UACBypass\-BOF/ nocase ascii wide
+        $string2232 = /UACBypass\-BOF/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2238 = /uac\-schtasks\s/ nocase ascii wide
+        $string2233 = /uac\-schtasks\s/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2239 = /uac\-schtasks/ nocase ascii wide
+        $string2234 = /uac\-schtasks/ nocase ascii wide
         // Description: New UAC bypass for Silent Cleanup for CobaltStrike
         // Reference: https://github.com/EncodeGroup/UAC-SilentClean
-        $string2240 = /uac\-silentcleanup/ nocase ascii wide
+        $string2235 = /uac\-silentcleanup/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2241 = /uac\-token\-duplication/ nocase ascii wide
+        $string2236 = /uac\-token\-duplication/ nocase ascii wide
         // Description: SharpCompile is an aggressor script for Cobalt Strike which allows you to compile and execute C# in realtime. This is a more slick approach than manually compiling an .NET assembly and loading it into Cobalt Strike. The project aims to make it easier to move away from adhoc PowerShell execution instead creating a temporary assembly and executing 
         // Reference: https://github.com/SpiderLabs/SharpCompile
-        $string2242 = /uhttpsharp\./ nocase ascii wide
+        $string2237 = /uhttpsharp\./ nocase ascii wide
         // Description: Self-use suture monster intranet scanner - supports port scanning - identifying services - getting title - scanning multiple network cards - ms17010 scanning - icmp survival detection
         // Reference: https://github.com/uknowsec/TailorScan
-        $string2243 = /uknowsec\/TailorScan/ nocase ascii wide
+        $string2238 = /uknowsec\/TailorScan/ nocase ascii wide
         // Description: Malleable C2 is a domain specific language to redefine indicators in Beacon's communication. This repository is a collection of Malleable C2 profiles that you may use. These profiles work with Cobalt Strike 3.x
         // Reference: https://github.com/rsmudge/Malleable-C2-Profiles
-        $string2244 = /UMJjAiNUUtvNww0lBj9tzWegwphuIn6hNP9eeIDfOrcHJ3nozYFPT\-Jl7WsmbmjZnQXUesoJkcJkpdYEdqgQFE6QZgjWVsLSSDonL28DYDVJ/ nocase ascii wide
+        $string2239 = /UMJjAiNUUtvNww0lBj9tzWegwphuIn6hNP9eeIDfOrcHJ3nozYFPT\-Jl7WsmbmjZnQXUesoJkcJkpdYEdqgQFE6QZgjWVsLSSDonL28DYDVJ/ nocase ascii wide
         // Description: Fileless Lateral Movement tool that relies on ChangeServiceConfigA to run command
         // Reference: https://github.com/Mr-Un1k0d3r/SCShell
-        $string2245 = /Un1k0d3r\/SCShell/ nocase ascii wide
+        $string2240 = /Un1k0d3r\/SCShell/ nocase ascii wide
         // Description: Cobalt Strike Malleable C2 Design and Reference Guide
         // Reference: https://github.com/BC-SECURITY/Malleable-C2-Profiles
-        $string2246 = /ursnif_IcedID\.profile/ nocase ascii wide
+        $string2241 = /ursnif_IcedID\.profile/ nocase ascii wide
         // Description: A Visual Studio template used to create Cobalt Strike BOFs
         // Reference: https://github.com/securifybv/Visual-Studio-BOF-template
-        $string2247 = /Visual\-Studio\-BOF\-template/ nocase ascii wide
+        $string2242 = /Visual\-Studio\-BOF\-template/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string2248 = /vssenum\.x64\./ nocase ascii wide
+        $string2243 = /vssenum\.x64\./ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string2249 = /vssenum\.x86\./ nocase ascii wide
+        $string2244 = /vssenum\.x86\./ nocase ascii wide
         // Description: Bloodhound Attack Path Automation in CobaltStrike
         // Reference: https://github.com/vysecurity/ANGRYPUPPY
-        $string2250 = /vysecurity\/ANGRYPUPPY/ nocase ascii wide
+        $string2245 = /vysecurity\/ANGRYPUPPY/ nocase ascii wide
         // Description: Beacon Object File (BOF) to obtain a usable TGT for the current user and does not require elevated privileges on the host
         // Reference: https://github.com/connormcgarr/tgtdelegation
-        $string2251 = /wcfrelayserver\.py/ nocase ascii wide
+        $string2246 = /wcfrelayserver\.py/ nocase ascii wide
         // Description: A Beacon Object File (BOF) for Cobalt Strike which uses direct system calls to enable WDigest credential caching.
         // Reference: https://github.com/outflanknl/WdToggle
-        $string2252 = /wdigest\!g_fParameter_UseLogonCredential/ nocase ascii wide
+        $string2247 = /wdigest\!g_fParameter_UseLogonCredential/ nocase ascii wide
         // Description: A Beacon Object File (BOF) for Cobalt Strike which uses direct system calls to enable WDigest credential caching.
         // Reference: https://github.com/outflanknl/WdToggle
-        $string2253 = /wdigest\!g_IsCredGuardEnabled/ nocase ascii wide
+        $string2248 = /wdigest\!g_IsCredGuardEnabled/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses handwritten shellcode to return the process Environment strings without touching any DLL's.
         // Reference: https://github.com/boku7/whereami
-        $string2254 = /whereami\.cna/ nocase ascii wide
+        $string2249 = /whereami\.cna/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object File (BOF) that uses handwritten shellcode to return the process Environment strings without touching any DLL's.
         // Reference: https://github.com/boku7/whereami
-        $string2255 = /whereami\.x64/ nocase ascii wide
+        $string2250 = /whereami\.x64/ nocase ascii wide
         // Description: Situational Awareness commands implemented using Beacon Object Files
         // Reference: https://github.com/trustedsec/CS-Situational-Awareness-BOF
-        $string2256 = /WhoamiGetTokenInfo/ nocase ascii wide
+        $string2251 = /WhoamiGetTokenInfo/ nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string2257 = /wifidump\.cna/ nocase ascii wide
+        $string2252 = /wifidump\.cna/ nocase ascii wide
         // Description: Erebus CobaltStrike post penetration testing plugin
         // Reference: https://github.com/DeEpinGh0st/Erebus
-        $string2258 = /windows\-exploit\-suggester\./ nocase ascii wide
+        $string2253 = /windows\-exploit\-suggester\./ nocase ascii wide
         // Description: C++ WinRM API via Reflective DLL
         // Reference: https://github.com/mez-0/winrmdll
-        $string2259 = /winrmdll\s/ nocase ascii wide
+        $string2254 = /winrmdll\s/ nocase ascii wide
         // Description: C++ WinRM API via Reflective DLL
         // Reference: https://github.com/mez-0/winrmdll
-        $string2260 = /winrmdll\./ nocase ascii wide
+        $string2255 = /winrmdll\./ nocase ascii wide
         // Description: Winsocket for Cobalt Strike.
         // Reference: https://github.com/WKL-Sec/Winsocky
-        $string2261 = /Winsocky\-main/ nocase ascii wide
+        $string2256 = /Winsocky\-main/ nocase ascii wide
         // Description: Hidden Desktop (often referred to as HVNC) is a tool that allows operators to interact with a remote desktop session without the user knowing. The VNC protocol is not involved but the result is a similar experience. This Cobalt Strike BOF implementation was created as an alternative to TinyNuke/forks that are written in C++
         // Reference: https://github.com/WKL-Sec/HiddenDesktop
-        $string2262 = /WKL\-Sec\/HiddenDesktop/ nocase ascii wide
+        $string2257 = /WKL\-Sec\/HiddenDesktop/ nocase ascii wide
         // Description: Winsocket for Cobalt Strike.
         // Reference: https://github.com/WKL-Sec/Winsocky
-        $string2263 = /WKL\-Sec\/Winsocky/ nocase ascii wide
+        $string2258 = /WKL\-Sec\/Winsocky/ nocase ascii wide
         // Description: A script to randomize Cobalt Strike Malleable C2 profiles and reduce the chances of flagging signature-based detection controls
         // Reference: https://github.com/bluscreenofjeff/Malleable-C2-Randomizer
-        $string2264 = /wkssvc_\#\#/ nocase ascii wide
+        $string2259 = /wkssvc_\#\#/ nocase ascii wide
         // Description: A CobaltStrike script that uses various WinAPIs to maintain permissions. including API setting system services. setting scheduled tasks. managing users. etc.
         // Reference: https://github.com/yanghaoi/CobaltStrike_CNA
-        $string2265 = /Wmi_Persistence\.ps1/ nocase ascii wide
+        $string2260 = /Wmi_Persistence\.ps1/ nocase ascii wide
         // Description: LiquidSnake is a tool that allows operators to perform fileless Lateral Movement using WMI Event Subscriptions and GadgetToJScript
         // Reference: https://github.com/RiccardoAncarani/LiquidSnake
-        $string2266 = /wmi\-event\-lateral\-movement\./ nocase ascii wide
+        $string2261 = /wmi\-event\-lateral\-movement\./ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string2267 = /WMI\-EventSub\.cpp/ nocase ascii wide
+        $string2262 = /WMI\-EventSub\.cpp/ nocase ascii wide
         // Description: LiquidSnake is a tool that allows operators to perform fileless Lateral Movement using WMI Event Subscriptions and GadgetToJScript
         // Reference: https://github.com/RiccardoAncarani/LiquidSnake
-        $string2268 = /wmi\-lateral\-movement\./ nocase ascii wide
+        $string2263 = /wmi\-lateral\-movement\./ nocase ascii wide
         // Description: Collection of beacon BOF written to learn windows and cobaltstrike
         // Reference: https://github.com/Yaxser/CobaltStrike-BOF
-        $string2269 = /WMI\-ProcessCreate\.cpp/ nocase ascii wide
+        $string2264 = /WMI\-ProcessCreate\.cpp/ nocase ascii wide
         // Description: generate CobaltStrike's cross-platform payload
         // Reference: https://github.com/gloxec/CrossC2
-        $string2270 = /write_cs_teamserver/ nocase ascii wide
+        $string2265 = /write_cs_teamserver/ nocase ascii wide
         // Description: TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process. allocates a region of memory. writes shellcode into that region. and then uses CreateRemoteThread to execute said shellcode. Both the process and shellcode are specified by the user. The primary use case is as a JavaScript/VBScript loader via DotNetToJScript. which can be utilised in a variety of payload types such as HTA and VBA.
         // Reference: https://github.com/rasta-mouse/TikiTorch
-        $string2271 = /WriteAndExecuteShellcode/ nocase ascii wide
+        $string2266 = /WriteAndExecuteShellcode/ nocase ascii wide
         // Description: A faithful transposition of the key features/functionality of @itm4n's PPLDump project as a BOF.
         // Reference: https://github.com/EspressoCake/PPLDump_BOF
-        $string2272 = /WritePayloadDllTransacted/ nocase ascii wide
+        $string2267 = /WritePayloadDllTransacted/ nocase ascii wide
         // Description: The Elevate Kit demonstrates how to use third-party privilege escalation attacks with Cobalt Strike's Beacon payload.
         // Reference: https://github.com/rsmudge/ElevateKit
-        $string2273 = /wscript_elevator/ nocase ascii wide
+        $string2268 = /wscript_elevator/ nocase ascii wide
         // Description: Collection of Beacon Object Files (BOFs) for shells and lols
         // Reference: https://github.com/RiccardoAncarani/BOFs
-        $string2274 = /wts_enum_remote_processes/ nocase ascii wide
+        $string2269 = /wts_enum_remote_processes/ nocase ascii wide
         // Description: Cobalt Strike Beacon Object Files (BOFs) written in rust with rust core and alloc.
         // Reference: https://github.com/wumb0/rust_bof
-        $string2275 = /wumb0\/rust_bof/ nocase ascii wide
+        $string2270 = /wumb0\/rust_bof/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that uses static x64 syscalls to perform a complete in memory dump of a process and send that back through your already existing Beacon communication channel
         // Reference: https://github.com/xforcered/CredBandit
-        $string2276 = /xforcered\/CredBandit/ nocase ascii wide
+        $string2271 = /xforcered\/CredBandit/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/xforcered/Detect-Hooks
-        $string2277 = /xforcered\/Detect\-Hooks/ nocase ascii wide
+        $string2272 = /xforcered\/Detect\-Hooks/ nocase ascii wide
         // Description: Cobalt Strike Shellcode Loader by Golang
         // Reference: https://github.com/timwhitez/Doge-Loader
-        $string2278 = /xor\.exe\s.{0,1000}\.txt/ nocase ascii wide
+        $string2273 = /xor\.exe\s.{0,1000}\.txt/ nocase ascii wide
         // Description: A simple python packer to easily bypass Windows Defender
         // Reference: https://github.com/Unknow101/FuckThatPacker
-        $string2279 = /xor_payload/ nocase ascii wide
+        $string2274 = /xor_payload/ nocase ascii wide
         // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
         // Reference: https://github.com/boku7/xPipe
-        $string2280 = /xpipe\s\\\\/ nocase ascii wide
+        $string2275 = /xpipe\s\\\\/ nocase ascii wide
         // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
         // Reference: https://github.com/boku7/xPipe
-        $string2281 = /xpipe.{0,1000}lsass/ nocase ascii wide
+        $string2276 = /xpipe.{0,1000}lsass/ nocase ascii wide
         // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
         // Reference: https://github.com/boku7/xPipe
-        $string2282 = /xpipe\.c/ nocase ascii wide
-        // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
-        // Reference: https://github.com/boku7/xPipe
-        $string2283 = /xpipe\.cna/ nocase ascii wide
-        // Description: Cobalt Strike BOF to list Windows Pipes & return their Owners & DACL Permissions
-        // Reference: https://github.com/boku7/xPipe
-        $string2284 = /xpipe\.o/ nocase ascii wide
+        $string2277 = /xpipe\.cna/ nocase ascii wide
         // Description: A cobaltstrike shellcode loader - past domestic mainstream antivirus software
         // Reference: https://github.com/YDHCUI/csload.net
-        $string2285 = /YDHCUI\/csload\.net/ nocase ascii wide
+        $string2278 = /YDHCUI\/csload\.net/ nocase ascii wide
         // Description: Chinese clone of cobaltstrike
         // Reference: https://github.com/YDHCUI/manjusaka
-        $string2286 = /YDHCUI\/manjusaka/ nocase ascii wide
+        $string2279 = /YDHCUI\/manjusaka/ nocase ascii wide
         // Description: Example code for using named pipe output with beacon ReflectiveDLLs
         // Reference: https://github.com/rxwx/cs-rdll-ipc-example
-        $string2287 = /youcantpatchthis/ nocase ascii wide
+        $string2280 = /youcantpatchthis/ nocase ascii wide
         // Description: Beacon Object File implementation of Event Viewer deserialization UAC bypass
         // Reference: https://github.com/netero1010/TrustedPath-UACBypass-BOF
-        $string2288 = /ysoserial\.exe/ nocase ascii wide
+        $string2281 = /ysoserial\.exe/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string2289 = /YwBhAGwAYwA\=/ nocase ascii wide
+        $string2282 = /YwBhAGwAYwA\=/ nocase ascii wide
         // Description: Cobalt Strike BOF zerologon exploit
         // Reference: https://github.com/rsmudge/ZeroLogon-BOF
-        $string2290 = /zerologon\.x64/ nocase ascii wide
+        $string2283 = /zerologon\.x64/ nocase ascii wide
         // Description: Cobalt Strike BOF zerologon exploit
         // Reference: https://github.com/rsmudge/ZeroLogon-BOF
-        $string2291 = /zerologon\.x86/ nocase ascii wide
+        $string2284 = /zerologon\.x86/ nocase ascii wide
         // Description: Cobalt Strike BOF zerologon exploit
         // Reference: https://github.com/rsmudge/ZeroLogon-BOF
-        $string2292 = /ZeroLogon\-BOF/ nocase ascii wide
+        $string2285 = /ZeroLogon\-BOF/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string2293 = /zha0gongz1/ nocase ascii wide
+        $string2286 = /zha0gongz1/ nocase ascii wide
         // Description: Implement load Cobalt Strike & Metasploit&Sliver shellcode with golang
         // Reference: https://github.com/zha0gongz1/DesertFox
-        $string2294 = /zha0gongz1\/DesertFox/ nocase ascii wide
+        $string2287 = /zha0gongz1\/DesertFox/ nocase ascii wide
         // Description: InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
         // Reference: https://github.com/anthemtotheego/InlineExecute-Assembly
-        $string2295 = /ziiiiizzzb/ nocase ascii wide
+        $string2288 = /ziiiiizzzb/ nocase ascii wide
         // Description: InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in process .NET assembly execution as an alternative to Cobalt Strikes traditional fork and run execute-assembly module
         // Reference: https://github.com/anthemtotheego/InlineExecute-Assembly
-        $string2296 = /ziiiiizzzib/ nocase ascii wide
+        $string2289 = /ziiiiizzzib/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2297 = /\\\\demoagent_11/ nocase ascii wide
+        $string2290 = /\\\\demoagent_11/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2298 = /\\\\demoagent_22/ nocase ascii wide
+        $string2291 = /\\\\demoagent_22/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2299 = /\\\\DserNamePipe/ nocase ascii wide
+        $string2292 = /\\\\DserNamePipe/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2300 = /\\\\f4c3/ nocase ascii wide
+        $string2293 = /\\\\f4c3/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2301 = /\\\\f53f/ nocase ascii wide
+        $string2294 = /\\\\f53f/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2302 = /\\\\fullduplex_/ nocase ascii wide
+        $string2295 = /\\\\fullduplex_/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2303 = /\\\\interprocess_/ nocase ascii wide
+        $string2296 = /\\\\interprocess_/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2304 = /\\\\lsarpc_/ nocase ascii wide
+        $string2297 = /\\\\mojo_/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2305 = /\\\\mojo_/ nocase ascii wide
+        $string2298 = /\\\\msagent_/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2306 = /\\\\msagent_/ nocase ascii wide
+        $string2299 = /\\\\MsFteWds/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2307 = /\\\\MsFteWds/ nocase ascii wide
+        $string2300 = /\\\\MSSE\-/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2308 = /\\\\msrpc_/ nocase ascii wide
+        $string2301 = /\\\\mypipe\-/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2309 = /\\\\MSSE\-/ nocase ascii wide
+        $string2302 = /\\\\PGMessagePipe/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2310 = /\\\\mypipe\-/ nocase ascii wide
+        $string2303 = /\\\\postex_/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2311 = /\\\\netlogon_/ nocase ascii wide
+        $string2304 = /\\\\postex_ssh_/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2312 = /\\\\ntsvcs/ nocase ascii wide
+        $string2305 = /\\\\SearchTextHarvester/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2313 = /\\\\PGMessagePipe/ nocase ascii wide
+        $string2306 = /\\\\UIA_PIPE/ nocase ascii wide
         // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2314 = /\\\\postex_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2315 = /\\\\postex_ssh_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2316 = /\\\\samr_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2317 = /\\\\scerpc_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2318 = /\\\\SearchTextHarvester/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2319 = /\\\\spoolss_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2320 = /\\\\srvsvc_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2321 = /\\\\status_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2322 = /\\\\UIA_PIPE/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2323 = /\\\\win\\msrpc_/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2324 = /\\\\winsock/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2325 = /\\\\Winsock2\\CatalogChangeListener\-/ nocase ascii wide
-        // Description: pipe names - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
-        // Reference: https://www.cobaltstrike.com/
-        $string2326 = /\\\\wkssvc_/ nocase ascii wide
+        $string2307 = /\\\\Winsock2\\CatalogChangeListener\-/ nocase ascii wide
+        // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
+        // Reference: https://github.com/k8gege/Ladon
+        $string2308 = /\\Ladon\s.{0,1000}\.exe/ nocase ascii wide
         // Description: Proof of concept Beacon Object File (BOF) that attempts to detect userland hooks in place by AV/EDR
         // Reference: https://github.com/anthemtotheego/Detect-Hooks
-        $string2327 = /detect\-hooks/ nocase ascii wide
+        $string2309 = /detect\-hooks/ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2328 = /doc\.1a\..{0,1000}\\\./ nocase ascii wide
+        $string2310 = /doc\.1a\..{0,1000}\\\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2329 = /doc\.4a\..{0,1000}\\\./ nocase ascii wide
+        $string2311 = /doc\.4a\..{0,1000}\\\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2330 = /doc\.bc\..{0,1000}\\\./ nocase ascii wide
+        $string2312 = /doc\.bc\..{0,1000}\\\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2331 = /doc\.md\..{0,1000}\\\./ nocase ascii wide
+        $string2313 = /doc\.md\..{0,1000}\\\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2332 = /doc\.po\..{0,1000}\\\./ nocase ascii wide
+        $string2314 = /doc\.po\..{0,1000}\\\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2333 = /doc\.tx\..{0,1000}\\\./ nocase ascii wide
+        $string2315 = /doc\.tx\..{0,1000}\\\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2334 = /doc\-stg\-prepend.{0,1000}\./ nocase ascii wide
+        $string2316 = /doc\-stg\-prepend.{0,1000}\./ nocase ascii wide
         // Description: dns beacons - Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2335 = /doc\-stg\-sh.{0,1000}\./ nocase ascii wide
+        $string2317 = /doc\-stg\-sh.{0,1000}\./ nocase ascii wide
         // Description: Various Cobalt Strike BOFs
         // Reference: https://github.com/rvrsh3ll/BOF_Collection
-        $string2336 = /dumpwifi\s/ nocase ascii wide
+        $string2318 = /dumpwifi\s/ nocase ascii wide
         // Description: Collection of Beacon Object Files
         // Reference: https://github.com/ajpc500/BOFs
-        $string2337 = /etw\sstop/ nocase ascii wide
+        $string2319 = /etw\sstop/ nocase ascii wide
         // Description: A BOF to interact with COM objects associated with the Windows software firewall.
         // Reference: https://github.com/EspressoCake/Firewall_Walker_BOF
-        $string2338 = /fw_walk\sdisplay/ nocase ascii wide
+        $string2320 = /fw_walk\sdisplay/ nocase ascii wide
         // Description: A BOF to interact with COM objects associated with the Windows software firewall.
         // Reference: https://github.com/EspressoCake/Firewall_Walker_BOF
-        $string2339 = /fw_walk\sstatus/ nocase ascii wide
+        $string2321 = /fw_walk\sstatus/ nocase ascii wide
         // Description: A BOF to interact with COM objects associated with the Windows software firewall.
         // Reference: https://github.com/EspressoCake/Firewall_Walker_BOF
-        $string2340 = /fw_walk\stotal/ nocase ascii wide
+        $string2322 = /fw_walk\stotal/ nocase ascii wide
         // Description: This tool uses LDAP to check a domain for known abusable Kerberos delegation settings
         // Reference: https://github.com/IcebreakerSecurity/DelegationBOF
-        $string2341 = /get\-spns\s/ nocase ascii wide
+        $string2323 = /get\-spns\s/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string2342 = /koh\sexit/ nocase ascii wide
+        $string2324 = /koh\sexit/ nocase ascii wide
         // Description: Koh is a C# and Beacon Object File (BOF) toolset that allows for the capture of user credential material via purposeful token/logon session leakage.
         // Reference: https://github.com/GhostPack/Koh
-        $string2343 = /koh\slist/ nocase ascii wide
+        $string2325 = /koh\slist/ nocase ascii wide
         // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
         // Reference: https://github.com/k8gege/Ladon
-        $string2344 = /Ladon\s.{0,1000}\-.{0,1000}\s/ nocase ascii wide
-        // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
-        // Reference: https://github.com/k8gege/Ladon
-        $string2345 = /Ladon\s.{0,1000}\.exe/ nocase ascii wide
-        // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
-        // Reference: https://github.com/k8gege/Ladon
-        $string2346 = /Ladon\s.{0,1000}\/.{0,1000}\s/ nocase ascii wide
-        // Description: Ladon is a large-scale intranet penetration tool. which can be modularized by PowerShell. plugged in CS. loaded in memory and has no file scanning
-        // Reference: https://github.com/k8gege/Ladon
-        $string2347 = /Ladon\sMac\s.{0,1000}\s/ nocase ascii wide
+        $string2326 = /Ladon\sMac\s.{0,1000}\s/ nocase ascii wide
         // Description: Beacon Object File & C# project to check LDAP signing
         // Reference: https://github.com/cube0x0/LdapSignCheck
-        $string2348 = /LdapSignCheck\s/ nocase ascii wide
+        $string2327 = /LdapSignCheck\s/ nocase ascii wide
         // Description: Adversary Simulations and Red Team Operations are security assessments that replicate the tactics and techniques of an advanced adversary in a network
         // Reference: https://www.cobaltstrike.com/
-        $string2349 = /load\s.{0,1000}\.cna/ nocase ascii wide
+        $string2328 = /load\s.{0,1000}\.cna/ nocase ascii wide
         // Description: A basic implementation of abusing the SeBackupPrivilege via Remote Registry dumping to dump the remote SAM SECURITY AND SYSTEM hives.
         // Reference: https://github.com/m57/cobaltstrike_bofs
-        $string2350 = /make_token\s/ nocase ascii wide
+        $string2329 = /make_token\s/ nocase ascii wide
         // Description: Strstr with user-supplied needle and filename as a BOF.
         // Reference: https://github.com/EspressoCake/Needle_Sift_BOF
-        $string2351 = /needle_sift\s/ nocase ascii wide
+        $string2330 = /needle_sift\s/ nocase ascii wide
         // Description: Collection of CobaltStrike beacon object files
         // Reference: https://github.com/pwn1sher/CS-BOFs
-        $string2352 = /remotereg\s/ nocase ascii wide
-        // Description: Spectrum Attack Simulation beacons
-        // Reference: https://github.com/nccgroup/nccfsas/
-        $string2353 = /rev2self/ nocase ascii wide
+        $string2331 = /remotereg\s/ nocase ascii wide
         // Description: BypassAV ShellCode Loader (Cobaltstrike/Metasploit)
         // Reference: https://github.com/k8gege/scrun
-        $string2354 = /scrun\.exe\s/ nocase ascii wide
+        $string2332 = /scrun\.exe\s/ nocase ascii wide
         // Description: SigFlip is a tool for patching authenticode signed PE files (exe. dll. sys ..etc) without invalidating or breaking the existing signature.
         // Reference: https://github.com/med0x2e/SigFlip
-        $string2355 = /SigFlip\s.{0,1000}\.exe/ nocase ascii wide
-        // Description: Cobalt Strike BOF that spawns a sacrificial process. injects it with shellcode. and executes payload. Built to evade EDR/UserLand hooks by spawning sacrificial process with Arbitrary Code Guard (ACG). BlockDll. and PPID spoofing.
-        // Reference: https://github.com/boku7/spawn
-        $string2356 = /spawn\s.{0,1000}\.exe\s.{0,1000}\.bin/ nocase ascii wide
-        // Description: Beacon Object File to delete token privileges and lower the integrity level to untrusted for a specified process
-        // Reference: https://github.com/nick-frischkorn/TokenStripBOF
-        $string2357 = /TokenStrip\s/ nocase ascii wide
+        $string2333 = /SigFlip\s.{0,1000}\.exe/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2358 = /token\-vault\screate/ nocase ascii wide
+        $string2334 = /token\-vault\screate/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2359 = /token\-vault\sremove/ nocase ascii wide
+        $string2335 = /token\-vault\sremove/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2360 = /token\-vault\sset\s/ nocase ascii wide
+        $string2336 = /token\-vault\sset\s/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2361 = /token\-vault\sshow/ nocase ascii wide
+        $string2337 = /token\-vault\sshow/ nocase ascii wide
         // Description: In-memory token vault BOF for Cobalt Strike
         // Reference: https://github.com/Henkru/cs-token-vault
-        $string2362 = /token\-vault\suse/ nocase ascii wide
+        $string2338 = /token\-vault\suse/ nocase ascii wide
 
     condition:
         any of them

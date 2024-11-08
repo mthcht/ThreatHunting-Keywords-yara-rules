@@ -173,285 +173,291 @@ rule reg
         // Description: mimikatz command
         // Reference: https://github.com/gentilkiwi/mimikatz
         $string55 = /reg\sadd\s\"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sNT\\Printers\\PointAndPrint\"\s\/f\s\/v\sRestrictDriverInstallationToAdministrators\s\/t\sREG_DWORD\s\/d\s0/ nocase ascii wide
+        // Description: enable Remote Desktop connections with reg.exe
+        // Reference: N/A
+        $string56 = /reg\sadd\s\"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer\"\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Tunnel RDP through port 443
         // Reference: N/A
-        $string56 = /REG\sADD\s\"HKLM\\System\\CurrentControlSet\\Control\\TerminalServer\\WinStations\\RDP\-Tcp\"\s\/v\sPortNumber\s\/t\sREG_DWORD\s\/d\s443\s\/f/ nocase ascii wide
+        $string57 = /REG\sADD\s\"HKLM\\System\\CurrentControlSet\\Control\\TerminalServer\\WinStations\\RDP\-Tcp\"\s\/v\sPortNumber\s\/t\sREG_DWORD\s\/d\s443\s\/f/ nocase ascii wide
         // Description: disable logging related to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string57 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        $string58 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
         // Description: disable logging related to Windows Defender
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string58 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderAuditLogger\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        $string59 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderAuditLogger\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string59 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
+        $string60 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string60 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdBoot\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
+        $string61 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdBoot\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string61 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdFilter\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
+        $string62 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdFilter\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string62 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdNisDrv\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
+        $string63 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdNisDrv\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string63 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdNisSvc\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
+        $string64 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WdNisSvc\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
         // Description: disable Windows Defender-related services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string64 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WinDefend\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
+        $string65 = /reg\sadd\s\"HKLM\\System\\CurrentControlSet\\Services\\WinDefend\"\s\/v\s\"Start\"\s\/t\sREG_DWORD\s\/d\s\"4\"\s\/f/ nocase ascii wide
         // Description: disables Windows Defender by setting its start value to 4 (disabled)
         // Reference: https://github.com/spicy-bear/Threat-Hunting/blob/2c89b519862672e29547b4db4796caa923044595/95.213.145.101/%D1%81%D0%B8%D1%80/bat/defendermalwar.bat#L7
-        $string65 = /REG\sADD\s\"HKLM\\SYSTEM\\CurrentControlSet\\services\\WinDefend\"\s\/v\sStart\s\/t\sREG_DWORD\s\/d\s4\s\/f/ nocase ascii wide
+        $string66 = /REG\sADD\s\"HKLM\\SYSTEM\\CurrentControlSet\\services\\WinDefend\"\s\/v\sStart\s\/t\sREG_DWORD\s\/d\s4\s\/f/ nocase ascii wide
         // Description: Allowing remote connections to this computer
         // Reference: N/A
-        $string66 = /reg\sadd\s.{0,1000}HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer.{0,1000}\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string67 = /reg\sadd\s.{0,1000}HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\sServer.{0,1000}\s\/v\sfDenyTSConnections\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: Hit F5 a bunch of times when you are at the RDP login screen
         // Reference: N/A
-        $string67 = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
+        $string68 = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\sethc\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
         // Description: At the login screen press Windows Key+U and you get a cmd.exe window as SYSTEM.
         // Reference: N/A
-        $string68 = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
+        $string69 = /REG\sADD\s.{0,1000}HKLM\\SOFTWARE\\Microsoft\\Windows\sNT\\CurrentVersion\\Image\sFile\sExecution\sOptions\\utilman\.exe.{0,1000}\s\/t\sREG_SZ\s\/v\sDebugger\s\/d\s.{0,1000}\\windows\\system32\\cmd\.exe.{0,1000}\s\/f/ nocase ascii wide
         // Description: Defense evasion technique disable windows defender
         // Reference: N/A
-        $string69 = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string70 = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\s\/v\sDisableAntiSpyware\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string70 = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\/v\s.{0,1000}DisableAntiSpyware.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
+        $string71 = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender\".{0,1000}\/v\s.{0,1000}DisableAntiSpyware.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string71 = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\s.{0,1000}DisableAntiVirus.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
+        $string72 = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\s.{0,1000}DisableAntiVirus.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}1.{0,1000}\s\/f/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string72 = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\sDisable.{0,1000}\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string73 = /reg\sadd\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/v\sDisable.{0,1000}\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: Windows Defender Tampering Via registry
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string73 = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
+        $string74 = /reg\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
         // Description: Anti forensic - Disabling Prefetch
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
-        $string74 = /reg\sadd\s.{0,1000}HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session\sManager\\Memory\sManagement\\PrefetchParameters.{0,1000}\s\/v\sEnablePrefetcher\s\/t\sREG_DWORD\s\/f\s\/d\s0/ nocase ascii wide
+        $string75 = /reg\sadd\s.{0,1000}HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session\sManager\\Memory\sManagement\\PrefetchParameters.{0,1000}\s\/v\sEnablePrefetcher\s\/t\sREG_DWORD\s\/f\s\/d\s0/ nocase ascii wide
         // Description: Blind ETW Windows Defender: zero out registry values corresponding to its ETW sessions
         // Reference: N/A
-        $string75 = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}0.{0,1000}\s\/f/ nocase ascii wide
+        $string76 = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Control\\WMI\\Autologger\\DefenderApiLogger.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}0.{0,1000}\s\/f/ nocase ascii wide
         // Description: Disable Windows Defender Security Center
         // Reference: N/A
-        $string76 = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
+        $string77 = /reg\sadd\s.{0,1000}HKLM\\System\\CurrentControlSet\\Services\\SecurityHealthService.{0,1000}\s\/v\s.{0,1000}Start.{0,1000}\s\/t\sREG_DWORD\s\/d\s.{0,1000}4.{0,1000}\s\/f/ nocase ascii wide
         // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string77 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        $string78 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
         // Description: This modification can be used to enable or disable the Restricted Admin mode for Remote Desktop Protocol (RDP) which has implications for Lateral Movement and privilege escalation
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string78 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
+        $string79 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sDisableRestrictedAdmin\s\/t\sREG_DWORD\s\/d\s0\s\/f/ nocase ascii wide
         // Description: This particular change is associated with the handling of LAN Manager (LM) hash storage which can affect the security of password storage on the system. This command can be used as part of credential access or defense evasion techniques
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string79 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
+        $string80 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sNoLMHash\s\/t\sREG_DWORD\s\/d\s\"0\"\s\/f/ nocase ascii wide
         // Description: Disable Cortex: Change the DLL to a random value
         // Reference: N/A
-        $string80 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CryptSvc\\Parameters\s\/t\sREG_EXPAND_SZ\s\/v\sServiceDll\s\/d\s/ nocase ascii wide
+        $string81 = /reg\sadd\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CryptSvc\\Parameters\s\/t\sREG_EXPAND_SZ\s\/v\sServiceDll\s\/d\s/ nocase ascii wide
         // Description: allows the storage of plaintext passwords in memory
         // Reference: N/A
-        $string81 = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s\/f\s1/ nocase ascii wide
+        $string82 = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s\/f\s1/ nocase ascii wide
         // Description: allows the storage of plaintext passwords in memory
         // Reference: N/A
-        $string82 = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
+        $string83 = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/d\s1\s\/f/ nocase ascii wide
         // Description: allows the storage of plaintext passwords in memory
         // Reference: N/A
-        $string83 = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/f\s\/d\s1/ nocase ascii wide
+        $string84 = /reg\sadd\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential\s\/t\sREG_DWORD\s\/f\s\/d\s1/ nocase ascii wide
         // Description: remove the Windows Defender context menu options
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string84 = /reg\sdelete\s\"HKCR\\.{0,1000}\\shellex\\ContextMenuHandlers\\EPP\"\s\/f/ nocase ascii wide
+        $string85 = /reg\sdelete\s\"HKCR\\.{0,1000}\\shellex\\ContextMenuHandlers\\EPP\"\s\/f/ nocase ascii wide
         // Description: remove the Windows Defender context menu options
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string85 = /reg\sdelete\s\"HKCR\\Directory\\shellex\\ContextMenuHandlers\\EPP\"\s\/f/ nocase ascii wide
+        $string86 = /reg\sdelete\s\"HKCR\\Directory\\shellex\\ContextMenuHandlers\\EPP\"\s\/f/ nocase ascii wide
         // Description: remove the Windows Defender context menu options
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string86 = /reg\sdelete\s\"HKCR\\Drive\\shellex\\ContextMenuHandlers\\EPP\"\s\/f/ nocase ascii wide
+        $string87 = /reg\sdelete\s\"HKCR\\Drive\\shellex\\ContextMenuHandlers\\EPP\"\s\/f/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string87 = /Reg\sDelete\s\"HKCU\\software\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string88 = /Reg\sDelete\s\"HKCU\\software\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: remove Windows Defender from the system tray
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string88 = /reg\sdelete\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Windows\sDefender\"\s\/f/ nocase ascii wide
+        $string89 = /reg\sdelete\s\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Windows\sDefender\"\s\/f/ nocase ascii wide
         // Description: delete terminal server client entries from the registry - erasing potential evidence of RDP connections
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Ransom/Win32/Ergop/Ransom_Win32_Ergop_A_.yar#L10
-        $string89 = /reg\sdelete\s\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\"\s\/va\s\/f/ nocase ascii wide
+        $string90 = /reg\sdelete\s\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Default\"\s\/va\s\/f/ nocase ascii wide
         // Description: delete terminal server client entries from the registry - erasing potential evidence of RDP connections
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Ransom/Win32/Ergop/Ransom_Win32_Ergop_A_.yar#L10
-        $string90 = /reg\sdelete\s\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\"\s\/f/ nocase ascii wide
+        $string91 = /reg\sdelete\s\"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal\sServer\sClient\\Servers\"\s\/f/ nocase ascii wide
         // Description: remove Windows Defender from the system tray
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string91 = /reg\sdelete\s\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\"\s\/v\s\"Windows\sDefender\"\s\/f/ nocase ascii wide
+        $string92 = /reg\sdelete\s\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\"\s\/v\s\"Windows\sDefender\"\s\/f/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string92 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AvastUI\.exe\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string93 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AvastUI\.exe\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string93 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AvastUI\.exe\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string94 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AvastUI\.exe\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string94 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AVGUI\.exe\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string95 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AVGUI\.exe\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string95 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AVGUI\.exe\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string96 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"AVGUI\.exe\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string96 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Avira\sSystrayStartTrigger\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string97 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Avira\sSystrayStartTrigger\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string97 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Avira\sSystrayStartTrigger\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string98 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Avira\sSystrayStartTrigger\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string98 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"ClamWin\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string99 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"ClamWin\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string99 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"ClamWin\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string100 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"ClamWin\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string100 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"COMODO\sInternet\sSecurity\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string101 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"COMODO\sInternet\sSecurity\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string101 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"COMODO\sInternet\sSecurity\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string102 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"COMODO\sInternet\sSecurity\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string102 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"egui\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string103 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"egui\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string103 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"egui\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string104 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"egui\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string104 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"IseUI\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string105 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"IseUI\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string105 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"IseUI\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string106 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"IseUI\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string106 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"QHSafeTray\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string107 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"QHSafeTray\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string107 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"QHSafeTray\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string108 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"QHSafeTray\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string108 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBAMTray\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string109 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBAMTray\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string109 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBAMTray\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string110 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBAMTray\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string110 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBRegRebootCleaner\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string111 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBRegRebootCleaner\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string111 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBRegRebootCleaner\"\s\/f\s\/reg\:64/ nocase ascii wide
-        // Description: prevents security tools from launching automatically
-        // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string112 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string112 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SBRegRebootCleaner\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string113 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string114 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string114 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string115 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:64/ nocase ascii wide
+        // Description: prevents security tools from launching automatically
+        // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
+        $string116 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"SUPERAntiSpyware\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: remove Windows Defender from the system tray
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string116 = /reg\sdelete\s\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Windows\sDefender\"\s\/f/ nocase ascii wide
+        $string117 = /reg\sdelete\s\"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Windows\sDefender\"\s\/f/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string117 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Zillya\sAntivirus\"\s\/f\s\/reg\:32/ nocase ascii wide
+        $string118 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Zillya\sAntivirus\"\s\/f\s\/reg\:32/ nocase ascii wide
         // Description: prevents security tools from launching automatically
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string118 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Zillya\sAntivirus\"\s\/f\s\/reg\:64/ nocase ascii wide
+        $string119 = /Reg\sDelete\s\"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"\s\/v\s\"Zillya\sAntivirus\"\s\/f\s\/reg\:64/ nocase ascii wide
         // Description: Disable Real Time Protection
         // Reference: N/A
-        $string119 = /reg\sdelete\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/f/ nocase ascii wide
+        $string120 = /reg\sdelete\s.{0,1000}HKLM\\Software\\Policies\\Microsoft\\Windows\sDefender.{0,1000}\s\/f/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string120 = /reg\squery\s\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
+        $string121 = /reg\squery\s\"HKEY_LOCAL_MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\sNT\\CURRENTVERSION\\WINLOGON\"\s\/v\sCACHEDLOGONSCOUNT/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string121 = /reg\squery\sHKCU\s\/f\spassw\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string122 = /reg\squery\sHKCU\s\/f\spassw\s\/t\sREG_SZ\s\/s/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string122 = /reg\squery\sHKCU\s\/f\spwd\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string123 = /reg\squery\sHKCU\s\/f\spwd\s\/t\sREG_SZ\s\/s/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string123 = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
+        $string124 = /reg\squery\shkcu\\software\\.{0,1000}\\putty\\session/ nocase ascii wide
+        // Description: queries the Windows Registry for entries in the Run key (indicate programs set to execute upon user login - potentially revealing persistence mechanisms)
+        // Reference: N/A
+        $string125 = /reg\squery\sHKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string124 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
+        $string126 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: Check if LSASS is running in PPL
         // Reference: https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat
-        $string125 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
+        $string127 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
-        $string126 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
+        $string128 = /reg\squery\sHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\\s\/v\sRunAsPPL/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string127 = /reg\squery\sHKLM\s\/f\spassw\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string129 = /reg\squery\sHKLM\s\/f\spassw\s\/t\sREG_SZ\s\/s/ nocase ascii wide
         // Description: Searching the Registry for Passwords
         // Reference: N/A
-        $string128 = /reg\squery\sHKLM\s\/f\spassword\s\s\/t\sREG_SZ\s\s\/s\s/ nocase ascii wide
+        $string130 = /reg\squery\sHKLM\s\/f\spassword\s\s\/t\sREG_SZ\s\s\/s\s/ nocase ascii wide
         // Description: associated with PEASS-ng - Privilege Escalation Awesome Scripts suite
         // Reference: https://github.com/peass-ng/PEASS-ng
-        $string129 = /reg\squery\sHKLM\s\/f\spwd\s\/t\sREG_SZ\s\/s/ nocase ascii wide
+        $string131 = /reg\squery\sHKLM\s\/f\spwd\s\/t\sREG_SZ\s\/s/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string130 = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
+        $string132 = /reg\squery\shklm\\software\\OpenSSH/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string131 = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
+        $string133 = /reg\squery\shklm\\software\\OpenSSH\\Agent/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string132 = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
+        $string134 = /reg\squery\shklm\\software\\realvnc/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string133 = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
+        $string135 = /reg\squery\shklm\\software\\realvnc\\Allusers/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string134 = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
+        $string136 = /reg\squery\shklm\\software\\realvnc\\Allusers\\vncserver/ nocase ascii wide
         // Description: Query the Windows registry sensitive informations
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string135 = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
+        $string137 = /reg\squery\shklm\\software\\realvnc\\vncserver/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string136 = /reg\squery\sHKLM\\System\\CurrentControlSet\\Control\\LSA\s\/v\sLsaCfgFlags/ nocase ascii wide
+        $string138 = /reg\squery\sHKLM\\System\\CurrentControlSet\\Control\\LSA\s\/v\sLsaCfgFlags/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string137 = /reg\squery\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential/ nocase ascii wide
+        $string139 = /reg\squery\sHKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest\s\/v\sUseLogonCredential/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string138 = /reg\ssave\s\"HK\"L\"\"M\\s\"\"a\"\"m\"\"\swin32\.dll/ nocase ascii wide
+        $string140 = /reg\ssave\s\"HK\"L\"\"M\\s\"\"a\"\"m\"\"\swin32\.dll/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string139 = /reg\ssave\s\"HK\"L\"\"M\\s\"\"ys\"\"t\"em\"\swin32\.exe/ nocase ascii wide
+        $string141 = /reg\ssave\s\"HK\"L\"\"M\\s\"\"ys\"\"t\"em\"\swin32\.exe/ nocase ascii wide
         // Description: commands from wmiexec2.0 -  is the same wmiexec that everyone knows and loves (debatable). This 2.0 version is obfuscated to avoid well known signatures from various AV engines.
         // Reference: https://github.com/ice-wzl/wmiexec2
-        $string140 = /reg\ssave\s\"HK.{0,1000}L.{0,1000}M\\s.{0,1000}ec.{0,1000}u.{0,1000}rit.{0,1000}y.{0,1000}\"\supdate\.exe/ nocase ascii wide
+        $string142 = /reg\ssave\s\"HK.{0,1000}L.{0,1000}M\\s.{0,1000}ec.{0,1000}u.{0,1000}rit.{0,1000}y.{0,1000}\"\supdate\.exe/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\sam to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string141 = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
+        $string143 = /reg\ssave\shklm\\sam\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string142 = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
+        $string144 = /reg\ssave\sHKLM\\SAM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string143 = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
+        $string145 = /reg\ssave\shklm\\sam\ssam/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\security to a .dat file
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string144 = /reg\ssave\sHKLM\\SECURITY\s/ nocase ascii wide
+        $string146 = /reg\ssave\sHKLM\\SECURITY\s/ nocase ascii wide
         // Description: saves a copy of the registry hive hklm\system to a .dat file
         // Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
-        $string145 = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
+        $string147 = /reg\ssave\shklm\\system\s.{0,1000}\.dat/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string146 = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
+        $string148 = /reg\ssave\sHKLM\\SYSTEM\s.{0,1000}c\:/ nocase ascii wide
         // Description: the commands are used to export the SAM and SYSTEM registry hives which contain sensitive Windows security data including hashed passwords for local accounts. By obtaining these hives an attacker can attempt to crack the hashes or use them in pass-the-hash attacks for unauthorized access.
         // Reference: N/A
-        $string147 = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
+        $string149 = /reg\ssave\shklm\\system\ssystem/ nocase ascii wide
         // Description: Windows Defender Tampering Via registry
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string148 = /reg\.exe\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
+        $string150 = /reg\.exe\sadd\s.{0,1000}HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\sDefender\\Threats\\ThreatIDDefaultAction/ nocase ascii wide
 
     condition:
         any of them

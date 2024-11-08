@@ -1705,1453 +1705,1426 @@ rule sharpcollection
         $string565 = /7e54ae9d348b3235d8582789274b78d92907907478efc94939204fe62921e1c7/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string566 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string566 = /7f0b1f1e301cdf0058203bbaee22dae51f023e73409ac60278da05cfa0fa7a23/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string567 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string567 = /7f2b0703267297d62119fe11c3f8846f9fafa906b6da577e4480f5fc4914c3e1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string568 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string568 = /7f64f0074988005bfda114e773e9cfcd9fe700f37c779105205153430d514ab6/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string569 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string569 = /7f861f80620136ae0418cecf780c0c4896b4e7b8763cbaa232104ec7b99acdf5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string570 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string570 = /7f9d8f3147127bd0bbce2ac04a05747ca2a7ce962c2584b5be197ee75fcad18c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string571 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string571 = /80b564a22ac44bb773a8849e33b043617348eaac203be63f87d2bd0ec75f7f30/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string572 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string572 = /811d06dc2f9560e4d3697c2a5e2aa39f516a582c70ac88e33468810905ced6fa/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string573 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string573 = /81cd3e0dfad46b8baf1d60ca5487c459fd64fdfd31340964ad6b4627605ceb5d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string574 = /7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6/ nocase ascii wide
+        $string574 = /826edaeac303c78994a597c1e2ea0ce81c4ab628138b78677517661c32653523/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string575 = /7f0b1f1e301cdf0058203bbaee22dae51f023e73409ac60278da05cfa0fa7a23/ nocase ascii wide
+        $string575 = /82af85387456fa6a4f598d88cd6f575803e1878d17aacd765c1c6fc19ab9edf3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string576 = /7f2b0703267297d62119fe11c3f8846f9fafa906b6da577e4480f5fc4914c3e1/ nocase ascii wide
+        $string576 = /82b695eb37bf703a0c7fb9242f50aff9dfa000d464c5b2c368a8693a5d1adf63/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string577 = /7f64f0074988005bfda114e773e9cfcd9fe700f37c779105205153430d514ab6/ nocase ascii wide
+        $string577 = /82dcce571a813e9a942b3a6f0c8eb8d557fa29ce50c9ea5516526a62671fc153/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string578 = /7f861f80620136ae0418cecf780c0c4896b4e7b8763cbaa232104ec7b99acdf5/ nocase ascii wide
+        $string578 = /83b1ddfa24d6f81fcae9fe687185dab70e97957b471a32e69d88d9b0acfb9d7a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string579 = /7f9d8f3147127bd0bbce2ac04a05747ca2a7ce962c2584b5be197ee75fcad18c/ nocase ascii wide
+        $string579 = /84d265868a788a2888bcfa2c6d34021670787c23a4bdd60fca1334248cd1f3c7/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string580 = /80b564a22ac44bb773a8849e33b043617348eaac203be63f87d2bd0ec75f7f30/ nocase ascii wide
+        $string580 = /84e42cfadcc56fd72ad041ad692cc880eede230412bd6cdc3bcf90523b10a98e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string581 = /811d06dc2f9560e4d3697c2a5e2aa39f516a582c70ac88e33468810905ced6fa/ nocase ascii wide
+        $string581 = /85fcc2b2c19bc9355cbe509a9ef3ebe10005f1c8a9887df12a6295f25008d260/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string582 = /81cd3e0dfad46b8baf1d60ca5487c459fd64fdfd31340964ad6b4627605ceb5d/ nocase ascii wide
+        $string582 = /8704db81460c783dfafccc4414e9346aa6eeadcfd09984c26e5f1e4e895238d3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string583 = /826edaeac303c78994a597c1e2ea0ce81c4ab628138b78677517661c32653523/ nocase ascii wide
+        $string583 = /873fdbf2756b2826ee7946770aacd8945e3d3470cb5ced3a23c36b0a988d1b1e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string584 = /82af85387456fa6a4f598d88cd6f575803e1878d17aacd765c1c6fc19ab9edf3/ nocase ascii wide
+        $string584 = /8760b515dc5f94eaed37ef0ded50d083cc32e65e5b430089482c00fd40c0c555/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string585 = /82b695eb37bf703a0c7fb9242f50aff9dfa000d464c5b2c368a8693a5d1adf63/ nocase ascii wide
+        $string585 = /876b33b3871778abc2ac0523ef7ef9a23302eebbac92b193ac564946207f9477/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string586 = /82dcce571a813e9a942b3a6f0c8eb8d557fa29ce50c9ea5516526a62671fc153/ nocase ascii wide
+        $string586 = /87ad24ba9c07337abc8310c7107359fdcf86b9e182b7b93e1f375888fb82dfc1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string587 = /83b1ddfa24d6f81fcae9fe687185dab70e97957b471a32e69d88d9b0acfb9d7a/ nocase ascii wide
+        $string587 = /87c96e5d650e67d985bdbb2bf4be55c94f8b967b180d45c1c073cbcd57cf1ddb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string588 = /84d265868a788a2888bcfa2c6d34021670787c23a4bdd60fca1334248cd1f3c7/ nocase ascii wide
+        $string588 = /886de66b761338d87027254c40da3ea0fd9072fc301c1b8fdd2e4d652e231dea/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string589 = /84e42cfadcc56fd72ad041ad692cc880eede230412bd6cdc3bcf90523b10a98e/ nocase ascii wide
+        $string589 = /88a56a39fa828dee79620714e53285c2c5bfbec814e64ab150d8795b0d78940c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string590 = /85fcc2b2c19bc9355cbe509a9ef3ebe10005f1c8a9887df12a6295f25008d260/ nocase ascii wide
+        $string590 = /88c940e5e4e3728a9433887cfd7eb308d8d4e5e24f5ab49b3c13dcc595da89d0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string591 = /8704db81460c783dfafccc4414e9346aa6eeadcfd09984c26e5f1e4e895238d3/ nocase ascii wide
+        $string591 = /88e3cee91cfda389858ecd70bf3f9b8e45ce7d41761cb7b13075e8d003724007/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string592 = /873fdbf2756b2826ee7946770aacd8945e3d3470cb5ced3a23c36b0a988d1b1e/ nocase ascii wide
+        $string592 = /89b8e0c1afe4680c8f02e517467a71a4a2559f41792565bd646f0127642782a1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string593 = /8760b515dc5f94eaed37ef0ded50d083cc32e65e5b430089482c00fd40c0c555/ nocase ascii wide
+        $string593 = /8b181b6d9004ec5341ed9adeaaf5f43ece0479da86687e7f3e70788d282df356/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string594 = /876b33b3871778abc2ac0523ef7ef9a23302eebbac92b193ac564946207f9477/ nocase ascii wide
+        $string594 = /8ba79d96e4337be960e4dd1ce94a622c08391da243fee05a44d303de46f9ae93/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string595 = /87ad24ba9c07337abc8310c7107359fdcf86b9e182b7b93e1f375888fb82dfc1/ nocase ascii wide
+        $string595 = /8bc3958a70372ecaeba0b81e287692297974848cc2ecf053ea7ebb9dfcc933f8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string596 = /87c96e5d650e67d985bdbb2bf4be55c94f8b967b180d45c1c073cbcd57cf1ddb/ nocase ascii wide
+        $string596 = /8c1007a1d0abce7187cc43079832d6b2b9510aee7c15e1eb2f322d8cc854cf3b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string597 = /886de66b761338d87027254c40da3ea0fd9072fc301c1b8fdd2e4d652e231dea/ nocase ascii wide
+        $string597 = /8c34fc93d2e71f3faeaa17b1507a70d87e09ec7bafd7922dff22ba887c304db5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string598 = /88a56a39fa828dee79620714e53285c2c5bfbec814e64ab150d8795b0d78940c/ nocase ascii wide
+        $string598 = /8c936f3b5bcd9dbb20a4d0602cdf26fbf3efe681134f20e510acda6561526623/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string599 = /88c940e5e4e3728a9433887cfd7eb308d8d4e5e24f5ab49b3c13dcc595da89d0/ nocase ascii wide
+        $string599 = /8d246f76d57dfa40f287d6d37f3a43c343b67c5db31f728d4568f2d8ed2d2799/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string600 = /88e3cee91cfda389858ecd70bf3f9b8e45ce7d41761cb7b13075e8d003724007/ nocase ascii wide
+        $string600 = /8d2b6767f4a99a2bf89c412dd27424aeaf9f79ccd0640ab1257168c895c85f36/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string601 = /89b8e0c1afe4680c8f02e517467a71a4a2559f41792565bd646f0127642782a1/ nocase ascii wide
+        $string601 = /8d3129341c603fa22b052f925fdf3bef054327c081299140d3c484f76254ca87/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string602 = /8b181b6d9004ec5341ed9adeaaf5f43ece0479da86687e7f3e70788d282df356/ nocase ascii wide
+        $string602 = /8dacc97038a845b73c4f156f3fb4d00ef5b4cfa7a8e6b10e0bd8e5c918d62fd1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string603 = /8ba79d96e4337be960e4dd1ce94a622c08391da243fee05a44d303de46f9ae93/ nocase ascii wide
+        $string603 = /8ddfdad7d1865d85b87670ebf29a4fef1f3cc42cef56d1785c8ecc21cef6e55c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string604 = /8bc3958a70372ecaeba0b81e287692297974848cc2ecf053ea7ebb9dfcc933f8/ nocase ascii wide
+        $string604 = /8e222919847637b1a4c781f780722a7ab32a1e3d310b91496fec82fa38952409/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string605 = /8c1007a1d0abce7187cc43079832d6b2b9510aee7c15e1eb2f322d8cc854cf3b/ nocase ascii wide
+        $string605 = /8e348a738400c38f4fe75a08f7b63e290f4b06204552190f910d39e24e61c89a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string606 = /8c34fc93d2e71f3faeaa17b1507a70d87e09ec7bafd7922dff22ba887c304db5/ nocase ascii wide
+        $string606 = /8e7eaf585d3bc9f87159ff49850b074c42a7b192ce6540b06ed04ded87ba0d92/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string607 = /8c936f3b5bcd9dbb20a4d0602cdf26fbf3efe681134f20e510acda6561526623/ nocase ascii wide
+        $string607 = /8eb06c672abfaf7de3d0f8b077737415d22b502f08160180771f8b6aa5f65545/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string608 = /8d246f76d57dfa40f287d6d37f3a43c343b67c5db31f728d4568f2d8ed2d2799/ nocase ascii wide
+        $string608 = /8ef891d6334629876c3c94569c9c35acd3b3d2b6930ee1c90086d715e120a40c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string609 = /8d2b6767f4a99a2bf89c412dd27424aeaf9f79ccd0640ab1257168c895c85f36/ nocase ascii wide
+        $string609 = /8efd5b8fbdba3db4ebd783214b56dae23e329eae2c7b1ce36aa59f0726cd35a0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string610 = /8d3129341c603fa22b052f925fdf3bef054327c081299140d3c484f76254ca87/ nocase ascii wide
+        $string610 = /8f13ce758ca663d93b81c6db2c658cade683058012e65cbb066a82dac4f58311/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string611 = /8dacc97038a845b73c4f156f3fb4d00ef5b4cfa7a8e6b10e0bd8e5c918d62fd1/ nocase ascii wide
+        $string611 = /8f3fc1278c3632af8725bc717de00833c6710b955372756f30b4ed0a6cccdd0f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string612 = /8ddfdad7d1865d85b87670ebf29a4fef1f3cc42cef56d1785c8ecc21cef6e55c/ nocase ascii wide
+        $string612 = /8f98671d7d96d0e04df6f8510a65f4cdf1fdea2978a0e0a67c998274c40051de/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string613 = /8e222919847637b1a4c781f780722a7ab32a1e3d310b91496fec82fa38952409/ nocase ascii wide
+        $string613 = /8fa721d35e169cddadb3a6569755c20ce19b9336125a7e5692bd0f76ee276911/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string614 = /8e348a738400c38f4fe75a08f7b63e290f4b06204552190f910d39e24e61c89a/ nocase ascii wide
+        $string614 = /8fa721d35e169cddadb3a6569755c20ce19b9336125a7e5692bd0f76ee276911/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string615 = /8e7eaf585d3bc9f87159ff49850b074c42a7b192ce6540b06ed04ded87ba0d92/ nocase ascii wide
+        $string615 = /9036e04e3c1caa4b91d008a010df98e93449cfcd1ace8922d96883bd1587764c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string616 = /8eb06c672abfaf7de3d0f8b077737415d22b502f08160180771f8b6aa5f65545/ nocase ascii wide
+        $string616 = /90a9080ebaafb4fcf1deb6e6810b4cfc38e0c16b6c9849969aee3a23a730db5b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string617 = /8ef891d6334629876c3c94569c9c35acd3b3d2b6930ee1c90086d715e120a40c/ nocase ascii wide
+        $string617 = /91ec53f564ad02117b9d7e868c449265e99b4b7443d3a83ffe55b3b49d5be279/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string618 = /8efd5b8fbdba3db4ebd783214b56dae23e329eae2c7b1ce36aa59f0726cd35a0/ nocase ascii wide
+        $string618 = /920c719a1e1d8509b4f2a46062887ad5d09cc53ef907cb3c58140a9eefe6522d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string619 = /8f13ce758ca663d93b81c6db2c658cade683058012e65cbb066a82dac4f58311/ nocase ascii wide
+        $string619 = /922b54e9d685b1bdd4d04f7b34c9f42b5f99745325a65f3147c719108d7e01c5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string620 = /8f3fc1278c3632af8725bc717de00833c6710b955372756f30b4ed0a6cccdd0f/ nocase ascii wide
+        $string620 = /92f28921ca0db8a0c7c1a4e18a9e9dea53fdbd902b3d3ad67444f59a21a96d5c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string621 = /8f98671d7d96d0e04df6f8510a65f4cdf1fdea2978a0e0a67c998274c40051de/ nocase ascii wide
+        $string621 = /933a32bee8a72a28653b56cb9b013f67da6510d4ad10c21333a6e930d385fb82/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string622 = /8fa721d35e169cddadb3a6569755c20ce19b9336125a7e5692bd0f76ee276911/ nocase ascii wide
+        $string622 = /93642234b0a16f0af2ebc99eb13287ab9b518bc5784358ee7d8166d3ae254560/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string623 = /8fa721d35e169cddadb3a6569755c20ce19b9336125a7e5692bd0f76ee276911/ nocase ascii wide
+        $string623 = /9381458c6722bf9307b870bfe07388ed787f229e93d971287883d8d8e490bfff/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string624 = /9036e04e3c1caa4b91d008a010df98e93449cfcd1ace8922d96883bd1587764c/ nocase ascii wide
+        $string624 = /93d1405dfa8765ab3ec43d1912e65ae89b8b8d06ddbc570f8cae0ca46dbf5007/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string625 = /90a9080ebaafb4fcf1deb6e6810b4cfc38e0c16b6c9849969aee3a23a730db5b/ nocase ascii wide
+        $string625 = /9421b13f1c89ded77d1964b6e7032e300360063fc9d79b4afd432533038725d4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string626 = /91ec53f564ad02117b9d7e868c449265e99b4b7443d3a83ffe55b3b49d5be279/ nocase ascii wide
+        $string626 = /9440cc0475d27f1b73944b69fc843ef2ef2e8fc407d1400502c49ee20291121b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string627 = /920c719a1e1d8509b4f2a46062887ad5d09cc53ef907cb3c58140a9eefe6522d/ nocase ascii wide
+        $string627 = /948f609d447e622613e2b02500ec333867849aee711dcb146be75ddee92dd02e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string628 = /922b54e9d685b1bdd4d04f7b34c9f42b5f99745325a65f3147c719108d7e01c5/ nocase ascii wide
+        $string628 = /94a12554419e378df4acc76c0725d141738ecf1f991c74445d1e23c655278747/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string629 = /92f28921ca0db8a0c7c1a4e18a9e9dea53fdbd902b3d3ad67444f59a21a96d5c/ nocase ascii wide
+        $string629 = /94beb306747153d234f7da1d2c996cab68e19620e87d9f348979886910eb09cb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string630 = /933a32bee8a72a28653b56cb9b013f67da6510d4ad10c21333a6e930d385fb82/ nocase ascii wide
+        $string630 = /950fd036a54ec99522231614375eff9aaa6dfff0414090b24b0f394c7810e408/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string631 = /93642234b0a16f0af2ebc99eb13287ab9b518bc5784358ee7d8166d3ae254560/ nocase ascii wide
+        $string631 = /957e5ed833379f0a82f9424055e8b4159bbd205c291b1210bccf689cdfb22d0f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string632 = /9381458c6722bf9307b870bfe07388ed787f229e93d971287883d8d8e490bfff/ nocase ascii wide
+        $string632 = /961281a6a9502553f68b61f2679a74dfd059fab22328e6f8dcce70c9dbfde0e2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string633 = /93d1405dfa8765ab3ec43d1912e65ae89b8b8d06ddbc570f8cae0ca46dbf5007/ nocase ascii wide
+        $string633 = /96da4a94f18030d87385e954b03d72c51aa2209acc07fd947ef83b89443c905e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string634 = /9421b13f1c89ded77d1964b6e7032e300360063fc9d79b4afd432533038725d4/ nocase ascii wide
+        $string634 = /971193eea29201f09ab21c42b5d03c63a5509d81b42158c2cf2b81bc8851ee8b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string635 = /9440cc0475d27f1b73944b69fc843ef2ef2e8fc407d1400502c49ee20291121b/ nocase ascii wide
+        $string635 = /9839381c8f3e41010d167ca438c054628ea54b7c53231d444281fa217d30fc45/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string636 = /948f609d447e622613e2b02500ec333867849aee711dcb146be75ddee92dd02e/ nocase ascii wide
+        $string636 = /98599d98012adc240e17c6b157e52bdf7b1831e45164d4b27862189c462392d4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string637 = /94a12554419e378df4acc76c0725d141738ecf1f991c74445d1e23c655278747/ nocase ascii wide
+        $string637 = /995c3ae92109046bd3bc58025b09d449a695a82b1bf5102b96091500419aabdb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string638 = /94beb306747153d234f7da1d2c996cab68e19620e87d9f348979886910eb09cb/ nocase ascii wide
+        $string638 = /996e6455c47cdc9a046beeea068f06a9fe2c88d45d13fd055145aadecf23657e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string639 = /950fd036a54ec99522231614375eff9aaa6dfff0414090b24b0f394c7810e408/ nocase ascii wide
+        $string639 = /99852761bd4acc0025c07c147c56caa540b7731be755254e9c85b82f25e08057/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string640 = /957e5ed833379f0a82f9424055e8b4159bbd205c291b1210bccf689cdfb22d0f/ nocase ascii wide
+        $string640 = /99df113d5d44e960f503152ba57985e95e20d3491f291046eb091bb0efbc327a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string641 = /961281a6a9502553f68b61f2679a74dfd059fab22328e6f8dcce70c9dbfde0e2/ nocase ascii wide
+        $string641 = /9a9db09b688d52c14792db24734a7aeb90499da5fbd78c9fe43c63d0d3ea3378/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string642 = /96da4a94f18030d87385e954b03d72c51aa2209acc07fd947ef83b89443c905e/ nocase ascii wide
+        $string642 = /9ae751fb94283840a31634a56a3d2a8010949694378a1ae3fea51acd98b52fa5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string643 = /971193eea29201f09ab21c42b5d03c63a5509d81b42158c2cf2b81bc8851ee8b/ nocase ascii wide
+        $string643 = /9af2825ac48d01706aa0e6582cc477b4e1a561bf4dbff66608b68031347b8559/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string644 = /9839381c8f3e41010d167ca438c054628ea54b7c53231d444281fa217d30fc45/ nocase ascii wide
+        $string644 = /9b191adfb91bb2ee0881f26917a18e2079e054d3d69c5bfcb9e3dff55d9c0c16/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string645 = /98599d98012adc240e17c6b157e52bdf7b1831e45164d4b27862189c462392d4/ nocase ascii wide
+        $string645 = /9b8901200d2f4fc535e25641e40d767a095a597e3d560f3b459d5546d6e3e551/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string646 = /995c3ae92109046bd3bc58025b09d449a695a82b1bf5102b96091500419aabdb/ nocase ascii wide
+        $string646 = /9d21a5677266c6ff348c79d69e7d2908e121bd5c4d841e9cb4eec90d81ceddd3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string647 = /996e6455c47cdc9a046beeea068f06a9fe2c88d45d13fd055145aadecf23657e/ nocase ascii wide
+        $string647 = /9d251c360046d1bb6a5a0d0e4de7c307b91044aa93a9ce6dc74820a01c5bb745/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string648 = /99852761bd4acc0025c07c147c56caa540b7731be755254e9c85b82f25e08057/ nocase ascii wide
+        $string648 = /9d6afdd06228c999288c7eb473b553b8808587182e6dda734f8fef44ebd1066c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string649 = /99df113d5d44e960f503152ba57985e95e20d3491f291046eb091bb0efbc327a/ nocase ascii wide
+        $string649 = /9e1a4c27fa18f0126da8e2ea83f8c750e83d529c9fd6897327923c96ac6b3b89/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string650 = /9a9db09b688d52c14792db24734a7aeb90499da5fbd78c9fe43c63d0d3ea3378/ nocase ascii wide
+        $string650 = /9e6d326e015aaf3634835f5f7da3579ff477c5b93ea43d349b819925e83a7537/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string651 = /9ae751fb94283840a31634a56a3d2a8010949694378a1ae3fea51acd98b52fa5/ nocase ascii wide
+        $string651 = /9eb0701865866d14eb8a85cb2801de1963400fac29467be8e4c253212955d06d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string652 = /9af2825ac48d01706aa0e6582cc477b4e1a561bf4dbff66608b68031347b8559/ nocase ascii wide
+        $string652 = /9f9039910ee089cd67d3771229526bdab9171ab559d73c2f97bd25da459c6155/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string653 = /9b191adfb91bb2ee0881f26917a18e2079e054d3d69c5bfcb9e3dff55d9c0c16/ nocase ascii wide
+        $string653 = /9fd5c3497f76b260c02b579d0d5bf95cef10469e08b02d1b1172a046c35ea07d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string654 = /9b8901200d2f4fc535e25641e40d767a095a597e3d560f3b459d5546d6e3e551/ nocase ascii wide
+        $string654 = /a07f6b1395eed1e18701aa02692a381226f45f9bc51d8fd1ec0b800d7583f196/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string655 = /9d21a5677266c6ff348c79d69e7d2908e121bd5c4d841e9cb4eec90d81ceddd3/ nocase ascii wide
+        $string655 = /a0ac483af35fd96f00e099dfea72fcd1a07c0d946e806212c73705a7b82b7b32/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string656 = /9d251c360046d1bb6a5a0d0e4de7c307b91044aa93a9ce6dc74820a01c5bb745/ nocase ascii wide
+        $string656 = /a126db530bf2f613db366cf3f51d7a6f1894a2e6ccdd062eb1c454305b4b29eb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string657 = /9d6afdd06228c999288c7eb473b553b8808587182e6dda734f8fef44ebd1066c/ nocase ascii wide
+        $string657 = /a1b10058ecfda37d1e138537856103279a326ce5bf8fa3ac1ab8909aed8632f0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string658 = /9e1a4c27fa18f0126da8e2ea83f8c750e83d529c9fd6897327923c96ac6b3b89/ nocase ascii wide
+        $string658 = /a1b25d3133a37cefe944c0082272520694f00d4e233e7644d0e2897d433f1bf5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string659 = /9e6d326e015aaf3634835f5f7da3579ff477c5b93ea43d349b819925e83a7537/ nocase ascii wide
+        $string659 = /a1dd724e09ca85a8265c4486f699ab32882e7204a09f895397ab0fb02e37559e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string660 = /9eb0701865866d14eb8a85cb2801de1963400fac29467be8e4c253212955d06d/ nocase ascii wide
+        $string660 = /a222df9c30fc7adacb7553a9899a3512e18b9e8d2b735bcd5210c800ba99b243/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string661 = /9f9039910ee089cd67d3771229526bdab9171ab559d73c2f97bd25da459c6155/ nocase ascii wide
+        $string661 = /a239aa784fa1dfdd3bb50c20c21b03dbc3ce364f940bec5d23faca835c2e5417/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string662 = /9fd5c3497f76b260c02b579d0d5bf95cef10469e08b02d1b1172a046c35ea07d/ nocase ascii wide
+        $string662 = /a243a5df3e04b3a555b3f506b36037d0093a22c0b8e5842a8890bc4610855cdb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string663 = /a07f6b1395eed1e18701aa02692a381226f45f9bc51d8fd1ec0b800d7583f196/ nocase ascii wide
+        $string663 = /a2b402f23bed2afebdda5ca21f7bc705a021ad86a35676cd3b55c7aa56406e0f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string664 = /a0ac483af35fd96f00e099dfea72fcd1a07c0d946e806212c73705a7b82b7b32/ nocase ascii wide
+        $string664 = /a4635952ba5d7927ceb57a1533c38a7a55a4835de85c4794fa85d863866d5588/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string665 = /a126db530bf2f613db366cf3f51d7a6f1894a2e6ccdd062eb1c454305b4b29eb/ nocase ascii wide
+        $string665 = /a4fee85a73d5192f1daa887e5357eb1304acd73425842f7ed690783c2a27a26f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string666 = /a1b10058ecfda37d1e138537856103279a326ce5bf8fa3ac1ab8909aed8632f0/ nocase ascii wide
+        $string666 = /a50cefaf5e3c111224055a9e3e4d289c7c44dc0d8405bf96a52f8c6d254aaeca/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string667 = /a1b25d3133a37cefe944c0082272520694f00d4e233e7644d0e2897d433f1bf5/ nocase ascii wide
+        $string667 = /a56757ad65727fec369f36a7c892618170bcdf89c22712d1c4010899c6ae9239/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string668 = /a1dd724e09ca85a8265c4486f699ab32882e7204a09f895397ab0fb02e37559e/ nocase ascii wide
+        $string668 = /a5e673ab3d8d4159b611981668487376eb2c61e3e3715dea1b50ec18d64eef76/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string669 = /a222df9c30fc7adacb7553a9899a3512e18b9e8d2b735bcd5210c800ba99b243/ nocase ascii wide
+        $string669 = /a5f10cdd2cd38b2b33a091c60f0e194aafd3a2de3ccbf80333882430a90034b6/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string670 = /a239aa784fa1dfdd3bb50c20c21b03dbc3ce364f940bec5d23faca835c2e5417/ nocase ascii wide
+        $string670 = /a60cd6fd8facc92366caa76747ede2aba9c04a166f55d1ae6b84b264d0f2e5b1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string671 = /a243a5df3e04b3a555b3f506b36037d0093a22c0b8e5842a8890bc4610855cdb/ nocase ascii wide
+        $string671 = /a644596787f407d005d3de5a3e02316c788b40dec8c5fdd0b4c010edc771677f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string672 = /a2b402f23bed2afebdda5ca21f7bc705a021ad86a35676cd3b55c7aa56406e0f/ nocase ascii wide
+        $string672 = /a74bc97d32a17a7c5a401229100635b8aee9907da5b6e6c6641ae6af9a81b7f2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string673 = /a4635952ba5d7927ceb57a1533c38a7a55a4835de85c4794fa85d863866d5588/ nocase ascii wide
+        $string673 = /a756ddc08156eddb07bdddea3cc3c75748f854e4c0388e90b17017fc55bc02b6/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string674 = /a4fee85a73d5192f1daa887e5357eb1304acd73425842f7ed690783c2a27a26f/ nocase ascii wide
+        $string674 = /a785efdc2a95072fe9caece4fd872ae1f543777b60cce590a847180c3926a9b2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string675 = /a50cefaf5e3c111224055a9e3e4d289c7c44dc0d8405bf96a52f8c6d254aaeca/ nocase ascii wide
+        $string675 = /a7b5310c9d38f7242e05c42276f3f8cfd3724ce9ba8fe7ee13bbf22e5b1f9092/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string676 = /a56757ad65727fec369f36a7c892618170bcdf89c22712d1c4010899c6ae9239/ nocase ascii wide
+        $string676 = /a88f29ebf454ddc490c273365b81093089bb4c9f407546371522c2feaeb446db/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string677 = /a5e673ab3d8d4159b611981668487376eb2c61e3e3715dea1b50ec18d64eef76/ nocase ascii wide
+        $string677 = /a8e669125c435f519ccde055c75dd9c44359ab15525846eeab7292262562b80c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string678 = /a5f10cdd2cd38b2b33a091c60f0e194aafd3a2de3ccbf80333882430a90034b6/ nocase ascii wide
+        $string678 = /a99b152752f479050ee12bde36fe6c85d3b07b0ee2b6e974abf287bfa2727916/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string679 = /a60cd6fd8facc92366caa76747ede2aba9c04a166f55d1ae6b84b264d0f2e5b1/ nocase ascii wide
+        $string679 = /a9a8593db4e3f0d2b00c3683e029af751e6897bcb525fa0dc38777fe3bfb5c40/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string680 = /a644596787f407d005d3de5a3e02316c788b40dec8c5fdd0b4c010edc771677f/ nocase ascii wide
+        $string680 = /a9ada318adc60090587f06cac5d110f274f1fc75e7705c09fc27b8921aa32651/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string681 = /a74bc97d32a17a7c5a401229100635b8aee9907da5b6e6c6641ae6af9a81b7f2/ nocase ascii wide
+        $string681 = /aab70f27573e8f6507ab19843595e8461d5f0e45500bddd6023e5266c123267b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string682 = /a756ddc08156eddb07bdddea3cc3c75748f854e4c0388e90b17017fc55bc02b6/ nocase ascii wide
+        $string682 = /ab0198fa0310f86c57835809a96f157d2b4c3acccb3f039dba6cfb1af51f5665/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string683 = /a785efdc2a95072fe9caece4fd872ae1f543777b60cce590a847180c3926a9b2/ nocase ascii wide
+        $string683 = /ab0c5d37cd6817bde34337a51531c6db0dec64577b9c325e38627863c2d9bb97/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string684 = /a7b5310c9d38f7242e05c42276f3f8cfd3724ce9ba8fe7ee13bbf22e5b1f9092/ nocase ascii wide
+        $string684 = /ab495e19cd0752bcd83ae4f1ae0dff5ab09a756d63b22a64c718f87c04909142/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string685 = /a88f29ebf454ddc490c273365b81093089bb4c9f407546371522c2feaeb446db/ nocase ascii wide
+        $string685 = /ab606d61d0f3791fc8e0c64507a3210299d66e3bbefbe2101c4f7d8ca64aaf8f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string686 = /a8e669125c435f519ccde055c75dd9c44359ab15525846eeab7292262562b80c/ nocase ascii wide
+        $string686 = /ac0b5929af1c06ef6d9655a5856c2ac6908c9f4979bd2a7c12f30562fd7f7520/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string687 = /a99b152752f479050ee12bde36fe6c85d3b07b0ee2b6e974abf287bfa2727916/ nocase ascii wide
+        $string687 = /ac32a19580d4f26d045e8555fb3b9f1415a45af8cbc3a67ea8d9c49dba11cdf1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string688 = /a9a8593db4e3f0d2b00c3683e029af751e6897bcb525fa0dc38777fe3bfb5c40/ nocase ascii wide
+        $string688 = /acc8e858d44f1310d7c9f6d2544f7a004165279132f6433271b59b73f540dbde/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string689 = /a9ada318adc60090587f06cac5d110f274f1fc75e7705c09fc27b8921aa32651/ nocase ascii wide
+        $string689 = /ace5f1151a4f4b7df43bfc7e45aa52d00aa4dc1642bbf1aa6f0872ffed1cd684/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string690 = /aab70f27573e8f6507ab19843595e8461d5f0e45500bddd6023e5266c123267b/ nocase ascii wide
+        $string690 = /ad12dd2d23a3fdaa017293fe0acb1d6b60503d86c05b7b4e94e93df8beb1a347/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string691 = /ab0198fa0310f86c57835809a96f157d2b4c3acccb3f039dba6cfb1af51f5665/ nocase ascii wide
+        $string691 = /ADCollector\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string692 = /ab0c5d37cd6817bde34337a51531c6db0dec64577b9c325e38627863c2d9bb97/ nocase ascii wide
+        $string692 = /ADCSPwn\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string693 = /ab495e19cd0752bcd83ae4f1ae0dff5ab09a756d63b22a64c718f87c04909142/ nocase ascii wide
+        $string693 = /adda6c0cbcc22357d88157922fafad38cc732fd71fa1389181dc1b31c7f6428e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string694 = /ab606d61d0f3791fc8e0c64507a3210299d66e3bbefbe2101c4f7d8ca64aaf8f/ nocase ascii wide
+        $string694 = /adeeb0a359ee487e9a32bed145a31b5f230153bce48040bc00b2478853e0377a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string695 = /ac0b5929af1c06ef6d9655a5856c2ac6908c9f4979bd2a7c12f30562fd7f7520/ nocase ascii wide
+        $string695 = /ADFSDump\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string696 = /ac32a19580d4f26d045e8555fb3b9f1415a45af8cbc3a67ea8d9c49dba11cdf1/ nocase ascii wide
+        $string696 = /ADSearch\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string697 = /acc8e858d44f1310d7c9f6d2544f7a004165279132f6433271b59b73f540dbde/ nocase ascii wide
+        $string697 = /ae0dcb27348bfae6db1ef03803f267b4c9729d8ff8c9eff70fcff5a3d4b10384/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string698 = /ace5f1151a4f4b7df43bfc7e45aa52d00aa4dc1642bbf1aa6f0872ffed1cd684/ nocase ascii wide
+        $string698 = /ae2bed75480f578573b7cdb5e7c48cbbaf6012171eb4d9faf9d147aa8ea793e5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string699 = /ad12dd2d23a3fdaa017293fe0acb1d6b60503d86c05b7b4e94e93df8beb1a347/ nocase ascii wide
+        $string699 = /ae382881d2f7597e84f993113650077b0bda039fbead9b2ef11eeca48ca33699/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string700 = /ADCollector\.exe/ nocase ascii wide
+        $string700 = /ae4109ba21693d9f9eb2623be9df5a5c68d3286dff7c8eb27d0e64889ce24c12/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string701 = /ADCSPwn\.exe/ nocase ascii wide
+        $string701 = /ae832b7ffb1e0d22120b433665d797d491e626506fe3b839afe3d5fec8fa6722/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string702 = /adda6c0cbcc22357d88157922fafad38cc732fd71fa1389181dc1b31c7f6428e/ nocase ascii wide
+        $string702 = /aee357b11515032187ff5c1d295b03b955a5198b1828cb7d3fa3f83687b41d64/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string703 = /adeeb0a359ee487e9a32bed145a31b5f230153bce48040bc00b2478853e0377a/ nocase ascii wide
+        $string703 = /af125299039eca4bdc0b43b65aec3fb54c62a48b6f8bcf1bb07a0a1e95241c23/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string704 = /ADFSDump\.exe/ nocase ascii wide
+        $string704 = /afd2db12ce75a9ed350e7c04ab79ae018de33f9b994a7347e2a530755081d2cd/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string705 = /ADSearch\.exe/ nocase ascii wide
+        $string705 = /b051d7e7069a4ec95d14811b1feb6813bb750fd281080ea0e6941ba1119180fb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string706 = /ae0dcb27348bfae6db1ef03803f267b4c9729d8ff8c9eff70fcff5a3d4b10384/ nocase ascii wide
+        $string706 = /b0580360a94eff032f2113013124fb7209eb9bfef654841aeac2ebc09cec15c8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string707 = /ae2bed75480f578573b7cdb5e7c48cbbaf6012171eb4d9faf9d147aa8ea793e5/ nocase ascii wide
+        $string707 = /b0a55532654bbfd0aafa59dfe26b576a095d9ac4a4af2f99bca442a1d87ce29b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string708 = /ae382881d2f7597e84f993113650077b0bda039fbead9b2ef11eeca48ca33699/ nocase ascii wide
+        $string708 = /b0f47f0f3ef0ac238b9c52ca4bfee5f017f0531625f1ad8454bbb3c35e577453/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string709 = /ae4109ba21693d9f9eb2623be9df5a5c68d3286dff7c8eb27d0e64889ce24c12/ nocase ascii wide
+        $string709 = /b1c9f86c2715b984749012eb27fc0b1c9e9ae5b92a43991d4ee57bcf54d35daa/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string710 = /ae832b7ffb1e0d22120b433665d797d491e626506fe3b839afe3d5fec8fa6722/ nocase ascii wide
+        $string710 = /b1fd8a78d51a7dfbb73cf0f92912dc4363a2b5bd6746a792b63ac3ae1afb9ccd/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string711 = /aee357b11515032187ff5c1d295b03b955a5198b1828cb7d3fa3f83687b41d64/ nocase ascii wide
+        $string711 = /b25a37095a044369ef13a326fa144ddd84f08a980880dbb5c704b927a7343f4d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string712 = /af125299039eca4bdc0b43b65aec3fb54c62a48b6f8bcf1bb07a0a1e95241c23/ nocase ascii wide
+        $string712 = /b3b092ecd0cdb03ec5c038d281b5acc2dec8f01ea55b5742f81410f4f54ff9e2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string713 = /afd2db12ce75a9ed350e7c04ab79ae018de33f9b994a7347e2a530755081d2cd/ nocase ascii wide
+        $string713 = /b4278888f8ba29f27b4a289ee4aa382bd7b3e0ea8ffd0c8fd4038ad963d21113/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string714 = /b051d7e7069a4ec95d14811b1feb6813bb750fd281080ea0e6941ba1119180fb/ nocase ascii wide
+        $string714 = /b44f8cfa584427bc18a8712218a1ce31b78b706cbfb02b0248b11f40b097ba9a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string715 = /b0580360a94eff032f2113013124fb7209eb9bfef654841aeac2ebc09cec15c8/ nocase ascii wide
+        $string715 = /b4bdf8ba2bfa4fdb140059b502dc0d7a84efe934cf1a251c23d89954aff38896/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string716 = /b0a55532654bbfd0aafa59dfe26b576a095d9ac4a4af2f99bca442a1d87ce29b/ nocase ascii wide
+        $string716 = /b61337b16cd16d660ebb308bf91466929d6d85710b595d733c8d11aa7840ec9e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string717 = /b0f47f0f3ef0ac238b9c52ca4bfee5f017f0531625f1ad8454bbb3c35e577453/ nocase ascii wide
+        $string717 = /b626f6ca0ff3ed66408fdfe3e31466797b020447209cef538ccecd59b068a504/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string718 = /b1c9f86c2715b984749012eb27fc0b1c9e9ae5b92a43991d4ee57bcf54d35daa/ nocase ascii wide
+        $string718 = /b62a1f3b8e0f601e835993277defc6df4912af3db9cbecd1e6dafa0f458926f4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string719 = /b1fd8a78d51a7dfbb73cf0f92912dc4363a2b5bd6746a792b63ac3ae1afb9ccd/ nocase ascii wide
+        $string719 = /b68c9b6c076e1cdd44efd35fefe2f8da26aa4f271ecefce4e70af68acaf7541c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string720 = /b25a37095a044369ef13a326fa144ddd84f08a980880dbb5c704b927a7343f4d/ nocase ascii wide
+        $string720 = /b6c4a39612179674c521ae2c35e3de0b91504adf36928c69e024e0c42e61e74c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string721 = /b3b092ecd0cdb03ec5c038d281b5acc2dec8f01ea55b5742f81410f4f54ff9e2/ nocase ascii wide
+        $string721 = /b6d88a58d1da289997258be70427b46ab2c124179a09bab72d3cf25c44c7ad92/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string722 = /b4278888f8ba29f27b4a289ee4aa382bd7b3e0ea8ffd0c8fd4038ad963d21113/ nocase ascii wide
+        $string722 = /b6ffcd2adfacc8268724e5e8d97904743dcf15152eae87224134df705f916df3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string723 = /b44f8cfa584427bc18a8712218a1ce31b78b706cbfb02b0248b11f40b097ba9a/ nocase ascii wide
+        $string723 = /b74c431349454dc79731099eebfefca97b6b1d735e6c0269b5a4501e3fee6529/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string724 = /b4bdf8ba2bfa4fdb140059b502dc0d7a84efe934cf1a251c23d89954aff38896/ nocase ascii wide
+        $string724 = /b74d7e3096956fd4bc7c929c2b482969f13a465058276ee97eb76c1d30529aa4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string725 = /b61337b16cd16d660ebb308bf91466929d6d85710b595d733c8d11aa7840ec9e/ nocase ascii wide
+        $string725 = /b7c4eb1c120f959166ad5477119adb92db8081c61193847287a13fec1e780b24/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string726 = /b626f6ca0ff3ed66408fdfe3e31466797b020447209cef538ccecd59b068a504/ nocase ascii wide
+        $string726 = /b83de77d08d842c68a940103588639cef6ab9f9fa12241311d9aed3690502af3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string727 = /b62a1f3b8e0f601e835993277defc6df4912af3db9cbecd1e6dafa0f458926f4/ nocase ascii wide
+        $string727 = /b8939f328f43eafc2faa8ba8532a756eb9db47e00e947ad8543484b4b0958bb8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string728 = /b68c9b6c076e1cdd44efd35fefe2f8da26aa4f271ecefce4e70af68acaf7541c/ nocase ascii wide
+        $string728 = /b9554f35c8c8dc4a5b428322fea2fa3a00cec87a17c5ed276a6dfe804f3828ed/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string729 = /b6c4a39612179674c521ae2c35e3de0b91504adf36928c69e024e0c42e61e74c/ nocase ascii wide
+        $string729 = /ba0ec36076382b07332c8d5329ccec4c577ec5d6527c1a6dc56694744763024c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string730 = /b6d88a58d1da289997258be70427b46ab2c124179a09bab72d3cf25c44c7ad92/ nocase ascii wide
+        $string730 = /baa3a3f7c6a17963ab80baff6de74aca91e4e75fa0a4f80bf18af9a5622edec3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string731 = /b6ffcd2adfacc8268724e5e8d97904743dcf15152eae87224134df705f916df3/ nocase ascii wide
+        $string731 = /bad29346750d2b59ec0fa45fa4eae324aae520436adcc15fffa29edfacc9be60/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string732 = /b74c431349454dc79731099eebfefca97b6b1d735e6c0269b5a4501e3fee6529/ nocase ascii wide
+        $string732 = /bb62a3336da75791e241e3e757318dd0af03c1c678a249c3b67f16ef75ce648e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string733 = /b74d7e3096956fd4bc7c929c2b482969f13a465058276ee97eb76c1d30529aa4/ nocase ascii wide
+        $string733 = /bb695f5c847a67e8d0b6918a474b0f93090c8c5d64bf5b160b9f0c0fd4352bf5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string734 = /b7c4eb1c120f959166ad5477119adb92db8081c61193847287a13fec1e780b24/ nocase ascii wide
+        $string734 = /bb774a70665afeafeda776cc7b37f59f29fc3b16124e94020a91d4fdfa3f260b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string735 = /b83de77d08d842c68a940103588639cef6ab9f9fa12241311d9aed3690502af3/ nocase ascii wide
+        $string735 = /bd326bcb0c8473cbae427c5e7cdfdb9b9cdab27d0df73f67c704eeb962f8db96/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string736 = /b8939f328f43eafc2faa8ba8532a756eb9db47e00e947ad8543484b4b0958bb8/ nocase ascii wide
+        $string736 = /bd43503a9105de8acb54f9dc566d68f3bb7d9b75fdb2ceb5fe939d52791bfdf5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string737 = /b9554f35c8c8dc4a5b428322fea2fa3a00cec87a17c5ed276a6dfe804f3828ed/ nocase ascii wide
+        $string737 = /bd852d46ed2140ee627ff0798c12d589db9687c7de1b23160fe02a5570163d54/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string738 = /ba0ec36076382b07332c8d5329ccec4c577ec5d6527c1a6dc56694744763024c/ nocase ascii wide
+        $string738 = /bd99cb3ea030932e00edee60aa4a03d9fdc70d031adaa389d8c6ab12982efcaa/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string739 = /baa3a3f7c6a17963ab80baff6de74aca91e4e75fa0a4f80bf18af9a5622edec3/ nocase ascii wide
+        $string739 = /bde38d20d4eb1a86cc38a81cc92861b3d366210af570ecb6fea93ac1060eaa7d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string740 = /bad29346750d2b59ec0fa45fa4eae324aae520436adcc15fffa29edfacc9be60/ nocase ascii wide
+        $string740 = /be6d43b84e5b69c33f6e155d0e7be48bb3da4a322d19feac4073ef14b845f9fa/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string741 = /bb62a3336da75791e241e3e757318dd0af03c1c678a249c3b67f16ef75ce648e/ nocase ascii wide
+        $string741 = /beb3dbf652aedb556fee96e7add11e5aa76be4028107fd1cf80066fe3479f43a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string742 = /bb695f5c847a67e8d0b6918a474b0f93090c8c5d64bf5b160b9f0c0fd4352bf5/ nocase ascii wide
+        $string742 = /bee12d2a87cfe2fccb8e9c81b1f3202c4101568d71b5434a04e59f6768730af2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string743 = /bb774a70665afeafeda776cc7b37f59f29fc3b16124e94020a91d4fdfa3f260b/ nocase ascii wide
+        $string743 = /BetterSafetyKatz\./ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string744 = /bd326bcb0c8473cbae427c5e7cdfdb9b9cdab27d0df73f67c704eeb962f8db96/ nocase ascii wide
+        $string744 = /bf46b919a1f3f45d5d31393ca62e1fd8269f49f6b9a6289258867908c5a80b03/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string745 = /bd43503a9105de8acb54f9dc566d68f3bb7d9b75fdb2ceb5fe939d52791bfdf5/ nocase ascii wide
+        $string745 = /bf514687e7c94c53072505b6e7e2e9ce0f318d95d5db4789694ca0851967c1f5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string746 = /bd852d46ed2140ee627ff0798c12d589db9687c7de1b23160fe02a5570163d54/ nocase ascii wide
+        $string746 = /bf99eb1afc5b916e63a5b1ff607a8d79012ada12a2bbbb3ca9be3921dc16cfaa/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string747 = /bd99cb3ea030932e00edee60aa4a03d9fdc70d031adaa389d8c6ab12982efcaa/ nocase ascii wide
+        $string747 = /bfc69bfe997864b9ed4fda70da541e4fbed3c9e05206d924d3a511a217dec83f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string748 = /bde38d20d4eb1a86cc38a81cc92861b3d366210af570ecb6fea93ac1060eaa7d/ nocase ascii wide
+        $string748 = /c0439525cf2087fbe8093cd85039fb5efe3557bc47a8a033a7b06657d4119333/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string749 = /be6d43b84e5b69c33f6e155d0e7be48bb3da4a322d19feac4073ef14b845f9fa/ nocase ascii wide
+        $string749 = /c05b0803f8793c6bef98a74b8950be5be30dcb0584e634355896230fb8ee19e1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string750 = /beb3dbf652aedb556fee96e7add11e5aa76be4028107fd1cf80066fe3479f43a/ nocase ascii wide
+        $string750 = /c0800f3267b958f1f1e3796d2462897b698406ffe2c95c09b6249e84ac753bb0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string751 = /bee12d2a87cfe2fccb8e9c81b1f3202c4101568d71b5434a04e59f6768730af2/ nocase ascii wide
+        $string751 = /c113347933ec19ba179dace4e51ef27c76562a5f57e0321de391ae10c1874712/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string752 = /BetterSafetyKatz\./ nocase ascii wide
+        $string752 = /c1474dc5ff323f1351d89fcc7c922c0a612cf5dc1cd0b7dc719e0688d45aedcf/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string753 = /bf46b919a1f3f45d5d31393ca62e1fd8269f49f6b9a6289258867908c5a80b03/ nocase ascii wide
+        $string753 = /c1671ad8229c335d3b2edc0c2209db3d09104b85c050971fc8afc7b6f85ce0d0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string754 = /bf514687e7c94c53072505b6e7e2e9ce0f318d95d5db4789694ca0851967c1f5/ nocase ascii wide
+        $string754 = /c1b584291f8b0c17013e438cfac02f28ea3088ae3884f3c0e27bf06f988339bf/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string755 = /bf99eb1afc5b916e63a5b1ff607a8d79012ada12a2bbbb3ca9be3921dc16cfaa/ nocase ascii wide
+        $string755 = /c1c94cf03ed6fa3b74e3decbe2cedaec81d94a3046f001821111cb3f7687fdb1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string756 = /bfc69bfe997864b9ed4fda70da541e4fbed3c9e05206d924d3a511a217dec83f/ nocase ascii wide
+        $string756 = /c2c9d4ca6ba2ca502be8d0a9670f7e8a5f7ab0bf315690b1c9df7b53ccf9c5cd/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string757 = /c0439525cf2087fbe8093cd85039fb5efe3557bc47a8a033a7b06657d4119333/ nocase ascii wide
+        $string757 = /c2fc425c6790459d69b7511d6b7626d4f140442c65a7751d69541ceab1bc47bd/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string758 = /c05b0803f8793c6bef98a74b8950be5be30dcb0584e634355896230fb8ee19e1/ nocase ascii wide
+        $string758 = /c35358989279835340cc632ab21e9e01c0d97415b4c6ac0e7f95fd2e916700c8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string759 = /c0800f3267b958f1f1e3796d2462897b698406ffe2c95c09b6249e84ac753bb0/ nocase ascii wide
+        $string759 = /c35aa7deb47b8e355ef827011cc745183d0099c36345e7f177d024618862873b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string760 = /c113347933ec19ba179dace4e51ef27c76562a5f57e0321de391ae10c1874712/ nocase ascii wide
+        $string760 = /c3f50756edbddbf72190cbdac5a0084b2c11e6aeab95b63d4da786547a693d73/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string761 = /c1474dc5ff323f1351d89fcc7c922c0a612cf5dc1cd0b7dc719e0688d45aedcf/ nocase ascii wide
+        $string761 = /c45986288840a01919c3b744499554d5a0608a2a109de0952b80303923cd3ce8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string762 = /c1671ad8229c335d3b2edc0c2209db3d09104b85c050971fc8afc7b6f85ce0d0/ nocase ascii wide
+        $string762 = /c47d02f06bc853b2917607af695be6f81013ffa31f4ff13e6bbf8ff835ee40ec/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string763 = /c1b584291f8b0c17013e438cfac02f28ea3088ae3884f3c0e27bf06f988339bf/ nocase ascii wide
+        $string763 = /c498592eebde7dec4227e1fe83002fca10beab096138e6d64278ef868a85900f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string764 = /c1c94cf03ed6fa3b74e3decbe2cedaec81d94a3046f001821111cb3f7687fdb1/ nocase ascii wide
+        $string764 = /c4c99f7ff1976731ad0a4c3514f291f925f030c3c80d70d93ca98e3bf69a853e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string765 = /c2c9d4ca6ba2ca502be8d0a9670f7e8a5f7ab0bf315690b1c9df7b53ccf9c5cd/ nocase ascii wide
+        $string765 = /c5deda524fb386a888b702d1eef8d55ad8b619affb88b2ed8bd913d24a3cde98/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string766 = /c2fc425c6790459d69b7511d6b7626d4f140442c65a7751d69541ceab1bc47bd/ nocase ascii wide
+        $string766 = /c631eda13fb95658b81e31a06554339857def299970639d8e3ee646df70d9454/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string767 = /c35358989279835340cc632ab21e9e01c0d97415b4c6ac0e7f95fd2e916700c8/ nocase ascii wide
+        $string767 = /c66a79726a52709cb4ceb004f0b2dda9d7159aa04678e002d9be27fb7d887a3c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string768 = /c35aa7deb47b8e355ef827011cc745183d0099c36345e7f177d024618862873b/ nocase ascii wide
+        $string768 = /c6962ca89b28d1e9a7aa34b7de5c629e29a8eb732a0b8010406de83d0f2f8c2a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string769 = /c3f50756edbddbf72190cbdac5a0084b2c11e6aeab95b63d4da786547a693d73/ nocase ascii wide
+        $string769 = /c6ec76b8a6041bb25bd2699684ad58f63a6923aa1e4985438345fd99cdf11e20/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string770 = /c45986288840a01919c3b744499554d5a0608a2a109de0952b80303923cd3ce8/ nocase ascii wide
+        $string770 = /c6faca2a240b79782651662d2de7511752a97dc187a93955bc83ef3e1b17326f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string771 = /c47d02f06bc853b2917607af695be6f81013ffa31f4ff13e6bbf8ff835ee40ec/ nocase ascii wide
+        $string771 = /c794d9b0bef6c7d8838f5130e2e0ae4c8bed3ec35cfb9bf502520dcfab38bde2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string772 = /c498592eebde7dec4227e1fe83002fca10beab096138e6d64278ef868a85900f/ nocase ascii wide
+        $string772 = /c7bbfa266cc73f87a47186afadea101ceb03f759cf4b927a25dd1004d56ea07e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string773 = /c4c99f7ff1976731ad0a4c3514f291f925f030c3c80d70d93ca98e3bf69a853e/ nocase ascii wide
+        $string773 = /c8273217f19cd8f6f693c350dea5bd6fff1ced10bf83174bbabab4656579c3cb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string774 = /c5deda524fb386a888b702d1eef8d55ad8b619affb88b2ed8bd913d24a3cde98/ nocase ascii wide
+        $string774 = /c8458f30f7c976ba1be9cb1c1175b1f0d32aea6fdeb3f62ab911ea77713ede63/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string775 = /c631eda13fb95658b81e31a06554339857def299970639d8e3ee646df70d9454/ nocase ascii wide
+        $string775 = /c8e190fea8360f02cf9cba596c62d17498e016ec1339b314131a1b828d21b090/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string776 = /c66a79726a52709cb4ceb004f0b2dda9d7159aa04678e002d9be27fb7d887a3c/ nocase ascii wide
+        $string776 = /c9cd5c71f55be91b6f64f93e17d7dd2a3fa9b66dda9b9c11bf4140c66f18ed39/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string777 = /c6962ca89b28d1e9a7aa34b7de5c629e29a8eb732a0b8010406de83d0f2f8c2a/ nocase ascii wide
+        $string777 = /c9da78ad6095451caaf4dc686005d5145494e9f7be36514423a111242ff523f2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string778 = /c6ec76b8a6041bb25bd2699684ad58f63a6923aa1e4985438345fd99cdf11e20/ nocase ascii wide
+        $string778 = /c9f355952a93723f4e6b471380f35a1315af1d2de40524ee0bdd252deded71d2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string779 = /c6faca2a240b79782651662d2de7511752a97dc187a93955bc83ef3e1b17326f/ nocase ascii wide
+        $string779 = /ca16e87c3ffc6496a23618ff180b0a57ec07e290207d47e8dc7489a208bf4d85/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string780 = /c794d9b0bef6c7d8838f5130e2e0ae4c8bed3ec35cfb9bf502520dcfab38bde2/ nocase ascii wide
+        $string780 = /cacaf377019b13a2e03c1751bf05b0d1513c160ee5325dd54fdf541885846e58/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string781 = /c7bbfa266cc73f87a47186afadea101ceb03f759cf4b927a25dd1004d56ea07e/ nocase ascii wide
+        $string781 = /cad75780597ec7bda1505580fb4585123eb9685e0b759082d739c037c11e67be/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string782 = /c8273217f19cd8f6f693c350dea5bd6fff1ced10bf83174bbabab4656579c3cb/ nocase ascii wide
+        $string782 = /caeaaee0273746fee0c2f2e790f3215075a28a8ec6ffc22d18f82e68aea555a2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string783 = /c8458f30f7c976ba1be9cb1c1175b1f0d32aea6fdeb3f62ab911ea77713ede63/ nocase ascii wide
+        $string783 = /caf0940d2bfc54a2efd684ccf47ebddb79da9331584b4781924e260372cca582/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string784 = /c8e190fea8360f02cf9cba596c62d17498e016ec1339b314131a1b828d21b090/ nocase ascii wide
+        $string784 = /cb12cf3f7f44250c5a2142d506921aa3c2ae8a1c6ef2f3781b3bf2ae7eb6cad4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string785 = /c9cd5c71f55be91b6f64f93e17d7dd2a3fa9b66dda9b9c11bf4140c66f18ed39/ nocase ascii wide
+        $string785 = /cbbb2f474f0ca015a37d57ec856950db3ce62942c8dd737003a9cc8f7cf63c07/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string786 = /c9da78ad6095451caaf4dc686005d5145494e9f7be36514423a111242ff523f2/ nocase ascii wide
+        $string786 = /cc5855ec2f5ac4e236e8e6cba698d4d307baa15a827c7719f4d6c8a58d28299b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string787 = /c9f355952a93723f4e6b471380f35a1315af1d2de40524ee0bdd252deded71d2/ nocase ascii wide
+        $string787 = /cded4541c570c91fd895adeca650b968f20fb68809e59f007a896730d097d8af/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string788 = /ca16e87c3ffc6496a23618ff180b0a57ec07e290207d47e8dc7489a208bf4d85/ nocase ascii wide
+        $string788 = /ce514ccbb11797a5e0457b8da2cf4914b753928dcc15d59d4db2d2b5ffcd061b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string789 = /cacaf377019b13a2e03c1751bf05b0d1513c160ee5325dd54fdf541885846e58/ nocase ascii wide
+        $string789 = /ce9ae24722afd760de25a8961c4446b64235936b8ac8d1c2c25625d4feaee6e6/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string790 = /cad75780597ec7bda1505580fb4585123eb9685e0b759082d739c037c11e67be/ nocase ascii wide
+        $string790 = /cef1fb3c6273b3a908f79a5a5d74dbfe4ceabd2d9f850b2bd3e08e1908c440f1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string791 = /caeaaee0273746fee0c2f2e790f3215075a28a8ec6ffc22d18f82e68aea555a2/ nocase ascii wide
+        $string791 = /cefcadb734f22d7ddd0ce551628c246f4484400758ccb64afeb37bb93c78b5e0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string792 = /caf0940d2bfc54a2efd684ccf47ebddb79da9331584b4781924e260372cca582/ nocase ascii wide
+        $string792 = /Certify\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string793 = /cb12cf3f7f44250c5a2142d506921aa3c2ae8a1c6ef2f3781b3bf2ae7eb6cad4/ nocase ascii wide
+        $string793 = /cf3753524bf8c852c2e81c008688ecfb91e75ba207ade5ef048c33bde631baef/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string794 = /cbbb2f474f0ca015a37d57ec856950db3ce62942c8dd737003a9cc8f7cf63c07/ nocase ascii wide
+        $string794 = /cf9fb0b8e718dfebc8dfb4d5a9be9e57a00994fd060c250187ed92957b69fd15/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string795 = /cc5855ec2f5ac4e236e8e6cba698d4d307baa15a827c7719f4d6c8a58d28299b/ nocase ascii wide
+        $string795 = /cfed7067c52715989de828850551ceb0e92a5f1f5389a81a025424a88ab77e50/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string796 = /cded4541c570c91fd895adeca650b968f20fb68809e59f007a896730d097d8af/ nocase ascii wide
+        $string796 = /d029b40b87bd1462c77138f017ab6914a3753c4ec47bcbf192231a6b2585cf36/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string797 = /ce514ccbb11797a5e0457b8da2cf4914b753928dcc15d59d4db2d2b5ffcd061b/ nocase ascii wide
+        $string797 = /d0733560ad65a7123d380f6be4007ce0f0e56356f9dc1729e628342bb96892ab/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string798 = /ce9ae24722afd760de25a8961c4446b64235936b8ac8d1c2c25625d4feaee6e6/ nocase ascii wide
+        $string798 = /d0844ed23aea55010cdfbca9d818cbf3baaa222ee8b30281b3534e60146583ff/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string799 = /cef1fb3c6273b3a908f79a5a5d74dbfe4ceabd2d9f850b2bd3e08e1908c440f1/ nocase ascii wide
+        $string799 = /d18b648dfee767e09a9c580a9bd0c60edc5f9aa4718e41c15434c47630023efb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string800 = /cefcadb734f22d7ddd0ce551628c246f4484400758ccb64afeb37bb93c78b5e0/ nocase ascii wide
+        $string800 = /d1b7993dc84243e12f8b4650de9b71a85f5a3751c085d96f7211129c5e5f4eb0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string801 = /Certify\.exe/ nocase ascii wide
+        $string801 = /d1b8e13cf05c57e811ee4c90c985c018a7d1e937eca0f5860fecf36601032630/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string802 = /cf3753524bf8c852c2e81c008688ecfb91e75ba207ade5ef048c33bde631baef/ nocase ascii wide
+        $string802 = /d1cd42f8663905f5e307c82b421093d7eb93b2d2a8d50f752ff0b8628b2bbc5a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string803 = /cf9fb0b8e718dfebc8dfb4d5a9be9e57a00994fd060c250187ed92957b69fd15/ nocase ascii wide
+        $string803 = /d29dcb85619d3c9f31070257e1abf0d1f2f2e23c7c3769a0c7aca9bdc16c2517/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string804 = /cfed7067c52715989de828850551ceb0e92a5f1f5389a81a025424a88ab77e50/ nocase ascii wide
+        $string804 = /d323294bc92b8ab3dc05085a795881b3d75c5b1128911bf7478be1fe39d60482/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string805 = /d029b40b87bd1462c77138f017ab6914a3753c4ec47bcbf192231a6b2585cf36/ nocase ascii wide
+        $string805 = /d39a670a35257b1686b0f6d6b27fab1691839e925ba18c5c30c973ea70a31391/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string806 = /d0733560ad65a7123d380f6be4007ce0f0e56356f9dc1729e628342bb96892ab/ nocase ascii wide
+        $string806 = /d423b1efdaf4f11171e6daf6e096e3651210cc454ccd6bb65ac07fd0aa0d7806/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string807 = /d0844ed23aea55010cdfbca9d818cbf3baaa222ee8b30281b3534e60146583ff/ nocase ascii wide
+        $string807 = /d43a9a1559ceb6fa1906b0142c375b8d2fa52e3725df36ec795cb0e734e110ce/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string808 = /d18b648dfee767e09a9c580a9bd0c60edc5f9aa4718e41c15434c47630023efb/ nocase ascii wide
+        $string808 = /d4915417cd9c0127ed93470e8d07076540b1c7ac08162831d74ce2114fd7f209/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string809 = /d1b7993dc84243e12f8b4650de9b71a85f5a3751c085d96f7211129c5e5f4eb0/ nocase ascii wide
+        $string809 = /d4d156e6c11c5f257643a6cebfebcbc7c06b93bec236112ecd7df8e82f63846a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string810 = /d1b8e13cf05c57e811ee4c90c985c018a7d1e937eca0f5860fecf36601032630/ nocase ascii wide
+        $string810 = /d4e30598f12b58bb8f2df1b7899cfe35435e183517b941b721b1a70806808638/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string811 = /d1cd42f8663905f5e307c82b421093d7eb93b2d2a8d50f752ff0b8628b2bbc5a/ nocase ascii wide
+        $string811 = /d4e30d80e0d2e1884270c75a2d13df486b54d0622925daaffa7ec78c942e3d45/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string812 = /d29dcb85619d3c9f31070257e1abf0d1f2f2e23c7c3769a0c7aca9bdc16c2517/ nocase ascii wide
+        $string812 = /d533a9a5a4b19deed391457a2194f896560cd4fc021341750071389b6042bc23/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string813 = /d323294bc92b8ab3dc05085a795881b3d75c5b1128911bf7478be1fe39d60482/ nocase ascii wide
+        $string813 = /d54be2853d3b9d6245f57221d3abc3d49984322693b450f455570b0e6ae8524a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string814 = /d39a670a35257b1686b0f6d6b27fab1691839e925ba18c5c30c973ea70a31391/ nocase ascii wide
+        $string814 = /d61c96edd06b7166d5c48c0941f1060c19a0342a6e9b8cb6844fe823fb5d1a58/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string815 = /d423b1efdaf4f11171e6daf6e096e3651210cc454ccd6bb65ac07fd0aa0d7806/ nocase ascii wide
+        $string815 = /d65739e2f3ff43ab1fae9e7c88909f9fe40bf275684fedb5d0539e4cdac79fc9/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string816 = /d43a9a1559ceb6fa1906b0142c375b8d2fa52e3725df36ec795cb0e734e110ce/ nocase ascii wide
+        $string816 = /d6fb61d7e2e1c8328be688eca56909cd1d4f33e595fd733663630cdd895c32c9/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string817 = /d4915417cd9c0127ed93470e8d07076540b1c7ac08162831d74ce2114fd7f209/ nocase ascii wide
+        $string817 = /d737dd339a9a013f78d089c01da72576a4d89cdb2f002ffdd666d04ae726b142/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string818 = /d4d156e6c11c5f257643a6cebfebcbc7c06b93bec236112ecd7df8e82f63846a/ nocase ascii wide
+        $string818 = /d75323d0a62e8baea946b82ced3bd78c4e07a6dfa20f07480b7c093c4b977fa4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string819 = /d4e30598f12b58bb8f2df1b7899cfe35435e183517b941b721b1a70806808638/ nocase ascii wide
+        $string819 = /d8891b478ae421a3c0abc85bfa2b4bab4c4d35d46a26ba9f7fc1c6b3d0d30009/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string820 = /d4e30d80e0d2e1884270c75a2d13df486b54d0622925daaffa7ec78c942e3d45/ nocase ascii wide
+        $string820 = /d88c69e0ca8a72f71d225ece1756c338ab37ec8af40bd0cdae4d9a73ad20457e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string821 = /d533a9a5a4b19deed391457a2194f896560cd4fc021341750071389b6042bc23/ nocase ascii wide
+        $string821 = /d8edc288ad36a1dc853851dfe2255647e17020a528f64ca22b07258f3c918118/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string822 = /d54be2853d3b9d6245f57221d3abc3d49984322693b450f455570b0e6ae8524a/ nocase ascii wide
+        $string822 = /d9137008fdb0e917c996162abb1b6d457b20c987958d4a5e496edc9666fa8392/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string823 = /d61c96edd06b7166d5c48c0941f1060c19a0342a6e9b8cb6844fe823fb5d1a58/ nocase ascii wide
+        $string823 = /d919b4832a03cd1cc4c40803238e172dc2edd74317967546c4e485de14ddc5ba/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string824 = /d65739e2f3ff43ab1fae9e7c88909f9fe40bf275684fedb5d0539e4cdac79fc9/ nocase ascii wide
+        $string824 = /d92b4a40c783bf64d9117a9daf35b4f75426f7f1743d9939d756b327f608eda7/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string825 = /d6fb61d7e2e1c8328be688eca56909cd1d4f33e595fd733663630cdd895c32c9/ nocase ascii wide
+        $string825 = /d941534ce99193cc7771684318af13748af81cf4a9a5b4fb02c791e066b563b2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string826 = /d737dd339a9a013f78d089c01da72576a4d89cdb2f002ffdd666d04ae726b142/ nocase ascii wide
+        $string826 = /d95bb95780308e82ee8ab7e0a2bb1867a94ab91f96ce11413ba02a15a16750f9/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string827 = /d75323d0a62e8baea946b82ced3bd78c4e07a6dfa20f07480b7c093c4b977fa4/ nocase ascii wide
+        $string827 = /d9c8a6fa2ba159dea9e2bbeb86f0d329f996bbf51ff326d194968c2153aabea5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string828 = /d8891b478ae421a3c0abc85bfa2b4bab4c4d35d46a26ba9f7fc1c6b3d0d30009/ nocase ascii wide
+        $string828 = /d9d30d28c1f342516cf9be162135f570ad63e591ce2a1a6056c96e525b635fbb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string829 = /d88c69e0ca8a72f71d225ece1756c338ab37ec8af40bd0cdae4d9a73ad20457e/ nocase ascii wide
+        $string829 = /da6a12b87a18f943d1dd3f50a9f80313302efad3ce750c4073343d55f3b94b72/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string830 = /d8edc288ad36a1dc853851dfe2255647e17020a528f64ca22b07258f3c918118/ nocase ascii wide
+        $string830 = /da9ed4d88d12f0938c05fad2fcfe69ba3fd90b0bda98844cc886e5103ac62c93/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string831 = /d9137008fdb0e917c996162abb1b6d457b20c987958d4a5e496edc9666fa8392/ nocase ascii wide
+        $string831 = /dac2f647397f3465db18352b2cc0286948f5d00e4467eac9176c0b4318aa8ff1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string832 = /d919b4832a03cd1cc4c40803238e172dc2edd74317967546c4e485de14ddc5ba/ nocase ascii wide
+        $string832 = /db0e36392ef1430eae933b1fd0e94c0dd4f7d08ed93cfe369a7d73ed76082c93/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string833 = /d92b4a40c783bf64d9117a9daf35b4f75426f7f1743d9939d756b327f608eda7/ nocase ascii wide
+        $string833 = /db1f07bcc1caabad3c0a5bbeddf48f542193e0576e8c3ee42594c4a3e29d8895/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string834 = /d941534ce99193cc7771684318af13748af81cf4a9a5b4fb02c791e066b563b2/ nocase ascii wide
+        $string834 = /db3bd2d5d62c49cf1b49ff0cd04a11da4e21006acb72bb193b776d1abaddb8a9/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string835 = /d95bb95780308e82ee8ab7e0a2bb1867a94ab91f96ce11413ba02a15a16750f9/ nocase ascii wide
+        $string835 = /db40433bbaa08ed43bfaf5d3535372a95c7c10a5803bd9e1ec95157bb65ce6bd/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string836 = /d9c8a6fa2ba159dea9e2bbeb86f0d329f996bbf51ff326d194968c2153aabea5/ nocase ascii wide
+        $string836 = /db5b21d5a66fadcebe25ed1bcac0cd5590a3afdf1e9d247a3d169ffcd0a78e62/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string837 = /d9d30d28c1f342516cf9be162135f570ad63e591ce2a1a6056c96e525b635fbb/ nocase ascii wide
+        $string837 = /db85afa956f0a0b6ec30c13259782a0759a5adb2f5dc01969068bb4137364d15/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string838 = /da6a12b87a18f943d1dd3f50a9f80313302efad3ce750c4073343d55f3b94b72/ nocase ascii wide
+        $string838 = /db9e318fce9098eb3ae55a782aee7f29667772302296b4e4924e0edb88e69560/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string839 = /da9ed4d88d12f0938c05fad2fcfe69ba3fd90b0bda98844cc886e5103ac62c93/ nocase ascii wide
+        $string839 = /dc1bce76ba20f6d3a7020b35f18d47a74597018b0e58a9b1aff6d77be72f4a44/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string840 = /dac2f647397f3465db18352b2cc0286948f5d00e4467eac9176c0b4318aa8ff1/ nocase ascii wide
+        $string840 = /dc8ee760f0a1fb1a2f2a239cae71f44382a9be2b67736d590a471eae8c81d0af/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string841 = /db0e36392ef1430eae933b1fd0e94c0dd4f7d08ed93cfe369a7d73ed76082c93/ nocase ascii wide
+        $string841 = /dd14d6cd273d756c527fc0fa4b55e5bc33518d51d713325846458df7894b0d24/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string842 = /db1f07bcc1caabad3c0a5bbeddf48f542193e0576e8c3ee42594c4a3e29d8895/ nocase ascii wide
+        $string842 = /dd307d39038a79e45a140d13c406c084fceb840317a7c53a5d929012fa409cf3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string843 = /db3bd2d5d62c49cf1b49ff0cd04a11da4e21006acb72bb193b776d1abaddb8a9/ nocase ascii wide
+        $string843 = /dd5cbddadb4446fe8e9558788ea449ac7f497973cf83ef9d8acc3803cfae956b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string844 = /db40433bbaa08ed43bfaf5d3535372a95c7c10a5803bd9e1ec95157bb65ce6bd/ nocase ascii wide
+        $string844 = /dd6c8226641df9aa2a08e5e11949430e94773d763734ec3516a7976ad8d10f1a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string845 = /db5b21d5a66fadcebe25ed1bcac0cd5590a3afdf1e9d247a3d169ffcd0a78e62/ nocase ascii wide
+        $string845 = /de81859bc3a1de8e35c2fa363f2405d7aff32f674cc3757caa1cc89235ec818e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string846 = /db85afa956f0a0b6ec30c13259782a0759a5adb2f5dc01969068bb4137364d15/ nocase ascii wide
+        $string846 = /DeployPrinterNightmare\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string847 = /db9e318fce9098eb3ae55a782aee7f29667772302296b4e4924e0edb88e69560/ nocase ascii wide
+        $string847 = /df4c83b6cc9b95717ed255abc28211a8f50db90f6b963c19c12e02bfce81c5ef/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string848 = /dc1bce76ba20f6d3a7020b35f18d47a74597018b0e58a9b1aff6d77be72f4a44/ nocase ascii wide
+        $string848 = /df73e65ae951cedb5ed162e7a32b7e361820b61c051bfe852017e5acc66e79f0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string849 = /dc8ee760f0a1fb1a2f2a239cae71f44382a9be2b67736d590a471eae8c81d0af/ nocase ascii wide
+        $string849 = /dfb800d654e50937f2b2816724a0add4b35960bbc231f2a340a2fcebc53e9b46/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string850 = /dd14d6cd273d756c527fc0fa4b55e5bc33518d51d713325846458df7894b0d24/ nocase ascii wide
+        $string850 = /e066fd26097862651947220c02240ca24faceb5f4ca0d1279881d97f7cff2c17/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string851 = /dd307d39038a79e45a140d13c406c084fceb840317a7c53a5d929012fa409cf3/ nocase ascii wide
+        $string851 = /e0745223bdd96223cc512234545e517028d410e462bfa265f4c09b8e3740a44a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string852 = /dd5cbddadb4446fe8e9558788ea449ac7f497973cf83ef9d8acc3803cfae956b/ nocase ascii wide
+        $string852 = /e075c5a3c998e450c06b2e27ac2904ac2377b6d724577c5071437b68d6b3238b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string853 = /dd6c8226641df9aa2a08e5e11949430e94773d763734ec3516a7976ad8d10f1a/ nocase ascii wide
+        $string853 = /e0b25ed05fbe4558e26b270038d41c1de91ecde35d03520a2f20aaab7eee37e3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string854 = /de81859bc3a1de8e35c2fa363f2405d7aff32f674cc3757caa1cc89235ec818e/ nocase ascii wide
+        $string854 = /e0bca03ae086a2ada8a29930036efe3ba12961a2ee71f2ec72cf9bd57096f604/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string855 = /DeployPrinterNightmare\.exe/ nocase ascii wide
+        $string855 = /e0c20aa0ef6e4fd5cd5cabde2f89d64d4fe1c73d13cc1ed58e401bf5e0667754/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string856 = /df4c83b6cc9b95717ed255abc28211a8f50db90f6b963c19c12e02bfce81c5ef/ nocase ascii wide
+        $string856 = /e114380d61281bb9bffe5246d366342cecc6dfa22814b308fa08b075e0b0f35f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string857 = /df73e65ae951cedb5ed162e7a32b7e361820b61c051bfe852017e5acc66e79f0/ nocase ascii wide
+        $string857 = /e1aa34410dd260529c0e32bb0fbc5263f3042bf47d01dc5ad424bb8cecc2b887/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string858 = /dfb800d654e50937f2b2816724a0add4b35960bbc231f2a340a2fcebc53e9b46/ nocase ascii wide
+        $string858 = /e1b23e90752a40a4a54afc406b874655f6d279a26e140402ad3f69509e9da496/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string859 = /e066fd26097862651947220c02240ca24faceb5f4ca0d1279881d97f7cff2c17/ nocase ascii wide
+        $string859 = /e21abc2c59ac704df355a42b7275021e48670c876d019f05f56bf5a9c4cff78c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string860 = /e0745223bdd96223cc512234545e517028d410e462bfa265f4c09b8e3740a44a/ nocase ascii wide
+        $string860 = /e230c0ac37691456fdf0363b1f81215c15a7a235ddc96f072c74c5ac40866c9e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string861 = /e075c5a3c998e450c06b2e27ac2904ac2377b6d724577c5071437b68d6b3238b/ nocase ascii wide
+        $string861 = /e2c4f99f6a5d7bd663caba698a5867963fa2917201dcad6e94de8ff4a3f6a256/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string862 = /e0b25ed05fbe4558e26b270038d41c1de91ecde35d03520a2f20aaab7eee37e3/ nocase ascii wide
+        $string862 = /e370fb7d05e5b2ede88b633c05b9b21aa073678c392dda6407c112afe3430a61/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string863 = /e0bca03ae086a2ada8a29930036efe3ba12961a2ee71f2ec72cf9bd57096f604/ nocase ascii wide
+        $string863 = /e3731ce37c3e570254e35ac1201483592e708b43c898b3b21cca71a9f401d214/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string864 = /e0c20aa0ef6e4fd5cd5cabde2f89d64d4fe1c73d13cc1ed58e401bf5e0667754/ nocase ascii wide
+        $string864 = /e376d23f48816e9d9a8d74cc9f8891b6fed2cff46d2b0efe989d8272b05931f2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string865 = /e114380d61281bb9bffe5246d366342cecc6dfa22814b308fa08b075e0b0f35f/ nocase ascii wide
+        $string865 = /e4501ae5fc883efc3f0491b2d277e76fbb6d5b4d6618a2221d9fe08e8af41d00/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string866 = /e1aa34410dd260529c0e32bb0fbc5263f3042bf47d01dc5ad424bb8cecc2b887/ nocase ascii wide
+        $string866 = /e475c6f8ad8471fe068b1cbce42300ecffb7e6825ba88bf7dff8c2969562f595/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string867 = /e1b23e90752a40a4a54afc406b874655f6d279a26e140402ad3f69509e9da496/ nocase ascii wide
+        $string867 = /e4ae0aec069aa237c5408c25c838464a65f7ca4e87453e6191f0629909fb2dfa/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string868 = /e21abc2c59ac704df355a42b7275021e48670c876d019f05f56bf5a9c4cff78c/ nocase ascii wide
+        $string868 = /e56cc23ffa05a02bdb22fd0db6b82e1b91d64ce467bf9be73236edab7cf11af2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string869 = /e230c0ac37691456fdf0363b1f81215c15a7a235ddc96f072c74c5ac40866c9e/ nocase ascii wide
+        $string869 = /e58bed7731a0a2a03e7c402d88a76a7d08c932494d6f5f78c0bc5f35b16ba9f6/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string870 = /e2c4f99f6a5d7bd663caba698a5867963fa2917201dcad6e94de8ff4a3f6a256/ nocase ascii wide
+        $string870 = /e62f551dcaca8e16effff14816c75f5838640a23112052b50d99999bb4db7f1d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string871 = /e370fb7d05e5b2ede88b633c05b9b21aa073678c392dda6407c112afe3430a61/ nocase ascii wide
+        $string871 = /e634b7711fbe4e8f83481dbb2191faba51915d5533ec94db6fb2f1029161d0d8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string872 = /e3731ce37c3e570254e35ac1201483592e708b43c898b3b21cca71a9f401d214/ nocase ascii wide
+        $string872 = /e6351ad6e15aa6faa8d9ff9b476e66c6b6970c2f7ad7a04b08e0c7ee1af043bd/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string873 = /e376d23f48816e9d9a8d74cc9f8891b6fed2cff46d2b0efe989d8272b05931f2/ nocase ascii wide
+        $string873 = /e6428916f71a100481e78f6dac951b5c9e885b53dc8f1ab4e9e8a719528f70b8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string874 = /e4501ae5fc883efc3f0491b2d277e76fbb6d5b4d6618a2221d9fe08e8af41d00/ nocase ascii wide
+        $string874 = /e6c2db94a0b0f667ef69e2e28e507a5e7fa629636b93506c119ccac224d74e62/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string875 = /e475c6f8ad8471fe068b1cbce42300ecffb7e6825ba88bf7dff8c2969562f595/ nocase ascii wide
+        $string875 = /e704bd6ebe126565b2334547aac8ef9bfcd9e3ec5ccf59b6e86d5b857610aa70/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string876 = /e4ae0aec069aa237c5408c25c838464a65f7ca4e87453e6191f0629909fb2dfa/ nocase ascii wide
+        $string876 = /e75171190134063cc579d897bd1bd45370e3616b134398d239491c6382d3775f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string877 = /e56cc23ffa05a02bdb22fd0db6b82e1b91d64ce467bf9be73236edab7cf11af2/ nocase ascii wide
+        $string877 = /e754181c7e46930dab3fab1056569be0f6fa13cbdc77a87e91ee5c4bc83f658d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string878 = /e58bed7731a0a2a03e7c402d88a76a7d08c932494d6f5f78c0bc5f35b16ba9f6/ nocase ascii wide
+        $string878 = /e7a9855e85e1d0040e342e54182576f7f12e7f7fbe0debe50cc434f8215f0172/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string879 = /e62f551dcaca8e16effff14816c75f5838640a23112052b50d99999bb4db7f1d/ nocase ascii wide
+        $string879 = /e7fe93ae48f18878e1476a2aaaf46af6da778d2f3a33dfe27c8d18cc890e1e7c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string880 = /e634b7711fbe4e8f83481dbb2191faba51915d5533ec94db6fb2f1029161d0d8/ nocase ascii wide
+        $string880 = /e8336778c23574464fae2551b27074d52a949d7c97fe3fd0d8351f3f340e811b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string881 = /e6351ad6e15aa6faa8d9ff9b476e66c6b6970c2f7ad7a04b08e0c7ee1af043bd/ nocase ascii wide
+        $string881 = /e848c25347ea3027e46eb9825cc47f3e8eaf44c5aead6691d6ea61c27cd4b136/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string882 = /e6428916f71a100481e78f6dac951b5c9e885b53dc8f1ab4e9e8a719528f70b8/ nocase ascii wide
+        $string882 = /e88262454c26daae342bea04507e03b8b49599d5fd2d5ec81027e685333a4104/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string883 = /e6c2db94a0b0f667ef69e2e28e507a5e7fa629636b93506c119ccac224d74e62/ nocase ascii wide
+        $string883 = /e888bdb98dec5ad0f33feec1ce1563987ae364a7d27da8a1676d763d1d04fbef/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string884 = /e704bd6ebe126565b2334547aac8ef9bfcd9e3ec5ccf59b6e86d5b857610aa70/ nocase ascii wide
+        $string884 = /e8c419d7176ad443676893924e1a1c0871bda59e512297b9b5846bebe9568b56/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string885 = /e75171190134063cc579d897bd1bd45370e3616b134398d239491c6382d3775f/ nocase ascii wide
+        $string885 = /e8de489a84256609ac4e2b5236737d953af63fed9601d3f69253a5f199d901fc/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string886 = /e754181c7e46930dab3fab1056569be0f6fa13cbdc77a87e91ee5c4bc83f658d/ nocase ascii wide
+        $string886 = /e99a3bec641c578ceaa05b63b6544daf5b437361c1a5f8742808d8a09df5bca6/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string887 = /e7a9855e85e1d0040e342e54182576f7f12e7f7fbe0debe50cc434f8215f0172/ nocase ascii wide
+        $string887 = /e9fff62c4585ae6de84da278a20e754ff3ff9ccdd0f11041a43eae84a54a622d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string888 = /e7fe93ae48f18878e1476a2aaaf46af6da778d2f3a33dfe27c8d18cc890e1e7c/ nocase ascii wide
+        $string888 = /ea707d12f05cf7fe93ca743158ae20c91ee663c50bd738b776d1183d1c8c7db2/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string889 = /e8336778c23574464fae2551b27074d52a949d7c97fe3fd0d8351f3f340e811b/ nocase ascii wide
+        $string889 = /eb6536b06148bb2c1a9c4103b98778d51f1204bd0aaf1b01dfb4a2c103ee000a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string890 = /e848c25347ea3027e46eb9825cc47f3e8eaf44c5aead6691d6ea61c27cd4b136/ nocase ascii wide
+        $string890 = /ebf9bf76500715fe20c475140d200e76b51c400406683827eabb2ab70f9f986f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string891 = /e88262454c26daae342bea04507e03b8b49599d5fd2d5ec81027e685333a4104/ nocase ascii wide
+        $string891 = /ec3fea4e00eb0a4712a869b52eacce7efbcdcc9b958b8f46066e6f8969c4f79c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string892 = /e888bdb98dec5ad0f33feec1ce1563987ae364a7d27da8a1676d763d1d04fbef/ nocase ascii wide
+        $string892 = /ecf32e9cc006fb558375569ad4021fe588206e04722fe0474a34d05d9cc358f5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string893 = /e8c419d7176ad443676893924e1a1c0871bda59e512297b9b5846bebe9568b56/ nocase ascii wide
+        $string893 = /ed0e2694b307d3510c102a4a5687523d0c72b8efba9dc256f493555639a3d470/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string894 = /e8de489a84256609ac4e2b5236737d953af63fed9601d3f69253a5f199d901fc/ nocase ascii wide
+        $string894 = /ed0ee202bacea249b3d4563c0262501587434b25fc8b754c17829c8f4a64ad84/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string895 = /e99a3bec641c578ceaa05b63b6544daf5b437361c1a5f8742808d8a09df5bca6/ nocase ascii wide
+        $string895 = /ed3e2cf7fe3797b0ec87b74568628f8a4d7ac1c4c5a29c6e169599ded4d1d947/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string896 = /e9fff62c4585ae6de84da278a20e754ff3ff9ccdd0f11041a43eae84a54a622d/ nocase ascii wide
+        $string896 = /ed565cd47f1e75dc1c53043d03631809f64c091293d10fb26f272ff74d419a6d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string897 = /ea707d12f05cf7fe93ca743158ae20c91ee663c50bd738b776d1183d1c8c7db2/ nocase ascii wide
+        $string897 = /ed72a475f9c8bb454e36a97155172424cd9892cbeba30bb6fc53cad973767fd1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string898 = /eb6536b06148bb2c1a9c4103b98778d51f1204bd0aaf1b01dfb4a2c103ee000a/ nocase ascii wide
+        $string898 = /edcf68c388027b82dc8db46324c2cc67105a90f3689a200972331deb5dcdb887/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string899 = /ebf9bf76500715fe20c475140d200e76b51c400406683827eabb2ab70f9f986f/ nocase ascii wide
+        $string899 = /eddd8cf62034d52903edacb5d07fc26220597cc98395d200fe859bd88936fc70/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string900 = /ec3fea4e00eb0a4712a869b52eacce7efbcdcc9b958b8f46066e6f8969c4f79c/ nocase ascii wide
+        $string900 = /ee0ef3b713324cc7b0d6406c194c4e563fdcbcdea330300844e30603969cbde3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string901 = /ecf32e9cc006fb558375569ad4021fe588206e04722fe0474a34d05d9cc358f5/ nocase ascii wide
+        $string901 = /ee9f3bc75013e6741dde950888676f9c20134ed7a7607bd069da81727be1fa01/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string902 = /ed0e2694b307d3510c102a4a5687523d0c72b8efba9dc256f493555639a3d470/ nocase ascii wide
+        $string902 = /eeb9847bbb8fdb98a1454e6dcde4e4e685bf549e0ab42fab823ed5abf83de427/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string903 = /ed0ee202bacea249b3d4563c0262501587434b25fc8b754c17829c8f4a64ad84/ nocase ascii wide
+        $string903 = /ef5bf46dc35dcb1881a81107214ba85cafd4b3eb76e8a68b32005e9dd44d1371/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string904 = /ed3e2cf7fe3797b0ec87b74568628f8a4d7ac1c4c5a29c6e169599ded4d1d947/ nocase ascii wide
+        $string904 = /ef9bce2a5c2f623419be05c9090187cba082a208f7685bd93c349fe71cbad896/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string905 = /ed565cd47f1e75dc1c53043d03631809f64c091293d10fb26f272ff74d419a6d/ nocase ascii wide
+        $string905 = /effc137c4e7594fc3b3b5240c786ba3351e521bb7f9d14883dca6ff9db5f5f28/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string906 = /ed72a475f9c8bb454e36a97155172424cd9892cbeba30bb6fc53cad973767fd1/ nocase ascii wide
+        $string906 = /f140d5c67e7a151d9bba6d8c456dd44004f14056acd3257aa2203b30e959ef39/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string907 = /edcf68c388027b82dc8db46324c2cc67105a90f3689a200972331deb5dcdb887/ nocase ascii wide
+        $string907 = /f187ab7396fc3a96e9549316af3e8eaf9ecdca41adec82d98ca52e67974811a8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string908 = /eddd8cf62034d52903edacb5d07fc26220597cc98395d200fe859bd88936fc70/ nocase ascii wide
+        $string908 = /f2179c77b91b691efbf523410bdd70aa97c9a6866d5d13004a8ff559243f18e0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string909 = /ee0ef3b713324cc7b0d6406c194c4e563fdcbcdea330300844e30603969cbde3/ nocase ascii wide
+        $string909 = /f2754719c9b797be118057367989dc2da30a55d3f17260b55d252efdf7967579/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string910 = /ee9f3bc75013e6741dde950888676f9c20134ed7a7607bd069da81727be1fa01/ nocase ascii wide
+        $string910 = /f2e4dc0f2862a37449a85eaa39fe3a7840822e7ae24e8999fb6401b084c9505a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string911 = /eeb9847bbb8fdb98a1454e6dcde4e4e685bf549e0ab42fab823ed5abf83de427/ nocase ascii wide
+        $string911 = /f2ea2ded9b06880391d161ba3763f120209c6e2831e2c0092733df29e96a59a5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string912 = /ef5bf46dc35dcb1881a81107214ba85cafd4b3eb76e8a68b32005e9dd44d1371/ nocase ascii wide
+        $string912 = /f2f1df5e2cb5f824bea4b8e5b936187293b9717268aec16ab4eaa8c3f35e16cb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string913 = /ef9bce2a5c2f623419be05c9090187cba082a208f7685bd93c349fe71cbad896/ nocase ascii wide
+        $string913 = /f336ca7eed8b8f05f14090f23c4cc1a67f9b7e58b61586adf5c72542b05b94be/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string914 = /effc137c4e7594fc3b3b5240c786ba3351e521bb7f9d14883dca6ff9db5f5f28/ nocase ascii wide
+        $string914 = /f3a97e2966c9b63bf0ce88346b568687f4253557841fd9c8acdee8ad25b27a97/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string915 = /f140d5c67e7a151d9bba6d8c456dd44004f14056acd3257aa2203b30e959ef39/ nocase ascii wide
+        $string915 = /f401f7bdae8094f273ab86529a90d93a192fed69897b908d1f5cc94f625b6b88/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string916 = /f187ab7396fc3a96e9549316af3e8eaf9ecdca41adec82d98ca52e67974811a8/ nocase ascii wide
+        $string916 = /f44103b0e97b84c0381f234744a0a2aa2bf79cc884ee9526dbab8f9d674bc17b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string917 = /f2179c77b91b691efbf523410bdd70aa97c9a6866d5d13004a8ff559243f18e0/ nocase ascii wide
+        $string917 = /f4b50c86fa7368506ce70412d54b64ec45d4d93b6f0740b607c23a1a149eea46/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string918 = /f2754719c9b797be118057367989dc2da30a55d3f17260b55d252efdf7967579/ nocase ascii wide
+        $string918 = /f4fc8dabe2ba48d9d204dd0f74cae65a1eb27951664911aa116ab08446c1fb1d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string919 = /f2e4dc0f2862a37449a85eaa39fe3a7840822e7ae24e8999fb6401b084c9505a/ nocase ascii wide
+        $string919 = /f504340404e40fea29f2beb71c114ce3d310ca80631aff7c0f0c19198da897d4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string920 = /f2ea2ded9b06880391d161ba3763f120209c6e2831e2c0092733df29e96a59a5/ nocase ascii wide
+        $string920 = /f56888799e7efbcf2196e8f9dfa0d1adc97772ad6fee946cc59307d758a99e21/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string921 = /f2f1df5e2cb5f824bea4b8e5b936187293b9717268aec16ab4eaa8c3f35e16cb/ nocase ascii wide
+        $string921 = /f579af445d7bae578d9848251bcfeb75f0947df511f68a595c902468fad39086/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string922 = /f336ca7eed8b8f05f14090f23c4cc1a67f9b7e58b61586adf5c72542b05b94be/ nocase ascii wide
+        $string922 = /f5da690a8c9d7656d49401f2b54b3582197b81f6554eda0dc0bd511995db095c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string923 = /f3a97e2966c9b63bf0ce88346b568687f4253557841fd9c8acdee8ad25b27a97/ nocase ascii wide
+        $string923 = /f5ef714731d36549ad900a94888613cdcfdddaa07dfb4a56990b2326bfc4cac7/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string924 = /f401f7bdae8094f273ab86529a90d93a192fed69897b908d1f5cc94f625b6b88/ nocase ascii wide
+        $string924 = /f5efe627e03bc8128bc4a3a600774648f2bd9384fb8f146262ae6727133e8414/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string925 = /f44103b0e97b84c0381f234744a0a2aa2bf79cc884ee9526dbab8f9d674bc17b/ nocase ascii wide
+        $string925 = /f6955930082d6cb41401cd02d95e0f79bf44f92918adc18bdbd5aef7207625d1/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string926 = /f4b50c86fa7368506ce70412d54b64ec45d4d93b6f0740b607c23a1a149eea46/ nocase ascii wide
+        $string926 = /f6f65c22bb7a4f263d745b83a959cc8b295eadbc9f458afb437b716ad3fac833/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string927 = /f4fc8dabe2ba48d9d204dd0f74cae65a1eb27951664911aa116ab08446c1fb1d/ nocase ascii wide
+        $string927 = /f6f865390750822cea504855053b4fe017001235f63f628f8433dab6f3b15582/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string928 = /f504340404e40fea29f2beb71c114ce3d310ca80631aff7c0f0c19198da897d4/ nocase ascii wide
+        $string928 = /f724f2ad9e30f001e16034efa68757a3baf31fe918a71722b529a53f71c3bac0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string929 = /f56888799e7efbcf2196e8f9dfa0d1adc97772ad6fee946cc59307d758a99e21/ nocase ascii wide
+        $string929 = /f745fdbab44bfd54a5997a5d8746a602eb3af30c10d3fd264edbc705a8bb6e2a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string930 = /f579af445d7bae578d9848251bcfeb75f0947df511f68a595c902468fad39086/ nocase ascii wide
+        $string930 = /f7685768c93c8405a525090484261be417913ca2bcfdcce9596856dc3b5c64e0/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string931 = /f5da690a8c9d7656d49401f2b54b3582197b81f6554eda0dc0bd511995db095c/ nocase ascii wide
+        $string931 = /f7851e5b0bca91e7ae15d879a7c5be4f63014c2c4b85bc756f6eddcf8c1eaa39/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string932 = /f5ef714731d36549ad900a94888613cdcfdddaa07dfb4a56990b2326bfc4cac7/ nocase ascii wide
+        $string932 = /f80dcd0195952b3bed5899824560e51e26cde9ec9974acbf1751d3ba845e5232/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string933 = /f5efe627e03bc8128bc4a3a600774648f2bd9384fb8f146262ae6727133e8414/ nocase ascii wide
+        $string933 = /f88a7b4bbe98f4e4d0f9e4c2f4de2a448f13ed7783772e6f5d6881c18b324bb4/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string934 = /f6955930082d6cb41401cd02d95e0f79bf44f92918adc18bdbd5aef7207625d1/ nocase ascii wide
+        $string934 = /f891fa68159f087901b55f0109bdf40a39e312fc31fb9caafca22726798e7aeb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string935 = /f6f65c22bb7a4f263d745b83a959cc8b295eadbc9f458afb437b716ad3fac833/ nocase ascii wide
+        $string935 = /f9b96ad88884c71b8a0d911ebdcb01fe871d795354c4fbd66b705ee7120d83a3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string936 = /f6f865390750822cea504855053b4fe017001235f63f628f8433dab6f3b15582/ nocase ascii wide
+        $string936 = /f9e0e800766e3a28d93ec6f55de8d2c64204d87162898d977eb3156c9cebb24b/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string937 = /f724f2ad9e30f001e16034efa68757a3baf31fe918a71722b529a53f71c3bac0/ nocase ascii wide
+        $string937 = /f9ecfddee46fd760c809c843dc86c2bf7b9dfe1ac9ad932f782fb0ed6e34a23e/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string938 = /f745fdbab44bfd54a5997a5d8746a602eb3af30c10d3fd264edbc705a8bb6e2a/ nocase ascii wide
+        $string938 = /f9fdfa324c6c8d1e73da339f92f03a275e3f847082350a2881cca8c14e401d23/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string939 = /f7685768c93c8405a525090484261be417913ca2bcfdcce9596856dc3b5c64e0/ nocase ascii wide
+        $string939 = /fa3ff4c4ead31c5754d9cd83bbee29512cfa4929722594998199e8fd51ae3bfb/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string940 = /f7851e5b0bca91e7ae15d879a7c5be4f63014c2c4b85bc756f6eddcf8c1eaa39/ nocase ascii wide
+        $string940 = /fad52d687cfe0824b40ba5fd96a6a3034537fc33c59d628049de8b93c4364ce9/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string941 = /f80dcd0195952b3bed5899824560e51e26cde9ec9974acbf1751d3ba845e5232/ nocase ascii wide
+        $string941 = /fb6a2914759e6644c5067b1b7308bc295d4b6b357b1ad9f904b430ba588654f8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string942 = /f88a7b4bbe98f4e4d0f9e4c2f4de2a448f13ed7783772e6f5d6881c18b324bb4/ nocase ascii wide
+        $string942 = /fb8c1454ea22ccc9d97cbd90692d38c3c63d551680f6632fe658598a9bb23c03/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string943 = /f891fa68159f087901b55f0109bdf40a39e312fc31fb9caafca22726798e7aeb/ nocase ascii wide
+        $string943 = /fbcbcfae5662f9f0dfbf7f5cb31c052399382232a51554197f4554d1bb06332f/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string944 = /f9b96ad88884c71b8a0d911ebdcb01fe871d795354c4fbd66b705ee7120d83a3/ nocase ascii wide
+        $string944 = /fbd415807cca02732e2b7b7ad2d8fd09db1ab75953fe24fe7b6238f691c6e5a8/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string945 = /f9e0e800766e3a28d93ec6f55de8d2c64204d87162898d977eb3156c9cebb24b/ nocase ascii wide
+        $string945 = /fc04cd7b616aa8a43a35a5318a9454f4228c74b056bfa07ec14105d249593e35/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string946 = /f9ecfddee46fd760c809c843dc86c2bf7b9dfe1ac9ad932f782fb0ed6e34a23e/ nocase ascii wide
+        $string946 = /fc52dac4f484c090d99d8b142ed41ed3368938955dfc25d76cd4f290bb6c59d5/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string947 = /f9fdfa324c6c8d1e73da339f92f03a275e3f847082350a2881cca8c14e401d23/ nocase ascii wide
+        $string947 = /fc8516a68f470a92e9e4dd80b5928ddd732d2de4b43b483d23d068bb92509f0c/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string948 = /fa3ff4c4ead31c5754d9cd83bbee29512cfa4929722594998199e8fd51ae3bfb/ nocase ascii wide
+        $string948 = /fc959cac98096ae179061a564cdce68687a17768f90ec9af568a5b58c0adfb5a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string949 = /fad52d687cfe0824b40ba5fd96a6a3034537fc33c59d628049de8b93c4364ce9/ nocase ascii wide
+        $string949 = /fc9b91ba161b6dcf81cee6713bbf224e82c49e3166178c0d9ceb54f963250ce7/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string950 = /fb6a2914759e6644c5067b1b7308bc295d4b6b357b1ad9f904b430ba588654f8/ nocase ascii wide
+        $string950 = /fe22bb52058886459e0ff6f9c1c70b4604b15c30b5f1e3ebfc58305d4e94a7e3/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string951 = /fb8c1454ea22ccc9d97cbd90692d38c3c63d551680f6632fe658598a9bb23c03/ nocase ascii wide
+        $string951 = /fe2cc64a77ca3a7620a9ddec10f9f6e80769132f5587cece5dd03d419782481d/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string952 = /fbcbcfae5662f9f0dfbf7f5cb31c052399382232a51554197f4554d1bb06332f/ nocase ascii wide
+        $string952 = /fed573df80a1aeb08f129824ce29906dd614fea7b3af704fa0e9324c26e5084a/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string953 = /fbd415807cca02732e2b7b7ad2d8fd09db1ab75953fe24fe7b6238f691c6e5a8/ nocase ascii wide
+        $string953 = /fee8aa6d643d13d224330adb9389f37ec58c487cf91769158f5a650fa5522bde/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string954 = /fc04cd7b616aa8a43a35a5318a9454f4228c74b056bfa07ec14105d249593e35/ nocase ascii wide
+        $string954 = /ffb3ecd39698fe5e2fc33483b159f10d1ba16801682aab754f61ccb814eff5d7/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string955 = /fc52dac4f484c090d99d8b142ed41ed3368938955dfc25d76cd4f290bb6c59d5/ nocase ascii wide
+        $string955 = /ffebf73d11403dc0bb57ab23a775a568ff5c67c1bb5f8fac7a1f2fbd3960b619/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string956 = /fc8516a68f470a92e9e4dd80b5928ddd732d2de4b43b483d23d068bb92509f0c/ nocase ascii wide
+        $string956 = /fff54c4b8a879869c50760512e87a39578fea5e07ecead1086af4b50561b5453/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string957 = /fc959cac98096ae179061a564cdce68687a17768f90ec9af568a5b58c0adfb5a/ nocase ascii wide
+        $string957 = /Flangvik\/SharpCollection/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string958 = /fc9b91ba161b6dcf81cee6713bbf224e82c49e3166178c0d9ceb54f963250ce7/ nocase ascii wide
+        $string958 = /ForgeCert\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string959 = /fe22bb52058886459e0ff6f9c1c70b4604b15c30b5f1e3ebfc58305d4e94a7e3/ nocase ascii wide
+        $string959 = /Inveigh\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string960 = /fe2cc64a77ca3a7620a9ddec10f9f6e80769132f5587cece5dd03d419782481d/ nocase ascii wide
+        $string960 = /KrbRelay\.Clients\.Attacks/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string961 = /fed573df80a1aeb08f129824ce29906dd614fea7b3af704fa0e9324c26e5084a/ nocase ascii wide
+        $string961 = /KrbRelay\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string962 = /fee8aa6d643d13d224330adb9389f37ec58c487cf91769158f5a650fa5522bde/ nocase ascii wide
+        $string962 = /KrbRelayUp\.DSInternals\.Common\.Properties/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string963 = /ffb3ecd39698fe5e2fc33483b159f10d1ba16801682aab754f61ccb814eff5d7/ nocase ascii wide
+        $string963 = /KrbRelayUp\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string964 = /ffebf73d11403dc0bb57ab23a775a568ff5c67c1bb5f8fac7a1f2fbd3960b619/ nocase ascii wide
+        $string964 = /KrbRelayUp\.lib/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string965 = /fff54c4b8a879869c50760512e87a39578fea5e07ecead1086af4b50561b5453/ nocase ascii wide
+        $string965 = /LockLess\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string966 = /Flangvik\/SharpCollection/ nocase ascii wide
+        $string966 = /PassTheCert\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string967 = /ForgeCert\.exe/ nocase ascii wide
+        $string967 = /PurpleSharp\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string968 = /Inveigh\.exe/ nocase ascii wide
+        $string968 = /Rubeus\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string969 = /KrbRelay\.Clients\.Attacks/ nocase ascii wide
+        $string969 = /SafetyKatz\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string970 = /KrbRelay\.exe/ nocase ascii wide
+        $string970 = /SauronEye\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string971 = /KrbRelayUp\.DSInternals\.Common\.Properties/ nocase ascii wide
+        $string971 = /SearchOutlook\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string972 = /KrbRelayUp\.exe/ nocase ascii wide
+        $string972 = /Seatbelt\.Commands\.Windows/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string973 = /KrbRelayUp\.lib/ nocase ascii wide
+        $string973 = /Seatbelt\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string974 = /LockLess\.exe/ nocase ascii wide
+        $string974 = /ShadowSpray\.DSInternals/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string975 = /PassTheCert\.exe/ nocase ascii wide
+        $string975 = /ShadowSpray\.Kerb\.lib/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string976 = /PurpleSharp\.exe/ nocase ascii wide
+        $string976 = /SharpAllowedToAct\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string977 = /Rubeus\.exe/ nocase ascii wide
+        $string977 = /SharpAppLocker\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string978 = /SafetyKatz\.exe/ nocase ascii wide
+        $string978 = /SharpBypassUAC\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string979 = /SauronEye\.exe/ nocase ascii wide
+        $string979 = /SharpChisel\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string980 = /SearchOutlook\.exe/ nocase ascii wide
+        $string980 = /SharpChrome\sbackupkey/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string981 = /Seatbelt\.Commands\.Windows/ nocase ascii wide
+        $string981 = /SharpChrome\.cs/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string982 = /Seatbelt\.exe/ nocase ascii wide
+        $string982 = /SharpChrome\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string983 = /ShadowSpray\.DSInternals/ nocase ascii wide
+        $string983 = /SharpChromium\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string984 = /ShadowSpray\.Kerb\.lib/ nocase ascii wide
+        $string984 = /SharpCloud\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string985 = /SharpAllowedToAct\.exe/ nocase ascii wide
+        $string985 = /SharpCOM\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string986 = /SharpAppLocker\.exe/ nocase ascii wide
+        $string986 = /SharpCookieMonster\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string987 = /SharpBypassUAC\.exe/ nocase ascii wide
+        $string987 = /SharpCrashEventLog\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string988 = /SharpChisel\.exe/ nocase ascii wide
+        $string988 = /SharpDir\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string989 = /SharpChrome\sbackupkey/ nocase ascii wide
+        $string989 = /SharpDPAPI\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string990 = /SharpChrome\.cs/ nocase ascii wide
+        $string990 = /SharpDump\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string991 = /SharpChrome\.exe/ nocase ascii wide
+        $string991 = /SharpEDRChecker\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string992 = /SharpChromium\.exe/ nocase ascii wide
+        $string992 = /SharPersist\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string993 = /SharpCloud\.exe/ nocase ascii wide
+        $string993 = /SharpExec\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string994 = /SharpCOM\.exe/ nocase ascii wide
+        $string994 = /SharpGPOAbuse\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string995 = /SharpCookieMonster\.exe/ nocase ascii wide
+        $string995 = /SharpHandler\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string996 = /SharpCrashEventLog\.exe/ nocase ascii wide
+        $string996 = /SharpHose\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string997 = /SharpDir\.exe/ nocase ascii wide
+        $string997 = /SharpHound\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string998 = /SharpDPAPI\.exe/ nocase ascii wide
+        $string998 = /SharpKatz\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string999 = /SharpDump\.exe/ nocase ascii wide
+        $string999 = /SharpLAPS\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1000 = /SharpEDRChecker\.exe/ nocase ascii wide
+        $string1000 = /SharpMapExec\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1001 = /SharPersist\.exe/ nocase ascii wide
+        $string1001 = /SharpMiniDump\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1002 = /SharpExec\.exe/ nocase ascii wide
+        $string1002 = /SharpMove\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1003 = /SharpGPOAbuse\.exe/ nocase ascii wide
+        $string1003 = /SharpNamedPipePTH\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1004 = /SharpHandler\.exe/ nocase ascii wide
+        $string1004 = /SharpNoPSExec\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1005 = /SharpHose\.exe/ nocase ascii wide
+        $string1005 = /SharpPrinter\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1006 = /SharpHound\.exe/ nocase ascii wide
+        $string1006 = /SharpRDP\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1007 = /SharpKatz\.exe/ nocase ascii wide
+        $string1007 = /SharpReg\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1008 = /SharpLAPS\.exe/ nocase ascii wide
+        $string1008 = /SharpSCCM\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1009 = /SharpMapExec\.exe/ nocase ascii wide
+        $string1009 = /SharpSearch\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1010 = /SharpMiniDump\.exe/ nocase ascii wide
+        $string1010 = /SharpSecDump\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1011 = /SharpMove\.exe/ nocase ascii wide
+        $string1011 = /SharpShares\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1012 = /SharpNamedPipePTH\.exe/ nocase ascii wide
+        $string1012 = /Sharp\-SMBExec\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1013 = /SharpNoPSExec\.exe/ nocase ascii wide
+        $string1013 = /SharpSniper\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1014 = /SharpPrinter\.exe/ nocase ascii wide
+        $string1014 = /SharpSphere\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1015 = /SharpRDP\.exe/ nocase ascii wide
+        $string1015 = /SharpSpray\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1016 = /SharpReg\.exe/ nocase ascii wide
+        $string1016 = /SharpSQLPwn\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1017 = /SharpSCCM\.exe/ nocase ascii wide
+        $string1017 = /SharpStay\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1018 = /SharpSearch\.exe/ nocase ascii wide
+        $string1018 = /SharpSvc\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1019 = /SharpSecDump\.exe/ nocase ascii wide
+        $string1019 = /SharpTask\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1020 = /SharpShares\.exe/ nocase ascii wide
+        $string1020 = /SharpUp\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1021 = /Sharp\-SMBExec\.exe/ nocase ascii wide
+        $string1021 = /SharpView\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1022 = /SharpSniper\.exe/ nocase ascii wide
+        $string1022 = /SharpWebServer\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1023 = /SharpSphere\.exe/ nocase ascii wide
+        $string1023 = /SharpWifiGrabber\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1024 = /SharpSpray\.exe/ nocase ascii wide
+        $string1024 = /SharpWMI\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1025 = /SharpSQLPwn\.exe/ nocase ascii wide
+        $string1025 = /SharpZeroLogon\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1026 = /SharpStay\.exe/ nocase ascii wide
+        $string1026 = /Shhmon\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1027 = /SharpSvc\.exe/ nocase ascii wide
+        $string1027 = /Snaffler\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1028 = /SharpTask\.exe/ nocase ascii wide
+        $string1028 = /Snaffler\.Properties/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1029 = /SharpUp\.exe/ nocase ascii wide
+        $string1029 = /Snaffler\.SnaffRules/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1030 = /SharpView\.exe/ nocase ascii wide
+        $string1030 = /StickyNotesExtract\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1031 = /SharpWebServer\.exe/ nocase ascii wide
+        $string1031 = /SweetPotato\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1032 = /SharpWifiGrabber\.exe/ nocase ascii wide
+        $string1032 = /ThunderFox\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1033 = /SharpWMI\.exe/ nocase ascii wide
+        $string1033 = /TokenStomp\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1034 = /SharpZeroLogon\.exe/ nocase ascii wide
+        $string1034 = /TruffleSnout\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1035 = /Shhmon\.exe/ nocase ascii wide
+        $string1035 = /Whisker\.DSInternals/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1036 = /Snaffler\.exe/ nocase ascii wide
+        $string1036 = /Whisker\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1037 = /Snaffler\.Properties/ nocase ascii wide
+        $string1037 = /winPEAS\.exe/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1038 = /Snaffler\.SnaffRules/ nocase ascii wide
+        $string1038 = /winPEAS\.Info\.FilesInfo\.Office\.Office/ nocase ascii wide
         // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
         // Reference: https://github.com/Flangvik/SharpCollection
-        $string1039 = /StickyNotesExtract\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1040 = /SweetPotato\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1041 = /ThunderFox\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1042 = /TokenStomp\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1043 = /TruffleSnout\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1044 = /Whisker\.DSInternals/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1045 = /Whisker\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1046 = /winPEAS\.exe/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1047 = /winPEAS\.Info\.FilesInfo\.Office\.Office/ nocase ascii wide
-        // Description: Nightly builds of common C# offensive tools. fresh from their respective master branches built and released in a CDI fashion using Azure DevOps release pipelines.
-        // Reference: https://github.com/Flangvik/SharpCollection
-        $string1048 = /WMIReg\.exe/ nocase ascii wide
+        $string1039 = /WMIReg\.exe/ nocase ascii wide
 
     condition:
         any of them

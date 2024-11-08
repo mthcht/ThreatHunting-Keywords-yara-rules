@@ -20,6 +20,9 @@ rule systemctl
         // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes* deleting Registry keys so that tools do not start at run time* or other methods to interfere with security tools scanning or reporting information.
         // Reference: https://attack.mitre.org/techniques/T1562/001/
         $string4 = /systemctl\sstop\sfalcon\-sensor\.service/ nocase ascii wide
+        // Description: Adversaries may disable security tools to avoid possible detection of their tools and activities.
+        // Reference: N/A
+        $string5 = /systemctl\sstop\susbguard\.service/ nocase ascii wide
 
     condition:
         any of them

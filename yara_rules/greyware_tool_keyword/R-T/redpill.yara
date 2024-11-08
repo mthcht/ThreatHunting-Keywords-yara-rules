@@ -46,7 +46,7 @@ rule redpill
         $string12 = /\\ps2exe\.ps1/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
-        $string13 = /\\Screenshot\.exe/ nocase ascii wide
+        $string13 = /\\Screenshot\.exe\s/ nocase ascii wide
         // Description: Assist reverse tcp shells in post-exploration tasks
         // Reference: https://github.com/r00t-3xp10it/redpill
         $string14 = /\\Screenshot\.ps1/ nocase ascii wide

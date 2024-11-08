@@ -122,9 +122,6 @@ rule nmap
         // Description: ZMap is a fast single packet network scanner designed for Internet-wide network surveys. On a typical desktop computer with a gigabit Ethernet connection. ZMap is capable scanning the entire public IPv4 address space in under 45 minutes. With a 10gigE connection and PF_RING. ZMap can scan the IPv4 address space in under 5 minutes. ZMap operates on GNU/Linux. Mac OS. and BSD. ZMap currently has fully implemented probe modules for TCP SYN scans. ICMP. DNS queries. UPnP. BACNET. and can send a large number of UDP probes. If you are looking to do more involved scans. e.g.. banner grab or TLS handshake. take a look at ZGrab. ZMaps sister project that performs stateful application-layer handshakes.
         // Reference: https://github.com/zmap/zmap
         $string38 = /zmap\s\-/ nocase ascii wide
-        // Description: A very common tool. Network host vuln and port detector.
-        // Reference: https://github.com/nmap/nmap
-        $string39 = /nmap\s/ nocase ascii wide
 
     condition:
         any of them

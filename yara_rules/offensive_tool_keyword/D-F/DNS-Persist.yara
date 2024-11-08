@@ -55,13 +55,10 @@ rule DNS_Persist
         $string15 = /persist\srunkey/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string16 = /Persistence\.cpp/ nocase ascii wide
+        $string16 = /Persistence\.exe/ nocase ascii wide
         // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
         // Reference: https://github.com/0x09AL/DNS-Persist
-        $string17 = /Persistence\.exe/ nocase ascii wide
-        // Description: DNS-Persist is a post-exploitation agent which uses DNS for command and control.
-        // Reference: https://github.com/0x09AL/DNS-Persist
-        $string18 = /Shellcode\sInjected\sSuccessfully/ nocase ascii wide
+        $string17 = /Shellcode\sInjected\sSuccessfully/ nocase ascii wide
 
     condition:
         any of them

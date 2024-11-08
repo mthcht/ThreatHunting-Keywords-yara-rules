@@ -97,64 +97,43 @@ rule oset
         $string29 = /reg\.exe\squery\shklm\s\^\|\sfindstr\s\/i\s\\OFFLINE/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string30 = /SamOfflineAddMemberToAlias/ nocase ascii wide
+        $string30 = /SamOfflineConnect/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string31 = /SamOfflineCloseHandle/ nocase ascii wide
+        $string31 = /SamOfflineEnumerateDomainsInSamServer/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string32 = /SamOfflineConnect/ nocase ascii wide
+        $string32 = /SamOfflineEnumerateUsersInDomain2/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string33 = /SamOfflineCreateAliasInDomain/ nocase ascii wide
+        $string33 = /SamOfflineGetMembersInAlias/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string34 = /SamOfflineCreateUserInDomain/ nocase ascii wide
+        $string34 = /SamOfflineLookupDomainInSamServer/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string35 = /SamOfflineDeleteAlias/ nocase ascii wide
+        $string35 = /SamOfflineOpenDomain/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string36 = /SamOfflineDeleteUser/ nocase ascii wide
+        $string36 = /SamOfflineOpenUser/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string37 = /SamOfflineEnumerateAliasesInDomain/ nocase ascii wide
+        $string37 = /SamOfflineQueryInformationAlias/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string38 = /SamOfflineEnumerateDomainsInSamServer/ nocase ascii wide
+        $string38 = /SamOfflineQueryInformationUser/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string39 = /SamOfflineEnumerateUsersInDomain2/ nocase ascii wide
+        $string39 = /SamOfflineRemoveMemberFromAlias/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string40 = /SamOfflineGetMembersInAlias/ nocase ascii wide
+        $string40 = /SamOfflineRidToSid/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string41 = /SamOfflineLookupDomainInSamServer/ nocase ascii wide
+        $string41 = /SamOfflineSetInformationAlias/ nocase ascii wide
         // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
         // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string42 = /SamOfflineOpenDomain/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string43 = /SamOfflineOpenUser/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string44 = /SamOfflineQueryInformationAlias/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string45 = /SamOfflineQueryInformationUser/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string46 = /SamOfflineRemoveMemberFromAlias/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string47 = /SamOfflineRidToSid/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string48 = /SamOfflineSetInformationAlias/ nocase ascii wide
-        // Description: Offline SAM Editor Tool to  access and edit SAM databases from offline OS disk
-        // Reference: https://x.com/0gtweet/status/1817859483445461406
-        $string49 = /stderr\.pl\/oset/ nocase ascii wide
+        $string42 = /stderr\.pl\/oset/ nocase ascii wide
 
     condition:
         any of them

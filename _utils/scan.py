@@ -102,16 +102,15 @@ def scan_files_with_yara(yara_rule_files, target, output_file=None, extension=No
         if out_f:
             out_f.close()
 
-def get_yara_files(yara_paths):
+def get_yara_files(yara_path):
     yara_files = []
-    for yara_path in yara_paths:
-        if os.path.isdir(yara_path):
-            for root, dirs, files in os.walk(yara_path):
-                for file in files:
-                    if file.endswith('.yara') or file.endswith('.yar'):
-                        yara_files.append(os.path.join(root, file))
-        elif os.path.isfile(yara_path):
-            yara_files.append(yara_path)
+    if os.path.isdir(yara_path):
+        for root, dirs, files in os.walk(yara_path):
+            for file in files:
+                if file.endswith('.yara') or file.endswith('.yar'):
+                    yara_files.append(os.path.join(root, file))
+    elif os.path.isfile(yara_path):
+        yara_files.append(yara_path)
     return yara_files
 
 def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):
@@ -174,26 +173,24 @@ def validate_target_path(target):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scan a file or directory with one or multiple YARA rules")
-    parser.add_argument("-y", "--yara", required=True, nargs='+', help="Path(s) to YARA rule file(s) or directory(ies) containing them")
-    parser.add_argument("-t", "--target", required=True, nargs='+', help="Path(s) to target file(s) or directory(ies) to scan")
+    parser.add_argument("-y", "--yara", required=True, help="Path to the YARA rule file(s) or directory containing them")
+    parser.add_argument("-t", "--target", required=True, help="Path to the target file or directory to scan")
     parser.add_argument("-o", "--output", help="Path to the output file to save scan results (json format)")
     parser.add_argument("-e", "--extension", help="File extension to filter files for scanning, e.g., '.exe'")
     parser.add_argument("--bypass_limit", action='store_true', help="Enable scanning for files larger than 64MB by splitting them into chunks")
 
     args = parser.parse_args()
 
+    validate_target_path(args.target)
     yara_files = get_yara_files(args.yara)
+
     if not yara_files:
         print("No valid YARA files found.")
         sys.exit(1)
 
-    # Process each target path in the list
-    for target in args.target:
-        validate_target_path(target)
-        output_file = args.output if args.output else generate_output_filename(target)
-        scan_files_with_yara(yara_files, target, output_file, args.extension, args.bypass_limit)
+    output_file = args.output if args.output else generate_output_filename(args.target)
+    scan_files_with_yara(yara_files, args.target, output_file, args.extension, args.bypass_limit)
 
     print("\n--- Summary of Detections ---")
     for (string_pattern, rule_name, file_path), count in summary_count.items():
         print(f"Count: {count}, Rule File: {rule_name}, Target File: {file_path}, String Pattern: {string_pattern}")
-

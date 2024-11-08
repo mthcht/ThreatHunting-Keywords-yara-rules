@@ -5424,127 +5424,6 @@ rule ComodoRMM__Itarian_RMM__greyware_tool_keyword
 }
 
 
-rule ComodoRMM_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'ComodoRMM' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "ComodoRMM"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string1_ComodoRMM_greyware_tool_keyword = /\.comodo\.com\/static\/frontend\/static\-pages\/enroll\-wizard\/token/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string2_ComodoRMM_greyware_tool_keyword = /\/RemoteControlSetup\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string3_ComodoRMM_greyware_tool_keyword = /\/tmp\/.{0,1000}\/enroll\.sh/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string4_ComodoRMM_greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\.service/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string5_ComodoRMM_greyware_tool_keyword = /\/tmp\/.{0,1000}\/itsm\-linux/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string6_ComodoRMM_greyware_tool_keyword = /\\AppData\\Local\\Temp\\ITarian_Remote_Access_/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string7_ComodoRMM_greyware_tool_keyword = /\\AppData\\Local\\Temp\\Remote_Control_by_Itarian/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string8_ComodoRMM_greyware_tool_keyword = /\\ComodoRemoteControl\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string9_ComodoRMM_greyware_tool_keyword = /\\CurrentControlSet\\Services\\ItsmRsp/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string10_ComodoRMM_greyware_tool_keyword = /\\CurrentControlSet\\Services\\ITSMService/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string11_ComodoRMM_greyware_tool_keyword = /\\CurrentControlSet\\Services\\RmmService/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string12_ComodoRMM_greyware_tool_keyword = /\\ITarian\sRemote\sAccess\.lnk/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string13_ComodoRMM_greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmagent\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string14_ComodoRMM_greyware_tool_keyword = /\\itarian\\endpoint\smanager\\itsmservice\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string15_ComodoRMM_greyware_tool_keyword = /\\itarian\\endpoint\smanager\\rhost\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string16_ComodoRMM_greyware_tool_keyword = /\\ITarian\\RemoteControl/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string17_ComodoRMM_greyware_tool_keyword = /\\ITarian_Remote_Access_.{0,1000}\.log/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string18_ComodoRMM_greyware_tool_keyword = /\\ITarianRemoteAccess\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string19_ComodoRMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\Endpoint\sManager\\/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string20_ComodoRMM_greyware_tool_keyword = /\\Program\sFiles\s\(x86\)\\ITarian\\RemoteControl\\/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string21_ComodoRMM_greyware_tool_keyword = /\\Remote_Control_by_ITarian_.{0,1000}\.log/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string22_ComodoRMM_greyware_tool_keyword = /\\remotecontrol\\rcontrol\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string23_ComodoRMM_greyware_tool_keyword = /\\remotecontrol\\rviewer\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string24_ComodoRMM_greyware_tool_keyword = /\\RemoteControlbyITarian\s\(3\)\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string25_ComodoRMM_greyware_tool_keyword = /\\RemoteControlbyITarian_\(3\)\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string26_ComodoRMM_greyware_tool_keyword = /\\RemoteControlSetup\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string27_ComodoRMM_greyware_tool_keyword = /\\RmmService\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string28_ComodoRMM_greyware_tool_keyword = /\\SOFTWARE\\ITarian\\RemoteControl/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string29_ComodoRMM_greyware_tool_keyword = /\\SOFTWARE\\WOW6432Node\\ITarian\\ITSM\\/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string30_ComodoRMM_greyware_tool_keyword = /\>Remote\sControl\sby\sItarian\</ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string31_ComodoRMM_greyware_tool_keyword = /\>RmmService\</ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string32_ComodoRMM_greyware_tool_keyword = /cwn\-log\-collector\-production\-clone\..{0,1000}\.elasticbeanstalk\.com/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string33_ComodoRMM_greyware_tool_keyword = /ITarianRemoteAccessSetup\.exe/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string34_ComodoRMM_greyware_tool_keyword = /Linux\sITSM\sAgent\/.{0,1000}\s\-e\s\/tmp\/install\.sh\s/ nocase ascii wide
-        // Description: Comodo offers IT Remote Management tools includes RMM Software - Remote Access - Service Desk - Patch Management and Network Assessment
-        // Reference: https://one.comodo.com/
-        $string35_ComodoRMM_greyware_tool_keyword = /mdmsupport\.comodo\.com/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
 rule Compress_Archive_greyware_tool_keyword
 {
     meta:
@@ -11882,28 +11761,6 @@ rule ftype_greyware_tool_keyword
 }
 
 
-rule FudgeC2_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'FudgeC2' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "FudgeC2"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
-        // Reference: https://github.com/Ziconius/FudgeC2
-        $string1_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/127\.0\.0\.1\:5001/ nocase ascii wide
-        // Description: FudgeC2 - a command and control framework designed for team collaboration and post-exploitation activities.
-        // Reference: https://github.com/Ziconius/FudgeC2
-        $string2_FudgeC2_greyware_tool_keyword = /http.{0,1000}\/\/localhost\:5001/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
 rule GeoProxy_greyware_tool_keyword
 {
     meta:
@@ -16844,91 +16701,6 @@ rule ired_team_greyware_tool_keyword
         // Description: Red Teaming Tactics and Techniques
         // Reference: https://github.com/mantvydasb/RedTeaming-Tactics-and-Techniques
         $string4_ired_team_greyware_tool_keyword = /www\.ired\.team/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule ivy_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'ivy' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "ivy"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string1_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sInject\s\-O\s.{0,1000}\.png\s\-stageless/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string2_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.hta\s\-url\shttp\:.{0,1000}\s\-delivery\shta\s\-stageless/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string3_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.js\s\-url\shttp.{0,1000}\s\-delivery\sbits\s\-stageless/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string4_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.txt\s\-url\shttp.{0,1000}\s\-delivery\smacro\s\-stageless/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string5_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.xsl\s\-url\shttp.{0,1000}\s\-delivery\sxsl\s\-stageless/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string6_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.c\s\-Ix86\s.{0,1000}\.c\s\-P\sLocal\s\-O\s.{0,1000}\.js/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string7_ivy_greyware_tool_keyword = /\s\-Ix64\s.{0,1000}\.vba\s\-Ix86\s.{0,1000}\.vba\s\-P\sInject\s\-O\s/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string8_ivy_greyware_tool_keyword = /\s\-stageless\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sInject\s\-O\s.{0,1000}\.js/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string9_ivy_greyware_tool_keyword = /\s\-stageless\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sInject\s\-process64\s.{0,1000}\.exe\s\-O\s.{0,1000}\.js/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string10_ivy_greyware_tool_keyword = /\s\-stageless\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sInject\s\-unhook\s\-O\s.{0,1000}\.js/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string11_ivy_greyware_tool_keyword = /\s\-stageless\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-O\s.{0,1000}\.js/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string12_ivy_greyware_tool_keyword = /\s\-stageless\s\-Ix64\s.{0,1000}\.bin\s\-Ix86\s.{0,1000}\.bin\s\-P\sLocal\s\-unhook\s\-O\s.{0,1000}\.js/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string13_ivy_greyware_tool_keyword = /\.\/Ivy\s\-/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string14_ivy_greyware_tool_keyword = /\/Ivy\/Cryptor/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string15_ivy_greyware_tool_keyword = /\/Ivy\/Loader\// nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string16_ivy_greyware_tool_keyword = /\\Ivy\\Cryptor/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string17_ivy_greyware_tool_keyword = /\\Ivy\\Loader\\/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string18_ivy_greyware_tool_keyword = /go\sbuild\sIvy\.go/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string19_ivy_greyware_tool_keyword = /Ivy_1.{0,1000}_darwin_amd64/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string20_ivy_greyware_tool_keyword = /Ivy_1.{0,1000}_linux_amd64/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string21_ivy_greyware_tool_keyword = /Ivy_1.{0,1000}_windows_amd64\.exe/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string22_ivy_greyware_tool_keyword = /Ivy\-main\.zip/ nocase ascii wide
-        // Description: Ivy is a payload creation framework for the execution of arbitrary VBA (macro) source code directly in memory
-        // Reference: https://github.com/optiv/Ivy
-        $string23_ivy_greyware_tool_keyword = /optiv\/Ivy\.git/ nocase ascii wide
 
     condition:
         any of them
@@ -22640,25 +22412,6 @@ rule Nucleus_VPN_greyware_tool_keyword
 }
 
 
-rule openssh_server_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'openssh server' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "openssh server"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Install OpenSSH Server service on windows - abused by attacker for persistant control
-        // Reference: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell#install-openssh-for-windows
-        $string1_openssh_server_greyware_tool_keyword = /Add\-WindowsCapability\s\-Online\s\-Name\sOpenSSH\.Server/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
 rule openssh_portable_greyware_tool_keyword
 {
     meta:
@@ -26567,25 +26320,6 @@ rule Quasar_greyware_tool_keyword
         // Description: Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#.
         // Reference: https://github.com/quasar/Quasar
         $string38_Quasar_greyware_tool_keyword = /ylAo2kAlUS2kYkala\!/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule QuasarRAT_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'QuasarRAT' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "QuasarRAT"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Free. Open-Source Remote Administration Tool for Windows. Quasar is a fast and light-weight remote administration tool coded in C#. The usage ranges from user support through day-to-day administrative work to employee monitoring. Providing high stability and an easy-to-use user interface. Quasar is the perfect remote administration solution for you.
-        // Reference: https://github.com/quasar/Quasar
-        $string1_QuasarRAT_greyware_tool_keyword = /ping\s\-n\s10\slocalhost\s\>\snul/ nocase ascii wide
 
     condition:
         any of them
@@ -37147,25 +36881,6 @@ rule rmmod_greyware_tool_keyword
 }
 
 
-rule routerscan_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'routerscan' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "routerscan"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Router Scan is able to find and identify a variety of devices from large number of known routers on your internal network
-        // Reference: https://en.kali.tools/?p=244
-        $string1_routerscan_greyware_tool_keyword = /RouterScan\.exe/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
 rule rpcclient_greyware_tool_keyword
 {
     meta:
@@ -43051,25 +42766,6 @@ rule translate_goog_greyware_tool_keyword
 }
 
 
-rule Trellonet_Trellonet_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'Trellonet Trellonet' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "Trellonet Trellonet"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: External VPN usage within coporate network
-        // Reference: https://raw.githubusercontent.com/SigmaHQ/sigma/43277f26fc1c81fc98fc79147b711189e901b757/rules/windows/registry/registry_set/registry_set_chrome_extension.yml
-        $string1_Trellonet_Trellonet_greyware_tool_keyword = /njpmifchgidinihmijhcfpbdmglecdlb/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
 rule Trellonet_greyware_tool_keyword
 {
     meta:
@@ -44592,73 +44288,6 @@ rule vscode_greyware_tool_keyword
         // Description: built-in port forwarding. This feature allows you to share locally running services over the internet to other people and devices.
         // Reference: https://twitter.com/code/status/1699869087071899669
         $string5_vscode_greyware_tool_keyword = /global\.rel\.tunnels\.api\.visualstudio\.com/ nocase ascii wide
-
-    condition:
-        any of them
-}
-
-
-rule vsftpd_greyware_tool_keyword
-{
-    meta:
-        description = "Detection patterns for the tool 'vsftpd' taken from the ThreatHunting-Keywords github project" 
-        author = "@mthcht"
-        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "vsftpd"
-        rule_category = "greyware_tool_keyword"
-
-    strings:
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string1_vsftpd_greyware_tool_keyword = /Bad\sHTTP\sverb\./ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string2_vsftpd_greyware_tool_keyword = /bug\:\spid\sactive\sin\sptrace_sandbox_free/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string3_vsftpd_greyware_tool_keyword = /Connection\srefused\:\stcp_wrappers\sdenial\./ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string4_vsftpd_greyware_tool_keyword = /Connection\srefused\:\stoo\smany\ssessions\sfor\sthis\saddress\./ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string5_vsftpd_greyware_tool_keyword = /Could\snot\sset\sfile\smodification\stime\./ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string6_vsftpd_greyware_tool_keyword = /couldn\'t\shandle\ssandbox\sevent/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string7_vsftpd_greyware_tool_keyword = /Input\sline\stoo\slong\./ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string8_vsftpd_greyware_tool_keyword = /pasv\sand\sport\sboth\sactive/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string9_vsftpd_greyware_tool_keyword = /poor\sbuffer\saccounting\sin\sstr_netfd_alloc/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string10_vsftpd_greyware_tool_keyword = /port\sand\spasv\sboth\sactive/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string11_vsftpd_greyware_tool_keyword = /PTRACE_SETOPTIONS\sfailure/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string12_vsftpd_greyware_tool_keyword = /syscall\s.{0,1000}\sout\sof\sbounds/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string13_vsftpd_greyware_tool_keyword = /syscall\snot\spermitted\:/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string14_vsftpd_greyware_tool_keyword = /syscall\svalidate\sfailed\:/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string15_vsftpd_greyware_tool_keyword = /Transfer\sdone\s\(but\sfailed\sto\sopen\sdirectory\)\./ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string16_vsftpd_greyware_tool_keyword = /vsf_sysutil_read_loop/ nocase ascii wide
-        // Description: Detects suspicious VSFTPD error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-        // Reference: https://github.com/dagwieers/vsftpd/
-        $string17_vsftpd_greyware_tool_keyword = /weird\sstatus\:/ nocase ascii wide
 
     condition:
         any of them

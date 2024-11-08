@@ -104,15 +104,16 @@ def scan_files_with_yara(yara_rule_files, targets, output_file=None, extensions=
             if out_f:
                 out_f.close()
 
-def get_yara_files(yara_path):
+def get_yara_files(yara_paths):
     yara_files = []
-    if os.path.isdir(yara_path):
-        for root, dirs, files in os.walk(yara_path):
-            for file in files:
-                if file.endswith('.yara') or file.endswith('.yar'):
-                    yara_files.append(os.path.join(root, file))
-    elif os.path.isfile(yara_path):
-        yara_files.append(yara_path)
+    for yara_path in yara_paths:
+        if os.path.isdir(yara_path):
+            for root, dirs, files in os.walk(yara_path):
+                for file in files:
+                    if file.endswith('.yara') or file.endswith('.yar'):
+                        yara_files.append(os.path.join(root, file))
+        elif os.path.isfile(yara_path):
+            yara_files.append(yara_path)
     return yara_files
 
 def scan_and_output(yara_rule_file, file_path, rules, patterns, out_f=None):

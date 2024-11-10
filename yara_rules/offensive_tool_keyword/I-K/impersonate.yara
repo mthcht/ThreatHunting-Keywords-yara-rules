@@ -25,40 +25,37 @@ rule impersonate
         $string5 = /\/impersonate\.py/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string6 = /\/Impersonate\/Impersonate\.cpp/ nocase ascii wide
+        $string6 = /\\Impersonate\.exe/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string7 = /\\Impersonate\.exe/ nocase ascii wide
+        $string7 = /\\impersonate\.py/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string8 = /\\impersonate\.py/ nocase ascii wide
+        $string8 = /\\Impersonate\\Impersonate\.cpp/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string9 = /\\Impersonate\\Impersonate\.cpp/ nocase ascii wide
+        $string9 = /\\Temp\\Impersonate\.exe/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string10 = /\\Temp\\Impersonate\.exe/ nocase ascii wide
+        $string10 = /00630066\-0B43\-474E\-A93B\-417CF1A65195/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string11 = /00630066\-0B43\-474E\-A93B\-417CF1A65195/ nocase ascii wide
+        $string11 = /Impersonate\.exe\sadduser\s/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string12 = /Impersonate\.exe\sadduser\s/ nocase ascii wide
+        $string12 = /Impersonate\.exe\sexec\s/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string13 = /Impersonate\.exe\sexec\s/ nocase ascii wide
+        $string13 = /Impersonate\.exe\slist\s/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string14 = /Impersonate\.exe\slist\s/ nocase ascii wide
+        $string14 = /Impersonate\.exe\slist/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string15 = /Impersonate\.exe\slist/ nocase ascii wide
+        $string15 = /impersonate\-main\.zip/ nocase ascii wide
         // Description: A windows token impersonation tool
         // Reference: https://github.com/sensepost/impersonate
-        $string16 = /impersonate\-main\.zip/ nocase ascii wide
-        // Description: A windows token impersonation tool
-        // Reference: https://github.com/sensepost/impersonate
-        $string17 = /sensepost\/impersonate/ nocase ascii wide
+        $string16 = /sensepost\/impersonate/ nocase ascii wide
 
     condition:
         any of them

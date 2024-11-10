@@ -52,7 +52,7 @@ rule kali
         $string14 = /https\:\/\/gitlab\.com\/kalilinux\// nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
-        $string15 = /https\:\/\/kali\.download\// nocase ascii wide
+        $string15 = /https\:\/\/kali\.download/ nocase ascii wide
         // Description: Kali Linux is an open-source. Debian-based Linux distribution geared towards various information security tasks. such as Penetration Testing. Security Research. Computer Forensics and Reverse Engineering
         // Reference: https://www.kali.org/
         $string16 = /hub\.docker\.com\/u\/kalilinux\// nocase ascii wide

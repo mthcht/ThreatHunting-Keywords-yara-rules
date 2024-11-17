@@ -5,6 +5,14 @@
 Yara rules for Threat Hunting sessions
 
 All the detection patterns from the [threathunting-keywords](https://github.com/mthcht/ThreatHunting-Keywords) project are automatically organized in yara rules for each tool and keyword type. These YARA rules are designed for simple keyword detection, focusing on threat hunting sessions and large-scale triage, rather than performance optimization.
+
+2 ruleset folders available:
+  - Folder [yara_rules](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/tree/main/yara_rules): Comprehensive threat hunting YARA rules. These are slower but provide broader detection coverage, requiring more triage.
+  - Folder [yara_rules_binaries_strict](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/tree/main/yara_rules_binaries_strict): Optimized threat hunting YARA rules. These are focused on relevant file types and sizes, with additional conditions for large pattern rules, offering higher fidelity but fewer detections.
+
+![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda53ec2-28cb-4f16-bbb9-36f5afba922c)
+
+
 - 🛠️ **offensive tool keyword**: These keywords relate to offensive tools or exhibit high confidence of malicious intent. It's important that these keywords remaons relevant and reliable in detecting potential threats (low false positive rate).
 - 🛠️ **greyware tool keyword**: Keywords in this category correspond to 'legitimate' tools that are abused by malicious actors. As these tools also have legitimate uses, the potential for false positives is inherently higher. It's important to interpret these results with the understanding that not all detections may signify malicious activity
 - 🛠️ **signature keyword**: These keywords may not directly associate with tools but may include security product signature names, specific strings, or words significant in threat detection.
@@ -15,7 +23,6 @@ All the detection patterns from the [threathunting-keywords](https://github.com/
 
 a sperated rule file exist for each tool, organized in alphabetical order to bypass the GitHub limitation of 1000 files per directory.
 
-![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda53ec2-28cb-4f16-bbb9-36f5afba922c)
 
 
 # Scanning with the yara rules

@@ -1,4 +1,6 @@
 
-_utils/test.txt
+_utils/*.json
 _utils/Intel_Reports_yara_hunting_results.txt
 _utils/scan_results.txt
+tests
+_utils/test.txt

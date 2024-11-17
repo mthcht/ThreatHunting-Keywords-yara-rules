@@ -1,4 +1,4 @@
-rule AADInternals_greyware_tool_keyword
+rule rule_AADInternals_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AADInternals' taken from the ThreatHunting-Keywords github project" 
@@ -998,7 +998,7 @@ rule AADInternals_greyware_tool_keyword
 }
 
 
-rule action1_greyware_tool_keyword
+rule rule_action1_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'action1' taken from the ThreatHunting-Keywords github project" 
@@ -1104,7 +1104,7 @@ rule action1_greyware_tool_keyword
 }
 
 
-rule Acunetix_Web_Vulnerability_Scanner_greyware_tool_keyword
+rule rule_Acunetix_Web_Vulnerability_Scanner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Acunetix Web Vulnerability Scanner' taken from the ThreatHunting-Keywords github project" 
@@ -1159,7 +1159,7 @@ rule Acunetix_Web_Vulnerability_Scanner_greyware_tool_keyword
 }
 
 
-rule AD_common_queries_greyware_tool_keyword
+rule rule_AD_common_queries_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AD-common-queries' taken from the ThreatHunting-Keywords github project" 
@@ -1190,7 +1190,7 @@ rule AD_common_queries_greyware_tool_keyword
 }
 
 
-rule Adblock_Office_VPN_Proxy_Server_greyware_tool_keyword
+rule rule_Adblock_Office_VPN_Proxy_Server_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Adblock Office VPN Proxy Server' taken from the ThreatHunting-Keywords github project" 
@@ -1209,7 +1209,7 @@ rule Adblock_Office_VPN_Proxy_Server_greyware_tool_keyword
 }
 
 
-rule adexplorer_greyware_tool_keyword
+rule rule_adexplorer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'adexplorer' taken from the ThreatHunting-Keywords github project" 
@@ -1252,7 +1252,7 @@ rule adexplorer_greyware_tool_keyword
 }
 
 
-rule adfind_greyware_tool_keyword
+rule rule_adfind_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'adfind' taken from the ThreatHunting-Keywords github project" 
@@ -1355,7 +1355,7 @@ rule adfind_greyware_tool_keyword
 }
 
 
-rule adget_greyware_tool_keyword
+rule rule_adget_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'adget' taken from the ThreatHunting-Keywords github project" 
@@ -1377,7 +1377,7 @@ rule adget_greyware_tool_keyword
 }
 
 
-rule AdGuard_VPN_greyware_tool_keyword
+rule rule_AdGuard_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AdGuard VPN' taken from the ThreatHunting-Keywords github project" 
@@ -1396,7 +1396,7 @@ rule AdGuard_VPN_greyware_tool_keyword
 }
 
 
-rule adiskreader_greyware_tool_keyword
+rule rule_adiskreader_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'adiskreader' taken from the ThreatHunting-Keywords github project" 
@@ -1424,7 +1424,7 @@ rule adiskreader_greyware_tool_keyword
 }
 
 
-rule adrecon_greyware_tool_keyword
+rule rule_adrecon_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'adrecon' taken from the ThreatHunting-Keywords github project" 
@@ -1439,7 +1439,7 @@ rule adrecon_greyware_tool_keyword
         $string1_adrecon_greyware_tool_keyword = /\sADRecon\.ps1/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
-        $string2_adrecon_greyware_tool_keyword = /\$base64adrecon_adrecon_greyware_tool_keyword/ nocase ascii wide
+        $string2_adrecon_greyware_tool_keyword = /\$base64adrecon/ nocase ascii wide
         // Description: ADRecon is a tool which gathers information about the Active Directory and generates a report which can provide a holistic picture of the current state of the target AD environment.
         // Reference: https://github.com/adrecon/ADRecon
         $string3_adrecon_greyware_tool_keyword = /\/ADRecon\.git/ nocase ascii wide
@@ -1512,7 +1512,7 @@ rule adrecon_greyware_tool_keyword
 }
 
 
-rule advanced_port_scanner_greyware_tool_keyword
+rule rule_advanced_port_scanner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'advanced port scanner' taken from the ThreatHunting-Keywords github project" 
@@ -1573,7 +1573,7 @@ rule advanced_port_scanner_greyware_tool_keyword
 }
 
 
-rule advanced_ip_scanner_greyware_tool_keyword
+rule rule_advanced_ip_scanner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'advanced-ip-scanner' taken from the ThreatHunting-Keywords github project" 
@@ -1634,7 +1634,7 @@ rule advanced_ip_scanner_greyware_tool_keyword
 }
 
 
-rule AdvancedRun_greyware_tool_keyword
+rule rule_AdvancedRun_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AdvancedRun' taken from the ThreatHunting-Keywords github project" 
@@ -1653,7 +1653,7 @@ rule AdvancedRun_greyware_tool_keyword
 }
 
 
-rule AD_Miner_greyware_tool_keyword
+rule rule_AD_Miner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AD_Miner' taken from the ThreatHunting-Keywords github project" 
@@ -1810,7 +1810,7 @@ rule AD_Miner_greyware_tool_keyword
 }
 
 
-rule aeroadmin_greyware_tool_keyword
+rule rule_aeroadmin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'aeroadmin' taken from the ThreatHunting-Keywords github project" 
@@ -1901,7 +1901,7 @@ rule aeroadmin_greyware_tool_keyword
 }
 
 
-rule Ahk2Exe_greyware_tool_keyword
+rule rule_Ahk2Exe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Ahk2Exe' taken from the ThreatHunting-Keywords github project" 
@@ -2040,7 +2040,7 @@ rule Ahk2Exe_greyware_tool_keyword
 }
 
 
-rule AlanFramework_greyware_tool_keyword
+rule rule_AlanFramework_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AlanFramework' taken from the ThreatHunting-Keywords github project" 
@@ -2059,7 +2059,7 @@ rule AlanFramework_greyware_tool_keyword
 }
 
 
-rule Alpemix_greyware_tool_keyword
+rule rule_Alpemix_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Alpemix' taken from the ThreatHunting-Keywords github project" 
@@ -2114,7 +2114,7 @@ rule Alpemix_greyware_tool_keyword
 }
 
 
-rule Ammyy_Admin_greyware_tool_keyword
+rule rule_Ammyy_Admin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Ammyy Admin' taken from the ThreatHunting-Keywords github project" 
@@ -2178,7 +2178,7 @@ rule Ammyy_Admin_greyware_tool_keyword
 }
 
 
-rule AmperageKit_greyware_tool_keyword
+rule rule_AmperageKit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AmperageKit' taken from the ThreatHunting-Keywords github project" 
@@ -2269,7 +2269,7 @@ rule AmperageKit_greyware_tool_keyword
 }
 
 
-rule anonfiles_com_greyware_tool_keyword
+rule rule_anonfiles_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'anonfiles.com' taken from the ThreatHunting-Keywords github project" 
@@ -2291,7 +2291,7 @@ rule anonfiles_com_greyware_tool_keyword
 }
 
 
-rule Anonymous_Proxy_Vpn_Browser_greyware_tool_keyword
+rule rule_Anonymous_Proxy_Vpn_Browser_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Anonymous Proxy Vpn Browser' taken from the ThreatHunting-Keywords github project" 
@@ -2310,7 +2310,7 @@ rule Anonymous_Proxy_Vpn_Browser_greyware_tool_keyword
 }
 
 
-rule anydesk_greyware_tool_keyword
+rule rule_anydesk_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'anydesk' taken from the ThreatHunting-Keywords github project" 
@@ -2455,7 +2455,7 @@ rule anydesk_greyware_tool_keyword
 }
 
 
-rule anymailfinder_greyware_tool_keyword
+rule rule_anymailfinder_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'anymailfinder' taken from the ThreatHunting-Keywords github project" 
@@ -2474,7 +2474,7 @@ rule anymailfinder_greyware_tool_keyword
 }
 
 
-rule AnyplaceControl_greyware_tool_keyword
+rule rule_AnyplaceControl_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AnyplaceControl' taken from the ThreatHunting-Keywords github project" 
@@ -2529,7 +2529,7 @@ rule AnyplaceControl_greyware_tool_keyword
 }
 
 
-rule anyviewer_greyware_tool_keyword
+rule rule_anyviewer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'anyviewer' taken from the ThreatHunting-Keywords github project" 
@@ -2596,7 +2596,7 @@ rule anyviewer_greyware_tool_keyword
 }
 
 
-rule apaste_info_greyware_tool_keyword
+rule rule_apaste_info_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'apaste.info' taken from the ThreatHunting-Keywords github project" 
@@ -2615,7 +2615,7 @@ rule apaste_info_greyware_tool_keyword
 }
 
 
-rule apkfold_free_vpn_greyware_tool_keyword
+rule rule_apkfold_free_vpn_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'apkfold free vpn' taken from the ThreatHunting-Keywords github project" 
@@ -2634,7 +2634,7 @@ rule apkfold_free_vpn_greyware_tool_keyword
 }
 
 
-rule APT_greyware_tool_keyword
+rule rule_APT_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'APT' taken from the ThreatHunting-Keywords github project" 
@@ -2653,7 +2653,7 @@ rule APT_greyware_tool_keyword
 }
 
 
-rule arp_greyware_tool_keyword
+rule rule_arp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'arp' taken from the ThreatHunting-Keywords github project" 
@@ -2672,7 +2672,7 @@ rule arp_greyware_tool_keyword
 }
 
 
-rule assoc_greyware_tool_keyword
+rule rule_assoc_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'assoc' taken from the ThreatHunting-Keywords github project" 
@@ -2712,7 +2712,7 @@ rule assoc_greyware_tool_keyword
 }
 
 
-rule Astar_VPN_greyware_tool_keyword
+rule rule_Astar_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Astar VPN' taken from the ThreatHunting-Keywords github project" 
@@ -2731,7 +2731,7 @@ rule Astar_VPN_greyware_tool_keyword
 }
 
 
-rule Atera_greyware_tool_keyword
+rule rule_Atera_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Atera' taken from the ThreatHunting-Keywords github project" 
@@ -2888,7 +2888,7 @@ rule Atera_greyware_tool_keyword
 }
 
 
-rule atnow_greyware_tool_keyword
+rule rule_atnow_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'atnow' taken from the ThreatHunting-Keywords github project" 
@@ -2928,7 +2928,7 @@ rule atnow_greyware_tool_keyword
 }
 
 
-rule attrib_greyware_tool_keyword
+rule rule_attrib_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'attrib' taken from the ThreatHunting-Keywords github project" 
@@ -2974,7 +2974,7 @@ rule attrib_greyware_tool_keyword
 }
 
 
-rule AutoHotkey_greyware_tool_keyword
+rule rule_AutoHotkey_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AutoHotkey' taken from the ThreatHunting-Keywords github project" 
@@ -3365,7 +3365,7 @@ rule AutoHotkey_greyware_tool_keyword
 }
 
 
-rule AutoIt_greyware_tool_keyword
+rule rule_AutoIt_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AutoIt' taken from the ThreatHunting-Keywords github project" 
@@ -3384,7 +3384,7 @@ rule AutoIt_greyware_tool_keyword
 }
 
 
-rule AutoSUID_greyware_tool_keyword
+rule rule_AutoSUID_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'AutoSUID' taken from the ThreatHunting-Keywords github project" 
@@ -3468,7 +3468,7 @@ rule AutoSUID_greyware_tool_keyword
         $string24_AutoSUID_greyware_tool_keyword = /emacs\s\-Q\s\-nw\s\-\-eval\s\'\(term\s\\\"\/bin\/sh\s\-p\\\"\)/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
-        $string25_AutoSUID_greyware_tool_keyword = /\'exec\s\/bin\/sh\s\-p\s0\<\&1\'\s\>\>\s\\\$TF_AutoSUID_greyware_tool_keyword/ nocase ascii wide
+        $string25_AutoSUID_greyware_tool_keyword = /\'exec\s\/bin\/sh\s\-p\s0\<\&1\'\s\>\>\s\\\$TF/ nocase ascii wide
         // Description: automate harvesting the SUID executable files and to find a way for further escalating the privileges
         // Reference: https://github.com/IvanGlinkin/AutoSUID
         $string26_AutoSUID_greyware_tool_keyword = /find\s\.\s\-exec\s\/bin\/sh\s\-p\s\\\;\s\-quit/ nocase ascii wide
@@ -3520,7 +3520,7 @@ rule AutoSUID_greyware_tool_keyword
 }
 
 
-rule auvik_greyware_tool_keyword
+rule rule_auvik_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'auvik' taken from the ThreatHunting-Keywords github project" 
@@ -3548,7 +3548,7 @@ rule auvik_greyware_tool_keyword
 }
 
 
-rule Avast_greyware_tool_keyword
+rule rule_Avast_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Avast' taken from the ThreatHunting-Keywords github project" 
@@ -3567,7 +3567,7 @@ rule Avast_greyware_tool_keyword
 }
 
 
-rule aweray_greyware_tool_keyword
+rule rule_aweray_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'aweray' taken from the ThreatHunting-Keywords github project" 
@@ -3649,7 +3649,7 @@ rule aweray_greyware_tool_keyword
 }
 
 
-rule Azino_VPN_greyware_tool_keyword
+rule rule_Azino_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Azino VPN' taken from the ThreatHunting-Keywords github project" 
@@ -3668,7 +3668,7 @@ rule Azino_VPN_greyware_tool_keyword
 }
 
 
-rule Azure_Storage_Explorer_greyware_tool_keyword
+rule rule_Azure_Storage_Explorer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Azure Storage Explorer' taken from the ThreatHunting-Keywords github project" 
@@ -3720,7 +3720,7 @@ rule Azure_Storage_Explorer_greyware_tool_keyword
 }
 
 
-rule BarracudaRMM_greyware_tool_keyword
+rule rule_BarracudaRMM_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'BarracudaRMM' taken from the ThreatHunting-Keywords github project" 
@@ -3799,7 +3799,7 @@ rule BarracudaRMM_greyware_tool_keyword
 }
 
 
-rule _base64_greyware_tool_keyword
+rule rule__base64_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'base64' taken from the ThreatHunting-Keywords github project" 
@@ -3821,7 +3821,7 @@ rule _base64_greyware_tool_keyword
 }
 
 
-rule bash_keylogger_greyware_tool_keyword
+rule rule_bash_keylogger_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bash keylogger' taken from the ThreatHunting-Keywords github project" 
@@ -3840,7 +3840,7 @@ rule bash_keylogger_greyware_tool_keyword
 }
 
 
-rule bash_port_scan_greyware_tool_keyword
+rule rule_bash_port_scan_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bash port scan' taken from the ThreatHunting-Keywords github project" 
@@ -3859,7 +3859,7 @@ rule bash_port_scan_greyware_tool_keyword
 }
 
 
-rule bash_greyware_tool_keyword
+rule rule_bash_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bash' taken from the ThreatHunting-Keywords github project" 
@@ -3907,7 +3907,7 @@ rule bash_greyware_tool_keyword
         $string12_bash_greyware_tool_keyword = /exec\s\/bin\/sh\s0\<\/dev\/tcp\/.{0,1000}\/.{0,1000}1\>\&0\s2\>\&0/ nocase ascii wide
         // Description: bash reverse shell 
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string13_bash_greyware_tool_keyword = /exec\s5\<\>\/dev\/tcp\/.{0,1000}\/.{0,1000}.{0,1000}cat\s\<\&5\s\|\swhile\sread\sline.{0,1000}\sdo\s\$line_bash_greyware_tool_keyword\s2\>\&5\s\>\&5.{0,1000}\sdone/ nocase ascii wide
+        $string13_bash_greyware_tool_keyword = /exec\s5\<\>\/dev\/tcp\/.{0,1000}\/.{0,1000}.{0,1000}cat\s\<\&5\s\|\swhile\sread\sline.{0,1000}\sdo\s\$line\s2\>\&5\s\>\&5.{0,1000}\sdone/ nocase ascii wide
         // Description: Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensic investigations.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_deletion_of_bash_command_line_history.toml
         $string14_bash_greyware_tool_keyword = /export\sHISTFILE\=\/dev\/null/ nocase ascii wide
@@ -3962,7 +3962,7 @@ rule bash_greyware_tool_keyword
 }
 
 
-rule bashupload_com_greyware_tool_keyword
+rule rule_bashupload_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bashupload.com' taken from the ThreatHunting-Keywords github project" 
@@ -3981,7 +3981,7 @@ rule bashupload_com_greyware_tool_keyword
 }
 
 
-rule bcdedit_greyware_tool_keyword
+rule rule_bcdedit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bcdedit' taken from the ThreatHunting-Keywords github project" 
@@ -4009,7 +4009,7 @@ rule bcdedit_greyware_tool_keyword
 }
 
 
-rule bcedit_greyware_tool_keyword
+rule rule_bcedit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bcedit' taken from the ThreatHunting-Keywords github project" 
@@ -4028,7 +4028,7 @@ rule bcedit_greyware_tool_keyword
 }
 
 
-rule beeceptor_com_greyware_tool_keyword
+rule rule_beeceptor_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'beeceptor.com' taken from the ThreatHunting-Keywords github project" 
@@ -4047,7 +4047,7 @@ rule beeceptor_com_greyware_tool_keyword
 }
 
 
-rule BelkaVPN_greyware_tool_keyword
+rule rule_BelkaVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'BelkaVPN' taken from the ThreatHunting-Keywords github project" 
@@ -4066,7 +4066,7 @@ rule BelkaVPN_greyware_tool_keyword
 }
 
 
-rule Best_VPN_USA_greyware_tool_keyword
+rule rule_Best_VPN_USA_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Best VPN USA' taken from the ThreatHunting-Keywords github project" 
@@ -4085,7 +4085,7 @@ rule Best_VPN_USA_greyware_tool_keyword
 }
 
 
-rule binwalk_greyware_tool_keyword
+rule rule_binwalk_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'binwalk' taken from the ThreatHunting-Keywords github project" 
@@ -4104,7 +4104,7 @@ rule binwalk_greyware_tool_keyword
 }
 
 
-rule bitsadmin_greyware_tool_keyword
+rule rule_bitsadmin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bitsadmin' taken from the ThreatHunting-Keywords github project" 
@@ -4126,7 +4126,7 @@ rule bitsadmin_greyware_tool_keyword
 }
 
 
-rule bittorent_greyware_tool_keyword
+rule rule_bittorent_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bittorent' taken from the ThreatHunting-Keywords github project" 
@@ -4145,7 +4145,7 @@ rule bittorent_greyware_tool_keyword
 }
 
 
-rule BloodHound_greyware_tool_keyword
+rule rule_BloodHound_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'BloodHound' taken from the ThreatHunting-Keywords github project" 
@@ -4164,7 +4164,7 @@ rule BloodHound_greyware_tool_keyword
 }
 
 
-rule Bomgar_greyware_tool_keyword
+rule rule_Bomgar_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Bomgar' taken from the ThreatHunting-Keywords github project" 
@@ -4270,7 +4270,7 @@ rule Bomgar_greyware_tool_keyword
 }
 
 
-rule bore_greyware_tool_keyword
+rule rule_bore_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'bore' taken from the ThreatHunting-Keywords github project" 
@@ -4376,7 +4376,7 @@ rule bore_greyware_tool_keyword
 }
 
 
-rule boringproxy_greyware_tool_keyword
+rule rule_boringproxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'boringproxy' taken from the ThreatHunting-Keywords github project" 
@@ -4497,7 +4497,7 @@ rule boringproxy_greyware_tool_keyword
 }
 
 
-rule Browsec_VPN_greyware_tool_keyword
+rule rule_Browsec_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Browsec VPN' taken from the ThreatHunting-Keywords github project" 
@@ -4516,7 +4516,7 @@ rule Browsec_VPN_greyware_tool_keyword
 }
 
 
-rule Browser_VPN_greyware_tool_keyword
+rule rule_Browser_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Browser VPN' taken from the ThreatHunting-Keywords github project" 
@@ -4535,7 +4535,7 @@ rule Browser_VPN_greyware_tool_keyword
 }
 
 
-rule Browser_C2_greyware_tool_keyword
+rule rule_Browser_C2_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Browser-C2' taken from the ThreatHunting-Keywords github project" 
@@ -4554,7 +4554,7 @@ rule Browser_C2_greyware_tool_keyword
 }
 
 
-rule browser_lol_greyware_tool_keyword
+rule rule_browser_lol_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'browser.lol' taken from the ThreatHunting-Keywords github project" 
@@ -4582,7 +4582,7 @@ rule browser_lol_greyware_tool_keyword
 }
 
 
-rule btunnel_in_greyware_tool_keyword
+rule rule_btunnel_in_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'btunnel.in' taken from the ThreatHunting-Keywords github project" 
@@ -4601,7 +4601,7 @@ rule btunnel_in_greyware_tool_keyword
 }
 
 
-rule btunnel_greyware_tool_keyword
+rule rule_btunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'btunnel' taken from the ThreatHunting-Keywords github project" 
@@ -4683,7 +4683,7 @@ rule btunnel_greyware_tool_keyword
 }
 
 
-rule BullVPN_greyware_tool_keyword
+rule rule_BullVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'BullVPN' taken from the ThreatHunting-Keywords github project" 
@@ -4702,7 +4702,7 @@ rule BullVPN_greyware_tool_keyword
 }
 
 
-rule Burntcigar_KillAV_greyware_tool_keyword
+rule rule_Burntcigar_KillAV_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Burntcigar KillAV' taken from the ThreatHunting-Keywords github project" 
@@ -4721,7 +4721,7 @@ rule Burntcigar_KillAV_greyware_tool_keyword
 }
 
 
-rule burrow_greyware_tool_keyword
+rule rule_burrow_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'burrow' taken from the ThreatHunting-Keywords github project" 
@@ -4743,7 +4743,7 @@ rule burrow_greyware_tool_keyword
 }
 
 
-rule canarytokens_com_greyware_tool_keyword
+rule rule_canarytokens_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'canarytokens.com' taken from the ThreatHunting-Keywords github project" 
@@ -4762,7 +4762,7 @@ rule canarytokens_com_greyware_tool_keyword
 }
 
 
-rule cat_greyware_tool_keyword
+rule rule_cat_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'cat' taken from the ThreatHunting-Keywords github project" 
@@ -4813,7 +4813,7 @@ rule cat_greyware_tool_keyword
         $string13_cat_greyware_tool_keyword = /cat\s.{0,1000}bash\-history/ nocase ascii wide
         // Description: deleting bash history
         // Reference: N/A
-        $string14_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\$HISTFILE_cat_greyware_tool_keyword/ nocase ascii wide
+        $string14_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\$HISTFILE/ nocase ascii wide
         // Description: deleting log files
         // Reference: N/A
         $string15_cat_greyware_tool_keyword = /cat\s\/dev\/null\s\>\s\/var\/log\/.{0,1000}\.log/ nocase ascii wide
@@ -4844,7 +4844,7 @@ rule cat_greyware_tool_keyword
 }
 
 
-rule catbox_moe_greyware_tool_keyword
+rule rule_catbox_moe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'catbox.moe' taken from the ThreatHunting-Keywords github project" 
@@ -4863,7 +4863,7 @@ rule catbox_moe_greyware_tool_keyword
 }
 
 
-rule certoc_greyware_tool_keyword
+rule rule_certoc_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'certoc' taken from the ThreatHunting-Keywords github project" 
@@ -4882,7 +4882,7 @@ rule certoc_greyware_tool_keyword
 }
 
 
-rule certutil_greyware_tool_keyword
+rule rule_certutil_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'certutil' taken from the ThreatHunting-Keywords github project" 
@@ -4904,7 +4904,7 @@ rule certutil_greyware_tool_keyword
 }
 
 
-rule chattr_greyware_tool_keyword
+rule rule_chattr_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'chattr' taken from the ThreatHunting-Keywords github project" 
@@ -4916,7 +4916,7 @@ rule chattr_greyware_tool_keyword
     strings:
         // Description: lock out the ability to update the file
         // Reference: N/A
-        $string1_chattr_greyware_tool_keyword = /chattr\s\+i\s\$HISTFILE_chattr_greyware_tool_keyword/ nocase ascii wide
+        $string1_chattr_greyware_tool_keyword = /chattr\s\+i\s\$HISTFILE/ nocase ascii wide
         // Description: lock out the ability to update the file
         // Reference: N/A
         $string2_chattr_greyware_tool_keyword = /chattr\s\+i\s.{0,1000}\.bash_history/ nocase ascii wide
@@ -4935,7 +4935,7 @@ rule chattr_greyware_tool_keyword
 }
 
 
-rule chcp_greyware_tool_keyword
+rule rule_chcp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'chcp' taken from the ThreatHunting-Keywords github project" 
@@ -4954,7 +4954,7 @@ rule chcp_greyware_tool_keyword
 }
 
 
-rule ChromeCookiesView_greyware_tool_keyword
+rule rule_ChromeCookiesView_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ChromeCookiesView' taken from the ThreatHunting-Keywords github project" 
@@ -4985,7 +4985,7 @@ rule ChromeCookiesView_greyware_tool_keyword
 }
 
 
-rule chromium_greyware_tool_keyword
+rule rule_chromium_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'chromium' taken from the ThreatHunting-Keywords github project" 
@@ -5034,7 +5034,7 @@ rule chromium_greyware_tool_keyword
 }
 
 
-rule CIMplant_greyware_tool_keyword
+rule rule_CIMplant_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'CIMplant' taken from the ThreatHunting-Keywords github project" 
@@ -5056,7 +5056,7 @@ rule CIMplant_greyware_tool_keyword
 }
 
 
-rule Cloud_VPN_greyware_tool_keyword
+rule rule_Cloud_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Cloud VPN' taken from the ThreatHunting-Keywords github project" 
@@ -5075,7 +5075,7 @@ rule Cloud_VPN_greyware_tool_keyword
 }
 
 
-rule cloudflared_greyware_tool_keyword
+rule rule_cloudflared_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'cloudflared' taken from the ThreatHunting-Keywords github project" 
@@ -5231,7 +5231,7 @@ rule cloudflared_greyware_tool_keyword
         $string48_cloudflared_greyware_tool_keyword = /echo\s\'alias\scat\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\s0\>\&1\'\'\s\>\>\s.{0,1000}\/\.bashrc.{0,1000}\s/ nocase ascii wide
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
-        $string49_cloudflared_greyware_tool_keyword = /echo\s\'alias\sfind\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\>\>\s\"\$user_cloudflared_greyware_tool_keyword\/\.bashrc\"/ nocase ascii wide
+        $string49_cloudflared_greyware_tool_keyword = /echo\s\'alias\sfind\=\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/.{0,1000}\/.{0,1000}\>\>\s\"\$user\/\.bashrc\"/ nocase ascii wide
         // Description: cloudfared Contains the command-line client for Cloudflare Tunnel - a tunneling daemon that proxies traffic from the Cloudflare network to your origins
         // Reference: https://github.com/cloudflare/cloudflared
         $string50_cloudflared_greyware_tool_keyword = /ed4f5607dbc3fec5d43fbc22fb12a79d8bca07aa60c8733db7f495b7210d631f/ nocase ascii wide
@@ -5262,7 +5262,7 @@ rule cloudflared_greyware_tool_keyword
 }
 
 
-rule Cmdkey_greyware_tool_keyword
+rule rule_Cmdkey_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Cmdkey' taken from the ThreatHunting-Keywords github project" 
@@ -5281,7 +5281,7 @@ rule Cmdkey_greyware_tool_keyword
 }
 
 
-rule cobaltstrike_greyware_tool_keyword
+rule rule_cobaltstrike_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'cobaltstrike' taken from the ThreatHunting-Keywords github project" 
@@ -5303,7 +5303,7 @@ rule cobaltstrike_greyware_tool_keyword
 }
 
 
-rule ComodoRMM__Itarian_RMM__greyware_tool_keyword
+rule rule_ComodoRMM__Itarian_RMM__greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ComodoRMM (Itarian RMM)' taken from the ThreatHunting-Keywords github project" 
@@ -5424,7 +5424,7 @@ rule ComodoRMM__Itarian_RMM__greyware_tool_keyword
 }
 
 
-rule Compress_Archive_greyware_tool_keyword
+rule rule_Compress_Archive_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Compress-Archive' taken from the ThreatHunting-Keywords github project" 
@@ -5439,7 +5439,7 @@ rule Compress_Archive_greyware_tool_keyword
         $string1_Compress_Archive_greyware_tool_keyword = /\:\\programdata\\cloud\.exe/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
-        $string2_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath\s\$env_Compress_Archive_greyware_tool_keyword\:TEMP/ nocase ascii wide
+        $string2_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath\s\$env\:TEMP/ nocase ascii wide
         // Description: Compress data using zlib for exfiltration
         // Reference: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
         $string3_Compress_Archive_greyware_tool_keyword = /Compress\-Archive\s\-Path.{0,1000}\-DestinationPath.{0,1000}\:\\Windows\\Temp\\/ nocase ascii wide
@@ -5452,7 +5452,7 @@ rule Compress_Archive_greyware_tool_keyword
 }
 
 
-rule conhost_exe_greyware_tool_keyword
+rule rule_conhost_exe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'conhost.exe' taken from the ThreatHunting-Keywords github project" 
@@ -5471,7 +5471,7 @@ rule conhost_exe_greyware_tool_keyword
 }
 
 
-rule copy_greyware_tool_keyword
+rule rule_copy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'copy' taken from the ThreatHunting-Keywords github project" 
@@ -5496,7 +5496,7 @@ rule copy_greyware_tool_keyword
 }
 
 
-rule cp_greyware_tool_keyword
+rule rule_cp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'cp' taken from the ThreatHunting-Keywords github project" 
@@ -5518,7 +5518,7 @@ rule cp_greyware_tool_keyword
 }
 
 
-rule crond_greyware_tool_keyword
+rule rule_crond_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'crond' taken from the ThreatHunting-Keywords github project" 
@@ -5537,7 +5537,7 @@ rule crond_greyware_tool_keyword
 }
 
 
-rule crontab_greyware_tool_keyword
+rule rule_crontab_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'crontab' taken from the ThreatHunting-Keywords github project" 
@@ -5556,7 +5556,7 @@ rule crontab_greyware_tool_keyword
 }
 
 
-rule crowbar_greyware_tool_keyword
+rule rule_crowbar_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'crowbar' taken from the ThreatHunting-Keywords github project" 
@@ -5674,7 +5674,7 @@ rule crowbar_greyware_tool_keyword
 }
 
 
-rule crowdstrike_falcon_greyware_tool_keyword
+rule rule_crowdstrike_falcon_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'crowdstrike falcon' taken from the ThreatHunting-Keywords github project" 
@@ -5696,7 +5696,7 @@ rule crowdstrike_falcon_greyware_tool_keyword
 }
 
 
-rule csvde_greyware_tool_keyword
+rule rule_csvde_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'csvde' taken from the ThreatHunting-Keywords github project" 
@@ -5727,7 +5727,7 @@ rule csvde_greyware_tool_keyword
 }
 
 
-rule curl_greyware_tool_keyword
+rule rule_curl_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'curl' taken from the ThreatHunting-Keywords github project" 
@@ -5752,7 +5752,7 @@ rule curl_greyware_tool_keyword
 }
 
 
-rule CursedChrome_greyware_tool_keyword
+rule rule_CursedChrome_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'CursedChrome' taken from the ThreatHunting-Keywords github project" 
@@ -5777,7 +5777,7 @@ rule CursedChrome_greyware_tool_keyword
 }
 
 
-rule cut_greyware_tool_keyword
+rule rule_cut_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'cut' taken from the ThreatHunting-Keywords github project" 
@@ -5796,7 +5796,7 @@ rule cut_greyware_tool_keyword
 }
 
 
-rule CyberGhost_VPN_greyware_tool_keyword
+rule rule_CyberGhost_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'CyberGhost VPN' taken from the ThreatHunting-Keywords github project" 
@@ -5910,7 +5910,7 @@ rule CyberGhost_VPN_greyware_tool_keyword
         $string34_CyberGhost_VPN_greyware_tool_keyword = /CyberGhost8Service/ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
-        $string35_CyberGhost_VPN_greyware_tool_keyword = /CyberGhostTunnel\$CyberGhost_CyberGhost_VPN_greyware_tool_keyword\-WireGuard\-1/ nocase ascii wide
+        $string35_CyberGhost_VPN_greyware_tool_keyword = /CyberGhostTunnel\$CyberGhost\-WireGuard\-1/ nocase ascii wide
         // Description: External VPN usage within coporate network
         // Reference: https://www.cyberghostvpn.com/
         $string36_CyberGhost_VPN_greyware_tool_keyword = /CyberGhostVPNSetup\.exe/ nocase ascii wide
@@ -5935,7 +5935,7 @@ rule CyberGhost_VPN_greyware_tool_keyword
 }
 
 
-rule cytool_greyware_tool_keyword
+rule rule_cytool_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'cytool' taken from the ThreatHunting-Keywords github project" 
@@ -5963,7 +5963,7 @@ rule cytool_greyware_tool_keyword
 }
 
 
-rule Daily_VPN_greyware_tool_keyword
+rule rule_Daily_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Daily VPN' taken from the ThreatHunting-Keywords github project" 
@@ -5982,7 +5982,7 @@ rule Daily_VPN_greyware_tool_keyword
 }
 
 
-rule Dameware_greyware_tool_keyword
+rule rule_Dameware_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Dameware' taken from the ThreatHunting-Keywords github project" 
@@ -6835,7 +6835,7 @@ rule Dameware_greyware_tool_keyword
 }
 
 
-rule Dataplicity_greyware_tool_keyword
+rule rule_Dataplicity_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Dataplicity' taken from the ThreatHunting-Keywords github project" 
@@ -7133,7 +7133,7 @@ rule Dataplicity_greyware_tool_keyword
 }
 
 
-rule DBC2_greyware_tool_keyword
+rule rule_DBC2_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'DBC2' taken from the ThreatHunting-Keywords github project" 
@@ -7152,7 +7152,7 @@ rule DBC2_greyware_tool_keyword
 }
 
 
-rule dd_greyware_tool_keyword
+rule rule_dd_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dd' taken from the ThreatHunting-Keywords github project" 
@@ -7174,7 +7174,7 @@ rule dd_greyware_tool_keyword
 }
 
 
-rule debugdfs_greyware_tool_keyword
+rule rule_debugdfs_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'debugdfs' taken from the ThreatHunting-Keywords github project" 
@@ -7193,7 +7193,7 @@ rule debugdfs_greyware_tool_keyword
 }
 
 
-rule DEEPRISM_VPN_greyware_tool_keyword
+rule rule_DEEPRISM_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'DEEPRISM VPN' taken from the ThreatHunting-Keywords github project" 
@@ -7212,7 +7212,7 @@ rule DEEPRISM_VPN_greyware_tool_keyword
 }
 
 
-rule del_greyware_tool_keyword
+rule rule_del_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'del' taken from the ThreatHunting-Keywords github project" 
@@ -7231,7 +7231,7 @@ rule del_greyware_tool_keyword
 }
 
 
-rule dev_tunnels_greyware_tool_keyword
+rule rule_dev_tunnels_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dev-tunnels' taken from the ThreatHunting-Keywords github project" 
@@ -7352,7 +7352,7 @@ rule dev_tunnels_greyware_tool_keyword
 }
 
 
-rule dig_greyware_tool_keyword
+rule rule_dig_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dig' taken from the ThreatHunting-Keywords github project" 
@@ -7374,7 +7374,7 @@ rule dig_greyware_tool_keyword
 }
 
 
-rule dir_greyware_tool_keyword
+rule rule_dir_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dir' taken from the ThreatHunting-Keywords github project" 
@@ -7414,7 +7414,7 @@ rule dir_greyware_tool_keyword
 }
 
 
-rule discord_greyware_tool_keyword
+rule rule_discord_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'discord' taken from the ThreatHunting-Keywords github project" 
@@ -7457,7 +7457,7 @@ rule discord_greyware_tool_keyword
 }
 
 
-rule diskshadow_greyware_tool_keyword
+rule rule_diskshadow_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'diskshadow' taken from the ThreatHunting-Keywords github project" 
@@ -7476,7 +7476,7 @@ rule diskshadow_greyware_tool_keyword
 }
 
 
-rule dns_greyware_tool_keyword
+rule rule_dns_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dns' taken from the ThreatHunting-Keywords github project" 
@@ -7501,7 +7501,7 @@ rule dns_greyware_tool_keyword
 }
 
 
-rule dnscmd_greyware_tool_keyword
+rule rule_dnscmd_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dnscmd' taken from the ThreatHunting-Keywords github project" 
@@ -7523,7 +7523,7 @@ rule dnscmd_greyware_tool_keyword
 }
 
 
-rule dnslog_cn_greyware_tool_keyword
+rule rule_dnslog_cn_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dnslog.cn' taken from the ThreatHunting-Keywords github project" 
@@ -7545,7 +7545,7 @@ rule dnslog_cn_greyware_tool_keyword
 }
 
 
-rule DotVPN_greyware_tool_keyword
+rule rule_DotVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'DotVPN' taken from the ThreatHunting-Keywords github project" 
@@ -7567,7 +7567,7 @@ rule DotVPN_greyware_tool_keyword
 }
 
 
-rule dpapi_py_greyware_tool_keyword
+rule rule_dpapi_py_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dpapi.py' taken from the ThreatHunting-Keywords github project" 
@@ -7586,7 +7586,7 @@ rule dpapi_py_greyware_tool_keyword
 }
 
 
-rule dropbear_greyware_tool_keyword
+rule rule_dropbear_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dropbear' taken from the ThreatHunting-Keywords github project" 
@@ -7701,7 +7701,7 @@ rule dropbear_greyware_tool_keyword
 }
 
 
-rule dropbox_greyware_tool_keyword
+rule rule_dropbox_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dropbox' taken from the ThreatHunting-Keywords github project" 
@@ -7720,7 +7720,7 @@ rule dropbox_greyware_tool_keyword
 }
 
 
-rule dropmefiles_com_greyware_tool_keyword
+rule rule_dropmefiles_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dropmefiles.com' taken from the ThreatHunting-Keywords github project" 
@@ -7742,7 +7742,7 @@ rule dropmefiles_com_greyware_tool_keyword
 }
 
 
-rule dsquery_greyware_tool_keyword
+rule rule_dsquery_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dsquery' taken from the ThreatHunting-Keywords github project" 
@@ -7779,7 +7779,7 @@ rule dsquery_greyware_tool_keyword
 }
 
 
-rule duckdns_org_greyware_tool_keyword
+rule rule_duckdns_org_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'duckdns.org' taken from the ThreatHunting-Keywords github project" 
@@ -7858,7 +7858,7 @@ rule duckdns_org_greyware_tool_keyword
 }
 
 
-rule ducktail_greyware_tool_keyword
+rule rule_ducktail_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ducktail' taken from the ThreatHunting-Keywords github project" 
@@ -7877,7 +7877,7 @@ rule ducktail_greyware_tool_keyword
 }
 
 
-rule dwagent_greyware_tool_keyword
+rule rule_dwagent_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'dwagent' taken from the ThreatHunting-Keywords github project" 
@@ -8004,7 +8004,7 @@ rule dwagent_greyware_tool_keyword
 }
 
 
-rule Earth_VPN_greyware_tool_keyword
+rule rule_Earth_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Earth VPN' taken from the ThreatHunting-Keywords github project" 
@@ -8023,7 +8023,7 @@ rule Earth_VPN_greyware_tool_keyword
 }
 
 
-rule easyupload_io_greyware_tool_keyword
+rule rule_easyupload_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'easyupload.io' taken from the ThreatHunting-Keywords github project" 
@@ -8045,7 +8045,7 @@ rule easyupload_io_greyware_tool_keyword
 }
 
 
-rule echo_greyware_tool_keyword
+rule rule_echo_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'echo' taken from the ThreatHunting-Keywords github project" 
@@ -8097,7 +8097,7 @@ rule echo_greyware_tool_keyword
 }
 
 
-rule EHORUS_RMM_greyware_tool_keyword
+rule rule_EHORUS_RMM_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'EHORUS RMM' taken from the ThreatHunting-Keywords github project" 
@@ -8112,7 +8112,7 @@ rule EHORUS_RMM_greyware_tool_keyword
         $string1_EHORUS_RMM_greyware_tool_keyword = /\"appName\"\:\"eHorus\sAgent\"/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
-        $string2_EHORUS_RMM_greyware_tool_keyword = /\$EHORUS_HOME_EHORUS_RMM_greyware_tool_keyword\/\.vnc\/passwd/ nocase ascii wide
+        $string2_EHORUS_RMM_greyware_tool_keyword = /\$EHORUS_HOME\/\.vnc\/passwd/ nocase ascii wide
         // Description: Pandora RC (formerly called eHorus) is a computer management system for MS Windows - Linux and MacOS that allows access to registered computers wherever they are from a browser without direct connectivity to their devices from the outside. (server based on VNC)
         // Reference: https://pandorafms.com/en/remote-control/
         $string3_EHORUS_RMM_greyware_tool_keyword = /\/ehorus_agent_installer\-/ nocase ascii wide
@@ -8239,7 +8239,7 @@ rule EHORUS_RMM_greyware_tool_keyword
 }
 
 
-rule elastic_agent_greyware_tool_keyword
+rule rule_elastic_agent_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'elastic-agent' taken from the ThreatHunting-Keywords github project" 
@@ -8258,7 +8258,7 @@ rule elastic_agent_greyware_tool_keyword
 }
 
 
-rule email_format_greyware_tool_keyword
+rule rule_email_format_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'email-format' taken from the ThreatHunting-Keywords github project" 
@@ -8277,7 +8277,7 @@ rule email_format_greyware_tool_keyword
 }
 
 
-rule eraser_greyware_tool_keyword
+rule rule_eraser_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'eraser' taken from the ThreatHunting-Keywords github project" 
@@ -8401,7 +8401,7 @@ rule eraser_greyware_tool_keyword
 }
 
 
-rule esentutl_greyware_tool_keyword
+rule rule_esentutl_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'esentutl' taken from the ThreatHunting-Keywords github project" 
@@ -8423,7 +8423,7 @@ rule esentutl_greyware_tool_keyword
 }
 
 
-rule esxcli_greyware_tool_keyword
+rule rule_esxcli_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'esxcli' taken from the ThreatHunting-Keywords github project" 
@@ -8472,7 +8472,7 @@ rule esxcli_greyware_tool_keyword
 }
 
 
-rule evilrdp_greyware_tool_keyword
+rule rule_evilrdp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'evilrdp' taken from the ThreatHunting-Keywords github project" 
@@ -8494,7 +8494,7 @@ rule evilrdp_greyware_tool_keyword
 }
 
 
-rule Excel_greyware_tool_keyword
+rule rule_Excel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Excel' taken from the ThreatHunting-Keywords github project" 
@@ -8516,7 +8516,7 @@ rule Excel_greyware_tool_keyword
 }
 
 
-rule exegol_greyware_tool_keyword
+rule rule_exegol_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'exegol' taken from the ThreatHunting-Keywords github project" 
@@ -8640,7 +8640,7 @@ rule exegol_greyware_tool_keyword
 }
 
 
-rule export_greyware_tool_keyword
+rule rule_export_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'export' taken from the ThreatHunting-Keywords github project" 
@@ -8665,7 +8665,7 @@ rule export_greyware_tool_keyword
 }
 
 
-rule expose_greyware_tool_keyword
+rule rule_expose_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'expose' taken from the ThreatHunting-Keywords github project" 
@@ -8720,7 +8720,7 @@ rule expose_greyware_tool_keyword
 }
 
 
-rule ExpressVPN_greyware_tool_keyword
+rule rule_ExpressVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ExpressVPN' taken from the ThreatHunting-Keywords github project" 
@@ -8739,7 +8739,7 @@ rule ExpressVPN_greyware_tool_keyword
 }
 
 
-rule FastestVPN_Proxy_greyware_tool_keyword
+rule rule_FastestVPN_Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'FastestVPN Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -8758,7 +8758,7 @@ rule FastestVPN_Proxy_greyware_tool_keyword
 }
 
 
-rule FastStunnel_VPN_greyware_tool_keyword
+rule rule_FastStunnel_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'FastStunnel VPN' taken from the ThreatHunting-Keywords github project" 
@@ -8777,7 +8777,7 @@ rule FastStunnel_VPN_greyware_tool_keyword
 }
 
 
-rule fex_net_greyware_tool_keyword
+rule rule_fex_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'fex.net' taken from the ThreatHunting-Keywords github project" 
@@ -8802,7 +8802,7 @@ rule fex_net_greyware_tool_keyword
 }
 
 
-rule fiddler_greyware_tool_keyword
+rule rule_fiddler_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'fiddler' taken from the ThreatHunting-Keywords github project" 
@@ -8830,7 +8830,7 @@ rule fiddler_greyware_tool_keyword
 }
 
 
-rule file_io_greyware_tool_keyword
+rule rule_file_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'file.io' taken from the ThreatHunting-Keywords github project" 
@@ -8852,7 +8852,7 @@ rule file_io_greyware_tool_keyword
 }
 
 
-rule filetransfer_io_greyware_tool_keyword
+rule rule_filetransfer_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'filetransfer.io' taken from the ThreatHunting-Keywords github project" 
@@ -8871,7 +8871,7 @@ rule filetransfer_io_greyware_tool_keyword
 }
 
 
-rule FileZilla_greyware_tool_keyword
+rule rule_FileZilla_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'FileZilla' taken from the ThreatHunting-Keywords github project" 
@@ -8929,7 +8929,7 @@ rule FileZilla_greyware_tool_keyword
 }
 
 
-rule find_greyware_tool_keyword
+rule rule_find_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'find' taken from the ThreatHunting-Keywords github project" 
@@ -9056,7 +9056,7 @@ rule find_greyware_tool_keyword
 }
 
 
-rule findstr__greyware_tool_keyword
+rule rule_findstr__greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'findstr ' taken from the ThreatHunting-Keywords github project" 
@@ -9068,7 +9068,7 @@ rule findstr__greyware_tool_keyword
     strings:
         // Description: Find GPP Passwords in SYSVOL - search for occurrences of the term "cpassword" in all XML files within the SYSVOL directory of the domain controller - The "cpassword" string refers to a weakly encrypted password stored in some Group Policy Preferences (GPP) files
         // Reference: N/A
-        $string1_findstr__greyware_tool_keyword = /findstr\s\/S\scpassword\s\$env_findstr__greyware_tool_keyword\:.{0,1000}\\sysvol\\.{0,1000}\.xml/ nocase ascii wide
+        $string1_findstr__greyware_tool_keyword = /findstr\s\/S\scpassword\s\$env\:.{0,1000}\\sysvol\\.{0,1000}\.xml/ nocase ascii wide
         // Description: Find GPP Passwords in SYSVOL - search for occurrences of the term "cpassword" in all XML files within the SYSVOL directory of the domain controller - The "cpassword" string refers to a weakly encrypted password stored in some Group Policy Preferences (GPP) files
         // Reference: N/A
         $string2_findstr__greyware_tool_keyword = /findstr\s\/S\scpassword\s\%.{0,1000}\%\\sysvol\\.{0,1000}\.xml/ nocase ascii wide
@@ -9078,7 +9078,7 @@ rule findstr__greyware_tool_keyword
 }
 
 
-rule findstr_greyware_tool_keyword
+rule rule_findstr_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'findstr' taken from the ThreatHunting-Keywords github project" 
@@ -9103,7 +9103,7 @@ rule findstr_greyware_tool_keyword
 }
 
 
-rule fleetdeck_greyware_tool_keyword
+rule rule_fleetdeck_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'fleetdeck' taken from the ThreatHunting-Keywords github project" 
@@ -9122,7 +9122,7 @@ rule fleetdeck_greyware_tool_keyword
 }
 
 
-rule fleetdm_greyware_tool_keyword
+rule rule_fleetdm_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'fleetdm' taken from the ThreatHunting-Keywords github project" 
@@ -10053,7 +10053,7 @@ rule fleetdm_greyware_tool_keyword
 }
 
 
-rule Fornex_VPN_greyware_tool_keyword
+rule rule_Fornex_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Fornex VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10072,7 +10072,7 @@ rule Fornex_VPN_greyware_tool_keyword
 }
 
 
-rule FoxyProxy_Standard_greyware_tool_keyword
+rule rule_FoxyProxy_Standard_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'FoxyProxy Standard' taken from the ThreatHunting-Keywords github project" 
@@ -10091,7 +10091,7 @@ rule FoxyProxy_Standard_greyware_tool_keyword
 }
 
 
-rule Free_Avira_Phantom_VPN_greyware_tool_keyword
+rule rule_Free_Avira_Phantom_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free Avira Phantom VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10110,7 +10110,7 @@ rule Free_Avira_Phantom_VPN_greyware_tool_keyword
 }
 
 
-rule Free_Fast_VPN_greyware_tool_keyword
+rule rule_Free_Fast_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free Fast VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10129,7 +10129,7 @@ rule Free_Fast_VPN_greyware_tool_keyword
 }
 
 
-rule Free_One_Touch_VPN_greyware_tool_keyword
+rule rule_Free_One_Touch_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free One Touch VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10148,7 +10148,7 @@ rule Free_One_Touch_VPN_greyware_tool_keyword
 }
 
 
-rule Free_Proxy_VPN_greyware_tool_keyword
+rule rule_Free_Proxy_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free Proxy VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10170,7 +10170,7 @@ rule Free_Proxy_VPN_greyware_tool_keyword
 }
 
 
-rule Free_Residential_VPN_greyware_tool_keyword
+rule rule_Free_Residential_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free Residential VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10189,7 +10189,7 @@ rule Free_Residential_VPN_greyware_tool_keyword
 }
 
 
-rule FREE_VPN_DEWELOPMENT_greyware_tool_keyword
+rule rule_FREE_VPN_DEWELOPMENT_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'FREE VPN DEWELOPMENT' taken from the ThreatHunting-Keywords github project" 
@@ -10208,7 +10208,7 @@ rule FREE_VPN_DEWELOPMENT_greyware_tool_keyword
 }
 
 
-rule Free_VPN_for_Chrome_greyware_tool_keyword
+rule rule_Free_VPN_for_Chrome_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free VPN for Chrome' taken from the ThreatHunting-Keywords github project" 
@@ -10227,7 +10227,7 @@ rule Free_VPN_for_Chrome_greyware_tool_keyword
 }
 
 
-rule Free_VPN_greyware_tool_keyword
+rule rule_Free_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Free VPN' taken from the ThreatHunting-Keywords github project" 
@@ -10249,7 +10249,7 @@ rule Free_VPN_greyware_tool_keyword
 }
 
 
-rule freefilesync_greyware_tool_keyword
+rule rule_freefilesync_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'freefilesync' taken from the ThreatHunting-Keywords github project" 
@@ -10364,7 +10364,7 @@ rule freefilesync_greyware_tool_keyword
 }
 
 
-rule frp_greyware_tool_keyword
+rule rule_frp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'frp' taken from the ThreatHunting-Keywords github project" 
@@ -11733,7 +11733,7 @@ rule frp_greyware_tool_keyword
 }
 
 
-rule ftype_greyware_tool_keyword
+rule rule_ftype_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ftype' taken from the ThreatHunting-Keywords github project" 
@@ -11761,7 +11761,7 @@ rule ftype_greyware_tool_keyword
 }
 
 
-rule GeoProxy_greyware_tool_keyword
+rule rule_GeoProxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'GeoProxy' taken from the ThreatHunting-Keywords github project" 
@@ -11780,7 +11780,7 @@ rule GeoProxy_greyware_tool_keyword
 }
 
 
-rule Get_WmiObject_greyware_tool_keyword
+rule rule_Get_WmiObject_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Get-WmiObject' taken from the ThreatHunting-Keywords github project" 
@@ -11805,7 +11805,7 @@ rule Get_WmiObject_greyware_tool_keyword
 }
 
 
-rule Getcap_greyware_tool_keyword
+rule rule_Getcap_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Getcap' taken from the ThreatHunting-Keywords github project" 
@@ -11824,7 +11824,7 @@ rule Getcap_greyware_tool_keyword
 }
 
 
-rule getent_greyware_tool_keyword
+rule rule_getent_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'getent' taken from the ThreatHunting-Keywords github project" 
@@ -11843,7 +11843,7 @@ rule getent_greyware_tool_keyword
 }
 
 
-rule github_greyware_tool_keyword
+rule rule_github_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'github' taken from the ThreatHunting-Keywords github project" 
@@ -12357,7 +12357,7 @@ rule github_greyware_tool_keyword
 }
 
 
-rule go_http_tunnel_greyware_tool_keyword
+rule rule_go_http_tunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'go-http-tunnel' taken from the ThreatHunting-Keywords github project" 
@@ -12508,7 +12508,7 @@ rule go_http_tunnel_greyware_tool_keyword
 }
 
 
-rule gofile_io_greyware_tool_keyword
+rule rule_gofile_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'gofile.io' taken from the ThreatHunting-Keywords github project" 
@@ -12530,7 +12530,7 @@ rule gofile_io_greyware_tool_keyword
 }
 
 
-rule golang_c2_greyware_tool_keyword
+rule rule_golang_c2_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'golang_c2' taken from the ThreatHunting-Keywords github project" 
@@ -12549,7 +12549,7 @@ rule golang_c2_greyware_tool_keyword
 }
 
 
-rule Gom_VPN_greyware_tool_keyword
+rule rule_Gom_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Gom VPN' taken from the ThreatHunting-Keywords github project" 
@@ -12568,7 +12568,7 @@ rule Gom_VPN_greyware_tool_keyword
 }
 
 
-rule goMatrixC2_greyware_tool_keyword
+rule rule_goMatrixC2_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'goMatrixC2' taken from the ThreatHunting-Keywords github project" 
@@ -12587,7 +12587,7 @@ rule goMatrixC2_greyware_tool_keyword
 }
 
 
-rule Goodsync_greyware_tool_keyword
+rule rule_Goodsync_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Goodsync' taken from the ThreatHunting-Keywords github project" 
@@ -12669,7 +12669,7 @@ rule Goodsync_greyware_tool_keyword
 }
 
 
-rule Google_Remote_Desktop_greyware_tool_keyword
+rule rule_Google_Remote_Desktop_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Google Remote Desktop' taken from the ThreatHunting-Keywords github project" 
@@ -12775,7 +12775,7 @@ rule Google_Remote_Desktop_greyware_tool_keyword
 }
 
 
-rule googleweblight_com_greyware_tool_keyword
+rule rule_googleweblight_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'googleweblight.com' taken from the ThreatHunting-Keywords github project" 
@@ -12794,7 +12794,7 @@ rule googleweblight_com_greyware_tool_keyword
 }
 
 
-rule gost_greyware_tool_keyword
+rule rule_gost_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'gost' taken from the ThreatHunting-Keywords github project" 
@@ -13572,7 +13572,7 @@ rule gost_greyware_tool_keyword
 }
 
 
-rule GoToMyPC_greyware_tool_keyword
+rule rule_GoToMyPC_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'GoToMyPC' taken from the ThreatHunting-Keywords github project" 
@@ -13765,7 +13765,7 @@ rule GoToMyPC_greyware_tool_keyword
 }
 
 
-rule gpg_greyware_tool_keyword
+rule rule_gpg_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'gpg' taken from the ThreatHunting-Keywords github project" 
@@ -13784,7 +13784,7 @@ rule gpg_greyware_tool_keyword
 }
 
 
-rule grep_greyware_tool_keyword
+rule rule_grep_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'grep' taken from the ThreatHunting-Keywords github project" 
@@ -13833,7 +13833,7 @@ rule grep_greyware_tool_keyword
 }
 
 
-rule gsocket_greyware_tool_keyword
+rule rule_gsocket_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'gsocket' taken from the ThreatHunting-Keywords github project" 
@@ -14524,7 +14524,7 @@ rule gsocket_greyware_tool_keyword
 }
 
 
-rule gt_greyware_tool_keyword
+rule rule_gt_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'gt' taken from the ThreatHunting-Keywords github project" 
@@ -14618,7 +14618,7 @@ rule gt_greyware_tool_keyword
 }
 
 
-rule guerrillamail_greyware_tool_keyword
+rule rule_guerrillamail_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'guerrillamail' taken from the ThreatHunting-Keywords github project" 
@@ -14643,7 +14643,7 @@ rule guerrillamail_greyware_tool_keyword
 }
 
 
-rule Guru_VPN__and__Proxy_greyware_tool_keyword
+rule rule_Guru_VPN__and__Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Guru VPN & Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -14662,7 +14662,7 @@ rule Guru_VPN__and__Proxy_greyware_tool_keyword
 }
 
 
-rule hackforums_net_greyware_tool_keyword
+rule rule_hackforums_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'hackforums.net' taken from the ThreatHunting-Keywords github project" 
@@ -14681,7 +14681,7 @@ rule hackforums_net_greyware_tool_keyword
 }
 
 
-rule Hide_My_IP_VPN_greyware_tool_keyword
+rule rule_Hide_My_IP_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hide My IP VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14700,7 +14700,7 @@ rule Hide_My_IP_VPN_greyware_tool_keyword
 }
 
 
-rule HideAll_VPN_greyware_tool_keyword
+rule rule_HideAll_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'HideAll VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14719,7 +14719,7 @@ rule HideAll_VPN_greyware_tool_keyword
 }
 
 
-rule Hideman_VPN_greyware_tool_keyword
+rule rule_Hideman_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hideman VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14738,7 +14738,7 @@ rule Hideman_VPN_greyware_tool_keyword
 }
 
 
-rule history_greyware_tool_keyword
+rule rule_history_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'history' taken from the ThreatHunting-Keywords github project" 
@@ -14757,7 +14757,7 @@ rule history_greyware_tool_keyword
 }
 
 
-rule HMA_VPN_Proxy_Unblocker_greyware_tool_keyword
+rule rule_HMA_VPN_Proxy_Unblocker_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'HMA VPN Proxy Unblocker' taken from the ThreatHunting-Keywords github project" 
@@ -14776,7 +14776,7 @@ rule HMA_VPN_Proxy_Unblocker_greyware_tool_keyword
 }
 
 
-rule Hola_Free_VPN_greyware_tool_keyword
+rule rule_Hola_Free_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hola Free VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14795,7 +14795,7 @@ rule Hola_Free_VPN_greyware_tool_keyword
 }
 
 
-rule Hola_VPN_greyware_tool_keyword
+rule rule_Hola_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hola VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14814,7 +14814,7 @@ rule Hola_VPN_greyware_tool_keyword
 }
 
 
-rule homeway_io_greyware_tool_keyword
+rule rule_homeway_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'homeway.io' taken from the ThreatHunting-Keywords github project" 
@@ -14836,7 +14836,7 @@ rule homeway_io_greyware_tool_keyword
 }
 
 
-rule Hotspot_Shield_Elite_VPN_Proxy_greyware_tool_keyword
+rule rule_Hotspot_Shield_Elite_VPN_Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hotspot Shield Elite VPN Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -14855,7 +14855,7 @@ rule Hotspot_Shield_Elite_VPN_Proxy_greyware_tool_keyword
 }
 
 
-rule Hotspot_Shield_Free_VPN_greyware_tool_keyword
+rule rule_Hotspot_Shield_Free_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hotspot Shield Free VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14874,7 +14874,7 @@ rule Hotspot_Shield_Free_VPN_greyware_tool_keyword
 }
 
 
-rule Hoxx_VPN_Proxy_greyware_tool_keyword
+rule rule_Hoxx_VPN_Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hoxx VPN Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -14893,7 +14893,7 @@ rule Hoxx_VPN_Proxy_greyware_tool_keyword
 }
 
 
-rule http_server_greyware_tool_keyword
+rule rule_http_server_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'http.server' taken from the ThreatHunting-Keywords github project" 
@@ -14915,7 +14915,7 @@ rule http_server_greyware_tool_keyword
 }
 
 
-rule Hub_VPN_greyware_tool_keyword
+rule rule_Hub_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hub VPN' taken from the ThreatHunting-Keywords github project" 
@@ -14934,7 +14934,7 @@ rule Hub_VPN_greyware_tool_keyword
 }
 
 
-rule Hunter_io_greyware_tool_keyword
+rule rule_Hunter_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Hunter.io' taken from the ThreatHunting-Keywords github project" 
@@ -14965,7 +14965,7 @@ rule Hunter_io_greyware_tool_keyword
 }
 
 
-rule hypertunnel_greyware_tool_keyword
+rule rule_hypertunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'hypertunnel' taken from the ThreatHunting-Keywords github project" 
@@ -15023,7 +15023,7 @@ rule hypertunnel_greyware_tool_keyword
 }
 
 
-rule icacls_greyware_tool_keyword
+rule rule_icacls_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'icacls' taken from the ThreatHunting-Keywords github project" 
@@ -15060,7 +15060,7 @@ rule icacls_greyware_tool_keyword
 }
 
 
-rule icalcs_greyware_tool_keyword
+rule rule_icalcs_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'icalcs' taken from the ThreatHunting-Keywords github project" 
@@ -15145,7 +15145,7 @@ rule icalcs_greyware_tool_keyword
 }
 
 
-rule ifconfig_greyware_tool_keyword
+rule rule_ifconfig_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ifconfig' taken from the ThreatHunting-Keywords github project" 
@@ -15167,7 +15167,7 @@ rule ifconfig_greyware_tool_keyword
 }
 
 
-rule impacket_greyware_tool_keyword
+rule rule_impacket_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'impacket' taken from the ThreatHunting-Keywords github project" 
@@ -15198,7 +15198,7 @@ rule impacket_greyware_tool_keyword
 }
 
 
-rule iNinja_VPN_greyware_tool_keyword
+rule rule_iNinja_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'iNinja VPN' taken from the ThreatHunting-Keywords github project" 
@@ -15217,7 +15217,7 @@ rule iNinja_VPN_greyware_tool_keyword
 }
 
 
-rule interactsh_greyware_tool_keyword
+rule rule_interactsh_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'interactsh' taken from the ThreatHunting-Keywords github project" 
@@ -15278,7 +15278,7 @@ rule interactsh_greyware_tool_keyword
 }
 
 
-rule Invoke_Maldaptive_greyware_tool_keyword
+rule rule_Invoke_Maldaptive_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Invoke-Maldaptive' taken from the ThreatHunting-Keywords github project" 
@@ -15341,7 +15341,7 @@ rule Invoke_Maldaptive_greyware_tool_keyword
         $string17_Invoke_Maldaptive_greyware_tool_keyword = /MaLDAPtive\/Invoke\-Maldaptive/ nocase ascii wide
         // Description: MaLDAPtive is a framework for LDAP SearchFilter parsing - obfuscation - deobfuscation and detection.
         // Reference: https://github.com/MaLDAPtive/Invoke-Maldaptive
-        $string18_Invoke_Maldaptive_greyware_tool_keyword = /New\-ObfuscationContainer\s\-SearchFilter\s\$SearchFilter_Invoke_Maldaptive_greyware_tool_keyword\s\-SearchRoot\:\$SearchRoot_Invoke_Maldaptive_greyware_tool_keyword\s\-AttributeList/ nocase ascii wide
+        $string18_Invoke_Maldaptive_greyware_tool_keyword = /New\-ObfuscationContainer\s\-SearchFilter\s\$SearchFilter\s\-SearchRoot\:\$SearchRoot\s\-AttributeList/ nocase ascii wide
         // Description: MaLDAPtive is a framework for LDAP SearchFilter parsing - obfuscation - deobfuscation and detection.
         // Reference: https://github.com/MaLDAPtive/Invoke-Maldaptive
         $string19_Invoke_Maldaptive_greyware_tool_keyword = /serviceName\s\=\s\'SilkService/ nocase ascii wide
@@ -15351,7 +15351,7 @@ rule Invoke_Maldaptive_greyware_tool_keyword
 }
 
 
-rule IObitUnlocker_greyware_tool_keyword
+rule rule_IObitUnlocker_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'IObitUnlocker' taken from the ThreatHunting-Keywords github project" 
@@ -15439,7 +15439,7 @@ rule IObitUnlocker_greyware_tool_keyword
 }
 
 
-rule IP_Unblock_greyware_tool_keyword
+rule rule_IP_Unblock_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'IP Unblock' taken from the ThreatHunting-Keywords github project" 
@@ -15458,7 +15458,7 @@ rule IP_Unblock_greyware_tool_keyword
 }
 
 
-rule ip_api_com_greyware_tool_keyword
+rule rule_ip_api_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ip-api.com' taken from the ThreatHunting-Keywords github project" 
@@ -15477,7 +15477,7 @@ rule ip_api_com_greyware_tool_keyword
 }
 
 
-rule ip_greyware_tool_keyword
+rule rule_ip_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ip' taken from the ThreatHunting-Keywords github project" 
@@ -15496,7 +15496,7 @@ rule ip_greyware_tool_keyword
 }
 
 
-rule IPBurger_Proxy__and__VPN_greyware_tool_keyword
+rule rule_IPBurger_Proxy__and__VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'IPBurger Proxy & VPN' taken from the ThreatHunting-Keywords github project" 
@@ -15515,7 +15515,7 @@ rule IPBurger_Proxy__and__VPN_greyware_tool_keyword
 }
 
 
-rule ipscan_greyware_tool_keyword
+rule rule_ipscan_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ipscan' taken from the ThreatHunting-Keywords github project" 
@@ -16632,7 +16632,7 @@ rule ipscan_greyware_tool_keyword
 }
 
 
-rule iptables_greyware_tool_keyword
+rule rule_iptables_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'iptables' taken from the ThreatHunting-Keywords github project" 
@@ -16660,7 +16660,7 @@ rule iptables_greyware_tool_keyword
 }
 
 
-rule ipv4_myip_wtf_greyware_tool_keyword
+rule rule_ipv4_myip_wtf_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ipv4.myip.wtf' taken from the ThreatHunting-Keywords github project" 
@@ -16679,7 +16679,7 @@ rule ipv4_myip_wtf_greyware_tool_keyword
 }
 
 
-rule ired_team_greyware_tool_keyword
+rule rule_ired_team_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ired.team' taken from the ThreatHunting-Keywords github project" 
@@ -16707,7 +16707,7 @@ rule ired_team_greyware_tool_keyword
 }
 
 
-rule jprq_greyware_tool_keyword
+rule rule_jprq_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'jprq' taken from the ThreatHunting-Keywords github project" 
@@ -16888,7 +16888,7 @@ rule jprq_greyware_tool_keyword
 }
 
 
-rule kaseya_VSA_greyware_tool_keyword
+rule rule_kaseya_VSA_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'kaseya VSA' taken from the ThreatHunting-Keywords github project" 
@@ -17078,7 +17078,7 @@ rule kaseya_VSA_greyware_tool_keyword
 }
 
 
-rule killProcessPOC_greyware_tool_keyword
+rule rule_killProcessPOC_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'killProcessPOC' taken from the ThreatHunting-Keywords github project" 
@@ -17136,7 +17136,7 @@ rule killProcessPOC_greyware_tool_keyword
 }
 
 
-rule Lansweeper_greyware_tool_keyword
+rule rule_Lansweeper_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Lansweeper' taken from the ThreatHunting-Keywords github project" 
@@ -17179,7 +17179,7 @@ rule Lansweeper_greyware_tool_keyword
 }
 
 
-rule ldap_queries_greyware_tool_keyword
+rule rule_ldap_queries_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ldap queries' taken from the ThreatHunting-Keywords github project" 
@@ -17245,7 +17245,7 @@ rule ldap_queries_greyware_tool_keyword
         $string18_ldap_queries_greyware_tool_keyword = /\(\[System\.DirectoryServices\.ActiveDirectory\.Domain\]\:\:GetCurrentDomain\(\)\)\.GetAllTrustRelationships\(\)/ nocase ascii wide
         // Description: Enumerate all of the domain controllers for all domains in a forest
         // Reference: N/A
-        $string19_ldap_queries_greyware_tool_keyword = /\(Get\-ADForest\)\.Domains\s\|\s\%\{\sGet\-ADDomainController\s\-Filter\s.{0,1000}\s\-Server\s\$__ldap_queries_greyware_tool_keyword\s\}/ nocase ascii wide
+        $string19_ldap_queries_greyware_tool_keyword = /\(Get\-ADForest\)\.Domains\s\|\s\%\{\sGet\-ADDomainController\s\-Filter\s.{0,1000}\s\-Server\s\$_\s\}/ nocase ascii wide
         // Description: used by Rubeus and S4UTomato tools
         // Reference: N/A
         $string20_ldap_queries_greyware_tool_keyword = /\(msds\-supportedencryptiontypes\=0\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.803\:\=4\)\)\)/ nocase ascii wide
@@ -17269,13 +17269,13 @@ rule ldap_queries_greyware_tool_keyword
         $string26_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}\s\|\sSelect\-Object\s\-Property\s.{0,1000}minPwdLength/ nocase ascii wide
         // Description: enumeration of Domain Admins group members
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string27_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$__ldap_queries_greyware_tool_keyword\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
+        $string27_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/CN\=Domain\sAdmins.{0,1000}\|\sForEach\-Object\s\{\[adsi\]\"LDAP\:\/\/\$_\"\}\;\s.{0,1000}\.distinguishedname/ nocase ascii wide
         // Description: get LDAP properties for password settings directly
         // Reference: https://github.com/swarleysez/AD-common-queries
         $string28_ldap_queries_greyware_tool_keyword = /\[ADSI\].{0,1000}LDAP\:\/\/dc\=.{0,1000}\s\|\sSelect\s\-Property\spwdProperties/ nocase ascii wide
         // Description: find user descriptions in Active Directory:
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string29_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users_ldap_queries_greyware_tool_keyword\s\=\s\$searchUsers_ldap_queries_greyware_tool_keyword\.FindAll\(\)\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\=\s\$users_ldap_queries_greyware_tool_keyword\.Properties\;\s\$userProps_ldap_queries_greyware_tool_keyword\s\|\sWhere\-Object\s\{\$__ldap_queries_greyware_tool_keyword\.description\}/ nocase ascii wide
+        $string29_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(\!\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\)\"\;\s\$users\s\=\s\$searchUsers\.FindAll\(\)\;\s\$userProps\s\=\s\$users\.Properties\;\s\$userProps\s\|\sWhere\-Object\s\{\$_\.description\}/ nocase ascii wide
         // Description: find all disabled user accounts
         // Reference: https://github.com/swarleysez/AD-common-queries
         $string30_ldap_queries_greyware_tool_keyword = /\[adsisearcher\]\"\(\&\(objectCategory\=person\)\(objectClass\=user\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)\"/ nocase ascii wide
@@ -17308,10 +17308,10 @@ rule ldap_queries_greyware_tool_keyword
         $string39_ldap_queries_greyware_tool_keyword = /get\-ADComputer\s\-filter\s\{\sPrimaryGroupID\s\-eq\s\"516\"\s\}\s\-properties\sPrimaryGroupID/ nocase ascii wide
         // Description: identifying accounts with 'Password Not Required
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string40_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$__ldap_queries_greyware_tool_keyword\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$__ldap_queries_greyware_tool_keyword\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
+        $string40_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-filter\s.{0,1000}\s\-Properties\sSamAccountName\,\sPasswordNotRequired\s\|\swhere\s\{\s\$_\.passwordnotrequired\s\-eq\s\"true\"\s\}\s\|\swhere\s\{\$_\.enabled\s\-eq\s\"true\"\}/ nocase ascii wide
         // Description: querying accounts that have not been logged into for over 90 days
         // Reference: https://github.com/swarleysez/AD-common-queries
-        $string41_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(passwordlastset\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\s\-AND\s\(enabled\s\-eq\s\$True_ldap_queries_greyware_tool_keyword\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false_ldap_queries_greyware_tool_keyword\)\s\-and\s\(whencreated\s\-le\s\$90days_ldap_queries_greyware_tool_keyword\)\}/ nocase ascii wide
+        $string41_ldap_queries_greyware_tool_keyword = /Get\-ADUser\s\-properties\s.{0,1000}\s\-filter\s\{\(lastlogondate\s\-notlike\s\".{0,1000}\"\s\-OR\slastlogondate\s\-le\s\$90days\)\s\-AND\s\(passwordlastset\s\-le\s\$90days\)\s\-AND\s\(enabled\s\-eq\s\$True\)\s\-and\s\(PasswordNeverExpires\s\-eq\s\$false\)\s\-and\s\(whencreated\s\-le\s\$90days\)\}/ nocase ascii wide
         // Description: Red Teams and adversaries may leverage [Adsisearcher] to enumerate domain groups for situational awareness and Active Directory Discovery
         // Reference: https://research.splunk.com/endpoint/089c862f-5f83-49b5-b1c8-7e4ff66560c7/
         $string42_ldap_queries_greyware_tool_keyword = /powershell.{0,1000}\[adsisearcher\].{0,1000}\(objectcategory\=group\).{0,1000}findAll\(\)/ nocase ascii wide
@@ -17321,7 +17321,7 @@ rule ldap_queries_greyware_tool_keyword
 }
 
 
-rule ldapsearch_greyware_tool_keyword
+rule rule_ldapsearch_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ldapsearch' taken from the ThreatHunting-Keywords github project" 
@@ -17346,7 +17346,7 @@ rule ldapsearch_greyware_tool_keyword
 }
 
 
-rule ldifde_greyware_tool_keyword
+rule rule_ldifde_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ldifde' taken from the ThreatHunting-Keywords github project" 
@@ -17365,7 +17365,7 @@ rule ldifde_greyware_tool_keyword
 }
 
 
-rule Lethean_Proxy_VPN_greyware_tool_keyword
+rule rule_Lethean_Proxy_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Lethean Proxy VPN' taken from the ThreatHunting-Keywords github project" 
@@ -17384,7 +17384,7 @@ rule Lethean_Proxy_VPN_greyware_tool_keyword
 }
 
 
-rule level_io_greyware_tool_keyword
+rule rule_level_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'level.io' taken from the ThreatHunting-Keywords github project" 
@@ -17414,10 +17414,10 @@ rule level_io_greyware_tool_keyword
         $string6_level_io_greyware_tool_keyword = /\"message\"\:\"ably\sconnection\sstate\:\sCONNECTED\"\}/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string7_level_io_greyware_tool_keyword = /\$env_level_io_greyware_tool_keyword\:LEVEL_API_KEY\s\=\s\".{0,1000}\"\;/ nocase ascii wide
+        $string7_level_io_greyware_tool_keyword = /\$env\:LEVEL_API_KEY\s\=\s\".{0,1000}\"\;/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
-        $string8_level_io_greyware_tool_keyword = /\$tempFile_level_io_greyware_tool_keyword\s\=\sJoin\-Path\s\(\[System\.IO\.Path\]\:\:GetTempPath\(\)\)\s\"install_windows\.exe\"\;/ nocase ascii wide
+        $string8_level_io_greyware_tool_keyword = /\$tempFile\s\=\sJoin\-Path\s\(\[System\.IO\.Path\]\:\:GetTempPath\(\)\)\s\"install_windows\.exe\"\;/ nocase ascii wide
         // Description: Level is reinventing remote monitoring and management
         // Reference: https://level.io/
         $string9_level_io_greyware_tool_keyword = /\/etc\/level\/config\.yaml/ nocase ascii wide
@@ -17532,7 +17532,7 @@ rule level_io_greyware_tool_keyword
 }
 
 
-rule linux_greyware_tool_keyword
+rule rule_linux_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'linux' taken from the ThreatHunting-Keywords github project" 
@@ -17551,7 +17551,7 @@ rule linux_greyware_tool_keyword
 }
 
 
-rule ln_greyware_tool_keyword
+rule rule_ln_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ln' taken from the ThreatHunting-Keywords github project" 
@@ -17570,7 +17570,7 @@ rule ln_greyware_tool_keyword
 }
 
 
-rule localhost_run_greyware_tool_keyword
+rule rule_localhost_run_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'localhost.run' taken from the ThreatHunting-Keywords github project" 
@@ -17598,7 +17598,7 @@ rule localhost_run_greyware_tool_keyword
 }
 
 
-rule localtunnel_greyware_tool_keyword
+rule rule_localtunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'localtunnel' taken from the ThreatHunting-Keywords github project" 
@@ -17668,7 +17668,7 @@ rule localtunnel_greyware_tool_keyword
 }
 
 
-rule localtunnels_greyware_tool_keyword
+rule rule_localtunnels_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'localtunnels' taken from the ThreatHunting-Keywords github project" 
@@ -17735,7 +17735,7 @@ rule localtunnels_greyware_tool_keyword
 }
 
 
-rule localxpose_greyware_tool_keyword
+rule rule_localxpose_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'localxpose' taken from the ThreatHunting-Keywords github project" 
@@ -17832,7 +17832,7 @@ rule localxpose_greyware_tool_keyword
 }
 
 
-rule locate_greyware_tool_keyword
+rule rule_locate_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'locate' taken from the ThreatHunting-Keywords github project" 
@@ -17851,7 +17851,7 @@ rule locate_greyware_tool_keyword
 }
 
 
-rule LogMeIn_greyware_tool_keyword
+rule rule_LogMeIn_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'LogMeIn' taken from the ThreatHunting-Keywords github project" 
@@ -18029,7 +18029,7 @@ rule LogMeIn_greyware_tool_keyword
 }
 
 
-rule ls_greyware_tool_keyword
+rule rule_ls_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ls' taken from the ThreatHunting-Keywords github project" 
@@ -18048,7 +18048,7 @@ rule ls_greyware_tool_keyword
 }
 
 
-rule lsa_whisperer_greyware_tool_keyword
+rule rule_lsa_whisperer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'lsa-whisperer' taken from the ThreatHunting-Keywords github project" 
@@ -18076,7 +18076,7 @@ rule lsa_whisperer_greyware_tool_keyword
 }
 
 
-rule LTProxy_greyware_tool_keyword
+rule rule_LTProxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'LTProxy' taken from the ThreatHunting-Keywords github project" 
@@ -18125,7 +18125,7 @@ rule LTProxy_greyware_tool_keyword
 }
 
 
-rule lyncsmash_greyware_tool_keyword
+rule rule_lyncsmash_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'lyncsmash' taken from the ThreatHunting-Keywords github project" 
@@ -18144,7 +18144,7 @@ rule lyncsmash_greyware_tool_keyword
 }
 
 
-rule macchanger_greyware_tool_keyword
+rule rule_macchanger_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'macchanger' taken from the ThreatHunting-Keywords github project" 
@@ -18163,7 +18163,7 @@ rule macchanger_greyware_tool_keyword
 }
 
 
-rule maildrop_greyware_tool_keyword
+rule rule_maildrop_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'maildrop' taken from the ThreatHunting-Keywords github project" 
@@ -18182,7 +18182,7 @@ rule maildrop_greyware_tool_keyword
 }
 
 
-rule Malus_VPN_greyware_tool_keyword
+rule rule_Malus_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Malus VPN' taken from the ThreatHunting-Keywords github project" 
@@ -18201,7 +18201,7 @@ rule Malus_VPN_greyware_tool_keyword
 }
 
 
-rule mega_co_nz_greyware_tool_keyword
+rule rule_mega_co_nz_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'mega.co.nz' taken from the ThreatHunting-Keywords github project" 
@@ -18220,7 +18220,7 @@ rule mega_co_nz_greyware_tool_keyword
 }
 
 
-rule MEGAcmd_greyware_tool_keyword
+rule rule_MEGAcmd_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'MEGAcmd' taken from the ThreatHunting-Keywords github project" 
@@ -18238,7 +18238,7 @@ rule MEGAcmd_greyware_tool_keyword
         $string2_MEGAcmd_greyware_tool_keyword = /\$\(mega\-whoami\)/ nocase ascii wide
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
-        $string3_MEGAcmd_greyware_tool_keyword = /\$MEGACMDSHELL_MEGAcmd_greyware_tool_keyword/ nocase ascii wide
+        $string3_MEGAcmd_greyware_tool_keyword = /\$MEGACMDSHELL/ nocase ascii wide
         // Description: Command Line Interactive and Scriptable Application to access MEGA (hosting service abused by attackers)
         // Reference: https://github.com/meganz/MEGAcmd
         $string4_MEGAcmd_greyware_tool_keyword = /\%LOCALAPPDATA\%\\MEGAcmd/ nocase ascii wide
@@ -19154,7 +19154,7 @@ rule MEGAcmd_greyware_tool_keyword
 }
 
 
-rule MEGAsync_greyware_tool_keyword
+rule rule_MEGAsync_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'MEGAsync' taken from the ThreatHunting-Keywords github project" 
@@ -19344,7 +19344,7 @@ rule MEGAsync_greyware_tool_keyword
 }
 
 
-rule megatools_greyware_tool_keyword
+rule rule_megatools_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'megatools' taken from the ThreatHunting-Keywords github project" 
@@ -19381,7 +19381,7 @@ rule megatools_greyware_tool_keyword
 }
 
 
-rule meshcentral_greyware_tool_keyword
+rule rule_meshcentral_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'meshcentral' taken from the ThreatHunting-Keywords github project" 
@@ -19883,7 +19883,7 @@ rule meshcentral_greyware_tool_keyword
 }
 
 
-rule Microsoft_Recall_greyware_tool_keyword
+rule rule_Microsoft_Recall_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Microsoft Recall' taken from the ThreatHunting-Keywords github project" 
@@ -19902,7 +19902,7 @@ rule Microsoft_Recall_greyware_tool_keyword
 }
 
 
-rule mkdir_greyware_tool_keyword
+rule rule_mkdir_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'mkdir' taken from the ThreatHunting-Keywords github project" 
@@ -19921,7 +19921,7 @@ rule mkdir_greyware_tool_keyword
 }
 
 
-rule modproble_greyware_tool_keyword
+rule rule_modproble_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'modproble' taken from the ThreatHunting-Keywords github project" 
@@ -19946,7 +19946,7 @@ rule modproble_greyware_tool_keyword
 }
 
 
-rule movefile64_exe_greyware_tool_keyword
+rule rule_movefile64_exe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'movefile64.exe' taken from the ThreatHunting-Keywords github project" 
@@ -19965,7 +19965,7 @@ rule movefile64_exe_greyware_tool_keyword
 }
 
 
-rule MozillaCookiesView_greyware_tool_keyword
+rule rule_MozillaCookiesView_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'MozillaCookiesView' taken from the ThreatHunting-Keywords github project" 
@@ -20005,7 +20005,7 @@ rule MozillaCookiesView_greyware_tool_keyword
 }
 
 
-rule MpCmdRun_greyware_tool_keyword
+rule rule_MpCmdRun_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'MpCmdRun' taken from the ThreatHunting-Keywords github project" 
@@ -20030,7 +20030,7 @@ rule MpCmdRun_greyware_tool_keyword
 }
 
 
-rule mshta_greyware_tool_keyword
+rule rule_mshta_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'mshta' taken from the ThreatHunting-Keywords github project" 
@@ -20088,7 +20088,7 @@ rule mshta_greyware_tool_keyword
 }
 
 
-rule Muscle_VPN_greyware_tool_keyword
+rule rule_Muscle_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Muscle VPN' taken from the ThreatHunting-Keywords github project" 
@@ -20107,7 +20107,7 @@ rule Muscle_VPN_greyware_tool_keyword
 }
 
 
-rule My_Browser_Vpn_greyware_tool_keyword
+rule rule_My_Browser_Vpn_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'My Browser Vpn' taken from the ThreatHunting-Keywords github project" 
@@ -20126,7 +20126,7 @@ rule My_Browser_Vpn_greyware_tool_keyword
 }
 
 
-rule my_ip_io_greyware_tool_keyword
+rule rule_my_ip_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'my-ip.io' taken from the ThreatHunting-Keywords github project" 
@@ -20145,7 +20145,7 @@ rule my_ip_io_greyware_tool_keyword
 }
 
 
-rule myexternalip_com_greyware_tool_keyword
+rule rule_myexternalip_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'myexternalip.com' taken from the ThreatHunting-Keywords github project" 
@@ -20164,7 +20164,7 @@ rule myexternalip_com_greyware_tool_keyword
 }
 
 
-rule myftp_biz_greyware_tool_keyword
+rule rule_myftp_biz_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'myftp.biz' taken from the ThreatHunting-Keywords github project" 
@@ -20183,7 +20183,7 @@ rule myftp_biz_greyware_tool_keyword
 }
 
 
-rule myftp_org_greyware_tool_keyword
+rule rule_myftp_org_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'myftp.org' taken from the ThreatHunting-Keywords github project" 
@@ -20202,7 +20202,7 @@ rule myftp_org_greyware_tool_keyword
 }
 
 
-rule nbtscan_greyware_tool_keyword
+rule rule_nbtscan_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nbtscan' taken from the ThreatHunting-Keywords github project" 
@@ -20227,7 +20227,7 @@ rule nbtscan_greyware_tool_keyword
 }
 
 
-rule nbtstat_greyware_tool_keyword
+rule rule_nbtstat_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nbtstat' taken from the ThreatHunting-Keywords github project" 
@@ -20246,7 +20246,7 @@ rule nbtstat_greyware_tool_keyword
 }
 
 
-rule nc_greyware_tool_keyword
+rule rule_nc_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nc' taken from the ThreatHunting-Keywords github project" 
@@ -20286,7 +20286,7 @@ rule nc_greyware_tool_keyword
 }
 
 
-rule ncat_greyware_tool_keyword
+rule rule_ncat_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ncat' taken from the ThreatHunting-Keywords github project" 
@@ -20308,7 +20308,7 @@ rule ncat_greyware_tool_keyword
 }
 
 
-rule Neo_reGeorg_greyware_tool_keyword
+rule rule_Neo_reGeorg_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Neo-reGeorg' taken from the ThreatHunting-Keywords github project" 
@@ -20540,7 +20540,7 @@ rule Neo_reGeorg_greyware_tool_keyword
 }
 
 
-rule Neo4j_greyware_tool_keyword
+rule rule_Neo4j_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Neo4j' taken from the ThreatHunting-Keywords github project" 
@@ -20568,7 +20568,7 @@ rule Neo4j_greyware_tool_keyword
 }
 
 
-rule net_greyware_tool_keyword
+rule rule_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'net' taken from the ThreatHunting-Keywords github project" 
@@ -20907,79 +20907,79 @@ rule net_greyware_tool_keyword
         $string109_net_greyware_tool_keyword = /net\sstop\sMSExchangeSA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string110_net_greyware_tool_keyword = /net\sstop\smsftesql\$PROD_net_greyware_tool_keyword/ nocase ascii wide
+        $string110_net_greyware_tool_keyword = /net\sstop\smsftesql\$PROD/ nocase ascii wide
         // Description: observed used by lslsass sample (dump active logon session password hashes from the lsass process (old tool for vista and older))
         // Reference: https://www.virustotal.com/gui/file/b24ab1f8cb68547932dd8a5c81e9b2133763a7ddf48aa431456530c1340b939e/details
         $string111_net_greyware_tool_keyword = /net\sstop\smsiserver/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string112_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SQL_2008_net_greyware_tool_keyword/ nocase ascii wide
+        $string112_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string113_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SYSTEM_BGC_net_greyware_tool_keyword/ nocase ascii wide
+        $string113_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string114_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPS_net_greyware_tool_keyword/ nocase ascii wide
+        $string114_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string115_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPSAMA_net_greyware_tool_keyword/ nocase ascii wide
+        $string115_net_greyware_tool_keyword = /net\sstop\sMSOLAP\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string116_net_greyware_tool_keyword = /net\sstop\sMSSQL\$BKUPEXEC_net_greyware_tool_keyword/ nocase ascii wide
+        $string116_net_greyware_tool_keyword = /net\sstop\sMSSQL\$BKUPEXEC/ nocase ascii wide
         // Description: VoidCrypt ransomware
         // Reference: https://github.com/rivitna/Malware
-        $string117_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1_net_greyware_tool_keyword/ nocase ascii wide
+        $string117_net_greyware_tool_keyword = /net\sstop\sMSSQL\$CONTOSO1/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string118_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ECWDB2_net_greyware_tool_keyword/ nocase ascii wide
+        $string118_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ECWDB2/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string119_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ISARS_net_greyware_tool_keyword/ nocase ascii wide
+        $string119_net_greyware_tool_keyword = /net\sstop\sMSSQL\$ISARS/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string120_net_greyware_tool_keyword = /net\sstop\sMSSQL\$MSFW_net_greyware_tool_keyword/ nocase ascii wide
+        $string120_net_greyware_tool_keyword = /net\sstop\sMSSQL\$MSFW/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string121_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTICEMGT_net_greyware_tool_keyword/ nocase ascii wide
+        $string121_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTICEMGT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string122_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTTICEBGC_net_greyware_tool_keyword/ nocase ascii wide
+        $string122_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string123_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROD_net_greyware_tool_keyword/ nocase ascii wide
+        $string123_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string124_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROFXENGAGEMENT_net_greyware_tool_keyword/ nocase ascii wide
+        $string124_net_greyware_tool_keyword = /net\sstop\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string125_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SBSMONITORING_net_greyware_tool_keyword/ nocase ascii wide
+        $string125_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SBSMONITORING/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string126_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SHAREPOINT_net_greyware_tool_keyword/ nocase ascii wide
+        $string126_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SHAREPOINT/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string127_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SOPHOS_net_greyware_tool_keyword/ nocase ascii wide
+        $string127_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SOPHOS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string128_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQL_2008_net_greyware_tool_keyword/ nocase ascii wide
+        $string128_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string129_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQLEXPRESS_net_greyware_tool_keyword/ nocase ascii wide
+        $string129_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SQLEXPRESS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string130_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SYSTEM_BGC_net_greyware_tool_keyword/ nocase ascii wide
+        $string130_net_greyware_tool_keyword = /net\sstop\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string131_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPS_net_greyware_tool_keyword/ nocase ascii wide
+        $string131_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string132_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPSAMA_net_greyware_tool_keyword/ nocase ascii wide
+        $string132_net_greyware_tool_keyword = /net\sstop\sMSSQL\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string133_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        $string133_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string134_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        $string134_net_greyware_tool_keyword = /net\sstop\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string135_net_greyware_tool_keyword = /net\sstop\sMSSQLServerADHelper100/ nocase ascii wide
@@ -21018,7 +21018,7 @@ rule net_greyware_tool_keyword
         $string146_net_greyware_tool_keyword = /net\sstop\sQuickBooksDB5/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string147_net_greyware_tool_keyword = /net\sstop\sReportServer\$ISARS_net_greyware_tool_keyword/ nocase ascii wide
+        $string147_net_greyware_tool_keyword = /net\sstop\sReportServer\$ISARS/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string148_net_greyware_tool_keyword = /net\sstop\ssacsvr/ nocase ascii wide
@@ -21087,19 +21087,19 @@ rule net_greyware_tool_keyword
         $string169_net_greyware_tool_keyword = /net\sstop\ssqbcoreservice/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string170_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$ISARS_net_greyware_tool_keyword/ nocase ascii wide
+        $string170_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$ISARS/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
-        $string171_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$MSFW_net_greyware_tool_keyword/ nocase ascii wide
+        $string171_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$MSFW/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string172_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$SOPH_net_greyware_tool_keyword/ nocase ascii wide
+        $string172_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$SOPH/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string173_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        $string173_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string174_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL_net_greyware_tool_keyword/ nocase ascii wide
+        $string174_net_greyware_tool_keyword = /net\sstop\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stop critical services
         // Reference: https://thedfirreport.com/2024/08/12/threat-actors-toolkit-leveraging-sliver-poshc2-batch-scripts/#c01
         $string175_net_greyware_tool_keyword = /net\sstop\sSQLBrowser/ nocase ascii wide
@@ -21370,7 +21370,7 @@ rule net_greyware_tool_keyword
 }
 
 
-rule netcat_greyware_tool_keyword
+rule rule_netcat_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'netcat' taken from the ThreatHunting-Keywords github project" 
@@ -21410,7 +21410,7 @@ rule netcat_greyware_tool_keyword
 }
 
 
-rule netscan_greyware_tool_keyword
+rule rule_netscan_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'netscan' taken from the ThreatHunting-Keywords github project" 
@@ -21444,7 +21444,7 @@ rule netscan_greyware_tool_keyword
 }
 
 
-rule netsh_greyware_tool_keyword
+rule rule_netsh_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'netsh' taken from the ThreatHunting-Keywords github project" 
@@ -21520,7 +21520,7 @@ rule netsh_greyware_tool_keyword
 }
 
 
-rule NetshRun_greyware_tool_keyword
+rule rule_NetshRun_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'NetshRun' taken from the ThreatHunting-Keywords github project" 
@@ -21548,7 +21548,7 @@ rule NetshRun_greyware_tool_keyword
 }
 
 
-rule netstat_greyware_tool_keyword
+rule rule_netstat_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'netstat' taken from the ThreatHunting-Keywords github project" 
@@ -21576,7 +21576,7 @@ rule netstat_greyware_tool_keyword
 }
 
 
-rule NetSupport_greyware_tool_keyword
+rule rule_NetSupport_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'NetSupport' taken from the ThreatHunting-Keywords github project" 
@@ -21820,7 +21820,7 @@ rule NetSupport_greyware_tool_keyword
 }
 
 
-rule ngrok_greyware_tool_keyword
+rule rule_ngrok_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ngrok' taken from the ThreatHunting-Keywords github project" 
@@ -21926,7 +21926,7 @@ rule ngrok_greyware_tool_keyword
 }
 
 
-rule NimScan_greyware_tool_keyword
+rule rule_NimScan_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'NimScan' taken from the ThreatHunting-Keywords github project" 
@@ -22008,7 +22008,7 @@ rule NimScan_greyware_tool_keyword
 }
 
 
-rule nircmd_greyware_tool_keyword
+rule rule_nircmd_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nircmd' taken from the ThreatHunting-Keywords github project" 
@@ -22060,7 +22060,7 @@ rule nircmd_greyware_tool_keyword
 }
 
 
-rule nirsoft_tools_greyware_tool_keyword
+rule rule_nirsoft_tools_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nirsoft tools' taken from the ThreatHunting-Keywords github project" 
@@ -22091,7 +22091,7 @@ rule nirsoft_tools_greyware_tool_keyword
 }
 
 
-rule nltest_greyware_tool_keyword
+rule rule_nltest_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nltest' taken from the ThreatHunting-Keywords github project" 
@@ -22140,7 +22140,7 @@ rule nltest_greyware_tool_keyword
 }
 
 
-rule nmap_greyware_tool_keyword
+rule rule_nmap_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'nmap' taken from the ThreatHunting-Keywords github project" 
@@ -22270,7 +22270,7 @@ rule nmap_greyware_tool_keyword
 }
 
 
-rule NordVPN_greyware_tool_keyword
+rule rule_NordVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'NordVPN' taken from the ThreatHunting-Keywords github project" 
@@ -22292,7 +22292,7 @@ rule NordVPN_greyware_tool_keyword
 }
 
 
-rule Nsight_RMM_greyware_tool_keyword
+rule rule_Nsight_RMM_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Nsight RMM' taken from the ThreatHunting-Keywords github project" 
@@ -22338,7 +22338,7 @@ rule Nsight_RMM_greyware_tool_keyword
 }
 
 
-rule ntdsutil_greyware_tool_keyword
+rule rule_ntdsutil_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ntdsutil' taken from the ThreatHunting-Keywords github project" 
@@ -22393,7 +22393,7 @@ rule ntdsutil_greyware_tool_keyword
 }
 
 
-rule Nucleus_VPN_greyware_tool_keyword
+rule rule_Nucleus_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Nucleus VPN' taken from the ThreatHunting-Keywords github project" 
@@ -22412,7 +22412,7 @@ rule Nucleus_VPN_greyware_tool_keyword
 }
 
 
-rule openssh_portable_greyware_tool_keyword
+rule rule_openssh_portable_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'openssh-portable' taken from the ThreatHunting-Keywords github project" 
@@ -22449,7 +22449,7 @@ rule openssh_portable_greyware_tool_keyword
 }
 
 
-rule Openssh_greyware_tool_keyword
+rule rule_Openssh_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Openssh' taken from the ThreatHunting-Keywords github project" 
@@ -22471,7 +22471,7 @@ rule Openssh_greyware_tool_keyword
 }
 
 
-rule OPENVPN_greyware_tool_keyword
+rule rule_OPENVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'OPENVPN' taken from the ThreatHunting-Keywords github project" 
@@ -22517,7 +22517,7 @@ rule OPENVPN_greyware_tool_keyword
 }
 
 
-rule oset_greyware_tool_keyword
+rule rule_oset_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'oset' taken from the ThreatHunting-Keywords github project" 
@@ -22659,7 +22659,7 @@ rule oset_greyware_tool_keyword
 }
 
 
-rule OshiUpload_greyware_tool_keyword
+rule rule_OshiUpload_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'OshiUpload' taken from the ThreatHunting-Keywords github project" 
@@ -22726,7 +22726,7 @@ rule OshiUpload_greyware_tool_keyword
 }
 
 
-rule PAExec_greyware_tool_keyword
+rule rule_PAExec_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PAExec' taken from the ThreatHunting-Keywords github project" 
@@ -22847,7 +22847,7 @@ rule PAExec_greyware_tool_keyword
 }
 
 
-rule passwd_greyware_tool_keyword
+rule rule_passwd_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'passwd' taken from the ThreatHunting-Keywords github project" 
@@ -22866,7 +22866,7 @@ rule passwd_greyware_tool_keyword
 }
 
 
-rule paste_ee_greyware_tool_keyword
+rule rule_paste_ee_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'paste.ee' taken from the ThreatHunting-Keywords github project" 
@@ -22888,7 +22888,7 @@ rule paste_ee_greyware_tool_keyword
 }
 
 
-rule pastebin_greyware_tool_keyword
+rule rule_pastebin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pastebin' taken from the ThreatHunting-Keywords github project" 
@@ -22913,7 +22913,7 @@ rule pastebin_greyware_tool_keyword
 }
 
 
-rule PCHunter_greyware_tool_keyword
+rule rule_PCHunter_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PCHunter' taken from the ThreatHunting-Keywords github project" 
@@ -22983,7 +22983,7 @@ rule PCHunter_greyware_tool_keyword
 }
 
 
-rule pcunlocker_greyware_tool_keyword
+rule rule_pcunlocker_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pcunlocker' taken from the ThreatHunting-Keywords github project" 
@@ -23017,7 +23017,7 @@ rule pcunlocker_greyware_tool_keyword
 }
 
 
-rule pdbedit_greyware_tool_keyword
+rule rule_pdbedit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pdbedit' taken from the ThreatHunting-Keywords github project" 
@@ -23039,7 +23039,7 @@ rule pdbedit_greyware_tool_keyword
 }
 
 
-rule pgrok_greyware_tool_keyword
+rule rule_pgrok_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pgrok' taken from the ThreatHunting-Keywords github project" 
@@ -23424,7 +23424,7 @@ rule pgrok_greyware_tool_keyword
 }
 
 
-rule phoenix_miner_greyware_tool_keyword
+rule rule_phoenix_miner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'phoenix miner' taken from the ThreatHunting-Keywords github project" 
@@ -23446,7 +23446,7 @@ rule phoenix_miner_greyware_tool_keyword
 }
 
 
-rule php_greyware_tool_keyword
+rule rule_php_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'php' taken from the ThreatHunting-Keywords github project" 
@@ -23458,14 +23458,14 @@ rule php_greyware_tool_keyword
     strings:
         // Description: php reverse shell
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Linux.md
-        $string1_php_greyware_tool_keyword = /php\s\-r\s.{0,1000}\$sock_php_greyware_tool_keyword\=fsockopen\(.{0,1000}exec\(.{0,1000}\/bin\/sh\s\-i\s\<\&3\s\>\&3\s2\>\&3/ nocase ascii wide
+        $string1_php_greyware_tool_keyword = /php\s\-r\s.{0,1000}\$sock\=fsockopen\(.{0,1000}exec\(.{0,1000}\/bin\/sh\s\-i\s\<\&3\s\>\&3\s2\>\&3/ nocase ascii wide
 
     condition:
         any of them
 }
 
 
-rule pingcastle_greyware_tool_keyword
+rule rule_pingcastle_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pingcastle' taken from the ThreatHunting-Keywords github project" 
@@ -23850,7 +23850,7 @@ rule pingcastle_greyware_tool_keyword
 }
 
 
-rule pinggy_greyware_tool_keyword
+rule rule_pinggy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pinggy' taken from the ThreatHunting-Keywords github project" 
@@ -23881,7 +23881,7 @@ rule pinggy_greyware_tool_keyword
 }
 
 
-rule pktmon_greyware_tool_keyword
+rule rule_pktmon_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pktmon' taken from the ThreatHunting-Keywords github project" 
@@ -23900,7 +23900,7 @@ rule pktmon_greyware_tool_keyword
 }
 
 
-rule plink_greyware_tool_keyword
+rule rule_plink_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'plink' taken from the ThreatHunting-Keywords github project" 
@@ -23919,7 +23919,7 @@ rule plink_greyware_tool_keyword
 }
 
 
-rule PortQry_greyware_tool_keyword
+rule rule_PortQry_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PortQry' taken from the ThreatHunting-Keywords github project" 
@@ -23971,7 +23971,7 @@ rule PortQry_greyware_tool_keyword
 }
 
 
-rule Portr_greyware_tool_keyword
+rule rule_Portr_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Portr' taken from the ThreatHunting-Keywords github project" 
@@ -24242,7 +24242,7 @@ rule Portr_greyware_tool_keyword
 }
 
 
-rule powershell_greyware_tool_keyword
+rule rule_powershell_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'powershell' taken from the ThreatHunting-Keywords github project" 
@@ -24284,7 +24284,7 @@ rule powershell_greyware_tool_keyword
         $string10_powershell_greyware_tool_keyword = /Add\-DnsClientDohServerAddress\s.{0,1000}\-ServerAddress\s/ nocase ascii wide
         // Description: add exclusions for defender
         // Reference: https://www.virustotal.com/gui/file/00820a1f0972678cfe7885bc989ab3e5602b0febc96baf9bf3741d56aa374f03/behavior
-        $string11_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\s\@\(\$env_powershell_greyware_tool_keyword\:UserProfile\,\s\$env_powershell_greyware_tool_keyword\:ProgramData\)\s\-ExclusionExtension\s\'\.exe\'\s\-Force/ nocase ascii wide
+        $string11_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionPath\s\@\(\$env\:UserProfile\,\s\$env\:ProgramData\)\s\-ExclusionExtension\s\'\.exe\'\s\-Force/ nocase ascii wide
         // Description: Exclude powershell from defender detections
         // Reference: N/A
         $string12_powershell_greyware_tool_keyword = /Add\-MpPreference\s\-ExclusionProcess\s.{0,1000}\\Windows\\System32\\WindowsPowerShell\\v1\.0\\powershell\.exe/ nocase ascii wide
@@ -24344,7 +24344,7 @@ rule powershell_greyware_tool_keyword
         $string30_powershell_greyware_tool_keyword = /gci\s\-h\sC\:\\pagefile\.sys/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string31_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string31_powershell_greyware_tool_keyword = /Get\-ADComputer\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AD Module Search for a particular string in attributes (admin)
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string32_powershell_greyware_tool_keyword = /Get\-ADGroup\s\-Filter\s.{0,1000}Name\s\-like\s.{0,1000}admin/ nocase ascii wide
@@ -24359,10 +24359,10 @@ rule powershell_greyware_tool_keyword
         $string35_powershell_greyware_tool_keyword = /Get\-ADObject\s\-SearchBase\s.{0,1000}CN\=Shadow\sPrincipal\sConfiguration.{0,1000}CN\=Services.{0,1000}\s\(Get\-ADRootDSE\)\.configurationNamingContext\)\s\|\sselect\s.{0,1000}msDS\-ShadowPrincipalSid/ nocase ascii wide
         // Description: AD module Enumerate users
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string36_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True_powershell_greyware_tool_keyword\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
+        $string36_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{DoesNotRequirePreAuth\s\-eq\s\$True\}\s\-Properties\sDoesNotRequirePreAuth/ nocase ascii wide
         // Description: AD Module Enumerate computers with Unconstrained Delegation
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
-        $string37_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True_powershell_greyware_tool_keyword\}/ nocase ascii wide
+        $string37_powershell_greyware_tool_keyword = /Get\-ADUser\s\-Filter\s\{TrustedForDelegation\s\-eq\s\$True\}/ nocase ascii wide
         // Description: AppLocker Get AppLocker policy
         // Reference: https://hideandsec.sh/books/cheatsheets-82c/page/active-directory
         $string38_powershell_greyware_tool_keyword = /Get\-AppLockerPolicy\s\-Effective\s/ nocase ascii wide
@@ -24443,10 +24443,10 @@ rule powershell_greyware_tool_keyword
         $string63_powershell_greyware_tool_keyword = /New\-NetFirewallRule\s.{0,1000}\s\-Enabled\sTrue\s\-Direction\sInbound\s\-Protocol\sTCP\s\-Action\sAllow\s\-LocalPort\s22/ nocase ascii wide
         // Description: Powershell reverse shell
         // Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-        $string64_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream_powershell_greyware_tool_keyword\s\=\s\$client_powershell_greyware_tool_keyword\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes_powershell_greyware_tool_keyword\s\=\s0\.\.65535/ nocase ascii wide
+        $string64_powershell_greyware_tool_keyword = /New\-Object\sSystem\.Net\.Sockets\.TCPClient\(.{0,1000}\$stream\s\=\s\$client\.GetStream\(\).{0,1000}\[byte\[\]\]\$bytes\s\=\s0\.\.65535/ nocase ascii wide
         // Description: Execution Policy Bypass evasion
         // Reference: N/A
-        $string65_powershell_greyware_tool_keyword = /powershell\s\?encodedcommand\s\$env_powershell_greyware_tool_keyword\:PSExecutionPolicyPreference\=\"bypass\"/ nocase ascii wide
+        $string65_powershell_greyware_tool_keyword = /powershell\s\?encodedcommand\s\$env\:PSExecutionPolicyPreference\=\"bypass\"/ nocase ascii wide
         // Description: NetExec (a.k.a nxc) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks.
         // Reference: https://github.com/Pennyw0rth/NetExec
         $string66_powershell_greyware_tool_keyword = /powershell\s\-c\s.{0,1000}\\windows\\system32\\inetsrv\\appcmd\.exe\slist\sapppool\s\/\@t\:/ nocase ascii wide
@@ -24527,13 +24527,13 @@ rule powershell_greyware_tool_keyword
         $string91_powershell_greyware_tool_keyword = /Set\-Clipboard\s\-Value\s\'\'/ nocase ascii wide
         // Description: Disable IPS
         // Reference: N/A
-        $string92_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string92_powershell_greyware_tool_keyword = /Set\-MPPreference\s\-DisableIntrusionPreventionSystem\s\$true/ nocase ascii wide
         // Description: Disable scanning all downloaded files and attachments
         // Reference: N/A
-        $string93_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string93_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableIOAVProtection\s\$true/ nocase ascii wide
         // Description: Defense evasion technique In order to avoid detection at any point of the kill chain. attackers use several ways to disable anti-virus. disable Microsoft firewall and clear logs.
         // Reference: N/A
-        $string94_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string94_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableRealtimeMonitoring\s\$true/ nocase ascii wide
         // Description: Disable AMSI (set to 0 to enable)
         // Reference: N/A
         $string95_powershell_greyware_tool_keyword = /Set\-MpPreference\s\-DisableScriptScanning\s1\s/ nocase ascii wide
@@ -24701,67 +24701,67 @@ rule powershell_greyware_tool_keyword
         $string149_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMsDtsServer110/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string150_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string150_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\smsftesql\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string151_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string151_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string152_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string152_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string153_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string153_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string154_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string154_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSOLAP\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string155_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string155_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$BKUPEXEC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string156_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string156_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$ECWDB2/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string157_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string157_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTICEMGT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string158_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string158_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PRACTTICEBGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string159_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string159_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROD/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string160_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string160_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$PROFXENGAGEMENT/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string161_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string161_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SBSMONITORING/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string162_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string162_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SHAREPOINT/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string163_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string163_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SOPHOS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string164_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string164_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQL_2008/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string165_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string165_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SQLEXPRESS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string166_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string166_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$SYSTEM_BGC/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string167_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string167_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPS/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string168_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string168_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$TPSAMA/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string169_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string169_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string170_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string170_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sMSSQL\$VEEAMSQL/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string171_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssacsvr/ nocase ascii wide
@@ -24800,13 +24800,13 @@ rule powershell_greyware_tool_keyword
         $string182_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\ssqbcoreservice/ nocase ascii wide
         // Description: stopping AV services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string183_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string183_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$SOPH/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string184_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string184_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
-        $string185_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL_powershell_greyware_tool_keyword/ nocase ascii wide
+        $string185_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sSQLAgent\$VEEAMSQL/ nocase ascii wide
         // Description: stopping backup services
         // Reference: https://github.com/TheParmak/conti-leaks-englished/blob/45d49307f347aff10e0f088af25142f8929b4c4f/anonfile_dumps/31.txt#L236
         $string186_powershell_greyware_tool_keyword = /Stop\-Process\s\-Name\sstc_endpt_svc/ nocase ascii wide
@@ -24906,7 +24906,7 @@ rule powershell_greyware_tool_keyword
 }
 
 
-rule PowerSploit_greyware_tool_keyword
+rule rule_PowerSploit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PowerSploit' taken from the ThreatHunting-Keywords github project" 
@@ -24952,7 +24952,7 @@ rule PowerSploit_greyware_tool_keyword
 }
 
 
-rule PP_VPN_greyware_tool_keyword
+rule rule_PP_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PP VPN' taken from the ThreatHunting-Keywords github project" 
@@ -24971,7 +24971,7 @@ rule PP_VPN_greyware_tool_keyword
 }
 
 
-rule premiumize_me_greyware_tool_keyword
+rule rule_premiumize_me_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'premiumize.me' taken from the ThreatHunting-Keywords github project" 
@@ -24990,7 +24990,7 @@ rule premiumize_me_greyware_tool_keyword
 }
 
 
-rule Prime_VPN_greyware_tool_keyword
+rule rule_Prime_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Prime VPN' taken from the ThreatHunting-Keywords github project" 
@@ -25009,7 +25009,7 @@ rule Prime_VPN_greyware_tool_keyword
 }
 
 
-rule Private_Internet_Access_greyware_tool_keyword
+rule rule_Private_Internet_Access_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Private Internet Access' taken from the ThreatHunting-Keywords github project" 
@@ -25028,7 +25028,7 @@ rule Private_Internet_Access_greyware_tool_keyword
 }
 
 
-rule privnote_com_greyware_tool_keyword
+rule rule_privnote_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'privnote.com' taken from the ThreatHunting-Keywords github project" 
@@ -25047,7 +25047,7 @@ rule privnote_com_greyware_tool_keyword
 }
 
 
-rule Procdump_greyware_tool_keyword
+rule rule_Procdump_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Procdump' taken from the ThreatHunting-Keywords github project" 
@@ -25102,7 +25102,7 @@ rule Procdump_greyware_tool_keyword
 }
 
 
-rule processhacker_greyware_tool_keyword
+rule rule_processhacker_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'processhacker' taken from the ThreatHunting-Keywords github project" 
@@ -25142,7 +25142,7 @@ rule processhacker_greyware_tool_keyword
 }
 
 
-rule procmon_greyware_tool_keyword
+rule rule_procmon_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'procmon' taken from the ThreatHunting-Keywords github project" 
@@ -25164,7 +25164,7 @@ rule procmon_greyware_tool_keyword
 }
 
 
-rule produkey_greyware_tool_keyword
+rule rule_produkey_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'produkey' taken from the ThreatHunting-Keywords github project" 
@@ -25195,7 +25195,7 @@ rule produkey_greyware_tool_keyword
 }
 
 
-rule Pron_VPN_greyware_tool_keyword
+rule rule_Pron_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Pron VPN' taken from the ThreatHunting-Keywords github project" 
@@ -25214,7 +25214,7 @@ rule Pron_VPN_greyware_tool_keyword
 }
 
 
-rule ProxFlow_greyware_tool_keyword
+rule rule_ProxFlow_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ProxFlow' taken from the ThreatHunting-Keywords github project" 
@@ -25233,7 +25233,7 @@ rule ProxFlow_greyware_tool_keyword
 }
 
 
-rule Proxifier_greyware_tool_keyword
+rule rule_Proxifier_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Proxifier' taken from the ThreatHunting-Keywords github project" 
@@ -25321,7 +25321,7 @@ rule Proxifier_greyware_tool_keyword
 }
 
 
-rule Proxy_SwitchyOmega_greyware_tool_keyword
+rule rule_Proxy_SwitchyOmega_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Proxy SwitchyOmega' taken from the ThreatHunting-Keywords github project" 
@@ -25340,7 +25340,7 @@ rule Proxy_SwitchyOmega_greyware_tool_keyword
 }
 
 
-rule Proxy_SwitchySharp_greyware_tool_keyword
+rule rule_Proxy_SwitchySharp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Proxy SwitchySharp' taken from the ThreatHunting-Keywords github project" 
@@ -25359,7 +25359,7 @@ rule Proxy_SwitchySharp_greyware_tool_keyword
 }
 
 
-rule ProxyFlow_greyware_tool_keyword
+rule rule_ProxyFlow_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ProxyFlow' taken from the ThreatHunting-Keywords github project" 
@@ -25378,7 +25378,7 @@ rule ProxyFlow_greyware_tool_keyword
 }
 
 
-rule psexec_greyware_tool_keyword
+rule rule_psexec_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'psexec' taken from the ThreatHunting-Keywords github project" 
@@ -25427,7 +25427,7 @@ rule psexec_greyware_tool_keyword
 }
 
 
-rule pslist_greyware_tool_keyword
+rule rule_pslist_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pslist' taken from the ThreatHunting-Keywords github project" 
@@ -25461,7 +25461,7 @@ rule pslist_greyware_tool_keyword
 }
 
 
-rule psloggedon_greyware_tool_keyword
+rule rule_psloggedon_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'psloggedon' taken from the ThreatHunting-Keywords github project" 
@@ -25483,7 +25483,7 @@ rule psloggedon_greyware_tool_keyword
 }
 
 
-rule Pulseway_greyware_tool_keyword
+rule rule_Pulseway_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Pulseway' taken from the ThreatHunting-Keywords github project" 
@@ -25697,7 +25697,7 @@ rule Pulseway_greyware_tool_keyword
 }
 
 
-rule PureVPN_greyware_tool_keyword
+rule rule_PureVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PureVPN' taken from the ThreatHunting-Keywords github project" 
@@ -25716,7 +25716,7 @@ rule PureVPN_greyware_tool_keyword
 }
 
 
-rule Push_VPN_greyware_tool_keyword
+rule rule_Push_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Push VPN' taken from the ThreatHunting-Keywords github project" 
@@ -25735,7 +25735,7 @@ rule Push_VPN_greyware_tool_keyword
 }
 
 
-rule put_io_greyware_tool_keyword
+rule rule_put_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'put.io' taken from the ThreatHunting-Keywords github project" 
@@ -25763,7 +25763,7 @@ rule put_io_greyware_tool_keyword
 }
 
 
-rule putty_greyware_tool_keyword
+rule rule_putty_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'putty' taken from the ThreatHunting-Keywords github project" 
@@ -25782,7 +25782,7 @@ rule putty_greyware_tool_keyword
 }
 
 
-rule py2exe_greyware_tool_keyword
+rule rule_py2exe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'py2exe' taken from the ThreatHunting-Keywords github project" 
@@ -25840,7 +25840,7 @@ rule py2exe_greyware_tool_keyword
 }
 
 
-rule pyinstaller_greyware_tool_keyword
+rule rule_pyinstaller_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pyinstaller' taken from the ThreatHunting-Keywords github project" 
@@ -25880,7 +25880,7 @@ rule pyinstaller_greyware_tool_keyword
 }
 
 
-rule PyPagekite_greyware_tool_keyword
+rule rule_PyPagekite_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'PyPagekite' taken from the ThreatHunting-Keywords github project" 
@@ -26034,7 +26034,7 @@ rule PyPagekite_greyware_tool_keyword
 }
 
 
-rule pyshark_greyware_tool_keyword
+rule rule_pyshark_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'pyshark' taken from the ThreatHunting-Keywords github project" 
@@ -26074,7 +26074,7 @@ rule pyshark_greyware_tool_keyword
 }
 
 
-rule python_greyware_tool_keyword
+rule rule_python_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'python' taken from the ThreatHunting-Keywords github project" 
@@ -26102,7 +26102,7 @@ rule python_greyware_tool_keyword
 }
 
 
-rule qaz_im_greyware_tool_keyword
+rule rule_qaz_im_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'qaz.im' taken from the ThreatHunting-Keywords github project" 
@@ -26127,7 +26127,7 @@ rule qaz_im_greyware_tool_keyword
 }
 
 
-rule qaz_is_greyware_tool_keyword
+rule rule_qaz_is_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'qaz.is' taken from the ThreatHunting-Keywords github project" 
@@ -26152,7 +26152,7 @@ rule qaz_is_greyware_tool_keyword
 }
 
 
-rule qaz_su_greyware_tool_keyword
+rule rule_qaz_su_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'qaz.su' taken from the ThreatHunting-Keywords github project" 
@@ -26177,7 +26177,7 @@ rule qaz_su_greyware_tool_keyword
 }
 
 
-rule qu_ax_greyware_tool_keyword
+rule rule_qu_ax_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'qu.ax' taken from the ThreatHunting-Keywords github project" 
@@ -26196,7 +26196,7 @@ rule qu_ax_greyware_tool_keyword
 }
 
 
-rule Quasar_greyware_tool_keyword
+rule rule_Quasar_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Quasar' taken from the ThreatHunting-Keywords github project" 
@@ -26326,7 +26326,7 @@ rule Quasar_greyware_tool_keyword
 }
 
 
-rule QuickAssist_greyware_tool_keyword
+rule rule_QuickAssist_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'QuickAssist' taken from the ThreatHunting-Keywords github project" 
@@ -26432,7 +26432,7 @@ rule QuickAssist_greyware_tool_keyword
 }
 
 
-rule qwinsta_greyware_tool_keyword
+rule rule_qwinsta_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'qwinsta' taken from the ThreatHunting-Keywords github project" 
@@ -26457,7 +26457,7 @@ rule qwinsta_greyware_tool_keyword
 }
 
 
-rule Radmin_greyware_tool_keyword
+rule rule_Radmin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Radmin' taken from the ThreatHunting-Keywords github project" 
@@ -26593,7 +26593,7 @@ rule Radmin_greyware_tool_keyword
 }
 
 
-rule ransomware_notes_greyware_tool_keyword
+rule rule_ransomware_notes_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ransomware_notes' taken from the ThreatHunting-Keywords github project" 
@@ -26615,7 +26615,7 @@ rule ransomware_notes_greyware_tool_keyword
 }
 
 
-rule ratchatpt_greyware_tool_keyword
+rule rule_ratchatpt_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ratchatpt' taken from the ThreatHunting-Keywords github project" 
@@ -26634,7 +26634,7 @@ rule ratchatpt_greyware_tool_keyword
 }
 
 
-rule rathole_greyware_tool_keyword
+rule rule_rathole_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rathole' taken from the ThreatHunting-Keywords github project" 
@@ -27445,7 +27445,7 @@ rule rathole_greyware_tool_keyword
 }
 
 
-rule rclone_greyware_tool_keyword
+rule rule_rclone_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rclone' taken from the ThreatHunting-Keywords github project" 
@@ -31637,7 +31637,7 @@ rule rclone_greyware_tool_keyword
 }
 
 
-rule rderzh_VPN_Proxy_greyware_tool_keyword
+rule rule_rderzh_VPN_Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rderzh VPN Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -31656,7 +31656,7 @@ rule rderzh_VPN_Proxy_greyware_tool_keyword
 }
 
 
-rule rdp_greyware_tool_keyword
+rule rule_rdp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rdp' taken from the ThreatHunting-Keywords github project" 
@@ -31675,7 +31675,7 @@ rule rdp_greyware_tool_keyword
 }
 
 
-rule rdpwrap_greyware_tool_keyword
+rule rule_rdpwrap_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rdpwrap' taken from the ThreatHunting-Keywords github project" 
@@ -31802,7 +31802,7 @@ rule rdpwrap_greyware_tool_keyword
 }
 
 
-rule rdrleakdiag_greyware_tool_keyword
+rule rule_rdrleakdiag_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rdrleakdiag' taken from the ThreatHunting-Keywords github project" 
@@ -31821,7 +31821,7 @@ rule rdrleakdiag_greyware_tool_keyword
 }
 
 
-rule Red_Panda_VPN_greyware_tool_keyword
+rule rule_Red_Panda_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Red Panda VPN' taken from the ThreatHunting-Keywords github project" 
@@ -31840,7 +31840,7 @@ rule Red_Panda_VPN_greyware_tool_keyword
 }
 
 
-rule redpill_greyware_tool_keyword
+rule rule_redpill_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'redpill' taken from the ThreatHunting-Keywords github project" 
@@ -31925,7 +31925,7 @@ rule redpill_greyware_tool_keyword
 }
 
 
-rule reg_greyware_tool_keyword
+rule rule_reg_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'reg' taken from the ThreatHunting-Keywords github project" 
@@ -32391,7 +32391,7 @@ rule reg_greyware_tool_keyword
 }
 
 
-rule regsvr32_greyware_tool_keyword
+rule rule_regsvr32_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'regsvr32' taken from the ThreatHunting-Keywords github project" 
@@ -32416,7 +32416,7 @@ rule regsvr32_greyware_tool_keyword
 }
 
 
-rule RemCom_greyware_tool_keyword
+rule rule_RemCom_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'RemCom' taken from the ThreatHunting-Keywords github project" 
@@ -32516,7 +32516,7 @@ rule RemCom_greyware_tool_keyword
 }
 
 
-rule remoteit_greyware_tool_keyword
+rule rule_remoteit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'remoteit' taken from the ThreatHunting-Keywords github project" 
@@ -33516,7 +33516,7 @@ rule remoteit_greyware_tool_keyword
 }
 
 
-rule remotemoe_greyware_tool_keyword
+rule rule_remotemoe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'remotemoe' taken from the ThreatHunting-Keywords github project" 
@@ -33586,7 +33586,7 @@ rule remotemoe_greyware_tool_keyword
 }
 
 
-rule RemotePC_greyware_tool_keyword
+rule rule_RemotePC_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'RemotePC' taken from the ThreatHunting-Keywords github project" 
@@ -34289,7 +34289,7 @@ rule RemotePC_greyware_tool_keyword
 }
 
 
-rule RemoteUtilities_greyware_tool_keyword
+rule rule_RemoteUtilities_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'RemoteUtilities' taken from the ThreatHunting-Keywords github project" 
@@ -34542,7 +34542,7 @@ rule RemoteUtilities_greyware_tool_keyword
 }
 
 
-rule ren_greyware_tool_keyword
+rule rule_ren_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ren' taken from the ThreatHunting-Keywords github project" 
@@ -34570,7 +34570,7 @@ rule ren_greyware_tool_keyword
 }
 
 
-rule requestbin_net_greyware_tool_keyword
+rule rule_requestbin_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'requestbin.net' taken from the ThreatHunting-Keywords github project" 
@@ -34592,7 +34592,7 @@ rule requestbin_net_greyware_tool_keyword
 }
 
 
-rule requests_ntlm_greyware_tool_keyword
+rule rule_requests_ntlm_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'requests-ntlm' taken from the ThreatHunting-Keywords github project" 
@@ -34614,7 +34614,7 @@ rule requests_ntlm_greyware_tool_keyword
 }
 
 
-rule restic_greyware_tool_keyword
+rule rule_restic_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'restic' taken from the ThreatHunting-Keywords github project" 
@@ -36634,7 +36634,7 @@ rule restic_greyware_tool_keyword
 }
 
 
-rule reverse_tunnel_greyware_tool_keyword
+rule rule_reverse_tunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'reverse-tunnel' taken from the ThreatHunting-Keywords github project" 
@@ -36803,7 +36803,7 @@ rule reverse_tunnel_greyware_tool_keyword
 }
 
 
-rule rm_greyware_tool_keyword
+rule rule_rm_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rm' taken from the ThreatHunting-Keywords github project" 
@@ -36815,7 +36815,7 @@ rule rm_greyware_tool_keyword
     strings:
         // Description: deleting bash history
         // Reference: N/A
-        $string1_rm_greyware_tool_keyword = /rm\s\$HISTFILE_rm_greyware_tool_keyword/ nocase ascii wide
+        $string1_rm_greyware_tool_keyword = /rm\s\$HISTFILE/ nocase ascii wide
         // Description: deleting bash history
         // Reference: N/A
         $string2_rm_greyware_tool_keyword = /rm\s\.bash_history/ nocase ascii wide
@@ -36837,7 +36837,7 @@ rule rm_greyware_tool_keyword
 }
 
 
-rule rmdir__greyware_tool_keyword
+rule rule_rmdir__greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rmdir ' taken from the ThreatHunting-Keywords github project" 
@@ -36849,14 +36849,14 @@ rule rmdir__greyware_tool_keyword
     strings:
         // Description: removes files from the Recycle Bin - erasing forensic evidence
         // Reference: https://github.com/roadwy/DefenderYara/blob/9bbdb7f9fd3513ce30aa69cd1d88830e3cf596ca/Ransom/MSIL/Hakbit/Ransom_MSIL_Hakbit_PA_MTB.yar#L7
-        $string1_rmdir__greyware_tool_keyword = /rd\s\/s\s\/q\s\%systemdrive\%\\\$RECYCLE_rmdir__greyware_tool_keyword\.BIN/ nocase ascii wide
+        $string1_rmdir__greyware_tool_keyword = /rd\s\/s\s\/q\s\%systemdrive\%\\\$RECYCLE\.BIN/ nocase ascii wide
 
     condition:
         any of them
 }
 
 
-rule rmmod_greyware_tool_keyword
+rule rule_rmmod_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rmmod' taken from the ThreatHunting-Keywords github project" 
@@ -36881,7 +36881,7 @@ rule rmmod_greyware_tool_keyword
 }
 
 
-rule rpcclient_greyware_tool_keyword
+rule rule_rpcclient_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rpcclient' taken from the ThreatHunting-Keywords github project" 
@@ -36900,7 +36900,7 @@ rule rpcclient_greyware_tool_keyword
 }
 
 
-rule rsocks_greyware_tool_keyword
+rule rule_rsocks_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rsocks' taken from the ThreatHunting-Keywords github project" 
@@ -37000,7 +37000,7 @@ rule rsocks_greyware_tool_keyword
 }
 
 
-rule rsync_greyware_tool_keyword
+rule rule_rsync_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rsync' taken from the ThreatHunting-Keywords github project" 
@@ -37022,7 +37022,7 @@ rule rsync_greyware_tool_keyword
 }
 
 
-rule ruby_greyware_tool_keyword
+rule rule_ruby_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ruby' taken from the ThreatHunting-Keywords github project" 
@@ -37041,7 +37041,7 @@ rule ruby_greyware_tool_keyword
 }
 
 
-rule rundll32_greyware_tool_keyword
+rule rule_rundll32_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'rundll32' taken from the ThreatHunting-Keywords github project" 
@@ -37066,7 +37066,7 @@ rule rundll32_greyware_tool_keyword
 }
 
 
-rule Rust_Localtunnels_greyware_tool_keyword
+rule rule_Rust_Localtunnels_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Rust Localtunnels' taken from the ThreatHunting-Keywords github project" 
@@ -37142,7 +37142,7 @@ rule Rust_Localtunnels_greyware_tool_keyword
 }
 
 
-rule RustDesk_greyware_tool_keyword
+rule rule_RustDesk_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'RustDesk' taken from the ThreatHunting-Keywords github project" 
@@ -37290,7 +37290,7 @@ rule RustDesk_greyware_tool_keyword
 }
 
 
-rule RusVPN_greyware_tool_keyword
+rule rule_RusVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'RusVPN' taken from the ThreatHunting-Keywords github project" 
@@ -37309,7 +37309,7 @@ rule RusVPN_greyware_tool_keyword
 }
 
 
-rule SaferVPN_Proxy_greyware_tool_keyword
+rule rule_SaferVPN_Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SaferVPN Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -37328,7 +37328,7 @@ rule SaferVPN_Proxy_greyware_tool_keyword
 }
 
 
-rule samba_greyware_tool_keyword
+rule rule_samba_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'samba' taken from the ThreatHunting-Keywords github project" 
@@ -37347,7 +37347,7 @@ rule samba_greyware_tool_keyword
 }
 
 
-rule sc_greyware_tool_keyword
+rule rule_sc_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sc' taken from the ThreatHunting-Keywords github project" 
@@ -37657,7 +37657,7 @@ rule sc_greyware_tool_keyword
 }
 
 
-rule schtasks_greyware_tool_keyword
+rule rule_schtasks_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'schtasks' taken from the ThreatHunting-Keywords github project" 
@@ -37697,7 +37697,7 @@ rule schtasks_greyware_tool_keyword
 }
 
 
-rule scp_greyware_tool_keyword
+rule rule_scp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'scp' taken from the ThreatHunting-Keywords github project" 
@@ -37719,7 +37719,7 @@ rule scp_greyware_tool_keyword
 }
 
 
-rule ScreenConnect_greyware_tool_keyword
+rule rule_ScreenConnect_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ScreenConnect' taken from the ThreatHunting-Keywords github project" 
@@ -37888,7 +37888,7 @@ rule ScreenConnect_greyware_tool_keyword
 }
 
 
-rule sdelete_greyware_tool_keyword
+rule rule_sdelete_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sdelete' taken from the ThreatHunting-Keywords github project" 
@@ -37937,7 +37937,7 @@ rule sdelete_greyware_tool_keyword
 }
 
 
-rule sed_greyware_tool_keyword
+rule rule_sed_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sed' taken from the ThreatHunting-Keywords github project" 
@@ -37956,7 +37956,7 @@ rule sed_greyware_tool_keyword
 }
 
 
-rule send_exploit_in_greyware_tool_keyword
+rule rule_send_exploit_in_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'send.exploit.in' taken from the ThreatHunting-Keywords github project" 
@@ -37975,7 +37975,7 @@ rule send_exploit_in_greyware_tool_keyword
 }
 
 
-rule sendspace_com_greyware_tool_keyword
+rule rule_sendspace_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sendspace.com' taken from the ThreatHunting-Keywords github project" 
@@ -37997,7 +37997,7 @@ rule sendspace_com_greyware_tool_keyword
 }
 
 
-rule SentinelAgent_greyware_tool_keyword
+rule rule_SentinelAgent_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SentinelAgent' taken from the ThreatHunting-Keywords github project" 
@@ -38037,7 +38037,7 @@ rule SentinelAgent_greyware_tool_keyword
 }
 
 
-rule serveo_net_greyware_tool_keyword
+rule rule_serveo_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'serveo.net' taken from the ThreatHunting-Keywords github project" 
@@ -38059,7 +38059,7 @@ rule serveo_net_greyware_tool_keyword
 }
 
 
-rule set_greyware_tool_keyword
+rule rule_set_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'set' taken from the ThreatHunting-Keywords github project" 
@@ -38087,7 +38087,7 @@ rule set_greyware_tool_keyword
 }
 
 
-rule SetACL_greyware_tool_keyword
+rule rule_SetACL_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SetACL' taken from the ThreatHunting-Keywords github project" 
@@ -38121,7 +38121,7 @@ rule SetACL_greyware_tool_keyword
 }
 
 
-rule setspn_greyware_tool_keyword
+rule rule_setspn_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'setspn' taken from the ThreatHunting-Keywords github project" 
@@ -38143,7 +38143,7 @@ rule setspn_greyware_tool_keyword
 }
 
 
-rule SetupVPN_greyware_tool_keyword
+rule rule_SetupVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SetupVPN' taken from the ThreatHunting-Keywords github project" 
@@ -38162,7 +38162,7 @@ rule SetupVPN_greyware_tool_keyword
 }
 
 
-rule sftp_greyware_tool_keyword
+rule rule_sftp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sftp' taken from the ThreatHunting-Keywords github project" 
@@ -38187,7 +38187,7 @@ rule sftp_greyware_tool_keyword
 }
 
 
-rule shadowsocks_greyware_tool_keyword
+rule rule_shadowsocks_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'shadowsocks' taken from the ThreatHunting-Keywords github project" 
@@ -38533,7 +38533,7 @@ rule shadowsocks_greyware_tool_keyword
 }
 
 
-rule share_riseup_net_greyware_tool_keyword
+rule rule_share_riseup_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'share.riseup.net' taken from the ThreatHunting-Keywords github project" 
@@ -38555,7 +38555,7 @@ rule share_riseup_net_greyware_tool_keyword
 }
 
 
-rule shell_greyware_tool_keyword
+rule rule_shell_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'shell' taken from the ThreatHunting-Keywords github project" 
@@ -38585,10 +38585,10 @@ rule shell_greyware_tool_keyword
         $string6_shell_greyware_tool_keyword = /service\scbdaemon\sstop/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string7_shell_greyware_tool_keyword = /socket\(S.{0,1000}PF_INET.{0,1000}SOCK_STREAM.{0,1000}getprotobyname\(.{0,1000}tcp.{0,1000}\)\).{0,1000}if\(connect\(S.{0,1000}sockaddr_in\(\$p_shell_greyware_tool_keyword.{0,1000}inet_aton\(\$i_shell_greyware_tool_keyword\)\)\)\)/ nocase ascii wide
+        $string7_shell_greyware_tool_keyword = /socket\(S.{0,1000}PF_INET.{0,1000}SOCK_STREAM.{0,1000}getprotobyname\(.{0,1000}tcp.{0,1000}\)\).{0,1000}if\(connect\(S.{0,1000}sockaddr_in\(\$p.{0,1000}inet_aton\(\$i\)\)\)\)/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
-        $string8_shell_greyware_tool_keyword = /STDIN\-\>fdopen\(\$c_shell_greyware_tool_keyword.{0,1000}r\).{0,1000}\$\~\-\>fdopen\(\$c_shell_greyware_tool_keyword.{0,1000}w\).{0,1000}system\$__shell_greyware_tool_keyword\swhile\<\>/ nocase ascii wide
+        $string8_shell_greyware_tool_keyword = /STDIN\-\>fdopen\(\$c.{0,1000}r\).{0,1000}\$\~\-\>fdopen\(\$c.{0,1000}w\).{0,1000}system\$_\swhile\<\>/ nocase ascii wide
         // Description: Reverse Shell Command Line
         // Reference: https://github.com/SigmaHQ/sigma/blob/master/rules/linux/lnx_shell_susp_rev_shells.yml
         $string9_shell_greyware_tool_keyword = /uname\s\-a.{0,1000}\sw.{0,1000}\sid.{0,1000}\s\/bin\/bash\s\-i/ nocase ascii wide
@@ -38601,7 +38601,7 @@ rule shell_greyware_tool_keyword
 }
 
 
-rule shred_greyware_tool_keyword
+rule rule_shred_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'shred' taken from the ThreatHunting-Keywords github project" 
@@ -38613,7 +38613,7 @@ rule shred_greyware_tool_keyword
     strings:
         // Description: deleting bash history
         // Reference: N/A
-        $string1_shred_greyware_tool_keyword = /shred\s\$HISTFILE_shred_greyware_tool_keyword/ nocase ascii wide
+        $string1_shred_greyware_tool_keyword = /shred\s\$HISTFILE/ nocase ascii wide
         // Description: Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.
         // Reference: https://github.com/elastic/detection-rules/blob/main/rules/linux/defense_evasion_file_deletion_via_shred.toml
         $string2_shred_greyware_tool_keyword = /shred\s\-\-remove/ nocase ascii wide
@@ -38632,7 +38632,7 @@ rule shred_greyware_tool_keyword
 }
 
 
-rule Shredder_greyware_tool_keyword
+rule rule_Shredder_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Shredder' taken from the ThreatHunting-Keywords github project" 
@@ -38669,7 +38669,7 @@ rule Shredder_greyware_tool_keyword
 }
 
 
-rule SimpleHelp_greyware_tool_keyword
+rule rule_SimpleHelp_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SimpleHelp' taken from the ThreatHunting-Keywords github project" 
@@ -38997,7 +38997,7 @@ rule SimpleHelp_greyware_tool_keyword
 }
 
 
-rule simplehttpserver_greyware_tool_keyword
+rule rule_simplehttpserver_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'simplehttpserver' taken from the ThreatHunting-Keywords github project" 
@@ -39025,7 +39025,7 @@ rule simplehttpserver_greyware_tool_keyword
 }
 
 
-rule SirTunnel_greyware_tool_keyword
+rule rule_SirTunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SirTunnel' taken from the ThreatHunting-Keywords github project" 
@@ -39037,7 +39037,7 @@ rule SirTunnel_greyware_tool_keyword
     strings:
         // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
         // Reference: https://github.com/anderspitman/SirTunnel
-        $string1_SirTunnel_greyware_tool_keyword = /\s\$domain_SirTunnel_greyware_tool_keyword\ssirtunnel\s\$domain_SirTunnel_greyware_tool_keyword\s\$serverPort_SirTunnel_greyware_tool_keyword/ nocase ascii wide
+        $string1_SirTunnel_greyware_tool_keyword = /\s\$domain\ssirtunnel\s\$domain\s\$serverPort/ nocase ascii wide
         // Description: SirTunnel enables you to securely expose a webserver running on your computer to a public URL using HTTPS.
         // Reference: https://github.com/anderspitman/SirTunnel
         $string2_SirTunnel_greyware_tool_keyword = /\ssirtunnel\.py/ nocase ascii wide
@@ -39074,7 +39074,7 @@ rule SirTunnel_greyware_tool_keyword
 }
 
 
-rule sish_greyware_tool_keyword
+rule rule_sish_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sish' taken from the ThreatHunting-Keywords github project" 
@@ -39129,7 +39129,7 @@ rule sish_greyware_tool_keyword
 }
 
 
-rule skymen_info_greyware_tool_keyword
+rule rule_skymen_info_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'skymen.info' taken from the ThreatHunting-Keywords github project" 
@@ -39148,7 +39148,7 @@ rule skymen_info_greyware_tool_keyword
 }
 
 
-rule slack_greyware_tool_keyword
+rule rule_slack_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'slack' taken from the ThreatHunting-Keywords github project" 
@@ -39167,7 +39167,7 @@ rule slack_greyware_tool_keyword
 }
 
 
-rule smc_greyware_tool_keyword
+rule rule_smc_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'smc' taken from the ThreatHunting-Keywords github project" 
@@ -39207,7 +39207,7 @@ rule smc_greyware_tool_keyword
 }
 
 
-rule snmpcheck_greyware_tool_keyword
+rule rule_snmpcheck_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'snmpcheck' taken from the ThreatHunting-Keywords github project" 
@@ -39229,7 +39229,7 @@ rule snmpcheck_greyware_tool_keyword
 }
 
 
-rule snmpwalk_greyware_tool_keyword
+rule rule_snmpwalk_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'snmpwalk' taken from the ThreatHunting-Keywords github project" 
@@ -39254,7 +39254,7 @@ rule snmpwalk_greyware_tool_keyword
 }
 
 
-rule socat_greyware_tool_keyword
+rule rule_socat_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'socat' taken from the ThreatHunting-Keywords github project" 
@@ -39303,7 +39303,7 @@ rule socat_greyware_tool_keyword
 }
 
 
-rule Social_VPN_greyware_tool_keyword
+rule rule_Social_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Social VPN' taken from the ThreatHunting-Keywords github project" 
@@ -39322,7 +39322,7 @@ rule Social_VPN_greyware_tool_keyword
 }
 
 
-rule SoftEtherVPN_greyware_tool_keyword
+rule rule_SoftEtherVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SoftEtherVPN' taken from the ThreatHunting-Keywords github project" 
@@ -39770,7 +39770,7 @@ rule SoftEtherVPN_greyware_tool_keyword
 }
 
 
-rule softperfect_networkscanner_greyware_tool_keyword
+rule rule_softperfect_networkscanner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'softperfect networkscanner' taken from the ThreatHunting-Keywords github project" 
@@ -39873,7 +39873,7 @@ rule softperfect_networkscanner_greyware_tool_keyword
 }
 
 
-rule Soul_VPN_greyware_tool_keyword
+rule rule_Soul_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Soul VPN' taken from the ThreatHunting-Keywords github project" 
@@ -39892,7 +39892,7 @@ rule Soul_VPN_greyware_tool_keyword
 }
 
 
-rule SpaceRunner_greyware_tool_keyword
+rule rule_SpaceRunner_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SpaceRunner' taken from the ThreatHunting-Keywords github project" 
@@ -39914,7 +39914,7 @@ rule SpaceRunner_greyware_tool_keyword
 }
 
 
-rule Splashtop_greyware_tool_keyword
+rule rule_Splashtop_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Splashtop' taken from the ThreatHunting-Keywords github project" 
@@ -39999,7 +39999,7 @@ rule Splashtop_greyware_tool_keyword
 }
 
 
-rule ss_greyware_tool_keyword
+rule rule_ss_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ss' taken from the ThreatHunting-Keywords github project" 
@@ -40018,7 +40018,7 @@ rule ss_greyware_tool_keyword
 }
 
 
-rule SSH_J_com_greyware_tool_keyword
+rule rule_SSH_J_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'SSH-J.com' taken from the ThreatHunting-Keywords github project" 
@@ -40046,7 +40046,7 @@ rule SSH_J_com_greyware_tool_keyword
 }
 
 
-rule ssh_greyware_tool_keyword
+rule rule_ssh_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ssh' taken from the ThreatHunting-Keywords github project" 
@@ -40080,7 +40080,7 @@ rule ssh_greyware_tool_keyword
 }
 
 
-rule sshtunnel_greyware_tool_keyword
+rule rule_sshtunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sshtunnel' taken from the ThreatHunting-Keywords github project" 
@@ -40156,7 +40156,7 @@ rule sshtunnel_greyware_tool_keyword
 }
 
 
-rule sshuttle_greyware_tool_keyword
+rule rule_sshuttle_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sshuttle' taken from the ThreatHunting-Keywords github project" 
@@ -40244,7 +40244,7 @@ rule sshuttle_greyware_tool_keyword
 }
 
 
-rule sshx_greyware_tool_keyword
+rule rule_sshx_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sshx' taken from the ThreatHunting-Keywords github project" 
@@ -40299,7 +40299,7 @@ rule sshx_greyware_tool_keyword
 }
 
 
-rule sslip_io_greyware_tool_keyword
+rule rule_sslip_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sslip.io' taken from the ThreatHunting-Keywords github project" 
@@ -40318,7 +40318,7 @@ rule sslip_io_greyware_tool_keyword
 }
 
 
-rule staqlab_tunnel_greyware_tool_keyword
+rule rule_staqlab_tunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'staqlab-tunnel' taken from the ThreatHunting-Keywords github project" 
@@ -40364,7 +40364,7 @@ rule staqlab_tunnel_greyware_tool_keyword
 }
 
 
-rule stowaway_greyware_tool_keyword
+rule rule_stowaway_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'stowaway' taken from the ThreatHunting-Keywords github project" 
@@ -40392,7 +40392,7 @@ rule stowaway_greyware_tool_keyword
 }
 
 
-rule stunnel_greyware_tool_keyword
+rule rule_stunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'stunnel' taken from the ThreatHunting-Keywords github project" 
@@ -40456,7 +40456,7 @@ rule stunnel_greyware_tool_keyword
 }
 
 
-rule sudo_greyware_tool_keyword
+rule rule_sudo_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sudo' taken from the ThreatHunting-Keywords github project" 
@@ -40468,7 +40468,7 @@ rule sudo_greyware_tool_keyword
     strings:
         // Description: sudo on windows allowing privilege escalation
         // Reference: https://www.tiraniddo.dev/2024/02/sudo-on-windows-quick-rundown.html
-        $string1_sudo_greyware_tool_keyword = /\.server_DoElevationRequest\(\(Get\-NtProcess\s\-ProcessId\s\$pid_sudo_greyware_tool_keyword\).{0,1000}\"cmd\.exe\".{0,1000}C\:\\\"/ nocase ascii wide
+        $string1_sudo_greyware_tool_keyword = /\.server_DoElevationRequest\(\(Get\-NtProcess\s\-ProcessId\s\$pid\).{0,1000}\"cmd\.exe\".{0,1000}C\:\\\"/ nocase ascii wide
         // Description: sudo on windows allowing privilege escalation
         // Reference: https://www.tiraniddo.dev/2024/02/sudo-on-windows-quick-rundown.html
         $string2_sudo_greyware_tool_keyword = /Connect\-RpcClient\s.{0,1000}\s\-EndpointPath\ssudo_elevate_4652/ nocase ascii wide
@@ -40490,7 +40490,7 @@ rule sudo_greyware_tool_keyword
 }
 
 
-rule sudoers_greyware_tool_keyword
+rule rule_sudoers_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sudoers' taken from the ThreatHunting-Keywords github project" 
@@ -40512,7 +40512,7 @@ rule sudoers_greyware_tool_keyword
 }
 
 
-rule suo5_greyware_tool_keyword
+rule rule_suo5_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'suo5' taken from the ThreatHunting-Keywords github project" 
@@ -40903,7 +40903,7 @@ rule suo5_greyware_tool_keyword
 }
 
 
-rule supershell_greyware_tool_keyword
+rule rule_supershell_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'supershell' taken from the ThreatHunting-Keywords github project" 
@@ -40928,7 +40928,7 @@ rule supershell_greyware_tool_keyword
 }
 
 
-rule Supremo_greyware_tool_keyword
+rule rule_Supremo_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Supremo' taken from the ThreatHunting-Keywords github project" 
@@ -41040,7 +41040,7 @@ rule Supremo_greyware_tool_keyword
 }
 
 
-rule Surf_VPN_greyware_tool_keyword
+rule rule_Surf_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Surf VPN' taken from the ThreatHunting-Keywords github project" 
@@ -41059,7 +41059,7 @@ rule Surf_VPN_greyware_tool_keyword
 }
 
 
-rule sVPN_greyware_tool_keyword
+rule rule_sVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sVPN' taken from the ThreatHunting-Keywords github project" 
@@ -41078,7 +41078,7 @@ rule sVPN_greyware_tool_keyword
 }
 
 
-rule sysctl_greyware_tool_keyword
+rule rule_sysctl_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'sysctl' taken from the ThreatHunting-Keywords github project" 
@@ -41097,7 +41097,7 @@ rule sysctl_greyware_tool_keyword
 }
 
 
-rule systemctl_greyware_tool_keyword
+rule rule_systemctl_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'systemctl' taken from the ThreatHunting-Keywords github project" 
@@ -41128,7 +41128,7 @@ rule systemctl_greyware_tool_keyword
 }
 
 
-rule systeminfo_greyware_tool_keyword
+rule rule_systeminfo_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'systeminfo' taken from the ThreatHunting-Keywords github project" 
@@ -41150,7 +41150,7 @@ rule systeminfo_greyware_tool_keyword
 }
 
 
-rule tacticalrmm_greyware_tool_keyword
+rule rule_tacticalrmm_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tacticalrmm' taken from the ThreatHunting-Keywords github project" 
@@ -41274,7 +41274,7 @@ rule tacticalrmm_greyware_tool_keyword
 }
 
 
-rule tailscale_greyware_tool_keyword
+rule rule_tailscale_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tailscale' taken from the ThreatHunting-Keywords github project" 
@@ -41563,7 +41563,7 @@ rule tailscale_greyware_tool_keyword
 }
 
 
-rule takeown_greyware_tool_keyword
+rule rule_takeown_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'takeown' taken from the ThreatHunting-Keywords github project" 
@@ -41591,7 +41591,7 @@ rule takeown_greyware_tool_keyword
 }
 
 
-rule taskkill_greyware_tool_keyword
+rule rule_taskkill_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'taskkill' taken from the ThreatHunting-Keywords github project" 
@@ -41799,7 +41799,7 @@ rule taskkill_greyware_tool_keyword
 }
 
 
-rule tasklist_greyware_tool_keyword
+rule rule_tasklist_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tasklist' taken from the ThreatHunting-Keywords github project" 
@@ -41824,7 +41824,7 @@ rule tasklist_greyware_tool_keyword
 }
 
 
-rule Taskmgr_greyware_tool_keyword
+rule rule_Taskmgr_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Taskmgr' taken from the ThreatHunting-Keywords github project" 
@@ -41843,7 +41843,7 @@ rule Taskmgr_greyware_tool_keyword
 }
 
 
-rule tcpdump_greyware_tool_keyword
+rule rule_tcpdump_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tcpdump' taken from the ThreatHunting-Keywords github project" 
@@ -41862,7 +41862,7 @@ rule tcpdump_greyware_tool_keyword
 }
 
 
-rule TDSKiller_greyware_tool_keyword
+rule rule_TDSKiller_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'TDSKiller' taken from the ThreatHunting-Keywords github project" 
@@ -41902,7 +41902,7 @@ rule TDSKiller_greyware_tool_keyword
 }
 
 
-rule teamviewer_greyware_tool_keyword
+rule rule_teamviewer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'teamviewer' taken from the ThreatHunting-Keywords github project" 
@@ -42083,7 +42083,7 @@ rule teamviewer_greyware_tool_keyword
 }
 
 
-rule telebit_cloud_greyware_tool_keyword
+rule rule_telebit_cloud_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'telebit.cloud' taken from the ThreatHunting-Keywords github project" 
@@ -42156,7 +42156,7 @@ rule telebit_cloud_greyware_tool_keyword
 }
 
 
-rule telegram_greyware_tool_keyword
+rule rule_telegram_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'telegram' taken from the ThreatHunting-Keywords github project" 
@@ -42178,7 +42178,7 @@ rule telegram_greyware_tool_keyword
 }
 
 
-rule TelegramRAT_greyware_tool_keyword
+rule rule_TelegramRAT_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'TelegramRAT' taken from the ThreatHunting-Keywords github project" 
@@ -42197,7 +42197,7 @@ rule TelegramRAT_greyware_tool_keyword
 }
 
 
-rule telnet_greyware_tool_keyword
+rule rule_telnet_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'telnet' taken from the ThreatHunting-Keywords github project" 
@@ -42219,7 +42219,7 @@ rule telnet_greyware_tool_keyword
 }
 
 
-rule temp_mail_greyware_tool_keyword
+rule rule_temp_mail_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'temp-mail' taken from the ThreatHunting-Keywords github project" 
@@ -42241,7 +42241,7 @@ rule temp_mail_greyware_tool_keyword
 }
 
 
-rule temp_sh_greyware_tool_keyword
+rule rule_temp_sh_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'temp.sh' taken from the ThreatHunting-Keywords github project" 
@@ -42266,7 +42266,7 @@ rule temp_sh_greyware_tool_keyword
 }
 
 
-rule tempsend_com_greyware_tool_keyword
+rule rule_tempsend_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tempsend.com' taken from the ThreatHunting-Keywords github project" 
@@ -42288,7 +42288,7 @@ rule tempsend_com_greyware_tool_keyword
 }
 
 
-rule textbin_net_greyware_tool_keyword
+rule rule_textbin_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'textbin.net' taken from the ThreatHunting-Keywords github project" 
@@ -42307,7 +42307,7 @@ rule textbin_net_greyware_tool_keyword
 }
 
 
-rule Thunder_Proxy_greyware_tool_keyword
+rule rule_Thunder_Proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Thunder Proxy' taken from the ThreatHunting-Keywords github project" 
@@ -42326,7 +42326,7 @@ rule Thunder_Proxy_greyware_tool_keyword
 }
 
 
-rule tightvnc_greyware_tool_keyword
+rule rule_tightvnc_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tightvnc' taken from the ThreatHunting-Keywords github project" 
@@ -42417,7 +42417,7 @@ rule tightvnc_greyware_tool_keyword
 }
 
 
-rule tir_blanc_holiseum_greyware_tool_keyword
+rule rule_tir_blanc_holiseum_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tir_blanc_holiseum' taken from the ThreatHunting-Keywords github project" 
@@ -42439,7 +42439,7 @@ rule tir_blanc_holiseum_greyware_tool_keyword
 }
 
 
-rule tmate_greyware_tool_keyword
+rule rule_tmate_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tmate' taken from the ThreatHunting-Keywords github project" 
@@ -42596,7 +42596,7 @@ rule tmate_greyware_tool_keyword
 }
 
 
-rule tmpfiles_org_greyware_tool_keyword
+rule rule_tmpfiles_org_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tmpfiles.org' taken from the ThreatHunting-Keywords github project" 
@@ -42615,7 +42615,7 @@ rule tmpfiles_org_greyware_tool_keyword
 }
 
 
-rule tmpwatch_greyware_tool_keyword
+rule rule_tmpwatch_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tmpwatch' taken from the ThreatHunting-Keywords github project" 
@@ -42643,7 +42643,7 @@ rule tmpwatch_greyware_tool_keyword
 }
 
 
-rule TotalRecall_greyware_tool_keyword
+rule rule_TotalRecall_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'TotalRecall' taken from the ThreatHunting-Keywords github project" 
@@ -42662,7 +42662,7 @@ rule TotalRecall_greyware_tool_keyword
 }
 
 
-rule Touch_VPN_greyware_tool_keyword
+rule rule_Touch_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Touch VPN' taken from the ThreatHunting-Keywords github project" 
@@ -42681,7 +42681,7 @@ rule Touch_VPN_greyware_tool_keyword
 }
 
 
-rule touch_greyware_tool_keyword
+rule rule_touch_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'touch' taken from the ThreatHunting-Keywords github project" 
@@ -42706,7 +42706,7 @@ rule touch_greyware_tool_keyword
 }
 
 
-rule transfer_sh_greyware_tool_keyword
+rule rule_transfer_sh_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'transfer.sh' taken from the ThreatHunting-Keywords github project" 
@@ -42725,7 +42725,7 @@ rule transfer_sh_greyware_tool_keyword
 }
 
 
-rule transfert_my_files_com_greyware_tool_keyword
+rule rule_transfert_my_files_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'transfert-my-files.com' taken from the ThreatHunting-Keywords github project" 
@@ -42747,7 +42747,7 @@ rule transfert_my_files_com_greyware_tool_keyword
 }
 
 
-rule translate_goog_greyware_tool_keyword
+rule rule_translate_goog_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'translate.goog' taken from the ThreatHunting-Keywords github project" 
@@ -42766,7 +42766,7 @@ rule translate_goog_greyware_tool_keyword
 }
 
 
-rule Trellonet_greyware_tool_keyword
+rule rule_Trellonet_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Trellonet' taken from the ThreatHunting-Keywords github project" 
@@ -42785,7 +42785,7 @@ rule Trellonet_greyware_tool_keyword
 }
 
 
-rule tunnel_pyjam_as_greyware_tool_keyword
+rule rule_tunnel_pyjam_as_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tunnel.pyjam.as' taken from the ThreatHunting-Keywords github project" 
@@ -42825,7 +42825,7 @@ rule tunnel_pyjam_as_greyware_tool_keyword
 }
 
 
-rule tunnel_greyware_tool_keyword
+rule rule_tunnel_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tunnel' taken from the ThreatHunting-Keywords github project" 
@@ -42913,7 +42913,7 @@ rule tunnel_greyware_tool_keyword
 }
 
 
-rule TunnelBear_VPN_greyware_tool_keyword
+rule rule_TunnelBear_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'TunnelBear VPN' taken from the ThreatHunting-Keywords github project" 
@@ -42932,7 +42932,7 @@ rule TunnelBear_VPN_greyware_tool_keyword
 }
 
 
-rule tunneller_greyware_tool_keyword
+rule rule_tunneller_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tunneller' taken from the ThreatHunting-Keywords github project" 
@@ -43113,7 +43113,7 @@ rule tunneller_greyware_tool_keyword
 }
 
 
-rule Tunnello_VPN_greyware_tool_keyword
+rule rule_Tunnello_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Tunnello VPN' taken from the ThreatHunting-Keywords github project" 
@@ -43132,7 +43132,7 @@ rule Tunnello_VPN_greyware_tool_keyword
 }
 
 
-rule tunnelmole_client_greyware_tool_keyword
+rule rule_tunnelmole_client_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tunnelmole-client' taken from the ThreatHunting-Keywords github project" 
@@ -43244,7 +43244,7 @@ rule tunnelmole_client_greyware_tool_keyword
 }
 
 
-rule tunnelto_dev_greyware_tool_keyword
+rule rule_tunnelto_dev_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tunnelto.dev' taken from the ThreatHunting-Keywords github project" 
@@ -43344,7 +43344,7 @@ rule tunnelto_dev_greyware_tool_keyword
 }
 
 
-rule tunwg_greyware_tool_keyword
+rule rule_tunwg_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'tunwg' taken from the ThreatHunting-Keywords github project" 
@@ -43486,7 +43486,7 @@ rule tunwg_greyware_tool_keyword
 }
 
 
-rule Turbo_VPN_for_PC_greyware_tool_keyword
+rule rule_Turbo_VPN_for_PC_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Turbo VPN for PC' taken from the ThreatHunting-Keywords github project" 
@@ -43505,7 +43505,7 @@ rule Turbo_VPN_for_PC_greyware_tool_keyword
 }
 
 
-rule ufile_io_greyware_tool_keyword
+rule rule_ufile_io_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ufile.io' taken from the ThreatHunting-Keywords github project" 
@@ -43530,7 +43530,7 @@ rule ufile_io_greyware_tool_keyword
 }
 
 
-rule Ultrareach_VPN_greyware_tool_keyword
+rule rule_Ultrareach_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Ultrareach VPN' taken from the ThreatHunting-Keywords github project" 
@@ -43549,7 +43549,7 @@ rule Ultrareach_VPN_greyware_tool_keyword
 }
 
 
-rule UltraVNC_greyware_tool_keyword
+rule rule_UltraVNC_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'UltraVNC' taken from the ThreatHunting-Keywords github project" 
@@ -43721,7 +43721,7 @@ rule UltraVNC_greyware_tool_keyword
 }
 
 
-rule Unblock_Websites_greyware_tool_keyword
+rule rule_Unblock_Websites_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Unblock Websites' taken from the ThreatHunting-Keywords github project" 
@@ -43740,7 +43740,7 @@ rule Unblock_Websites_greyware_tool_keyword
 }
 
 
-rule Universal_Virus_Sniffer_greyware_tool_keyword
+rule rule_Universal_Virus_Sniffer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Universal Virus Sniffer' taken from the ThreatHunting-Keywords github project" 
@@ -43789,7 +43789,7 @@ rule Universal_Virus_Sniffer_greyware_tool_keyword
 }
 
 
-rule Unlimited_VPN__and__Proxy_by_ibVPN_greyware_tool_keyword
+rule rule_Unlimited_VPN__and__Proxy_by_ibVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Unlimited VPN & Proxy by ibVPN' taken from the ThreatHunting-Keywords github project" 
@@ -43808,7 +43808,7 @@ rule Unlimited_VPN__and__Proxy_by_ibVPN_greyware_tool_keyword
 }
 
 
-rule unset_greyware_tool_keyword
+rule rule_unset_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'unset' taken from the ThreatHunting-Keywords github project" 
@@ -43820,7 +43820,7 @@ rule unset_greyware_tool_keyword
     strings:
         // Description: disable history logging
         // Reference: https://github.com/hak5/omg-payloads/tree/master/payloads/library/credentials/OMGLogger
-        $string1_unset_greyware_tool_keyword = /unset\sHISTFILE\s\&\&\sHISTSIZE\=0\s\&\&\srm\s\-f\s\$HISTFILE_unset_greyware_tool_keyword\s\&\&\sunset\sHISTFILE/ nocase ascii wide
+        $string1_unset_greyware_tool_keyword = /unset\sHISTFILE\s\&\&\sHISTSIZE\=0\s\&\&\srm\s\-f\s\$HISTFILE\s\&\&\sunset\sHISTFILE/ nocase ascii wide
         // Description: linux commands abused by attackers
         // Reference: N/A
         $string2_unset_greyware_tool_keyword = /unset\sHISTFILE/ nocase ascii wide
@@ -43839,7 +43839,7 @@ rule unset_greyware_tool_keyword
 }
 
 
-rule unshadow_greyware_tool_keyword
+rule rule_unshadow_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'unshadow' taken from the ThreatHunting-Keywords github project" 
@@ -43858,7 +43858,7 @@ rule unshadow_greyware_tool_keyword
 }
 
 
-rule updog_greyware_tool_keyword
+rule rule_updog_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'updog' taken from the ThreatHunting-Keywords github project" 
@@ -43904,7 +43904,7 @@ rule updog_greyware_tool_keyword
 }
 
 
-rule Upnet_greyware_tool_keyword
+rule rule_Upnet_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Upnet' taken from the ThreatHunting-Keywords github project" 
@@ -43923,7 +43923,7 @@ rule Upnet_greyware_tool_keyword
 }
 
 
-rule Urban_Free_VPN_greyware_tool_keyword
+rule rule_Urban_Free_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Urban Free VPN' taken from the ThreatHunting-Keywords github project" 
@@ -43942,7 +43942,7 @@ rule Urban_Free_VPN_greyware_tool_keyword
 }
 
 
-rule Urban_Shield_greyware_tool_keyword
+rule rule_Urban_Shield_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Urban Shield' taken from the ThreatHunting-Keywords github project" 
@@ -43961,7 +43961,7 @@ rule Urban_Shield_greyware_tool_keyword
 }
 
 
-rule usaupload_greyware_tool_keyword
+rule rule_usaupload_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'usaupload' taken from the ThreatHunting-Keywords github project" 
@@ -43983,7 +43983,7 @@ rule usaupload_greyware_tool_keyword
 }
 
 
-rule utorrent_greyware_tool_keyword
+rule rule_utorrent_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'utorrent' taken from the ThreatHunting-Keywords github project" 
@@ -44020,7 +44020,7 @@ rule utorrent_greyware_tool_keyword
 }
 
 
-rule uVPN_greyware_tool_keyword
+rule rule_uVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'uVPN' taken from the ThreatHunting-Keywords github project" 
@@ -44039,7 +44039,7 @@ rule uVPN_greyware_tool_keyword
 }
 
 
-rule Veee_greyware_tool_keyword
+rule rule_Veee_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Veee' taken from the ThreatHunting-Keywords github project" 
@@ -44058,7 +44058,7 @@ rule Veee_greyware_tool_keyword
 }
 
 
-rule VirtualShield_VPN_greyware_tool_keyword
+rule rule_VirtualShield_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VirtualShield VPN' taken from the ThreatHunting-Keywords github project" 
@@ -44077,7 +44077,7 @@ rule VirtualShield_VPN_greyware_tool_keyword
 }
 
 
-rule vncviewer_greyware_tool_keyword
+rule rule_vncviewer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'vncviewer' taken from the ThreatHunting-Keywords github project" 
@@ -44111,7 +44111,7 @@ rule vncviewer_greyware_tool_keyword
 }
 
 
-rule VPN_Free_greyware_tool_keyword
+rule rule_VPN_Free_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN Free' taken from the ThreatHunting-Keywords github project" 
@@ -44130,7 +44130,7 @@ rule VPN_Free_greyware_tool_keyword
 }
 
 
-rule VPN_Master_greyware_tool_keyword
+rule rule_VPN_Master_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN Master' taken from the ThreatHunting-Keywords github project" 
@@ -44149,7 +44149,7 @@ rule VPN_Master_greyware_tool_keyword
 }
 
 
-rule VPN_Professional_greyware_tool_keyword
+rule rule_VPN_Professional_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN Professional' taken from the ThreatHunting-Keywords github project" 
@@ -44168,7 +44168,7 @@ rule VPN_Professional_greyware_tool_keyword
 }
 
 
-rule VPN_PROXY_MASTER_greyware_tool_keyword
+rule rule_VPN_PROXY_MASTER_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN PROXY MASTER' taken from the ThreatHunting-Keywords github project" 
@@ -44187,7 +44187,7 @@ rule VPN_PROXY_MASTER_greyware_tool_keyword
 }
 
 
-rule VPN_Unlimited_Free_greyware_tool_keyword
+rule rule_VPN_Unlimited_Free_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN Unlimited Free' taken from the ThreatHunting-Keywords github project" 
@@ -44206,7 +44206,7 @@ rule VPN_Unlimited_Free_greyware_tool_keyword
 }
 
 
-rule VPN_free_pro_greyware_tool_keyword
+rule rule_VPN_free_pro_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN-free.pro' taken from the ThreatHunting-Keywords github project" 
@@ -44225,7 +44225,7 @@ rule VPN_free_pro_greyware_tool_keyword
 }
 
 
-rule VPN_AC_greyware_tool_keyword
+rule rule_VPN_AC_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPN.AC' taken from the ThreatHunting-Keywords github project" 
@@ -44244,7 +44244,7 @@ rule VPN_AC_greyware_tool_keyword
 }
 
 
-rule VPNMatic_greyware_tool_keyword
+rule rule_VPNMatic_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'VPNMatic' taken from the ThreatHunting-Keywords github project" 
@@ -44263,7 +44263,7 @@ rule VPNMatic_greyware_tool_keyword
 }
 
 
-rule vscode_greyware_tool_keyword
+rule rule_vscode_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'vscode' taken from the ThreatHunting-Keywords github project" 
@@ -44294,7 +44294,7 @@ rule vscode_greyware_tool_keyword
 }
 
 
-rule vssadmin_greyware_tool_keyword
+rule rule_vssadmin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'vssadmin' taken from the ThreatHunting-Keywords github project" 
@@ -44331,7 +44331,7 @@ rule vssadmin_greyware_tool_keyword
 }
 
 
-rule w32times_greyware_tool_keyword
+rule rule_w32times_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'w32times' taken from the ThreatHunting-Keywords github project" 
@@ -44350,7 +44350,7 @@ rule w32times_greyware_tool_keyword
 }
 
 
-rule Wachee_VPN_greyware_tool_keyword
+rule rule_Wachee_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Wachee VPN' taken from the ThreatHunting-Keywords github project" 
@@ -44369,7 +44369,7 @@ rule Wachee_VPN_greyware_tool_keyword
 }
 
 
-rule wbadmin_greyware_tool_keyword
+rule rule_wbadmin_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wbadmin' taken from the ThreatHunting-Keywords github project" 
@@ -44397,7 +44397,7 @@ rule wbadmin_greyware_tool_keyword
 }
 
 
-rule webhook_site_greyware_tool_keyword
+rule rule_webhook_site_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'webhook.site' taken from the ThreatHunting-Keywords github project" 
@@ -44428,7 +44428,7 @@ rule webhook_site_greyware_tool_keyword
 }
 
 
-rule westwind_greyware_tool_keyword
+rule rule_westwind_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'westwind' taken from the ThreatHunting-Keywords github project" 
@@ -44447,7 +44447,7 @@ rule westwind_greyware_tool_keyword
 }
 
 
-rule wetransfer_greyware_tool_keyword
+rule rule_wetransfer_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wetransfer' taken from the ThreatHunting-Keywords github project" 
@@ -44472,7 +44472,7 @@ rule wetransfer_greyware_tool_keyword
 }
 
 
-rule WeVPN_greyware_tool_keyword
+rule rule_WeVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'WeVPN' taken from the ThreatHunting-Keywords github project" 
@@ -44491,7 +44491,7 @@ rule WeVPN_greyware_tool_keyword
 }
 
 
-rule wevtutil_greyware_tool_keyword
+rule rule_wevtutil_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wevtutil' taken from the ThreatHunting-Keywords github project" 
@@ -44651,7 +44651,7 @@ rule wevtutil_greyware_tool_keyword
 }
 
 
-rule wget_greyware_tool_keyword
+rule rule_wget_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wget' taken from the ThreatHunting-Keywords github project" 
@@ -44673,7 +44673,7 @@ rule wget_greyware_tool_keyword
 }
 
 
-rule where_greyware_tool_keyword
+rule rule_where_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'where' taken from the ThreatHunting-Keywords github project" 
@@ -44692,7 +44692,7 @@ rule where_greyware_tool_keyword
 }
 
 
-rule whoami_greyware_tool_keyword
+rule rule_whoami_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'whoami' taken from the ThreatHunting-Keywords github project" 
@@ -44729,7 +44729,7 @@ rule whoami_greyware_tool_keyword
 }
 
 
-rule Whoer_VPN_greyware_tool_keyword
+rule rule_Whoer_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Whoer VPN' taken from the ThreatHunting-Keywords github project" 
@@ -44748,7 +44748,7 @@ rule Whoer_VPN_greyware_tool_keyword
 }
 
 
-rule WindmillVPN_greyware_tool_keyword
+rule rule_WindmillVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'WindmillVPN' taken from the ThreatHunting-Keywords github project" 
@@ -44767,7 +44767,7 @@ rule WindmillVPN_greyware_tool_keyword
 }
 
 
-rule Windscribe_greyware_tool_keyword
+rule rule_Windscribe_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Windscribe' taken from the ThreatHunting-Keywords github project" 
@@ -44786,7 +44786,7 @@ rule Windscribe_greyware_tool_keyword
 }
 
 
-rule winrs_greyware_tool_keyword
+rule rule_winrs_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'winrs' taken from the ThreatHunting-Keywords github project" 
@@ -44811,7 +44811,7 @@ rule winrs_greyware_tool_keyword
 }
 
 
-rule WinSCP_greyware_tool_keyword
+rule rule_WinSCP_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'WinSCP' taken from the ThreatHunting-Keywords github project" 
@@ -44842,7 +44842,7 @@ rule WinSCP_greyware_tool_keyword
 }
 
 
-rule wireproxy_greyware_tool_keyword
+rule rule_wireproxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wireproxy' taken from the ThreatHunting-Keywords github project" 
@@ -45251,7 +45251,7 @@ rule wireproxy_greyware_tool_keyword
 }
 
 
-rule wireshark_greyware_tool_keyword
+rule rule_wireshark_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wireshark' taken from the ThreatHunting-Keywords github project" 
@@ -45342,7 +45342,7 @@ rule wireshark_greyware_tool_keyword
 }
 
 
-rule wiretap_greyware_tool_keyword
+rule rule_wiretap_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wiretap' taken from the ThreatHunting-Keywords github project" 
@@ -45649,7 +45649,7 @@ rule wiretap_greyware_tool_keyword
 }
 
 
-rule wmic_greyware_tool_keyword
+rule rule_wmic_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'wmic' taken from the ThreatHunting-Keywords github project" 
@@ -45706,7 +45706,7 @@ rule wmic_greyware_tool_keyword
         $string15_wmic_greyware_tool_keyword = /start\swmic\s\/node\:\@C\:\\.{0,1000}\.txt\s\/user\:.{0,1000}\/password\:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
         // Description: VSS is a feature in Windows that allows for the creation of snapshots of a volume capturing its state at a specific point in time. Adversaries may abuse the wmic shadowcopy command to interact with these shadow copies for defense evasion purposes.
         // Reference: N/A
-        $string16_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s\{\$__wmic_greyware_tool_keyword\.Delete\(\)\;/ nocase ascii wide
+        $string16_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s\{\$_\.Delete\(\)\;/ nocase ascii wide
         // Description: Lateral Movement with wmic
         // Reference: https://github.com/RoseSecurity/Red-Teaming-TTPs/blob/main/Anti-Forensics.md
         $string17_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user\:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
@@ -45830,7 +45830,7 @@ rule wmic_greyware_tool_keyword
 }
 
 
-rule WorkingVPN_greyware_tool_keyword
+rule rule_WorkingVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'WorkingVPN' taken from the ThreatHunting-Keywords github project" 
@@ -45849,7 +45849,7 @@ rule WorkingVPN_greyware_tool_keyword
 }
 
 
-rule xcopy_greyware_tool_keyword
+rule rule_xcopy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'xcopy' taken from the ThreatHunting-Keywords github project" 
@@ -45871,7 +45871,7 @@ rule xcopy_greyware_tool_keyword
 }
 
 
-rule xmrig_greyware_tool_keyword
+rule rule_xmrig_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'xmrig' taken from the ThreatHunting-Keywords github project" 
@@ -46154,7 +46154,7 @@ rule xmrig_greyware_tool_keyword
 }
 
 
-rule xxd_greyware_tool_keyword
+rule rule_xxd_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'xxd' taken from the ThreatHunting-Keywords github project" 
@@ -46173,7 +46173,7 @@ rule xxd_greyware_tool_keyword
 }
 
 
-rule yakit_greyware_tool_keyword
+rule rule_yakit_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'yakit' taken from the ThreatHunting-Keywords github project" 
@@ -46252,7 +46252,7 @@ rule yakit_greyware_tool_keyword
 }
 
 
-rule ZenMate_VPN_greyware_tool_keyword
+rule rule_ZenMate_VPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'ZenMate VPN' taken from the ThreatHunting-Keywords github project" 
@@ -46271,7 +46271,7 @@ rule ZenMate_VPN_greyware_tool_keyword
 }
 
 
-rule Zoho_Assist_greyware_tool_keyword
+rule rule_Zoho_Assist_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'Zoho Assist' taken from the ThreatHunting-Keywords github project" 
@@ -46500,7 +46500,7 @@ rule Zoho_Assist_greyware_tool_keyword
 }
 
 
-rule zrok_greyware_tool_keyword
+rule rule_zrok_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool 'zrok' taken from the ThreatHunting-Keywords github project" 
@@ -46524,7 +46524,7 @@ rule zrok_greyware_tool_keyword
         $string4_zrok_greyware_tool_keyword = /\szrok\.listener/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
-        $string5_zrok_greyware_tool_keyword = /\$HOME_zrok_greyware_tool_keyword\/\.zrok/ nocase ascii wide
+        $string5_zrok_greyware_tool_keyword = /\$HOME\/\.zrok/ nocase ascii wide
         // Description: zrok allows users to share tunnels for HTTP TCP and UDP network resources. zrok additionally allows users to easily and rapidly share files - web content and custom resources in a peer-to-peer manner.
         // Reference: https://github.com/openziti/zrok
         $string6_zrok_greyware_tool_keyword = /\.in\.zrok\.io/ nocase ascii wide
@@ -46714,32 +46714,32 @@ rule zrok_greyware_tool_keyword
 }
 
 
-rule index_allocation_greyware_tool_keyword
+rule rule_index_allocation_greyware_tool_keyword
 {
     meta:
-        description = "Detection patterns for the tool '$index_allocation_index_allocation_greyware_tool_keyword' taken from the ThreatHunting-Keywords github project" 
+        description = "Detection patterns for the tool '$index_allocation' taken from the ThreatHunting-Keywords github project" 
         author = "@mthcht"
         reference = "https://github.com/mthcht/ThreatHunting-Keywords"
-        tool = "$index_allocation_index_allocation_greyware_tool_keyword"
+        tool = "$index_allocation"
         rule_category = "greyware_tool_keyword"
 
     strings:
-        // Description: creation of hidden folders (and file) via ...$.......::$index_allocation_index_allocation_greyware_tool_keyword
+        // Description: creation of hidden folders (and file) via ...$.......::$index_allocation
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string1_index_allocation_greyware_tool_keyword = /\.\.\.\:\:\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
-        // Description: creation of hidden folders (and file) via ...$.......::$index_allocation_index_allocation_greyware_tool_keyword
+        $string1_index_allocation_greyware_tool_keyword = /\.\.\.\:\:\$index_allocation/ nocase ascii wide
+        // Description: creation of hidden folders (and file) via ...$.......::$index_allocation
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string2_index_allocation_greyware_tool_keyword = /cd\s.{0,1000}\.\:\:\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
-        // Description: creation of hidden folders (and file) via ...$.......::$index_allocation_index_allocation_greyware_tool_keyword
+        $string2_index_allocation_greyware_tool_keyword = /cd\s.{0,1000}\.\:\:\$index_allocation/ nocase ascii wide
+        // Description: creation of hidden folders (and file) via ...$.......::$index_allocation
         // Reference: https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
-        $string3_index_allocation_greyware_tool_keyword = /md\s.{0,1000}\.\:\:\$index_allocation_index_allocation_greyware_tool_keyword/ nocase ascii wide
+        $string3_index_allocation_greyware_tool_keyword = /md\s.{0,1000}\.\:\:\$index_allocation/ nocase ascii wide
 
     condition:
         any of them
 }
 
 
-rule _0bin_net_greyware_tool_keyword
+rule rule__0bin_net_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '0bin.net' taken from the ThreatHunting-Keywords github project" 
@@ -46767,7 +46767,7 @@ rule _0bin_net_greyware_tool_keyword
 }
 
 
-rule _1clickVPN_greyware_tool_keyword
+rule rule__1clickVPN_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '1clickVPN' taken from the ThreatHunting-Keywords github project" 
@@ -46786,7 +46786,7 @@ rule _1clickVPN_greyware_tool_keyword
 }
 
 
-rule _1secmail_com_greyware_tool_keyword
+rule rule__1secmail_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '1secmail.com' taken from the ThreatHunting-Keywords github project" 
@@ -46805,7 +46805,7 @@ rule _1secmail_com_greyware_tool_keyword
 }
 
 
-rule _1ty_me_greyware_tool_keyword
+rule rule__1ty_me_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '1ty.me' taken from the ThreatHunting-Keywords github project" 
@@ -46827,7 +46827,7 @@ rule _1ty_me_greyware_tool_keyword
 }
 
 
-rule _3proxy_greyware_tool_keyword
+rule rule__3proxy_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '3proxy' taken from the ThreatHunting-Keywords github project" 
@@ -46918,7 +46918,7 @@ rule _3proxy_greyware_tool_keyword
 }
 
 
-rule _4shared_com_greyware_tool_keyword
+rule rule__4shared_com_greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '4shared.com' taken from the ThreatHunting-Keywords github project" 
@@ -46940,7 +46940,7 @@ rule _4shared_com_greyware_tool_keyword
 }
 
 
-rule __greyware_tool_keyword
+rule rule___greyware_tool_keyword
 {
     meta:
         description = "Detection patterns for the tool '_' taken from the ThreatHunting-Keywords github project" 

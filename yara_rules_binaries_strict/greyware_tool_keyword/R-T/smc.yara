@@ -1,0 +1,62 @@
+rule smc
+{
+    meta:
+        description = "Detection patterns for the tool 'smc' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "smc"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string1 = /smc\s\-disable\s\-mem/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string2 = /smc\s\-disable\s\-ntp/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string3 = /smc\s\-disable\s\-wss/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string4 = /smc\s\-enable\s\-gem/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string5 = /smc\.exe\s\-disable\s\-mem/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string6 = /smc\.exe\s\-disable\s\-ntp/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string7 = /smc\.exe\s\-disable\s\-wss/ nocase ascii wide
+        // Description: Symantec Client Management Component or (smc.exe) is a command-line utility that can manage (enable - disable - export) different components of SEP
+        // Reference: https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Antivirus/Symantec%20Endpoint%20Protection#threat-actor-ops-taops
+        $string8 = /smc\.exe\s\-enable\s\-gem/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or // Windows binary
+            uint16(0) == 0x457f or // Linux ELF
+            uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or // macOS binary
+            uint32(0) == 0x504B0304 or // Android APK, JAR
+            uint32(0) == 0xCAFEBABE or // Java Class, Mach-O Universal Binary
+            uint32(0) == 0x4D534346 or // Windows Cabinet File
+            uint32(0) == 0xD0CF11E0 or // MSI Installer Package
+            uint16(0) == 0x2321 or // Shebang (#!)
+            uint16(0) == 0x3c3f // PHP and other script
+        )) and any of ($string*)) or
+        (filesize < 2MB and
+        (
+            any of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

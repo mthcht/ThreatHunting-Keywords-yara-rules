@@ -112,24 +112,24 @@ def scan_files_with_yara(yara_rule_files, targets, output_file=None, extensions=
                                     scan_large_file_in_chunks(file_path, rules, patterns, out_f)
                                 else:
                                     scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
-                            except PermissionError as e:
-                                print(f"Permission denied for {file_path}: {e}")
-                                if args.unlock:
-                                    print(f"Attempting to unlock the file {file_path}.")
-                                    unlock_file(str(file_path))
-                                    print(f"Retrying scan for {file_path} after unlocking.")
-                                    scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
+                            #except PermissionError as e:
+                            #    print(f"Permission denied for {file_path}: {e}")
+                            #    if args.unlock:
+                            #        print(f"Attempting to unlock the file {file_path}.")
+                            #        unlock_file(str(file_path))
+                            #        print(f"Retrying scan for {file_path} after unlocking.")
+                            #        scan_and_output(yara_rule_file, file_path, rules, patterns, out_f)
                             except Exception as e:
                                 print(f"An error occurred while scanning {file_path}: {e}")
                 else:
                     print(f"{target} is neither a valid file nor a directory.")
-            except PermissionError as e:
-                print(f"Permission denied for {target_path}: {e}")
-                if args.unlock:
-                    print(f"Attempting to unlock the file {target_path}.")
-                    unlock_file(str(target_path))
-                    print(f"Retrying scan for {target_path} after unlocking.")
-                    scan_files_with_yara([yara_rule_file], [target], output_file, extensions, bypass_limit)
+            #except PermissionError as e:
+            #    print(f"Permission denied for {target_path}: {e}")
+            #    if args.unlock:
+            #        print(f"Attempting to unlock the file {target_path}.")
+            #        unlock_file(str(target_path))
+            #        print(f"Retrying scan for {target_path} after unlocking.")
+            #        scan_files_with_yara([yara_rule_file], [target], output_file, extensions, bypass_limit)
             except Exception as e:
                 print(f"An unexpected error occurred for {target}: {e}")
 

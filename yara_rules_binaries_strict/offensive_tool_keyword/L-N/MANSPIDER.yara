@@ -1,0 +1,101 @@
+rule MANSPIDER
+{
+    meta:
+        description = "Detection patterns for the tool 'MANSPIDER' taken from the ThreatHunting-Keywords github project" 
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "MANSPIDER"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string1 = /\s\-\-dirnames\sbank\sfinanc\spayable\spayment\sreconcil\sremit\svoucher\svendor\seft\sswift\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string2 = /\s\-e\sbat\scom\svbs\sps1\spsd1\spsm1\spem\skey\srsa\spub\sreg\stxt\scfg\sconf\sconfig\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string3 = /\s\-e\spfx\sp12\spkcs12\spem\skey\scrt\scer\scsr\sjks\skeystore\skey\skeys\sder\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string4 = /\s\-e\sppk\srsa\spem\sssh\srsa/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string5 = /\s\-f\spassw\s\-e\sxlsx\scsv\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string6 = /\s\-f\spassw\suser\sadmin\saccount\snetwork\slogin\slogon\scred\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string7 = /\/\.manspider\/logs/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string8 = /\/\.manspider\/loot/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string9 = /\/MANSPIDER\.git/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string10 = /\/manspider_.{0,100}\.log/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string11 = /\/tmp\/\.manspider/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string12 = /\\manspider_.{0,100}\.log/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string13 = /blacklanternsecurity\/MANSPIDER/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string14 = /man_spider\.manspider\:main/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string15 = /manspider\s.{0,100}\s\-d\s.{0,100}\s\-u\s.{0,100}\s\-p\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string16 = /manspider\s.{0,100}\/24\s\-f\s/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string17 = /manspider.{0,100}\-\-loot\-dir/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string18 = /manspider.{0,100}\-\-sharenames/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string19 = /manspider\.py/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string20 = /manspider\.spiderling/ nocase ascii wide
+        // Description: Spider entire networks for juicy files sitting on SMB shares. Search filenames or file content - regex supported!
+        // Reference: https://github.com/blacklanternsecurity/MANSPIDER
+        $string21 = /MANSPIDER\-master/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or // Windows binary
+            uint16(0) == 0x457f or // Linux ELF
+            uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or // macOS binary
+            uint32(0) == 0x504B0304 or // Android APK, JAR
+            uint32(0) == 0xCAFEBABE or // Java Class, Mach-O Universal Binary
+            uint32(0) == 0x4D534346 or // Windows Cabinet File
+            uint32(0) == 0xD0CF11E0 or // MSI Installer Package
+            uint16(0) == 0x2321 or // Shebang (#!)
+            uint16(0) == 0x3c3f // PHP and other script
+        )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

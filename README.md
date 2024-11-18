@@ -7,7 +7,7 @@ Yara rules for Threat Hunting sessions
 All the detection patterns from the [threathunting-keywords](https://github.com/mthcht/ThreatHunting-Keywords) project are automatically organized in yara rules for each tool and keyword type. These YARA rules are designed for simple keyword detection, focusing on threat hunting sessions and large-scale triage, rather than performance optimization.
 
 2 ruleset folders available:
-  - Folder [yara_rules](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/tree/main/yara_rules): Comprehensive threat hunting YARA rules. These are slower but provide broader detection coverage, requiring more triage.
+  - Folder [yara_rules](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/tree/main/yara_rules): threat hunting YARA rules. These are slower but provide broader detection coverage, requiring more triage.
   - Folder [yara_rules_binaries_strict](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/tree/main/yara_rules_binaries_strict): Optimized threat hunting YARA rules. These are focused on relevant file types and sizes, with additional conditions for large pattern rules, offering higher fidelity but fewer detections.
 
 ![image](https://github.com/mthcht/ThreatHunting-Keywords-yara-rules/assets/75267080/fda53ec2-28cb-4f16-bbb9-36f5afba922c)
